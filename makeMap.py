@@ -3,7 +3,7 @@
 from mapnik import *
 
 # The mapFile is generated using carto from cartoCSS files.
-mapFile = 'OpenArdenneMap.xml'
+mapFile = 'cartoCSS/OpenArdenneMap.xml'
 
 # The mapOutput can be have different extension; png, pdf, svg, ...
 mapOutput = 'OpenArdenneMap.png'

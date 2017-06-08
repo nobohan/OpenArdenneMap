@@ -17,7 +17,7 @@ Edit the imposm-mapping.py file. Some features are added in OpenArdenneMap, such
 
 ## To change the style of the map:
 Edit the mss files using cartoCSS language and use `carto` to generate the `OpenArdenneMap.xml` mapnik file. Then:
-`carto project.mml > OpenArdenneMap.xml`
+`carto cartoCSS/project.mml > OpenArdenneMap.xml`
 
 ## To generate the map:
 `python makeMap.py`
