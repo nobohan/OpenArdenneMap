@@ -9,22 +9,37 @@ mapFile = 'cartoCSS/OpenArdenneMap.xml'
 mapOutput = 'OpenArdenneMap.png'
 
 # Map size
-# NB: An A4 in 200 dpi is 1654 x 2339 px
-resolution = 4
-m = Map(resolution*2339,resolution*1654)
+# NB: An A4 in 200 dpi is 1654 x 2339 px, or 21 cm x 29.5 cm
+# the ratio of format is sqrt(2)2.73
+
+page = 'A2' # An A2 is 4 A4
+
+# increasing these lead to decreasing font and symbol size: not good
+map_x = 4*2339
+map_y = 4*1654
+m = Map(map_x,map_y)
 load_map(m, mapFile)
 
-# Bbox (expressed in EPSG:3857)
-bboxCartePigeonPortrait = (Envelope(612000, 6394000, 624730, 6412000))
-bboxCartePigeonPaysage = (Envelope(608000, 6396000, 626000, 6408730))
+# Bbox (expressed in EPSG:3857, meters)
+xmin = 609650
+xmax = 624350
+ymin = 6396000
+ymax = 6406394
+bboxCartePigeonPaysage = (Envelope(xmin, ymin, xmax, ymax))
 
-delta_x = 624730 - 612000    # 12.73 km
-delta_y = 6394000 - 6412000  # 18 km
+delta_x = xmax - xmin    # 14.7 km
+delta_y = ymax - ymin  # 10.394 km
+# check that delta_y./delta_x = sqrt(2) = 1.4142135623730951
 
 bbox = bboxCartePigeonPaysage
 m.zoom_to_box(bbox)
 
 print "Scale = " , m.scale()
+
+# Compute the scale
+computedScale = 2*0.295/delta_x # correspond to 1/25000
+print "Computed scale = " , computedScale
+print "delta_y is ", delta_y, " m"
 
 # Export to mapOutput
 render_to_file(m, mapOutput)

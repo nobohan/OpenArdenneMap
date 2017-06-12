@@ -47,6 +47,9 @@
   }
   [tunnel=1] { line-dasharray: 3,3; }
 
+  /* -- tracktype -- */
+  /*[tracktype='grade4'] { line-dasharray: 3,3; }*/
+
   /* -- widths -- */
   [stylegroup='motorway'] { line-width: @rdz16_maj + 2.5; }
   [stylegroup='mainroad'] { line-width: @rdz16_med + 2.5; }
