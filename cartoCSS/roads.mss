@@ -47,9 +47,6 @@
   }
   [tunnel=1] { line-dasharray: 3,3; }
 
-  /* -- tracktype -- */
-  /*[tracktype='grade4'] { line-dasharray: 3,3; }*/
-
   /* -- widths -- */
   [stylegroup='motorway'] { line-width: @rdz16_maj + 2.5; }
   [stylegroup='mainroad'] { line-width: @rdz16_med + 2.5; }
@@ -58,6 +55,7 @@
   [stylegroup='noauto']   { line-width: @rdz16_min / 5; }
   [stylegroup='railway']  { line-width: @rdz16_min / 2 + 2; }
 }
+
 
 /* This second group (roads_high) is the "upper" layer of the roads */
 /* elements, which will give the center of the roads (inner fill) */
@@ -111,7 +109,16 @@
   [stylegroup='service']  { line-width: @rdz16_min / 3; }
   [stylegroup='noauto']   { line-width: 0; }
   [stylegroup='railway']  { line-width: @rdz16_min / 2; line-dasharray: 15,15;}
+}
 
+#roads_high{
+  [stylegroup='service']{
+    [tracktype='grade1'] { line-dasharray: 3,1; }
+    [tracktype='grade2'] { line-dasharray: 3,2; }
+    [tracktype='grade3'] { line-dasharray: 3,3; }
+    [tracktype='grade4'] { line-dasharray: 3,4; }
+    [tracktype='grade5'] { line-dasharray: 3,5; }
+  }
 }
 
 /* ---- Bridge fill for dashed lines -------------------------------- */

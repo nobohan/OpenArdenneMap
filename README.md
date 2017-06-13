@@ -30,7 +30,15 @@ Currently, my goal is not to generate map tiles at different zoom levels, but ra
 * no generalized layers are used, no roads_low or roads_med
 
 ## 2) Addition of new features
-TODO
+Compared to the default OSMBright style, some features were added in the imposm-mapping.py file:
+* The tracktype=* key for highway=track
+* The leaf_type=* & leaf_cycle=* keys for landuse=forest
+
+Here are the command for using imposm with this imposm-mapping:
+* imposm --proj=EPSG:3857 --read belgium-latest.osm.bz2 --limit-to map_extent.shp -m OpenArdenneMap/imposm-mapping.py
+* imposm -U osm -d osm -m OpenArdenneMap/imposm-mapping.py --write --optimize --deploy-production-tables --limit-to map_extent.shp
+* imposm -d osm --remove-backup-tables
+* ./make.py in osm-bright-master
 
 ## 3) Customisation of the map style
 Of course, the style of the map was modified, with some inspiration taken from OpenTopoMap and other topographic maps.

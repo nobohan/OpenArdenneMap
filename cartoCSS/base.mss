@@ -18,6 +18,7 @@ Map { background-color: @land; }
   [type='commercial']    { polygon-fill: @industrial; }
   [type='common']        { polygon-fill: @park; }
   [type='forest']        { polygon-pattern-file:url(img/forest.png); line-color: darken(@wooded,25%); }
+  [type='forest'] [leaf_type='mixed']  { polygon-pattern-file:url(img/forest.png); line-color: darken(@wooded,25%); }
   [type='golf_course']   { polygon-fill: @sports; }
   [type='grass']         { polygon-pattern-file:url(img/meadow.png); line-color: darken(@land,25%); }
   [type='hospital']      { polygon-fill: @hospital; }

@@ -446,70 +446,6 @@ amenities = Points(
         ),
 })
 
-motorways_gen1 = GeneralizedTable(
-    name = 'motorways_gen1',
-    tolerance = meter_to_mapunit(50.0),
-    origin = motorways,
-)
-
-mainroads_gen1 = GeneralizedTable(
-    name = 'mainroads_gen1',
-    tolerance = meter_to_mapunit(50.0),
-    origin = mainroads,
-)
-
-railways_gen1 = GeneralizedTable(
-    name = 'railways_gen1',
-    tolerance = meter_to_mapunit(50.0),
-    origin = railways,
-)
-
-motorways_gen0 = GeneralizedTable(
-    name = 'motorways_gen0',
-    tolerance = meter_to_mapunit(200.0),
-    origin = motorways_gen1,
-)
-
-mainroads_gen0 = GeneralizedTable(
-    name = 'mainroads_gen0',
-    tolerance = meter_to_mapunit(200.0),
-    origin = mainroads_gen1,
-)
-
-railways_gen0 = GeneralizedTable(
-    name = 'railways_gen0',
-    tolerance = meter_to_mapunit(200.0),
-    origin = railways_gen1,
-)
-
-landusages_gen0 = GeneralizedTable(
-    name = 'landusages_gen0',
-    tolerance = meter_to_mapunit(200.0),
-    origin = landusages,
-    where = "ST_Area(geometry)>%f" % sqr_meter_to_mapunit(500000),
-)
-
-landusages_gen1 = GeneralizedTable(
-    name = 'landusages_gen1',
-    tolerance = meter_to_mapunit(50.0),
-    origin = landusages,
-    where = "ST_Area(geometry)>%f" % sqr_meter_to_mapunit(50000),
-)
-
-waterareas_gen0 = GeneralizedTable(
-    name = 'waterareas_gen0',
-    tolerance = meter_to_mapunit(200.0),
-    origin = waterareas,
-    where = "ST_Area(geometry)>%f" % sqr_meter_to_mapunit(500000),
-)
-
-waterareas_gen1 = GeneralizedTable(
-    name = 'waterareas_gen1',
-    tolerance = meter_to_mapunit(50.0),
-    origin = waterareas,
-    where = "ST_Area(geometry)>%f" % sqr_meter_to_mapunit(50000),
-)
-
 roads = UnionView(
     name = 'roads',
     fields = (
@@ -520,32 +456,8 @@ roads = UnionView(
         ('layer', 0),
         ('z_order', 0),
         ('access', None),
+        ('surface', None),
+        ('tracktype', None)
     ),
     mappings = [motorways, mainroads, minorroads, railways],
-)
-
-roads_gen1 = UnionView(
-    name = 'roads_gen1',
-    fields = (
-        ('bridge', 0),
-        ('ref', None),
-        ('tunnel', 0),
-        ('oneway', 0),
-        ('z_order', 0),
-        ('access', None),
-    ),
-    mappings = [railways_gen1, mainroads_gen1, motorways_gen1],
-)
-
-roads_gen0 = UnionView(
-    name = 'roads_gen0',
-    fields = (
-        ('bridge', 0),
-        ('ref', None),
-        ('tunnel', 0),
-        ('oneway', 0),
-        ('z_order', 0),
-        ('access', None),
-    ),
-    mappings = [railways_gen0, mainroads_gen0, motorways_gen0],
 )
