@@ -47,6 +47,14 @@
   }
   [tunnel=1] { line-dasharray: 3,3; }
 
+  [stylegroup='service']{
+    [tracktype='grade1'] { line-width: @rdz16_min / 2 + 2; }
+    [tracktype='grade2'] { line-width: @rdz16_min / 2 + 2; }
+    [tracktype='grade3'] { line-width: @rdz16_min / 2 + 2; }
+    [tracktype='grade4'] { line-width: @rdz16_min / 3 + 2; }
+    [tracktype='grade5'] { line-width: @rdz16_min / 3 + 2; }
+  }
+
   /* -- widths -- */
   [stylegroup='motorway'] { line-width: @rdz16_maj + 2.5; }
   [stylegroup='mainroad'] { line-width: @rdz16_med + 2.5; }
@@ -102,23 +110,26 @@
   [tunnel=1] {
     line-cap: butt;
   }
+
+  [stylegroup='minorroad'] {
+    line-color: @secondary_fill;
+  }
+
+  [stylegroup='service'] {
+    [tracktype='grade1'] { line-width: @rdz16_min / 2; line-dasharray: 10,10; line-color: @primary_fill;}
+    [tracktype='grade2'] { line-width: @rdz16_min / 2; }
+    [tracktype='grade3'] { line-width: @rdz16_min / 2; }
+    [tracktype='grade4'] { line-width: @rdz16_min / 3; }
+    [tracktype='grade5'] { line-width: @rdz16_min / 3; }
+  }
+
   /* -- widths -- */
   [stylegroup='motorway'] { line-width: @rdz16_maj; }
   [stylegroup='mainroad'] { line-width: @rdz16_med; }
   [stylegroup='minorroad']{ line-width: @rdz16_min; }
-  [stylegroup='service']  { line-width: @rdz16_min / 3; }
+  /*[stylegroup='service']  { line-width: @rdz16_min / 3; }*/
   [stylegroup='noauto']   { line-width: 0; }
   [stylegroup='railway']  { line-width: @rdz16_min / 2; line-dasharray: 15,15;}
-}
-
-#roads_high{
-  [stylegroup='service']{
-    [tracktype='grade1'] { line-dasharray: 3,1; }
-    [tracktype='grade2'] { line-dasharray: 3,2; }
-    [tracktype='grade3'] { line-dasharray: 3,3; }
-    [tracktype='grade4'] { line-dasharray: 3,4; }
-    [tracktype='grade5'] { line-dasharray: 3,5; }
-  }
 }
 
 /* ---- Bridge fill for dashed lines -------------------------------- */

@@ -12,6 +12,10 @@ Map { background-color: @land; }
 /* LANDUSE & LANDCOVER
 /* ================================================================== */
 
+#contour {
+  line-color: #b06435;
+}
+
 #landuse {
   [type='cemetery']      { polygon-fill: @cemetery; }
   [type='college']       { polygon-fill: @school; }
