@@ -460,7 +460,7 @@
     {
       "Datasource": {
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
-        "file": "/media/julien/data/Projets/Geomatique/OSM/Mapnik/Elevation/contour_mnt50_3857.shp",
+        "file": "/media/julien/data/Projets/Geomatique/OSM/Mapnik/Elevation/contour.shp",
         "id": "contour",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "type": "shape"
@@ -469,6 +469,22 @@
       "geometry": "linestring",
       "id": "contour",
       "name": "contour",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
+        "file": "/media/julien/data/Projets/Geomatique/OSM/Mapnik/Elevation/mnt50_hillshade3857.tif",
+        "id": "hillshade",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "type": "gdal",
+        "format": "tiff"
+      },
+      "class": "",
+      "geometry": "raster",
+      "id": "hillshade",
+      "name": "hillshade",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "status": "on"
     }
@@ -496,6 +512,6 @@
   "interactivity": false,
   "maxzoom": 18,
   "minzoom": 0,
-  "name": "OSM Bright2",
+  "name": "OpenArdenneMap",
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
 }

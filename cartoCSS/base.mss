@@ -16,6 +16,10 @@ Map { background-color: @land; }
   line-color: #b06435;
 }
 
+#hillshade {
+  opacity: 0.8;
+}
+
 #landuse {
   [type='cemetery']      { polygon-fill: @cemetery; }
   [type='college']       { polygon-fill: @school; }
