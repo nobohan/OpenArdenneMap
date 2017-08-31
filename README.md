@@ -43,7 +43,14 @@ Here are the command for using imposm with this imposm-mapping:
 * imposm -d osm --remove-backup-tables
 * ./make.py in osm-bright-master
 
-## 3) Customisation of the map style
+## 3) Addition of a third outline for roads
+In Mapnik, like in many cartographic software, you can render complex road symbology using superimposed layer with different width, e.g., a simple road rendered as a white band bordered by black lines is actually made by a first layer where roads are rendered using a large black band + a second layer (on top of it) where roads are rendered with a thinner white band.
+
+For displaying complex road symbols, one may need a third layer. For instance, in OpenArdenneMap, large tracks (track_type = 1) are rendered with a dash white-red line bordered by a black line.
+This third layer have cartoCSS properties under `#roads::top`. 
+
+
+## 4) Customisation of the map style
 Of course, the style of the map was modified, with some inspiration taken from OpenTopoMap and other topographic maps. Main modifications are:
 * increase font size
 * custom colors

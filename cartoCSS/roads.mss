@@ -6,15 +6,10 @@
 @rdz16_maj: 14;   @rdz16_med: 12;   @rdz16_min: 10;
 
 /* ---- Casing ----------------------------------------------- */
-/* This first layer (roads::outline) is the "bottom" layer of the roads */
-/* elements, which will give the outline of the roads. */
 
-#roads::outline2{
-  [stylegroup='service']{
-    [tracktype='grade1'] { line-width: @rdz16_min / 2 + 8; line-color: #111}
-  }
-}
-
+/* This first layer (roads::outline) is the "bottom" layer of most of roads */
+/* elements. It will give the outline of the roads, except for roads that also use */
+/* outline2. */
 
 #roads::outline,
 #tunnel[render='1_outline'],
@@ -30,8 +25,8 @@
   [bridge=1] { line-color: @standard_case * 0.8; }
   [type='motorway'],
   [type='motorway_link'] {
-    line-color: @motorway_case;
-    [bridge=1] { line-color: @motorway_case * 0.8; }
+    line-color: #111;
+    [bridge=1] { line-color: #111 * 0.8; }
   }
   [type='trunk'],
   [type='trunk_link'] {
@@ -55,22 +50,23 @@
   [tunnel=1] { line-dasharray: 3,3; }
 
   /* -- widths -- */
-  [stylegroup='motorway'] { line-width: @rdz16_maj + 2.5; }
+  [stylegroup='motorway'] { line-width: @rdz16_maj; }
   [stylegroup='mainroad'] { line-width: @rdz16_med + 2.5; }
   [stylegroup='minorroad']{ line-width: @rdz16_min + 2; }
   [stylegroup='noauto']   { line-width: @rdz16_min / 5; }
   [stylegroup='railway']  { line-width: @rdz16_min / 2 + 2; }
   [stylegroup='service']{
-    [tracktype='grade1'] { line-width: @rdz16_min / 2 + 2; line-color: @primary_line;}
+    [tracktype='grade1'] { line-width: @rdz16_min + 2; line-color: #111}
     [tracktype='grade2'] { line-width: @rdz16_min / 2 + 2; }
     [tracktype='grade3'] { line-width: @rdz16_min / 2 + 2; }
     [tracktype='grade4'] { line-width: @rdz16_min / 3 + 2; }
     [tracktype='grade5'] { line-width: @rdz16_min / 3 + 2; }
   }
+
 }
 
 
-/* This second group (roads) is the "upper" layer of the roads */
+/* This second group (roads) is the final layer for most of the roads */
 /* elements, which will give the center of the roads (inner fill) */
 
 #roads,
@@ -120,22 +116,43 @@
     line-color: @secondary_fill;
   }
 
-
-
   /* -- widths -- */
-  [stylegroup='motorway'] { line-width: @rdz16_maj; }
+  [stylegroup='motorway'] { line-width: @rdz16_maj - 2; }
   [stylegroup='mainroad'] { line-width: @rdz16_med; }
   [stylegroup='minorroad']{ line-width: @rdz16_min; }
   [stylegroup='noauto']   { line-width: 0; }
   [stylegroup='railway']  { line-width: @rdz16_min / 2; line-dasharray: 15,15;}
   [stylegroup='service'] {
-    [tracktype='grade1'] { line-width: @rdz16_min / 2; line-dasharray: 10,10;}
+    [tracktype='grade1'] { line-width: @rdz16_min + 2 - 2; line-color: @secondary_fill;}
     [tracktype='grade2'] { line-width: @rdz16_min / 2; }
     [tracktype='grade3'] { line-width: @rdz16_min / 2; }
     [tracktype='grade4'] { line-width: @rdz16_min / 3; }
     [tracktype='grade5'] { line-width: @rdz16_min / 3; }
   }
 }
+
+/* This third layer (roads::top) is the "top" layer of some special roads */
+/* elements that needs 3 superimposed layer for their rendering. */
+
+#roads::top {
+  [type='motorway'],
+  [type='motorway_link'] {
+    line-color: #fff;
+    line-width: 2;
+    line-dasharray: 5,5;
+  }
+
+
+  [stylegroup='service'] {
+    [tracktype='grade1'] {
+      line-width: @rdz16_min + 2 - 2 ;
+      line-dasharray: 20,20;
+      line-color: #fff; }
+  }
+}
+
+
+
 
 /* ---- Bridge fill for dashed lines -------------------------------- */
 #tunnel[render='2_line'],

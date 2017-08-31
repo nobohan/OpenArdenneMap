@@ -85,14 +85,14 @@ Map { background-color: @land; }
   [type='canal'] {
     line-cap: round;
     line-join: round;
-    line-width: 6;
+    line-width: 12;
   }
   [type='stream'] {
-    line-width: 2;
+    line-width: 6;
   }
   [type='ditch'],
   [type='drain'] {
-    line-width: 1;
+    line-width: 2;
   }
 }
 

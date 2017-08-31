@@ -6,7 +6,7 @@ from mapnik import *
 mapFile = 'cartoCSS/OpenArdenneMap.xml'
 
 # The mapOutput can be have different extension; png, pdf, svg, ...
-mapOutput = 'OpenArdenneMap.pdf'
+mapOutput = 'OpenArdenneMap.png'
 
 # Map size
 # NB: An A4 in 200 dpi is 1654 x 2339 px, or 21 cm x 29.5 cm
