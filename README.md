@@ -22,6 +22,9 @@ Edit the mss files using cartoCSS language and use `carto` to generate the `Open
 ## To generate the map:
 `python makeMap.py`
 
+## All together
+`carto cartoCSS/project.mml > cartoCSS/OpenArdenneMap.xml && python makeMap.py`
+
 # Changes compared to OSMBright
 
 ## 1) Simplification of OSMBright
@@ -41,4 +44,6 @@ Here are the command for using imposm with this imposm-mapping:
 * ./make.py in osm-bright-master
 
 ## 3) Customisation of the map style
-Of course, the style of the map was modified, with some inspiration taken from OpenTopoMap and other topographic maps.
+Of course, the style of the map was modified, with some inspiration taken from OpenTopoMap and other topographic maps. Main modifications are:
+* increase font size
+* custom colors

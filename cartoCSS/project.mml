@@ -200,7 +200,7 @@
         "dbname": "osm2",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "",
-        "id": "roads_high",
+        "id": "roads",
         "key_field": "",
         "project": "osm-bright",
         "srs": null,
@@ -209,44 +209,10 @@
       },
       "class": "",
       "geometry": "linestring",
-      "id": "roads_high",
-      "name": "roads_high",
+      "id": "roads",
+      "name": "roads",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913"
-    },
-    {
-      "Datasource": {
-        "dbname": "osm2",
-        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "",
-        "key_field": "",
-        "table": "( SELECT geometry, type\n  FROM osm_roads_gen1\n  WHERE type IN ('motorway', 'trunk', 'primary', 'secondary', 'motorway_link', 'trunk_link')\n) AS data",
-        "type": "postgis"
-      },
-      "class": "",
-      "geometry": "linestring",
-      "id": "roads_med",
-      "name": "roads_med",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
-      "status": "off"
-    },
-    {
-      "Datasource": {
-        "dbname": "osm2",
-        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "geometry",
-        "key_field": "",
-        "table": "( SELECT geometry, type\n  FROM osm_roads_gen0\n) AS data",
-        "type": "postgis"
-      },
-      "class": "",
-      "geometry": "linestring",
-      "id": "roads_low",
-      "name": "roads_low",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
-      "status": "off"
     },
     {
       "Datasource": {

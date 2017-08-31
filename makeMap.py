@@ -6,15 +6,15 @@ from mapnik import *
 mapFile = 'cartoCSS/OpenArdenneMap.xml'
 
 # The mapOutput can be have different extension; png, pdf, svg, ...
-mapOutput = 'OpenArdenneMap.png'
+mapOutput = 'OpenArdenneMap.pdf'
 
 # Map size
 # NB: An A4 in 200 dpi is 1654 x 2339 px, or 21 cm x 29.5 cm
-# the ratio of format is sqrt(2)2.73
+# the ratio of format is sqrt(2)
 
 page = 'A2' # An A2 is 4 A4
 
-# increasing these lead to decreasing font and symbol size: not good
+# increasing map_x and map_y lead to decreasing font and symbol size: not good
 map_x = 4*2339
 map_y = 4*1654
 m = Map(map_x,map_y)
@@ -37,8 +37,13 @@ m.zoom_to_box(bbox)
 print "Scale = " , m.scale()
 
 # Compute the scale
-computedScale = 2*0.295/delta_x # correspond to 1/25000
-print "Computed scale = " , computedScale
+if (page == "A2"):
+  f = 2
+if (page == "A4"):
+  f = 1
+
+computedScale = f*0.295/delta_x # correspond to 1/25000
+print "Computed scale = 1/" , round(1/computedScale)
 print "delta_y is ", delta_y, " m"
 
 # Export to mapOutput
