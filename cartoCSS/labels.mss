@@ -1,10 +1,28 @@
 /* LABELS.MSS CONTENTS:
+ * - contour labels
  * - place names
  * - area labels
  * - waterway labels
  */
 
 /* Font sets are defined in palette.mss */
+
+/* ================================================================== */
+/* CONTOUR LABELS
+/* ================================================================== */
+
+#contour {
+  text-name:'[level]';
+  text-face-name:@sans;
+  text-placement:line;
+  text-size: 20;
+  text-wrap-width: 60;
+  text-line-spacing: 1;
+  text-fill: @contour;
+  text-halo-fill: #ffffff;
+}
+
+
 
 /* ================================================================== */
 /* PLACE NAMES
@@ -251,7 +269,7 @@
 /* ================================================================== */
 
 #train_stations{
-  point-file:url('img/icon/rail-18.png'); 
+  point-file:url('img/icon/rail-18.png');
 }
 
 /* ****************************************************************** */

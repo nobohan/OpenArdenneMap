@@ -61,6 +61,8 @@ Map { font-directory: url(./fonts); }
 /* LANDUSE & LANDCOVER COLORS
 /* ================================================================== */
 
+@contour:           #b06435;
+
 @land:              #FCFBE7;
 @water:             #1387f1;
 @grass:             #92f234;

@@ -13,7 +13,7 @@ Map { background-color: @land; }
 /* ================================================================== */
 
 #contour {
-  line-color: #b06435;
+  line-color: @contour;
 }
 
 #hillshade {

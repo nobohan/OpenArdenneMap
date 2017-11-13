@@ -3,7 +3,7 @@
 
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "id": "landuse",
@@ -24,7 +24,7 @@
     {
       "Datasource": {
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
-        "file": "/media/julien/data/Projets/Geomatique/OSM/Mapnik/Elevation/contour.shp",
+        "file": "../../Elevation/contour.shp",
         "id": "contour",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "type": "shape"
@@ -38,7 +38,7 @@
     },
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "id": "waterway",
@@ -58,7 +58,7 @@
     },
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "key_field": "",
@@ -74,7 +74,7 @@
     },
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "key_field": "",
@@ -90,7 +90,7 @@
     },
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "id": "water",
@@ -110,7 +110,7 @@
     },
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "id": "landuse_overlays",
@@ -127,7 +127,7 @@
     },
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "",
         "id": "admin",
@@ -144,7 +144,7 @@
     },
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "key_field": "",
@@ -160,7 +160,7 @@
     },
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "id": "aeroway",
@@ -180,7 +180,7 @@
     },
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "key_field": "",
@@ -196,7 +196,7 @@
     },
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "key_field": "",
@@ -212,7 +212,7 @@
     },
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "",
         "id": "roads",
@@ -231,7 +231,7 @@
     },
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "key_field": "",
@@ -247,7 +247,7 @@
     },
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "id": "bridge",
@@ -267,7 +267,7 @@
     },
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "key_field": "",
@@ -283,7 +283,7 @@
     },
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "id": "barrier_lines",
@@ -302,7 +302,7 @@
     },
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "id": "place",
@@ -322,7 +322,7 @@
     },
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "id": "landuse_label",
@@ -342,7 +342,7 @@
     },
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "id": "motorway_label",
@@ -362,7 +362,7 @@
     },
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "id": "mainroad_label",
@@ -382,7 +382,7 @@
     },
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "id": "minorroad_label",
@@ -402,7 +402,7 @@
     },
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "id": "waterway_label",
@@ -422,7 +422,7 @@
     },
     {
       "Datasource": {
-        "dbname": "osm2",
+        "dbname": "osm",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "key_field": "",
@@ -437,22 +437,6 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "status": "off"
-    },
-    {
-      "Datasource": {
-        "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
-        "file": "/media/julien/data/Projets/Geomatique/OSM/Mapnik/Elevation/mnt50_hillshade3857.tif",
-        "id": "hillshade",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "type": "gdal",
-        "format": "tiff"
-      },
-      "class": "",
-      "geometry": "raster",
-      "id": "hillshade",
-      "name": "hillshade",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "status": "on"
     }
   ],
   "Stylesheet": [
