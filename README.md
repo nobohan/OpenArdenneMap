@@ -37,11 +37,11 @@ Compared to the default OSMBright style, some features were added in the imposm-
 * The tracktype=* key for highway=track
 * The leaf_type=* & leaf_cycle=* keys for landuse=forest
 
-Here are the command for using imposm with this imposm-mapping:
-* imposm --proj=EPSG:3857 --read belgium-latest.osm.bz2 --limit-to map_extent.shp -m OpenArdenneMap/imposm-mapping.py
-* imposm -U osm -d osm -m OpenArdenneMap/imposm-mapping.py --write --optimize --deploy-production-tables --limit-to map_extent.shp
-* imposm -d osm --remove-backup-tables
-* ./make.py in osm-bright-master
+Here are the commands for using imposm with this imposm-mapping:
+* `imposm --proj=EPSG:3857 --read belgium-latest.osm.bz2 --limit-to map_extent.shp -m OpenArdenneMap/imposm-mapping.py`
+* `imposm -U osm -d osm -m OpenArdenneMap/imposm-mapping.py --write --optimize --deploy-production-tables --limit-to map_extent.shp`
+* `imposm -d osm --remove-backup-tables`
+* `./make.py` in osm-bright-master
 
 ## 3) Addition of a third outline for roads
 In Mapnik, like in many cartographic software, you can render complex road symbology using superimposed layer with different width, e.g., a simple road rendered as a white band bordered by black lines is actually made by a first layer where roads are rendered using a large black band + a second layer (on top of it) where roads are rendered with a thinner white band.
@@ -61,7 +61,7 @@ Of course, the style of the map was modified, with some inspiration taken from O
 Contour lines were generated from a digital elevation model (raster) using the GRASS tool `r.contour.level` in QGIS. Increment between contour levels was set to 5 m. Minimum number of points for a contour line was set to 10. This tool offers more options that the default QGIS tool from gdal (`gdal_contour`). Elevation levels should be defined in the field "level" (default).
 
 ## Contour lines representation
-Contour lines should be post-processed to smooth the geometries. The GRASS tool `v.generalize.smooth` was used, with the "snakes" algorithm (default parameters).
+Contour lines should be post-processed in order to have smooth geometries. The GRASS tool `v.generalize.smooth` was used, with the "snakes" algorithm (default parameters).
 
 Contour lines were saved as shp and loaded as the second layer (from bottom) in project.mml.
 

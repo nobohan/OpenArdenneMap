@@ -61,9 +61,7 @@ class Highway(LineStrings):
         ('ref', String()),
         ('layer', Integer()),
         ('z_order', WayZOrder()),
-        ('access', String()),
-        ('surface', String()),
-        ('tracktype', String())
+        ('access', String())
     )
     field_filter = (
         ('area', Bool()),
@@ -175,7 +173,11 @@ minorroads = Highway(
             'living_street',
             'unclassified',
             'residential'
-    )}
+    )},
+    fields = (
+            ('surface', String()),
+            ('tracktype', String())
+            )
 )
 
 transport_points = Points(

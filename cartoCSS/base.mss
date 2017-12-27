@@ -25,10 +25,10 @@ Map { background-color: @land; }
   [type='college']       { polygon-fill: @school; }
   [type='commercial']    { polygon-fill: @industrial; }
   [type='common']        { polygon-fill: @park; }
-  [type='forest']        { polygon-pattern-file:url(img/forest.png); line-color: darken(@wooded,25%); }
+  [type='forest']        { polygon-pattern-file:url(img/forest.png) }
   [type='forest'] [leaf_type='mixed']  { polygon-pattern-file:url(img/forest.png); line-color: darken(@wooded,25%); }
   [type='golf_course']   { polygon-fill: @sports; }
-  [type='grass']         { polygon-pattern-file:url(img/meadow.png); line-color: darken(@land,25%); }
+  [type='grass']         { polygon-pattern-file:url(img/meadow.png); }
   [type='hospital']      { polygon-fill: @hospital; }
   [type='industrial']    { polygon-pattern-file:url(img/industrial.png); }
   [type='park']          { polygon-fill: @park; }
@@ -40,8 +40,8 @@ Map { background-color: @land; }
   [type='sports_center'] { polygon-fill: @sports; }
   [type='stadium']       { polygon-fill: @sports; }
   [type='university']    { polygon-fill: @school; }
-  [type='wood']          { polygon-pattern-file:url(img/forest.png); line-color: darken(@wooded,25%); }
-  [type='meadow']        { polygon-pattern-file:url(img/meadow.png); line-color: darken(@land,25%); }
+  [type='wood']          { polygon-pattern-file:url(img/forest.png); }
+  [type='meadow']        { polygon-pattern-file:url(img/meadow.png); }
   [type='farmland']      { polygon-fill: @agriculture; }
   [type='farmyard']      { line-color: @farmyard; }
 }

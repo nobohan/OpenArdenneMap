@@ -20,18 +20,18 @@ map_y = 4*1654
 m = Map(map_x,map_y)
 load_map(m, mapFile)
 
-# Bbox (expressed in EPSG:3857, meters)
+# Bounding box (expressed in EPSG:3857, meters)
 xmin = 609650
 xmax = 624350
-ymin = 6396000
-ymax = 6406394
-bboxCartePigeonPaysage = (Envelope(xmin, ymin, xmax, ymax))
+ymin = 6397000
+ymax = 6407394
 
-delta_x = xmax - xmin    # 14.7 km
-delta_y = ymax - ymin  # 10.394 km
+bbox = (Envelope(xmin, ymin, xmax, ymax))
+
+delta_x = xmax - xmin    # 14.7 km pour A2 paysage, 1:25000
+delta_y = ymax - ymin  # 10.394 km pour A2 paysage, 1:25000
 # check that delta_y./delta_x = sqrt(2) = 1.4142135623730951
 
-bbox = bboxCartePigeonPaysage
 m.zoom_to_box(bbox)
 
 print "Scale = " , m.scale()
@@ -42,9 +42,10 @@ if (page == "A2"):
 if (page == "A4"):
   f = 1
 
-computedScale = f*0.295/delta_x # correspond to 1/25000
+computedScale = f*0.295/delta_x # The scale is the ratio between page width and delta_x
 print "Computed scale = 1/" , round(1/computedScale)
 print "delta_y is ", delta_y, " m"
+print "delta_x is ", delta_x, " m"
 
 # Export to mapOutput
 render_to_file(m, mapOutput)

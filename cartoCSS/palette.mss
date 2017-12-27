@@ -40,13 +40,13 @@ Map { font-directory: url(./fonts); }
 @contour:           #b06435;
 
 @land:              #FCFBE7;
-@water:             #1387f1;
+@water:             #7b7be1;
 @grass:             #92f234;
 @beach:             #FFEEC7;
 @park:              #DAF2C1;
 @cemetery:          #D6DED2;
 @wooded:            #008a09;
-@agriculture:       #fff9c3;
+@agriculture:       #FCFBE7;
 @farmyard:          #e7bf6a;
 
 @building:          #151515;

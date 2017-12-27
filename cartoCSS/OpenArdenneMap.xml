@@ -15,76 +15,14 @@
 <FontSet name="fontset-0">
   <Font face-name="Open Sans Semibold"/>
   <Font face-name="DejaVu Sans Book"/>
-  <Font face-name="Arundina Sans Regular"/>
-  <Font face-name="Padauk Regular"/>
-  <Font face-name="Khmer OS Metal Chrieng Regular"/>
-  <Font face-name="Mukti Narrow Regular"/>
-  <Font face-name="gargi Medium"/>
-  <Font face-name="TSCu_Paranar Regular"/>
-  <Font face-name="Tibetan Machine Uni Regular"/>
-  <Font face-name="Mallige Normal"/>
-  <Font face-name="Droid Sans Fallback Regular"/>
-  <Font face-name="Unifont Medium"/>
-  <Font face-name="unifont Medium"/>
 </FontSet>
 <FontSet name="fontset-1">
-  <Font face-name="Open Sans Oblique"/>
-  <Font face-name="DejaVu Sans Oblique"/>
-  <Font face-name="Arundina Sans Italic"/>
-  <Font face-name="TSCu_Paranar Italic"/>
-  <Font face-name="Mallige NormalItalic"/>
-  <Font face-name="DejaVu Sans Book"/>
-  <Font face-name="Arundina Sans Regular"/>
-  <Font face-name="Padauk Regular"/>
-  <Font face-name="Khmer OS Metal Chrieng Regular"/>
-  <Font face-name="Mukti Narrow Regular"/>
-  <Font face-name="gargi Medium"/>
-  <Font face-name="TSCu_Paranar Regular"/>
-  <Font face-name="Tibetan Machine Uni Regular"/>
-  <Font face-name="Mallige Normal"/>
-  <Font face-name="Droid Sans Fallback Regular"/>
-  <Font face-name="Unifont Medium"/>
-  <Font face-name="unifont Medium"/>
-</FontSet>
-<FontSet name="fontset-2">
   <Font face-name="Open Sans Bold"/>
   <Font face-name="DejaVu Sans Bold"/>
-  <Font face-name="Arundina Sans Bold"/>
-  <Font face-name="Padauk Bold"/>
-  <Font face-name="Mukti Narrow Bold"/>
-  <Font face-name="TSCu_Paranar Bold"/>
-  <Font face-name="Mallige Bold"/>
-  <Font face-name="DejaVu Sans Book"/>
-  <Font face-name="Arundina Sans Regular"/>
-  <Font face-name="Padauk Regular"/>
-  <Font face-name="Khmer OS Metal Chrieng Regular"/>
-  <Font face-name="Mukti Narrow Regular"/>
-  <Font face-name="gargi Medium"/>
-  <Font face-name="TSCu_Paranar Regular"/>
-  <Font face-name="Tibetan Machine Uni Regular"/>
-  <Font face-name="Mallige Normal"/>
-  <Font face-name="Droid Sans Fallback Regular"/>
-  <Font face-name="Unifont Medium"/>
-  <Font face-name="unifont Medium"/>
 </FontSet>
-<FontSet name="fontset-3">
+<FontSet name="fontset-2">
   <Font face-name="Open Sans Semibold Italic"/>
   <Font face-name="DejaVu Sans Oblique"/>
-  <Font face-name="Arundina Sans Italic"/>
-  <Font face-name="TSCu_Paranar Italic"/>
-  <Font face-name="Mallige NormalItalic"/>
-  <Font face-name="DejaVu Sans Book"/>
-  <Font face-name="Arundina Sans Regular"/>
-  <Font face-name="Padauk Regular"/>
-  <Font face-name="Khmer OS Metal Chrieng Regular"/>
-  <Font face-name="Mukti Narrow Regular"/>
-  <Font face-name="gargi Medium"/>
-  <Font face-name="TSCu_Paranar Regular"/>
-  <Font face-name="Tibetan Machine Uni Regular"/>
-  <Font face-name="Mallige Normal"/>
-  <Font face-name="Droid Sans Fallback Regular"/>
-  <Font face-name="Unifont Medium"/>
-  <Font face-name="unifont Medium"/>
 </FontSet>
 <Style name="landuse" filter-mode="first">
   <Rule>
@@ -98,17 +36,15 @@
   </Rule>
   <Rule>
     <Filter>([type] = 'farmland')</Filter>
-    <PolygonSymbolizer fill="#fff9c3" />
+    <PolygonSymbolizer fill="#fcfbe7" />
   </Rule>
   <Rule>
     <Filter>([type] = 'meadow')</Filter>
     <PolygonPatternSymbolizer file="img/meadow.png" />
-    <LineSymbolizer stroke="#eee876" />
   </Rule>
   <Rule>
     <Filter>([type] = 'wood')</Filter>
     <PolygonPatternSymbolizer file="img/forest.png" />
-    <LineSymbolizer stroke="#000a01" />
   </Rule>
   <Rule>
     <Filter>([type] = 'university')</Filter>
@@ -157,7 +93,6 @@
   <Rule>
     <Filter>([type] = 'grass')</Filter>
     <PolygonPatternSymbolizer file="img/meadow.png" />
-    <LineSymbolizer stroke="#eee876" />
   </Rule>
   <Rule>
     <Filter>([type] = 'golf_course')</Filter>
@@ -166,7 +101,6 @@
   <Rule>
     <Filter>([type] = 'forest')</Filter>
     <PolygonPatternSymbolizer file="img/forest.png" />
-    <LineSymbolizer stroke="#000a01" />
   </Rule>
   <Rule>
     <Filter>([type] = 'common')</Filter>
@@ -263,26 +197,26 @@
 <Style name="waterway_high" filter-mode="first">
   <Rule>
     <Filter>([type] = 'drain')</Filter>
-    <LineSymbolizer stroke-width="2" stroke="#1387f1" />
+    <LineSymbolizer stroke-width="2" stroke="#7b7be1" />
   </Rule>
   <Rule>
     <Filter>([type] = 'ditch')</Filter>
-    <LineSymbolizer stroke-width="2" stroke="#1387f1" />
+    <LineSymbolizer stroke-width="2" stroke="#7b7be1" />
   </Rule>
   <Rule>
     <Filter>([type] = 'stream')</Filter>
-    <LineSymbolizer stroke-width="6" stroke="#1387f1" />
+    <LineSymbolizer stroke-width="6" stroke="#7b7be1" />
   </Rule>
   <Rule>
     <Filter>([type] = 'canal')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="12" stroke="#1387f1" />
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="12" stroke="#7b7be1" />
   </Rule>
   <Rule>
     <Filter>([type] = 'river')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="12" stroke="#1387f1" />
+    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="12" stroke="#7b7be1" />
   </Rule>
   <Rule>
-    <LineSymbolizer stroke="#1387f1" />
+    <LineSymbolizer stroke="#7b7be1" />
   </Rule>
 </Style>
 <Layer name="waterway_high"
@@ -303,7 +237,7 @@
 
 <Style name="water" filter-mode="first">
   <Rule>
-    <PolygonSymbolizer fill="#1387f1" />
+    <PolygonSymbolizer fill="#7b7be1" />
   </Rule>
 </Style>
 <Layer name="water"
@@ -7595,7 +7529,7 @@ FROM osm_barrierways
 <Style name="area_label" filter-mode="first">
   <Rule>
     <Filter>([type] = 'water')</Filter>
-    <TextSymbolizer fill="#0b5191" halo-fill="#439ff4" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer fill="#4a4a87" halo-fill="#a5a5ea" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <Filter>([type] = 'university')</Filter>
@@ -7623,7 +7557,7 @@ FROM osm_barrierways
   </Rule>
   <Rule>
     <Filter>([type] = 'park')</Filter>
-    <TextSymbolizer fontset-name="fontset-1" fill="#839174" halo-fill="#f3fbeb" size="13" wrap-width="60" character-spacing="1" halo-radius="2" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer face-name="DejaVu Sans Oblique" fill="#839174" halo-fill="#f3fbeb" size="13" wrap-width="60" character-spacing="1" halo-radius="2" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <TextSymbolizer size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
@@ -7681,125 +7615,125 @@ FROM osm_barrierways
 <Style name="motorway_label" filter-mode="first">
   <Rule>
     <Filter>([type] = 'trunk') and ([reflen] = 8)</Filter>
-    <ShieldSymbolizer file="img/shield-trunk-8.png" size="9" fontset-name="fontset-2" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
-    <TextSymbolizer fontset-name="fontset-2" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <ShieldSymbolizer file="img/shield-trunk-8.png" size="9" fontset-name="fontset-1" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
+    <TextSymbolizer fontset-name="fontset-1" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
     <Filter>([type] = 'trunk') and ([reflen] = 7)</Filter>
-    <ShieldSymbolizer file="img/shield-trunk-7.png" size="9" fontset-name="fontset-2" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
-    <TextSymbolizer fontset-name="fontset-2" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <ShieldSymbolizer file="img/shield-trunk-7.png" size="9" fontset-name="fontset-1" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
+    <TextSymbolizer fontset-name="fontset-1" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
     <Filter>([type] = 'trunk') and ([reflen] = 6)</Filter>
-    <ShieldSymbolizer file="img/shield-trunk-6.png" size="9" fontset-name="fontset-2" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
-    <TextSymbolizer fontset-name="fontset-2" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <ShieldSymbolizer file="img/shield-trunk-6.png" size="9" fontset-name="fontset-1" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
+    <TextSymbolizer fontset-name="fontset-1" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
     <Filter>([type] = 'trunk') and ([reflen] = 5)</Filter>
-    <ShieldSymbolizer file="img/shield-trunk-5.png" size="9" fontset-name="fontset-2" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
-    <TextSymbolizer fontset-name="fontset-2" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <ShieldSymbolizer file="img/shield-trunk-5.png" size="9" fontset-name="fontset-1" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
+    <TextSymbolizer fontset-name="fontset-1" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
     <Filter>([type] = 'trunk') and ([reflen] = 4)</Filter>
-    <ShieldSymbolizer file="img/shield-trunk-4.png" size="9" fontset-name="fontset-2" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
-    <TextSymbolizer fontset-name="fontset-2" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <ShieldSymbolizer file="img/shield-trunk-4.png" size="9" fontset-name="fontset-1" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
+    <TextSymbolizer fontset-name="fontset-1" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
     <Filter>([type] = 'trunk') and ([reflen] = 3)</Filter>
-    <ShieldSymbolizer file="img/shield-trunk-3.png" size="9" fontset-name="fontset-2" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
-    <TextSymbolizer fontset-name="fontset-2" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <ShieldSymbolizer file="img/shield-trunk-3.png" size="9" fontset-name="fontset-1" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
+    <TextSymbolizer fontset-name="fontset-1" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
     <Filter>([type] = 'trunk') and ([reflen] = 2)</Filter>
-    <ShieldSymbolizer file="img/shield-trunk-2.png" size="9" fontset-name="fontset-2" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
-    <TextSymbolizer fontset-name="fontset-2" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <ShieldSymbolizer file="img/shield-trunk-2.png" size="9" fontset-name="fontset-1" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
+    <TextSymbolizer fontset-name="fontset-1" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
     <Filter>([type] = 'trunk') and ([reflen] = 1)</Filter>
-    <ShieldSymbolizer file="img/shield-trunk-1.png" size="9" fontset-name="fontset-2" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
-    <TextSymbolizer fontset-name="fontset-2" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <ShieldSymbolizer file="img/shield-trunk-1.png" size="9" fontset-name="fontset-1" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
+    <TextSymbolizer fontset-name="fontset-1" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
     <Filter>([type] = 'motorway') and ([reflen] = 8)</Filter>
-    <ShieldSymbolizer file="img/shield-motorway-8.png" size="9" fontset-name="fontset-2" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
-    <TextSymbolizer fontset-name="fontset-2" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <ShieldSymbolizer file="img/shield-motorway-8.png" size="9" fontset-name="fontset-1" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
+    <TextSymbolizer fontset-name="fontset-1" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
     <Filter>([type] = 'motorway') and ([reflen] = 7)</Filter>
-    <ShieldSymbolizer file="img/shield-motorway-7.png" size="9" fontset-name="fontset-2" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
-    <TextSymbolizer fontset-name="fontset-2" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <ShieldSymbolizer file="img/shield-motorway-7.png" size="9" fontset-name="fontset-1" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
+    <TextSymbolizer fontset-name="fontset-1" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
     <Filter>([type] = 'motorway') and ([reflen] = 6)</Filter>
-    <ShieldSymbolizer file="img/shield-motorway-6.png" size="9" fontset-name="fontset-2" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
-    <TextSymbolizer fontset-name="fontset-2" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <ShieldSymbolizer file="img/shield-motorway-6.png" size="9" fontset-name="fontset-1" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
+    <TextSymbolizer fontset-name="fontset-1" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
     <Filter>([type] = 'motorway') and ([reflen] = 5)</Filter>
-    <ShieldSymbolizer file="img/shield-motorway-5.png" size="9" fontset-name="fontset-2" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
-    <TextSymbolizer fontset-name="fontset-2" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <ShieldSymbolizer file="img/shield-motorway-5.png" size="9" fontset-name="fontset-1" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
+    <TextSymbolizer fontset-name="fontset-1" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
     <Filter>([type] = 'motorway') and ([reflen] = 4)</Filter>
-    <ShieldSymbolizer file="img/shield-motorway-4.png" size="9" fontset-name="fontset-2" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
-    <TextSymbolizer fontset-name="fontset-2" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <ShieldSymbolizer file="img/shield-motorway-4.png" size="9" fontset-name="fontset-1" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
+    <TextSymbolizer fontset-name="fontset-1" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
     <Filter>([type] = 'motorway') and ([reflen] = 3)</Filter>
-    <ShieldSymbolizer file="img/shield-motorway-3.png" size="9" fontset-name="fontset-2" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
-    <TextSymbolizer fontset-name="fontset-2" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <ShieldSymbolizer file="img/shield-motorway-3.png" size="9" fontset-name="fontset-1" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
+    <TextSymbolizer fontset-name="fontset-1" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
     <Filter>([type] = 'motorway') and ([reflen] = 2)</Filter>
-    <ShieldSymbolizer file="img/shield-motorway-2.png" size="9" fontset-name="fontset-2" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
-    <TextSymbolizer fontset-name="fontset-2" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <ShieldSymbolizer file="img/shield-motorway-2.png" size="9" fontset-name="fontset-1" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
+    <TextSymbolizer fontset-name="fontset-1" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
     <Filter>([type] = 'motorway') and ([reflen] = 1)</Filter>
-    <ShieldSymbolizer file="img/shield-motorway-1.png" size="9" fontset-name="fontset-2" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
-    <TextSymbolizer fontset-name="fontset-2" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <ShieldSymbolizer file="img/shield-motorway-1.png" size="9" fontset-name="fontset-1" fill="#ffffff" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
+    <TextSymbolizer fontset-name="fontset-1" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
     <Filter>([reflen] &lt;= 8) and ([type] = 'trunk')</Filter>
-    <ShieldSymbolizer size="9" fontset-name="fontset-2" fill="#ffffff" file="img/shield-motorway-1.png" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
-    <TextSymbolizer fontset-name="fontset-2" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <ShieldSymbolizer size="9" fontset-name="fontset-1" fill="#ffffff" file="img/shield-motorway-1.png" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
+    <TextSymbolizer fontset-name="fontset-1" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
     <Filter>([reflen] &lt;= 8) and ([type] = 'motorway')</Filter>
-    <ShieldSymbolizer size="9" fontset-name="fontset-2" fill="#ffffff" file="img/shield-motorway-1.png" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
-    <TextSymbolizer fontset-name="fontset-2" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <ShieldSymbolizer size="9" fontset-name="fontset-1" fill="#ffffff" file="img/shield-motorway-1.png" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
+    <TextSymbolizer fontset-name="fontset-1" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
     <Filter>([type] = 'trunk')</Filter>
-    <TextSymbolizer fontset-name="fontset-2" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer fontset-name="fontset-1" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
     <Filter>([type] = 'motorway')</Filter>
-    <TextSymbolizer fontset-name="fontset-2" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer fontset-name="fontset-1" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
     <Filter>([reflen] &lt;= 8)</Filter>
-    <ShieldSymbolizer size="9" fontset-name="fontset-2" fill="#ffffff" file="img/shield-motorway-1.png" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
+    <ShieldSymbolizer size="9" fontset-name="fontset-1" fill="#ffffff" file="img/shield-motorway-1.png" minimum-distance="180" ><![CDATA[[ref]]]></ShieldSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
@@ -7895,15 +7829,15 @@ FROM osm_barrierways
 <Style name="waterway_label" filter-mode="first">
   <Rule>
     <Filter>([type] = 'river')</Filter>
-    <TextSymbolizer size="20" spacing="300" fontset-name="fontset-3" fill="#0e65b5" halo-fill="rgba(43, 147, 242, 0.75)" halo-radius="1" placement="line" minimum-distance="400" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer size="20" spacing="300" fontset-name="fontset-2" fill="#5c5ca9" halo-fill="rgba(144, 144, 230, 0.75)" halo-radius="1" placement="line" minimum-distance="400" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <Filter>([type] = 'canal')</Filter>
-    <TextSymbolizer size="20" spacing="300" fontset-name="fontset-3" fill="#0e65b5" halo-fill="rgba(43, 147, 242, 0.75)" halo-radius="1" placement="line" minimum-distance="400" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer size="20" spacing="300" fontset-name="fontset-2" fill="#5c5ca9" halo-fill="rgba(144, 144, 230, 0.75)" halo-radius="1" placement="line" minimum-distance="400" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <Filter>([type] = 'stream')</Filter>
-    <TextSymbolizer fontset-name="fontset-3" fill="#0e65b5" halo-fill="rgba(43, 147, 242, 0.75)" halo-radius="1" placement="line" minimum-distance="400" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer fontset-name="fontset-2" fill="#5c5ca9" halo-fill="rgba(144, 144, 230, 0.75)" halo-radius="1" placement="line" minimum-distance="400" size="10" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="waterway_label"
