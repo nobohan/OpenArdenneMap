@@ -37,27 +37,32 @@ Map { font-directory: url(./fonts); }
 /* LANDUSE & LANDCOVER COLORS
 /* ================================================================== */
 
+@white:             #FCFBE7;
+@black:             #151515;
+@red:               #db794c;
+@green:             #3d9142;
+@blue:              #7b7be1;
+
 @contour:           #b06435;
 
-@land:              #FCFBE7;
-@water:             #7b7be1;
-@grass:             #92f234;
-@beach:             #FFEEC7;
-@park:              #DAF2C1;
-@cemetery:          #D6DED2;
-@wooded:            #008a09;
-@agriculture:       #FCFBE7;
-@farmyard:          #e7bf6a;
+@land:              @white;
+@water:             @blue;
+@grass:             @white;
+@park:              @white;
+@cemetery:          @white;
+@wooded:            @green;
+@agriculture:       @white;
+@farmyard:          @white;
 
-@building:          #151515;
-@hospital:          rgb(229,198,195);
-@school:            #FFF5CC;
-@sports:            #B8E6B8;
+@building:          @black;
+@hospital:          @black;
+@school:            @white;
+@sports:            @white;
 
-@residential:       #f2e8e0;
-@commercial:        @land * 0.97;
-@industrial:        #e7bf6a;
-@parking:           #EEE;
+@residential:       @white;
+@commercial:        @white;
+@industrial:        @white;
+@parking:           @white;
 
 /* ================================================================== */
 /* ROAD COLORS
@@ -73,31 +78,31 @@ Map { font-directory: url(./fonts); }
  */
 
 @motorway_line:     #de1111;
-@motorway_fill:     lighten(@motorway_line,10%);
+@motorway_fill:     @red;
 @motorway_case:     @motorway_line * 0.9;
 
 @trunk_line:        #de1111;
-@trunk_fill:        lighten(@trunk_line,10%);
+@trunk_fill:        @red;
 @trunk_case:        @trunk_line * 0.9;
 
 @primary_line:      #de1111;
-@primary_fill:      lighten(@primary_line,10%);
+@primary_fill:      @red;
 @primary_case:      @primary_line * 0.9;
 
 @secondary_line:    #de5f11;
-@secondary_fill:    lighten(@secondary_line,10%);
+@secondary_fill:    @red;
 @secondary_case:    @secondary_line * 0.9;
 
 @standard_line:     #000;
-@standard_fill:     #f8f8f8;
+@standard_fill:     @white;
 @standard_case:     @standard_line * 0.9;
 
 @pedestrian_line:   @standard_line;
-@pedestrian_fill:   @standard_line;
+@pedestrian_fill:   @white;
 @pedestrian_case:   @land;
 
 @cycle_line:        @standard_line;
-@cycle_fill:        #FAFAF5;
+@cycle_fill:        @white;
 @cycle_case:        @land;
 
 @rail_line:         #111;
