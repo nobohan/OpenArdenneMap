@@ -448,6 +448,29 @@ amenities = Points(
         ),
 })
 
+linearfeatures = LineStrings(
+   name = 'linearfeatures',
+   mapping = {
+           'man_made': (
+              'embankment',
+           ),
+           'barrier': (
+               'hedge',
+               'retaining_wall',
+               'wall',
+               'embankment',
+             ),
+            'embankment': (
+               'yes'
+            ),
+
+       },
+   fields = (
+     ('leaf_type', String()),
+     ('leaf_cycle', String()),
+   )
+)
+
 roads = UnionView(
     name = 'roads',
     fields = (

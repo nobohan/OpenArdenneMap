@@ -13,7 +13,7 @@ OpenArdenneMap is a customized map based on OpenStreetMap. It is based on OSMBri
 * Clone or download the OpenArdenneMap files
 
 ## To change the way the OSM data are imported:
-Edit the imposm-mapping.py file. Some features are added in OpenArdenneMap, such as tracktype and leaf_cycle/leaf_type.
+Edit the imposm-mapping.py file. Some features are added in OpenArdenneMap, such as tracktype and leaf_cycle/leaf_type. See below. 
 
 ## To change the style of the map:
 Edit the mss files using cartoCSS language and use `carto` to generate the `OpenArdenneMap.xml` mapnik file. Then:
@@ -33,10 +33,38 @@ Currently, my goal is not to generate map tiles at different zoom levels, but ra
 * no generalized layers are used, no roads_low or roads_med
 
 ## 2) Addition of new features
+
+### Adding some fields to an existing table
+Add the field names + type of the field (boolean, numeric, string) to an existing table.
+
+```
+    fields = (
+            ('surface', String()),
+            ('tracktype', String())
+            )
+```
+
 Compared to the default OSMBright style, some features were added in the imposm-mapping.py file:
-* The tracktype=* key for highway=track
+* The tracktype=* and surface=* keys for highway=track
 * The leaf_type=* & leaf_cycle=* keys for landuse=forest
 
+### Add a new table
+You can create a new table with a specific tag and fields selection. See for instance how to create a table named 'linearfeatures' with the tags 'man_made=embankment' and 'embankment=yes'. Note that the commas at the end of the values of the keys are needed, even before a closing bracket!
+
+```
+linearfeatures = LineStrings(
+   name = 'linearfeatures',
+   mapping = {
+           'man_made': (
+              'embankment',
+           ),
+            'embankment': (
+               'yes'
+            ),
+       },
+)
+```
+### Update the db using imposm
 Here are the commands for using imposm with this imposm-mapping:
 * `imposm --proj=EPSG:3857 --read belgium-latest.osm.bz2 --limit-to map_extent.shp -m OpenArdenneMap/imposm-mapping.py`
 * `imposm -U osm -d osm -m OpenArdenneMap/imposm-mapping.py --write --optimize --deploy-production-tables --limit-to map_extent.shp`
