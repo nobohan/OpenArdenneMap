@@ -38,7 +38,7 @@ Map { font-directory: url(./fonts); }
 /* ================================================================== */
 
 @white:             #FCFBE7;
-@black:             #151515;
+@black:             #444444;
 @red:               #db794c;
 @green:             #3d9142;
 @blue:              #7b7be1;

@@ -88,7 +88,7 @@
   </Rule>
   <Rule>
     <Filter>([type] = 'hospital')</Filter>
-    <PolygonSymbolizer fill="#151515" />
+    <PolygonSymbolizer fill="#444444" />
   </Rule>
   <Rule>
     <Filter>([type] = 'grass')</Filter>
@@ -141,8 +141,8 @@
 
 <Style name="contour" filter-mode="first">
   <Rule>
-    <TextSymbolizer fontset-name="fontset-0" placement="line" size="20" wrap-width="60" line-spacing="1" fill="#b06435" halo-fill="#ffffff" ><![CDATA[[level]]]></TextSymbolizer>
     <LineSymbolizer stroke="#b06435" />
+    <TextSymbolizer fontset-name="fontset-0" placement="line" size="40" wrap-width="60" line-spacing="1" fill="#b06435" halo-fill="#ffffff" ><![CDATA[[level]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="contour"
@@ -311,8 +311,8 @@ order by area desc) as landusages]]></Parameter>
 
 <Style name="buildings" filter-mode="first">
   <Rule>
-    <PolygonSymbolizer fill="#151515" />
-    <LineSymbolizer stroke="#000000" stroke-width="0.4" />
+    <PolygonSymbolizer fill="#444444" />
+    <LineSymbolizer stroke="#2b2b2b" stroke-width="0.4" />
   </Rule>
 </Style>
 <Layer name="buildings"
@@ -7448,6 +7448,7 @@ FROM osm_barrierpoints
   </Rule>
 </Style>
 <Layer name="barrier_lines"
+  status="off"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>barrier_lines</StyleName>
     <Datasource>
@@ -7477,31 +7478,31 @@ FROM osm_barrierways
   </Rule>
   <Rule>
     <Filter>([type] = 'suburb')</Filter>
-    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#888888" size="20" halo-fill="rgba(255, 255, 255, 0.6599999999999999)" halo-radius="1" wrap-width="30" character-spacing="2" line-spacing="2" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#888888" size="40" halo-fill="rgba(255, 255, 255, 0.6599999999999999)" halo-radius="1" wrap-width="30" character-spacing="2" line-spacing="2" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <Filter>([type] = 'hamlet')</Filter>
-    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#888888" size="20" halo-fill="rgba(255, 255, 255, 0.6599999999999999)" halo-radius="1" wrap-width="30" character-spacing="2" line-spacing="2" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#888888" size="40" halo-fill="rgba(255, 255, 255, 0.6599999999999999)" halo-radius="1" wrap-width="30" character-spacing="2" line-spacing="2" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <Filter>([type] = 'neighbourhood')</Filter>
-    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#888888" size="20" halo-fill="rgba(255, 255, 255, 0.6599999999999999)" halo-radius="1" wrap-width="30" character-spacing="2" line-spacing="2" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#888888" size="40" halo-fill="rgba(255, 255, 255, 0.6599999999999999)" halo-radius="1" wrap-width="30" character-spacing="2" line-spacing="2" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <Filter>([type] = 'village')</Filter>
-    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#888888" size="20" halo-fill="rgba(255, 255, 255, 0.6599999999999999)" halo-radius="1" wrap-width="30" character-spacing="2" line-spacing="2" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#888888" size="40" halo-fill="rgba(255, 255, 255, 0.6599999999999999)" halo-radius="1" wrap-width="30" character-spacing="2" line-spacing="2" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Style name="place-town" filter-mode="first">
   <Rule>
     <Filter>([type] = 'town')</Filter>
-    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#666666" halo-fill="rgba(255, 255, 255, 0.6599999999999999)" halo-radius="1" wrap-width="50" text-transform="uppercase" character-spacing="1" line-spacing="2" size="16" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#666666" halo-fill="rgba(255, 255, 255, 0.6599999999999999)" halo-radius="1" wrap-width="50" text-transform="uppercase" character-spacing="1" line-spacing="2" size="50" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Style name="place-city" filter-mode="first">
   <Rule>
     <Filter>([type] = 'city')</Filter>
-    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#444444" halo-fill="rgba(255, 255, 255, 0.6599999999999999)" halo-radius="2" size="16" character-spacing="6" wrap-width="400" text-transform="uppercase" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#444444" halo-fill="rgba(255, 255, 255, 0.6599999999999999)" halo-radius="2" size="50" character-spacing="6" wrap-width="400" text-transform="uppercase" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="place"
@@ -7545,7 +7546,7 @@ FROM osm_barrierways
   </Rule>
   <Rule>
     <Filter>([type] = 'hospital')</Filter>
-    <TextSymbolizer fill="#0d0d0d" halo-fill="#2f2f2f" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer fill="#292929" halo-fill="#5e5e5e" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <Filter>([type] = 'cemetery')</Filter>
@@ -7829,15 +7830,15 @@ FROM osm_barrierways
 <Style name="waterway_label" filter-mode="first">
   <Rule>
     <Filter>([type] = 'river')</Filter>
-    <TextSymbolizer size="20" spacing="300" fontset-name="fontset-2" fill="#5c5ca9" halo-fill="rgba(144, 144, 230, 0.75)" halo-radius="1" placement="line" minimum-distance="400" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer size="40" spacing="300" fontset-name="fontset-2" fill="#5c5ca9" halo-fill="rgba(144, 144, 230, 0.75)" halo-radius="1" placement="line" minimum-distance="400" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <Filter>([type] = 'canal')</Filter>
-    <TextSymbolizer size="20" spacing="300" fontset-name="fontset-2" fill="#5c5ca9" halo-fill="rgba(144, 144, 230, 0.75)" halo-radius="1" placement="line" minimum-distance="400" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer size="40" spacing="300" fontset-name="fontset-2" fill="#5c5ca9" halo-fill="rgba(144, 144, 230, 0.75)" halo-radius="1" placement="line" minimum-distance="400" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <Filter>([type] = 'stream')</Filter>
-    <TextSymbolizer fontset-name="fontset-2" fill="#5c5ca9" halo-fill="rgba(144, 144, 230, 0.75)" halo-radius="1" placement="line" minimum-distance="400" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer fontset-name="fontset-2" fill="#5c5ca9" halo-fill="rgba(144, 144, 230, 0.75)" halo-radius="1" placement="line" minimum-distance="400" size="30" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="waterway_label"

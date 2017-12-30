@@ -5,6 +5,10 @@
  * - waterway labels
  */
 
+@text_size_l : 50;
+@text_size_m : 40;
+@text_size_s : 30;
+
 /* Font sets are defined in palette.mss */
 
 /* ================================================================== */
@@ -15,7 +19,7 @@
   text-name:'[level]';
   text-face-name:@sans;
   text-placement:line;
-  text-size: 20;
+  text-size: @text_size_m;
   text-wrap-width: 60;
   text-line-spacing: 1;
   text-fill: @contour;
@@ -37,7 +41,7 @@
   text-fill:@city_text;
   text-halo-fill:@city_halo;
   text-halo-radius:2;
-  text-size:16;
+  text-size:@text_size_l;
   text-character-spacing: 6;
   text-wrap-width: 400;
   text-transform: uppercase;
@@ -56,7 +60,7 @@
   text-transform: uppercase;
   text-character-spacing: 1;
   text-line-spacing: 2;
-  text-size:16;
+  text-size:@text_size_l;
   text-character-spacing: 5;
   text-line-spacing: 6;
 }
@@ -71,7 +75,7 @@
   text-face-name:@sans;
   text-placement:point;
   text-fill:@other_text;
-  text-size:20;
+  text-size:@text_size_m;
   text-halo-fill:@other_halo;
   text-halo-radius:1;
   text-wrap-width: 30;
@@ -90,7 +94,7 @@
   text-halo-fill:@locality_halo;
   text-halo-radius:1;
   text-wrap-width: 30;
-  text-size:10;
+  text-size:@text_size_m;
   text-wrap-width: 60;
   text-line-spacing: 1;
 }
@@ -167,10 +171,10 @@
   text-halo-radius: 1;
   text-placement: line;
   text-min-distance: 400;
-  text-size: 10;
+  text-size: @text_size_s;
   [type='river'],
   [type='canal'] {
-    text-size: 20;
+    text-size: @text_size_m;
     text-spacing: 300;
   }
 }
