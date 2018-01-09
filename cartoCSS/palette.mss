@@ -33,17 +33,23 @@ Map { font-directory: url(./fonts); }
 /* Note this is only implemented for certain things so far */
 @text_adjust: 0;
 
+
 /* ================================================================== */
-/* LANDUSE & LANDCOVER COLORS
+/* BASE COLORS
 /* ================================================================== */
 
 @white:             #FCFBE7;
 @black:             #444444;
+@darkgray:          #999999;
 @red:               #db794c;
 @green:             #3d9142;
 @blue:              #7b7be1;
 
 @contour:           #b06435;
+
+/* ================================================================== */
+/* LANDUSE & LANDCOVER COLORS
+/* ================================================================== */
 
 @land:              @white;
 @water:             @blue;
@@ -53,12 +59,10 @@ Map { font-directory: url(./fonts); }
 @wooded:            @green;
 @agriculture:       @white;
 @farmyard:          @white;
-
 @building:          @black;
 @hospital:          @black;
 @school:            @white;
 @sports:            @white;
-
 @residential:       @white;
 @commercial:        @white;
 @industrial:        @white;

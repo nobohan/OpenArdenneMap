@@ -142,7 +142,7 @@
 <Style name="contour" filter-mode="first">
   <Rule>
     <LineSymbolizer stroke="#b06435" />
-    <TextSymbolizer fontset-name="fontset-0" placement="line" size="40" wrap-width="60" line-spacing="1" fill="#b06435" halo-fill="#ffffff" ><![CDATA[[level]]]></TextSymbolizer>
+    <TextSymbolizer fontset-name="fontset-0" placement="line" size="30" wrap-width="60" line-spacing="1" fill="#b06435" halo-fill="#ffffff" ><![CDATA[[level]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="contour"
@@ -151,7 +151,7 @@
     <StyleName>contour</StyleName>
     <Datasource>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
-       <Parameter name="file"><![CDATA[../../Elevation/contour.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[../contour/contour.shp]]></Parameter>
        <Parameter name="id"><![CDATA[contour]]></Parameter>
        <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
@@ -7489,20 +7489,20 @@ FROM osm_barrierways
     <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#888888" size="40" halo-fill="rgba(255, 255, 255, 0.6599999999999999)" halo-radius="1" wrap-width="30" character-spacing="2" line-spacing="2" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <Filter>([type] = 'village')</Filter>
-    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#888888" size="40" halo-fill="rgba(255, 255, 255, 0.6599999999999999)" halo-radius="1" wrap-width="30" character-spacing="2" line-spacing="2" ><![CDATA[[name]]]></TextSymbolizer>
+    <Filter>([type] = 'town')</Filter>
+    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#666666" halo-fill="rgba(255, 255, 255, 0.6599999999999999)" halo-radius="1" wrap-width="50" text-transform="uppercase" character-spacing="1" line-spacing="2" size="60" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Style name="place-town" filter-mode="first">
   <Rule>
-    <Filter>([type] = 'town')</Filter>
-    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#666666" halo-fill="rgba(255, 255, 255, 0.6599999999999999)" halo-radius="1" wrap-width="50" text-transform="uppercase" character-spacing="1" line-spacing="2" size="50" ><![CDATA[[name]]]></TextSymbolizer>
+    <Filter>([type] = 'village')</Filter>
+    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#666666" halo-fill="rgba(255, 255, 255, 0.6599999999999999)" halo-radius="1" wrap-width="50" text-transform="uppercase" character-spacing="1" line-spacing="2" size="60" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Style name="place-city" filter-mode="first">
   <Rule>
     <Filter>([type] = 'city')</Filter>
-    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#444444" halo-fill="rgba(255, 255, 255, 0.6599999999999999)" halo-radius="2" size="50" character-spacing="6" wrap-width="400" text-transform="uppercase" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#444444" halo-fill="rgba(255, 255, 255, 0.6599999999999999)" halo-radius="2" size="60" character-spacing="6" wrap-width="400" text-transform="uppercase" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="place"
@@ -7517,11 +7517,12 @@ FROM osm_barrierways
        <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
        <Parameter name="id"><![CDATA[place]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="project"><![CDATA[foss4g-2011]]></Parameter>
        <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
        <Parameter name="table"><![CDATA[( SELECT geometry, type, name, z_order, population
   FROM osm_places
-  ORDER BY z_order, population DESC NULLS LAST
+ WHERE type IN (
+  'city', 'town', 'village', 'hamlet' )
+ ORDER BY z_order, population DESC NULLS LAST
 ) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
@@ -7530,38 +7531,34 @@ FROM osm_barrierways
 <Style name="area_label" filter-mode="first">
   <Rule>
     <Filter>([type] = 'water')</Filter>
-    <TextSymbolizer fill="#4a4a87" halo-fill="#a5a5ea" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <Filter>([type] = 'university')</Filter>
-    <TextSymbolizer fill="#97978b" halo-fill="#ffffff" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <Filter>([type] = 'school')</Filter>
-    <TextSymbolizer fill="#97978b" halo-fill="#ffffff" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer fill="#4a4a87" halo-fill="#a5a5ea" size="30" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <Filter>([type] = 'college')</Filter>
-    <TextSymbolizer fill="#97978b" halo-fill="#ffffff" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer fill="#97978b" halo-fill="#ffffff" size="30" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'school')</Filter>
+    <TextSymbolizer fill="#97978b" halo-fill="#ffffff" size="30" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'university')</Filter>
+    <TextSymbolizer fill="#97978b" halo-fill="#ffffff" size="30" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <Filter>([type] = 'hospital')</Filter>
-    <TextSymbolizer fill="#292929" halo-fill="#5e5e5e" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <Filter>([type] = 'cemetery')</Filter>
-    <TextSymbolizer fill="#97978b" halo-fill="#ffffff" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer fill="#292929" halo-fill="#5e5e5e" size="30" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <Filter>([type] = 'golf_course')</Filter>
-    <TextSymbolizer fill="#97978b" halo-fill="#ffffff" size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer fill="#97978b" halo-fill="#ffffff" size="30" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <Filter>([type] = 'park')</Filter>
-    <TextSymbolizer face-name="DejaVu Sans Oblique" fill="#97978b" halo-fill="#ffffff" size="13" wrap-width="60" character-spacing="1" halo-radius="2" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer face-name="DejaVu Sans Oblique" fill="#97978b" halo-fill="#ffffff" size="30" wrap-width="60" character-spacing="1" halo-radius="2" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <TextSymbolizer size="13" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer size="30" wrap-width="60" character-spacing="1" halo-radius="2" fontset-name="fontset-0" fill="#888888" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="area_label"
@@ -7574,7 +7571,6 @@ FROM osm_barrierways
        <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
        <Parameter name="id"><![CDATA[landuse_label]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="project"><![CDATA[foss4g-2011]]></Parameter>
        <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
        <Parameter name="table"><![CDATA[( SELECT type, name, area, 'land' AS stylegroup,
     ST_PointOnSurface(geometry) AS geometry
@@ -7582,9 +7578,7 @@ FROM osm_barrierways
   WHERE name IS NOT NULL
     AND geometry && !bbox!
     AND type IN (
-      'cemetery', 'college', 'commercial', 'common', 'garden', 'golf_course',
-      'hospital', 'industrial', 'library', 'park', 'pedestrian', 'place_of_worship',
-      'playground', 'school', 'sports_center', 'stadium', 'theatre', 'university' )
+      'industrial', 'school', 'university' )
     AND geometry && !bbox!
     AND ST_IsValid(geometry)
 
@@ -7605,7 +7599,9 @@ FROM osm_barrierways
   FROM osm_buildings
   WHERE name IS NOT NULL 
     AND geometry && !bbox!
-    AND ST_IsValid(geometry)
+  AND type IN (
+      'industrial', 'school', 'university' )
+  AND ST_IsValid(geometry)
 
   ORDER BY area DESC
 ) AS data]]></Parameter>
@@ -7723,12 +7719,12 @@ FROM osm_barrierways
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'trunk')</Filter>
+    <Filter>([type] = 'motorway')</Filter>
     <TextSymbolizer fontset-name="fontset-1" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'motorway')</Filter>
+    <Filter>([type] = 'trunk')</Filter>
     <TextSymbolizer fontset-name="fontset-1" placement="line" fill="#777777" halo-fill="#ffffff" halo-radius="1" minimum-distance="60" size="10" ><![CDATA[[name]]]></TextSymbolizer>
     <PointSymbolizer file="img/icon/rail-18.png" />
   </Rule>
@@ -7751,7 +7747,6 @@ FROM osm_barrierways
        <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
        <Parameter name="id"><![CDATA[motorway_label]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="project"><![CDATA[osm-bright]]></Parameter>
        <Parameter name="srs"><![CDATA[null]]></Parameter>
        <Parameter name="table"><![CDATA[( SELECT geometry, type, name, ref, CHAR_LENGTH(ref) AS reflen
     FROM osm_motorways
@@ -7792,7 +7787,6 @@ FROM osm_barrierways
        <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
        <Parameter name="id"><![CDATA[mainroad_label]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="project"><![CDATA[osm-bright]]></Parameter>
        <Parameter name="srs"><![CDATA[null]]></Parameter>
        <Parameter name="table"><![CDATA[( SELECT geometry, type, name
   FROM osm_mainroads
@@ -7817,7 +7811,6 @@ FROM osm_barrierways
        <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
        <Parameter name="id"><![CDATA[minorroad_label]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="project"><![CDATA[foss4g-2011]]></Parameter>
        <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
        <Parameter name="table"><![CDATA[( SELECT geometry, type, name
   FROM osm_minorroads
@@ -7851,7 +7844,6 @@ FROM osm_barrierways
        <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
        <Parameter name="id"><![CDATA[waterway_label]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="project"><![CDATA[foss4g-2011]]></Parameter>
        <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
        <Parameter name="table"><![CDATA[( SELECT geometry, type, name
   FROM osm_waterways

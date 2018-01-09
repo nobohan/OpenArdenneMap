@@ -5,7 +5,7 @@
  * - waterway labels
  */
 
-@text_size_l : 50;
+@text_size_l : 60;
 @text_size_m : 40;
 @text_size_s : 30;
 
@@ -19,7 +19,7 @@
   text-name:'[level]';
   text-face-name:@sans;
   text-placement:line;
-  text-size: @text_size_m;
+  text-size: @text_size_s;
   text-wrap-width: 60;
   text-line-spacing: 1;
   text-fill: @contour;
@@ -49,7 +49,8 @@
 
 /* ---- Towns ------------------------------------------------------- */
 
-#place::town[type='town'] {
+#place::small[type='town'],
+#place::town[type='village'] {
   text-name:'[name]';
   text-face-name:@sans;
   text-placement:point;
@@ -67,7 +68,6 @@
 
 /* ---- Other small places ------------------------------------------ */
 
-#place::small[type='village'],
 #place::small[type='suburb'],
 #place::small[type='hamlet'],
 #place::small[type='neighbourhood'] {
@@ -106,7 +106,7 @@
 
 #area_label {
   text-name: "[name]";
-  text-size: 13;
+  text-size: @text_size_s;
   text-wrap-width: 60;
   text-character-spacing: 1;
   text-halo-radius: 2;
@@ -125,10 +125,6 @@
     text-fill: @sports * 0.6;
     text-halo-fill: lighten(@sports, 10%);
   }
-  [type='cemetery'] {
-    text-fill: @cemetery * 0.6;
-    text-halo-fill: lighten(@cemetery, 10%);
-  }
   [type='hospital'] {
     text-fill: @hospital * 0.6;
     text-halo-fill: lighten(@hospital, 10%);
@@ -138,6 +134,7 @@
   [type='university'] {
     text-fill: @school * 0.6;
     text-halo-fill: lighten(@school, 10%);
+    /*content: 'école';*/
   }
   [type='water'] {
     text-fill: @water * 0.6;

@@ -24,7 +24,7 @@
     {
       "Datasource": {
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
-        "file": "../../Elevation/contour.shp",
+        "file": "../contour/contour.shp",
         "id": "contour",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "type": "shape"
@@ -308,9 +308,8 @@
         "geometry_field": "geometry",
         "id": "place",
         "key_field": "",
-        "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT geometry, type, name, z_order, population\n  FROM osm_places\n  ORDER BY z_order, population DESC NULLS LAST\n) AS data",
+        "table": "( SELECT geometry, type, name, z_order, population\n  FROM osm_places\n WHERE type IN (\n  'city', 'town', 'village', 'hamlet' )\n ORDER BY z_order, population DESC NULLS LAST\n) AS data",
         "type": "postgis"
       },
       "class": "",
@@ -328,10 +327,8 @@
         "geometry_field": "geometry",
         "id": "landuse_label",
         "key_field": "",
-        "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT type, name, area, 'land' AS stylegroup,\n    ST_PointOnSurface(geometry) AS geometry\n  FROM osm_landusages\n  WHERE name IS NOT NULL\n    AND geometry && !bbox!\n    AND type IN (\n      'cemetery', 'college', 'commercial', 'common', 'garden', 'golf_course',\n      'hospital', 'industrial', 'library', 'park', 'pedestrian', 'place_of_worship',\n      'playground', 'school', 'sports_center', 'stadium', 'theatre', 'university' )\n    AND geometry && !bbox!\n    AND ST_IsValid(geometry)\n\n  UNION ALL\n\n  SELECT type, name, area, 'water' AS stylegroup,\n    ST_PointOnSurface(geometry) AS geometry\n  FROM osm_waterareas\n  WHERE name IS NOT NULL\n    AND type in ( 'water', 'basin' )\n    AND geometry && !bbox!\n    AND ST_IsValid(geometry)\n\n  UNION ALL\n\n  SELECT 'building' AS type, name, area, 'building' AS stylegroup,\n    ST_PointOnSurface(geometry) AS geometry\n  FROM osm_buildings\n  WHERE name IS NOT NULL \n    AND geometry && !bbox!\n    AND ST_IsValid(geometry)\n\n  ORDER BY area DESC\n) AS data",
-        "type": "postgis"
+        "table": "( SELECT type, name, area, 'land' AS stylegroup,\n    ST_PointOnSurface(geometry) AS geometry\n  FROM osm_landusages\n  WHERE name IS NOT NULL\n    AND geometry && !bbox!\n    AND type IN (\n      'industrial', 'school', 'university' )\n    AND geometry && !bbox!\n    AND ST_IsValid(geometry)\n\n  UNION ALL\n\n  SELECT type, name, area, 'water' AS stylegroup,\n    ST_PointOnSurface(geometry) AS geometry\n  FROM osm_waterareas\n  WHERE name IS NOT NULL\n    AND type in ( 'water', 'basin' )\n    AND geometry && !bbox!\n    AND ST_IsValid(geometry)\n\n  UNION ALL\n\n  SELECT 'building' AS type, name, area, 'building' AS stylegroup,\n    ST_PointOnSurface(geometry) AS geometry\n  FROM osm_buildings\n  WHERE name IS NOT NULL \n    AND geometry && !bbox!\n  AND type IN (\n      'industrial', 'school', 'university' )\n  AND ST_IsValid(geometry)\n\n  ORDER BY area DESC\n) AS data",        "type": "postgis"
       },
       "class": "",
       "geometry": "point",
@@ -348,7 +345,6 @@
         "geometry_field": "geometry",
         "id": "motorway_label",
         "key_field": "",
-        "project": "osm-bright",
         "srs": null,
         "table": "( SELECT geometry, type, name, ref, CHAR_LENGTH(ref) AS reflen\n    FROM osm_motorways\n    WHERE type IN ('motorway', 'trunk')\n      AND (name IS NOT NULL OR ref IS NOT NULL)\n) AS data",
         "type": "postgis"
@@ -368,7 +364,6 @@
         "geometry_field": "geometry",
         "id": "mainroad_label",
         "key_field": "",
-        "project": "osm-bright",
         "srs": null,
         "table": "( SELECT geometry, type, name\n  FROM osm_mainroads\n  WHERE name IS NOT NULL\n) AS data",
         "type": "postgis"
@@ -388,7 +383,6 @@
         "geometry_field": "geometry",
         "id": "minorroad_label",
         "key_field": "",
-        "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT geometry, type, name\n  FROM osm_minorroads\n  WHERE name IS NOT NULL\n) AS data",
         "type": "postgis"
@@ -408,7 +402,6 @@
         "geometry_field": "geometry",
         "id": "waterway_label",
         "key_field": "",
-        "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT geometry, type, name\n  FROM osm_waterways\n  WHERE type IN ('canal', 'river', 'stream') \n    AND name IS NOT NULL\n) AS data",
         "type": "postgis"
