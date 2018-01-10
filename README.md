@@ -13,7 +13,7 @@ OpenArdenneMap is a customized map based on OpenStreetMap. It is based on OSMBri
 * Clone or download the OpenArdenneMap files
 
 ## To change the way the OSM data are imported:
-Edit the imposm-mapping.py file. Some features are added in OpenArdenneMap, such as tracktype and leaf_cycle/leaf_type. See below. 
+Edit the imposm-mapping.py file. Some features are added in OpenArdenneMap, such as tracktype and leaf_cycle/leaf_type. See below.
 
 ## To change the style of the map:
 Edit the mss files using cartoCSS language and use `carto` to generate the `OpenArdenneMap.xml` mapnik file. Then:
@@ -94,3 +94,12 @@ Contour lines should be post-processed in order to have smooth geometries. The G
 Contour lines were saved as shp and loaded as the second layer (from bottom) in project.mml.
 
 Contour labels are defined in `labels.mss`.
+
+## 5) printing
+Some useful commands for printing the map in a pdf format:
+
+* Determining the size of a pdf:
+`pdfjam --outfile A2.pdf --paper a2paper in.pdf`
+
+* Make several A4 of a A2 pdf:
+`pdfposter -ma4 -pa2 A2.pdf out_A4.pdf`
