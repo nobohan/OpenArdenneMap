@@ -261,48 +261,6 @@ waterareas = Polygons(
     },
 )
 
-barrierpoints = Points(
-    name = 'barrierpoints',
-    mapping = {
-        'barrier': (
-            'block',
-            'bollard',
-            'cattle_grid',
-            'chain',
-            'cycle_barrier',
-            'entrance',
-            'horse_stile',
-            'gate',
-            'spikes',
-            'lift_gate',
-            'kissing_gate',
-            'fence',
-            'yes',
-            'wire_fence',
-            'toll_booth',
-            'stile',
-    )}
-)
-barrierways = LineStrings(
-    name = 'barrierways',
-    mapping = {
-        'barrier': (
-            'city_wall',
-            'fence',
-            'hedge',
-            'retaining_wall',
-            'wall',
-            'bollard',
-            'gate',
-            'spikes',
-            'lift_gate',
-            'kissing_gate',
-            'embankment',
-            'yes',
-            'wire_fence',
-    )}
-)
-
 aeroways = LineStrings(
     name = 'aeroways',
     mapping = {

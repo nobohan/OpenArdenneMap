@@ -7408,65 +7408,33 @@ order by area desc) as landusages]]></Parameter>
     </Datasource>
   </Layer>
 
-<Style name="barrier_points" filter-mode="first">
+<Style name="linear_features" filter-mode="first">
   <Rule>
-    <Filter>([stylegroup] = 'divider')</Filter>
-    <MarkersSymbolizer height="2" fill="#c7c7c7" stroke-opacity="0" allow-overlap="true" />
+    <Filter>([type] = 'embankment')</Filter>
+    <LineSymbolizer stroke="#222222" stroke-width="4" stroke-dasharray="3, 2" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'hedge')</Filter>
+    <LineSymbolizer stroke="#3d9142" stroke-width="4" stroke-dasharray="3, 2" />
+  </Rule>
+  <Rule>
+    <LineSymbolizer stroke-width="4" stroke-dasharray="3, 2" />
   </Rule>
 </Style>
-<Layer name="barrier_points"
+<Layer name="linear_features"
+  status="on"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    <StyleName>barrier_points</StyleName>
+    <StyleName>linear_features</StyleName>
     <Datasource>
        <Parameter name="dbname"><![CDATA[osm]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
+       <Parameter name="id"><![CDATA[linear_features]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="table"><![CDATA[(select geometry, type,
-	CASE
-		WHEN type IN ('toll_booth', 'stile', 'gate', 'horse_stile','lift_gate', 'kissing_gate','cattle_grid','entrance') THEN 'gate'
-		WHEN type IN ('block', 'bollard', 'chain', 'cycle_barrier', 'spikes', 'fence', 'wire_fence','yes') THEN 'divider'
-	END AS stylegroup
-FROM osm_barrierpoints
-) AS data]]></Parameter>
-       <Parameter name="type"><![CDATA[postgis]]></Parameter>
-    </Datasource>
-  </Layer>
-
-<Style name="barrier_lines" filter-mode="first">
-  <Rule>
-    <Filter>([stylegroup] = 'hedge')</Filter>
-    <LineSymbolizer stroke-width="3" stroke="#f9f7d0" />
-  </Rule>
-  <Rule>
-    <Filter>([stylegroup] = 'fence')</Filter>
-    <LineSymbolizer stroke-width="1.75" stroke="#aaaabb" stroke-dasharray="1, 1" />
-  </Rule>
-  <Rule>
-    <Filter>([stylegroup] = 'gate')</Filter>
-    <LineSymbolizer stroke-width="2.5" stroke="#aaaabb" stroke-dasharray="3, 2" />
-  </Rule>
-</Style>
-<Layer name="barrier_lines"
-  status="off"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    <StyleName>barrier_lines</StyleName>
-    <Datasource>
-       <Parameter name="dbname"><![CDATA[osm]]></Parameter>
-       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
-       <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
-       <Parameter name="id"><![CDATA[barrier_lines]]></Parameter>
-       <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="project"><![CDATA[osm-bright]]></Parameter>
        <Parameter name="srs"><![CDATA[null]]></Parameter>
-       <Parameter name="table"><![CDATA[(SELECT geometry, type,
-	CASE 
-		WHEN type IN ('city_wall', 'fence', 'retaining_wall', 'wall', 'wire_fence', 'yes') THEN 'fence'
-		WHEN type IN ('gate', 'spikes', 'bollard', 'lift_gate', 'kissing_gate') THEN 'gate'
-		WHEN type IN ('hedge') THEN 'hedge'
-	END AS stylegroup
-FROM osm_barrierways
-) AS data]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT geometry, type, leaf_type, leaf_cycle
+  FROM osm_linearfeatures
+)  AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>

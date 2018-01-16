@@ -35,7 +35,7 @@ Currently, my goal is not to generate map tiles at different zoom levels, but ra
 ## 2) Addition of new features
 
 ### Adding some fields to an existing table
-Add the field names + type of the field (boolean, numeric, string) to an existing table.
+1) Add the field names + type of the field (boolean, numeric, string) to an existing table.
 
 ```
     fields = (
@@ -48,8 +48,22 @@ Compared to the default OSMBright style, some features were added in the imposm-
 * The tracktype=* and surface=* keys for highway=track
 * The leaf_type=* & leaf_cycle=* keys for landuse=forest
 
+2) Then, the field name should be added in `project.mml` in the layer where this field should be used.
+Example:
+
+```
+"table": "( SELECT geometry, type, tunnel, bridge, tracktype, access, ...
+```
+
+3) Lastly, for defining a specific style for, e.g., the tracktype, do it in the right mss style file.
+
+```
+[tracktype='grade1'] { line-width: @rdz16_min / 2; }
+```
+
+
 ### Add a new table
-You can create a new table with a specific tag and fields selection. See for instance how to create a table named 'linearfeatures' with the tags 'man_made=embankment' and 'embankment=yes'. Note that the commas at the end of the values of the keys are needed, even before a closing bracket!
+1) You can create a new table with a specific tag and fields selection in `imposm-mapping.py`. See for instance how to create a table named 'linearfeatures' with the tags 'man_made=embankment' and 'embankment=yes'. Note that the commas at the end of the values of the keys are needed, even before a closing bracket!
 
 ```
 linearfeatures = LineStrings(
@@ -64,12 +78,47 @@ linearfeatures = LineStrings(
        },
 )
 ```
+
+2) Then add a specific layer in `project.mml`:
+
+Example for the layer linear_features:
+```
+{
+  "Datasource": {
+    "dbname": "osm",
+    "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+    "geometry_field": "geometry",
+    "id": "linear_features",
+    "key_field": "",
+    "srs": null,
+    "table": "( SELECT geometry, type\n  FROM osm_linearfeatures\n)  AS data",
+    "type": "postgis"
+  },
+  "class": "",
+  "geometry": "linestring",
+  "id": "linear_features",
+  "name": "linear_features",
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "srs-name": "900913",
+  "status": "on"
+},
+```
+
+
+3) Finally, define a style for this layer in one the mss files:
+
+`#linear_features: { ... }`
+
+
 ### Update the db using imposm
 Here are the commands for using imposm with this imposm-mapping:
 * `imposm --proj=EPSG:3857 --read belgium-latest.osm.bz2 --limit-to map_extent.shp -m OpenArdenneMap/imposm-mapping.py`
 * `imposm -U osm -d osm -m OpenArdenneMap/imposm-mapping.py --write --optimize --deploy-production-tables --limit-to map_extent.shp`
 * `imposm -d osm --remove-backup-tables`
 * `./make.py` in osm-bright-master
+
+Instead of processing the whole belgium-latest.osm.bz2 file, you can download directly the OSM data using JOSM, save as a .osm file and use it with imposm. It is much faster.
+
 
 ## 3) Addition of a third outline for roads
 In Mapnik, like in many cartographic software, you can render complex road symbology using superimposed layer with different width, e.g., a simple road rendered as a white band bordered by black lines is actually made by a first layer where roads are rendered using a large black band + a second layer (on top of it) where roads are rendered with a thinner white band.

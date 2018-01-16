@@ -107,36 +107,14 @@ Map { background-color: @land; }
   line-opacity: 0.4;
 }
 
-/* ================================================================== */
-/* BARRIER POINTS
-/* ================================================================== */
-
-
-#barrier_points[stylegroup = 'divider'] {
-  marker-height: 2;
-  marker-fill: #c7c7c7;
-  marker-line-opacity:0;
-  marker-allow-overlap:true;
-}
 
 /* ================================================================== */
-/* BARRIER LINES
+/* LINEAR FEATURES
 /* ================================================================== */
 
-#barrier_lines[stylegroup = 'gate'] {
-  line-width:2.5;
-  line-color:#aab;
-  line-dasharray:3,2;
-}
-
-#barrier_lines[stylegroup = 'fence'] {
-  line-width:1.75;
-  line-color:#aab;
-  line-dasharray:1,1;
-}
-
-#barrier_lines[stylegroup = 'hedge'] {
-  line-width:3;
-  line-color:darken(@park,5%);
-
+#linear_features {
+  line-width: 4;
+  line-dasharray: 3,2;
+  [type = 'hedge'] {line-color: @green;}
+  [type = 'embankment'] {line-color: #222;}
 }
