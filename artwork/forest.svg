@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="forest_bl.svg"
+   sodipodi:docname="forest.svg"
    inkscape:export-filename="/media/julien/data/Projets/Geomatique/OSM/Mapnik/artwork/meadow.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
@@ -28,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.287344"
-     inkscape:cx="241.49318"
-     inkscape:cy="641.38619"
+     inkscape:zoom="4.574688"
+     inkscape:cx="264.20741"
+     inkscape:cy="692.99697"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -51,7 +51,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -62,37 +62,45 @@
     <rect
        style="fill:#5ee07b;fill-opacity:1;stroke:none;stroke-width:0.89282173;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.70588235"
        id="rect4150"
-       width="156.14754"
-       height="153.27815"
+       width="111.55434"
+       height="116.11715"
        x="233.82079"
        y="314.92676" />
-    <ellipse
-       style="fill:#5ee07b;fill-opacity:1;stroke:#444444;stroke-width:1.35930312;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#175024;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 255,357.3622 5,-15 5,15"
+       id="path4401"
+       inkscape:connector-curvature="0" />
+    <circle
+       style="fill:#5ee07b;fill-opacity:1;stroke:#175024;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4403"
-       cx="348.10159"
-       cy="345.91193"
-       rx="6.9987211"
-       ry="6.6001515" />
-    <ellipse
-       style="fill:#5ee07b;fill-opacity:1;stroke:#444444;stroke-width:1.35930312;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       cx="315.46484"
+       cy="338.39984"
+       r="5" />
+    <circle
+       style="fill:#5ee07b;fill-opacity:1;stroke:#175024;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4403-2"
-       cx="301.09109"
-       cy="428.95447"
-       rx="6.9987211"
-       ry="6.6001515" />
+       cx="272.50974"
+       cy="402.96539"
+       r="5" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#175024;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 325.74151,420.04339 5,-15 5,15"
+       id="path4401-2"
+       inkscape:connector-curvature="0" />
     <ellipse
-       style="fill:#5ee07b;fill-opacity:1;stroke:#444444;stroke-width:1.35930312;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4403-2-3"
-       cx="271.99042"
-       cy="370.99936"
-       rx="6.9987211"
-       ry="6.6001515" />
+       style="fill:#5ee07b;fill-opacity:1;stroke:#175024;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4403-8"
+       cx="306.99365"
+       cy="379.98669"
+       rx="3.1222579"
+       ry="2.9036636" />
     <ellipse
-       style="fill:#5ee07b;fill-opacity:1;stroke:#444444;stroke-width:1.35930312;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4403-2-6"
-       cx="368.36276"
-       cy="446.17081"
-       rx="6.9987211"
-       ry="6.6001515" />
+       style="fill:#5ee07b;fill-opacity:1;stroke:#175024;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4403-8-9"
+       cx="244.39273"
+       cy="324.87329"
+       rx="3.1222579"
+       ry="2.9036636" />
   </g>
 </svg>

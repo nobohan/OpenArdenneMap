@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="forest_bl.svg"
+   sodipodi:docname="forest_large.svg"
    inkscape:export-filename="/media/julien/data/Projets/Geomatique/OSM/Mapnik/artwork/meadow.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
@@ -29,7 +29,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.287344"
-     inkscape:cx="241.49318"
+     inkscape:cx="315.59659"
      inkscape:cy="641.38619"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -51,7 +51,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -66,33 +66,29 @@
        height="153.27815"
        x="233.82079"
        y="314.92676" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#175024;stroke-width:1.35930312px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 263.46627,370.94283 6.99872,-19.80046 6.99872,19.80046"
+       id="path4401"
+       inkscape:connector-curvature="0" />
     <ellipse
-       style="fill:#5ee07b;fill-opacity:1;stroke:#444444;stroke-width:1.35930312;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#5ee07b;fill-opacity:1;stroke:#175024;stroke-width:1.35930312;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4403"
        cx="348.10159"
        cy="345.91193"
        rx="6.9987211"
        ry="6.6001515" />
     <ellipse
-       style="fill:#5ee07b;fill-opacity:1;stroke:#444444;stroke-width:1.35930312;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#5ee07b;fill-opacity:1;stroke:#175024;stroke-width:1.35930312;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4403-2"
        cx="301.09109"
        cy="428.95447"
        rx="6.9987211"
        ry="6.6001515" />
-    <ellipse
-       style="fill:#5ee07b;fill-opacity:1;stroke:#444444;stroke-width:1.35930312;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4403-2-3"
-       cx="271.99042"
-       cy="370.99936"
-       rx="6.9987211"
-       ry="6.6001515" />
-    <ellipse
-       style="fill:#5ee07b;fill-opacity:1;stroke:#444444;stroke-width:1.35930312;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4403-2-6"
-       cx="368.36276"
-       cy="446.17081"
-       rx="6.9987211"
-       ry="6.6001515" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#175024;stroke-width:1.35930312px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 362.48629,453.6839 6.99872,-19.80046 6.99872,19.80046"
+       id="path4401-2"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>

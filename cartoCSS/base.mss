@@ -27,8 +27,8 @@ Map { background-color: @land; }
   [type='common']        { polygon-fill: @park; }
   [type='forest']        { polygon-pattern-file:url(img/forest.svg) }
   [type='forest'] [leaf_type='mixed']  { polygon-pattern-file:url(img/forest.svg) }
-  [type='forest'] [leaf_type='broadleaved']  { polygon-pattern-file:url(img/forest.svg) }
-  [type='forest'] [leaf_type='needleleaved']  { polygon-pattern-file:url(img/forest.svg) }
+  [type='forest'] [leaf_type='broadleaved']  { polygon-pattern-file:url(img/forest_bl.svg) }
+  [type='forest'] [leaf_type='needleleaved']  { polygon-pattern-file:url(img/forest_nl.svg) }
   [type='golf_course']   { polygon-fill: @sports; }
   [type='grass']         { polygon-pattern-file:url(img/meadow.svg); }
   [type='hospital']      { polygon-fill: @hospital; }
@@ -43,7 +43,7 @@ Map { background-color: @land; }
   [type='stadium']       { polygon-fill: @sports; }
   [type='university']    { polygon-fill: @school; }
   [type='wood']          { polygon-pattern-file:url(img/forest.svg) }
-  [type='meadow']        { polygon-pattern-file:url(img/meadow.svg); }
+  [type='meadow']        { polygon-pattern-file:url(img/meadow.svg); line-width:0.5; line-color: @gray; }
   [type='farmland']      { polygon-fill: @agriculture; }
   [type='farmyard']      { line-color: @farmyard; }
 }
@@ -58,7 +58,7 @@ Map { background-color: @land; }
 }
 
 #landuse_overlays[type='wetland'] {
-  polygon-pattern-file:url(img/marsh-32.png);
+  polygon-pattern-file:url(img/wetland.svg);
   }
 
 /* ---- BUILDINGS ---- */
@@ -82,7 +82,7 @@ Map { background-color: @land; }
 /* ================================================================== */
 
 #waterway_high {
-  line-color: @water;
+  line-color: @darkblue;
   [type='river'],
   [type='canal'] {
     line-cap: round;

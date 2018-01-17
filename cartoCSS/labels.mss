@@ -137,7 +137,7 @@
     /*content: 'école';*/
   }
   [type='water'] {
-    text-fill: @water * 0.6;
+    text-fill: @darkblue;
     text-halo-fill: lighten(@water, 10%);
   }
 }
@@ -163,7 +163,7 @@
 #waterway_label[type='stream'] {
   text-name: '[name]';
   text-face-name: @sans_italic;
-  text-fill: @water * 0.75;
+  text-fill: @darkblue;
   text-halo-fill: fadeout(lighten(@water,5%),25%);
   text-halo-radius: 1;
   text-placement: line;
