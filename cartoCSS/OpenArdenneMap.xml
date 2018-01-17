@@ -26,9 +26,16 @@
 </FontSet>
 <Style name="landuse" filter-mode="first">
   <Rule>
+    <Filter>([type] = 'forest') and ([leaf_type] = 'needleleaved')</Filter>
+    <PolygonPatternSymbolizer file="img/forest.svg" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'forest') and ([leaf_type] = 'broadleaved')</Filter>
+    <PolygonPatternSymbolizer file="img/forest.svg" />
+  </Rule>
+  <Rule>
     <Filter>([type] = 'forest') and ([leaf_type] = 'mixed')</Filter>
-    <PolygonPatternSymbolizer file="img/forest.png" />
-    <LineSymbolizer stroke="#173719" />
+    <PolygonPatternSymbolizer file="img/forest.svg" />
   </Rule>
   <Rule>
     <Filter>([type] = 'farmyard')</Filter>
@@ -40,11 +47,11 @@
   </Rule>
   <Rule>
     <Filter>([type] = 'meadow')</Filter>
-    <PolygonPatternSymbolizer file="img/meadow.png" />
+    <PolygonPatternSymbolizer file="img/meadow.svg" />
   </Rule>
   <Rule>
     <Filter>([type] = 'wood')</Filter>
-    <PolygonPatternSymbolizer file="img/forest.png" />
+    <PolygonPatternSymbolizer file="img/forest.svg" />
   </Rule>
   <Rule>
     <Filter>([type] = 'university')</Filter>
@@ -92,7 +99,7 @@
   </Rule>
   <Rule>
     <Filter>([type] = 'grass')</Filter>
-    <PolygonPatternSymbolizer file="img/meadow.png" />
+    <PolygonPatternSymbolizer file="img/meadow.svg" />
   </Rule>
   <Rule>
     <Filter>([type] = 'golf_course')</Filter>
@@ -100,7 +107,7 @@
   </Rule>
   <Rule>
     <Filter>([type] = 'forest')</Filter>
-    <PolygonPatternSymbolizer file="img/forest.png" />
+    <PolygonPatternSymbolizer file="img/forest.svg" />
   </Rule>
   <Rule>
     <Filter>([type] = 'common')</Filter>
@@ -196,11 +203,11 @@
 
 <Style name="waterway_high" filter-mode="first">
   <Rule>
-    <Filter>([type] = 'drain')</Filter>
+    <Filter>([type] = 'ditch')</Filter>
     <LineSymbolizer stroke-width="2" stroke="#7b7be1" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'ditch')</Filter>
+    <Filter>([type] = 'drain')</Filter>
     <LineSymbolizer stroke-width="2" stroke="#7b7be1" />
   </Rule>
   <Rule>
