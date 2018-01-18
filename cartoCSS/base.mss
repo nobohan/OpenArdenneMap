@@ -75,6 +75,7 @@ Map { background-color: @land; }
 
 #water {
   polygon-fill: @water;
+  line-color: @darkblue;
 }
 
 /* ================================================================== */

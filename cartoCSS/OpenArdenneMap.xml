@@ -246,6 +246,7 @@
 <Style name="water" filter-mode="first">
   <Rule>
     <PolygonSymbolizer fill="#aeaeef" />
+    <LineSymbolizer stroke="#7d7ded" />
   </Rule>
 </Style>
 <Layer name="water"
@@ -677,12 +678,16 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke-opacity="0.67" stroke-width="5" stroke-dasharray="15, 15" stroke="#ffffff" />
   </Rule>
   <Rule>
+    <Filter>([render] = '3_inline') and ([type] = 'secondary_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'secondary_link') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
     <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-dasharray="15, 15" stroke-linecap="butt" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'secondary_link') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'secondary_link') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -697,12 +702,12 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([render] = '3_inline') and ([type] = 'secondary_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'secondary_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#e49976" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '3_inline') and ([type] = 'secondary') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'secondary') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
@@ -710,7 +715,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'secondary') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'secondary') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -725,12 +730,12 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([render] = '3_inline') and ([type] = 'secondary') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'secondary') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#e49976" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '3_inline') and ([type] = 'primary') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'primary') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
@@ -738,7 +743,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'primary') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'primary') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -753,12 +758,12 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([render] = '3_inline') and ([type] = 'primary') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'primary') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#e49976" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '3_inline') and ([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
@@ -766,7 +771,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -781,12 +786,12 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([render] = '3_inline') and ([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'primary_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#e49976" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '3_inline') and ([type] = 'trunk') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'trunk') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
@@ -794,7 +799,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'trunk') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'trunk') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -809,12 +814,12 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([render] = '3_inline') and ([type] = 'trunk') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'trunk') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#e49976" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '3_inline') and ([type] = 'trunk_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'trunk_link') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
@@ -822,7 +827,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'trunk_link') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'trunk_link') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -837,12 +842,12 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([render] = '3_inline') and ([type] = 'trunk_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'trunk_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#e49976" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '3_inline') and ([type] = 'motorway') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'motorway') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
@@ -850,7 +855,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'motorway') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'motorway') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -865,12 +870,12 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([render] = '3_inline') and ([type] = 'motorway') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'motorway') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#e49976" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '3_inline') and ([type] = 'motorway_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'motorway_link') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
@@ -878,7 +883,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'motorway_link') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'motorway_link') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -891,10 +896,6 @@ order by area desc) as landusages]]></Parameter>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'motorway_link') and ([tunnel] = 1) and ([stylegroup] = 'motorway')</Filter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '3_inline') and ([type] = 'motorway_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'motorway_link') and ([tunnel] = 1)</Filter>
@@ -1497,6 +1498,14 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#a0440c" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'secondary_link') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#a0440c" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'secondary_link') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#a0440c" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'secondary_link') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#a0440c" stroke-width="7" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
@@ -1543,6 +1552,14 @@ order by area desc) as landusages]]></Parameter>
   <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'secondary_link') and ([bridge] = 1)</Filter>
     <LineSymbolizer stroke="#a0440c" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'secondary') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#a0440c" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'secondary') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#a0440c" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'secondary') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
@@ -1593,6 +1610,14 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#a0440c" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'primary_link') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'primary_link') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'primary_link') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#a00c0c" stroke-width="7" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
@@ -1639,6 +1664,14 @@ order by area desc) as landusages]]></Parameter>
   <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'primary_link') and ([bridge] = 1)</Filter>
     <LineSymbolizer stroke="#a00c0c" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'primary') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'primary') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'primary') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
@@ -1689,6 +1722,14 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#a00c0c" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'trunk') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'trunk') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'trunk') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#a00c0c" stroke-width="7" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
@@ -1735,6 +1776,14 @@ order by area desc) as landusages]]></Parameter>
   <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'trunk') and ([bridge] = 1)</Filter>
     <LineSymbolizer stroke="#a00c0c" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'trunk_link') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'trunk_link') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'trunk_link') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
@@ -1785,6 +1834,14 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#a00c0c" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'motorway_link') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#0e0e0e" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'motorway_link') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#0e0e0e" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'motorway_link') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-width="7" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
@@ -1831,6 +1888,14 @@ order by area desc) as landusages]]></Parameter>
   <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'motorway_link') and ([bridge] = 1)</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'motorway') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#0e0e0e" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'motorway') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#0e0e0e" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'motorway') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
@@ -1890,43 +1955,43 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([type] = 'secondary')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([type] = 'secondary_link')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([type] = 'primary')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([type] = 'primary_link')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([type] = 'trunk')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([type] = 'trunk_link')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([type] = 'motorway')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([type] = 'motorway_link')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
@@ -1938,43 +2003,43 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto') and ([type] = 'secondary')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto') and ([type] = 'secondary_link')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto') and ([type] = 'primary')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto') and ([type] = 'primary_link')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto') and ([type] = 'trunk')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto') and ([type] = 'trunk_link')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto') and ([type] = 'motorway')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto') and ([type] = 'motorway_link')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#fcfbe7" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'minorroad') and ([tunnel] = 1)</Filter>
@@ -2134,115 +2199,83 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'secondary')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c8560f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#c8560f" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'secondary_link')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c8560f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#c8560f" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'primary')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'primary_link')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'trunk_link')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'trunk')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'motorway_link')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#111111" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#111111" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'motorway')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#111111" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#111111" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#000000" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#000000" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke="#000000" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'secondary') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#c8560f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke="#000000" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'secondary')</Filter>
-    <LineSymbolizer stroke="#c8560f" stroke-linecap="round" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'secondary_link') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#c8560f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#c8560f" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'secondary_link')</Filter>
-    <LineSymbolizer stroke="#c8560f" stroke-linecap="round" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'primary') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#c8560f" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'primary')</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'primary_link') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'primary_link')</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'trunk_link') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'trunk_link')</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'trunk') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'trunk')</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'motorway_link') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#111111" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'motorway_link')</Filter>
-    <LineSymbolizer stroke="#111111" stroke-linecap="round" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'motorway') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#111111" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#111111" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'motorway')</Filter>
-    <LineSymbolizer stroke="#111111" stroke-linecap="round" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#111111" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#000000" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#000000" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#000000" />
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#000000" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
@@ -2968,12 +3001,16 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke-opacity="0.67" stroke-width="5" stroke-dasharray="15, 15" stroke="#ffffff" />
   </Rule>
   <Rule>
+    <Filter>([type] = 'secondary') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
     <Filter>([type] = 'secondary') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
     <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-dasharray="15, 15" stroke-linecap="butt" />
   </Rule>
   <Rule>
     <Filter>([type] = 'secondary') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([type] = 'secondary') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -2988,12 +3025,12 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'secondary') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([type] = 'secondary') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#e49976" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'secondary_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([type] = 'secondary_link') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
@@ -3001,7 +3038,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([type] = 'secondary_link') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([type] = 'secondary_link') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -3016,12 +3053,12 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'secondary_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([type] = 'secondary_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#e49976" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
@@ -3029,7 +3066,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -3044,12 +3081,12 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([type] = 'primary_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#e49976" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'primary') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([type] = 'primary') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
@@ -3057,7 +3094,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([type] = 'primary') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([type] = 'primary') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -3072,12 +3109,12 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'primary') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([type] = 'primary') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#e49976" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'trunk_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([type] = 'trunk_link') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
@@ -3085,7 +3122,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([type] = 'trunk_link') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([type] = 'trunk_link') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -3100,12 +3137,12 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'trunk_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([type] = 'trunk_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#e49976" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'trunk') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([type] = 'trunk') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
@@ -3113,7 +3150,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([type] = 'trunk') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([type] = 'trunk') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -3128,12 +3165,12 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'trunk') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([type] = 'trunk') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#e49976" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'motorway_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([type] = 'motorway_link') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
@@ -3141,7 +3178,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([type] = 'motorway_link') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([type] = 'motorway_link') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -3156,12 +3193,12 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'motorway_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([type] = 'motorway_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#e49976" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'motorway') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([type] = 'motorway') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
@@ -3169,7 +3206,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([type] = 'motorway') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([type] = 'motorway') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -3184,52 +3221,48 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'motorway') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([type] = 'motorway') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#e49976" stroke-linecap="butt" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([type] = 'secondary')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([type] = 'secondary_link')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([type] = 'primary')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([type] = 'primary_link')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([type] = 'trunk')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([type] = 'trunk_link')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([type] = 'motorway')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([type] = 'motorway_link')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
@@ -3241,43 +3274,43 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([type] = 'secondary')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([type] = 'secondary_link')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([type] = 'primary')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([type] = 'primary_link')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([type] = 'trunk')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([type] = 'trunk_link')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([type] = 'motorway')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([type] = 'motorway_link')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#fcfbe7" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'minorroad') and ([tunnel] = 1)</Filter>
@@ -4037,6 +4070,14 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#a0440c" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
+    <Filter>([type] = 'secondary_link') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#a0440c" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'secondary_link') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#a0440c" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
     <Filter>([type] = 'secondary_link') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#a0440c" stroke-width="7" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
@@ -4083,6 +4124,14 @@ order by area desc) as landusages]]></Parameter>
   <Rule>
     <Filter>([type] = 'secondary_link') and ([bridge] = 1)</Filter>
     <LineSymbolizer stroke="#a0440c" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'secondary') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#a0440c" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'secondary') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#a0440c" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([type] = 'secondary') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
@@ -4133,6 +4182,14 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#a0440c" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
+    <Filter>([type] = 'primary') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'primary') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
     <Filter>([type] = 'primary') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#a00c0c" stroke-width="7" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
@@ -4179,6 +4236,14 @@ order by area desc) as landusages]]></Parameter>
   <Rule>
     <Filter>([type] = 'primary') and ([bridge] = 1)</Filter>
     <LineSymbolizer stroke="#a00c0c" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'primary_link') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'primary_link') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([type] = 'primary_link') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
@@ -4229,6 +4294,14 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#a00c0c" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
+    <Filter>([type] = 'trunk') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'trunk') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
     <Filter>([type] = 'trunk') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#a00c0c" stroke-width="7" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
@@ -4275,6 +4348,14 @@ order by area desc) as landusages]]></Parameter>
   <Rule>
     <Filter>([type] = 'trunk') and ([bridge] = 1)</Filter>
     <LineSymbolizer stroke="#a00c0c" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'trunk_link') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'trunk_link') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([type] = 'trunk_link') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
@@ -4325,6 +4406,14 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#a00c0c" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
+    <Filter>([type] = 'motorway') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#0e0e0e" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'motorway') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#0e0e0e" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
     <Filter>([type] = 'motorway') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-width="7" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
@@ -4371,6 +4460,14 @@ order by area desc) as landusages]]></Parameter>
   <Rule>
     <Filter>([type] = 'motorway') and ([bridge] = 1)</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'motorway_link') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#0e0e0e" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'motorway_link') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#0e0e0e" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([type] = 'motorway_link') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
@@ -4422,115 +4519,83 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'secondary_link')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c8560f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#c8560f" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'secondary')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c8560f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#c8560f" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'primary')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'primary_link')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'trunk_link')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'trunk')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'motorway')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#111111" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#111111" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'motorway_link')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#111111" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#111111" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tunnel] = 1) and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#000000" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#000000" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke="#000000" />
-  </Rule>
-  <Rule>
-    <Filter>([stylegroup] = 'service') and ([type] = 'secondary_link') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#c8560f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke="#000000" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([type] = 'secondary_link')</Filter>
-    <LineSymbolizer stroke="#c8560f" stroke-linecap="round" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([stylegroup] = 'service') and ([type] = 'secondary') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#c8560f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#c8560f" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([type] = 'secondary')</Filter>
-    <LineSymbolizer stroke="#c8560f" stroke-linecap="round" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([stylegroup] = 'service') and ([type] = 'primary') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#c8560f" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([type] = 'primary')</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([stylegroup] = 'service') and ([type] = 'primary_link') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([type] = 'primary_link')</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([stylegroup] = 'service') and ([type] = 'trunk_link') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([type] = 'trunk_link')</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([stylegroup] = 'service') and ([type] = 'trunk') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([type] = 'trunk')</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([stylegroup] = 'service') and ([type] = 'motorway') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#111111" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([type] = 'motorway')</Filter>
-    <LineSymbolizer stroke="#111111" stroke-linecap="round" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([stylegroup] = 'service') and ([type] = 'motorway_link') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#111111" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#111111" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([type] = 'motorway_link')</Filter>
-    <LineSymbolizer stroke="#111111" stroke-linecap="round" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#111111" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#000000" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#000000" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#000000" />
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#000000" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
@@ -5230,12 +5295,16 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke-opacity="0.67" stroke-width="5" stroke-dasharray="15, 15" stroke="#ffffff" />
   </Rule>
   <Rule>
+    <Filter>([render] = '3_inline') and ([type] = 'secondary_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'secondary_link') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
     <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-dasharray="15, 15" stroke-linecap="butt" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'secondary_link') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'secondary_link') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -5250,12 +5319,12 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([render] = '3_inline') and ([type] = 'secondary_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'secondary_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#e49976" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '3_inline') and ([type] = 'secondary') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'secondary') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
@@ -5263,7 +5332,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'secondary') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'secondary') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -5278,12 +5347,12 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([render] = '3_inline') and ([type] = 'secondary') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'secondary') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#e49976" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '3_inline') and ([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
@@ -5291,7 +5360,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -5306,12 +5375,12 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([render] = '3_inline') and ([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'primary_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#e49976" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '3_inline') and ([type] = 'primary') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'primary') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
@@ -5319,7 +5388,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'primary') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'primary') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -5334,12 +5403,12 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([render] = '3_inline') and ([type] = 'primary') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'primary') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#e49976" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '3_inline') and ([type] = 'trunk') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'trunk') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
@@ -5347,7 +5416,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'trunk') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'trunk') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -5362,12 +5431,12 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([render] = '3_inline') and ([type] = 'trunk') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'trunk') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#e49976" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '3_inline') and ([type] = 'trunk_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'trunk_link') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
@@ -5375,7 +5444,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'trunk_link') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'trunk_link') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -5390,12 +5459,12 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([render] = '3_inline') and ([type] = 'trunk_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'trunk_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#e49976" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '3_inline') and ([type] = 'motorway_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'motorway_link') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
@@ -5403,7 +5472,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'motorway_link') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'motorway_link') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -5418,12 +5487,12 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([render] = '3_inline') and ([type] = 'motorway_link') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'motorway_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#e49976" stroke-linecap="butt" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '3_inline') and ([type] = 'motorway') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#e49976" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'motorway') and ([tunnel] = 1) and ([stylegroup] = 'railway')</Filter>
@@ -5431,7 +5500,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'motorway') and ([tunnel] = 1) and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#e49976" stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'motorway') and ([tunnel] = 1) and ([stylegroup] = 'minorroad')</Filter>
@@ -5444,10 +5513,6 @@ order by area desc) as landusages]]></Parameter>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'motorway') and ([tunnel] = 1) and ([stylegroup] = 'motorway')</Filter>
     <LineSymbolizer stroke="#e49976" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '3_inline') and ([type] = 'motorway') and ([tunnel] = 1) and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke="#e49976" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([type] = 'motorway') and ([tunnel] = 1)</Filter>
@@ -6054,6 +6119,14 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#a0440c" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'secondary') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#a0440c" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'secondary') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#a0440c" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'secondary') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#a0440c" stroke-width="7" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
@@ -6096,6 +6169,14 @@ order by area desc) as landusages]]></Parameter>
   <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'secondary') and ([bridge] = 1)</Filter>
     <LineSymbolizer stroke="#a0440c" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'secondary_link') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#a0440c" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'secondary_link') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#a0440c" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'secondary_link') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
@@ -6142,6 +6223,14 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#a0440c" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'primary_link') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'primary_link') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'primary_link') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#a00c0c" stroke-width="7" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
@@ -6184,6 +6273,14 @@ order by area desc) as landusages]]></Parameter>
   <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'primary_link') and ([bridge] = 1)</Filter>
     <LineSymbolizer stroke="#a00c0c" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'primary') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'primary') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'primary') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
@@ -6230,6 +6327,14 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#a00c0c" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'trunk') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'trunk') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'trunk') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#a00c0c" stroke-width="7" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
@@ -6272,6 +6377,14 @@ order by area desc) as landusages]]></Parameter>
   <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'trunk') and ([bridge] = 1)</Filter>
     <LineSymbolizer stroke="#a00c0c" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'trunk_link') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'trunk_link') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#a00c0c" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'trunk_link') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
@@ -6318,6 +6431,14 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#a00c0c" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'motorway') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#0e0e0e" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'motorway') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#0e0e0e" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'motorway') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-width="7" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
@@ -6360,6 +6481,14 @@ order by area desc) as landusages]]></Parameter>
   <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'motorway') and ([bridge] = 1)</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'motorway_link') and ([bridge] = 1) and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
+    <LineSymbolizer stroke="#0e0e0e" stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <Filter>([render] = '1_outline') and ([type] = 'motorway_link') and ([bridge] = 1) and ([stylegroup] = 'service')</Filter>
+    <LineSymbolizer stroke="#0e0e0e" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([type] = 'motorway_link') and ([bridge] = 1) and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
@@ -6415,43 +6544,43 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([type] = 'secondary')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([type] = 'secondary_link')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([type] = 'primary')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([type] = 'primary_link')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([type] = 'trunk')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([type] = 'trunk_link')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([type] = 'motorway')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([type] = 'motorway_link')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
@@ -6463,43 +6592,43 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto') and ([type] = 'secondary')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto') and ([type] = 'secondary_link')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto') and ([type] = 'primary')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto') and ([type] = 'primary_link')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto') and ([type] = 'trunk')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto') and ([type] = 'trunk_link')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto') and ([type] = 'motorway')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto') and ([type] = 'motorway_link')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#db794c" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#db794c" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-dasharray="12, 12" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#fcfbe7" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'minorroad') and ([tunnel] = 1)</Filter>
@@ -6658,148 +6787,84 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#db794c" />
   </Rule>
   <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'secondary') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c8560f" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'secondary')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c8560f" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'secondary_link') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c8560f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#c8560f" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'secondary_link')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c8560f" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'primary') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#c8560f" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'primary')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'primary_link') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'primary_link')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'trunk_link') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'trunk_link')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'trunk') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'trunk')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'motorway') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#111111" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'motorway')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#111111" stroke-linecap="butt" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'motorway_link') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#111111" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#111111" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([type] = 'motorway_link')</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#111111" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#111111" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1) and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke="#000000" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke="#000000" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke="#000000" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'secondary') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#c8560f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke="#000000" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'secondary')</Filter>
-    <LineSymbolizer stroke="#c8560f" stroke-linecap="round" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'secondary_link') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#c8560f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#c8560f" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'secondary_link')</Filter>
-    <LineSymbolizer stroke="#c8560f" stroke-linecap="round" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'primary') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#c8560f" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'primary')</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'primary_link') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'primary_link')</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'trunk_link') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'trunk_link')</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'trunk') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'trunk')</Filter>
-    <LineSymbolizer stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'motorway') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#111111" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#c80f0f" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'motorway')</Filter>
-    <LineSymbolizer stroke="#111111" stroke-linecap="round" stroke-linejoin="round" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'motorway_link') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#111111" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#111111" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([type] = 'motorway_link')</Filter>
-    <LineSymbolizer stroke="#111111" stroke-linecap="round" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#111111" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke="#000000" stroke-linecap="butt" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="8" stroke="#000000" stroke-linecap="butt" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke="#000000" />
+    <LineSymbolizer stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="#000000" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>

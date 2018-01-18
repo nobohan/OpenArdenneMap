@@ -61,6 +61,7 @@
     [tracktype='grade3'] { line-width: @small / 2 + 7; }
     [tracktype='grade4'] { line-width: @small / 2 + 3; }
     [tracktype='grade5'] { line-width: @small / 2 + 3; }
+    line-width: @small / 2 + 3;
   }
 
 }
@@ -120,7 +121,7 @@
   [stylegroup='motorway'] { line-width: @large - 2; }
   [stylegroup='mainroad'] { line-width: @medium; }
   [stylegroup='minorroad']{ line-width: @small; }
-  [stylegroup='noauto']   { line-width: 0; line-dasharray: 12, 12;}
+  [stylegroup='noauto']   { line-width: 0; }
   [stylegroup='railway']  { line-width: @small / 2; line-dasharray: 15,15;}
   [stylegroup='service'] {
     [tracktype='grade1'] { line-width: @small + 2 - 2; line-color: @secondary_fill;}
@@ -128,6 +129,7 @@
     [tracktype='grade3'] { line-width: @small / 2 + 4; }
     [tracktype='grade4'] { line-width: @small / 2; }
     [tracktype='grade5'] { line-width: @small / 2; }
+    line-width: @small / 2;
   }
 }
 
