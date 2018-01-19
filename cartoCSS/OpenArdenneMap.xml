@@ -67,6 +67,10 @@
     <PolygonSymbolizer fill="#fcfbe7" />
   </Rule>
   <Rule>
+    <Filter>([type] = 'scrub')</Filter>
+    <PolygonPatternSymbolizer file="img/heath.svg" />
+  </Rule>
+  <Rule>
     <Filter>([type] = 'school')</Filter>
     <PolygonSymbolizer fill="#fcfbe7" />
   </Rule>
@@ -314,6 +318,34 @@ order by area desc) as landusages]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="project"><![CDATA[osm-bright-imposm]]></Parameter>
        <Parameter name="table"><![CDATA[osm_admin]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="linear_features" filter-mode="first">
+  <Rule>
+    <Filter>([type] = 'embankment')</Filter>
+    <LinePatternSymbolizer file="img/embankment.svg" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'hedge')</Filter>
+    <LineSymbolizer stroke="#3d9142" stroke-width="4" stroke-dasharray="3, 2" />
+  </Rule>
+</Style>
+<Layer name="linear_features"
+  status="on"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>linear_features</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[osm]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
+       <Parameter name="id"><![CDATA[linear_features]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="srs"><![CDATA[null]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT geometry, type, leaf_type, leaf_cycle
+  FROM osm_linearfeatures
+)  AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
@@ -7241,37 +7273,6 @@ order by area desc) as landusages]]></Parameter>
   ) as bridges
   ORDER BY layer ASC, render ASC
 ) AS data]]></Parameter>
-       <Parameter name="type"><![CDATA[postgis]]></Parameter>
-    </Datasource>
-  </Layer>
-
-<Style name="linear_features" filter-mode="first">
-  <Rule>
-    <Filter>([type] = 'embankment')</Filter>
-    <LineSymbolizer stroke="#222222" stroke-width="4" stroke-dasharray="3, 2" />
-  </Rule>
-  <Rule>
-    <Filter>([type] = 'hedge')</Filter>
-    <LineSymbolizer stroke="#3d9142" stroke-width="4" stroke-dasharray="3, 2" />
-  </Rule>
-  <Rule>
-    <LineSymbolizer stroke-width="4" stroke-dasharray="3, 2" />
-  </Rule>
-</Style>
-<Layer name="linear_features"
-  status="on"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    <StyleName>linear_features</StyleName>
-    <Datasource>
-       <Parameter name="dbname"><![CDATA[osm]]></Parameter>
-       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
-       <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
-       <Parameter name="id"><![CDATA[linear_features]]></Parameter>
-       <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="srs"><![CDATA[null]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT geometry, type, leaf_type, leaf_cycle
-  FROM osm_linearfeatures
-)  AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>

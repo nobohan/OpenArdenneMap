@@ -39,6 +39,7 @@ Map { background-color: @land; }
   [type='pitch']         { polygon-fill: @sports; }
   [type='residential']   { polygon-fill: @residential; }
   [type='school']        { polygon-fill: @school; }
+  [type='scrub']         { polygon-pattern-file:url(img/heath.svg) }
   [type='sports_center'] { polygon-fill: @sports; }
   [type='stadium']       { polygon-fill: @sports; }
   [type='university']    { polygon-fill: @school; }
@@ -116,8 +117,12 @@ Map { background-color: @land; }
 /* ================================================================== */
 
 #linear_features {
-  line-width: 4;
-  line-dasharray: 3,2;
-  [type = 'hedge'] {line-color: @green;}
-  [type = 'embankment'] {line-color: #222;}
+  [type = 'hedge'] {
+      line-color: @green;
+      line-width: 4;
+      line-dasharray: 3,2;
+  }
+  [type = 'embankment'] {
+      line-pattern-file: url(img/embankment.svg);
+  }
 }
