@@ -111,13 +111,16 @@ Example for the layer linear_features:
 
 
 ### Update the db using imposm
-Here are the commands for using imposm with this imposm-mapping:
+Here are the commands for using imposm with this imposm-mapping. Use a shp called e.g. `map_extent.shp` to select a particular area:
 * `imposm --proj=EPSG:3857 --read belgium-latest.osm.bz2 --limit-to map_extent.shp -m OpenArdenneMap/imposm-mapping.py`
 * `imposm -U osm -d osm -m OpenArdenneMap/imposm-mapping.py --write --optimize --deploy-production-tables --limit-to map_extent.shp`
 * `imposm -d osm --remove-backup-tables`
 * `./make.py` in osm-bright-master
 
-Instead of processing the whole belgium-latest.osm.bz2 file, you can download directly the OSM data using JOSM, save as a .osm file and use it with imposm. It is much faster.
+Instead of processing the whole belgium-latest.osm.bz2 file, you can download directly the OSM data using JOSM, save as a .osm (e.g., `extract.osm`) file and use it with imposm. It is much faster.
+* `imposm --proj=EPSG:3857 --read extract.osm -m OpenArdenneMap/imposm-mapping.py`
+* `imposm -U osm -d osm -m OpenArdenneMap/imposm-mapping.py --write --optimize --deploy-production-tables`
+* `imposm -d osm --remove-backup-tables`
 
 
 ## 3) Addition of a third outline for roads

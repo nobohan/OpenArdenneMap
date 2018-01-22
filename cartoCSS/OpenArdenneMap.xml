@@ -28,14 +28,17 @@
   <Rule>
     <Filter>([type] = 'forest') and ([leaf_type] = 'needleleaved')</Filter>
     <PolygonPatternSymbolizer file="img/forest_nl.svg" />
+    <LineSymbolizer stroke-width="0.3" stroke="#444444" />
   </Rule>
   <Rule>
     <Filter>([type] = 'forest') and ([leaf_type] = 'broadleaved')</Filter>
     <PolygonPatternSymbolizer file="img/forest_bl.svg" />
+    <LineSymbolizer stroke-width="0.3" stroke="#444444" />
   </Rule>
   <Rule>
     <Filter>([type] = 'forest') and ([leaf_type] = 'mixed')</Filter>
     <PolygonPatternSymbolizer file="img/forest.svg" />
+    <LineSymbolizer stroke-width="0.3" stroke="#444444" />
   </Rule>
   <Rule>
     <Filter>([type] = 'farmyard')</Filter>
@@ -113,6 +116,7 @@
   <Rule>
     <Filter>([type] = 'forest')</Filter>
     <PolygonPatternSymbolizer file="img/forest.svg" />
+    <LineSymbolizer stroke-width="0.3" stroke="#444444" />
   </Rule>
   <Rule>
     <Filter>([type] = 'common')</Filter>
