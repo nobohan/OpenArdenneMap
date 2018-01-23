@@ -21,7 +21,7 @@ Map { background-color: @land; }
 }
 
 #landuse {
-  [type='cemetery']      { polygon-fill: @cemetery; }
+  [type='cemetery']      { polygon-pattern-file:url(img/cemetery.svg); line-width:0.3; line-color: @black;}
   [type='college']       { polygon-fill: @school; }
   [type='commercial']    { polygon-fill: @industrial; }
   [type='common']        { polygon-fill: @park; }

@@ -133,6 +133,8 @@
   <Rule>
     <Filter>([type] = 'cemetery')</Filter>
     <PolygonSymbolizer fill="#fcfbe7" />
+    <PolygonPatternSymbolizer file="img/cemetery.svg" />
+    <LineSymbolizer stroke-width="0.3" stroke="#444444" />
   </Rule>
 </Style>
 <Layer name="landuse"
