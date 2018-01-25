@@ -32,13 +32,14 @@ Map { background-color: @land; }
   [type='golf_course']   { polygon-fill: @sports; }
   [type='grass']         { polygon-pattern-file:url(img/meadow.svg); }
   [type='hospital']      { polygon-fill: @hospital; }
-  [type='industrial']    { polygon-pattern-file:url(img/industrial.png); }
+  [type='industrial']    { polygon-pattern-file:url(img/industrial.svg); }
   [type='park']          { polygon-fill: @park; }
   [type='parking']       { polygon-fill: @parking; }
   [type='pedestrian']    { polygon-fill: @pedestrian_fill; }
   [type='pitch']         { polygon-fill: @sports; }
   [type='residential']   { polygon-fill: @residential; }
   [type='school']        { polygon-fill: @school; }
+  [type='heath']         { polygon-pattern-file:url(img/heath.svg) }
   [type='scrub']         { polygon-pattern-file:url(img/heath.svg) }
   [type='sports_center'] { polygon-fill: @sports; }
   [type='stadium']       { polygon-fill: @sports; }

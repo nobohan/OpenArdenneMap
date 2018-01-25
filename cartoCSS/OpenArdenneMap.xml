@@ -74,6 +74,10 @@
     <PolygonPatternSymbolizer file="img/heath.svg" />
   </Rule>
   <Rule>
+    <Filter>([type] = 'heath')</Filter>
+    <PolygonPatternSymbolizer file="img/heath.svg" />
+  </Rule>
+  <Rule>
     <Filter>([type] = 'school')</Filter>
     <PolygonSymbolizer fill="#fcfbe7" />
   </Rule>
@@ -99,7 +103,7 @@
   </Rule>
   <Rule>
     <Filter>([type] = 'industrial')</Filter>
-    <PolygonPatternSymbolizer file="img/industrial.png" />
+    <PolygonPatternSymbolizer file="img/industrial.svg" />
   </Rule>
   <Rule>
     <Filter>([type] = 'hospital')</Filter>
@@ -132,7 +136,6 @@
   </Rule>
   <Rule>
     <Filter>([type] = 'cemetery')</Filter>
-    <PolygonSymbolizer fill="#fcfbe7" />
     <PolygonPatternSymbolizer file="img/cemetery.svg" />
     <LineSymbolizer stroke-width="0.3" stroke="#444444" />
   </Rule>
@@ -226,11 +229,11 @@
     <LineSymbolizer stroke-width="6" stroke="#7d7ded" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'canal')</Filter>
+    <Filter>([type] = 'river')</Filter>
     <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="12" stroke="#7d7ded" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'river')</Filter>
+    <Filter>([type] = 'canal')</Filter>
     <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="12" stroke="#7d7ded" />
   </Rule>
   <Rule>

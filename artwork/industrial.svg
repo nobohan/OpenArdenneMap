@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="meadow.svg"
+   sodipodi:docname="industrial.svg"
    inkscape:export-filename="/media/julien/data/Projets/Geomatique/OSM/Mapnik/artwork/meadow.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
@@ -30,7 +30,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="4.574688"
      inkscape:cx="281.69841"
-     inkscape:cy="685.79409"
+     inkscape:cy="683.40372"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -51,7 +51,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -59,20 +59,6 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <rect
-       style="fill:none;fill-opacity:1;stroke:none;stroke-width:2.82090783;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect4142"
-       width="107.17909"
-       height="117.17909"
-       x="246.88705"
-       y="311.88165" />
-    <rect
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.89282173;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.70588235"
-       id="rect4150"
-       width="111.55434"
-       height="116.11715"
-       x="233.82079"
-       y="314.92676" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 235,337.3622 20,-20"
