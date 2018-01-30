@@ -45,6 +45,11 @@
     <LineSymbolizer stroke="#fcfbe7" />
   </Rule>
   <Rule>
+    <Filter>([type] = 'orchard')</Filter>
+    <PolygonPatternSymbolizer file="img/orchard.svg" />
+    <LineSymbolizer stroke-width="0.5" stroke="#bbbbbb" />
+  </Rule>
+  <Rule>
     <Filter>([type] = 'farmland')</Filter>
     <PolygonSymbolizer fill="#fcfbe7" />
   </Rule>
@@ -120,7 +125,7 @@
   <Rule>
     <Filter>([type] = 'forest')</Filter>
     <PolygonPatternSymbolizer file="img/forest.svg" />
-    <LineSymbolizer stroke-width="0.3" stroke="#444444" />
+    <LineSymbolizer stroke-width="0.2" stroke="#999999" />
   </Rule>
   <Rule>
     <Filter>([type] = 'common')</Filter>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="orchard.svg"
+   inkscape:export-filename="/media/julien/data/Projets/Geomatique/OSM/Mapnik/artwork/meadow.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="4.574688"
+     inkscape:cx="292.08227"
+     inkscape:cy="675.50944"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1313"
+     inkscape:window-height="744"
+     inkscape:window-x="53"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4138" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#5ee07b;fill-opacity:1;stroke:none;stroke-width:0.89282173;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.70588235"
+       id="rect4150"
+       width="31.54888"
+       height="30.646835"
+       x="233.38361"
+       y="332.19568" />
+    <ellipse
+       style="fill:#5ee07b;fill-opacity:1;stroke:#175024;stroke-width:0.99692696;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4403-8-9-6"
+       cx="255.78986"
+       cy="341.03125"
+       rx="3.163013"
+       ry="2.8486612" />
+    <ellipse
+       style="fill:#5ee07b;fill-opacity:1;stroke:#175024;stroke-width:0.99692696;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4403-8-9-6-7"
+       cx="255.78986"
+       cy="355.52145"
+       rx="3.163013"
+       ry="2.8486612" />
+    <ellipse
+       style="fill:#5ee07b;fill-opacity:1;stroke:#175024;stroke-width:0.99692696;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4403-8-9-6-7-5"
+       cx="242.29652"
+       cy="355.2338"
+       rx="3.163013"
+       ry="2.8486612" />
+    <ellipse
+       style="fill:#5ee07b;fill-opacity:1;stroke:#175024;stroke-width:0.99692696;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4403-8-9-6-7-3"
+       cx="242.16576"
+       cy="340.74359"
+       rx="3.163013"
+       ry="2.8486612" />
+  </g>
+</svg>

@@ -286,6 +286,7 @@ landusages = Polygons(
             'park',
             'forest',
             'cemetery',
+            'orchard'
             'farmyard',
             'farm',
             'farmland',
@@ -344,6 +345,7 @@ landusages = Polygons(
             'recreation_ground',
             'allotments',
             'quarry',
+            'orchard',
         ),
         'leisure': (
             'park',

@@ -112,14 +112,14 @@ Example for the layer linear_features:
 
 ### Update the db using imposm
 Here are the commands for using imposm with this imposm-mapping. Use a shp called e.g. `map_extent.shp` to select a particular area:
-* `imposm --proj=EPSG:3857 --read belgium-latest.osm.bz2 --limit-to map_extent.shp -m OpenArdenneMap/imposm-mapping.py`
-* `imposm -U osm -d osm -m OpenArdenneMap/imposm-mapping.py --write --optimize --deploy-production-tables --limit-to map_extent.shp`
+* `imposm --proj=EPSG:3857 --read belgium-latest.osm.bz2 --limit-to map_extent.shp -m imposm-mapping.py`
+* `imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables --limit-to map_extent.shp`
 * `imposm -d osm --remove-backup-tables`
 * `./make.py` in osm-bright-master
 
 Instead of processing the whole belgium-latest.osm.bz2 file, you can download directly the OSM data using JOSM, save as a .osm (e.g., `extract.osm`) file and use it with imposm. It is much faster.
-* `imposm --proj=EPSG:3857 --read extract.osm -m OpenArdenneMap/imposm-mapping.py`
-* `imposm -U osm -d osm -m OpenArdenneMap/imposm-mapping.py --write --optimize --deploy-production-tables`
+* `imposm --proj=EPSG:3857 --read extract.osm -m imposm-mapping.py`
+* `imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables`
 * `imposm -d osm --remove-backup-tables`
 
 
@@ -138,10 +138,10 @@ Of course, the style of the map was modified, with some inspiration taken from O
 # Contour lines
 
 ## Contour lines generation
-Contour lines were generated from a digital elevation model (raster) using the GRASS tool `r.contour.level` in QGIS. Increment between contour levels was set to 5 m. Minimum number of points for a contour line was set to 10. This tool offers more options that the default QGIS tool from gdal (`gdal_contour`). Elevation levels should be defined in the field "level" (default).
+Contour lines were generated from a digital elevation model (raster) using the GRASS tool `r.contour.step` in QGIS. Increment between contour levels was set to 5 m. Minimum number of points for a contour line was set to 20. This tool offers more options that the default QGIS tool from gdal (`gdal_contour`).
 
 ## Contour lines representation
-Contour lines should be post-processed in order to have smooth geometries. The GRASS tool `v.generalize.smooth` was used, with the "snakes" algorithm (default parameters).
+Contour lines should be post-processed in order to have smooth geometries. The GRASS tool `v.generalize.smooth` was used, with the "snakes" algorithm (with default parameters).
 
 Contour lines were saved as shp and loaded as the second layer (from bottom) in project.mml.
 
@@ -151,7 +151,7 @@ Contour labels are defined in `labels.mss`.
 Some useful commands for printing the map in a pdf format:
 
 * Determining the size of a pdf:
-`pdfjam --outfile A2.pdf --paper a2paper in.pdf`
+`pdfjam --outfile A2.pdf --landscape --paper a2paper in.pdf`
 
 * Make several A4 of a A2 pdf:
 `pdfposter -ma4 -pa2 A2.pdf out_A4.pdf`

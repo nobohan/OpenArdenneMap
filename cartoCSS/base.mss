@@ -25,7 +25,7 @@ Map { background-color: @land; }
   [type='college']       { polygon-fill: @school; }
   [type='commercial']    { polygon-fill: @industrial; }
   [type='common']        { polygon-fill: @park; }
-  [type='forest']        { polygon-pattern-file:url(img/forest.svg); line-width:0.3; line-color: @black; }
+  [type='forest']        { polygon-pattern-file:url(img/forest.svg); line-width:0.2; line-color: @darkgray; }
   [type='forest'] [leaf_type='mixed']  { polygon-pattern-file:url(img/forest.svg); line-width:0.3; line-color: @black; }
   [type='forest'] [leaf_type='broadleaved']  { polygon-pattern-file:url(img/forest_bl.svg); line-width:0.3; line-color: @black; }
   [type='forest'] [leaf_type='needleleaved']  { polygon-pattern-file:url(img/forest_nl.svg); line-width:0.3; line-color: @black; }
@@ -47,6 +47,7 @@ Map { background-color: @land; }
   [type='wood']          { polygon-pattern-file:url(img/forest.svg) }
   [type='meadow']        { polygon-pattern-file:url(img/meadow.svg); line-width:0.5; line-color: @gray; }
   [type='farmland']      { polygon-fill: @agriculture; }
+  [type='orchard']       { polygon-pattern-file:url(img/orchard.svg); line-width:0.5; line-color: @gray; }
   [type='farmyard']      { line-color: @farmyard; }
 }
 
