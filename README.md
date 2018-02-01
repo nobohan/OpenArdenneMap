@@ -34,7 +34,7 @@ Currently, my goal is not to generate map tiles at different zoom levels, but ra
 
 ## 2) Addition of new features
 
-### Adding some fields to an existing table
+### 2.1) By adding some fields to an existing table
 1) Add the field names + type of the field (boolean, numeric, string) to an existing table.
 
 ```
@@ -62,7 +62,7 @@ Example:
 ```
 
 
-### Add a new table
+### 2.2) By adding a new table
 1) You can create a new table with a specific tag and fields selection in `imposm-mapping.py`. See for instance how to create a table named 'linearfeatures' with the tags 'man_made=embankment' and 'embankment=yes'. Note that the commas at the end of the values of the keys are needed, even before a closing bracket!
 
 ```

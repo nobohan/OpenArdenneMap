@@ -32,7 +32,7 @@ Map { background-color: @land; }
   [type='golf_course']   { polygon-fill: @sports; }
   [type='grass']         { polygon-pattern-file:url(img/meadow.svg); }
   [type='hospital']      { polygon-fill: @hospital; }
-  [type='industrial']    { polygon-pattern-file:url(img/industrial.svg); }
+  [type='industrial']    { polygon-pattern-file:url(img/industrial.svg); line-width:0.5; line-color: @gray;}
   [type='park']          { polygon-fill: @park; }
   [type='parking']       { polygon-fill: @parking; }
   [type='pedestrian']    { polygon-fill: @pedestrian_fill; }
