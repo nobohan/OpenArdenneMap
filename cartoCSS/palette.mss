@@ -43,12 +43,12 @@ Map { font-directory: url(./fonts); }
 @darkgray:          #999999;
 @gray:              #bbbbbb;
 
-@red:               #db794c;
-@green:             #3d9142;
+@red:               #E55779; /*#db794c;*/
+@green:             #5ADD84; /*#3d9142;*/
 @blue:              #aeaeef;
 @darkblue:          #7d7ded;
 
-@contour:           #b06435;
+@contour:           #bc1e44; /*#b06435;*/
 
 /* ================================================================== */
 /* LANDUSE & LANDCOVER COLORS
