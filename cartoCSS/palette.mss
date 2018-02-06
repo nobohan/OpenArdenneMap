@@ -84,35 +84,35 @@ Map { font-directory: url(./fonts); }
  *         inner fill (inline).
  */
 
-@motorway_line:     #de1111;
+@motorway_line:     @black;
 @motorway_fill:     @red;
 @motorway_case:     @motorway_line * 0.9;
 
-@trunk_line:        #de1111;
+@trunk_line:        @black;
 @trunk_fill:        @red;
 @trunk_case:        @trunk_line * 0.9;
 
-@primary_line:      #de1111;
+@primary_line:      @black;
 @primary_fill:      @red;
 @primary_case:      @primary_line * 0.9;
 
-@secondary_line:    #de5f11;
+@secondary_line:    @black;
 @secondary_fill:    @red;
 @secondary_case:    @secondary_line * 0.9;
 
-@standard_line:     #000;
+@standard_line:     @black;
 @standard_fill:     @white;
 @standard_case:     @standard_line * 0.9;
 
-@pedestrian_line:   @standard_line;
+@pedestrian_line:   @black;
 @pedestrian_fill:   @white;
 @pedestrian_case:   @land;
 
-@cycle_line:        @standard_line;
+@cycle_line:        @black;
 @cycle_fill:        @white;
 @cycle_case:        @land;
 
-@rail_line:         #111;
+@rail_line:         @black;
 @rail_fill:         #fff;
 @rail_case:         @land;
 
