@@ -56,13 +56,12 @@
   text-placement:point;
   text-fill:@town_text;
   text-halo-fill:@town_halo;
-  text-halo-radius:1;
+  text-halo-radius: 3;
   text-wrap-width: 50;
   text-transform: uppercase;
-  text-character-spacing: 1;
   text-line-spacing: 2;
   text-size:@text_size_l;
-  text-character-spacing: 5;
+  text-character-spacing: 8;
   text-line-spacing: 6;
 }
 
@@ -107,38 +106,37 @@
 #area_label {
   text-name: "[name]";
   text-size: @text_size_s;
-  text-wrap-width: 60;
+  text-wrap-width: 100;
   text-character-spacing: 1;
-  text-halo-radius: 2;
   text-halo-radius: 1.5;
   text-face-name:@sans;
   text-wrap-width:30;
-  text-fill: #888;
+  text-fill: @black;
   text-halo-fill: #fff;
   // Specific style overrides for different types of areas:
   [type='park'] {
     text-face-name: @sans_lt_italic;
-    text-fill: @park * 0.6;
+    text-fill: @green;
     text-halo-fill: lighten(@park, 10%);
   }
   [type='golf_course'] {
-    text-fill: @sports * 0.6;
+    text-fill: @black;
     text-halo-fill: lighten(@sports, 10%);
   }
   [type='hospital'] {
-    text-fill: @hospital * 0.6;
+    text-fill: @black;
     text-halo-fill: lighten(@hospital, 10%);
   }
   [type='college'],
   [type='school'],
   [type='university'] {
-    text-fill: @school * 0.6;
+    text-fill: @black;
     text-halo-fill: lighten(@school, 10%);
-    /*content: 'école';*/
   }
   [type='water'] {
     text-fill: @darkblue;
     text-halo-fill: lighten(@water, 10%);
+    text-halo-radius: 3;
   }
 }
 
@@ -161,19 +159,19 @@
 #waterway_label[type='river'],
 #waterway_label[type='canal'],
 #waterway_label[type='stream'] {
-  text-name: '[name]';
-  text-face-name: @sans_italic;
-  text-fill: @darkblue;
-  text-halo-fill: fadeout(lighten(@water,5%),25%);
-  text-halo-radius: 1;
-  text-placement: line;
-  text-min-distance: 400;
-  text-size: @text_size_s;
-  [type='river'],
-  [type='canal'] {
+    text-name: '[name]';
+    text-face-name: @sans_italic;
+    text-fill: @darkblue;
+    text-halo-fill: lighten(@water, 10%);
+    text-halo-radius: 3;
+    text-placement: line;
+    text-min-distance: 1200;
     text-size: @text_size_m;
     text-spacing: 300;
-  }
+}
+
+#waterway_label[type='stream'] {
+    text-size: @text_size_s;
 }
 
 /* ================================================================== */

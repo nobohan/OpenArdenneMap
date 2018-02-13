@@ -30,7 +30,7 @@
   [type='motorway'],
   [type='motorway_link'] {
     line-color: #111;
-    [bridge=1] { line-color: #111 * 0.8; }
+    [bridge=1] { line-color: #111 * 0.8; line-width: @medium + 2 + 6; }
   }
   [type='trunk'],
   [type='trunk_link'] {
@@ -45,13 +45,18 @@
   [type='secondary'],
   [type='secondary_link'] {
     line-color: @secondary_case;
-    [bridge=1] { line-color: @secondary_case * 0.8; }
+    [bridge=1] { line-color: @secondary_case * 0.8; line-width: @medium + 6; }
   }
   [stylegroup='railway'] {
     line-color: #111;
-    [bridge=1] { line-color: @secondary_case * 0.8; }
+    [bridge=1] { line-color: @secondary_case * 0.8; line-width: @mini + 2 + 6; }
   }
   [tunnel=1] { line-dasharray: 3,3; }
+
+  [stylegroup='minorroad'],
+  [stylegroup='service'] {
+    [bridge=1] { line-width: @tiny + 2 + 6; }
+  }
 
   /* -- widths -- */
   [stylegroup='motorway'] { line-width: @medium + 2; }
