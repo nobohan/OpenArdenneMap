@@ -39,6 +39,7 @@ Currently, my goal is not to generate map tiles at different zoom levels, but ra
 
 ```
     fields = (
+            ...
             ('surface', String()),
             ('tracktype', String())
             )

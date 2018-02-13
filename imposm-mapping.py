@@ -176,7 +176,13 @@ minorroads = Highway(
     )},
     fields = (
             ('surface', String()),
-            ('tracktype', String())
+            ('tracktype', String()),
+            ('tunnel', Bool()),
+            ('bridge', Bool()),
+            ('oneway', Direction()),
+            ('layer', Integer()),
+            ('z_order', WayZOrder()),
+            ('access', String())
             )
 )
 
