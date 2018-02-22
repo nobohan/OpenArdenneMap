@@ -41,6 +41,10 @@
     <LineSymbolizer stroke-width="0.3" stroke="#444444" />
   </Rule>
   <Rule>
+    <Filter>([type] = 'school')</Filter>
+    <MarkersSymbolizer file="img/school-symbol.png" height="35" />
+  </Rule>
+  <Rule>
     <Filter>([type] = 'farmyard')</Filter>
     <LineSymbolizer stroke="#fcfbe7" />
   </Rule>
@@ -81,10 +85,6 @@
   <Rule>
     <Filter>([type] = 'heath')</Filter>
     <PolygonPatternSymbolizer file="img/heath.svg" />
-  </Rule>
-  <Rule>
-    <Filter>([type] = 'school')</Filter>
-    <PolygonSymbolizer fill="#fcfbe7" />
   </Rule>
   <Rule>
     <Filter>([type] = 'residential')</Filter>

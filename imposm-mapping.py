@@ -419,6 +419,7 @@ amenities = Points(
             'fire_station',
             'police',
             'townhall',
+            'place_of_worship'
         ),
 })
 
