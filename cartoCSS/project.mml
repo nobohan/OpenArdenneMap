@@ -292,7 +292,7 @@
         "id": "place",
         "key_field": "",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT geometry, type, name, z_order, population\n  FROM osm_places\n WHERE type IN (\n  'city', 'town', 'village', 'hamlet' )\n ORDER BY z_order, population DESC NULLS LAST\n) AS data",
+        "table": "( SELECT geometry, type, name, z_order, population\n  FROM osm_places\n WHERE type IN (\n  'city', 'town', 'village', 'hamlet', 'isolated_dwelling' )\n ORDER BY z_order, population DESC NULLS LAST\n) AS data",
         "type": "postgis"
       },
       "class": "",

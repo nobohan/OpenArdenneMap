@@ -240,11 +240,11 @@
     <LineSymbolizer stroke-width="6" stroke="#7d7ded" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'canal')</Filter>
+    <Filter>([type] = 'river')</Filter>
     <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="12" stroke="#7d7ded" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'river')</Filter>
+    <Filter>([type] = 'canal')</Filter>
     <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="12" stroke="#7d7ded" />
   </Rule>
   <Rule>
@@ -7143,16 +7143,20 @@ order by area desc) as landusages]]></Parameter>
     <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#444444" size="9" halo-fill="#fcfbe7" halo-radius="1" wrap-width="30" line-spacing="1" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <Filter>([type] = 'neighbourhood')</Filter>
-    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#444444" size="40" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" wrap-width="30" character-spacing="2" line-spacing="2" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <Filter>([type] = 'hamlet')</Filter>
-    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#444444" size="40" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" wrap-width="30" character-spacing="2" line-spacing="2" ><![CDATA[[name]]]></TextSymbolizer>
+    <Filter>([type] = 'isolated_dwelling')</Filter>
+    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#444444" size="30" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" character-spacing="2" wrap-width="120" line-spacing="2" dy="-50" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <Filter>([type] = 'suburb')</Filter>
-    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#444444" size="40" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" wrap-width="30" character-spacing="2" line-spacing="2" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#444444" size="30" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" character-spacing="2" wrap-width="120" line-spacing="2" dy="-50" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'neighbourhood')</Filter>
+    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#444444" size="30" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" character-spacing="2" wrap-width="120" line-spacing="2" dy="-50" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'hamlet')</Filter>
+    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#444444" size="30" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" character-spacing="2" wrap-width="120" line-spacing="2" dy="-50" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <Filter>([type] = 'town')</Filter>
@@ -7187,7 +7191,7 @@ order by area desc) as landusages]]></Parameter>
        <Parameter name="table"><![CDATA[( SELECT geometry, type, name, z_order, population
   FROM osm_places
  WHERE type IN (
-  'city', 'town', 'village', 'hamlet' )
+  'city', 'town', 'village', 'hamlet', 'isolated_dwelling' )
  ORDER BY z_order, population DESC NULLS LAST
 ) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
@@ -7204,11 +7208,11 @@ order by area desc) as landusages]]></Parameter>
     <TextSymbolizer fill="#444444" halo-fill="#ffffff" size="30" wrap-width="100" character-spacing="1" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <Filter>([type] = 'school')</Filter>
+    <Filter>([type] = 'college')</Filter>
     <TextSymbolizer fill="#444444" halo-fill="#ffffff" size="30" wrap-width="100" character-spacing="1" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <Filter>([type] = 'college')</Filter>
+    <Filter>([type] = 'school')</Filter>
     <TextSymbolizer fill="#444444" halo-fill="#ffffff" size="30" wrap-width="100" character-spacing="1" halo-radius="1.5" fontset-name="fontset-0" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>

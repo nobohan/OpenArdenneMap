@@ -27,7 +27,7 @@ from imposm.mapping import (
 import imposm.config
 #
 # # import relations with missing rings
-imposm.config.import_partial_relations = False
+imposm.config.import_partial_relations = True
 #
 # # select relation builder: union or contains
 imposm.config.relation_builder = 'contains'
@@ -84,6 +84,7 @@ places = Points(
             'suburb',
             'neighbourhood',
             'locality',
+            'isolated_dwelling',
         ),
     },
     fields = (
@@ -113,7 +114,7 @@ admin = Polygons(
         ),
     },
     fields = (
-        ('admin_level', OneOfInt('1 2 3 4 5 6'.split())),
+        ('admin_level', OneOfInt('1 2 3 4 5 6 7 8'.split())),
     ),
 )
 

@@ -69,19 +69,19 @@
 
 #place::small[type='suburb'],
 #place::small[type='hamlet'],
-#place::small[type='neighbourhood'] {
+#place::small[type='neighbourhood'],
+#place::small[type='isolated_dwelling'] {
   text-name:'[name]';
   text-face-name:@sans;
   text-placement:point;
   text-fill:@other_text;
-  text-size:@text_size_m;
+  text-size:@text_size_s;
   text-halo-fill:@other_halo;
   text-halo-radius:1;
-  text-wrap-width: 30;
-  text-size:40;
   text-character-spacing: 2;
   text-wrap-width: 120;
   text-line-spacing: 2;
+  text-dy: -50
 }
 
 #place::small[type='locality'] {

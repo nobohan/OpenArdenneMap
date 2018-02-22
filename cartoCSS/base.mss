@@ -16,10 +16,6 @@ Map { background-color: @land; }
   line-color: @contour;
 }
 
-#hillshade {
-  opacity: 0.8;
-}
-
 #landuse {
   [type='camp_site']     { polygon-pattern-file:url(img/camping.svg); line-width:0.3; line-color: @black;}
   [type='cemetery']      { polygon-pattern-file:url(img/cemetery.svg); line-width:0.3; line-color: @black;}
