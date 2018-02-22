@@ -145,6 +145,11 @@
     <PolygonPatternSymbolizer file="img/cemetery.svg" />
     <LineSymbolizer stroke-width="0.3" stroke="#444444" />
   </Rule>
+  <Rule>
+    <Filter>([type] = 'camp_site')</Filter>
+    <PolygonPatternSymbolizer file="img/camping.svg" />
+    <LineSymbolizer stroke-width="0.3" stroke="#444444" />
+  </Rule>
 </Style>
 <Layer name="landuse"
   status="on"
@@ -223,11 +228,11 @@
 
 <Style name="waterway_high" filter-mode="first">
   <Rule>
-    <Filter>([type] = 'ditch')</Filter>
+    <Filter>([type] = 'drain')</Filter>
     <LineSymbolizer stroke-width="2" stroke="#7d7ded" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'drain')</Filter>
+    <Filter>([type] = 'ditch')</Filter>
     <LineSymbolizer stroke-width="2" stroke="#7d7ded" />
   </Rule>
   <Rule>
@@ -235,11 +240,11 @@
     <LineSymbolizer stroke-width="6" stroke="#7d7ded" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'river')</Filter>
+    <Filter>([type] = 'canal')</Filter>
     <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="12" stroke="#7d7ded" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'canal')</Filter>
+    <Filter>([type] = 'river')</Filter>
     <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="12" stroke="#7d7ded" />
   </Rule>
   <Rule>

@@ -53,6 +53,7 @@ db_conf = Options(
     proj='epsg:900913',
 )
 
+
 class Highway(LineStrings):
     fields = (
         ('tunnel', Bool()),
@@ -66,6 +67,7 @@ class Highway(LineStrings):
     field_filter = (
         ('area', Bool()),
     )
+
 
 places = Points(
     name = 'places',
@@ -102,6 +104,7 @@ places = Points(
     ),
 )
 
+
 admin = Polygons(
     name = 'admin',
     mapping = {
@@ -113,6 +116,7 @@ admin = Polygons(
         ('admin_level', OneOfInt('1 2 3 4 5 6'.split())),
     ),
 )
+
 
 motorways = Highway(
     name = 'motorways',
@@ -126,6 +130,7 @@ motorways = Highway(
     }
 )
 
+
 mainroads = Highway(
     name = 'mainroads',
     mapping = {
@@ -138,6 +143,7 @@ mainroads = Highway(
             'tertiary_link',
     )}
 )
+
 
 buildings = Polygons(
     name = 'buildings',
@@ -391,6 +397,7 @@ landusages = Polygons(
         ),
         'tourism': (
             'zoo',
+            'camp_site',
         ),
         'aeroway': (
             'aerodrome',
