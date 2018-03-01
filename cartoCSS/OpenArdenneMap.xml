@@ -42,7 +42,7 @@
   </Rule>
   <Rule>
     <Filter>([type] = 'school')</Filter>
-    <MarkersSymbolizer file="img/school-symbol.png" height="35" />
+    <MarkersSymbolizer file="img/school-symbol.png" height="120" />
   </Rule>
   <Rule>
     <Filter>([type] = 'farmyard')</Filter>

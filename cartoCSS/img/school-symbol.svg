@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="314.9049"
+     inkscape:cx="229.29447"
      inkscape:cy="633.94947"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -55,13 +55,23 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot4136"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#444444;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        transform="matrix(0.54187126,0,0,0.6110284,125.82345,155.52439)"><flowRegion
          id="flowRegion4138"><rect
            id="rect4140"
-           width="92.934036"
-           height="119.198"
+           width="65.903221"
+           height="53.896572"
            x="270.72089"
-           y="359.39755" /></flowRegion><flowPara
-         id="flowPara4142">Éc.</flowPara></flowRoot>  </g>
+           y="359.39755"
+           style="fill:#444444;fill-opacity:1" /></flowRegion><flowPara
+         id="flowPara4142">Éc.</flowPara></flowRoot>    <rect
+       style="fill:none;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4137"
+       width="103.54063"
+       height="88.388344"
+       x="264.15488"
+       y="369.49908"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+  </g>
 </svg>

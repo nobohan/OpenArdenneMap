@@ -46,7 +46,8 @@ Map { background-color: @land; }
   [type='orchard']       { polygon-pattern-file:url(img/orchard.svg); line-width:0.5; line-color: @gray; }
   [type='farmyard']      { line-color: @farmyard; }
   [type='school']        {
-      marker-file: url(img/school-symbol.png); marker-height: 35;
+      marker-file: url(img/school-symbol.png);
+      marker-height: 120;
   }
 }
 
