@@ -1,28 +1,158 @@
 OpenArdenneMap
 
+Une carte pour l'Ardenne
+
+::: ENGLISH BELOW :::
+
+# A propos
+OpenArdenneMap est un style de carte personnalisé basé sur OpenStreetMap. Il se fonde sur le style OSMBright et s'inspire, entre autres, de OpenTopoMap.
+
+# Comment l'utiliser
+## Installation
+Si vous ne pouvez pas utiliser l'ensemble des scripts de ce dépôt, contactez-moi (nobohan.be#contact).
+
+Il est conseillé d'utiliser un environnment virtuel Python. Les librairies suivantes sont installées:
+* mapnik
+* python-mapnik
+* imposm
+* carto
+  * (Pour ces 4 premiers points, cfr l'installation de OSMBright)
+* cloner ou télécharger les fichiers OpenArdenneMap
+* télécharger les données OSM en fichier .osm (avec JOSM) ou bien en .pbf (par ex. sur download.geofabrik.de)
+
+## Mise en place de la base de données postgresql
+Lancer le script `create-db.sh`. Il faut l'éditer auparavant selon le chemin de votre environnement virtuel.
+
+## Pour changer les données OSM (import dans une db avec imposm)
+Editer le fichier `imposm-mapping.py`. Par rapport au style d'OSMBright, des éléments ont été ajoutés, comme le tracktype et leaf_type.
+
+## Pour changer le style de la carte
+Editer les fichiers `mss` en utilisant le language cartoCSS et utiliser `carto` pour générer le fichier mapnik `OpenArdenneMap.xml`:
+`carto cartoCSS/project.mml > cartoCSS/OpenArdenneMap.xml`
+
+Pour générer la carte, faire:
+`python makeMap.py`
+
+Le tout:
+`carto cartoCSS/project.mml > cartoCSS/OpenArdenneMap.xml && python makeMap.py`
+
+
+# Changements apportés à OSMBright
+
+OSMBright est un style par défaut pour les données d'OSM. Mais il est principalement adapté aux milieux urbains. Ce style a été profondémment modifié. Voici quelques exemples de modifications.
+
+## 1) Simplification
+Pour le moment, ce dépôt n'est pas destiné à générer des tuiles à différents niveaux de zooms, mais plutôt de générer de grandes cartes papier à imprimer, à une haute résolution / grande échelle. Le style d'OSMBright a donc été fortement simplifié:
+* Pas de niveaux de zoom
+* Pas de couches généralisées pour les petites échelles.
+
+## 2) Ajouts de nouveaux éléments
+
+### 2.1) En ajoutant des champs à une table existante
+1) Ajouter le nom du champ + le type de champ (boolean, numeric, string) à une table existante.
+
+```
+    fields = (
+            ...
+            ('surface', String()),
+            ('tracktype', String())
+            )
+```
+
+2) Ensuite, ajouter le nom du champ dans `project.mml` dans la couche où ce champ est utilisé.
+
+```
+"table": "( SELECT geometry, type, tunnel, bridge, surface, tracktype, access, ...
+```
+
+3) Enfin, définir un style particulier pour la propriété "tracktype" dans le bon fichier mss.
+
+```
+[tracktype='grade1'] { line-width: @rdz16_min / 2; }
+```
+
+
+### 2.2) En ajoutant une nouvelle table
+1) Vous pouvez créer une nouvelle table avec des étiquettes OSM et une sélection de champs dans `imposm-mapping.py`. Voir par exemple la table nommée "linearfeatures" avec les étiquettes "man_made=embankment" et "embankment=yes". Noter la virgule à la fin des valeurs des clés, même avant de fermer la paranthèse!
+
+
+```
+linearfeatures = LineStrings(
+   name = 'linearfeatures',
+   mapping = {
+           'man_made': (
+              'embankment',
+           ),
+            'embankment': (
+               'yes'
+            ),
+       },
+)
+```
+
+2) Ensuite, ajouter une couche dans `project.mml`:
+
+```
+{
+  "Datasource": {
+    "dbname": "osm",
+    "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+    "geometry_field": "geometry",
+    "id": "linear_features",
+    "key_field": "",
+    "srs": null,
+    "table": "( SELECT geometry, type\n  FROM osm_linearfeatures\n)  AS data",
+    "type": "postgis"
+  },
+  "class": "",
+  "geometry": "linestring",
+  "id": "linear_features",
+  "name": "linear_features",
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "srs-name": "900913",
+  "status": "on"
+},
+```
+
+
+3) Enfin, définir un style dans l'un des fichiers mss.
+
+`#linear_features: { ... }`
+
+
+
+
+
+::: ENGLISH :::
+
 # About
-OpenArdenneMap is a customized map based on OpenStreetMap. It is based on OSMBright and inspired by OpenTopoMap.
+OpenArdenneMap is a customized map using OpenStreetMap data. It is based on OSMBright and inspired by OpenTopoMap.
 
 # How to use it
+## Installation
 
 * This was developed inside a python virtual environment
-* Install Mapnik
+* Install Mapnik & python-mapnik
 * Install impsom
 * Install carto
   * (For these last three points, have a look at OSMBright)
 * Clone or download the OpenArdenneMap files
+* download the OSM data as a .osm file (using JOSM) or as a .pbf file (e.g. on download.geofabrik.de)
 
-## To change the way the OSM data are imported:
+## Set up the postgresql database
+Run the script `create-db.sh`. Edit it before according to the path of your virtual environment.
+
+## To change the way the OSM data are imported
 Edit the imposm-mapping.py file. Some features are added in OpenArdenneMap, such as tracktype and leaf_cycle/leaf_type. See below.
 
-## To change the style of the map:
+## To change the style of the map
 Edit the mss files using cartoCSS language and use `carto` to generate the `OpenArdenneMap.xml` mapnik file. Then:
 `carto cartoCSS/project.mml > cartoCSS/OpenArdenneMap.xml`
 
-## To generate the map:
+To generate the map:
 `python makeMap.py`
 
-## All together
+All together:
 `carto cartoCSS/project.mml > cartoCSS/OpenArdenneMap.xml && python makeMap.py`
 
 # Changes compared to OSMBright
