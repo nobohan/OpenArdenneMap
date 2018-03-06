@@ -123,6 +123,9 @@ Instead of processing the whole belgium-latest.osm.bz2 file, you can download di
 * `imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables`
 * `imposm -d osm --remove-backup-tables`
 
+All together:
+
+`imposm --proj=EPSG:3857 --read extract.osm -m imposm-mapping.py && imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables && imposm -d osm --remove-backup-tables`
 
 ## 3) Addition of a third outline for roads
 In Mapnik, like in many cartographic software, you can render complex road symbology using superimposed layer with different width, e.g., a simple road rendered as a white band bordered by black lines is actually made by a first layer where roads are rendered using a large black band + a second layer (on top of it) where roads are rendered with a thinner white band.
