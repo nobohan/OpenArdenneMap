@@ -61,8 +61,11 @@
   text-transform: uppercase;
   text-line-spacing: 2;
   text-size:@text_size_l;
-  text-character-spacing: 8;
+  text-character-spacing: 10;
   text-line-spacing: 6;
+  text-allow-overlap: true; /* always render the label */
+  text-dy: 200;
+
 }
 
 /* ---- Other small places ------------------------------------------ */

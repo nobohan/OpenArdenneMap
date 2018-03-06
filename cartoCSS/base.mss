@@ -69,10 +69,10 @@ Map { background-color: @land; }
   polygon-fill:@building;
   line-color:darken(@building,10%);
   line-width:0.4;
-  /*[type='church'] {
+  [type='church'] {
     marker-file: url(img/church-symbol.svg);
     marker-height: 35;
-  }*/
+  }
 }
 
 /* ================================================================== */

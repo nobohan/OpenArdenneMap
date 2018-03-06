@@ -7117,6 +7117,12 @@ order by area desc) as landusages]]></Parameter>
 
 <Style name="buildings" filter-mode="first">
   <Rule>
+    <Filter>([type] = 'church')</Filter>
+    <PolygonSymbolizer fill="#444444" />
+    <LineSymbolizer stroke="#2b2b2b" stroke-width="0.4" />
+    <MarkersSymbolizer file="img/church-symbol.svg" height="35" />
+  </Rule>
+  <Rule>
     <PolygonSymbolizer fill="#444444" />
     <LineSymbolizer stroke="#2b2b2b" stroke-width="0.4" />
   </Rule>
@@ -7160,13 +7166,13 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([type] = 'town')</Filter>
-    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#444444" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="3" wrap-width="50" text-transform="uppercase" line-spacing="2" size="60" character-spacing="8" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#444444" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="3" wrap-width="50" text-transform="uppercase" line-spacing="2" size="60" character-spacing="10" allow-overlap="true" dy="200" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Style name="place-town" filter-mode="first">
   <Rule>
     <Filter>([type] = 'village')</Filter>
-    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#444444" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="3" wrap-width="50" text-transform="uppercase" line-spacing="2" size="60" character-spacing="8" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#444444" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="3" wrap-width="50" text-transform="uppercase" line-spacing="2" size="60" character-spacing="10" allow-overlap="true" dy="200" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Style name="place-city" filter-mode="first">
