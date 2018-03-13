@@ -219,3 +219,18 @@
 }
 
 /******************************************************************* */
+
+/* ================================================================== */
+/* TRAIN ELEMENTS
+/* ================================================================== */
+
+#train_elements {
+  [type='station'] {
+    marker-file: url(img/train-station.svg);
+    marker-height: 35;
+  }
+  [type='level_crossing'] {
+    marker-file: url(img/level-crossing.svg);
+    marker-height: 16;
+  }
+}

@@ -403,17 +403,17 @@
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "geometry",
         "key_field": "",
-        "table": "( SELECT geometry, type, name \n  FROM osm_transport_points \n  WHERE type='station'\n) AS DATA ",
+        "table": "( SELECT geometry, type, name \n  FROM osm_transport_points \n  WHERE type IN ('station', 'level_crossing') \n) AS data",
         "type": "postgis"
       },
       "advanced": {},
       "class": "",
       "geometry": "point",
-      "id": "train_stations",
-      "name": "train_stations",
+      "id": "train_elements",
+      "name": "train_elements",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "off"
+      "status": "on"
     }
   ],
   "Stylesheet": [
