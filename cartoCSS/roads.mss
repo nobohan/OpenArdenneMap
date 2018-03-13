@@ -226,7 +226,7 @@
 
 #train_elements {
   [type='station'] {
-    marker-file: url(img/train-station.svg);
+    marker-file: url(img/train-station.png);
     marker-height: 35;
   }
   [type='level_crossing'] {
