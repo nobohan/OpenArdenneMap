@@ -7,8 +7,8 @@ Une carte pour l'Ardenne
 # A propos
 OpenArdenneMap est un style de carte personnalisé basé sur OpenStreetMap. Il se fonde sur le style OSMBright et s'inspire, entre autres, de OpenTopoMap.
 
-# Comment l'utiliser
-## Installation
+# Installation
+## Logiciels
 Si vous ne pouvez pas utiliser l'ensemble des scripts de ce dépôt, contactez-moi (nobohan.be#contact).
 
 Il est conseillé d'utiliser un environnment virtuel Python. Les librairies suivantes sont installées:
@@ -23,11 +23,12 @@ Il est conseillé d'utiliser un environnment virtuel Python. Les librairies suiv
 ## Mise en place de la base de données postgresql
 Lancer le script `create-db.sh`. Il faut l'éditer auparavant selon le chemin de votre environnement virtuel.
 
+# Usage
 ## Pour changer les données OSM (import dans une db avec imposm)
-Editer le fichier `imposm-mapping.py`. Par rapport au style d'OSMBright, des éléments ont été ajoutés, comme le tracktype et leaf_type.
+Éditer le fichier `imposm-mapping.py`. Par rapport au style d'OSMBright, des éléments ont été ajoutés, comme le tracktype et leaf_type.
 
 ## Pour changer le style de la carte
-Editer les fichiers `mss` en utilisant le language cartoCSS et utiliser `carto` pour générer le fichier mapnik `OpenArdenneMap.xml`:
+Éditer les fichiers `mss` en utilisant le language cartoCSS et utiliser `carto` pour générer le fichier mapnik `OpenArdenneMap.xml`:
 `carto cartoCSS/project.mml > cartoCSS/OpenArdenneMap.xml`
 
 Pour générer la carte, faire:
@@ -35,6 +36,22 @@ Pour générer la carte, faire:
 
 Le tout:
 `carto cartoCSS/project.mml > cartoCSS/OpenArdenneMap.xml && python makeMap.py`
+
+## Mettre à jour la base de données avec imposm
+Voici les commandes pour utiliser imposm avec la table de correspondance renseignée dans imposm-mapping.py. Utiliser un shapefile e.g.,  `map_extent.shp` pour resteindre l'import à une zone:
+* `imposm --proj=EPSG:3857 --read belgium-latest.osm.bz2 --limit-to map_extent.shp -m imposm-mapping.py`
+* `imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables --limit-to map_extent.shp`
+* `imposm -d osm --remove-backup-tables`
+
+
+Au lieu de processer un gros fichier tel que  belgium-latest.osm.bz2, vous pouvez télécharger directment votre zone d'intérêt avec JOSM. Sauver les données sous un fichier .osm (e.g., `extract.osm`) et l'utiliser avec imposm. C'est beaucoup plus rapide!
+* `imposm --proj=EPSG:3857 --read extract.osm -m imposm-mapping.py`
+* `imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables`
+* `imposm -d osm --remove-backup-tables`
+
+Le tout:
+
+`imposm --proj=EPSG:3857 --read extract.osm -m imposm-mapping.py && imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables && imposm -d osm --remove-backup-tables`
 
 
 # Changements apportés à OSMBright
@@ -128,9 +145,10 @@ linearfeatures = LineStrings(
 # About
 OpenArdenneMap is a customized map using OpenStreetMap data. It is based on OSMBright and inspired by OpenTopoMap.
 
-# How to use it
-## Installation
 
+# Installation
+
+## Stack
 * This was developed inside a python virtual environment
 * Install Mapnik & python-mapnik
 * Install impsom
@@ -142,6 +160,7 @@ OpenArdenneMap is a customized map using OpenStreetMap data. It is based on OSMB
 ## Set up the postgresql database
 Run the script `create-db.sh`. Edit it before according to the path of your virtual environment.
 
+# Usage
 ## To change the way the OSM data are imported
 Edit the imposm-mapping.py file. Some features are added in OpenArdenneMap, such as tracktype and leaf_cycle/leaf_type. See below.
 
@@ -154,6 +173,22 @@ To generate the map:
 
 All together:
 `carto cartoCSS/project.mml > cartoCSS/OpenArdenneMap.xml && python makeMap.py`
+
+## Update the db using imposm
+Here are the commands for using imposm with this imposm-mapping. Use a shp called e.g. `map_extent.shp` to select a particular area:
+* `imposm --proj=EPSG:3857 --read belgium-latest.osm.bz2 --limit-to map_extent.shp -m imposm-mapping.py`
+* `imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables --limit-to map_extent.shp`
+* `imposm -d osm --remove-backup-tables`
+* `./make.py` in osm-bright-master
+
+Instead of processing the whole belgium-latest.osm.bz2 file, you can download directly the OSM data using JOSM, save as a .osm (e.g., `extract.osm`) file and use it with imposm. It is much faster.
+* `imposm --proj=EPSG:3857 --read extract.osm -m imposm-mapping.py`
+* `imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables`
+* `imposm -d osm --remove-backup-tables`
+
+All together:
+
+`imposm --proj=EPSG:3857 --read extract.osm -m imposm-mapping.py && imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables && imposm -d osm --remove-backup-tables`
 
 # Changes compared to OSMBright
 
@@ -241,21 +276,6 @@ Example for the layer linear_features:
 `#linear_features: { ... }`
 
 
-### Update the db using imposm
-Here are the commands for using imposm with this imposm-mapping. Use a shp called e.g. `map_extent.shp` to select a particular area:
-* `imposm --proj=EPSG:3857 --read belgium-latest.osm.bz2 --limit-to map_extent.shp -m imposm-mapping.py`
-* `imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables --limit-to map_extent.shp`
-* `imposm -d osm --remove-backup-tables`
-* `./make.py` in osm-bright-master
-
-Instead of processing the whole belgium-latest.osm.bz2 file, you can download directly the OSM data using JOSM, save as a .osm (e.g., `extract.osm`) file and use it with imposm. It is much faster.
-* `imposm --proj=EPSG:3857 --read extract.osm -m imposm-mapping.py`
-* `imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables`
-* `imposm -d osm --remove-backup-tables`
-
-All together:
-
-`imposm --proj=EPSG:3857 --read extract.osm -m imposm-mapping.py && imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables && imposm -d osm --remove-backup-tables`
 
 ## 3) Addition of a third outline for roads
 In Mapnik, like in many cartographic software, you can render complex road symbology using superimposed layer with different width, e.g., a simple road rendered as a white band bordered by black lines is actually made by a first layer where roads are rendered using a large black band + a second layer (on top of it) where roads are rendered with a thinner white band.
