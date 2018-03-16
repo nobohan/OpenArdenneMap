@@ -39,7 +39,7 @@ Map { font-directory: url(./fonts); }
 /* ================================================================== */
 
 @white:             #FCFBE7;
-@black:             #444444;
+@black:             #333333;
 @darkgray:          #999999;
 @gray:              #bbbbbb;
 

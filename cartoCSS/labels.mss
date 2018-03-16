@@ -131,27 +131,21 @@
     text-halo-fill: lighten(@hospital, 10%);
   }
   [type='college'],
-  [type='school'],
   [type='university'] {
     text-fill: @black;
-    text-halo-fill: lighten(@school, 10%);
+    text-halo-fill: lighten(@hospital, 10%);
   }
   [type='water'] {
     text-fill: @darkblue;
     text-halo-fill: lighten(@water, 10%);
     text-halo-radius: 3;
   }
-}
-
-#poi[type='university'],
-#poi[type='hospital'],
-#poi[type='school'],
-#poi[type='library'] {
-  text-name:"[name]";
-  text-face-name:@sans;
-  text-size:10;
-  text-wrap-width:30;
-  text-fill: @poi_text;
+  [type='school'] {
+    text-name: "'Éc.'";
+    text-size: @text_size_s;
+    text-dy: -35;
+    text-dx: -20;
+  }
 }
 
 
@@ -219,30 +213,25 @@
   text-size:11;
 }
 
-/* ================================================================== */
-/* ONE-WAY ARROWS
-/* ================================================================== */
-#motorway_label,
-#mainroad_label,
-/*#minorroad_label {
-  [oneway = 'yes'],
-  [oneway='-1'] {
-     marker-placement:line;
-     marker-max-error: 0.5;
-     marker-spacing: 200;
-     marker-file: url(img/icon/oneway.svg);
-     [oneway='-1'] { marker-file: url(img/icon/oneway-reverse.svg); }
-     marker-transform: "scale(0.75)";
-  }
-}*/
-
 
 /* ================================================================== */
 /* TRAIN STATIONS
 /* ================================================================== */
 
-#train_stations{
-  point-file:url('img/icon/rail-18.png');
+#train_elements {
+  [type='station'] {
+    text-name:'Gare';
+    text-face-name:@sans;
+    text-placement:point;
+    text-fill:@other_text;
+    text-size:@text_size_m;
+    text-halo-fill:@other_halo;
+    text-halo-radius:2;
+    text-character-spacing: 2;
+    text-line-spacing: 2;
+    text-dy: -50;
+    text-dx: -30;
+  }
 }
 
 /* ****************************************************************** */

@@ -225,19 +225,6 @@
 /* ================================================================== */
 
 #train_elements {
-  [type='station'] {
-    text-name:'Gare';
-    text-face-name:@sans;
-    text-placement:point;
-    text-fill:@other_text;
-    text-size:@text_size_s;
-    text-halo-fill:@other_halo;
-    text-halo-radius:1;
-    text-character-spacing: 2;
-    text-wrap-width: 120;
-    text-line-spacing: 2;
-    text-dy: -50
-  }
   [type='level_crossing'] {
     marker-file: url(img/level-crossing.svg);
     marker-height: 16;

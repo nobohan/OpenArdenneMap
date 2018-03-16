@@ -45,10 +45,7 @@ Map { background-color: @land; }
   [type='farmland']      { polygon-fill: @agriculture; }
   [type='orchard']       { polygon-pattern-file:url(img/orchard.svg); line-width:0.5; line-color: @gray; }
   [type='farmyard']      { line-color: @farmyard; }
-  [type='school']        {
-      marker-file: url(img/school-symbol.png);
-      marker-height: 120;
-  }
+  [type='school']        { polygon-fill: @school; }
 }
 
 #landuse_overlays[type='nature_reserve'] {
