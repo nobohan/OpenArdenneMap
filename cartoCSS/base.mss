@@ -67,8 +67,12 @@ Map { background-color: @land; }
   line-color:darken(@building,10%);
   line-width:0.4;
   [type='church'] {
-    marker-file: url(img/church-symbol.svg);
-    marker-height: 35;
+    marker-file: url(img/church.svg);
+    marker-height: 60;
+  }
+  [type='chapel'] {
+    marker-file: url(img/church.svg);
+    marker-height: 40;
   }
 }
 

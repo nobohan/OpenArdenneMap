@@ -7121,10 +7121,16 @@ order by area desc) as landusages]]></Parameter>
 
 <Style name="buildings" filter-mode="first">
   <Rule>
+    <Filter>([type] = 'chapel')</Filter>
+    <PolygonSymbolizer fill="#333333" />
+    <LineSymbolizer stroke="#1a1a1a" stroke-width="0.4" />
+    <MarkersSymbolizer file="img/church.svg" height="40" />
+  </Rule>
+  <Rule>
     <Filter>([type] = 'church')</Filter>
     <PolygonSymbolizer fill="#333333" />
     <LineSymbolizer stroke="#1a1a1a" stroke-width="0.4" />
-    <MarkersSymbolizer file="img/church-symbol.svg" height="35" />
+    <MarkersSymbolizer file="img/church.svg" height="60" />
   </Rule>
   <Rule>
     <PolygonSymbolizer fill="#333333" />
@@ -7153,6 +7159,10 @@ order by area desc) as landusages]]></Parameter>
     <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#333333" size="9" halo-fill="#fcfbe7" halo-radius="1" wrap-width="30" line-spacing="1" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
+    <Filter>([type] = 'suburb')</Filter>
+    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#333333" size="30" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" character-spacing="2" wrap-width="120" line-spacing="2" dy="-50" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
     <Filter>([type] = 'isolated_dwelling')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#333333" size="30" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" character-spacing="2" wrap-width="120" line-spacing="2" dy="-50" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
@@ -7162,10 +7172,6 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([type] = 'hamlet')</Filter>
-    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#333333" size="30" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" character-spacing="2" wrap-width="120" line-spacing="2" dy="-50" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <Filter>([type] = 'suburb')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#333333" size="30" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" character-spacing="2" wrap-width="120" line-spacing="2" dy="-50" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
@@ -7209,6 +7215,10 @@ order by area desc) as landusages]]></Parameter>
   </Layer>
 
 <Style name="area_label" filter-mode="first">
+  <Rule>
+    <Filter>([type] = 'farmyard')</Filter>
+    <TextSymbolizer size="20" dy="-20" dx="-15" wrap-width="100" character-spacing="1" halo-radius="1.5" fontset-name="fontset-0" fill="#333333" halo-fill="#ffffff" ><![CDATA['Ferme']]></TextSymbolizer>
+  </Rule>
   <Rule>
     <Filter>([type] = 'school')</Filter>
     <TextSymbolizer size="30" dy="-35" dx="-20" wrap-width="100" character-spacing="1" halo-radius="1.5" fontset-name="fontset-0" fill="#333333" halo-fill="#ffffff" ><![CDATA['Éc.']]></TextSymbolizer>
@@ -7255,10 +7265,9 @@ order by area desc) as landusages]]></Parameter>
        <Parameter name="table"><![CDATA[( SELECT type, name, area, 'land' AS stylegroup,
     ST_PointOnSurface(geometry) AS geometry
   FROM osm_landusages
-  WHERE name IS NOT NULL
-    AND geometry && !bbox!
+  WHERE geometry && !bbox!
     AND type IN (
-      'industrial', 'school', 'university' )
+      'industrial', 'farmyard', 'school', 'university' )
     AND geometry && !bbox!
     AND ST_IsValid(geometry)
 

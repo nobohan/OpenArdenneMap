@@ -8,6 +8,7 @@
 @text_size_l : 60;
 @text_size_m : 40;
 @text_size_s : 30;
+@text_size_xs : 20;
 
 /* Font sets are defined in palette.mss */
 
@@ -145,6 +146,12 @@
     text-size: @text_size_s;
     text-dy: -35;
     text-dx: -20;
+  }
+  [type='farmyard'] {
+    text-name: "'Ferme'";
+    text-size: @text_size_xs;
+    text-dy: -20;
+    text-dx: -15;
   }
 }
 
