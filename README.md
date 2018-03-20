@@ -1,6 +1,11 @@
 OpenArdenneMap
+--------------
 
-Une carte pour l'Ardenne
+*Une carte pour l'Ardenne*
+
+![map](img/openardennemap.png)
+
+&nbsp;
 
 ::: ENGLISH BELOW :::
 
@@ -136,9 +141,53 @@ linearfeatures = LineStrings(
 
 `#linear_features: { ... }`
 
+## 3) Ajout d'une troisième couche à certaines routes
+
+Avec Mapnik, comme dans beaucoup de logiciels cartographiques, on obtient des symbologies complexes pour les routes en superposant plusieurs couches avec différentes épaisseurs. Par exemple, une route rendue avec une bande blanche bordée par 2 lignes noires est obtenue en superposant une deuxième couche avec une fine ligne blanche au-dessus d'une première couche constituée d'une large bande noire.
+
+Pour afficher des symboles encore plus complexes, on peut avoir besoin d'une troisième couche. Dans OpenArdenneMap, les chemins principaux (tracktype=1) sont rendus avec une ligne alternant le rouge et le blanc bordé par 2 lignes noires. Cette couche a des propriétés cartoCSS sous `#roads::top`.
 
 
+## 4) Personnalisation du style cartographique
 
+Bien sûr, outre les additions, le style de la carte a été fortement modifié. Les principales modifications sont:
+
+* Augmentation des tailles de police
+* Choix de couleurs
+* Création de symboles
+* Création de patterns
+
+
+# Courbes de niveaux
+
+## Génération des courbes de niveaux
+
+Les courbes de niveaux ont été générées depuis un modèle numérique de terrain (raster) en utilisant l'outil GRASS `r.contour.step` dans QGIS.
+L'incrément entre les courbes a été fixé à 5 m. Le nombre minimulm de points pour avoir une courbe a été fixé à 20. Cet outil offre plus d'options que l'outil GDAL `gdal_contour`.
+
+La couche a ensuite été post-processée pour obtenir des géométries plus courbes. L'outil `v.generalize.smooth` a été utilisé, avec l'algorithme "snakes" (paramètres par défaut).
+
+## Représentation des courbes de niveaux
+
+Les courbes de niveaux ont été enregistrées au format shp et sont chargées en tant que deuxième couche (en partant du bas) dans `project.mml`.
+
+Les labels des courbes de niveaux sont définis dans `labels.mss`.
+
+## 5) Impression
+Quelques commandes utiles pour l'impression en pdf:
+
+* Déterminer la taille d'un pdf:
+`pdfjam --outfile A2.pdf --landscape --paper a2paper in.pdf`
+
+* Faire plusieurs A4 d'un A2:
+`pdfposter -ma4 -pa2 A2.pdf out_A4.pdf`
+
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
 
 ::: ENGLISH :::
 
@@ -288,6 +337,8 @@ This third layer have cartoCSS properties under `#roads::top`.
 Of course, the style of the map was modified, with some inspiration taken from OpenTopoMap and other topographic maps. Main modifications are:
 * increase font size
 * custom colors
+* Symbol creation
+* Pattern creation.
 
 # Contour lines
 
