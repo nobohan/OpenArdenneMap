@@ -360,3 +360,9 @@ Some useful commands for printing the map in a pdf format:
 
 * Make several A4 of a A2 pdf:
 `pdfposter -ma4 -pa2 A2.pdf out_A4.pdf`
+
+
+# TODOs
+
+* unused railways
+* electric lines: power=tower + power=line
