@@ -423,6 +423,15 @@ amenities = Points(
         ),
 })
 
+pointFeatures = Points(
+    name = 'pointfeatures',
+    mapping = {
+        'power' : (
+            'tower',
+        )
+    }
+)
+
 linearfeatures = LineStrings(
    name = 'linearfeatures',
    mapping = {
@@ -436,13 +445,16 @@ linearfeatures = LineStrings(
                'embankment',
              ),
             'embankment': (
-               'yes'
+               'yes',
             ),
-
+            'power': (
+               'line',
+            )
        },
    fields = (
      ('leaf_type', String()),
      ('leaf_cycle', String()),
+     ('voltage', Integer()),
    )
 )
 

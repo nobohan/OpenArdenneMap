@@ -129,7 +129,23 @@ Map { background-color: @land; }
       line-width: 4;
       line-dasharray: 3,2;
   }
+  [type = 'line'] {
+      line-color: @black;
+      line-width: 2;
+  }
   [type = 'embankment'] {
       line-pattern-file: url(img/embankment.svg);
+  }
+}
+
+
+/* ================================================================== */
+/* POINT FEATURES
+/* ================================================================== */
+
+#point_features {
+  [type = 'tower'] {
+      marker-file: url(img/tower.svg);
+      marker-height: 4;
   }
 }
