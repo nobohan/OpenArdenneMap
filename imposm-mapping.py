@@ -240,6 +240,7 @@ railways = LineStrings(
             'preserved',
             'funicular',
             'monorail',
+            'disused',
     )}
 )
 

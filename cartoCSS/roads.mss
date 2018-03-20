@@ -50,6 +50,7 @@
   [stylegroup='railway'] {
     line-color: #111;
     [bridge=1] { line-color: @secondary_case; line-width: @mini + 2 + 6; }
+    [type='disused'] { line-opacity: 0.5; }
   }
   [tunnel=1] { line-dasharray: 3,3; }
 
@@ -106,7 +107,7 @@
   }
   [stylegroup='railway'] {
     line-color: #fff;
-    [type='subway'] { line-opacity: 0.67; }
+    [type='disused'] { line-opacity: 0.67; }
   }
   [stylegroup='service'],
   [stylegroup='minorroad'],
