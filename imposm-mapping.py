@@ -408,27 +408,14 @@ landusages = Polygons(
         ),
 })
 
-amenities = Points(
-    name='amenities',
-    mapping = {
-        'amenity': (
-            'university',
-            'school',
-            'library',
-            'fuel',
-            'hospital',
-            'fire_station',
-            'police',
-            'townhall',
-            'place_of_worship'
-        ),
-})
-
 pointFeatures = Points(
     name = 'pointfeatures',
     mapping = {
         'power' : (
             'tower',
+        ),
+        'amenity' : (
+            'fountain',
         )
     }
 )

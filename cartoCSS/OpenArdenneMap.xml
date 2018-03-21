@@ -240,11 +240,11 @@
     <LineSymbolizer stroke-width="6" stroke="#7d7ded" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'river')</Filter>
+    <Filter>([type] = 'canal')</Filter>
     <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="12" stroke="#7d7ded" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'canal')</Filter>
+    <Filter>([type] = 'river')</Filter>
     <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="12" stroke="#7d7ded" />
   </Rule>
   <Rule>
@@ -369,30 +369,6 @@ order by area desc) as landusages]]></Parameter>
        <Parameter name="srs"><![CDATA[null]]></Parameter>
        <Parameter name="table"><![CDATA[( SELECT geometry, type, leaf_type, leaf_cycle
   FROM osm_linearfeatures
-)  AS data]]></Parameter>
-       <Parameter name="type"><![CDATA[postgis]]></Parameter>
-    </Datasource>
-  </Layer>
-
-<Style name="point_features" filter-mode="first">
-  <Rule>
-    <Filter>([type] = 'tower')</Filter>
-    <MarkersSymbolizer file="img/tower.svg" height="4" />
-  </Rule>
-</Style>
-<Layer name="point_features"
-  status="on"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    <StyleName>point_features</StyleName>
-    <Datasource>
-       <Parameter name="dbname"><![CDATA[osm]]></Parameter>
-       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
-       <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
-       <Parameter name="id"><![CDATA[point_features]]></Parameter>
-       <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="srs"><![CDATA[null]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT geometry, type
-  FROM osm_pointfeatures
 )  AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
@@ -7217,6 +7193,35 @@ order by area desc) as landusages]]></Parameter>
     FROM osm_buildings
   ORDER BY ST_YMin(ST_Envelope(geometry)) DESC
 ) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="point_features" filter-mode="first">
+  <Rule>
+    <Filter>([type] = 'fountain')</Filter>
+    <MarkersSymbolizer file="img/fountain.svg" height="10" allow-overlap="true" />
+    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#aeaeef" size="30" character-spacing="2" line-spacing="2" dy="-16" dx="-5" ><![CDATA['Font.']]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'tower')</Filter>
+    <MarkersSymbolizer file="img/tower.svg" height="4" />
+  </Rule>
+</Style>
+<Layer name="point_features"
+  status="on"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>point_features</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[osm]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
+       <Parameter name="id"><![CDATA[point_features]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="srs"><![CDATA[null]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT geometry, type
+  FROM osm_pointfeatures
+)  AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
