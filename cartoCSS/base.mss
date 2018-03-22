@@ -1,4 +1,5 @@
 /* BASE.MSS CONTENTS
+ * - Contour lines
  * - Landuse & landcover
  * - Water areas
  * - Water ways
@@ -9,12 +10,17 @@
 Map { background-color: @land; }
 
 /* ================================================================== */
-/* LANDUSE & LANDCOVER
+/* CONTOUR
 /* ================================================================== */
 
 #contour {
   line-color: @contour;
 }
+
+
+/* ================================================================== */
+/* LANDUSE & LANDCOVER
+/* ================================================================== */
 
 #landuse {
   [type='camp_site']     { polygon-pattern-file:url(img/camping.svg); line-width:0.3; line-color: @black;}
@@ -116,50 +122,4 @@ Map { background-color: @land; }
   line-color:@admin_2;
   line-width:0.5;
   line-opacity: 0.4;
-}
-
-
-/* ================================================================== */
-/* LINEAR FEATURES
-/* ================================================================== */
-
-#linear_features {
-  [type = 'hedge'] {
-      line-color: @green;
-      line-width: 4;
-      line-dasharray: 3,2;
-  }
-  [type = 'line'] {
-      line-color: @black;
-      line-width: 2;
-  }
-  [type = 'embankment'] {
-      line-pattern-file: url(img/embankment.svg);
-  }
-}
-
-
-/* ================================================================== */
-/* POINT FEATURES
-/* ================================================================== */
-
-#point_features {
-  [type = 'tower'] {
-      marker-file: url(img/tower.svg);
-      marker-height: 4;
-  }
-  [type = 'fountain'] {
-      marker-file: url(img/fountain.svg);
-      marker-height: 10;
-      marker-allow-overlap: true; /* always render */
-      text-name:"'Font.'";
-      text-face-name:@sans;
-      text-placement:point;
-      text-fill:@water;
-      text-size:@text_size_s;
-      text-character-spacing: 2;
-      text-line-spacing: 2;
-      text-dy: -16;
-      text-dx: -5;
-  }
 }

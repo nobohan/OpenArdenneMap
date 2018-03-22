@@ -1,3 +1,10 @@
+/* LINES.MSS CONTENTS
+ * - Roads
+ * - various point features
+ *
+ */
+
+
 /* ==================================================================
    ROAD & RAIL LINES
 /* ================================================================== */
@@ -6,7 +13,7 @@
 @large: 14;
 @medium: 12;
 @small: 10;
-@tiny: 8;
+@tiny: 7;
 @mini: 6;
 
 /* ---- Casing ----------------------------------------------- */
@@ -185,23 +192,6 @@
 
 }
 
-/* ---- Turning Circles --------------------------------------------- */
-#turning_circle_case {
-  marker-fill:@standard_fill;
-  marker-line-color:@standard_case;
-  marker-line-width:2;
-  marker-allow-overlap:true;
-}
-#turning_circle_fill {
-  marker-fill:@standard_fill;
-  marker-line-width:0;
-  marker-line-opacity:0;
-  marker-allow-overlap:true;
-}
-#turning_circle_case,
-#turning_circle_fill {
-  marker-width:@small * 1.1;
-}
 
 /* ================================================================== */
 /* AEROWAYS
@@ -219,15 +209,26 @@
   }
 }
 
-/******************************************************************* */
+
 
 /* ================================================================== */
-/* TRAIN ELEMENTS
+/* LINEAR FEATURES
 /* ================================================================== */
 
-#train_elements {
-  [type='level_crossing'] {
-    marker-file: url(img/level-crossing.svg);
-    marker-height: 16;
+#linear_features {
+  [type = 'hedge'] {
+      line-color: darken(@green,20%);
+      line-width: 5;
+      line-dasharray: 5,4;
+  }
+  [type = 'line'] {
+      line-color: @black;
+      line-width: 2;
+  }
+  [type = 'embankment'] {
+      line-pattern-file: url(img/embankment.svg);
   }
 }
+
+
+/******************************************************************* */
