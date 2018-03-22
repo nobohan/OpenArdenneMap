@@ -118,8 +118,9 @@ Map { background-color: @land; }
 /* ================================================================== */
 
 
-#admin[admin_level='2'] {
-  line-color:@admin_2;
-  line-width:0.5;
-  line-opacity: 0.4;
+#admin {
+  line-color:@admin;
+  line-width: 2;
+  line-opacity: 0.8;
+  line-dasharray: 15,8;
 }

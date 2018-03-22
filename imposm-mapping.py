@@ -106,7 +106,7 @@ places = Points(
 )
 
 
-admin = Polygons(
+admin = LineStrings(
     name = 'admin',
     mapping = {
         'boundary': (
@@ -114,7 +114,7 @@ admin = Polygons(
         ),
     },
     fields = (
-        ('admin_level', OneOfInt('1 2 3 4 5 6 7 8'.split())),
+        ('admin_level', Integer()),
     ),
 )
 
