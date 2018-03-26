@@ -364,5 +364,4 @@ Some useful commands for printing the map in a pdf format:
 
 # TODOs
 
-* unused railways
-* electric lines: power=tower + power=line
+* mast

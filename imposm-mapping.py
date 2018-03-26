@@ -13,7 +13,7 @@
 # limitations under the License.
 
 from imposm.mapping import (
-    Options,
+    Options, Class,
     Points, LineStrings, Polygons,
     String, Bool, Integer, OneOfInt,
     set_default_name_type, LocalizedName,
@@ -416,8 +416,16 @@ pointFeatures = Points(
         ),
         'amenity' : (
             'fountain',
-        )
-    }
+        ),
+        'man_made': (
+            'reservoir_covered',
+            'mast',
+            'tower',
+        )},
+    fields = (
+        ('tower:type', String()),
+        ('class', Class()),
+    )
 )
 
 linearfeatures = LineStrings(

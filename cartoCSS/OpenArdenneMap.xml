@@ -7164,12 +7164,26 @@ order by area desc) as landusages]]></Parameter>
 
 <Style name="point_features" filter-mode="first">
   <Rule>
+    <Filter>([type] = 'tower') and ([tower_type] = 'communication')</Filter>
+    <MarkersSymbolizer file="img/tower.svg" height="4" />
+    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#333333" size="30" character-spacing="2" line-spacing="2" dy="-5" dx="12" allow-overlap="true" ><![CDATA['Pyl.']]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'mast') and ([tower_type] = 'communication')</Filter>
+    <MarkersSymbolizer file="img/tower.svg" height="4" />
+    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#333333" size="30" character-spacing="2" line-spacing="2" dy="-5" dx="12" allow-overlap="true" ><![CDATA['Pyl.']]></TextSymbolizer>
+  </Rule>
+  <Rule>
     <Filter>([type] = 'fountain')</Filter>
     <MarkersSymbolizer file="img/fountain.svg" height="10" allow-overlap="true" />
     <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#7d7ded" size="30" character-spacing="2" line-spacing="2" dy="-16" dx="-5" ><![CDATA['Font.']]></TextSymbolizer>
   </Rule>
   <Rule>
     <Filter>([type] = 'tower')</Filter>
+    <MarkersSymbolizer file="img/tower.svg" height="4" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'mast')</Filter>
     <MarkersSymbolizer file="img/tower.svg" height="4" />
   </Rule>
 </Style>
@@ -7184,7 +7198,7 @@ order by area desc) as landusages]]></Parameter>
        <Parameter name="id"><![CDATA[point_features]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="srs"><![CDATA[null]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT geometry, type
+       <Parameter name="table"><![CDATA[( SELECT geometry, type, tower_type 
   FROM osm_pointfeatures
 )  AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
