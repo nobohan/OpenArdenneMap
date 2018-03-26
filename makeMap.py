@@ -1,6 +1,7 @@
 # OpenArdenneMap - Pilot mapnik with python - June 2017
 
 from mapnik import *
+import math
 
 # The mapFile is generated using carto from cartoCSS files.
 mapFile = 'cartoCSS/OpenArdenneMap.xml'
@@ -13,6 +14,11 @@ mapOutput = 'OpenArdenneMap.pdf'
 # the ratio of format is sqrt(2)
 
 page = 'A2' # An A2 is 4 A4
+# Compute the scale
+if (page == "A2"):
+  f = 2
+if (page == "A4"):
+  f = 1
 
 # increasing map_x and map_y lead to decreasing font and symbol size: not good
 map_x = 4*2339
@@ -21,31 +27,22 @@ m = Map(map_x,map_y)
 load_map(m, mapFile)
 
 # Bounding box (expressed in EPSG:3857, meters)
-xmin = 609650
-xmax = 624350
-ymin = 6397000
-ymax = 6407394
+x_center = 617000
+y_center = 6402197
+scale = 20000
+delta_x = f*0.295*20000/math.cos(50*2*math.pi/360)
+delta_y = delta_x/math.sqrt(2)
+xmin = x_center - delta_x/2
+xmax = x_center + delta_x/2
+ymin = y_center - delta_y/2
+ymax = y_center + delta_y/2
 
 bbox = (Envelope(xmin, ymin, xmax, ymax))
 
-delta_x = xmax - xmin    # 14.7 km pour A2 paysage, 1:25000
-delta_y = ymax - ymin  # 10.394 km pour A2 paysage, 1:25000
-# check that delta_y./delta_x = sqrt(2) = 1.4142135623730951
 
 m.zoom_to_box(bbox)
 
 print "Scale = " , m.scale()
-
-# Compute the scale
-if (page == "A2"):
-  f = 2
-if (page == "A4"):
-  f = 1
-
-computedScale = f*0.295/delta_x # The scale is the ratio between page width and delta_x
-print "Computed scale = 1/" , round(1/computedScale)
-print "delta_y is ", delta_y, " m"
-print "delta_x is ", delta_x, " m"
 
 # Export to mapOutput
 render_to_file(m, mapOutput)
