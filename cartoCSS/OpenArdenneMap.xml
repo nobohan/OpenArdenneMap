@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE Map[]>
-<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" font-directory="./fonts" background-color="#fcfbe7" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" font-directory="./fonts" background-color="#fcfcf4" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
 
 <Parameters>
   <Parameter name="attribution"><![CDATA[Data © OpenStreetMap (and) contributors, ODbL]]></Parameter>
@@ -42,11 +42,11 @@
   </Rule>
   <Rule>
     <Filter>([type] = 'school')</Filter>
-    <PolygonSymbolizer fill="#fcfbe7" />
+    <PolygonSymbolizer fill="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([type] = 'farmyard')</Filter>
-    <LineSymbolizer stroke="#fcfbe7" />
+    <LineSymbolizer stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([type] = 'orchard')</Filter>
@@ -55,7 +55,7 @@
   </Rule>
   <Rule>
     <Filter>([type] = 'farmland')</Filter>
-    <PolygonSymbolizer fill="#fcfbe7" />
+    <PolygonSymbolizer fill="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([type] = 'meadow')</Filter>
@@ -68,15 +68,15 @@
   </Rule>
   <Rule>
     <Filter>([type] = 'university')</Filter>
-    <PolygonSymbolizer fill="#fcfbe7" />
+    <PolygonSymbolizer fill="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([type] = 'stadium')</Filter>
-    <PolygonSymbolizer fill="#fcfbe7" />
+    <PolygonSymbolizer fill="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([type] = 'sports_center')</Filter>
-    <PolygonSymbolizer fill="#fcfbe7" />
+    <PolygonSymbolizer fill="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([type] = 'scrub')</Filter>
@@ -88,23 +88,23 @@
   </Rule>
   <Rule>
     <Filter>([type] = 'residential')</Filter>
-    <PolygonSymbolizer fill="#fcfbe7" />
+    <PolygonSymbolizer fill="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([type] = 'pitch')</Filter>
-    <PolygonSymbolizer fill="#fcfbe7" />
+    <PolygonSymbolizer fill="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([type] = 'pedestrian')</Filter>
-    <PolygonSymbolizer fill="#fcfbe7" />
+    <PolygonSymbolizer fill="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([type] = 'parking')</Filter>
-    <PolygonSymbolizer fill="#fcfbe7" />
+    <PolygonSymbolizer fill="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([type] = 'park')</Filter>
-    <PolygonSymbolizer fill="#fcfbe7" />
+    <PolygonSymbolizer fill="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([type] = 'industrial')</Filter>
@@ -121,7 +121,7 @@
   </Rule>
   <Rule>
     <Filter>([type] = 'golf_course')</Filter>
-    <PolygonSymbolizer fill="#fcfbe7" />
+    <PolygonSymbolizer fill="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([type] = 'forest')</Filter>
@@ -130,15 +130,15 @@
   </Rule>
   <Rule>
     <Filter>([type] = 'common')</Filter>
-    <PolygonSymbolizer fill="#fcfbe7" />
+    <PolygonSymbolizer fill="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([type] = 'commercial')</Filter>
-    <PolygonSymbolizer fill="#fcfbe7" />
+    <PolygonSymbolizer fill="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([type] = 'college')</Filter>
-    <PolygonSymbolizer fill="#fcfbe7" />
+    <PolygonSymbolizer fill="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([type] = 'cemetery')</Filter>
@@ -299,8 +299,8 @@
   </Rule>
   <Rule>
     <Filter>([type] = 'nature_reserve')</Filter>
-    <LineSymbolizer stroke="#1f9846" stroke-opacity="0.3" stroke-dasharray="1, 1" stroke-width="2" />
-    <PolygonSymbolizer fill="#1f9846" fill-opacity="0.1" />
+    <LineSymbolizer stroke="#15c55c" stroke-opacity="0.3" stroke-dasharray="1, 1" stroke-width="2" />
+    <PolygonSymbolizer fill="#15c55c" fill-opacity="0.1" />
   </Rule>
 </Style>
 <Layer name="landuse_overlays"
@@ -408,7 +408,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade5') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="6" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="6" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade5') and ([type] = 'secondary_link')</Filter>
@@ -444,7 +444,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade5')</Filter>
-    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade4') and ([type] = 'secondary') and ([tunnel] = 1)</Filter>
@@ -480,7 +480,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade4') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="6" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="6" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade4') and ([type] = 'secondary_link')</Filter>
@@ -516,7 +516,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade4')</Filter>
-    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade3') and ([type] = 'secondary') and ([tunnel] = 1)</Filter>
@@ -552,7 +552,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade3') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="7" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="7" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade3') and ([type] = 'secondary_link')</Filter>
@@ -588,7 +588,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade3')</Filter>
-    <LineSymbolizer stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade2') and ([type] = 'secondary') and ([tunnel] = 1)</Filter>
@@ -624,7 +624,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade2') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="7" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="7" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade2') and ([type] = 'secondary_link')</Filter>
@@ -660,7 +660,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade2')</Filter>
-    <LineSymbolizer stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade1') and ([tunnel] = 1)</Filter>
@@ -1856,15 +1856,15 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '2_line') and ([stylegroup] = 'railway')</Filter>
-    <LineSymbolizer stroke-width="3" stroke="#fcfbe7" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="3" stroke="#fcfcf4" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '2_line') and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke-width="3.5" stroke="#fcfbe7" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="3.5" stroke="#fcfcf4" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([type] = 'secondary_link')</Filter>
@@ -1900,7 +1900,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
@@ -1912,7 +1912,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto') and ([type] = 'secondary_link')</Filter>
@@ -1948,7 +1948,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'minorroad') and ([tunnel] = 1)</Filter>
@@ -1960,7 +1960,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'mainroad') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'mainroad') and ([type] = 'secondary_link')</Filter>
@@ -1996,11 +1996,11 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'mainroad')</Filter>
-    <LineSymbolizer stroke-width="12" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="12" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'motorway') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'motorway') and ([type] = 'secondary_link')</Filter>
@@ -2036,11 +2036,11 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'motorway')</Filter>
-    <LineSymbolizer stroke-width="12" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="12" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-linecap="butt" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-linecap="butt" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'minorroad') and ([type] = 'secondary_link')</Filter>
@@ -2572,7 +2572,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline')</Filter>
-    <LineSymbolizer stroke="#fcfbe7" />
+    <LineSymbolizer stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline')</Filter>
@@ -2666,7 +2666,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tracktype] = 'grade5') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="6" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="6" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tracktype] = 'grade5') and ([type] = 'secondary')</Filter>
@@ -2702,7 +2702,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tracktype] = 'grade5')</Filter>
-    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tracktype] = 'grade4') and ([type] = 'secondary_link') and ([tunnel] = 1)</Filter>
@@ -2738,7 +2738,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tracktype] = 'grade4') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="6" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="6" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tracktype] = 'grade4') and ([type] = 'secondary')</Filter>
@@ -2774,7 +2774,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tracktype] = 'grade4')</Filter>
-    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tracktype] = 'grade3') and ([type] = 'secondary_link') and ([tunnel] = 1)</Filter>
@@ -2810,7 +2810,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tracktype] = 'grade3') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="7" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="7" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tracktype] = 'grade3') and ([type] = 'secondary')</Filter>
@@ -2846,7 +2846,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tracktype] = 'grade3')</Filter>
-    <LineSymbolizer stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tracktype] = 'grade2') and ([type] = 'secondary_link') and ([tunnel] = 1)</Filter>
@@ -2882,7 +2882,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tracktype] = 'grade2') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="7" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="7" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tracktype] = 'grade2') and ([type] = 'secondary')</Filter>
@@ -2918,7 +2918,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tracktype] = 'grade2')</Filter>
-    <LineSymbolizer stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tracktype] = 'grade1') and ([tunnel] = 1)</Filter>
@@ -3162,7 +3162,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service') and ([type] = 'secondary')</Filter>
@@ -3198,7 +3198,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
@@ -3210,7 +3210,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([type] = 'secondary')</Filter>
@@ -3246,7 +3246,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'minorroad') and ([tunnel] = 1)</Filter>
@@ -3258,7 +3258,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'mainroad') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'mainroad') and ([type] = 'secondary')</Filter>
@@ -3294,11 +3294,11 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'mainroad')</Filter>
-    <LineSymbolizer stroke-width="12" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="12" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'motorway') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'motorway') and ([type] = 'secondary')</Filter>
@@ -3334,11 +3334,11 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'motorway')</Filter>
-    <LineSymbolizer stroke-width="12" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="12" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-linecap="butt" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-linecap="butt" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'minorroad') and ([type] = 'secondary')</Filter>
@@ -3405,7 +3405,7 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke="#e55779" />
   </Rule>
   <Rule>
-    <LineSymbolizer stroke="#fcfbe7" />
+    <LineSymbolizer stroke="#fcfcf4" />
   </Rule>
 </Style>
 <Style name="roads-outline" filter-mode="first">
@@ -4891,7 +4891,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade5') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="6" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="6" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade5') and ([type] = 'secondary')</Filter>
@@ -4927,7 +4927,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade5')</Filter>
-    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade4') and ([type] = 'secondary') and ([tunnel] = 1)</Filter>
@@ -4963,7 +4963,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade4') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="6" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="6" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade4') and ([type] = 'secondary')</Filter>
@@ -4999,7 +4999,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade4')</Filter>
-    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade3') and ([type] = 'secondary') and ([tunnel] = 1)</Filter>
@@ -5035,7 +5035,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade3') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="7" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="7" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade3') and ([type] = 'secondary')</Filter>
@@ -5071,7 +5071,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade3')</Filter>
-    <LineSymbolizer stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade2') and ([type] = 'secondary') and ([tunnel] = 1)</Filter>
@@ -5107,7 +5107,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade2') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="7" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="7" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade2') and ([type] = 'secondary')</Filter>
@@ -5143,7 +5143,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade2')</Filter>
-    <LineSymbolizer stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tracktype] = 'grade1') and ([tunnel] = 1)</Filter>
@@ -6339,15 +6339,15 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '2_line') and ([stylegroup] = 'railway')</Filter>
-    <LineSymbolizer stroke-width="3" stroke="#fcfbe7" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="3" stroke="#fcfcf4" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '2_line') and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke-width="3.5" stroke="#fcfbe7" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="3.5" stroke="#fcfcf4" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service') and ([type] = 'secondary')</Filter>
@@ -6383,7 +6383,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'service')</Filter>
-    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'railway') and ([tunnel] = 1)</Filter>
@@ -6395,7 +6395,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="0" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto') and ([type] = 'secondary')</Filter>
@@ -6431,7 +6431,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'noauto')</Filter>
-    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'minorroad') and ([tunnel] = 1)</Filter>
@@ -6443,7 +6443,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'mainroad') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'mainroad') and ([type] = 'secondary')</Filter>
@@ -6479,11 +6479,11 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'mainroad')</Filter>
-    <LineSymbolizer stroke-width="12" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="12" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'motorway') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="12" stroke-linecap="butt" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'motorway') and ([type] = 'secondary')</Filter>
@@ -6519,11 +6519,11 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'motorway')</Filter>
-    <LineSymbolizer stroke-width="12" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-width="12" stroke-linecap="round" stroke-linejoin="round" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([tunnel] = 1)</Filter>
-    <LineSymbolizer stroke-linecap="butt" stroke="#fcfbe7" />
+    <LineSymbolizer stroke-linecap="butt" stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline') and ([stylegroup] = 'minorroad') and ([type] = 'secondary')</Filter>
@@ -7055,7 +7055,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([render] = '3_inline')</Filter>
-    <LineSymbolizer stroke="#fcfbe7" />
+    <LineSymbolizer stroke="#fcfcf4" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline')</Filter>
@@ -7141,7 +7141,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([type] = 'hedge')</Filter>
-    <LineSymbolizer stroke="#24ad50" stroke-width="5" stroke-dasharray="5, 4" />
+    <LineSymbolizer stroke="#18dc67" stroke-width="5" stroke-dasharray="5, 4" />
   </Rule>
 </Style>
 <Layer name="linear_features"
@@ -7208,7 +7208,7 @@ order by area desc) as landusages]]></Parameter>
 <Style name="place-small" filter-mode="first">
   <Rule>
     <Filter>([type] = 'locality')</Filter>
-    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#333333" size="9" halo-fill="#fcfbe7" halo-radius="1" wrap-width="30" line-spacing="1" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#333333" size="9" halo-fill="#fcfcf4" halo-radius="1" wrap-width="30" line-spacing="1" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <Filter>([type] = 'suburb')</Filter>
@@ -7297,7 +7297,7 @@ order by area desc) as landusages]]></Parameter>
   </Rule>
   <Rule>
     <Filter>([type] = 'park')</Filter>
-    <TextSymbolizer face-name="DejaVu Sans Oblique" fill="#5add84" halo-fill="#ffffff" size="30" wrap-width="100" character-spacing="1" halo-radius="1.5" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer face-name="DejaVu Sans Oblique" fill="#6befa0" halo-fill="#ffffff" size="30" wrap-width="100" character-spacing="1" halo-radius="1.5" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <TextSymbolizer size="30" wrap-width="100" character-spacing="1" halo-radius="1.5" fontset-name="fontset-0" fill="#333333" halo-fill="#ffffff" ><![CDATA[[name]]]></TextSymbolizer>

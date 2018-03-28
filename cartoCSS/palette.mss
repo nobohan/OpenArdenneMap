@@ -38,13 +38,13 @@ Map { font-directory: url(./fonts); }
 /* BASE COLORS
 /* ================================================================== */
 
-@white:             #FCFBE7;
+@white:             #fcfcf4;
 @black:             #333333;
 @darkgray:          #999999;
 @gray:              #bbbbbb;
 
 @red:               #E55779; /*#db794c;*/
-@green:             #5ADD84; /*#3d9142;*/
+@green:             #6befa0; /*#3d9142;   #5ADD84*/
 @blue:              #aeaeef;
 @darkblue:          #7d7ded;
 
