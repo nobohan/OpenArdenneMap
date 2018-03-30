@@ -102,10 +102,10 @@ Map { background-color: @land; }
   [type='canal'] {
     line-cap: round;
     line-join: round;
-    line-width: 12;
+    line-width: 10;
   }
   [type='stream'] {
-    line-width: 6;
+    line-width: 4;
   }
   [type='ditch'],
   [type='drain'] {
@@ -122,5 +122,5 @@ Map { background-color: @land; }
   line-color:@admin;
   line-width: 2;
   line-opacity: 0.8;
-  line-dasharray: 15,8;
+  line-dasharray: 15,8, 2;
 }

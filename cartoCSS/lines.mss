@@ -10,11 +10,11 @@
 /* ================================================================== */
 
 /* Road width variables that are used in road & bridge styles */
-@large: 14;
-@medium: 12;
-@small: 10;
-@tiny: 7;
-@mini: 6;
+@large: 12;
+@medium: 10;
+@small: 8;
+@tiny: 5;
+@mini: 4;
 
 /* ---- Casing ----------------------------------------------- */
 
@@ -70,8 +70,8 @@
   [stylegroup='motorway'] { line-width: @medium + 2; }
   [stylegroup='mainroad'] { line-width: @medium + 3; }
   [stylegroup='minorroad']{ line-width: @tiny + 2; }
-  [stylegroup='noauto']   { line-width: @mini; line-dasharray: 12, 12; line-color:@black; }
-  [stylegroup='railway']  { line-width: @mini + 2; }
+  [stylegroup='noauto']   { line-width: @mini - 1; line-dasharray: 12, 12; line-color:@black; }
+  [stylegroup='railway']  { line-width: @tiny + 2; }
   [stylegroup='service']{
     [tracktype='grade1'] { line-width: @tiny + 2; line-color: #111}
     [tracktype='grade2'] { line-width: @tiny + 2; }
@@ -139,7 +139,7 @@
   [stylegroup='mainroad'] { line-width: @medium; }
   [stylegroup='minorroad']{ line-width: @tiny; }
   [stylegroup='noauto']   { line-width: 0; }
-  [stylegroup='railway']  { line-width: @mini; line-dasharray: 15,15;}
+  [stylegroup='railway']  { line-width: @tiny; line-dasharray: 15,15;}
   [stylegroup='service'] {
     [tracktype='grade1'] { line-width: @tiny; line-color: @secondary_fill;}
     [tracktype='grade2'] { line-width: @tiny; }
