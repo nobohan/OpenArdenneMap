@@ -52,4 +52,9 @@
         text-dy: -16;
         text-dx: -5;
     }
+    [type = 'wayside_cross'] {
+        marker-file: url(img/cross.svg);
+        marker-height: 25;
+        marker-allow-overlap: true; /* always render */
+    }
 }

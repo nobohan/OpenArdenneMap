@@ -56,7 +56,7 @@ Au lieu de processer un gros fichier tel que  belgium-latest.osm.bz2, vous pouve
 
 Le tout:
 
-`imposm --proj=EPSG:3857 --read extract.osm -m imposm-mapping.py && imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables && imposm -d osm --remove-backup-tables`
+`imposm --proj=EPSG:3857 --read extract.osm -m imposm-mapping.py --overwrite-cache && imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables && imposm -d osm --remove-backup-tables`
 
 
 # Changements apportés à OSMBright

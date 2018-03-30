@@ -7174,6 +7174,10 @@ order by area desc) as landusages]]></Parameter>
     <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#333333" size="30" character-spacing="2" line-spacing="2" dy="-5" dx="12" allow-overlap="true" ><![CDATA['Pyl.']]></TextSymbolizer>
   </Rule>
   <Rule>
+    <Filter>([type] = 'wayside_cross')</Filter>
+    <MarkersSymbolizer file="img/cross.svg" height="25" allow-overlap="true" />
+  </Rule>
+  <Rule>
     <Filter>([type] = 'fountain')</Filter>
     <MarkersSymbolizer file="img/fountain.svg" height="10" allow-overlap="true" />
     <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#7d7ded" size="30" character-spacing="2" line-spacing="2" dy="-16" dx="-5" ><![CDATA['Font.']]></TextSymbolizer>

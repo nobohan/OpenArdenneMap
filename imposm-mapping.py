@@ -417,6 +417,12 @@ pointFeatures = Points(
         'amenity' : (
             'fountain',
         ),
+        'historic' : (
+             'wayside_cross',
+             'castle',
+             'archaeological_site',
+             'ruins',
+        ),
         'man_made': (
             'reservoir_covered',
             'mast',
