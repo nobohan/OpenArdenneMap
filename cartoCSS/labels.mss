@@ -59,7 +59,6 @@
   text-halo-fill:@town_halo;
   text-halo-radius: 3;
   text-wrap-width: 50;
-  text-transform: uppercase;
   text-line-spacing: 2;
   text-size:@text_size_l;
   text-character-spacing: 10;

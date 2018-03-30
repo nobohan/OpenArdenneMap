@@ -33,6 +33,8 @@
             text-size:@text_size_s;
             text-character-spacing: 2;
             text-line-spacing: 2;
+            text-halo-fill:@other_halo;
+            text-halo-radius:1;
             text-dy: -5;
             text-dx: 12;
             text-allow-overlap: true;
@@ -56,5 +58,23 @@
         marker-file: url(img/cross.svg);
         marker-height: 25;
         marker-allow-overlap: true; /* always render */
+
+    }
+    [type = 'archaeological_site'], [type = 'ruins'] {
+        marker-file: url(img/ruins.svg);
+        marker-height: 15;
+        marker-allow-overlap: true; /* always render */
+        text-name:'[name]';
+        text-face-name:@sans;
+        text-placement:point;
+        text-fill:@black;
+        text-size:@text_size_s;
+        text-character-spacing: 2;
+        text-line-spacing: 2;
+        text-wrap-width: 50;
+        text-halo-fill:@other_halo;
+        text-halo-radius:1;
+        text-dy: -5;
+        text-dx: 12;
     }
 }

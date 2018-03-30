@@ -260,7 +260,7 @@
         "id": "point_features",
         "key_field": "",
         "srs": null,
-        "table": "( SELECT geometry, type, tower_type \n  FROM osm_pointfeatures\n)  AS data",
+        "table": "( SELECT geometry, type, tower_type, name \n  FROM osm_pointfeatures\n)  AS data",
         "type": "postgis"
       },
       "class": "",
