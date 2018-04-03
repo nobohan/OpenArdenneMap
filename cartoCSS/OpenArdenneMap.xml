@@ -236,15 +236,15 @@
     <LineSymbolizer stroke-width="2" stroke="#7d7ded" />
   </Rule>
   <Rule>
+    <Filter>([type] = 'canal')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#7d7ded" />
+  </Rule>
+  <Rule>
     <Filter>([type] = 'stream')</Filter>
     <LineSymbolizer stroke-width="4" stroke="#7d7ded" />
   </Rule>
   <Rule>
     <Filter>([type] = 'river')</Filter>
-    <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="10" stroke="#7d7ded" />
-  </Rule>
-  <Rule>
-    <Filter>([type] = 'canal')</Filter>
     <LineSymbolizer stroke-linecap="round" stroke-linejoin="round" stroke-width="10" stroke="#7d7ded" />
   </Rule>
   <Rule>

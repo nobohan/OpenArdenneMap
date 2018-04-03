@@ -98,13 +98,13 @@ Map { background-color: @land; }
 
 #waterway_high {
   line-color: @darkblue;
-  [type='river'],
-  [type='canal'] {
+  [type='river']
+   {
     line-cap: round;
     line-join: round;
     line-width: 10;
   }
-  [type='stream'] {
+  [type='stream'], [type='canal'] {
     line-width: 4;
   }
   [type='ditch'],
