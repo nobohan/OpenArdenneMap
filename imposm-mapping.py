@@ -179,7 +179,10 @@ minorroads = Highway(
             'pedestrian',
             'living_street',
             'unclassified',
-            'residential'
+            'residential',
+        ),
+        'man_made': (
+            'cutline',
     )},
     fields = (
             ('surface', String()),
@@ -449,6 +452,9 @@ linearfeatures = LineStrings(
             'embankment': (
                'yes',
             ),
+            'natural': (
+               'cliff',
+            ),
             'power': (
                'line',
             )
@@ -457,6 +463,7 @@ linearfeatures = LineStrings(
      ('leaf_type', String()),
      ('leaf_cycle', String()),
      ('voltage', Integer()),
+     ('class', Class()),
    )
 )
 

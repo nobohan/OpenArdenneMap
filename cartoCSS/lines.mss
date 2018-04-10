@@ -66,11 +66,14 @@
     [bridge=1] { line-width: @tiny + 2 + 4; }
   }
 
+  [type='cutline'] { line-width: 2; line-dasharray: 25, 15; line-color: @darkgray; }
+
+
   /* -- widths -- */
   [stylegroup='motorway'] { line-width: @medium + 2; }
   [stylegroup='mainroad'] { line-width: @medium + 3; }
   [stylegroup='minorroad']{ line-width: @tiny + 2; }
-  [stylegroup='noauto']   { line-width: @mini - 1; line-dasharray: 12, 12; line-color:@black; }
+  [stylegroup='noauto']   { line-width: @mini - 1; line-dasharray: 8, 8; line-color: lighten(@black, 20%) }
   [stylegroup='railway']  { line-width: @tiny + 2; }
   [stylegroup='service']{
     [tracktype='grade1'] { line-width: @tiny + 2; line-color: #111}
@@ -139,6 +142,7 @@
   [stylegroup='mainroad'] { line-width: @medium; }
   [stylegroup='minorroad']{ line-width: @tiny; }
   [stylegroup='noauto']   { line-width: 0; }
+  [type='cutline'] { line-width: 0; }
   [stylegroup='railway']  { line-width: @tiny; line-dasharray: 15,15;}
   [stylegroup='service'] {
     [tracktype='grade1'] { line-width: @tiny; line-color: @secondary_fill;}
@@ -168,8 +172,6 @@
       line-color: #fff; }
   }
 }
-
-
 
 
 /* ---- Bridge fill for dashed lines -------------------------------- */
@@ -227,6 +229,9 @@
   }
   [type = 'embankment'] {
       line-pattern-file: url(img/embankment.svg);
+  }
+  [type = 'cliff'] {
+      line-pattern-file: url(img/cliff.svg);
   }
 }
 
