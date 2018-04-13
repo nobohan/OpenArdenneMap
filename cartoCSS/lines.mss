@@ -68,12 +68,22 @@
 
   [type='cutline'] { line-width: 2; line-dasharray: 25, 15; line-color: @darkgray; }
 
+  [stylegroup='noauto'] {
+    line-width: @mini - 1;
+    line-dasharray: 8, 8;
+    line-color: lighten(@black, 20%);
+    [bridge=1] {
+      marker-file: url(img/bridge.svg);
+      /*marker-placement: line;*/
+      /*marker-direction: down;*/
+    }
+  }
 
   /* -- widths -- */
   [stylegroup='motorway'] { line-width: @medium + 2; }
   [stylegroup='mainroad'] { line-width: @medium + 3; }
   [stylegroup='minorroad']{ line-width: @tiny + 2; }
-  [stylegroup='noauto']   { line-width: @mini - 1; line-dasharray: 8, 8; line-color: lighten(@black, 20%) }
+
   [stylegroup='railway']  { line-width: @tiny + 2; }
   [stylegroup='service']{
     [tracktype='grade1'] { line-width: @tiny + 2; line-color: #111}
@@ -90,7 +100,7 @@
 /* This second group (roads) is the final layer for most of the roads */
 /* elements, which will give the center of the roads (inner fill) */
 
-#roads,
+#roads::middle,
 #tunnel[render='3_inline'],
 #bridge[render='3_inline']{
   /* -- colors & styles -- */
@@ -189,7 +199,7 @@
   }
   /* -- widths -- */
 
-  [stylegroup='noauto']   { line-width: @small / 4 + 1; }
+
   [stylegroup='railway']  { line-width: 2 + 1; }
 
 }

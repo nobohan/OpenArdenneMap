@@ -96,7 +96,7 @@ Map { background-color: @land; }
 /* WATER WAYS
 /* ================================================================== */
 
-#waterway_high {
+#waterway {
   line-color: @darkblue;
   [type='river']
    {

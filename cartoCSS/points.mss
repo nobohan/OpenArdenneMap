@@ -58,7 +58,6 @@
         marker-file: url(img/cross.svg);
         marker-height: 25;
         marker-allow-overlap: true; /* always render */
-
     }
     [type = 'archaeological_site'], [type = 'ruins'] {
         marker-file: url(img/ruins.svg);

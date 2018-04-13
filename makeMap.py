@@ -23,7 +23,7 @@ if (page == "A4"):
 # increasing map_x and map_y lead to decreasing font and symbol size: not good
 map_x = 4*2339
 map_y = 4*1654
-m = Map(map_x,map_y)
+m = Map(map_x, map_y)
 load_map(m, mapFile)
 
 # Bounding box (expressed in EPSG:3857, meters)
