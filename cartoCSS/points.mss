@@ -15,8 +15,6 @@
    }
  }
 
-
-
 /* ================================================================== */
 /* VARIOUS POINT FEATURES
 /* ================================================================== */
@@ -75,5 +73,24 @@
         text-halo-radius:1;
         text-dy: -5;
         text-dx: 12;
+    }
+    [type = 'stop_position'] {
+        ['bus' = 'yes'] {
+            marker-file: url(img/bus.svg);
+            marker-height: 8;
+            marker-allow-overlap: true;
+            text-name:"'Bus'";
+            text-face-name:@sans;
+            text-placement:point;
+            text-fill:@black;
+            text-size:@text_size_xs;
+            text-character-spacing: 2;
+            text-line-spacing: 2;
+            text-halo-fill:@other_halo;
+            text-halo-radius:1;
+            text-dy: 5;
+            text-dx: 0;
+            text-allow-overlap: false;
+        }
     }
 }

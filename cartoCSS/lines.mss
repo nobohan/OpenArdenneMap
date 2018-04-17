@@ -229,9 +229,9 @@
 
 #linear_features {
   [type = 'hedge'] {
-      line-color: darken(@green,20%);
-      line-width: 5;
-      line-dasharray: 5,4;
+      line-color: darken(@green,30%);
+      line-width: 3;
+      line-dasharray: 3,5;
   }
   [type = 'line'] {
       line-color: @black;

@@ -430,9 +430,13 @@ pointFeatures = Points(
             'reservoir_covered',
             'mast',
             'tower',
+        ),
+        'public_transport': (
+            'stop_position',
         )},
     fields = (
         ('tower:type', String()),
+        ('bus', String()),
         ('class', Class()),
     )
 )

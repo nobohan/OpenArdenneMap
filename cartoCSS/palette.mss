@@ -39,8 +39,8 @@ Map { font-directory: url(./fonts); }
 /* ================================================================== */
 
 @white:             #fcfcf4;
-@black:             #333333;
-@darkgray:          #999999;
+@black:             #111111;
+@darkgray:          #444444;
 @gray:              #bbbbbb;
 
 @red:               #e8889f; /*#E55779; /*#db794c;*/
@@ -62,7 +62,7 @@ Map { font-directory: url(./fonts); }
 @wooded:            @green;
 @agriculture:       @white;
 @farmyard:          @white;
-@building:          @black;
+@building:          @darkgray;
 @hospital:          @black;
 @school:            @white;
 @sports:            @white;

@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="cemetery.svg">
+   sodipodi:docname="bus.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="313.53113"
-     inkscape:cy="620.15836"
+     inkscape:zoom="11.2"
+     inkscape:cx="332.48297"
+     inkscape:cy="615.70468"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -56,25 +56,12 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <path
-       style="fill:#7d0000;fill-rule:evenodd;stroke:#111111;stroke-width:1.71306348;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
-       d="m 326.724,422.6655 c 0,16.48217 0,16.48217 0,16.48217"
-       id="path4155"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:#7d0000;fill-rule:evenodd;stroke:#111111;stroke-width:1.71306348;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
-       d="m 322.27284,427.61852 8.90231,0"
-       id="path4157"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:#7d0000;fill-rule:evenodd;stroke:#111111;stroke-width:1.71306348;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
-       d="m 336.25443,431.03104 c 0,16.48217 0,16.48217 0,16.48217"
-       id="path4155-3"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:#7d0000;fill-rule:evenodd;stroke:#111111;stroke-width:1.71306348;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
-       d="m 331.80328,435.98405 8.9023,0"
-       id="path4157-6"
-       inkscape:connector-curvature="0" />
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#111111;stroke-width:4.1555891;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99215686"
+       id="path4136"
+       cx="332.32144"
+       cy="432.79077"
+       rx="12.511492"
+       ry="12.422205" />
   </g>
 </svg>
