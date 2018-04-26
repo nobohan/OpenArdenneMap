@@ -1507,92 +1507,92 @@ order by area desc) as landusages]]></Parameter>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'secondary') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0f0f0f" stroke-width="16" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'secondary')</Filter>
     <LineSymbolizer stroke="#0f0f0f" stroke-width="16" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'secondary_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0f0f0f" stroke-width="16" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'secondary_link')</Filter>
     <LineSymbolizer stroke="#0f0f0f" stroke-width="16" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'primary') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'primary')</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'primary_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'primary_link')</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'trunk') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'trunk')</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'trunk_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'trunk_link')</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'motorway_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-width="18" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'motorway_link')</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-width="18" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'motorway') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-width="18" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'motorway')</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-width="18" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke-width="3" stroke-dasharray="8, 8" stroke="#444444" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1)</Filter>
     <LineSymbolizer stroke-width="3" stroke-dasharray="8, 8" stroke="#444444" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([bridge] = 1) and ([type] = 'secondary') and ([tunnel] = 1)</Filter>
@@ -4287,92 +4287,92 @@ order by area desc) as landusages]]></Parameter>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'secondary') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0f0f0f" stroke-width="16" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'secondary')</Filter>
     <LineSymbolizer stroke="#0f0f0f" stroke-width="16" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'secondary_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0f0f0f" stroke-width="16" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'secondary_link')</Filter>
     <LineSymbolizer stroke="#0f0f0f" stroke-width="16" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'primary_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'primary_link')</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'primary') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'primary')</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'trunk') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'trunk')</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'trunk_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'trunk_link')</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'motorway') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-width="18" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'motorway')</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-width="18" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'motorway_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-width="18" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'motorway_link')</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-width="18" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke-width="3" stroke-dasharray="8, 8" stroke="#444444" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1)</Filter>
     <LineSymbolizer stroke-width="3" stroke-dasharray="8, 8" stroke="#444444" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'minorroad') and ([bridge] = 1) and ([type] = 'secondary') and ([tunnel] = 1)</Filter>
@@ -6432,47 +6432,47 @@ order by area desc) as landusages]]></Parameter>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'secondary')</Filter>
     <LineSymbolizer stroke="#0f0f0f" stroke-width="16" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'secondary_link')</Filter>
     <LineSymbolizer stroke="#0f0f0f" stroke-width="16" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'primary_link')</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'primary')</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'trunk_link')</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'trunk')</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'motorway')</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-width="18" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'motorway_link')</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-width="18" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1)</Filter>
     <LineSymbolizer stroke-width="3" stroke-dasharray="8, 8" stroke="#444444" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" />
+    <MarkersSymbolizer file="img/bridge.svg" height="12" />
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([bridge] = 1) and ([type] = 'secondary') and ([tunnel] = 1)</Filter>

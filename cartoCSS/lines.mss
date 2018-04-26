@@ -74,6 +74,7 @@
     line-color: lighten(@black, 20%);
     [bridge=1] {
       marker-file: url(img/bridge.svg);
+      marker-height: 12;
       /*marker-placement: line;*/
       /*marker-direction: down;*/
     }
