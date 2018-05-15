@@ -67,6 +67,12 @@ Map { background-color: @land; }
   polygon-pattern-file:url(img/wetland.svg);
   }
 
+#extralandusages[type='christmas_trees'] {
+  polygon-pattern-file: url(img/christmas_trees.svg);
+  line-width:0.5;
+  line-color: @gray;
+}
+
 /* ---- BUILDINGS ---- */
 #buildings {
   polygon-fill:@building;

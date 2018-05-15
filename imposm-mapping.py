@@ -303,7 +303,7 @@ landusages = Polygons(
             'park',
             'forest',
             'cemetery',
-            'orchard'
+            'orchard',
             'farmyard',
             'farm',
             'farmland',
@@ -409,7 +409,21 @@ landusages = Polygons(
             'helipad',
             'apron',
         ),
-})
+
+    }
+)
+
+extraLandusages = Polygons(
+    name = 'extralandusages',
+    fields = (
+        ('area', PseudoArea()),
+    ),
+    mapping = {
+        'produce': (
+            'christmas_trees',
+        ),
+    },
+)
 
 pointFeatures = Points(
     name = 'pointfeatures',

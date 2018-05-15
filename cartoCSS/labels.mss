@@ -147,10 +147,11 @@
     text-dx: -20;
   }
   [type='farmyard'] {
-    text-name: "'Ferme'";
-    text-size: @text_size_xs;
+    text-name: "'Fme'";
+    text-size: @text_size_s;
     text-dy: -20;
     text-dx: -15;
+    text-allow-overlap: false;
   }
 }
 

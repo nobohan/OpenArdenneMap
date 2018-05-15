@@ -366,5 +366,6 @@ Some useful commands for printing the map in a pdf format:
 * font choice
 * palettes
 * feature: point of view
+* orientate features like bridge along the line
 * several styles
 * legend

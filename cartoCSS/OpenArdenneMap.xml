@@ -156,10 +156,34 @@
        <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
        <Parameter name="id"><![CDATA[landuse]]></Parameter>
-       <Parameter name="project"><![CDATA[osm-bright-imposm]]></Parameter>
        <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
        <Parameter name="table"><![CDATA[( SELECT geometry, type, leaf_type, leaf_cycle, area
   FROM osm_landusages
+  ORDER BY area DESC
+) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="extralandusages" filter-mode="first">
+  <Rule>
+    <Filter>([type] = 'christmas_trees')</Filter>
+    <PolygonPatternSymbolizer file="img/christmas_trees.svg" />
+    <LineSymbolizer stroke-width="0.5" stroke="#bbbbbb" />
+  </Rule>
+</Style>
+<Layer name="extralandusages"
+  status="on"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>extralandusages</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[osm]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
+       <Parameter name="id"><![CDATA[extralandusages]]></Parameter>
+       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT *
+  FROM osm_extralandusages
   ORDER BY area DESC
 ) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
@@ -187,11 +211,11 @@
 
 <Style name="waterway" filter-mode="first">
   <Rule>
-    <Filter>([type] = 'ditch')</Filter>
+    <Filter>([type] = 'drain')</Filter>
     <LineSymbolizer stroke-width="2" stroke="#7d7ded" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'drain')</Filter>
+    <Filter>([type] = 'ditch')</Filter>
     <LineSymbolizer stroke-width="2" stroke="#7d7ded" />
   </Rule>
   <Rule>
@@ -7876,7 +7900,7 @@ order by area desc) as landusages]]></Parameter>
 <Style name="area_label" filter-mode="first">
   <Rule>
     <Filter>([type] = 'farmyard')</Filter>
-    <TextSymbolizer size="20" dy="-20" dx="-15" wrap-width="100" character-spacing="1" halo-radius="1.5" fontset-name="fontset-0" fill="#111111" halo-fill="#ffffff" ><![CDATA['Ferme']]></TextSymbolizer>
+    <TextSymbolizer size="30" dy="-20" dx="-15" allow-overlap="false" wrap-width="100" character-spacing="1" halo-radius="1.5" fontset-name="fontset-0" fill="#111111" halo-fill="#ffffff" ><![CDATA['Fme']]></TextSymbolizer>
   </Rule>
   <Rule>
     <Filter>([type] = 'school')</Filter>
