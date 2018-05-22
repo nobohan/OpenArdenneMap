@@ -152,6 +152,7 @@
     text-dy: -20;
     text-dx: -15;
     text-allow-overlap: false;
+    /*text-repeat-distance: 60;*/ /*this option does not work in carto but in Mapnik XML*/
   }
 }
 
