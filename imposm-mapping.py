@@ -62,7 +62,8 @@ class Highway(LineStrings):
         ('ref', String()),
         ('layer', Integer()),
         ('z_order', WayZOrder()),
-        ('access', String())
+        ('access', String()),
+        ('orientation', String()),
     )
     field_filter = (
         ('area', Bool()),
@@ -496,7 +497,8 @@ roads = UnionView(
         ('z_order', 0),
         ('access', None),
         ('surface', None),
-        ('tracktype', None)
+        ('tracktype', None),
+        ('orientation', None),
     ),
     mappings = [motorways, mainroads, minorroads, railways],
 )

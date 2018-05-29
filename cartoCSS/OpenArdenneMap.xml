@@ -1531,92 +1531,91 @@ order by area desc) as landusages]]></Parameter>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'secondary') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0f0f0f" stroke-width="16" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'secondary')</Filter>
     <LineSymbolizer stroke="#0f0f0f" stroke-width="16" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'secondary_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0f0f0f" stroke-width="16" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'secondary_link')</Filter>
     <LineSymbolizer stroke="#0f0f0f" stroke-width="16" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'primary') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'primary')</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'primary_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'primary_link')</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'trunk') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'trunk')</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'trunk_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'trunk_link')</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'motorway_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-width="18" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'motorway_link')</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-width="18" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'motorway') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-width="18" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'motorway')</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-width="18" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke-width="3" stroke-dasharray="8, 8" stroke="#444444" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke-width="3" stroke-dasharray="8, 8" stroke="#444444" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([bridge] = 1) and ([type] = 'secondary') and ([tunnel] = 1)</Filter>
@@ -2782,7 +2781,7 @@ order by area desc) as landusages]]></Parameter>
        <Parameter name="dbname"><![CDATA[osm]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT geometry, type, 0 as bridge, access, render, layer, tracktype, tunnel,
+       <Parameter name="table"><![CDATA[( SELECT geometry, type, 0 as bridge, access, render, layer, tracktype, orientation, tunnel,
   CASE
     WHEN type IN ('motorway', 'trunk') THEN 'motorway'
     WHEN type IN ('primary', 'secondary') THEN 'mainroad'
@@ -4311,92 +4310,92 @@ order by area desc) as landusages]]></Parameter>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'secondary') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0f0f0f" stroke-width="16" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'secondary')</Filter>
     <LineSymbolizer stroke="#0f0f0f" stroke-width="16" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'secondary_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0f0f0f" stroke-width="16" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'secondary_link')</Filter>
     <LineSymbolizer stroke="#0f0f0f" stroke-width="16" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'primary_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'primary_link')</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'primary') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'primary')</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'trunk') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'trunk')</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'trunk_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'trunk_link')</Filter>
     <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'motorway') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-width="18" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'motorway')</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-width="18" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'motorway_link') and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-width="18" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'motorway_link')</Filter>
     <LineSymbolizer stroke="#0e0e0e" stroke-width="18" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1) and ([tunnel] = 1)</Filter>
     <LineSymbolizer stroke-width="3" stroke-dasharray="8, 8" stroke="#444444" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'noauto') and ([bridge] = 1)</Filter>
     <LineSymbolizer stroke-width="3" stroke-dasharray="8, 8" stroke="#444444" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="[orientation]" transform="rotate([orientation])"/>
   </Rule>
   <Rule>
     <Filter>([stylegroup] = 'minorroad') and ([bridge] = 1) and ([type] = 'secondary') and ([tunnel] = 1)</Filter>
@@ -5254,7 +5253,7 @@ order by area desc) as landusages]]></Parameter>
        <Parameter name="id"><![CDATA[roads]]></Parameter>
        <Parameter name="project"><![CDATA[osm-bright]]></Parameter>
        <Parameter name="srs"><![CDATA[null]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT geometry, type, tunnel, bridge, tracktype, access, 'fill' AS render,
+       <Parameter name="table"><![CDATA[( SELECT geometry, type, tunnel, bridge, tracktype, orientation, access, 'fill' AS render,
   CASE
     WHEN type IN ('motorway', 'trunk') THEN 'motorway'
     WHEN type IN ('primary', 'secondary') THEN 'mainroad'
@@ -6454,49 +6453,8 @@ order by area desc) as landusages]]></Parameter>
     <LineSymbolizer stroke-width="7" stroke="#111111" stroke-linecap="round" stroke-linejoin="round" />
   </Rule>
   <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'secondary')</Filter>
-    <LineSymbolizer stroke="#0f0f0f" stroke-width="16" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'secondary_link')</Filter>
-    <LineSymbolizer stroke="#0f0f0f" stroke-width="16" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'primary_link')</Filter>
-    <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'primary')</Filter>
-    <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'trunk_link')</Filter>
-    <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'trunk')</Filter>
-    <LineSymbolizer stroke="#0c0c0c" stroke-width="3" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'motorway')</Filter>
-    <LineSymbolizer stroke="#0e0e0e" stroke-width="18" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
-  </Rule>
-  <Rule>
-    <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1) and ([type] = 'motorway_link')</Filter>
-    <LineSymbolizer stroke="#0e0e0e" stroke-width="18" stroke-dasharray="8, 8" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
-  </Rule>
-  <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'noauto') and ([bridge] = 1)</Filter>
-    <LineSymbolizer stroke-width="3" stroke-dasharray="8, 8" stroke="#444444" stroke-linecap="butt" stroke-linejoin="round" />
-    <MarkersSymbolizer file="img/bridge.svg" height="12" />
+    <MarkersSymbolizer file="img/bridge.svg" height="16" transform="rotate([name])"/>
   </Rule>
   <Rule>
     <Filter>([render] = '1_outline') and ([stylegroup] = 'service') and ([bridge] = 1) and ([type] = 'secondary') and ([tunnel] = 1)</Filter>
@@ -7686,7 +7644,7 @@ order by area desc) as landusages]]></Parameter>
        <Parameter name="id"><![CDATA[bridge]]></Parameter>
        <Parameter name="project"><![CDATA[osm-bright-imposm]]></Parameter>
        <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT geometry, type, bridge, access, render, tracktype, layer, 0 as tunnel,
+       <Parameter name="table"><![CDATA[( SELECT geometry, type, bridge, access, render, tracktype, id, name, azimuth, orientation, layer, 0 as tunnel,
   CASE
     WHEN type IN ('motorway', 'trunk') THEN 'motorway'
     WHEN type IN ('primary', 'secondary') THEN 'mainroad'
@@ -7830,7 +7788,7 @@ order by area desc) as landusages]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
        <Parameter name="id"><![CDATA[point_features]]></Parameter>
        <Parameter name="srs"><![CDATA[null]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT geometry, type, tower_type, bus, name 
+       <Parameter name="table"><![CDATA[( SELECT geometry, type, tower_type, bus, name
   FROM osm_pointfeatures
 )  AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
@@ -7968,7 +7926,7 @@ order by area desc) as landusages]]></Parameter>
   SELECT 'building' AS type, name, area, 'building' AS stylegroup,
     ST_PointOnSurface(geometry) AS geometry
   FROM osm_buildings
-  WHERE name IS NOT NULL 
+  WHERE name IS NOT NULL
     AND geometry && !bbox!
   AND type IN (
       'industrial', 'school', 'university' )
@@ -8006,7 +7964,7 @@ order by area desc) as landusages]]></Parameter>
        <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
        <Parameter name="table"><![CDATA[( SELECT geometry, type, name
   FROM osm_waterways
-  WHERE type IN ('canal', 'river', 'stream') 
+  WHERE type IN ('canal', 'river', 'stream')
     AND name IS NOT NULL
 ) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
@@ -8032,9 +7990,9 @@ order by area desc) as landusages]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT geometry, type, name 
-  FROM osm_transport_points 
-  WHERE type IN ('station', 'level_crossing') 
+       <Parameter name="table"><![CDATA[( SELECT geometry, type, name
+  FROM osm_transport_points
+  WHERE type IN ('station', 'level_crossing')
 ) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>

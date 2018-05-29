@@ -74,7 +74,9 @@
     line-color: lighten(@black, 20%);
     [bridge=1] {
       marker-file: url(img/bridge.svg);
-      marker-height: 12;
+      marker-height: 14;
+      /*marker-transform: rotate([orientation]);*/
+      /* rotate(@Value(angle),@Value(cx),@Value(cy))*/
       /*marker-placement: line;*/
       /*marker-direction: down;*/
     }
