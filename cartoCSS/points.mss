@@ -57,6 +57,10 @@
         marker-height: 25;
         marker-allow-overlap: true; /* always render */
     }
+    [type = 'picnic_table'], [type = 'picnic_site'] {
+        marker-file: url(img/picnic.svg);
+        marker-height: 12;
+    }
     [type = 'archaeological_site'], [type = 'ruins'] {
         marker-file: url(img/ruins.svg);
         marker-height: 15;

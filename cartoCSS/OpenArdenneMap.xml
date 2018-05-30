@@ -7648,7 +7648,7 @@ order by area desc) as landusages]]></Parameter>
 
 <Style name="bridge_symbol" filter-mode="first">
   <Rule>
-    <MarkersSymbolizer file="img/bridge.svg" height="16"  transform="rotate([orientation])"/>
+    <MarkersSymbolizer file="img/bridge.svg" height="16" />
   </Rule>
 </Style>
 <Layer name="bridge_symbol"
@@ -7661,8 +7661,8 @@ order by area desc) as landusages]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
        <Parameter name="id"><![CDATA[bridge_symbol]]></Parameter>
        <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT geometry, type, bridge,
- CAST(90+degrees(ST_Azimuth(ST_StartPoint(osm_minorroads.geometry), ST_EndPoint(osm_minorroads.geometry))) AS VARCHAR(255)) AS orientation
+       <Parameter name="table"><![CDATA[( SELECT geometry, type, bridge, 
+ CAST(90+degrees(ST_Azimuth(ST_StartPoint(osm_minorroads.geometry), ST_EndPoint(osm_minorroads.geometry))) AS VARCHAR(255)) AS orientation 
  FROM osm_minorroads WHERE bridge = 1 AND type IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway')) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
@@ -7743,12 +7743,12 @@ order by area desc) as landusages]]></Parameter>
     <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#111111" size="20" character-spacing="2" line-spacing="2" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" dy="5" dx="0" allow-overlap="false" ><![CDATA['Bus']]></TextSymbolizer>
   </Rule>
   <Rule>
-    <Filter>([type] = 'tower') and ([tower_type] = 'communication')</Filter>
+    <Filter>([type] = 'mast') and ([tower_type] = 'communication')</Filter>
     <MarkersSymbolizer file="img/tower.svg" height="4" />
     <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#111111" size="30" character-spacing="2" line-spacing="2" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" dy="-5" dx="12" allow-overlap="true" ><![CDATA['Pyl.']]></TextSymbolizer>
   </Rule>
   <Rule>
-    <Filter>([type] = 'mast') and ([tower_type] = 'communication')</Filter>
+    <Filter>([type] = 'tower') and ([tower_type] = 'communication')</Filter>
     <MarkersSymbolizer file="img/tower.svg" height="4" />
     <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#111111" size="30" character-spacing="2" line-spacing="2" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" dy="-5" dx="12" allow-overlap="true" ><![CDATA['Pyl.']]></TextSymbolizer>
   </Rule>
@@ -7763,6 +7763,14 @@ order by area desc) as landusages]]></Parameter>
     <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#111111" size="30" character-spacing="2" line-spacing="2" wrap-width="50" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" dy="-5" dx="12" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
+    <Filter>([type] = 'picnic_table')</Filter>
+    <MarkersSymbolizer file="img/picnic.svg" height="12" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'picnic_site')</Filter>
+    <MarkersSymbolizer file="img/picnic.svg" height="12" />
+  </Rule>
+  <Rule>
     <Filter>([type] = 'wayside_cross')</Filter>
     <MarkersSymbolizer file="img/cross.svg" height="25" allow-overlap="true" />
   </Rule>
@@ -7772,11 +7780,11 @@ order by area desc) as landusages]]></Parameter>
     <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#7d7ded" size="30" character-spacing="2" line-spacing="2" dy="-16" dx="-5" ><![CDATA['Font.']]></TextSymbolizer>
   </Rule>
   <Rule>
-    <Filter>([type] = 'tower')</Filter>
+    <Filter>([type] = 'mast')</Filter>
     <MarkersSymbolizer file="img/tower.svg" height="4" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'mast')</Filter>
+    <Filter>([type] = 'tower')</Filter>
     <MarkersSymbolizer file="img/tower.svg" height="4" />
   </Rule>
 </Style>
@@ -7790,7 +7798,7 @@ order by area desc) as landusages]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
        <Parameter name="id"><![CDATA[point_features]]></Parameter>
        <Parameter name="srs"><![CDATA[null]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT geometry, type, tower_type, bus, name
+       <Parameter name="table"><![CDATA[( SELECT geometry, type, tower_type, bus, name 
   FROM osm_pointfeatures
 )  AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
@@ -7928,7 +7936,7 @@ order by area desc) as landusages]]></Parameter>
   SELECT 'building' AS type, name, area, 'building' AS stylegroup,
     ST_PointOnSurface(geometry) AS geometry
   FROM osm_buildings
-  WHERE name IS NOT NULL
+  WHERE name IS NOT NULL 
     AND geometry && !bbox!
   AND type IN (
       'industrial', 'school', 'university' )
@@ -7966,7 +7974,7 @@ order by area desc) as landusages]]></Parameter>
        <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
        <Parameter name="table"><![CDATA[( SELECT geometry, type, name
   FROM osm_waterways
-  WHERE type IN ('canal', 'river', 'stream')
+  WHERE type IN ('canal', 'river', 'stream') 
     AND name IS NOT NULL
 ) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
@@ -7992,9 +8000,9 @@ order by area desc) as landusages]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT geometry, type, name
-  FROM osm_transport_points
-  WHERE type IN ('station', 'level_crossing')
+       <Parameter name="table"><![CDATA[( SELECT geometry, type, name 
+  FROM osm_transport_points 
+  WHERE type IN ('station', 'level_crossing') 
 ) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>

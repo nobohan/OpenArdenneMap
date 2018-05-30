@@ -445,6 +445,12 @@ pointFeatures = Points(
             'mast',
             'tower',
         ),
+        'leisure': (
+            'picnic_table',
+        ),
+        'tourism': (
+            'picnic_site',
+        ),
         'public_transport': (
             'stop_position',
         )},
