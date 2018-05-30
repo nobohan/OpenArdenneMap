@@ -375,28 +375,6 @@ Some useful commands for printing the map in a pdf format:
 ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;
 ```
 
-# rotate
+# Carto CSS command not understood by carto but by Mapnik
 
-
-
-## SQL queries on roads
-
-### DEVRAIT FONCTIONNER
-ALTER TABLE osm_minorroads
-ADD orientation VARCHAR(255);
-UPDATE osm_minorroads
-SET orientation = CAST(90+degrees(ST_Azimuth(
-  ST_StartPoint(osm_minorroads.geometry), ST_EndPoint(osm_minorroads.geometry)))
-  AS VARCHAR(255))
-WHERE bridge=1;
-
-### FONCTIONNE:
-UPDATE osm_minorroads
-SET name = CAST(90+degrees(ST_Azimuth(
-   ST_StartPoint(osm_minorroads.geometry), ST_EndPoint(osm_minorroads.geometry)))
-   AS VARCHAR(255))
-WHERE bridge=1;
-
-
-## Mapnik XML
-<MarkersSymbolizer file="img/bridge.svg" height="14" transform="rotate([orientation])"/>
+* <MarkersSymbolizer file="img/bridge.svg" height="14" transform="rotate([orientation])"/>

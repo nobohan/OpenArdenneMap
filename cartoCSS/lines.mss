@@ -72,14 +72,6 @@
     line-width: @mini - 1;
     line-dasharray: 8, 8;
     line-color: lighten(@black, 20%);
-    [bridge=1] {
-      marker-file: url(img/bridge.svg);
-      marker-height: 14;
-      /*marker-transform: rotate([orientation]);*/
-      /* rotate(@Value(angle),@Value(cx),@Value(cy))*/
-      /*marker-placement: line;*/
-      /*marker-direction: down;*/
-    }
   }
 
   /* -- widths -- */
@@ -207,6 +199,12 @@
 
 }
 
+/* ---- Bridge symbol layer -------------------------------- */
+#bridge_symbol {
+  marker-file: url(img/bridge.svg);
+  marker-height: 16;
+  /*marker-transform: rotate([orientation]);*/ /*Do not work with carto but with Mapnik*/
+}
 
 /* ================================================================== */
 /* AEROWAYS
