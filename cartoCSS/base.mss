@@ -29,7 +29,7 @@ Map { background-color: @land; }
   [type='commercial']    { polygon-fill: @industrial; }
   [type='common']        { polygon-fill: @park; }
   [type='forest']        { polygon-pattern-file:url(img/forest.svg); line-width:0.2; line-color: @darkgray; }
-  [type='forest'] [leaf_type='mixed']  { polygon-pattern-file:url(img/forest.svg); line-width:0.3; line-color: @black; }
+  [type='forest'] [leaf_type='mixed']  { polygon-fill: @green; polygon-pattern-file:url(img/forest.svg); line-width:0.3; line-color: @black; }
   [type='forest'] [leaf_type='broadleaved']  { polygon-pattern-file:url(img/forest_bl.svg); line-width:0.3; line-color: @black; }
   [type='forest'] [leaf_type='needleleaved']  { polygon-pattern-file:url(img/forest_nl.svg); line-width:0.3; line-color: @black; }
   [type='golf_course']   { polygon-fill: @sports; }
