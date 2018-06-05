@@ -23,18 +23,27 @@
 <Style name="landuse" filter-mode="first">
   <Rule>
     <Filter>([type] = 'forest') and ([leaf_type] = 'needleleaved')</Filter>
+    <PolygonSymbolizer fill="#acefc7" />
+    <LineSymbolizer stroke-width="0.2" stroke="#111111" />
     <PolygonPatternSymbolizer file="img/forest_nl.svg" />
-    <LineSymbolizer stroke-width="0.3" stroke="#111111" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'wood') and ([leaf_type] = 'needleleaved')</Filter>
+    <PolygonSymbolizer fill="#acefc7" />
+    <LineSymbolizer stroke-width="0.2" stroke="#111111" />
+    <PolygonPatternSymbolizer file="img/forest_nl.svg" />
   </Rule>
   <Rule>
     <Filter>([type] = 'forest') and ([leaf_type] = 'broadleaved')</Filter>
+    <PolygonSymbolizer fill="#acefc7" />
+    <LineSymbolizer stroke-width="0.2" stroke="#111111" />
     <PolygonPatternSymbolizer file="img/forest_bl.svg" />
-    <LineSymbolizer stroke-width="0.3" stroke="#111111" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'forest') and ([leaf_type] = 'mixed')</Filter>
-    <PolygonPatternSymbolizer file="img/forest.svg" />
-    <LineSymbolizer stroke-width="0.3" stroke="#111111" />
+    <Filter>([type] = 'wood') and ([leaf_type] = 'broadleaved')</Filter>
+    <PolygonSymbolizer fill="#acefc7" />
+    <LineSymbolizer stroke-width="0.2" stroke="#111111" />
+    <PolygonPatternSymbolizer file="img/forest_bl.svg" />
   </Rule>
   <Rule>
     <Filter>([type] = 'school')</Filter>
@@ -46,6 +55,7 @@
   </Rule>
   <Rule>
     <Filter>([type] = 'orchard')</Filter>
+    <PolygonSymbolizer fill="#acefc7" />
     <PolygonPatternSymbolizer file="img/orchard.svg" />
     <LineSymbolizer stroke-width="0.5" stroke="#bbbbbb" />
   </Rule>
@@ -57,10 +67,6 @@
     <Filter>([type] = 'meadow')</Filter>
     <PolygonPatternSymbolizer file="img/meadow.svg" />
     <LineSymbolizer stroke-width="0.5" stroke="#bbbbbb" />
-  </Rule>
-  <Rule>
-    <Filter>([type] = 'wood')</Filter>
-    <PolygonPatternSymbolizer file="img/forest.svg" />
   </Rule>
   <Rule>
     <Filter>([type] = 'university')</Filter>
@@ -75,11 +81,11 @@
     <PolygonSymbolizer fill="#fcfcf4" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'scrub')</Filter>
+    <Filter>([type] = 'heath')</Filter>
     <PolygonPatternSymbolizer file="img/heath.svg" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'heath')</Filter>
+    <Filter>([type] = 'scrub')</Filter>
     <PolygonPatternSymbolizer file="img/heath.svg" />
   </Rule>
   <Rule>
@@ -120,9 +126,16 @@
     <PolygonSymbolizer fill="#fcfcf4" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'forest')</Filter>
+    <Filter>([type] = 'wood')</Filter>
+    <PolygonSymbolizer fill="#acefc7" />
+    <LineSymbolizer stroke-width="0.2" stroke="#111111" />
     <PolygonPatternSymbolizer file="img/forest.svg" />
-    <LineSymbolizer stroke-width="0.2" stroke="#444444" />
+  </Rule>
+  <Rule>
+    <Filter>([type] = 'forest')</Filter>
+    <PolygonSymbolizer fill="#acefc7" />
+    <LineSymbolizer stroke-width="0.2" stroke="#111111" />
+    <PolygonPatternSymbolizer file="img/forest.svg" />
   </Rule>
   <Rule>
     <Filter>([type] = 'common')</Filter>
@@ -168,6 +181,7 @@
 <Style name="extralandusages" filter-mode="first">
   <Rule>
     <Filter>([type] = 'christmas_trees')</Filter>
+    <PolygonSymbolizer fill="#acefc7" />
     <PolygonPatternSymbolizer file="img/christmas_trees.svg" />
     <LineSymbolizer stroke-width="0.5" stroke="#bbbbbb" />
   </Rule>
@@ -211,11 +225,11 @@
 
 <Style name="waterway" filter-mode="first">
   <Rule>
-    <Filter>([type] = 'drain')</Filter>
+    <Filter>([type] = 'ditch')</Filter>
     <LineSymbolizer stroke-width="2" stroke="#7d7ded" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'ditch')</Filter>
+    <Filter>([type] = 'drain')</Filter>
     <LineSymbolizer stroke-width="2" stroke="#7d7ded" />
   </Rule>
   <Rule>
@@ -7648,7 +7662,7 @@ order by area desc) as landusages]]></Parameter>
 
 <Style name="bridge_symbol" filter-mode="first">
   <Rule>
-    <MarkersSymbolizer file="img/bridge.svg" height="16" transform="rotate([orientation])"/>
+    <MarkersSymbolizer file="img/bridge.svg" height="16" />
   </Rule>
 </Style>
 <Layer name="bridge_symbol"
@@ -7661,8 +7675,8 @@ order by area desc) as landusages]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
        <Parameter name="id"><![CDATA[bridge_symbol]]></Parameter>
        <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT geometry, type, bridge,
- CAST(90+degrees(ST_Azimuth(ST_StartPoint(osm_minorroads.geometry), ST_EndPoint(osm_minorroads.geometry))) AS VARCHAR(255)) AS orientation
+       <Parameter name="table"><![CDATA[( SELECT geometry, type, bridge, 
+ CAST(90+degrees(ST_Azimuth(ST_StartPoint(osm_minorroads.geometry), ST_EndPoint(osm_minorroads.geometry))) AS VARCHAR(255)) AS orientation 
  FROM osm_minorroads WHERE bridge = 1 AND type IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway')) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
@@ -7798,7 +7812,7 @@ order by area desc) as landusages]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
        <Parameter name="id"><![CDATA[point_features]]></Parameter>
        <Parameter name="srs"><![CDATA[null]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT geometry, type, tower_type, bus, name
+       <Parameter name="table"><![CDATA[( SELECT geometry, type, tower_type, bus, name 
   FROM osm_pointfeatures
 )  AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
@@ -7936,7 +7950,7 @@ order by area desc) as landusages]]></Parameter>
   SELECT 'building' AS type, name, area, 'building' AS stylegroup,
     ST_PointOnSurface(geometry) AS geometry
   FROM osm_buildings
-  WHERE name IS NOT NULL
+  WHERE name IS NOT NULL 
     AND geometry && !bbox!
   AND type IN (
       'industrial', 'school', 'university' )
@@ -7974,7 +7988,7 @@ order by area desc) as landusages]]></Parameter>
        <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
        <Parameter name="table"><![CDATA[( SELECT geometry, type, name
   FROM osm_waterways
-  WHERE type IN ('canal', 'river', 'stream')
+  WHERE type IN ('canal', 'river', 'stream') 
     AND name IS NOT NULL
 ) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
@@ -8000,9 +8014,9 @@ order by area desc) as landusages]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT geometry, type, name
-  FROM osm_transport_points
-  WHERE type IN ('station', 'level_crossing')
+       <Parameter name="table"><![CDATA[( SELECT geometry, type, name 
+  FROM osm_transport_points 
+  WHERE type IN ('station', 'level_crossing') 
 ) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>

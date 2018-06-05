@@ -28,10 +28,14 @@ Map { background-color: @land; }
   [type='college']       { polygon-fill: @school; }
   [type='commercial']    { polygon-fill: @industrial; }
   [type='common']        { polygon-fill: @park; }
-  [type='forest']        { polygon-pattern-file:url(img/forest.svg); line-width:0.2; line-color: @darkgray; }
-  [type='forest'] [leaf_type='mixed']  { polygon-fill: @green; polygon-pattern-file:url(img/forest.svg); line-width:0.3; line-color: @black; }
-  [type='forest'] [leaf_type='broadleaved']  { polygon-pattern-file:url(img/forest_bl.svg); line-width:0.3; line-color: @black; }
-  [type='forest'] [leaf_type='needleleaved']  { polygon-pattern-file:url(img/forest_nl.svg); line-width:0.3; line-color: @black; }
+  [type='forest'], [type='wood'] {
+      polygon-fill: @green;
+      line-width: 0.2;
+      line-color: @black;
+      polygon-pattern-file:url(img/forest.svg);
+      [leaf_type='broadleaved']  { polygon-pattern-file:url(img/forest_bl.svg);}
+      [leaf_type='needleleaved']  { polygon-pattern-file:url(img/forest_nl.svg);}
+  }
   [type='golf_course']   { polygon-fill: @sports; }
   [type='grass']         { polygon-pattern-file:url(img/meadow.svg); }
   [type='hospital']      { polygon-fill: @hospital; }
@@ -41,15 +45,13 @@ Map { background-color: @land; }
   [type='pedestrian']    { polygon-fill: @pedestrian_fill; }
   [type='pitch']         { polygon-fill: @sports; }
   [type='residential']   { polygon-fill: @residential; }
-  [type='heath']         { polygon-pattern-file:url(img/heath.svg) }
-  [type='scrub']         { polygon-pattern-file:url(img/heath.svg) }
+  [type='scrub'], [type='heath'] { polygon-pattern-file:url(img/heath.svg) }
   [type='sports_center'] { polygon-fill: @sports; }
   [type='stadium']       { polygon-fill: @sports; }
   [type='university']    { polygon-fill: @school; }
-  [type='wood']          { polygon-pattern-file:url(img/forest.svg) }
   [type='meadow']        { polygon-pattern-file:url(img/meadow.svg); line-width:0.5; line-color: @gray; }
   [type='farmland']      { polygon-fill: @agriculture; }
-  [type='orchard']       { polygon-pattern-file:url(img/orchard.svg); line-width:0.5; line-color: @gray; }
+  [type='orchard']       { polygon-fill: @green; polygon-pattern-file:url(img/orchard.svg); line-width:0.5; line-color: @gray; }
   [type='farmyard']      { line-color: @farmyard; }
   [type='school']        { polygon-fill: @school; }
 }
@@ -68,8 +70,9 @@ Map { background-color: @land; }
   }
 
 #extralandusages[type='christmas_trees'] {
+  polygon-fill: @green;
   polygon-pattern-file: url(img/christmas_trees.svg);
-  line-width:0.5;
+  line-width: 0.5;
   line-color: @gray;
 }
 
