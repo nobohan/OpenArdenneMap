@@ -372,7 +372,7 @@ Some useful commands for printing the map in a pdf format:
 
 # post SQL queries
 ```
-ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;
+psql -d osm -c 'ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;'
 ```
 
 # Carto CSS command not understood by carto but by Mapnik

@@ -422,6 +422,9 @@ extraLandusages = Polygons(
         'produce': (
             'christmas_trees',
         ),
+        'trees': (
+            'christmas_trees',
+        ),
     },
 )
 
