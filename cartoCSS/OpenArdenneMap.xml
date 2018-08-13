@@ -7767,12 +7767,12 @@ order by area desc) as landusages]]></Parameter>
     <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#111111" size="30" character-spacing="2" line-spacing="2" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" dy="-5" dx="12" allow-overlap="true" ><![CDATA['Pyl.']]></TextSymbolizer>
   </Rule>
   <Rule>
-    <Filter>([type] = 'archaeological_site')</Filter>
+    <Filter>([type] = 'ruins')</Filter>
     <MarkersSymbolizer file="img/ruins.svg" height="15" allow-overlap="true" />
     <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#111111" size="30" character-spacing="2" line-spacing="2" wrap-width="50" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" dy="-5" dx="12" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <Filter>([type] = 'ruins')</Filter>
+    <Filter>([type] = 'archaeological_site')</Filter>
     <MarkersSymbolizer file="img/ruins.svg" height="15" allow-overlap="true" />
     <TextSymbolizer fontset-name="fontset-0" placement="point" fill="#111111" size="30" character-spacing="2" line-spacing="2" wrap-width="50" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" dy="-5" dx="12" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
@@ -7815,6 +7815,28 @@ order by area desc) as landusages]]></Parameter>
        <Parameter name="table"><![CDATA[( SELECT geometry, type, tower_type, bus, name 
   FROM osm_pointfeatures
 )  AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="pitch" filter-mode="first">
+  <Rule>
+    <MarkersSymbolizer file="img/pitch.svg" height="60" />
+  </Rule>
+</Style>
+<Layer name="pitch"
+  status="on"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>pitch</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[osm]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
+       <Parameter name="id"><![CDATA[pitch]]></Parameter>
+       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+       <Parameter name="table"><![CDATA[(SELECT geometry, type, sport, 
+ CAST(90+degrees(ST_Azimuth(ST_StartPoint(osm_extralandusages.geometry), ST_EndPoint(osm_extralandusages.geometry))) AS VARCHAR(255)) AS orientation 
+ FROM osm_extralandusages WHERE type = 'pitch' ) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>

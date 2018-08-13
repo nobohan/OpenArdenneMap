@@ -194,7 +194,6 @@
         "table": "( SELECT geometry, type, bridge, \n CAST(90+degrees(ST_Azimuth(ST_StartPoint(osm_minorroads.geometry), ST_EndPoint(osm_minorroads.geometry))) AS VARCHAR(255)) AS orientation \n FROM osm_minorroads WHERE bridge = 1 AND type IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway')) AS data",
         "type": "postgis"
       },
-      "class": "",
       "geometry": "linestring",
       "id": "bridge_symbol",
       "name": "bridge_symbol",
@@ -246,9 +245,26 @@
         "type": "postgis"
       },
       "class": "",
-      "geometry": "linestring",
+      "geometry": "point",
       "id": "point_features",
       "name": "point_features",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osm",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "geometry",
+        "id": "pitch",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "(SELECT geometry, type, sport, \n CAST(90+degrees(ST_Azimuth(ST_StartPoint(osm_extralandusages.geometry), ST_EndPoint(osm_extralandusages.geometry))) AS VARCHAR(255)) AS orientation \n FROM osm_extralandusages WHERE type = 'pitch' ) AS data",
+        "type": "postgis"
+      },
+      "geometry": "point",
+      "id": "pitch",
+      "name": "pitch",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "status": "on"

@@ -98,3 +98,14 @@
         }
     }
 }
+
+
+/* ================================================================== */
+/* ROTATED PITCHES
+/* ================================================================== */
+
+#pitch {
+    marker-file: url(img/pitch.svg);
+    marker-height: 60;
+    /*marker-transform: rotate([orientation]);*/ /*Do not work with carto but with Mapnik*/
+}
