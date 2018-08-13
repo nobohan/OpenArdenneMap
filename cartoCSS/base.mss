@@ -105,13 +105,14 @@ Map { background-color: @land; }
 /* WATER WAYS
 /* ================================================================== */
 
+
 #waterway {
   line-color: @darkblue;
   [type='river']
    {
     line-cap: round;
     line-join: round;
-    line-width: 10;
+    line-width: 12;
   }
   [type='stream'], [type='canal'] {
     line-width: 4;
@@ -121,6 +122,12 @@ Map { background-color: @land; }
     line-width: 2;
   }
 }
+
+#waterway::top [type='river'] {
+  line-width: 8;
+  line-color: @water;
+}
+
 
 /* ================================================================== */
 /* ADMINISTRATIVE BOUNDARIES
