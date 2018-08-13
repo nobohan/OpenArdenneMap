@@ -374,7 +374,3 @@ Some useful commands for printing the map in a pdf format:
 ```
 psql -d osm -c 'ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;'
 ```
-
-# Carto CSS command not understood by carto but by Mapnik
-
-* <MarkersSymbolizer file="img/bridge.svg" height="14" transform="rotate([orientation])"/>

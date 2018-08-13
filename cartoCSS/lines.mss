@@ -203,7 +203,7 @@
 #bridge_symbol {
   marker-file: url(img/bridge.svg);
   marker-height: 16;
-  /*marker-transform: rotate([orientation]);*/ /*Do not work with carto but with Mapnik*/
+  marker-transform: rotate([orientation]);
 }
 
 /* ================================================================== */
