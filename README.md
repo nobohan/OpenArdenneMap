@@ -7,6 +7,8 @@ OpenArdenneMap
 
 &nbsp;
 
+Un exemple peut être téléchargé [ici](http://www.nobohan.be/docs/OpenArdenneMap_Rulles_1_20000e.pdf). 
+
 ::: ENGLISH BELOW :::
 
 # A propos
