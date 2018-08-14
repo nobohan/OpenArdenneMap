@@ -92,7 +92,6 @@
   text-face-name:@sans;
   text-placement:point;
   text-fill:@locality_text;
-  text-size:9;
   text-halo-fill:@locality_halo;
   text-halo-radius:1;
   text-wrap-width: 30;
@@ -109,7 +108,6 @@
 #area_label {
   text-name: "[name]";
   text-size: @text_size_s;
-  text-wrap-width: 100;
   text-character-spacing: 1;
   text-halo-radius: 1.5;
   text-face-name:@sans;
@@ -152,7 +150,15 @@
     text-dy: -20;
     text-dx: -15;
     text-allow-overlap: false;
-    /*text-repeat-distance: 60;*/ /*this option does not work in carto but in Mapnik XML*/
+    text-repeat-distance: 60; /*this option does not work in carto but in Mapnik XML*/
+  }
+  [type='forest'] {
+    text-size: @text_size_l;
+    text-fill: lighten(@black, 40%);
+    text-transform: uppercase;
+    text-character-spacing: 5;
+    text-line-spacing: 3;
+    text-wrap-width: 200;
   }
 }
 

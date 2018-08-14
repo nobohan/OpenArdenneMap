@@ -7387,11 +7387,7 @@ order by area desc) as landusages]]></Parameter>
   <Style filter-mode="first" name="place-small">
     <Rule>
       <Filter><![CDATA[([type] = 'locality')]]></Filter>
-      <TextSymbolizer fill="#111111" fontset-name="fontset-0" halo-fill="#fcfcf4" halo-radius="1" line-spacing="1" placement="point" size="9" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
-    </Rule>
-    <Rule>
-      <Filter><![CDATA[([type] = 'suburb')]]></Filter>
-      <TextSymbolizer character-spacing="2" dy="-50" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="30" wrap-width="120"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer fill="#111111" fontset-name="fontset-0" halo-fill="#fcfcf4" halo-radius="1" line-spacing="1" placement="point" size="40" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'isolated_dwelling')]]></Filter>
@@ -7403,6 +7399,10 @@ order by area desc) as landusages]]></Parameter>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'hamlet')]]></Filter>
+      <TextSymbolizer character-spacing="2" dy="-50" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="30" wrap-width="120"><![CDATA[[name]]]></TextSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'suburb')]]></Filter>
       <TextSymbolizer character-spacing="2" dy="-50" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="30" wrap-width="120"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
@@ -7443,39 +7443,43 @@ order by area desc) as landusages]]></Parameter>
   </Layer>
   <Style filter-mode="first" name="area_label">
     <Rule>
+      <Filter><![CDATA[([type] = 'forest')]]></Filter>
+      <TextSymbolizer character-spacing="5" fill="#777777" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="1.5" line-spacing="3" size="60" text-transform="uppercase" wrap-width="200"><![CDATA[[name]]]></TextSymbolizer>
+    </Rule>
+    <Rule>
       <Filter><![CDATA[([type] = 'farmyard')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1" dx="-15" dy="-20" fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="1.5" size="30" wrap-width="100"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1" dx="-15" dy="-20" fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="1.5" repeat-distance="60" size="30" wrap-width="30"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'school')]]></Filter>
-      <TextSymbolizer character-spacing="1" dx="-20" dy="-35" fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="1.5" size="30" wrap-width="100"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" dx="-20" dy="-35" fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="1.5" size="30" wrap-width="30"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'water')]]></Filter>
-      <TextSymbolizer character-spacing="1" fill="#7d7ded" fontset-name="fontset-0" halo-fill="#ececfa" halo-radius="3" size="30" wrap-width="100"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" fill="#7d7ded" fontset-name="fontset-0" halo-fill="#ececfa" halo-radius="3" size="30" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'university')]]></Filter>
-      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#2b2b2b" halo-radius="1.5" size="30" wrap-width="100"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#2b2b2b" halo-radius="1.5" size="30" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'college')]]></Filter>
-      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#2b2b2b" halo-radius="1.5" size="30" wrap-width="100"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#2b2b2b" halo-radius="1.5" size="30" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'hospital')]]></Filter>
-      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#2b2b2b" halo-radius="1.5" size="30" wrap-width="100"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#2b2b2b" halo-radius="1.5" size="30" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'golf_course')]]></Filter>
-      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="1.5" size="30" wrap-width="100"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="1.5" size="30" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'park')]]></Filter>
-      <TextSymbolizer character-spacing="1" face-name="DejaVu Sans Oblique" fill="#acefc7" halo-fill="#ffffff" halo-radius="1.5" size="30" wrap-width="100"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" face-name="DejaVu Sans Oblique" fill="#acefc7" halo-fill="#ffffff" halo-radius="1.5" size="30" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
-      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="1.5" size="30" wrap-width="100"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="1.5" size="30" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
   </Style>
   <Layer name="area_label" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
@@ -7491,7 +7495,7 @@ order by area desc) as landusages]]></Parameter>
   FROM osm_landusages
   WHERE geometry && !bbox!
     AND type IN (
-      'industrial', 'farmyard', 'school', 'university' )
+      'industrial', 'farmyard', 'school', 'university', 'forest' )
     AND geometry && !bbox!
     AND ST_IsValid(geometry)
 
