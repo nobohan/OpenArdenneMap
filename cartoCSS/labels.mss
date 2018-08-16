@@ -63,7 +63,7 @@
   text-size:@text_size_l;
   text-character-spacing: 10;
   text-line-spacing: 6;
-  text-allow-overlap: true; /* always render the label */
+  text-allow-overlap: true;
   text-dy: 200;
 
 }
@@ -107,10 +107,10 @@
 
 #area_label {
   text-name: "[name]";
+  text-face-name:@sans;
   text-size: @text_size_s;
   text-character-spacing: 1;
   text-halo-radius: 1.5;
-  text-face-name:@sans;
   text-wrap-width:30;
   text-fill: @black;
   text-halo-fill: #fff;
@@ -150,15 +150,17 @@
     text-dy: -20;
     text-dx: -15;
     text-allow-overlap: false;
-    text-repeat-distance: 60; /*this option does not work in carto but in Mapnik XML*/
+    text-repeat-distance: 60;
   }
   [type='forest'] {
+    text-face-name: @sans_lt_italic;
     text-size: @text_size_l;
-    text-fill: lighten(@black, 40%);
+    text-fill: lighten(@black, 10%);
     text-transform: uppercase;
-    text-character-spacing: 5;
-    text-line-spacing: 3;
+    text-character-spacing: 80;
+    text-line-spacing: 150;
     text-wrap-width: 200;
+    text-allow-overlap: true;
   }
 }
 
@@ -176,7 +178,7 @@
     text-halo-fill: lighten(@water, 10%);
     text-halo-radius: 3;
     text-placement: line;
-    text-min-distance: 1200;
+    text-repeat-distance: 1200;
     text-size: @text_size_m;
     text-spacing: 300;
 }
@@ -197,9 +199,9 @@
   text-fill:@road_text;
   text-halo-fill:@road_halo;
   text-halo-radius:1;
-  text-min-distance:60;
+  text-repeat-distance:60;
   text-size:10;
-  text-min-distance:100;
+  text-repeat-distance:100;
 }
 
 #mainroad_label[type='primary'],
@@ -211,7 +213,7 @@
   text-fill:@road_text;
   text-halo-fill:@road_halo;
   text-halo-radius:1;
-  text-min-distance:60;
+  text-repeat-distance:60;
   text-size:11;
 }
 
@@ -223,7 +225,7 @@
   text-fill:@road_text;
   text-halo-fill:@road_halo;
   text-halo-radius:1;
-  text-min-distance:60;
+  text-repeat-distance:60;
   text-size:11;
 }
 

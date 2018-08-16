@@ -5,9 +5,10 @@ OpenArdenneMap
 
 ![map](img/openardennemap.png)
 
-&nbsp;
 
-Un exemple peut être téléchargé [ici](http://www.nobohan.be/docs/OpenArdenneMap_Rulles_1_20000e.pdf). 
+Un exemple peut être téléchargé [ici](http://www.nobohan.be/docs/OpenArdenneMap_Rulles_1_20000e.pdf).
+
+&nbsp;
 
 ::: ENGLISH BELOW :::
 

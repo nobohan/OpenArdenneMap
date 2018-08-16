@@ -7444,7 +7444,7 @@ order by area desc) as landusages]]></Parameter>
   <Style filter-mode="first" name="area_label">
     <Rule>
       <Filter><![CDATA[([type] = 'forest')]]></Filter>
-      <TextSymbolizer character-spacing="5" fill="#777777" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="1.5" line-spacing="3" size="60" text-transform="uppercase" wrap-width="200"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="80" face-name="DejaVu Sans Oblique" fill="#2b2b2b" halo-fill="#ffffff" halo-radius="1.5" line-spacing="150" size="60" text-transform="uppercase" wrap-width="200"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmyard')]]></Filter>
@@ -7528,15 +7528,15 @@ order by area desc) as landusages]]></Parameter>
   <Style filter-mode="first" name="waterway_label">
     <Rule>
       <Filter><![CDATA[([type] = 'stream')]]></Filter>
-      <TextSymbolizer fill="#7d7ded" fontset-name="fontset-1" halo-fill="#ececfa" halo-radius="3" minimum-distance="1200" placement="line" size="30" spacing="300"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer fill="#7d7ded" fontset-name="fontset-1" halo-fill="#ececfa" halo-radius="3" placement="line" repeat-distance="1200" size="30" spacing="300"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'canal')]]></Filter>
-      <TextSymbolizer fill="#7d7ded" fontset-name="fontset-1" halo-fill="#ececfa" halo-radius="3" minimum-distance="1200" placement="line" size="40" spacing="300"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer fill="#7d7ded" fontset-name="fontset-1" halo-fill="#ececfa" halo-radius="3" placement="line" repeat-distance="1200" size="40" spacing="300"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'river')]]></Filter>
-      <TextSymbolizer fill="#7d7ded" fontset-name="fontset-1" halo-fill="#ececfa" halo-radius="3" minimum-distance="1200" placement="line" size="40" spacing="300"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer fill="#7d7ded" fontset-name="fontset-1" halo-fill="#ececfa" halo-radius="3" placement="line" repeat-distance="1200" size="40" spacing="300"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
   </Style>
   <Layer name="waterway_label" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
