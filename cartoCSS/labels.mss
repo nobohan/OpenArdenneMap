@@ -141,14 +141,14 @@
   [type='school'] {
     text-name: "'Éc.'";
     text-size: @text_size_s;
-    text-dy: -35;
-    text-dx: -20;
+    text-dy: -20;
+    /*text-dx: -20;*/
   }
   [type='farmyard'] {
     text-name: "'Fme'";
     text-size: @text_size_s;
     text-dy: -20;
-    text-dx: -15;
+    /*text-dx: -15;*/
     text-allow-overlap: false;
     text-repeat-distance: 60;
   }
@@ -162,6 +162,7 @@
     text-line-spacing: 150;
     text-wrap-width: 200;
     text-allow-overlap: true;
+    text-name: "";
   }
 }
 

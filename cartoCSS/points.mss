@@ -33,8 +33,8 @@
             text-line-spacing: 2;
             text-halo-fill:@other_halo;
             text-halo-radius:1;
-            text-dy: -5;
-            text-dx: 12;
+            /*text-dy: -5;
+            text-dx: 12;*/
             text-allow-overlap: true;
         }
     }
@@ -92,7 +92,7 @@
             text-line-spacing: 2;
             text-halo-fill:@other_halo;
             text-halo-radius:1;
-            text-dy: 5;
+            text-dy: -5;
             text-dx: 0;
             text-allow-overlap: false;
         }
