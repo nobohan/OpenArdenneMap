@@ -17,14 +17,17 @@
 /* ================================================================== */
 
 #contour {
-  text-name:'[level]';
-  text-face-name:@sans;
-  text-placement:line;
-  text-size: @text_size_s;
-  text-wrap-width: 60;
-  text-line-spacing: 1;
-  text-fill: @contour;
-  text-halo-fill: #ffffff;
+    [main="yes"] {
+        text-name:'[level]';
+        text-face-name:@sans;
+        text-placement:line;
+        text-size: @text_size_s;
+        text-wrap-width: 60;
+        text-line-spacing: 1;
+        text-fill: @contour;
+        text-halo-fill: #ffffff;
+        text-halo-radius:2;
+    }
 }
 
 

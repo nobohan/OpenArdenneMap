@@ -23,7 +23,7 @@ Map { font-directory: url(./fonts); }
 /* set up font sets for various weights and styles */
 @sans_lt:       "Open Sans Regular", "DejaVu Sans Book";
 @sans_lt_italic:    "DejaVu Sans Oblique";
-@sans:          "Open Sans Semibold", "DejaVu Sans Book";
+@sans:          "Alfphabet III", "Open Sans Semibold", "DejaVu Sans Book";
 @sans_italic:   "Open Sans Semibold Italic", "DejaVu Sans Oblique";
 @sans_bold:  "Open Sans Bold", "DejaVu Sans Bold";
 @sans_bold_italic:  "Open Sans Bold Italic","DejaVu Sans Bold Oblique", "DejaVu Sans Oblique";
@@ -38,6 +38,7 @@ Map { font-directory: url(./fonts); }
 /* BASE COLORS
 /* ================================================================== */
 
+@purewhite:         #ffffff;
 @white:             #fcfcf4;
 @black:             #111111;
 @darkgray:          #444444;

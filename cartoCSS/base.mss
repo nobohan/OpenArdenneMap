@@ -7,14 +7,15 @@
  *
  */
 
-Map { background-color: @land; }
+Map { background-color: @purewhite; }
 
 /* ================================================================== */
 /* CONTOUR
 /* ================================================================== */
 
-#contour {
+#contour  {
   line-color: @contour;
+  [main="yes"] {line-width: 5;}
 }
 
 
