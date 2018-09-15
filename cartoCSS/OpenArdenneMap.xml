@@ -206,7 +206,7 @@
     <StyleName><![CDATA[contour]]></StyleName>
     <Datasource>
       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
-      <Parameter name="file"><![CDATA[../contour/contour.shp]]></Parameter>
+      <Parameter name="file"><![CDATA[../contour/contour_3857.shp]]></Parameter>
       <Parameter name="id"><![CDATA[contour]]></Parameter>
       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
       <Parameter name="type"><![CDATA[shape]]></Parameter>
@@ -220,27 +220,24 @@
   </Style>
   <Style filter-mode="first" name="waterway">
     <Rule>
-      <Filter><![CDATA[([type] = 'ditch')]]></Filter>
-      <LineSymbolizer stroke="#7d7ded" stroke-width="2" />
-    </Rule>
-    <Rule>
       <Filter><![CDATA[([type] = 'drain')]]></Filter>
       <LineSymbolizer stroke="#7d7ded" stroke-width="2" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'stream')]]></Filter>
-      <LineSymbolizer stroke="#7d7ded" stroke-width="4" />
+      <Filter><![CDATA[([type] = 'ditch')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="2" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'canal')]]></Filter>
       <LineSymbolizer stroke="#7d7ded" stroke-width="4" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'river')]]></Filter>
-      <LineSymbolizer stroke="#7d7ded" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" />
+      <Filter><![CDATA[([type] = 'stream')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="4" />
     </Rule>
     <Rule>
-      <LineSymbolizer stroke="#7d7ded" />
+      <Filter><![CDATA[([type] = 'river')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" />
     </Rule>
   </Style>
   <Layer name="waterway" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
@@ -7444,7 +7441,7 @@ order by area desc) as landusages]]></Parameter>
   <Style filter-mode="first" name="area_label">
     <Rule>
       <Filter><![CDATA[([type] = 'forest')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="80" face-name="DejaVu Sans Oblique" fill="#2b2b2b" halo-fill="#ffffff" halo-radius="1.5" line-spacing="150" size="60" text-transform="uppercase" wrap-width="200"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="80" face-name="DejaVu Sans Oblique" fill="#2b2b2b" halo-fill="#ffffff" halo-radius="1.5" line-spacing="150" size="100/[area]*[area]" text-transform="uppercase" wrap-width="200"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmyard')]]></Filter>
@@ -7577,6 +7574,15 @@ order by area desc) as landusages]]></Parameter>
   WHERE type IN ('station', 'level_crossing') 
 ) AS data]]></Parameter>
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+  <Layer name="gr" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
+    <Datasource>
+      <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+      <Parameter name="file"><![CDATA[../../GR14/relation2929186_3857.geojson]]></Parameter>
+      <Parameter name="id"><![CDATA[gr]]></Parameter>
+      <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+      <Parameter name="type"><![CDATA[geojson]]></Parameter>
     </Datasource>
   </Layer>
 </Map>

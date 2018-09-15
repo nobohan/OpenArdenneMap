@@ -166,7 +166,7 @@ Bien sûr, outre les additions, le style de la carte a été fortement modifié.
 ## Génération des courbes de niveaux
 
 Les courbes de niveaux ont été générées depuis un modèle numérique de terrain (raster) en utilisant l'outil GRASS `r.contour.step` dans QGIS.
-L'incrément entre les courbes a été fixé à 5 m. Le nombre minimulm de points pour avoir une courbe a été fixé à 20. Cet outil offre plus d'options que l'outil GDAL `gdal_contour`.
+L'incrément entre les courbes a été fixé à 5 m. Le nombre minimum de points pour avoir une courbe a été fixé à 20. Cet outil offre plus d'options que l'outil GDAL `gdal_contour`.
 
 La couche a ensuite été post-processée pour obtenir des géométries plus courbes. L'outil `v.generalize.smooth` a été utilisé, avec l'algorithme "snakes" (paramètres par défaut).
 
@@ -369,9 +369,9 @@ Some useful commands for printing the map in a pdf format:
 * font choice
 * palettes
 * feature: point of view
-* orientate features like bridge along the line
 * several styles
 * legend
+* recette courbes de niveaux
 
 # post SQL queries
 ```

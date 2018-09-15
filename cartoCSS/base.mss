@@ -106,21 +106,21 @@ Map { background-color: @land; }
 /* ================================================================== */
 
 
-#waterway {
-  line-color: @darkblue;
-  [type='river']
-   {
-    line-cap: round;
-    line-join: round;
-    line-width: 12;
-  }
-  [type='stream'], [type='canal'] {
-    line-width: 4;
-  }
-  [type='ditch'],
-  [type='drain'] {
-    line-width: 2;
-  }
+#waterway { [type='river'], [type='stream'], [type='canal'], [type='ditch'], [type='drain'] {
+    line-color: @darkblue;
+    [type='river']
+        {
+        line-cap: round;
+        line-join: round;
+        line-width: 12;
+        }
+    [type='stream'], [type='canal'] {
+        line-width: 4;
+        }
+    [type='ditch'], [type='drain'] {
+        line-width: 2;
+        }
+    }
 }
 
 #waterway::top [type='river'] {

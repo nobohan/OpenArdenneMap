@@ -154,7 +154,8 @@
   }
   [type='forest'] {
     text-face-name: @sans_lt_italic;
-    text-size: @text_size_l;
+    /*text-size: @text_size_l; /*[area]/100000*/
+    text-size: 100/([area]*[area]);
     text-fill: lighten(@black, 10%);
     text-transform: uppercase;
     text-character-spacing: 80;
