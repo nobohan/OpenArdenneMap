@@ -348,6 +348,13 @@ Of course, the style of the map was modified, with some inspiration taken from O
 ## Contour lines generation
 Contour lines were generated from a digital elevation model (raster) using the GRASS tool `r.contour.step` in QGIS. Increment between contour levels was set to 5 m. Minimum number of points for a contour line was set to 20. This tool offers more options that the default QGIS tool from gdal (`gdal_contour`).
 
+A field was added in the contour line shp to define some of the contour as "main" lines, in order to increase the lisibility of the contour lines. Here, I put every lines with a altitude (the "level" field) equal to a multiple of 20 as a "main" line.
+
+This was computed using the following formula in the QGIS field calculator:
+```
+if( "level" % 20 = 0, 'yes', NULL)
+```
+
 ## Contour lines representation
 Contour lines should be post-processed in order to have smooth geometries. The GRASS tool `v.generalize.smooth` was used, with the "snakes" algorithm (with default parameters).
 
