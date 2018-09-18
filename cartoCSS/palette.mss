@@ -55,16 +55,16 @@ Map { font-directory: url(./fonts); }
 /* LANDUSE & LANDCOVER COLORS
 /* ================================================================== */
 
-@land:              @white;
+@land:              @purewhite;
 @water:             @blue;
 @grass:             @white;
 @park:              @white;
 @cemetery:          @white;
 @wooded:            @green;
-@agriculture:       @white;
+@agriculture:       @purewhite;
 @farmyard:          @white;
 @building:          @darkgray;
-@hospital:          @black;
+@hospital:          @white;
 @school:            @white;
 @sports:            @white;
 @residential:       @white;

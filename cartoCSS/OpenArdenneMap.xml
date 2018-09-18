@@ -60,7 +60,7 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland')]]></Filter>
-      <PolygonSymbolizer fill="#fcfcf4" />
+      <PolygonSymbolizer fill="#ffffff" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'meadow')]]></Filter>
@@ -114,7 +114,7 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'hospital')]]></Filter>
-      <PolygonSymbolizer fill="#111111" />
+      <PolygonSymbolizer fill="#fcfcf4" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'grass')]]></Filter>
@@ -1769,11 +1769,11 @@ order by area desc) as landusages]]></Parameter>
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '2_line') and ([stylegroup] = 'railway')]]></Filter>
-      <LineSymbolizer stroke="#fcfcf4" stroke-linejoin="round" stroke-width="3" />
+      <LineSymbolizer stroke="#ffffff" stroke-linejoin="round" stroke-width="3" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '2_line') and ([stylegroup] = 'noauto')]]></Filter>
-      <LineSymbolizer stroke="#fcfcf4" stroke-linejoin="round" stroke-width="0" />
+      <LineSymbolizer stroke="#ffffff" stroke-linejoin="round" stroke-width="0" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([stylegroup] = 'service') and ([tunnel] = 1)]]></Filter>
@@ -6242,11 +6242,11 @@ order by area desc) as landusages]]></Parameter>
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '2_line') and ([stylegroup] = 'railway')]]></Filter>
-      <LineSymbolizer stroke="#fcfcf4" stroke-linejoin="round" stroke-width="3" />
+      <LineSymbolizer stroke="#ffffff" stroke-linejoin="round" stroke-width="3" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '2_line') and ([stylegroup] = 'noauto')]]></Filter>
-      <LineSymbolizer stroke="#fcfcf4" stroke-linejoin="round" stroke-width="0" />
+      <LineSymbolizer stroke="#ffffff" stroke-linejoin="round" stroke-width="0" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([stylegroup] = 'service') and ([tunnel] = 1)]]></Filter>
@@ -7149,7 +7149,7 @@ order by area desc) as landusages]]></Parameter>
   <Style filter-mode="first" name="place-small">
     <Rule>
       <Filter><![CDATA[([type] = 'locality')]]></Filter>
-      <TextSymbolizer fill="#111111" fontset-name="fontset-0" halo-fill="#fcfcf4" halo-radius="1" line-spacing="1" placement="point" size="40" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="1" line-spacing="1" placement="point" size="40" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'isolated_dwelling')]]></Filter>
@@ -7222,15 +7222,15 @@ order by area desc) as landusages]]></Parameter>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'university')]]></Filter>
-      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#2b2b2b" halo-radius="1.5" size="30" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="1.5" size="30" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'college')]]></Filter>
-      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#2b2b2b" halo-radius="1.5" size="30" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="1.5" size="30" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'hospital')]]></Filter>
-      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#2b2b2b" halo-radius="1.5" size="30" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="1.5" size="30" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'golf_course')]]></Filter>
