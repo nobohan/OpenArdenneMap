@@ -167,12 +167,23 @@ Bien sûr, outre les additions, le style de la carte a été fortement modifié.
 
 # Courbes de niveaux
 
-## Génération des courbes de niveaux
+## Préparation du MNT
+Avant la génération des courbes de niveaux, le modèle numérique de terrain (MNT) a été filtré et les cours d'eau connu y ont été enfoncés. La chaine de traitement suivante a été faite avec le logiciel libre Whitebox GAT (https://www.uoguelph.ca/~hydrogeo/Whitebox/):
+1) Filtre "denoise";
+2) Gravage des cours d'eau avec l'outil "Burn Streams" avec une profondeur d'enfoncement de 10 m et un decay de 0.7;
+3) Filtre de moyenne à 5 m;
+4) Solutionner des dépressions résiduelles du MNT avec l'outil "Breach depressions" (longueur max. de 50 m)
 
-Les courbes de niveaux ont été générées depuis un modèle numérique de terrain (raster) en utilisant l'outil GRASS `r.contour.step` dans QGIS.
-L'incrément entre les courbes a été fixé à 5 m. Le nombre minimum de points pour avoir une courbe a été fixé à 20. Cet outil offre plus d'options que l'outil GDAL `gdal_contour`.
+
+## Génération des courbes de niveaux
+Les courbes de niveaux ont été générées depuis le MNT filtré en utilisant l'outil GRASS `r.contour.step` dans QGIS. L'incrément entre les courbes a été fixé à 5 m. Le nombre minimum de points pour avoir une courbe a été fixé à 20. Cet outil offre plus d'options que l'outil GDAL `gdal_contour`.
 
 La couche a ensuite été post-processée pour obtenir des géométries plus courbes. L'outil `v.generalize.smooth` a été utilisé, avec l'algorithme "snakes" (paramètres par défaut).
+
+Enfin, un champ a été ajouté dans le shp des courbes de niveaux pour définir certaines lignes comme lignes maitresses, afin d'augmenter la lisibilté des lignes de contour. Ici, toutes`les lignes avec une altitude égale à un multiple de 20 m a été définie comme maitresse. Cela a été calculé dans la calculette de champ de QGIS avec la formule suivante:
+```
+if( "level" % 20 = 0, 'yes', NULL)
+```
 
 ## Représentation des courbes de niveaux
 
@@ -354,22 +365,26 @@ Of course, the style of the map was modified, with some inspiration taken from O
 
 # Contour lines
 
+## DEM pre-processing
+Before the contour lines generation, the digital elevation model (DEM) was filtered and known water streams were burned into the DEM. The following treatment chain was followed using the free and open source software Whitebox GAT (https://www.uoguelph.ca/~hydrogeo/Whitebox/):
+1) Filter "denoise";
+2) Burn the water ways into the DEM by using the "Burn Streams" tool with a burning depth of 10 m and a decay of 0.7;
+3) Mean filter with 5 m of window size;
+4) Repair DEM depressions with the "Breach depressions" tool. (max. length of 50 m)
+
 ## Contour lines generation
-Contour lines were generated from a digital elevation model (raster) using the GRASS tool `r.contour.step` in QGIS. Increment between contour levels was set to 5 m. Minimum number of points for a contour line was set to 20. This tool offers more options that the default QGIS tool from gdal (`gdal_contour`).
+Contour lines were then generated from the filtered DEM using the GRASS tool `r.contour.step` in QGIS. Increment between contour levels was set to 5 m. Minimum number of points for a contour line was set to 20. This tool offers more options that the default QGIS tool from gdal (`gdal_contour`).
 
-A field was added in the contour line shp to define some of the contour as "main" lines, in order to increase the lisibility of the contour lines. Here, I put every lines with a altitude (the "level" field) equal to a multiple of 20 as a "main" line.
+Contour lines should be post-processed in order to have smooth geometries. The GRASS tool `v.generalize.smooth` was used, with the "snakes" algorithm (with default parameters).
 
-This was computed using the following formula in the QGIS field calculator:
+A field was added in the contour line shp to define some of the contour as "main" lines, in order to increase the readability of the contour lines. Here, I put every lines with a altitude (the "level" field) equal to a multiple of 20 as a "main" line. This was computed using the following formula in the QGIS field calculator:
 ```
 if( "level" % 20 = 0, 'yes', NULL)
 ```
 
 ## Contour lines representation
-Contour lines should be post-processed in order to have smooth geometries. The GRASS tool `v.generalize.smooth` was used, with the "snakes" algorithm (with default parameters).
 
-Contour lines were saved as shp and loaded as the second layer (from bottom) in project.mml.
-
-Contour labels are defined in `labels.mss`.
+Contour lines were saved as shp and loaded as the second layer (from bottom) in project.mml. Contour labels are defined in `labels.mss`.
 
 ## 5) printing
 Some useful commands for printing the map in a pdf format:
