@@ -4,11 +4,11 @@
  * - area labels
  * - waterway labels
  */
-
-@text_size_l : 60;
-@text_size_m : 40;
-@text_size_s : 30;
-@text_size_xs : 20;
+@supra_text_size_alfphabet: 10;
+@text_size_l : 60 + @supra_text_size_alfphabet;
+@text_size_m : 40 + @supra_text_size_alfphabet;
+@text_size_s : 30 + @supra_text_size_alfphabet;
+@text_size_xs : 20 + @supra_text_size_alfphabet;
 
 /* Font sets are defined in palette.mss */
 
@@ -178,7 +178,7 @@
 #waterway_label[type='canal'],
 #waterway_label[type='stream'] {
     text-name: '[name]';
-    text-face-name: @sans_italic;
+    text-face-name: @sans;
     text-fill: @darkblue;
     text-halo-fill: lighten(@water, 10%);
     text-halo-radius: 3;
