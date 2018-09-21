@@ -104,8 +104,10 @@
 /* ROTATED PITCHES
 /* ================================================================== */
 
-#pitch {
+#pitch [sport='soccer']{
+    [orientation != '']{
     marker-file: url(img/pitch.svg);
     marker-height: 60;
-    /*marker-transform: rotate([orientation]);*/ /*Do not work with carto but with Mapnik*/
+    marker-transform: rotate([orientation]);
+    }
 }
