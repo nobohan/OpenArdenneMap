@@ -57,20 +57,20 @@ Map { font-directory: url(./fonts); }
 
 @land:              @purewhite;
 @water:             @blue;
-@grass:             @white;
-@park:              @white;
-@cemetery:          @white;
+@grass:             @purewhite;
+@park:              @purewhite;
+@cemetery:          @purewhite;
 @wooded:            @green;
 @agriculture:       @purewhite;
-@farmyard:          @white;
+@farmyard:          @purewhite;
 @building:          @darkgray;
-@hospital:          @white;
-@school:            @white;
-@sports:            @white;
-@residential:       @white;
-@commercial:        @white;
-@industrial:        @white;
-@parking:           @white;
+@hospital:          @purewhite;
+@school:            @purewhite;
+@sports:            @purewhite;
+@residential:       @purewhite;
+@commercial:        @purewhite;
+@industrial:        @purewhite;
+@parking:           @purewhite;
 
 /* ================================================================== */
 /* ROAD COLORS

@@ -61,6 +61,10 @@ Le tout:
 
 `imposm --proj=EPSG:3857 --read extract.osm -m imposm-mapping.py --overwrite-cache && imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables && imposm -d osm --remove-backup-tables`
 
+Post-traitement de certaines tables:
+```
+psql -d osm -c 'ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;'
+```
 
 # Changements apportés à OSMBright
 
@@ -241,6 +245,11 @@ Instead of processing the whole belgium-latest.osm.bz2 file, you can download di
 All together:
 
 `imposm --proj=EPSG:3857 --read extract.osm -m imposm-mapping.py && imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables && imposm -d osm --remove-backup-tables`
+
+Post-processing of some tables:
+```
+psql -d osm -c 'ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;'
+```
 
 # Changes compared to OSMBright
 
