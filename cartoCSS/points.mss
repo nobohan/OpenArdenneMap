@@ -106,8 +106,8 @@
 
 #pitch [sport='soccer']{
     [orientation != '']{
-    marker-file: url(img/pitch.svg);
-    marker-height: 60;
+    marker-file: url(img/soccer.svg);
+    marker-height: 40;
     marker-transform: rotate([orientation]);
     }
 }
