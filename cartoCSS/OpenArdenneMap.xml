@@ -7318,22 +7318,22 @@ order by area desc) as landusages]]></Parameter>
       <TextSymbolizer allow-overlap="false" character-spacing="2" dx="0" dy="5" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="20"><![CDATA['Bus']]></TextSymbolizer>
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'tower') and ([tower_type] = 'communication')]]></Filter>
-      <MarkersSymbolizer file="img/tower.svg" height="4" />
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="12" dy="-5" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="30"><![CDATA['Pyl.']]></TextSymbolizer>
-    </Rule>
-    <Rule>
       <Filter><![CDATA[([type] = 'mast') and ([tower_type] = 'communication')]]></Filter>
       <MarkersSymbolizer file="img/tower.svg" height="4" />
       <TextSymbolizer allow-overlap="true" character-spacing="2" dx="12" dy="-5" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="30"><![CDATA['Pyl.']]></TextSymbolizer>
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'ruins')]]></Filter>
+      <Filter><![CDATA[([type] = 'tower') and ([tower_type] = 'communication')]]></Filter>
+      <MarkersSymbolizer file="img/tower.svg" height="4" />
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="12" dy="-5" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="30"><![CDATA['Pyl.']]></TextSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'archaeological_site')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="img/ruins.svg" height="15" />
       <TextSymbolizer character-spacing="2" dx="12" dy="-5" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="30" wrap-width="50"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'archaeological_site')]]></Filter>
+      <Filter><![CDATA[([type] = 'ruins')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="img/ruins.svg" height="15" />
       <TextSymbolizer character-spacing="2" dx="12" dy="-5" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="30" wrap-width="50"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
@@ -7379,7 +7379,11 @@ order by area desc) as landusages]]></Parameter>
   </Layer>
   <Style filter-mode="first" name="pitch">
     <Rule>
-      <Filter><![CDATA[([sport] = 'soccer') and ([orientation] != '')]]></Filter>
+      <Filter><![CDATA[([orientation] != '') and ([sport] = 'tennis') and ([length] > 10)]]></Filter>
+      <MarkersSymbolizer file="img/tennis.svg" height="20" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([orientation] != '') and ([sport] = 'soccer') and ([length] > 100)]]></Filter>
       <MarkersSymbolizer file="img/soccer.svg" height="40" transform="rotate([orientation])" />
     </Rule>
   </Style>
@@ -7395,9 +7399,15 @@ order by area desc) as landusages]]></Parameter>
  CASE WHEN (ST_NPoints(l.geometry) >= 5) THEN 
  (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing(l.geometry),1), ST_PointN(ST_ExteriorRing(l.geometry),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing(l.geometry),1), ST_PointN(ST_ExteriorRing(l.geometry),3))) 
    THEN CAST(90+degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing(l.geometry),1), ST_PointN(ST_ExteriorRing(l.geometry),2))) AS VARCHAR(255))
-  ELSE CAST(90+degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing(l.geometry),1), ST_PointN(ST_ExteriorRing(l.geometry),2))) AS VARCHAR(255)) 
- END) END AS orientation 
- FROM osm_extralandusages AS l WHERE type = 'pitch' and sport = 'soccer' ) AS data]]></Parameter>
+  ELSE CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing(l.geometry),1), ST_PointN(ST_ExteriorRing(l.geometry),2))) AS VARCHAR(255)) 
+ END) END AS orientation, CASE WHEN (ST_NPoints(l.geometry) >= 5) THEN 
+ (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing(l.geometry),1), ST_PointN(ST_ExteriorRing(l.geometry),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing(l.geometry),1), ST_PointN(ST_ExteriorRing(l.geometry),3)))
+  THEN CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing(l.geometry),1), ST_PointN(ST_ExteriorRing(l.geometry),2)) AS INTEGER)
+  ELSE CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing(l.geometry),1),
+ ST_PointN(ST_ExteriorRing(l.geometry),3)) AS INTEGER)
+ END)
+ END AS length 
+ FROM osm_extralandusages AS l WHERE type = 'pitch' and sport IN ('soccer', 'tennis') ) AS data]]></Parameter>
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>

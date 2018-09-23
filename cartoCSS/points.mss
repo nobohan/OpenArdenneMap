@@ -104,10 +104,20 @@
 /* ROTATED PITCHES
 /* ================================================================== */
 
-#pitch [sport='soccer']{
-    [orientation != '']{
-    marker-file: url(img/soccer.svg);
-    marker-height: 40;
-    marker-transform: rotate([orientation]);
+#pitch { [orientation != ''] {
+    [sport='soccer'] {
+        [length > 100] {
+            marker-file: url(img/soccer.svg);
+            marker-height: 40;
+            marker-transform: rotate([orientation]);
+            }
+        }
+    [sport='tennis'] {
+        [length > 10] {
+            marker-file: url(img/tennis.svg);
+            marker-height: 20;
+            marker-transform: rotate([orientation]);
+            }
+        }
     }
 }
