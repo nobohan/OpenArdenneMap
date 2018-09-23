@@ -417,6 +417,7 @@ extraLandusages = Polygons(
     name = 'extralandusages',
     fields = (
         ('area', PseudoArea()),
+        ('sport', String()),
     ),
     mapping = {
         'produce': (
@@ -425,6 +426,9 @@ extraLandusages = Polygons(
         'trees': (
             'christmas_trees',
         ),
+        'leisure': (
+            'pitch',
+        )
     },
 )
 

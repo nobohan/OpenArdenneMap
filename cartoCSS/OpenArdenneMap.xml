@@ -7142,6 +7142,40 @@ order by area desc) as landusages]]></Parameter>
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
+  <Style filter-mode="first" name="pitch">
+    <Rule>
+      <Filter><![CDATA[([orientation] != '') and ([sport] = 'tennis') and ([length] > 10)]]></Filter>
+      <MarkersSymbolizer file="img/tennis.svg" height="20" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([orientation] != '') and ([sport] = 'soccer') and ([length] > 100)]]></Filter>
+      <MarkersSymbolizer file="img/soccer.svg" height="40" transform="rotate([orientation])" />
+    </Rule>
+  </Style>
+  <Layer name="pitch" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
+    <StyleName><![CDATA[pitch]]></StyleName>
+    <Datasource>
+      <Parameter name="dbname"><![CDATA[osm]]></Parameter>
+      <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
+      <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
+      <Parameter name="id"><![CDATA[pitch]]></Parameter>
+      <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+      <Parameter name="table"><![CDATA[( SELECT geometry, type, sport, 
+ CASE WHEN (ST_NPoints(l.geometry) >= 5) THEN 
+ (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing(l.geometry),1), ST_PointN(ST_ExteriorRing(l.geometry),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing(l.geometry),1), ST_PointN(ST_ExteriorRing(l.geometry),3))) 
+   THEN CAST(90+degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing(l.geometry),1), ST_PointN(ST_ExteriorRing(l.geometry),2))) AS VARCHAR(255))
+  ELSE CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing(l.geometry),1), ST_PointN(ST_ExteriorRing(l.geometry),2))) AS VARCHAR(255)) 
+ END) END AS orientation, CASE WHEN (ST_NPoints(l.geometry) >= 5) THEN 
+ (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing(l.geometry),1), ST_PointN(ST_ExteriorRing(l.geometry),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing(l.geometry),1), ST_PointN(ST_ExteriorRing(l.geometry),3)))
+  THEN CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing(l.geometry),1), ST_PointN(ST_ExteriorRing(l.geometry),2)) AS INTEGER)
+  ELSE CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing(l.geometry),1),
+ ST_PointN(ST_ExteriorRing(l.geometry),3)) AS INTEGER)
+ END)
+ END AS length 
+ FROM osm_extralandusages AS l WHERE type = 'pitch' and sport IN ('soccer', 'tennis') ) AS data]]></Parameter>
+      <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
   <Style filter-mode="first" name="place-small">
     <Rule>
       <Filter><![CDATA[([type] = 'locality')]]></Filter>

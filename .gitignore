@@ -3,3 +3,4 @@
 *.osm
 /contour/
 /osm-files/
+/.ropeproject/
