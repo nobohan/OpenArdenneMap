@@ -110,6 +110,7 @@
             marker-file: url(img/soccer.svg);
             marker-height: 40;
             marker-transform: rotate([orientation]);
+            marker-allow-overlap: true;
             }
         }
     [sport='tennis'] {
@@ -117,6 +118,7 @@
             marker-file: url(img/tennis.svg);
             marker-height: 20;
             marker-transform: rotate([orientation]);
+            marker-allow-overlap: true;
             }
         }
     }
