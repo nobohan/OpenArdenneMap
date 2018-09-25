@@ -7162,11 +7162,11 @@ order by area desc) as landusages]]></Parameter>
       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
       <Parameter name="table"><![CDATA[(        SELECT geometry, type, sport, 
  CASE WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.geometry,100))) >= 5) THEN 
- (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),3))) 
+ (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),3))) 
    THEN CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),3))) AS VARCHAR(255))
   ELSE CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),2))) AS VARCHAR(255)) 
  END) END AS orientation, CASE WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.geometry,100))) >= 5) THEN 
- (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),3)))
+ (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),3)))
   THEN CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),2)) AS INTEGER)
   ELSE CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),1),
  ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.geometry,100))),3)) AS INTEGER)
