@@ -83,13 +83,18 @@ Map { background-color: @purewhite; }
   polygon-fill:@building;
   line-color:darken(@building,10%);
   line-width:0.4;
+}
+
+#rotated_buildings {
   [type='church'] {
     marker-file: url(img/church.svg);
-    marker-height: 60;
+    marker-height: 40;
+    marker-transform: rotate([orientation]);
   }
   [type='chapel'] {
     marker-file: url(img/church.svg);
-    marker-height: 40;
+    marker-height: 25;
+    marker-transform: rotate([orientation]);
   }
 }
 

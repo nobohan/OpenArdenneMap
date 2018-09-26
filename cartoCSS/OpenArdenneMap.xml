@@ -7015,18 +7015,6 @@ order by area desc) as landusages]]></Parameter>
   </Layer>
   <Style filter-mode="first" name="buildings">
     <Rule>
-      <Filter><![CDATA[([type] = 'chapel')]]></Filter>
-      <PolygonSymbolizer fill="#444444" />
-      <LineSymbolizer stroke="#2b2b2b" stroke-width="0.4" />
-      <MarkersSymbolizer file="img/church.svg" height="40" />
-    </Rule>
-    <Rule>
-      <Filter><![CDATA[([type] = 'church')]]></Filter>
-      <PolygonSymbolizer fill="#444444" />
-      <LineSymbolizer stroke="#2b2b2b" stroke-width="0.4" />
-      <MarkersSymbolizer file="img/church.svg" height="60" />
-    </Rule>
-    <Rule>
       <PolygonSymbolizer fill="#444444" />
       <LineSymbolizer stroke="#2b2b2b" stroke-width="0.4" />
     </Rule>
@@ -7040,6 +7028,28 @@ order by area desc) as landusages]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT geometry, type, name, area
     FROM osm_buildings
   ORDER BY ST_YMin(ST_Envelope(geometry)) DESC
+) AS data]]></Parameter>
+      <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+  <Style filter-mode="first" name="rotated_buildings">
+    <Rule>
+      <Filter><![CDATA[([type] = 'chapel')]]></Filter>
+      <MarkersSymbolizer file="img/church.svg" height="25" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'church')]]></Filter>
+      <MarkersSymbolizer file="img/church.svg" height="40" transform="rotate([orientation])" />
+    </Rule>
+  </Style>
+  <Layer name="rotated_buildings" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName><![CDATA[rotated_buildings]]></StyleName>
+    <Datasource>
+      <Parameter name="dbname"><![CDATA[osm]]></Parameter>
+      <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
+      <Parameter name="geometry_field"><![CDATA[geometry]]></Parameter>
+      <Parameter name="table"><![CDATA[( SELECT geometry, type, name, CAST(degrees(ST_Azimuth(ST_Centroid(l.geometry),ST_Centroid(ST_SimplifyPreserveTopology(l.geometry,100)))) AS VARCHAR(255)) AS orientation, area
+    FROM osm_buildings AS l WHERE type in ('church','chapel') 
 ) AS data]]></Parameter>
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
