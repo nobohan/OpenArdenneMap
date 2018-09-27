@@ -90,6 +90,7 @@ Map { background-color: @purewhite; }
     marker-file: url(img/church.svg);
     marker-height: 40;
     marker-transform: rotate([orientation]);
+    marker-allow-overlap: true;
   }
   [type='chapel'] {
     marker-file: url(img/church.svg);
