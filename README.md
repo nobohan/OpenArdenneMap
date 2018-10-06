@@ -53,13 +53,13 @@ Voici les commandes pour utiliser imposm avec la table de correspondance renseig
 
 
 Au lieu de processer un gros fichier tel que  belgium-latest.osm.bz2, vous pouvez télécharger directment votre zone d'intérêt avec JOSM. Sauver les données sous un fichier .osm (e.g., `extract.osm`) et l'utiliser avec imposm. C'est beaucoup plus rapide!
-* `imposm --proj=EPSG:3857 --read extract.osm -m imposm-mapping.py`
+* `imposm --proj=EPSG:3857 --read osm-files/extract.osm -m imposm-mapping.py`
 * `imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables`
 * `imposm -d osm --remove-backup-tables`
 
 Le tout:
 
-`imposm --proj=EPSG:3857 --read extract.osm -m imposm-mapping.py --overwrite-cache && imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables && imposm -d osm --remove-backup-tables`
+`imposm --proj=EPSG:3857 --read osm-files/extract.osm -m imposm-mapping.py --overwrite-cache && imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables && imposm -d osm --remove-backup-tables`
 
 Post-traitement de certaines tables:
 ```

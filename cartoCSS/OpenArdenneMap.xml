@@ -7193,35 +7193,35 @@ order by area desc) as landusages]]></Parameter>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'isolated_dwelling')]]></Filter>
-      <TextSymbolizer character-spacing="2" dy="-50" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="40" wrap-width="120"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="5" dy="-50" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="40" wrap-width="120"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'neighbourhood')]]></Filter>
-      <TextSymbolizer character-spacing="2" dy="-50" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="40" wrap-width="120"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="5" dy="-50" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="40" wrap-width="120"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'hamlet')]]></Filter>
-      <TextSymbolizer character-spacing="2" dy="-50" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="40" wrap-width="120"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="5" dy="-50" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="40" wrap-width="120"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'suburb')]]></Filter>
-      <TextSymbolizer character-spacing="2" dy="-50" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="40" wrap-width="120"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="5" dy="-50" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="40" wrap-width="120"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'town')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="10" dy="200" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="3" line-spacing="2" placement="point" size="70" wrap-width="50"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="20" dy="200" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="3" line-spacing="2" placement="point" size="70" wrap-width="50"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
   </Style>
   <Style filter-mode="first" name="place-town">
     <Rule>
       <Filter><![CDATA[([type] = 'village')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="10" dy="200" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="3" line-spacing="2" placement="point" size="70" wrap-width="50"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="20" dy="200" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="3" line-spacing="2" placement="point" size="70" wrap-width="50"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
   </Style>
   <Style filter-mode="first" name="place-city">
     <Rule>
       <Filter><![CDATA[([type] = 'city')]]></Filter>
-      <TextSymbolizer character-spacing="6" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="2" placement="point" size="70" text-transform="uppercase" wrap-width="400"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="20" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="2" placement="point" size="76" text-transform="uppercase" wrap-width="400"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
   </Style>
   <Layer name="place" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">

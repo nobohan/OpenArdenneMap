@@ -45,8 +45,8 @@
   text-fill:@city_text;
   text-halo-fill:@city_halo;
   text-halo-radius:2;
-  text-size:@text_size_l;
-  text-character-spacing: 6;
+  text-size:@text_size_l+6;
+  text-character-spacing: 20;
   text-wrap-width: 400;
   text-transform: uppercase;
 }
@@ -64,7 +64,7 @@
   text-wrap-width: 50;
   text-line-spacing: 2;
   text-size:@text_size_l;
-  text-character-spacing: 10;
+  text-character-spacing: 20;
   text-line-spacing: 6;
   text-allow-overlap: true;
   text-dy: 200;
@@ -84,7 +84,7 @@
   text-size:@text_size_s;
   text-halo-fill:@other_halo;
   text-halo-radius:1;
-  text-character-spacing: 2;
+  text-character-spacing: 5;
   text-wrap-width: 120;
   text-line-spacing: 2;
   text-dy: -50
