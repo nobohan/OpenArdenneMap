@@ -390,10 +390,17 @@ Contour lines were saved as shp and loaded as the second layer (from bottom) in 
 Some useful commands for printing the map in a pdf format:
 
 * Determining the size of a pdf:
-`pdfjam --outfile A2.pdf --landscape --paper a2paper in.pdf`
+`pdfjam --outfile A2.pdf --landscape --paper a2paper nosize.pdf`
+
+or
+
+`cpdf -scale-to-fit a0landscape nosize.pdf -o A2.pdf`
 
 * Make several A4 of a A2 pdf:
 `pdfposter -ma4 -pa2 A2.pdf out_A4.pdf`
+
+or
+`mutool poster -x 2 -y 2 A2.pdf A4.pdf`
 
 
 # TODOs
