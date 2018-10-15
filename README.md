@@ -404,12 +404,8 @@ or
 
 
 # TODOs
-* font choice
 * palettes
 * feature: point of view
-* several styles
-* legend
-* recette courbes de niveaux
 
 # post SQL queries
 ```

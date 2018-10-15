@@ -32,8 +32,8 @@ Map { background-color: @purewhite; }
   [type='common']        { polygon-fill: @park; }
   [type='forest'], [type='wood'] {
       polygon-fill: @green;
-      line-width: 0.2;
-      line-color: @black;
+      line-width: 0.3;
+      line-color: @darkgray;
       polygon-pattern-file:url(img/forest.svg);
       [leaf_type='broadleaved']  { polygon-pattern-file:url(img/forest_bl.svg);}
       [leaf_type='needleleaved']  { polygon-pattern-file:url(img/forest_nl.svg);}

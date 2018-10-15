@@ -4,7 +4,7 @@
  * - area labels
  * - waterway labels
  */
-@supra_text_size_alfphabet: 10;
+@supra_text_size_alfphabet: 5;
 @text_size_l : 60 + @supra_text_size_alfphabet;
 @text_size_m : 40 + @supra_text_size_alfphabet;
 @text_size_s : 30 + @supra_text_size_alfphabet;
@@ -44,7 +44,7 @@
   text-placement:point;
   text-fill:@city_text;
   text-halo-fill:@city_halo;
-  text-halo-radius:2;
+  text-halo-radius: 4;
   text-size:@text_size_l+6;
   text-character-spacing: 20;
   text-wrap-width: 400;
@@ -60,7 +60,7 @@
   text-placement:point;
   text-fill:@town_text;
   text-halo-fill:@town_halo;
-  text-halo-radius: 3;
+  text-halo-radius: 4;
   text-wrap-width: 50;
   text-line-spacing: 2;
   text-size:@text_size_l;
@@ -83,7 +83,7 @@
   text-fill:@other_text;
   text-size:@text_size_s;
   text-halo-fill:@other_halo;
-  text-halo-radius:1;
+  text-halo-radius: 4;
   text-character-spacing: 5;
   text-wrap-width: 120;
   text-line-spacing: 2;
@@ -96,7 +96,7 @@
   text-placement:point;
   text-fill:@locality_text;
   text-halo-fill:@locality_halo;
-  text-halo-radius:1;
+  text-halo-radius: 4;
   text-wrap-width: 30;
   text-size:@text_size_m;
   text-wrap-width: 60;
@@ -113,7 +113,7 @@
   text-face-name:@sans;
   text-size: @text_size_s;
   text-character-spacing: 1;
-  text-halo-radius: 1.5;
+  text-halo-radius: 3;
   text-wrap-width:30;
   text-fill: @black;
   text-halo-fill: #fff;
@@ -192,48 +192,6 @@
     text-size: @text_size_s;
 }
 
-/* ================================================================== */
-/* ROAD LABELS
-/* ================================================================== */
-
-#motorway_label[type='motorway'],
-#motorway_label[type='trunk'] {
-  text-name:"[name]";
-  text-face-name:@sans_bold;
-  text-placement:line;
-  text-fill:@road_text;
-  text-halo-fill:@road_halo;
-  text-halo-radius:1;
-  text-repeat-distance:60;
-  text-size:10;
-  text-repeat-distance:100;
-}
-
-#mainroad_label[type='primary'],
-#mainroad_label[type='secondary'],
-#mainroad_label[type='tertiary'] {
-  text-name:'[name]';
-  text-face-name:@sans;
-  text-placement:line;
-  text-fill:@road_text;
-  text-halo-fill:@road_halo;
-  text-halo-radius:1;
-  text-repeat-distance:60;
-  text-size:11;
-}
-
-#minorroad_label {
-  text-name:'[name]';
-  text-face-name:@sans;
-  text-placement:line;
-  text-size:9;
-  text-fill:@road_text;
-  text-halo-fill:@road_halo;
-  text-halo-radius:1;
-  text-repeat-distance:60;
-  text-size:11;
-}
-
 
 /* ================================================================== */
 /* TRAIN STATIONS
@@ -247,7 +205,7 @@
     text-fill:@other_text;
     text-size:@text_size_m;
     text-halo-fill:@other_halo;
-    text-halo-radius:2;
+    text-halo-radius: 4;
     text-character-spacing: 2;
     text-line-spacing: 2;
     text-dy: -50;
