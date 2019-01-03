@@ -43,7 +43,7 @@ bbox = (Envelope(xmin, ymin, xmax, ymax))
 
 m.zoom_to_box(bbox)
 
-print "Scale = ", m.scale()
+print("Scale = " + str(m.scale()))
 
 # Export to mapOutput
 render_to_file(m, mapOutput)

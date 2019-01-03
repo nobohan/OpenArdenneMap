@@ -66,6 +66,13 @@ Post-traitement de certaines tables:
 psql -d osm -c 'ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;'
 ```
 
+## Mettre à jour la base de données avec osm2pgsql
+
+```
+osm2pgsql -c -G -d osmpg_db -S OpenArdenneMap.style osm-files/extract.osm
+```
+
+
 # Changements apportés à OSMBright
 
 OSMBright est un style par défaut pour les données d'OSM. Mais il est principalement adapté aux milieux urbains. Ce style a été profondémment modifié. Voici quelques exemples de modifications.
@@ -180,7 +187,8 @@ Les courbes de niveaux ont été générées depuis le MNT filtré en utilisant 
 
 La couche a ensuite été post-processée pour obtenir des géométries plus courbes. L'outil `v.generalize.smooth` a été utilisé, avec l'algorithme "snakes" (paramètres par défaut).
 
-Enfin, un champ a été ajouté dans le shp des courbes de niveaux pour définir certaines lignes comme lignes maitresses, afin d'augmenter la lisibilté des lignes de contour. Ici, toutes`les lignes avec une altitude égale à un multiple de 20 m a été définie comme maitresse. Cela a été calculé dans la calculette de champ de QGIS avec la formule suivante:
+Enfin, un champ a été ajouté dans le shp des courbes de niveaux pour définir certaines lignes comme lignes maitresses, afin d'augmenter la lisibilté des lignes de contour. Ici, toutes les lignes avec une altitude égale à un multiple de 20 m a été définie comme maitresse. Cela a été calculé dans la calculette de champ de QGIS avec la formule suivante:
+
 ```
 if( "level" % 20 = 0, 'yes', NULL)
 ```
