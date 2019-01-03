@@ -17,10 +17,34 @@
   </FontSet>
   <Style filter-mode="first" name="landuse">
     <Rule>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'needleleaved') and ([trees] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="img/forest_nl.svg" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'needleleaved') and ([produce] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="img/forest_nl.svg" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
       <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
       <PolygonSymbolizer fill="#acefc7" />
       <LineSymbolizer stroke="#444444" stroke-width="0.3" />
       <PolygonPatternSymbolizer file="img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'needleleaved') and ([trees] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="img/forest_nl.svg" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'needleleaved') and ([produce] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="img/forest_nl.svg" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
@@ -29,16 +53,52 @@
       <PolygonPatternSymbolizer file="img/forest_nl.svg" />
     </Rule>
     <Rule>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'broadleaved') and ([trees] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="img/forest_bl.svg" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'broadleaved') and ([produce] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="img/forest_bl.svg" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
       <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
       <PolygonSymbolizer fill="#acefc7" />
       <LineSymbolizer stroke="#444444" stroke-width="0.3" />
       <PolygonPatternSymbolizer file="img/forest_bl.svg" />
     </Rule>
     <Rule>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'broadleaved') and ([trees] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="img/forest_bl.svg" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'broadleaved') and ([produce] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="img/forest_bl.svg" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
       <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
       <PolygonSymbolizer fill="#acefc7" />
       <LineSymbolizer stroke="#444444" stroke-width="0.3" />
       <PolygonPatternSymbolizer file="img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([trees] = 'christmas_trees')]]></Filter>
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="img/christmas_trees.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([produce] = 'christmas_trees')]]></Filter>
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="img/christmas_trees.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'school')]]></Filter>
@@ -165,11 +225,31 @@
       <Parameter name="key_field"><![CDATA[]]></Parameter>
       <Parameter name="project"><![CDATA[OpenArdenneMap]]></Parameter>
       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
-      <Parameter name="table"><![CDATA[( SELECT way, leaf_type, leaf_cycle, way_area AS area, COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type
+      <Parameter name="table"><![CDATA[( SELECT way, leaf_type, leaf_cycle, trees, produce, way_area AS area, COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type
   FROM planet_osm_polygon
   ORDER BY way_area DESC
 ) AS data]]></Parameter>
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+  <Style filter-mode="first" name="contour">
+    <Rule>
+      <Filter><![CDATA[([main] = 'yes')]]></Filter>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="3" />
+      <TextSymbolizer fill="#bc1e44" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="2" line-spacing="1" placement="line" size="35" wrap-width="60"><![CDATA[[level]]]></TextSymbolizer>
+    </Rule>
+    <Rule>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="1.5" />
+    </Rule>
+  </Style>
+  <Layer name="contour" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
+    <StyleName><![CDATA[contour]]></StyleName>
+    <Datasource>
+      <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+      <Parameter name="file"><![CDATA[../contour/contour.shp]]></Parameter>
+      <Parameter name="id"><![CDATA[contour]]></Parameter>
+      <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+      <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
   <Style filter-mode="first" name="waterway-top">
@@ -260,10 +340,10 @@
       <Parameter name="key_field"><![CDATA[]]></Parameter>
       <Parameter name="project"><![CDATA[OpenArdenneMap]]></Parameter>
       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
-      <Parameter name="table"><![CDATA[( SELECT way, way_area AS area, COALESCE(leisure) AS type
+      <Parameter name="table"><![CDATA[( SELECT way, way_area AS area, COALESCE(leisure, "natural") AS type
   FROM planet_osm_polygon
-  WHERE leisure = 'nature_reserve'
-  ORDER BY way_area DESC
+  WHERE leisure = 'nature_reserve' OR "natural" = 'wetland'
+ ORDER BY way_area DESC
 ) AS data]]></Parameter>
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
@@ -286,27 +366,6 @@
   FROM planet_osm_line
   WHERE boundary = 'administrative'
     AND admin_level IN ('2','3','4')
-) AS data]]></Parameter>
-      <Parameter name="type"><![CDATA[postgis]]></Parameter>
-    </Datasource>
-  </Layer>
-  <Style filter-mode="first" name="buildings">
-    <Rule>
-      <PolygonSymbolizer fill="#444444" />
-      <LineSymbolizer stroke="#2b2b2b" stroke-width="0.4" />
-    </Rule>
-  </Style>
-  <Layer name="buildings" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    <StyleName><![CDATA[buildings]]></StyleName>
-    <Datasource>
-      <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
-      <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
-      <Parameter name="key_field"><![CDATA[]]></Parameter>
-      <Parameter name="table"><![CDATA[( SELECT way, "building" AS type
-  FROM planet_osm_polygon
-  WHERE building NOT IN ('', '0','false', 'no')
-  ORDER BY ST_YMin(ST_Envelope(way)) DESC
 ) AS data]]></Parameter>
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
@@ -4690,22 +4749,20 @@
       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
       <Parameter name="key_field"><![CDATA[]]></Parameter>
-      <Parameter name="table"><![CDATA[( SELECT way, highway AS type, bridge, tracktype, tunnel
-    FROM planet_osm_roads
-    WHERE highway IN ('motorway', 'trunk')
-) AS data]]></Parameter>
-      <Parameter name="type"><![CDATA[postgis]]></Parameter>
-    </Datasource>
-  </Layer>
-  <Layer name="turning_circle_fill" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    <Datasource>
-      <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
-      <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
-      <Parameter name="key_field"><![CDATA[]]></Parameter>
-      <Parameter name="table"><![CDATA[( SELECT way 
-  FROM planet_osm_point
-  WHERE highway = 'turning_circle'
+      <Parameter name="table"><![CDATA[( SELECT way, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, tracktype, access, 'fill' AS render,
+  CASE
+    WHEN highway IN ('motorway', 'trunk') THEN 'motorway'
+    WHEN highway IN ('primary', 'secondary') THEN 'mainroad'
+    WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'
+    WHEN highway IN ('service', 'track') THEN 'service'
+    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'
+    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'
+    ELSE 'other' END AS stylegroup
+  FROM planet_osm_line
+  WHERE (highway IS NOT NULL OR railway IS NOT NULL)
+    AND (tunnel IS NULL OR tunnel = 'no')
+    AND (bridge IS NULL OR bridge = 'no')
+  ORDER BY z_order
 ) AS data]]></Parameter>
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
@@ -6890,6 +6947,82 @@
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
+  <Style filter-mode="first" name="buildings">
+    <Rule>
+      <PolygonSymbolizer fill="#444444" />
+      <LineSymbolizer stroke="#2b2b2b" stroke-width="0.4" />
+    </Rule>
+  </Style>
+  <Layer name="buildings" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName><![CDATA[buildings]]></StyleName>
+    <Datasource>
+      <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
+      <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
+      <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+      <Parameter name="key_field"><![CDATA[]]></Parameter>
+      <Parameter name="table"><![CDATA[( SELECT way, "building" AS type
+  FROM planet_osm_polygon
+  WHERE building NOT IN ('', '0','false', 'no')
+  ORDER BY ST_YMin(ST_Envelope(way)) DESC
+) AS data]]></Parameter>
+      <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+  <Style filter-mode="first" name="rotated_buildings">
+    <Rule>
+      <Filter><![CDATA[([type] = 'chapel')]]></Filter>
+      <MarkersSymbolizer file="img/church.svg" height="25" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'church')]]></Filter>
+      <MarkersSymbolizer allow-overlap="true" file="img/church.svg" height="40" transform="rotate([orientation])" />
+    </Rule>
+  </Style>
+  <Layer name="rotated_buildings" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
+    <StyleName><![CDATA[rotated_buildings]]></StyleName>
+    <Datasource>
+      <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
+      <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
+      <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+      <Parameter name="table"><![CDATA[( SELECT way, "building" AS type, name, CAST(degrees(ST_Azimuth(ST_Centroid(l.way),ST_Centroid(ST_SimplifyPreserveTopology(l.way,100)))) AS VARCHAR(255)) AS orientation, area
+    FROM planet_osm_polygon
+ AS l WHERE "building" IN ('church','chapel') 
+) AS data]]></Parameter>
+      <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+  <Style filter-mode="first" name="linear_features">
+    <Rule>
+      <Filter><![CDATA[([type] = 'cliff')]]></Filter>
+      <LinePatternSymbolizer file="img/cliff.svg" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'embankment')]]></Filter>
+      <LinePatternSymbolizer file="img/embankment.svg" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'line')]]></Filter>
+      <LineSymbolizer stroke="#111111" stroke-width="2" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'hedge')]]></Filter>
+      <LineSymbolizer stroke="#2cd670" stroke-dasharray="3, 5" stroke-width="3" />
+    </Rule>
+  </Style>
+  <Layer name="linear_features" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="off">
+    <StyleName><![CDATA[linear_features]]></StyleName>
+    <Datasource>
+      <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
+      <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
+      <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+      <Parameter name="id"><![CDATA[linear_features]]></Parameter>
+      <Parameter name="srs"></Parameter>
+      <Parameter name="table"><![CDATA[( SELECT geometry, type, leaf_type, leaf_cycle
+  FROM osm_linearfeatures
+)  AS data]]></Parameter>
+      <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
   <Style filter-mode="first" name="place-small">
     <Rule>
       <Filter><![CDATA[([type] = 'locality')]]></Filter>
@@ -7021,57 +7154,6 @@
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
-  <Layer name="motorway_label" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
-    <Datasource>
-      <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
-      <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
-      <Parameter name="id"><![CDATA[motorway_label]]></Parameter>
-      <Parameter name="key_field"><![CDATA[]]></Parameter>
-      <Parameter name="project"><![CDATA[OpenArdenneMap]]></Parameter>
-      <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
-      <Parameter name="table"><![CDATA[( SELECT way, highway AS type, name, ref, oneway, CHAR_LENGTH(ref) AS reflen
-    FROM planet_osm_line
-    WHERE highway IN ('motorway', 'trunk')
-      AND (name IS NOT NULL OR ref IS NOT NULL)
-) AS data]]></Parameter>
-      <Parameter name="type"><![CDATA[postgis]]></Parameter>
-    </Datasource>
-  </Layer>
-  <Layer name="mainroad_label" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
-    <Datasource>
-      <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
-      <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
-      <Parameter name="id"><![CDATA[mainroad_label]]></Parameter>
-      <Parameter name="key_field"><![CDATA[]]></Parameter>
-      <Parameter name="project"><![CDATA[OpenArdenneMap]]></Parameter>
-      <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
-      <Parameter name="table"><![CDATA[( SELECT way, highway AS type, name, oneway
-  FROM planet_osm_line
-  WHERE (name IS NOT NULL OR oneway IN ('yes', 'true', '1', '-1'))
-    AND highway IN ('primary', 'secondary', 'tertiary')
-) AS data]]></Parameter>
-      <Parameter name="type"><![CDATA[postgis]]></Parameter>
-    </Datasource>
-  </Layer>
-  <Layer name="minorroad_label" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
-    <Datasource>
-      <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
-      <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
-      <Parameter name="id"><![CDATA[minorroad_label]]></Parameter>
-      <Parameter name="key_field"><![CDATA[]]></Parameter>
-      <Parameter name="project"><![CDATA[OpenArdenneMap]]></Parameter>
-      <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
-      <Parameter name="table"><![CDATA[( SELECT way, highway AS type, name, oneway
-  FROM planet_osm_line
-  WHERE (name IS NOT NULL OR oneway IN ('yes', 'true', '1', '-1'))
-    AND highway IN ('residential', 'unclassified', 'road', 'living_street', 'unknown')
-) AS data]]></Parameter>
-      <Parameter name="type"><![CDATA[postgis]]></Parameter>
-    </Datasource>
-  </Layer>
   <Style filter-mode="first" name="waterway_label">
     <Rule>
       <Filter><![CDATA[([type] = 'stream')]]></Filter>
@@ -7104,7 +7186,18 @@
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
-  <Layer name="train_stations" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+  <Style filter-mode="first" name="train_elements">
+    <Rule>
+      <Filter><![CDATA[([type] = 'station')]]></Filter>
+      <TextSymbolizer character-spacing="2" dx="-30" dy="-50" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="4" line-spacing="2" placement="point" size="45"><![CDATA[Gare]]></TextSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'level_crossing')]]></Filter>
+      <MarkersSymbolizer file="img/level-crossing.svg" height="16" />
+    </Rule>
+  </Style>
+  <Layer name="train_elements" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName><![CDATA[train_elements]]></StyleName>
     <Datasource>
       <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
@@ -7112,7 +7205,7 @@
       <Parameter name="key_field"><![CDATA[]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT way, railway AS type, name, z_order 
   FROM planet_osm_point 
-  WHERE railway = 'station'
+  WHERE railway IN ('station', 'level_crossing') 
   ORDER BY z_order NULLS LAST
 ) AS DATA 
 ]]></Parameter>

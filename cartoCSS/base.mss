@@ -56,27 +56,28 @@ Map { background-color: @purewhite; }
   [type='orchard']       { polygon-fill: @green; polygon-pattern-file:url(img/orchard.svg); line-width:0.5; line-color: @gray; }
   [type='farmyard']      { line-color: @farmyard; }
   [type='school']        { polygon-fill: @school; }
-}
-
-#landuse_overlays[type='nature_reserve'] {
-  line-color: darken(@wooded,25%);
-  line-opacity:  0.3;
-  line-dasharray: 1,1;
-  polygon-fill: darken(@wooded,25%);
-  polygon-opacity: 0.1;
-  line-width: 2.0;
-}
-
-#landuse_overlays[type='wetland'] {
-  polygon-pattern-file:url(img/wetland.svg);
+  [trees='christmas_trees'], [produce='christmas_trees'] {
+    polygon-fill: @green;
+    polygon-pattern-file: url(img/christmas_trees.svg);
+    line-width: 0.5;
+    line-color: @gray;
   }
-
-#extralandusages[type='christmas_trees'] {
-  polygon-fill: @green;
-  polygon-pattern-file: url(img/christmas_trees.svg);
-  line-width: 0.5;
-  line-color: @gray;
 }
+
+#landuse_overlays {
+  [type='nature_reserve'] {
+    line-color: darken(@wooded,25%);
+    line-opacity:  0.3;
+    line-dasharray: 1,1;
+    polygon-fill: darken(@wooded,25%);
+    polygon-opacity: 0.1;
+    line-width: 2.0;
+  }
+  [type='wetland'] {
+    polygon-pattern-file:url(img/wetland.svg);
+  }
+}
+
 
 /* ---- BUILDINGS ---- */
 #buildings {

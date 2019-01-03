@@ -115,6 +115,8 @@ node,way   horse        text         linear
 node,way   intermittent text         linear
 node,way   junction     text         linear
 node,way   landuse      text         polygon
+node,way   produce      text         polygon
+node,way   trees        text         polygon
 node,way   layer        text         linear
 node,way   leaf_type    text         polygon
 node,way   leaf_cycle   text         polygon
