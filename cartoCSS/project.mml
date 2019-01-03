@@ -181,6 +181,23 @@
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
+        "id": "bridge_symbol",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "( SELECT way, bridge, highway, CAST(90+degrees(ST_Azimuth(ST_StartPoint(planet_osm_roads.way), ST_EndPoint(planet_osm_roads.way))) AS VARCHAR(255)) AS orientation \n FROM planet_osm_roads WHERE bridge NOT IN ('', '0', 'no')\n AND highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') \n) AS data",
+        "type": "postgis"
+      },
+      "geometry": "linestring",
+      "id": "bridge_symbol",
+      "name": "bridge_symbol",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
         "key_field": "",
         "table": "( SELECT way, \"building\" AS type\n  FROM planet_osm_polygon\n  WHERE building NOT IN ('', '0','false', 'no')\n  ORDER BY ST_YMin(ST_Envelope(way)) DESC\n) AS data",
         "type": "postgis"
@@ -196,7 +213,7 @@
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
-        "table": "( SELECT way, \"building\" AS type, name, CAST(degrees(ST_Azimuth(ST_Centroid(l.way),ST_Centroid(ST_SimplifyPreserveTopology(l.way,100)))) AS VARCHAR(255)) AS orientation, area\n    FROM planet_osm_polygon\n AS l WHERE \"building\" IN ('church','chapel') \n) AS data",
+        "table": "( SELECT way, building, name, CAST(degrees(ST_Azimuth(ST_Centroid(l.way),ST_Centroid(ST_SimplifyPreserveTopology(l.way,100)))) AS VARCHAR(255)) AS orientation, area\n    FROM planet_osm_polygon\n AS l WHERE \"building\" IN ('church','chapel') \n) AS data",
         "type": "postgis"
       },
       "geometry": "polygon",
@@ -212,8 +229,9 @@
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "linear_features",
+        "project": "OpenArdenneMap",
         "srs": null,
-        "table": "( SELECT geometry, type, leaf_type, leaf_cycle\n  FROM osm_linearfeatures\n)  AS data",
+        "table": "( SELECT way, man_made, barrier, power, \"natural\" FROM planet_osm_line)  AS data",
         "type": "postgis"
       },
       "geometry": "linestring",
@@ -221,7 +239,43 @@
       "name": "linear_features",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "off"
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "point_features",
+        "project": "OpenArdenneMap",
+        "srs": null,
+        "table": "( SELECT way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", bus, name \n  FROM planet_osm_point\n)  AS data",
+        "type": "postgis"
+      },
+      "class": "",
+      "geometry": "point",
+      "id": "point_features",
+      "name": "point_features",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "pitch",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "(        SELECT way, sport, \n CASE WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,100))) >= 5) THEN \n (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3))) \n   THEN CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3))) AS VARCHAR(255))\n  ELSE CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2))) AS VARCHAR(255)) \n END) END AS orientation, CASE WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,100))) >= 5) THEN \n (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3)))\n  THEN CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) AS INTEGER)\n  ELSE CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1),\n ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3)) AS INTEGER)\n END)\n END AS length \n FROM planet_osm_polygon AS l WHERE leisure = 'pitch' and sport IN ('soccer', 'tennis')) AS data",
+        "type": "postgis"
+      },
+      "geometry": "point",
+      "id": "pitch",
+      "name": "pitch",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
     },
     {
       "Datasource": {

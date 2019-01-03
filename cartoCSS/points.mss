@@ -20,10 +20,10 @@
 /* ================================================================== */
 
 #point_features {
-    [type = 'tower'], [type = 'mast'] {
+    [power = 'tower'], [man_made = 'mast'] {
         marker-file: url(img/tower.svg);
         marker-height: 4;
-        ['tower_type' = 'communication'] {
+        ['tower:type' = 'communication'] {
             text-name:"'Pyl.'";
             text-face-name:@sans;
             text-placement:point;
@@ -38,7 +38,7 @@
             text-allow-overlap: true;
         }
     }
-    [type = 'fountain'] {
+    [amenity = 'fountain'] {
         marker-file: url(img/fountain.svg);
         marker-height: 10;
         marker-allow-overlap: true; /* always render */
@@ -52,16 +52,16 @@
         text-dy: -16;
         text-dx: -5;
     }
-    [type = 'wayside_cross'] {
+    [historic = 'wayside_cross'] {
         marker-file: url(img/cross.svg);
         marker-height: 25;
         marker-allow-overlap: true; /* always render */
     }
-    [type = 'picnic_table'], [type = 'picnic_site'] {
+    [leisure = 'picnic_table'], [tourism = 'picnic_site'] {
         marker-file: url(img/picnic.svg);
         marker-height: 12;
     }
-    [type = 'archaeological_site'], [type = 'ruins'] {
+    [historic = 'archaeological_site'], [historic = 'ruins'] {
         marker-file: url(img/ruins.svg);
         marker-height: 15;
         marker-allow-overlap: true; /* always render */
@@ -78,7 +78,7 @@
         text-dy: -5;
         text-dx: 12;
     }
-    [type = 'stop_position'] {
+    [public_transport = 'stop_position'] {
         ['bus' = 'yes'] {
             marker-file: url(img/bus.svg);
             marker-height: 8;

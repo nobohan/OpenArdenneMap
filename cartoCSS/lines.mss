@@ -66,8 +66,6 @@
     [bridge=1] { line-width: @tiny + 2 + 4; }
   }
 
-  [type='cutline'] { line-width: 2; line-dasharray: 25, 15; line-color: @darkgray; }
-
   [stylegroup='noauto'] {
     line-width: @mini - 1;
     line-dasharray: 8, 8;
@@ -229,20 +227,25 @@
 /* ================================================================== */
 
 #linear_features {
-  [type = 'hedge'] {
+  [barrier = 'hedge'], [natural = 'tree_row'] {
       line-color: darken(@green,30%);
       line-width: 3;
       line-dasharray: 3,5;
   }
-  [type = 'line'] {
+  [power = 'line'] {
       line-color: @black;
       line-width: 2;
   }
-  [type = 'embankment'] {
+  [man_made = 'embankment'] {
       line-pattern-file: url(img/embankment.svg);
   }
-  [type = 'cliff'] {
+  [natural = 'cliff'] {
       line-pattern-file: url(img/cliff.svg);
+  }
+  [man_made = 'cutline'] {
+      line-width: 2;
+      line-dasharray: 25, 15;
+      line-color: @darkgray;
   }
 }
 

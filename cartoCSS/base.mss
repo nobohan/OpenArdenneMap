@@ -87,13 +87,13 @@ Map { background-color: @purewhite; }
 }
 
 #rotated_buildings {
-  [type='church'] {
+  [building='church'] {
     marker-file: url(img/church.svg);
     marker-height: 40;
     marker-transform: rotate([orientation]);
     marker-allow-overlap: true;
   }
-  [type='chapel'] {
+  [building='chapel'] {
     marker-file: url(img/church.svg);
     marker-height: 25;
     marker-transform: rotate([orientation]);

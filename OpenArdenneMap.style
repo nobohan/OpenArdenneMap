@@ -97,6 +97,7 @@ node,way   brand        text         linear
 node,way   bridge       text         linear
 node,way   boundary     text         linear
 node,way   building     text         polygon
+node       bus          text         linear
 node       capital      text         linear
 node,way   construction text         linear
 node,way   covered      text         linear
@@ -115,8 +116,6 @@ node,way   horse        text         linear
 node,way   intermittent text         linear
 node,way   junction     text         linear
 node,way   landuse      text         polygon
-node,way   produce      text         polygon
-node,way   trees        text         polygon
 node,way   layer        text         linear
 node,way   leaf_type    text         polygon
 node,way   leaf_cycle   text         polygon
@@ -134,6 +133,7 @@ node,way   place        text         polygon
 node,way   population   text         linear
 node,way   power        text         polygon
 node,way   power_source text         linear
+node,way   produce      text         polygon
 node,way   public_transport text     polygon
 node,way   railway      text         linear
 node,way   ref          text         linear
@@ -147,6 +147,7 @@ node,way   toll         text         linear
 node,way   tourism      text         polygon
 node,way   tower:type   text         linear
 way        tracktype    text         linear
+node,way   trees        text         polygon
 node,way   tunnel       text         linear
 node,way   water        text         polygon
 node,way   waterway     text         polygon
