@@ -1,4 +1,6 @@
 *.pdf
+*.png
+*.svg
 *.cache
 *.osm
 /contour/
