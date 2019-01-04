@@ -32,18 +32,22 @@ Il est conseillé d'utiliser un environnment virtuel Python. Les librairies suiv
 Lancer le script `create-db.sh`. Il faut l'éditer auparavant selon le chemin de votre environnement virtuel.
 
 # Usage
-## Pour changer les données OSM (import dans une db avec imposm)
-Éditer le fichier `imposm-mapping.py`. Par rapport au style d'OSMBright, des éléments ont été ajoutés, comme le tracktype et leaf_type.
+## Pour changer les données OSM (import dans une db)
+OpenArdenneMap fonctionne avec imposm et osm2pgsql. Pour l'instant, le choix entre ces deux solutions se fait en choissisant la branche correspondante dans ce dépôt: la branche master fonctionne avec imposm et la branche osm2pgsql fonctionne avec osm2pgsql.
+
+Avec imposm, éditer le fichier `imposm-mapping.py`. Par rapport au style d'OSMBright, des éléments ont été ajoutés, comme le tracktype et leaf_type. Avec osm2pgsql, éditer le fichier `OpenArdenneMap.style`.
 
 ## Pour changer le style de la carte
 Éditer les fichiers `mss` en utilisant le language cartoCSS et utiliser `carto` pour générer le fichier mapnik `OpenArdenneMap.xml`:
 `carto cartoCSS/project.mml > cartoCSS/OpenArdenneMap.xml`
 
-Pour générer la carte, faire:
+Pour générer la carte, faire (avec Python 3):
 `python makeMap.py`
 
 Le tout:
-`carto cartoCSS/project.mml > cartoCSS/OpenArdenneMap.xml && python makeMap.py`
+```
+carto cartoCSS/project.mml > cartoCSS/OpenArdenneMap.xml && python makeMap.py
+```
 
 ## Mettre à jour la base de données avec imposm
 Voici les commandes pour utiliser imposm avec la table de correspondance renseignée dans imposm-mapping.py. Utiliser un shapefile e.g.,  `map_extent.shp` pour resteindre l'import à une zone:
@@ -57,16 +61,21 @@ Au lieu de processer un gros fichier tel que  belgium-latest.osm.bz2, vous pouve
 * `imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables`
 * `imposm -d osm --remove-backup-tables`
 
-Le tout:
-
-`imposm --proj=EPSG:3857 --read osm-files/extract.osm -m imposm-mapping.py --overwrite-cache && imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables && imposm -d osm --remove-backup-tables`
 
 Post-traitement de certaines tables:
 ```
 psql -d osm -c 'ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;'
 ```
 
+Le tout:
+
+```
+imposm --proj=EPSG:3857 --read osm-files/extract.osm -m imposm-mapping.py --overwrite-cache && imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables && imposm -d osm --remove-backup-tables && psql -d osm -c 'ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;'
+```
+
 ## Mettre à jour la base de données avec osm2pgsql
+
+Voici la commande pour mettre à jour avec osm2pgsql. La table de sélection des tags OSM est dans le fichier `OpenArdenneMap.style`. Ce fichier est légèrement adapté du fichier style d'osm2pgsql par défaut.
 
 ```
 osm2pgsql -c -G -d osmpg_db -S OpenArdenneMap.style osm-files/extract.osm
@@ -170,6 +179,7 @@ Bien sûr, outre les additions, le style de la carte a été fortement modifié.
 * Choix de couleurs
 * Création de symboles
 * Création de patterns
+* Rotation automatique de certains éléments (cfr https://blog.champs-libres.coop/carto/2018/12/18/openardennemap.html)
 
 
 # Courbes de niveaux
@@ -226,7 +236,7 @@ OpenArdenneMap is a customized map using OpenStreetMap data. It is based on OSMB
 ## Stack
 * This was developed inside a python virtual environment
 * Install Mapnik & python-mapnik
-* Install impsom
+* Install impsom OR osm2pgsql
 * Install carto
   * (For these last three points, have a look at OSMBright)
 * Clone or download the OpenArdenneMap files
@@ -237,7 +247,9 @@ Run the script `create-db.sh`. Edit it before according to the path of your virt
 
 # Usage
 ## To change the way the OSM data are imported
-Edit the imposm-mapping.py file. Some features are added in OpenArdenneMap, such as tracktype and leaf_cycle/leaf_type. See below.
+OpenArdenneMap works with imposm or osm2pgsql. For now, you can choose between these two solutions by selecting the corresponding branch on this repo: the master branch is for imposm and the osm2pgsql branch is for osm2pgsql.
+
+For imposm, edit the `imposm-mapping.py` file. Some features are added in OpenArdenneMap, such as tracktype and leaf_cycle/leaf_type. See below. For osm2pgsql, edit the `OpenArdenneMap.style` file.
 
 ## To change the style of the map
 Edit the mss files using cartoCSS language and use `carto` to generate the `OpenArdenneMap.xml` mapnik file. Then:
@@ -247,7 +259,9 @@ To generate the map:
 `python makeMap.py`
 
 All together:
-`carto cartoCSS/project.mml > cartoCSS/OpenArdenneMap.xml && python makeMap.py`
+```
+carto cartoCSS/project.mml > cartoCSS/OpenArdenneMap.xml && python makeMap.py
+```
 
 ## Update the db using imposm
 Here are the commands for using imposm with this imposm-mapping. Use a shp called e.g. `map_extent.shp` to select a particular area:
@@ -261,14 +275,25 @@ Instead of processing the whole belgium-latest.osm.bz2 file, you can download di
 * `imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables`
 * `imposm -d osm --remove-backup-tables`
 
-All together:
-
-`imposm --proj=EPSG:3857 --read extract.osm -m imposm-mapping.py && imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables && imposm -d osm --remove-backup-tables`
-
 Post-processing of some tables:
 ```
 psql -d osm -c 'ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;'
 ```
+
+All together:
+
+```
+imposm --proj=EPSG:3857 --read osm-files/extract.osm -m imposm-mapping.py --overwrite-cache && imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables && imposm -d osm --remove-backup-tables && psql -d osm -c 'ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;'
+```
+
+## Update the db with osm2pgsql
+
+Here is the command for updating with osm2pgsql. OSM tags selections is written in the `OpenArdenneMap.style` file. This file is slightly modified from the default osm2pgsql style file.
+
+```
+osm2pgsql -c -G -d osmpg_db -S OpenArdenneMap.style osm-files/extract.osm
+```
+
 
 # Changes compared to OSMBright
 
@@ -369,7 +394,9 @@ Of course, the style of the map was modified, with some inspiration taken from O
 * increase font size
 * custom colors
 * Symbol creation
-* Pattern creation.
+* Pattern creation
+* Automatic orientation of some features (cfr https://blog.champs-libres.coop/carto/2018/12/18/openardennemap.html)
+
 
 # Contour lines
 

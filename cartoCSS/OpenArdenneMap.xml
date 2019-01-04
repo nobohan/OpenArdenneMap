@@ -6553,7 +6553,7 @@
   </Layer>
   <Style filter-mode="first" name="bridge_symbol">
     <Rule>
-      <MarkersSymbolizer file="img/bridge.svg" height="16" transform="rotate([orientation])" />
+      <MarkersSymbolizer allow-overlap="true" file="img/bridge.svg" height="160" />
     </Rule>
   </Style>
   <Layer name="bridge_symbol" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
@@ -7033,7 +7033,7 @@
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
       <Parameter name="id"><![CDATA[pitch]]></Parameter>
       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
-      <Parameter name="table"><![CDATA[(        SELECT way, sport, 
+      <Parameter name="table"><![CDATA[( SELECT way, sport, 
  CASE WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,100))) >= 5) THEN 
  (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3))) 
    THEN CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3))) AS VARCHAR(255))
@@ -7052,7 +7052,7 @@
   <Style filter-mode="first" name="place-small">
     <Rule>
       <Filter><![CDATA[([type] = 'locality')]]></Filter>
-      <TextSymbolizer fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="4" line-spacing="1" placement="point" size="45" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="4" line-spacing="1" placement="point" repeat-distance="20000" size="45" wrap-width="30"><![CDATA[]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'suburb')]]></Filter>
@@ -7126,26 +7126,30 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'college')]]></Filter>
-      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="3" size="35" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="3" size="35" wrap-width="30"><![CDATA[]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'university')]]></Filter>
-      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="3" size="35" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="3" size="35" wrap-width="30"><![CDATA[]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'hospital')]]></Filter>
+      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="3" size="35" wrap-width="30"><![CDATA[]]></TextSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'tourism')]]></Filter>
       <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="3" size="35" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'golf_course')]]></Filter>
+      <Filter><![CDATA[([type] = 'industrial')]]></Filter>
       <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="3" size="35" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'park')]]></Filter>
-      <TextSymbolizer character-spacing="1" face-name="DejaVu Sans Oblique" fill="#acefc7" halo-fill="#ffffff" halo-radius="3" size="35" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" face-name="DejaVu Sans Oblique" fill="#acefc7" halo-fill="#ffffff" halo-radius="3" size="35" wrap-width="30"><![CDATA[]]></TextSymbolizer>
     </Rule>
     <Rule>
-      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="3" size="35" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" fill="#111111" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="3" size="35" wrap-width="30"><![CDATA[]]></TextSymbolizer>
     </Rule>
   </Style>
   <Layer name="area_label" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
@@ -7159,7 +7163,7 @@
       <Parameter name="project"><![CDATA[OpenArdenneMap]]></Parameter>
       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type,
-    name, way_area AS area,
+ name, way_area AS area,
     ST_PointOnSurface(way) AS way
   FROM planet_osm_polygon
   WHERE name IS NOT NULL

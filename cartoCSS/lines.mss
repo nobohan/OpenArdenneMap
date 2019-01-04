@@ -200,8 +200,9 @@
 /* ---- Bridge symbol layer -------------------------------- */
 #bridge_symbol {
   marker-file: url(img/bridge.svg);
-  marker-height: 16;
-  marker-transform: rotate([orientation]);
+  marker-height: 160;
+  /*marker-transform: rotate([orientation]);*/
+  marker-allow-overlap: true;
 }
 
 /* ================================================================== */

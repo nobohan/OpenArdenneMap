@@ -91,7 +91,8 @@
 }
 
 #place::small[type='locality'] {
-  text-name:'[name]';
+  /*text-name:'[name]';*/
+  text-name: '';
   text-face-name:@sans;
   text-placement:point;
   text-fill:@locality_text;
@@ -101,6 +102,8 @@
   text-size:@text_size_m;
   text-wrap-width: 60;
   text-line-spacing: 1;
+  text-allow-overlap: false;
+  text-repeat-distance: 20000;
 }
 
 
@@ -109,7 +112,7 @@
 // =====================================================================
 
 #area_label {
-  text-name: "[name]";
+  text-name: "";
   text-face-name:@sans;
   text-size: @text_size_s;
   text-character-spacing: 1;
@@ -123,9 +126,8 @@
     text-fill: @green;
     text-halo-fill: lighten(@park, 10%);
   }
-  [type='golf_course'] {
-    text-fill: @black;
-    text-halo-fill: lighten(@sports, 10%);
+  [type='tourism'], [type='industrial'] {
+    text-name: '[name]';
   }
   [type='hospital'] {
     text-fill: @black;
@@ -137,6 +139,7 @@
     text-halo-fill: lighten(@hospital, 10%);
   }
   [type='water'] {
+    text-name: '[name]';
     text-fill: @darkblue;
     text-halo-fill: lighten(@water, 10%);
     text-halo-radius: 3;
