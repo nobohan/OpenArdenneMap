@@ -183,7 +183,7 @@
         "geometry_field": "way",
         "id": "bridge_symbol",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, bridge, highway, CAST(90+degrees(ST_Azimuth(ST_StartPoint(planet_osm_roads.way), ST_EndPoint(planet_osm_roads.way))) AS VARCHAR(255)) AS orientation \n FROM planet_osm_roads WHERE bridge NOT IN ('', '0', 'no')\n AND highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') \n) AS data",
+        "table": "( SELECT way, highway, CAST(90+degrees(ST_Azimuth(ST_StartPoint(planet_osm_line.way), ST_EndPoint(planet_osm_line.way))) AS VARCHAR(255)) AS orientation \n FROM planet_osm_line WHERE bridge NOT IN ('', '0', 'no') \n AND highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') \n) AS data",
         "type": "postgis"
       },
       "geometry": "linestring",
