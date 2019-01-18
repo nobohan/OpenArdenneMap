@@ -117,7 +117,7 @@ Map { font-directory: url(./fonts); }
 @rail_fill:         #fff;
 @rail_case:         @land;
 
-@aeroway:           #ddd;
+@aeroway:           @black;
 
 /* ================================================================== */
 /* BOUNDARY COLORS

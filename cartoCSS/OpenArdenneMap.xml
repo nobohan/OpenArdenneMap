@@ -242,14 +242,38 @@
       <LineSymbolizer stroke="#bc1e44" stroke-width="1.5" />
     </Rule>
   </Style>
-  <Layer name="contour" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
+  <Layer name="contour" srs="+proj=lcc +lat_1=51.16666723333333 +lat_2=49.8333339 +lat_0=90 +lon_0=4.367486666666666 +x_0=150000.013 +y_0=5400088.438 +ellps=intl +towgs84=-106.869,52.2978,-103.724,0.3366,-0.457,1.8422,-1.2747 +units=m +no_defs" status="on">
     <StyleName><![CDATA[contour]]></StyleName>
     <Datasource>
       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
-      <Parameter name="file"><![CDATA[../contour/contour.shp]]></Parameter>
+      <Parameter name="file"><![CDATA[/mnt/tera/ChampsLibres/Projets/Brugelette/tests/OSM/contours.shp]]></Parameter>
       <Parameter name="id"><![CDATA[contour]]></Parameter>
-      <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+      <Parameter name="srs"><![CDATA[+proj=lcc +lat_1=51.16666723333333 +lat_2=49.8333339 +lat_0=90 +lon_0=4.367486666666666 +x_0=150000.013 +y_0=5400088.438 +ellps=intl +towgs84=-106.869,52.2978,-103.724,0.3366,-0.457,1.8422,-1.2747 +units=m +no_defs]]></Parameter>
       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+  <Style filter-mode="first" name="boundaries">
+    <Rule>
+      <Filter><![CDATA[([admin_level] = '8')]]></Filter>
+      <LineSymbolizer stroke="#111111" stroke-dasharray="20, 10, 5" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([admin_level] = '6')]]></Filter>
+      <LineSymbolizer stroke="#111111" stroke-dasharray="20, 10, 5" stroke-width="6" />
+    </Rule>
+  </Style>
+  <Layer name="boundaries" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName><![CDATA[boundaries]]></StyleName>
+    <Datasource>
+      <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
+      <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
+      <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+      <Parameter name="key_field"><![CDATA[]]></Parameter>
+      <Parameter name="table"><![CDATA[( SELECT way, admin_level
+  FROM planet_osm_line
+  WHERE boundary IN ('administrative')
+) AS data]]></Parameter>
+      <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
   <Style filter-mode="first" name="waterway-top">
@@ -373,17 +397,17 @@
   <Style filter-mode="first" name="aeroway">
     <Rule>
       <Filter><![CDATA[([type] = 'taxiway')]]></Filter>
-      <LineSymbolizer stroke="#dddddd" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="3" />
+      <LineSymbolizer stroke="#111111" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="3" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'runway')]]></Filter>
-      <LineSymbolizer stroke="#dddddd" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="15" />
+      <LineSymbolizer stroke="#444444" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="12" />
     </Rule>
     <Rule>
-      <LineSymbolizer stroke="#dddddd" stroke-linecap="butt" stroke-linejoin="miter" />
+      <LineSymbolizer stroke="#111111" stroke-linecap="butt" stroke-linejoin="miter" />
     </Rule>
   </Style>
-  <Layer name="aeroway" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="off">
+  <Layer name="aeroway" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
     <StyleName><![CDATA[aeroway]]></StyleName>
     <Datasource>
       <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>

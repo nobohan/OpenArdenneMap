@@ -213,7 +213,8 @@
   line-cap:butt;
   line-join:miter;
   [type='runway'] {
-    line-width:15;
+    line-width:12;
+    line-color:@darkgray;
   }
   [type='taxiway'] {
     line-width:3;
@@ -249,5 +250,24 @@
   }
 }
 
+/******************************************************************* */
+
+
+/* ================================================================== */
+/* BOUNDARIES
+/* ================================================================== */
+
+#boundaries {
+[admin_level = "6"] {
+    line-color: @admin;
+    line-width: 6;
+    line-dasharray: 20, 10, 5;
+}
+  [admin_level = "8"] {
+      line-color: @admin;
+      line-width: 3;
+      line-dasharray: 20, 10, 5;
+  }
+}
 
 /******************************************************************* */
