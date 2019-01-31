@@ -32,18 +32,40 @@ Il est conseillé d'utiliser un environnment virtuel Python. Les librairies suiv
 Lancer le script `create-db.sh`. Il faut l'éditer auparavant selon le chemin de votre environnement virtuel.
 
 # Usage
-## Pour changer les données OSM (import dans une db avec imposm)
-Éditer le fichier `imposm-mapping.py`. Par rapport au style d'OSMBright, des éléments ont été ajoutés, comme le tracktype et leaf_type.
+OpenArdenneMap fonctionne avec les importateurs imposm et osm2pgsql. Les styles et le fichier de projet propres à chaque importateur se trouvent dans leurs dossiers respectifs. À noter que, grâce à sa meilleure façon de gérer les multipolygones, les développement futurs se feront avec osm2pgsql.
+
+## Pour changer les données OSM (import dans une db)
+
+Avec osm2pgsql, éditer le fichier `osm2pgsql/OpenArdenneMap.style`.
+
+Avec imposm, éditer le fichier `imposm/imposm-mapping.py`.
+
 
 ## Pour changer le style de la carte
 Éditer les fichiers `mss` en utilisant le language cartoCSS et utiliser `carto` pour générer le fichier mapnik `OpenArdenneMap.xml`:
-`carto cartoCSS/project.mml > cartoCSS/OpenArdenneMap.xml`
+`carto osm2pgsql/cartoCSS/project.mml > osm2pgsql/cartoCSS/OpenArdenneMap.xml`
 
-Pour générer la carte, faire:
+Pour générer la carte, faire (avec Python 3):
 `python makeMap.py`
 
 Le tout:
-`carto cartoCSS/project.mml > cartoCSS/OpenArdenneMap.xml && python makeMap.py`
+```
+carto osm2pgsql/cartoCSS/project.mml > osm2pgsql/cartoCSS/OpenArdenneMap.xml && python makeMap.py
+```
+
+ou bien (avec imposm):
+```
+carto imposm/cartoCSS/project.mml > imposm/cartoCSS/OpenArdenneMap.xml && python makeMap.py
+```
+
+## Mettre à jour la base de données avec osm2pgsql
+
+Voici la commande pour mettre à jour avec osm2pgsql. La table de sélection des tags OSM est dans le fichier `OpenArdenneMap.style`. Ce fichier est légèrement adapté du fichier style d'osm2pgsql par défaut.
+
+```
+osm2pgsql -c -G -d osmpg_db -S osm2pgsql/OpenArdenneMap.style ../osm-files/extract.osm
+```
+
 
 ## Mettre à jour la base de données avec imposm
 Voici les commandes pour utiliser imposm avec la table de correspondance renseignée dans imposm-mapping.py. Utiliser un shapefile e.g.,  `map_extent.shp` pour resteindre l'import à une zone:
@@ -57,14 +79,18 @@ Au lieu de processer un gros fichier tel que  belgium-latest.osm.bz2, vous pouve
 * `imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables`
 * `imposm -d osm --remove-backup-tables`
 
-Le tout:
-
-`imposm --proj=EPSG:3857 --read osm-files/extract.osm -m imposm-mapping.py --overwrite-cache && imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables && imposm -d osm --remove-backup-tables`
 
 Post-traitement de certaines tables:
 ```
 psql -d osm -c 'ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;'
 ```
+
+Le tout:
+
+```
+imposm --proj=EPSG:3857 --read ../osm-files/extract.osm -m imposm/imposm-mapping.py --overwrite-cache && imposm -U osm -d osm -m imposm/imposm-mapping.py --write --optimize --deploy-production-tables && imposm -d osm --remove-backup-tables && psql -d osm -c 'ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;'
+```
+
 
 # Changements apportés à OSMBright
 
@@ -163,6 +189,7 @@ Bien sûr, outre les additions, le style de la carte a été fortement modifié.
 * Choix de couleurs
 * Création de symboles
 * Création de patterns
+* Rotation automatique de certains éléments (cfr https://blog.champs-libres.coop/carto/2018/12/18/openardennemap.html)
 
 
 # Courbes de niveaux
@@ -180,7 +207,8 @@ Les courbes de niveaux ont été générées depuis le MNT filtré en utilisant 
 
 La couche a ensuite été post-processée pour obtenir des géométries plus courbes. L'outil `v.generalize.smooth` a été utilisé, avec l'algorithme "snakes" (paramètres par défaut).
 
-Enfin, un champ a été ajouté dans le shp des courbes de niveaux pour définir certaines lignes comme lignes maitresses, afin d'augmenter la lisibilté des lignes de contour. Ici, toutes`les lignes avec une altitude égale à un multiple de 20 m a été définie comme maitresse. Cela a été calculé dans la calculette de champ de QGIS avec la formule suivante:
+Enfin, un champ a été ajouté dans le shp des courbes de niveaux pour définir certaines lignes comme lignes maitresses, afin d'augmenter la lisibilté des lignes de contour. Ici, toutes les lignes avec une altitude égale à un multiple de 20 m a été définie comme maitresse. Cela a été calculé dans la calculette de champ de QGIS avec la formule suivante:
+
 ```
 if( "level" % 20 = 0, 'yes', NULL)
 ```
@@ -218,7 +246,7 @@ OpenArdenneMap is a customized map using OpenStreetMap data. It is based on OSMB
 ## Stack
 * This was developed inside a python virtual environment
 * Install Mapnik & python-mapnik
-* Install impsom
+* Install impsom OR osm2pgsql
 * Install carto
   * (For these last three points, have a look at OSMBright)
 * Clone or download the OpenArdenneMap files
@@ -228,18 +256,40 @@ OpenArdenneMap is a customized map using OpenStreetMap data. It is based on OSMB
 Run the script `create-db.sh`. Edit it before according to the path of your virtual environment.
 
 # Usage
+OpenArdenneMap works with imposm or osm2pgsql. Map styles and project file for each importer are within their own folder (osm2pgsql or imposm). Note that, due to is better handling of complex multipolygons, further map developments will be with osm2pgsql.
+
 ## To change the way the OSM data are imported
-Edit the imposm-mapping.py file. Some features are added in OpenArdenneMap, such as tracktype and leaf_cycle/leaf_type. See below.
+
+For imposm, edit the `imposm/imposm-mapping.py` file.
+
+For osm2pgsql, edit the `osm2pgsql/OpenArdenneMap.style` file.
 
 ## To change the style of the map
 Edit the mss files using cartoCSS language and use `carto` to generate the `OpenArdenneMap.xml` mapnik file. Then:
-`carto cartoCSS/project.mml > cartoCSS/OpenArdenneMap.xml`
+`carto osm2pgsql/cartoCSS/project.mml > osm2pgsql/cartoCSS/OpenArdenneMap.xml`
 
 To generate the map:
 `python makeMap.py`
 
-All together:
-`carto cartoCSS/project.mml > cartoCSS/OpenArdenneMap.xml && python makeMap.py`
+All together for osm2pgsql:
+```
+carto osm2pgsql/cartoCSS/project.mml > osm2pgsql/cartoCSS/OpenArdenneMap.xml && python makeMap.py
+```
+
+All together for imposm:
+```
+carto imposm/cartoCSS/project.mml > imposm/cartoCSS/OpenArdenneMap.xml && python makeMap.py
+```
+
+
+## Update the db with osm2pgsql
+
+Here is the command for updating with osm2pgsql. OSM tags selections is written in the `OpenArdenneMap.style` file. This file is slightly modified from the default osm2pgsql style file.
+
+```
+osm2pgsql -c -G -d osmpg_db -S osm2pgsql/OpenArdenneMap.style osm-files/extract.osm
+```
+
 
 ## Update the db using imposm
 Here are the commands for using imposm with this imposm-mapping. Use a shp called e.g. `map_extent.shp` to select a particular area:
@@ -253,14 +303,17 @@ Instead of processing the whole belgium-latest.osm.bz2 file, you can download di
 * `imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables`
 * `imposm -d osm --remove-backup-tables`
 
-All together:
-
-`imposm --proj=EPSG:3857 --read extract.osm -m imposm-mapping.py && imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables && imposm -d osm --remove-backup-tables`
-
 Post-processing of some tables:
 ```
 psql -d osm -c 'ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;'
 ```
+
+All together:
+
+```
+imposm --proj=EPSG:3857 --read osm-files/extract.osm -m imposm-mapping.py --overwrite-cache && imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables && imposm -d osm --remove-backup-tables && psql -d osm -c 'ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;'
+```
+
 
 # Changes compared to OSMBright
 
@@ -361,7 +414,9 @@ Of course, the style of the map was modified, with some inspiration taken from O
 * increase font size
 * custom colors
 * Symbol creation
-* Pattern creation.
+* Pattern creation
+* Automatic orientation of some features (cfr https://blog.champs-libres.coop/carto/2018/12/18/openardennemap.html)
+
 
 # Contour lines
 

@@ -4,7 +4,7 @@ from mapnik import *
 import math
 
 # The mapFile is generated using carto from cartoCSS files.
-mapFile = 'cartoCSS/OpenArdenneMap.xml'
+mapFile = 'osm2pgsql/cartoCSS/OpenArdenneMap.xml'
 
 # The mapOutput can be have different extension; png, pdf, svg, ...
 mapOutput = 'OpenArdenneMap.pdf'
@@ -27,8 +27,8 @@ m = Map(map_x, map_y)
 load_map(m, mapFile)
 
 # Bounding box (expressed in EPSG:3857, meters)
-x_center = 617000
-y_center = 6402197
+x_center = 623000
+y_center = 6404000
 
 scale = 20000
 delta_x = f*0.295*scale/math.cos(50*2*math.pi/360)
@@ -43,7 +43,7 @@ bbox = (Envelope(xmin, ymin, xmax, ymax))
 
 m.zoom_to_box(bbox)
 
-print "Scale = ", m.scale()
+print("Scale = " + str(m.scale()))
 
 # Export to mapOutput
 render_to_file(m, mapOutput)
