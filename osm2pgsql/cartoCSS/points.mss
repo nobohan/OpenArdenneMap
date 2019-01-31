@@ -10,7 +10,7 @@
 
  #train_elements {
    [type='level_crossing'] {
-     marker-file: url(img/level-crossing.svg);
+     marker-file: url(../../img/level-crossing.svg);
      marker-height: 16;
    }
  }
@@ -21,7 +21,7 @@
 
 #point_features {
     [power = 'tower'], [man_made = 'mast'] {
-        marker-file: url(img/tower.svg);
+        marker-file: url(../../img/tower.svg);
         marker-height: 4;
         ['tower:type' = 'communication'] {
             text-name:"'Pyl.'";
@@ -39,7 +39,7 @@
         }
     }
     [amenity = 'fountain'] {
-        marker-file: url(img/fountain.svg);
+        marker-file: url(../../img/fountain.svg);
         marker-height: 10;
         marker-allow-overlap: true; /* always render */
         text-name:"'Font.'";
@@ -53,16 +53,16 @@
         text-dx: -5;
     }
     [historic = 'wayside_cross'] {
-        marker-file: url(img/cross.svg);
+        marker-file: url(../../img/cross.svg);
         marker-height: 25;
         marker-allow-overlap: true; /* always render */
     }
     [leisure = 'picnic_table'], [tourism = 'picnic_site'] {
-        marker-file: url(img/picnic.svg);
+        marker-file: url(../../img/picnic.svg);
         marker-height: 12;
     }
     [historic = 'archaeological_site'], [historic = 'ruins'] {
-        marker-file: url(img/ruins.svg);
+        marker-file: url(../../img/ruins.svg);
         marker-height: 15;
         marker-allow-overlap: true; /* always render */
         text-name:'[name]';
@@ -80,7 +80,7 @@
     }
     [public_transport = 'stop_position'] {
         ['bus' = 'yes'] {
-            marker-file: url(img/bus.svg);
+            marker-file: url(../../img/bus.svg);
             marker-height: 8;
             marker-allow-overlap: true;
             text-name:"'Bus'";
@@ -107,7 +107,7 @@
 #pitch { [orientation != ''] {
     [sport='soccer'] {
         [length > 100] {
-            marker-file: url(img/soccer.svg);
+            marker-file: url(../../img/soccer.svg);
             marker-height: 40;
             marker-transform: rotate([orientation]);
             marker-allow-overlap: true;
@@ -115,7 +115,7 @@
         }
     [sport='tennis'] {
         [length > 10] {
-            marker-file: url(img/tennis.svg);
+            marker-file: url(../../img/tennis.svg);
             marker-height: 20;
             marker-transform: rotate([orientation]);
             marker-allow-overlap: true;

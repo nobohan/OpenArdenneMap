@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE Map[]>
-<Map background-color="#ffffff" font-directory="./fonts" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+<Map background-color="#ffffff" font-directory="../../fonts" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
   <Parameters>
     <Parameter name="attribution"><![CDATA[Data © OpenStreetMap (and) contributors, ODbL]]></Parameter>
     <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
@@ -20,25 +20,25 @@
       <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
       <PolygonSymbolizer fill="#acefc7" />
       <LineSymbolizer stroke="#444444" stroke-width="0.3" />
-      <PolygonPatternSymbolizer file="img/forest_nl.svg" />
+      <PolygonPatternSymbolizer file="../../img/forest_nl.svg" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
       <PolygonSymbolizer fill="#acefc7" />
       <LineSymbolizer stroke="#444444" stroke-width="0.3" />
-      <PolygonPatternSymbolizer file="img/forest_nl.svg" />
+      <PolygonPatternSymbolizer file="../../img/forest_nl.svg" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
       <PolygonSymbolizer fill="#acefc7" />
       <LineSymbolizer stroke="#444444" stroke-width="0.3" />
-      <PolygonPatternSymbolizer file="img/forest_bl.svg" />
+      <PolygonPatternSymbolizer file="../../img/forest_bl.svg" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
       <PolygonSymbolizer fill="#acefc7" />
       <LineSymbolizer stroke="#444444" stroke-width="0.3" />
-      <PolygonPatternSymbolizer file="img/forest_bl.svg" />
+      <PolygonPatternSymbolizer file="../../img/forest_bl.svg" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'school')]]></Filter>
@@ -51,7 +51,7 @@
     <Rule>
       <Filter><![CDATA[([type] = 'orchard')]]></Filter>
       <PolygonSymbolizer fill="#acefc7" />
-      <PolygonPatternSymbolizer file="img/orchard.svg" />
+      <PolygonPatternSymbolizer file="../../img/orchard.svg" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -60,7 +60,7 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'meadow')]]></Filter>
-      <PolygonPatternSymbolizer file="img/meadow.svg" />
+      <PolygonPatternSymbolizer file="../../img/meadow.svg" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -77,11 +77,11 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'scrub')]]></Filter>
-      <PolygonPatternSymbolizer file="img/heath.svg" />
+      <PolygonPatternSymbolizer file="../../img/heath.svg" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'heath')]]></Filter>
-      <PolygonPatternSymbolizer file="img/heath.svg" />
+      <PolygonPatternSymbolizer file="../../img/heath.svg" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'residential')]]></Filter>
@@ -105,7 +105,7 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'industrial')]]></Filter>
-      <PolygonPatternSymbolizer file="img/industrial.svg" />
+      <PolygonPatternSymbolizer file="../../img/industrial.svg" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -114,7 +114,7 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'grass')]]></Filter>
-      <PolygonPatternSymbolizer file="img/meadow.svg" />
+      <PolygonPatternSymbolizer file="../../img/meadow.svg" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'golf_course')]]></Filter>
@@ -124,13 +124,13 @@
       <Filter><![CDATA[([type] = 'forest')]]></Filter>
       <PolygonSymbolizer fill="#acefc7" />
       <LineSymbolizer stroke="#444444" stroke-width="0.3" />
-      <PolygonPatternSymbolizer file="img/forest.svg" />
+      <PolygonPatternSymbolizer file="../../img/forest.svg" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'wood')]]></Filter>
       <PolygonSymbolizer fill="#acefc7" />
       <LineSymbolizer stroke="#444444" stroke-width="0.3" />
-      <PolygonPatternSymbolizer file="img/forest.svg" />
+      <PolygonPatternSymbolizer file="../../img/forest.svg" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'common')]]></Filter>
@@ -146,12 +146,12 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'cemetery')]]></Filter>
-      <PolygonPatternSymbolizer file="img/cemetery.svg" />
+      <PolygonPatternSymbolizer file="../../img/cemetery.svg" />
       <LineSymbolizer stroke="#111111" stroke-width="0.3" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'camp_site')]]></Filter>
-      <PolygonPatternSymbolizer file="img/camping.svg" />
+      <PolygonPatternSymbolizer file="../../img/camping.svg" />
       <LineSymbolizer stroke="#111111" stroke-width="0.3" />
     </Rule>
   </Style>
@@ -174,7 +174,7 @@
     <Rule>
       <Filter><![CDATA[([type] = 'christmas_trees')]]></Filter>
       <PolygonSymbolizer fill="#acefc7" />
-      <PolygonPatternSymbolizer file="img/christmas_trees.svg" />
+      <PolygonPatternSymbolizer file="../../img/christmas_trees.svg" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
   </Style>
@@ -278,7 +278,7 @@
   <Style filter-mode="first" name="landuse_overlays">
     <Rule>
       <Filter><![CDATA[([type] = 'wetland')]]></Filter>
-      <PolygonPatternSymbolizer file="img/wetland.svg" />
+      <PolygonPatternSymbolizer file="../../img/wetland.svg" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'nature_reserve')]]></Filter>
@@ -6884,7 +6884,7 @@ order by area desc) as landusages]]></Parameter>
   </Layer>
   <Style filter-mode="first" name="bridge_symbol">
     <Rule>
-      <MarkersSymbolizer file="img/bridge.svg" height="16" transform="rotate([orientation])" />
+      <MarkersSymbolizer file="../../img/bridge.svg" height="16" transform="rotate([orientation])" />
     </Rule>
   </Style>
   <Layer name="bridge_symbol" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
@@ -6923,11 +6923,11 @@ order by area desc) as landusages]]></Parameter>
   <Style filter-mode="first" name="rotated_buildings">
     <Rule>
       <Filter><![CDATA[([type] = 'chapel')]]></Filter>
-      <MarkersSymbolizer file="img/church.svg" height="25" transform="rotate([orientation])" />
+      <MarkersSymbolizer file="../../img/church.svg" height="25" transform="rotate([orientation])" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'church')]]></Filter>
-      <MarkersSymbolizer allow-overlap="true" file="img/church.svg" height="40" transform="rotate([orientation])" />
+      <MarkersSymbolizer allow-overlap="true" file="../../img/church.svg" height="40" transform="rotate([orientation])" />
     </Rule>
   </Style>
   <Layer name="rotated_buildings" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
@@ -6945,11 +6945,11 @@ order by area desc) as landusages]]></Parameter>
   <Style filter-mode="first" name="linear_features">
     <Rule>
       <Filter><![CDATA[([type] = 'cliff')]]></Filter>
-      <LinePatternSymbolizer file="img/cliff.svg" />
+      <LinePatternSymbolizer file="../../img/cliff.svg" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'embankment')]]></Filter>
-      <LinePatternSymbolizer file="img/embankment.svg" />
+      <LinePatternSymbolizer file="../../img/embankment.svg" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'line')]]></Filter>
@@ -6977,53 +6977,53 @@ order by area desc) as landusages]]></Parameter>
   <Style filter-mode="first" name="point_features">
     <Rule>
       <Filter><![CDATA[([type] = 'stop_position') and ([bus] = 'yes')]]></Filter>
-      <MarkersSymbolizer allow-overlap="true" file="img/bus.svg" height="8" />
+      <MarkersSymbolizer allow-overlap="true" file="../../img/bus.svg" height="8" />
       <TextSymbolizer allow-overlap="false" character-spacing="2" dx="0" dy="-5" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="25"><![CDATA['Bus']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'tower') and ([tower_type] = 'communication')]]></Filter>
-      <MarkersSymbolizer file="img/tower.svg" height="4" />
+      <MarkersSymbolizer file="../../img/tower.svg" height="4" />
       <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'mast') and ([tower_type] = 'communication')]]></Filter>
-      <MarkersSymbolizer file="img/tower.svg" height="4" />
+      <MarkersSymbolizer file="../../img/tower.svg" height="4" />
       <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'archaeological_site')]]></Filter>
-      <MarkersSymbolizer allow-overlap="true" file="img/ruins.svg" height="15" />
+      <MarkersSymbolizer allow-overlap="true" file="../../img/ruins.svg" height="15" />
       <TextSymbolizer character-spacing="2" dx="12" dy="-5" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35" wrap-width="50"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'ruins')]]></Filter>
-      <MarkersSymbolizer allow-overlap="true" file="img/ruins.svg" height="15" />
+      <MarkersSymbolizer allow-overlap="true" file="../../img/ruins.svg" height="15" />
       <TextSymbolizer character-spacing="2" dx="12" dy="-5" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35" wrap-width="50"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'picnic_table')]]></Filter>
-      <MarkersSymbolizer file="img/picnic.svg" height="12" />
+      <MarkersSymbolizer file="../../img/picnic.svg" height="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'picnic_site')]]></Filter>
-      <MarkersSymbolizer file="img/picnic.svg" height="12" />
+      <MarkersSymbolizer file="../../img/picnic.svg" height="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'wayside_cross')]]></Filter>
-      <MarkersSymbolizer allow-overlap="true" file="img/cross.svg" height="25" />
+      <MarkersSymbolizer allow-overlap="true" file="../../img/cross.svg" height="25" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'fountain')]]></Filter>
-      <MarkersSymbolizer allow-overlap="true" file="img/fountain.svg" height="10" />
+      <MarkersSymbolizer allow-overlap="true" file="../../img/fountain.svg" height="10" />
       <TextSymbolizer character-spacing="2" dx="-5" dy="-16" fill="#7d7ded" fontset-name="fontset-0" line-spacing="2" placement="point" size="35"><![CDATA['Font.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'tower')]]></Filter>
-      <MarkersSymbolizer file="img/tower.svg" height="4" />
+      <MarkersSymbolizer file="../../img/tower.svg" height="4" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'mast')]]></Filter>
-      <MarkersSymbolizer file="img/tower.svg" height="4" />
+      <MarkersSymbolizer file="../../img/tower.svg" height="4" />
     </Rule>
   </Style>
   <Layer name="point_features" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
@@ -7043,11 +7043,11 @@ order by area desc) as landusages]]></Parameter>
   <Style filter-mode="first" name="pitch">
     <Rule>
       <Filter><![CDATA[([orientation] != '') and ([sport] = 'tennis') and ([length] > 10)]]></Filter>
-      <MarkersSymbolizer allow-overlap="true" file="img/tennis.svg" height="20" transform="rotate([orientation])" />
+      <MarkersSymbolizer allow-overlap="true" file="../../img/tennis.svg" height="20" transform="rotate([orientation])" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([orientation] != '') and ([sport] = 'soccer') and ([length] > 100)]]></Filter>
-      <MarkersSymbolizer allow-overlap="true" file="img/soccer.svg" height="40" transform="rotate([orientation])" />
+      <MarkersSymbolizer allow-overlap="true" file="../../img/soccer.svg" height="40" transform="rotate([orientation])" />
     </Rule>
   </Style>
   <Layer name="pitch" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
@@ -7248,7 +7248,7 @@ order by area desc) as landusages]]></Parameter>
   <Style filter-mode="first" name="train_elements">
     <Rule>
       <Filter><![CDATA[([type] = 'level_crossing')]]></Filter>
-      <MarkersSymbolizer file="img/level-crossing.svg" height="16" />
+      <MarkersSymbolizer file="../../img/level-crossing.svg" height="16" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'station')]]></Filter>

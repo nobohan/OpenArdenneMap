@@ -3,7 +3,7 @@ OpenArdenneMap
 
 *Une carte pour l'Ardenne*
 
-![map](img/openardennemap.png)
+![map](openardennemap.png)
 
 
 Un exemple peut être téléchargé [ici](http://www.nobohan.be/docs/OpenArdenneMap_Rulles_1_20000e.pdf).

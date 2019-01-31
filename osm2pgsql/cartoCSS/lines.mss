@@ -199,7 +199,7 @@
 
 /* ---- Bridge symbol layer -------------------------------- */
 #bridge_symbol {
-  marker-file: url(img/bridge.svg);
+  marker-file: url(../../img/bridge.svg);
   marker-height: 16;
   marker-transform: rotate([orientation]);
 }
@@ -238,10 +238,10 @@
       line-width: 2;
   }
   [man_made = 'embankment'] {
-      line-pattern-file: url(img/embankment.svg);
+      line-pattern-file: url(../../img/embankment.svg);
   }
   [natural = 'cliff'] {
-      line-pattern-file: url(img/cliff.svg);
+      line-pattern-file: url(../../img/cliff.svg);
   }
   [man_made = 'cutline'] {
       line-width: 2;
