@@ -4,6 +4,7 @@ from mapnik import *
 import math
 
 # The mapFile is generated using carto from cartoCSS files.
+# /!\ Choose the right importer here: osm2pgsql or imposm!
 mapFile = 'osm2pgsql/cartoCSS/OpenArdenneMap.xml'
 
 # The mapOutput can be have different extension; png, pdf, svg, ...
