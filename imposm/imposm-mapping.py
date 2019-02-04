@@ -180,9 +180,6 @@ minorroads = Highway(
             'living_street',
             'unclassified',
             'residential',
-        ),
-        'man_made': (
-            'cutline',
     )},
     fields = (
             ('surface', String()),
@@ -293,6 +290,8 @@ landusages = Polygons(
         ('area', PseudoArea()),
         ('leaf_type', String()),
         ('leaf_cycle', String()),
+        ('trees', String()),
+        ('produce', String()),
         ('z_order', ZOrder([
             'pedestrian',
             'footway',
@@ -409,6 +408,12 @@ landusages = Polygons(
             'helipad',
             'apron',
         ),
+        'produce': (
+            'christmas_trees',
+        ),
+        'trees': (
+            'christmas_trees',
+        ),
 
     }
 )
@@ -420,12 +425,6 @@ extraLandusages = Polygons(
         ('sport', String()),
     ),
     mapping = {
-        'produce': (
-            'christmas_trees',
-        ),
-        'trees': (
-            'christmas_trees',
-        ),
         'leisure': (
             'pitch',
         )
@@ -464,6 +463,13 @@ pointFeatures = Points(
     fields = (
         ('tower:type', String()),
         ('bus', String()),
+        ('power', String()),
+        ('historic', String()),
+        ('man_made', String()),
+        ('leisure', String()),
+        ('tourism', String()),
+        ('amenity', String()),
+        ('public_transport', String()),
         ('class', Class()),
     )
 )
@@ -473,6 +479,7 @@ linearfeatures = LineStrings(
    mapping = {
            'man_made': (
               'embankment',
+              'cutline',
            ),
            'barrier': (
                'hedge',

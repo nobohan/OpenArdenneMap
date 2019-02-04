@@ -43,19 +43,19 @@ Avec imposm, éditer le fichier `imposm/imposm-mapping.py`.
 
 ## Pour changer le style de la carte
 Éditer les fichiers `mss` en utilisant le language cartoCSS et utiliser `carto` pour générer le fichier mapnik `OpenArdenneMap.xml`:
-`carto osm2pgsql/cartoCSS/project.mml > osm2pgsql/cartoCSS/OpenArdenneMap.xml`
+`carto osm2pgsql/project.mml > osm2pgsql/OpenArdenneMap.xml`
 
 Pour générer la carte, faire (avec Python 3):
 `python makeMap.py`
 
 Le tout:
 ```
-carto osm2pgsql/cartoCSS/project.mml > osm2pgsql/cartoCSS/OpenArdenneMap.xml && python makeMap.py
+carto osm2pgsql/project.mml > osm2pgsql/OpenArdenneMap.xml && python makeMap.py
 ```
 
 ou bien (avec imposm):
 ```
-carto imposm/cartoCSS/project.mml > imposm/cartoCSS/OpenArdenneMap.xml && python makeMap.py
+carto imposm/project.mml > imposm/OpenArdenneMap.xml && python makeMap.py
 ```
 
 ## Mettre à jour la base de données avec osm2pgsql
@@ -63,7 +63,7 @@ carto imposm/cartoCSS/project.mml > imposm/cartoCSS/OpenArdenneMap.xml && python
 Voici la commande pour mettre à jour avec osm2pgsql. La table de sélection des tags OSM est dans le fichier `OpenArdenneMap.style`. Ce fichier est légèrement adapté du fichier style d'osm2pgsql par défaut.
 
 ```
-osm2pgsql -c -G -d osmpg_db -S osm2pgsql/OpenArdenneMap.style ../osm-files/extract.osm
+osm2pgsql -c -G -d osmpg_db -S osm2pgsql/OpenArdenneMap.style osm-files/extract.osm
 ```
 
 
@@ -80,15 +80,10 @@ Au lieu de processer un gros fichier tel que  belgium-latest.osm.bz2, vous pouve
 * `imposm -d osm --remove-backup-tables`
 
 
-Post-traitement de certaines tables:
-```
-psql -d osm -c 'ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;'
-```
-
 Le tout:
 
 ```
-imposm --proj=EPSG:3857 --read ../osm-files/extract.osm -m imposm/imposm-mapping.py --overwrite-cache && imposm -U osm -d osm -m imposm/imposm-mapping.py --write --optimize --deploy-production-tables && imposm -d osm --remove-backup-tables && psql -d osm -c 'ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;'
+imposm --proj=EPSG:3857 --read osm-files/extract.osm -m imposm/imposm-mapping.py --overwrite-cache && imposm -U osm -d osm -m imposm/imposm-mapping.py --write --optimize --deploy-production-tables && imposm -d osm --remove-backup-tables
 ```
 
 
@@ -266,19 +261,19 @@ For osm2pgsql, edit the `osm2pgsql/OpenArdenneMap.style` file.
 
 ## To change the style of the map
 Edit the mss files using cartoCSS language and use `carto` to generate the `OpenArdenneMap.xml` mapnik file. Then:
-`carto osm2pgsql/cartoCSS/project.mml > osm2pgsql/cartoCSS/OpenArdenneMap.xml`
+`carto osm2pgsql/project.mml > osm2pgsql/OpenArdenneMap.xml`
 
 To generate the map:
 `python makeMap.py`
 
 All together for osm2pgsql:
 ```
-carto osm2pgsql/cartoCSS/project.mml > osm2pgsql/cartoCSS/OpenArdenneMap.xml && python makeMap.py
+carto osm2pgsql/project.mml > osm2pgsql/OpenArdenneMap.xml && python makeMap.py
 ```
 
 All together for imposm:
 ```
-carto imposm/cartoCSS/project.mml > imposm/cartoCSS/OpenArdenneMap.xml && python makeMap.py
+carto imposm/project.mml > imposm/OpenArdenneMap.xml && python makeMap.py
 ```
 
 
@@ -303,15 +298,11 @@ Instead of processing the whole belgium-latest.osm.bz2 file, you can download di
 * `imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables`
 * `imposm -d osm --remove-backup-tables`
 
-Post-processing of some tables:
-```
-psql -d osm -c 'ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;'
-```
 
 All together:
 
 ```
-imposm --proj=EPSG:3857 --read osm-files/extract.osm -m imposm-mapping.py --overwrite-cache && imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables && imposm -d osm --remove-backup-tables && psql -d osm -c 'ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;'
+imposm --proj=EPSG:3857 --read osm-files/extract.osm -m imposm-mapping.py --overwrite-cache && imposm -U osm -d osm -m imposm-mapping.py --write --optimize --deploy-production-tables && imposm -d osm --remove-backup-tables
 ```
 
 

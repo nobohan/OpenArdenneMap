@@ -199,7 +199,7 @@
 
 /* ---- Bridge symbol layer -------------------------------- */
 #bridge_symbol {
-  marker-file: url(../../img/bridge.svg);
+  marker-file: url(../img/bridge.svg);
   marker-height: 16;
   marker-transform: rotate([orientation]);
 }
@@ -228,22 +228,22 @@
 /* ================================================================== */
 
 #linear_features {
-  [barrier = 'hedge'], [natural = 'tree_row'] {
+  [type = 'hedge'], [type = 'tree_row'] {
       line-color: darken(@green,30%);
       line-width: 3;
       line-dasharray: 3,5;
   }
-  [power = 'line'] {
+  [type = 'line'] {
       line-color: @black;
       line-width: 2;
   }
-  [man_made = 'embankment'] {
-      line-pattern-file: url(../../img/embankment.svg);
+  [type = 'embankment'] {
+      line-pattern-file: url(../img/embankment.svg);
   }
-  [natural = 'cliff'] {
-      line-pattern-file: url(../../img/cliff.svg);
+  [type = 'cliff'] {
+      line-pattern-file: url(../img/cliff.svg);
   }
-  [man_made = 'cutline'] {
+  [type = 'cutline'] {
       line-width: 2;
       line-dasharray: 25, 15;
       line-color: @darkgray;

@@ -5,7 +5,7 @@ import math
 
 # The mapFile is generated using carto from cartoCSS files.
 # /!\ Choose the right importer here: osm2pgsql or imposm!
-mapFile = 'osm2pgsql/cartoCSS/OpenArdenneMap.xml'
+mapFile = 'osm2pgsql/OpenArdenneMap.xml'
 
 # The mapOutput can be have different extension; png, pdf, svg, ...
 mapOutput = 'OpenArdenneMap.pdf'
@@ -14,7 +14,7 @@ mapOutput = 'OpenArdenneMap.pdf'
 # NB: An A4 in 200 dpi is 1654 x 2339 px, or 21 cm x 29.5 cm
 # the ratio of format is sqrt(2)
 
-page = 'A2'  # An A2 is 4 A4
+page = 'A3'  # An A2 is 4 A4
 pages = (4, 3, 2, 1, 0)
 # Compute the scale
 page_size = int(page[1])
@@ -29,7 +29,7 @@ load_map(m, mapFile)
 
 # Bounding box (expressed in EPSG:3857, meters)
 x_center = 623000
-y_center = 6404000
+y_center = 6403000
 
 scale = 20000
 delta_x = f*0.295*scale/math.cos(50*2*math.pi/360)
