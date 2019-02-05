@@ -30,7 +30,7 @@ Map { background-color: @purewhite; }
   [type='commercial']    { polygon-fill: @industrial; }
   [type='common']        { polygon-fill: @park; }
   [type='forest'], [type='wood'] {
-      polygon-fill: @green;
+      polygon-fill: @bottle;
       line-width: 0.3;
       line-color: @darkgray;
       polygon-pattern-file:url(../img/forest.svg);
@@ -115,7 +115,7 @@ Map { background-color: @purewhite; }
 
 
 #waterway { [type='river'], [type='stream'], [type='canal'], [type='ditch'], [type='drain'] {
-    line-color: @darkblue;
+    line-color: @blue;
     [type='river']
         {
         line-cap: round;

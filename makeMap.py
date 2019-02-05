@@ -8,7 +8,7 @@ import math
 mapFile = 'osm2pgsql/OpenArdenneMap.xml'
 
 # The mapOutput can be have different extension; png, pdf, svg, ...
-mapOutput = 'OpenArdenneMap.pdf'
+mapOutput = 'OpenOrvalMap.pdf'
 
 # Map size
 # NB: An A4 in 200 dpi is 1654 x 2339 px, or 21 cm x 29.5 cm
@@ -28,10 +28,10 @@ m = Map(map_x, map_y)
 load_map(m, mapFile)
 
 # Bounding box (expressed in EPSG:3857, meters)
-x_center = 623000
-y_center = 6403000
+x_center = 595220
+y_center = 6383055
 
-scale = 20000
+scale = 15000
 delta_x = f*0.295*scale/math.cos(50*2*math.pi/360)
 delta_y = delta_x/math.sqrt(2)
 xmin = x_center - delta_x/2

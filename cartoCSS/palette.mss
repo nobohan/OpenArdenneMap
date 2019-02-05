@@ -23,7 +23,7 @@ Map { font-directory: url(../fonts); }
 /* set up font sets for various weights and styles */
 @sans_lt:       "Open Sans Regular", "DejaVu Sans Book";
 @sans_lt_italic:    "DejaVu Sans Oblique";
-@sans:          "Alfphabet III", "Open Sans Semibold", "DejaVu Sans Book";
+@sans:          "Belgika 8th", "Open Sans Semibold", "DejaVu Sans Book";
 @sans_italic:   "Open Sans Semibold Italic", "DejaVu Sans Oblique";
 @sans_bold:  "Open Sans Bold", "DejaVu Sans Bold";
 @sans_bold_italic:  "Open Sans Bold Italic","DejaVu Sans Bold Oblique", "DejaVu Sans Oblique";
@@ -38,39 +38,44 @@ Map { font-directory: url(../fonts); }
 /* BASE COLORS
 /* ================================================================== */
 
+@gold:              #aaa16c;
+@bottle:            #698785;
+
 @purewhite:         #ffffff;
-@white:             #fcfcf4;
+@white:             #F1EFE0;
 @black:             #111111;
 @darkgray:          #444444;
 @gray:              #bbbbbb;
 
-@red:               #e8889f; /*#E55779; /*#db794c;*/
-@green:             #acefc7; /*#3d9142;   #5ADD84*/
-@blue:              #c4c4ef; /*#aeaeef;*/
-@darkblue:          #7d7ded;
+@red:               #f5812b;
+@green:             #26b424; /*59773f*/   /*135955*/
+@blue:              #00aee4;
+@darkblue:          #605492;
 
-@contour:           #bc1e44; /*#b06435;*/
+
+
+@contour:           #bc1e44;
 
 /* ================================================================== */
 /* LANDUSE & LANDCOVER COLORS
 /* ================================================================== */
 
-@land:              @purewhite;
+@land:              @white;
 @water:             @blue;
-@grass:             @purewhite;
-@park:              @purewhite;
-@cemetery:          @purewhite;
+@grass:             @white;
+@park:              @white;
+@cemetery:          @white;
 @wooded:            @green;
-@agriculture:       @purewhite;
-@farmyard:          @purewhite;
+@agriculture:       @white;
+@farmyard:          @white;
 @building:          @darkgray;
-@hospital:          @purewhite;
-@school:            @purewhite;
-@sports:            @purewhite;
-@residential:       @purewhite;
-@commercial:        @purewhite;
-@industrial:        @purewhite;
-@parking:           @purewhite;
+@hospital:          @white;
+@school:            @white;
+@sports:            @white;
+@residential:       @white;
+@commercial:        @white;
+@industrial:        @white;
+@parking:           @white;
 
 /* ================================================================== */
 /* ROAD COLORS
