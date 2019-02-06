@@ -6,7 +6,7 @@
  *
  */
 
-Map { background-color: @purewhite; }
+Map { background-color: @white; }
 
 /* ================================================================== */
 /* CONTOUR
@@ -14,8 +14,8 @@ Map { background-color: @purewhite; }
 
 #contour  {
   line-color: @contour;
-  line-width: 1.5;
-  [main="yes"] {line-width: 3;}
+  line-width: 1;
+  [main="yes"] {line-width: 2;}
 }
 
 
@@ -123,7 +123,7 @@ Map { background-color: @purewhite; }
         line-width: 12;
         }
     [type='stream'], [type='canal'] {
-        line-width: 4;
+        line-width: 6;
         }
     [type='ditch'], [type='drain'] {
         line-width: 2;

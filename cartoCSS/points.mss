@@ -45,7 +45,7 @@
         text-name:"'Font.'";
         text-face-name:@sans;
         text-placement:point;
-        text-fill:@darkblue;
+        text-fill:@blue;
         text-size:@text_size_s;
         text-character-spacing: 2;
         text-line-spacing: 2;

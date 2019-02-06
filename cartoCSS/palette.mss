@@ -54,7 +54,7 @@ Map { font-directory: url(../fonts); }
 
 
 
-@contour:           #bc1e44;
+@contour:           @gray;
 
 /* ================================================================== */
 /* LANDUSE & LANDCOVER COLORS
