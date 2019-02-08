@@ -14,7 +14,7 @@ mapOutput = 'OpenOrvalMap.pdf'
 # NB: An A4 in 200 dpi is 1654 x 2339 px, or 21 cm x 29.5 cm
 # the ratio of format is sqrt(2)
 
-page = 'A3'  # An A2 is 4 A4
+page = 'A2'  # An A2 is 4 A4
 pages = (4, 3, 2, 1, 0)
 # Compute the scale
 page_size = int(page[1])
@@ -31,7 +31,7 @@ load_map(m, mapFile)
 x_center = 595220
 y_center = 6384555
 
-scale = 15000
+scale = 16000
 delta_x = f*0.295*scale/math.cos(50*2*math.pi/360)
 delta_y = delta_x/math.sqrt(2)
 xmin = x_center - delta_x/2
