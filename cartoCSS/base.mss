@@ -14,8 +14,8 @@ Map { background-color: @purewhite; }
 
 #contour  {
   line-color: @contour;
-  line-width: 1.5;
-  [main="yes"] {line-width: 3;}
+  line-width: 1;
+  [main="yes"] {line-width: 2;}
 }
 
 

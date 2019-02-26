@@ -7191,17 +7191,18 @@
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
-  <Style filter-mode="first" name="vtt56km">
+  <Style filter-mode="first" name="vtt28km">
     <Rule>
-      <LineSymbolizer offset="4" stroke="#fc14b6" stroke-width="5" />
+      <LineSymbolizer offset="10" stroke="#ff9703" stroke-opacity="0.7" stroke-width="9" />
+      <MarkersSymbolizer file="../img/arrow.png" height="10" offset="10" placement="line" spacing="400" />
     </Rule>
   </Style>
-  <Layer name="vtt56km" srs="+proj=longlat +datum=WGS84 +no_defs " status="on">
-    <StyleName><![CDATA[vtt56km]]></StyleName>
+  <Layer name="vtt28km" srs="+proj=longlat +datum=WGS84 +no_defs " status="on">
+    <StyleName><![CDATA[vtt28km]]></StyleName>
     <Datasource>
       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
-      <Parameter name="file"><![CDATA[../geojson/marbehan_56km.geojson]]></Parameter>
-      <Parameter name="id"><![CDATA[vtt56km]]></Parameter>
+      <Parameter name="file"><![CDATA[../geojson/marbehan_28km.geojson]]></Parameter>
+      <Parameter name="id"><![CDATA[vtt28km]]></Parameter>
       <Parameter name="srs"><![CDATA[+proj=longlat +datum=WGS84 +no_defs]]></Parameter>
       <Parameter name="type"><![CDATA[geojson]]></Parameter>
     </Datasource>

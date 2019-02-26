@@ -7193,7 +7193,8 @@
   </Layer>
   <Style filter-mode="first" name="vtt56km">
     <Rule>
-      <LineSymbolizer offset="4" stroke="#fc14b6" stroke-width="5" />
+      <LineSymbolizer offset="10" stroke="#ff9703" stroke-opacity="0.7" stroke-width="9" />
+      <MarkersSymbolizer file="../img/arrow.svg" placement="line" spacing="200" />
     </Rule>
   </Style>
   <Layer name="vtt56km" srs="+proj=longlat +datum=WGS84 +no_defs " status="on">

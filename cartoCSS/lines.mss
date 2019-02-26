@@ -271,3 +271,60 @@
 }
 
 /******************************************************************* */
+
+
+/* ================================================================== */
+/* VTT
+/* ================================================================== */
+
+@vtt28km: #d95f02;
+@vtt32km: #7570b3;
+@vtt41km: #e7298a;
+@vtt42km: #FFBF00;
+@vtt56km: #2E2E2E;
+
+@pink: #ff9703;
+@lo: 9;
+@lop: 0.7;
+
+#vtt28km {
+  line-color: @pink;
+  line-width: @lo;
+  line-offset: @lo+1;
+  line-opacity: @lop;
+  marker-file: url(../img/arrow.png);
+  marker-height: 10;
+  marker-placement: line;
+  marker-spacing: 400;
+  marker-offset: @lo+1;
+}
+#vtt32km {
+  line-color: @pink;
+  line-width: @lo;
+  line-offset: @lo+1;
+  line-opacity: @lop;
+  marker-file: url(../img/arrow.svg);
+  marker-placement: line;
+  marker-spacing: 200;
+}
+#vtt42km {
+  line-color: @pink;
+  line-width: @lo;
+  line-offset: @lo+1;
+  line-opacity: @lop;
+  marker-file: url(../img/arrow.svg);
+  marker-placement: line;
+  marker-spacing: 200;
+}
+#vtt56km {
+  line-color: @pink;
+  line-width: @lo;
+  line-offset: @lo+1;
+  line-opacity: @lop;
+  marker-file: url(../img/arrow.svg);
+  marker-placement: line;
+  marker-spacing: 200;
+}
+
+
+/* <MarkersSymbolizer file="symbols-otm/waterway-arrow.svg" placement="line" spacing="600" max-error="0.3"/> */

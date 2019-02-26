@@ -356,15 +356,15 @@
     {
       "Datasource": {
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
-        "file": "../geojson/marbehan_56km.geojson",
-        "id": "vtt56km",
+        "file": "../geojson/marbehan_42km.geojson",
+        "id": "vtt42km",
         "srs": "+proj=longlat +datum=WGS84 +no_defs",
         "type": "geojson"
       },
       "class": "",
       "geometry": "linestring",
-      "id": "vtt56km",
-      "name": "vtt56km",
+      "id": "vtt42km",
+      "name": "vtt42km",
       "srs": "+proj=longlat +datum=WGS84 +no_defs ",
       "status": "on"
     }
