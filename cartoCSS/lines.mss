@@ -290,41 +290,93 @@
 #vtt28km {
   line-color: @pink;
   line-width: @lo;
-  line-offset: @lo+1;
+  line-offset: -@lo+1;
   line-opacity: @lop;
   marker-file: url(../img/arrow.png);
-  marker-height: 10;
+  marker-height: 12;
   marker-placement: line;
   marker-spacing: 400;
-  marker-offset: @lo+1;
+  marker-offset: -@lo+1;
 }
 #vtt32km {
   line-color: @pink;
   line-width: @lo;
-  line-offset: @lo+1;
+  line-offset: -@lo+1;
   line-opacity: @lop;
-  marker-file: url(../img/arrow.svg);
+  marker-file: url(../img/arrow.png);
+  marker-height: 12;
   marker-placement: line;
-  marker-spacing: 200;
+  marker-spacing: 400;
+  marker-offset: -@lo+1;
 }
 #vtt42km {
   line-color: @pink;
   line-width: @lo;
-  line-offset: @lo+1;
+  line-offset: -@lo+1;
   line-opacity: @lop;
-  marker-file: url(../img/arrow.svg);
+  marker-file: url(../img/arrow.png);
+  marker-height: 12;
   marker-placement: line;
-  marker-spacing: 200;
+  marker-spacing: 400;
+  marker-offset: -@lo+1;
 }
 #vtt56km {
   line-color: @pink;
   line-width: @lo;
-  line-offset: @lo+1;
+  line-offset: -@lo+1;
   line-opacity: @lop;
-  marker-file: url(../img/arrow.svg);
+  marker-file: url(../img/arrow.png);
+  marker-height: 12;
   marker-placement: line;
-  marker-spacing: 200;
+  marker-spacing: 400;
+  marker-offset: -@lo+1;
 }
 
+#vtt_planA{
+  line-color: #FF00FF;
+  line-width: @lo;
+  line-offset: -@lo+1;
+  line-opacity: @lop;
+  marker-file: url(../img/arrow.png);
+  marker-height: 12;
+  marker-placement: line;
+  marker-spacing: 400;
+  marker-offset: -@lo+1;
+}
 
-/* <MarkersSymbolizer file="symbols-otm/waterway-arrow.svg" placement="line" spacing="600" max-error="0.3"/> */
+#marche12km_planA {
+  line-color: #FF00FF;
+  line-width: @lo;
+  line-offset: -@lo+1;
+  line-opacity: 1;
+  marker-file: url(../img/arrow.png);
+  marker-height: 12;
+  marker-placement: line;
+  marker-spacing: 400;
+  marker-offset: -@lo+1;
+}
+
+#marche12km_planB {
+  line-color: @pink;
+  line-width: @lo;
+  line-offset: -@lo+1;
+  line-opacity: 1;
+  marker-file: url(../img/arrow.png);
+  marker-height: 12;
+  marker-placement: line;
+  marker-spacing: 400;
+  marker-offset: -@lo+1;
+}
+
+#marche8km_planB {
+  line-color: @pink;
+  line-width: @lo;
+  line-offset: -@lo+1;
+  line-opacity: 1;
+  line-dasharray: 12,6;
+  marker-file: url(../img/arrow.png);
+  marker-height: 12;
+  marker-placement: line;
+  marker-spacing: 400;
+  marker-offset: -@lo+1;
+}

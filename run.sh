@@ -1,3 +1,4 @@
+carto osm2pgsql/project-marche.mml > osm2pgsql/OpenArdenneMap_marche.xml &&
 carto osm2pgsql/project28km.mml > osm2pgsql/OpenArdenneMap28km.xml &&
 carto osm2pgsql/project32km.mml > osm2pgsql/OpenArdenneMap32km.xml &&
 carto osm2pgsql/project42km.mml > osm2pgsql/OpenArdenneMap42km.xml &&

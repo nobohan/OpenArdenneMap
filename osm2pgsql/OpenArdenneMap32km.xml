@@ -7191,10 +7191,40 @@
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
+  <Style filter-mode="first" name="label32km">
+    <Rule>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-50" dy="-60" fill="#111111" fontset-name="fontset-0" halo-fill="#ff9703" halo-radius="3" placement="point" size="120"><![CDATA['Plan B - 32 km']]></TextSymbolizer>
+    </Rule>
+  </Style>
+  <Layer name="label32km" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
+    <StyleName><![CDATA[label32km]]></StyleName>
+    <Datasource>
+      <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+      <Parameter name="file"><![CDATA[../geojson/start.shp]]></Parameter>
+      <Parameter name="id"><![CDATA[label32km]]></Parameter>
+      <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+      <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+  <Style filter-mode="first" name="label_planA">
+    <Rule>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-50" dy="10" fill="#111111" fontset-name="fontset-0" halo-fill="#ff00ff" halo-radius="3" placement="point" size="120"><![CDATA['Plan A']]></TextSymbolizer>
+    </Rule>
+  </Style>
+  <Layer name="label_planA" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
+    <StyleName><![CDATA[label_planA]]></StyleName>
+    <Datasource>
+      <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+      <Parameter name="file"><![CDATA[../geojson/start.shp]]></Parameter>
+      <Parameter name="id"><![CDATA[label_planA]]></Parameter>
+      <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+      <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
   <Style filter-mode="first" name="vtt32km">
     <Rule>
-      <LineSymbolizer offset="10" stroke="#ff9703" stroke-opacity="0.7" stroke-width="9" />
-      <MarkersSymbolizer file="../img/arrow.svg" placement="line" spacing="200" />
+      <LineSymbolizer offset="- 10" stroke="#ff9703" stroke-opacity="0.7" stroke-width="9" />
+      <MarkersSymbolizer file="../img/arrow.png" height="12" offset="- 10" placement="line" spacing="400" />
     </Rule>
   </Style>
   <Layer name="vtt32km" srs="+proj=longlat +datum=WGS84 +no_defs " status="on">
@@ -7203,6 +7233,38 @@
       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
       <Parameter name="file"><![CDATA[../geojson/marbehan_32km.geojson]]></Parameter>
       <Parameter name="id"><![CDATA[vtt32km]]></Parameter>
+      <Parameter name="srs"><![CDATA[+proj=longlat +datum=WGS84 +no_defs]]></Parameter>
+      <Parameter name="type"><![CDATA[geojson]]></Parameter>
+    </Datasource>
+  </Layer>
+  <Style filter-mode="first" name="vtt_planA">
+    <Rule>
+      <LineSymbolizer offset="- 10" stroke="#ff00ff" stroke-opacity="0.7" stroke-width="9" />
+      <MarkersSymbolizer file="../img/arrow.png" height="12" offset="- 10" placement="line" spacing="400" />
+    </Rule>
+  </Style>
+  <Layer name="vtt_planA" srs="+proj=longlat +datum=WGS84 +no_defs " status="on">
+    <StyleName><![CDATA[vtt_planA]]></StyleName>
+    <Datasource>
+      <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+      <Parameter name="file"><![CDATA[../geojson/aller1.geojson]]></Parameter>
+      <Parameter name="id"><![CDATA[vtt_planA]]></Parameter>
+      <Parameter name="srs"><![CDATA[+proj=longlat +datum=WGS84 +no_defs]]></Parameter>
+      <Parameter name="type"><![CDATA[geojson]]></Parameter>
+    </Datasource>
+  </Layer>
+  <Style filter-mode="first" name="vtt_planA">
+    <Rule>
+      <LineSymbolizer offset="- 10" stroke="#ff00ff" stroke-opacity="0.7" stroke-width="9" />
+      <MarkersSymbolizer file="../img/arrow.png" height="12" offset="- 10" placement="line" spacing="400" />
+    </Rule>
+  </Style>
+  <Layer name="vtt_planA" srs="+proj=longlat +datum=WGS84 +no_defs " status="on">
+    <StyleName><![CDATA[vtt_planA]]></StyleName>
+    <Datasource>
+      <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+      <Parameter name="file"><![CDATA[../geojson/retour1.geojson]]></Parameter>
+      <Parameter name="id"><![CDATA[vtt_planA]]></Parameter>
       <Parameter name="srs"><![CDATA[+proj=longlat +datum=WGS84 +no_defs]]></Parameter>
       <Parameter name="type"><![CDATA[geojson]]></Parameter>
     </Datasource>

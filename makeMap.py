@@ -8,7 +8,7 @@ def make_map(distance, scale, x_center = 622000, y_center = 6406400, pageFormat 
     mapFile = 'osm2pgsql/OpenArdenneMap' + distance + '.xml'
 
     # The mapOutput can be have different extension; png, pdf, svg, ...
-    mapOutput = 'marbehan_' + distance + '.png'
+    mapOutput = 'marbehan_' + distance + '.pdf'
 
     # Map size
     page = pageFormat
@@ -38,7 +38,9 @@ def make_map(distance, scale, x_center = 622000, y_center = 6406400, pageFormat 
     # Export to mapOutput
     render_to_file(m, mapOutput)
 
+
+make_map('_marche', 20000, 618000, 6398000, 'A4')
 make_map('28km', 25000, 621000, 6403500)
 make_map('32km', 25000, 621000, 6403500)
-make_map('42km', 30000, 621000, 6403500)
+make_map('42km', 30000, 621000, 6406000)
 make_map('56km', 38000)

@@ -356,6 +356,36 @@
     {
       "Datasource": {
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
+        "file": "../geojson/start.shp",
+        "id": "label42km",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "type": "shape"
+      },
+      "class": "",
+      "geometry": "linestring",
+      "id": "label42km",
+      "name": "label42km",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
+        "file": "../geojson/start.shp",
+        "id": "label_planA",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "type": "shape"
+      },
+      "class": "",
+      "geometry": "linestring",
+      "id": "label_planA",
+      "name": "label_planA",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "file": "../geojson/marbehan_42km.geojson",
         "id": "vtt42km",
         "srs": "+proj=longlat +datum=WGS84 +no_defs",
@@ -365,6 +395,36 @@
       "geometry": "linestring",
       "id": "vtt42km",
       "name": "vtt42km",
+      "srs": "+proj=longlat +datum=WGS84 +no_defs ",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
+        "file": "../geojson/aller2.geojson",
+        "id": "vtt_planA",
+        "srs": "+proj=longlat +datum=WGS84 +no_defs",
+        "type": "geojson"
+      },
+      "class": "",
+      "geometry": "linestring",
+      "id": "vtt_planA",
+      "name": "vtt_planA",
+      "srs": "+proj=longlat +datum=WGS84 +no_defs ",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
+        "file": "../geojson/retour2.geojson",
+        "id": "vtt_planA",
+        "srs": "+proj=longlat +datum=WGS84 +no_defs",
+        "type": "geojson"
+      },
+      "class": "",
+      "geometry": "linestring",
+      "id": "vtt_planA",
+      "name": "vtt_planA",
       "srs": "+proj=longlat +datum=WGS84 +no_defs ",
       "status": "on"
     }
