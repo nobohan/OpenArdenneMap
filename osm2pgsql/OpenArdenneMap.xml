@@ -89,9 +89,21 @@
       <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
     </Rule>
     <Rule>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'farmland')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" transform="rotate([orientation])" />
+      <PolygonSymbolizer fill="#26b424" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
       <Filter><![CDATA[([trees] = 'christmas_trees')]]></Filter>
       <PolygonSymbolizer fill="#26b424" />
       <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'farmland')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" transform="rotate([orientation])" />
+      <PolygonSymbolizer fill="#26b424" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -110,13 +122,12 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'orchard')]]></Filter>
-      <PolygonSymbolizer fill="#26b424" />
       <PolygonPatternSymbolizer file="../img/orchard.svg" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland')]]></Filter>
-      <PolygonSymbolizer fill="#f1efe0" />
+      <PolygonPatternSymbolizer file="../img/farmland.svg" transform="rotate([orientation])" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'meadow')]]></Filter>
@@ -225,8 +236,10 @@
       <Parameter name="key_field"><![CDATA[]]></Parameter>
       <Parameter name="project"><![CDATA[OpenArdenneMap]]></Parameter>
       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
-      <Parameter name="table"><![CDATA[( SELECT way, leaf_type, leaf_cycle, trees, produce, way_area AS area, COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type
-  FROM planet_osm_polygon
+      <Parameter name="table"><![CDATA[( SELECT way, leaf_type, leaf_cycle, trees, produce, way_area AS area,
+ CAST(degrees(ST_Azimuth(ST_Centroid(l.way), ST_Centroid(ST_SimplifyPreserveTopology(l.way, 100)))) AS VARCHAR(255)) AS orientation,
+ COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type
+  FROM planet_osm_polygon AS l
   ORDER BY way_area DESC
 ) AS data]]></Parameter>
       <Parameter name="type"><![CDATA[postgis]]></Parameter>

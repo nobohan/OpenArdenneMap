@@ -51,8 +51,11 @@ Map { background-color: @white; }
   [type='stadium']       { polygon-fill: @sports; }
   [type='university']    { polygon-fill: @school; }
   [type='meadow']        { polygon-pattern-file:url(../img/meadow.svg); line-width:0.5; line-color: @gray; }
-  [type='farmland']      { polygon-fill: @agriculture; }
-  [type='orchard']       { polygon-fill: @green; polygon-pattern-file:url(../img/orchard.svg); line-width:0.5; line-color: @gray; }
+  [type='farmland']      {
+      polygon-pattern-file: url(../img/farmland.svg);
+      polygon-pattern-transform: rotate([orientation]);
+  }
+  [type='orchard']       { polygon-pattern-file:url(../img/orchard.svg); line-width:0.5; line-color: @gray; }
   [type='farmyard']      { line-color: @farmyard; }
   [type='school']        { polygon-fill: @school; }
   [trees='christmas_trees'], [produce='christmas_trees'] {

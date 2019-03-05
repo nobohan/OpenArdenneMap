@@ -9,7 +9,7 @@
         "key_field": "",
         "project": "OpenArdenneMap",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, leaf_type, leaf_cycle, trees, produce, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon\n  ORDER BY way_area DESC\n) AS data",
+        "table": "( SELECT way, leaf_type, leaf_cycle, trees, produce, way_area AS area,\n CAST(degrees(ST_Azimuth(ST_Centroid(l.way), ST_Centroid(ST_SimplifyPreserveTopology(l.way, 100)))) AS VARCHAR(255)) AS orientation,\n COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon AS l\n  ORDER BY way_area DESC\n) AS data",
         "type": "postgis"
       },
       "geometry": "polygon",
