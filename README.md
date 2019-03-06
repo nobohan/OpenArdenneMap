@@ -457,3 +457,30 @@ or
 ```
 psql -d osm -c 'ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;'
 ```
+
+
+# rotated farmland
+
+see qgis project
+
+in the db :
+
+* add a field 'rotation' to the table
+
+ALTER TABLE public.planet_osm_polygon
+    ADD COLUMN orientation VARCHAR(255),
+
+
+UPDATE public.planet_osm_polygon
+SET
+    orientation = CAST(degrees(ST_Azimuth(ST_Centroid(planet_osm_polygon.way), ST_Centroid(ST_SimplifyPreserveTopology(planet_osm_polygon.way, 100)))) AS VARCHAR(255))
+
+UPDATE public.planet_osm_polygon
+SET
+    orientation = CAST(degrees(ST_Azimuth(ST_StartPoint(ST_LongestLine(planet_osm_polygon.way,planet_osm_polygon.way)), ST_EndPoint(ST_LongestLine(planet_osm_polygon.way,planet_osm_polygon.way)))) AS VARCHAR(255))
+
+ST_MakeEnvelope
+
+* test some rotation formula in postgis
+* test it with qgis
+* use "Oriented min. bbox" in qgis
