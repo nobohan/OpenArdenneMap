@@ -8,13 +8,13 @@ import math
 mapFile = 'osm2pgsql/OpenArdenneMap.xml'
 
 # The mapOutput can be have different extension; png, pdf, svg, ...
-mapOutput = 'OpenOrvalMap.pdf'
+mapOutput = 'OpenOrvalMap.png'
 
 # Map size
 # NB: An A4 in 200 dpi is 1654 x 2339 px, or 21 cm x 29.5 cm
 # the ratio of format is sqrt(2)
 
-page = 'A2'  # An A2 is 4 A4
+page = 'A3'  # An A2 is 4 A4
 pages = (4, 3, 2, 1, 0)
 # Compute the scale
 page_size = int(page[1])

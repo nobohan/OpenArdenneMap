@@ -52,8 +52,9 @@ Map { background-color: @white; }
   [type='university']    { polygon-fill: @school; }
   [type='meadow']        { polygon-pattern-file:url(../img/meadow.svg); line-width:0.5; line-color: @gray; }
   [type='farmland']      {
-      polygon-pattern-file: url(../img/farmland.svg);
+      polygon-pattern-file: url(../img/farmland-large.svg);
       polygon-pattern-transform: rotate([orientation]);
+      polygon-pattern-clip: true;
   }
   [type='orchard']       { polygon-pattern-file:url(../img/orchard.svg); line-width:0.5; line-color: @gray; }
   [type='farmyard']      { line-color: @farmyard; }

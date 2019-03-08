@@ -479,7 +479,7 @@ UPDATE public.planet_osm_polygon
 SET
     orientation = CAST(degrees(ST_Azimuth(ST_StartPoint(ST_LongestLine(planet_osm_polygon.way,planet_osm_polygon.way)), ST_EndPoint(ST_LongestLine(planet_osm_polygon.way,planet_osm_polygon.way)))) AS VARCHAR(255))
 
-ST_MakeEnvelope
+ST_MakeEnvelope?
 
 * test some rotation formula in postgis
 * test it with qgis
