@@ -484,3 +484,18 @@ ST_MakeEnvelope?
 * test some rotation formula in postgis
 * test it with qgis
 * use "Oriented min. bbox" in qgis
+
+Hack the pattern symboliser bug:
+<PolygonPatternSymbolizer file="../img/farmland.svg" transform="rotate(35)" />
+<PolygonPatternSymbolizer file="../img/farmland-red.svg" transform="rotate(35) skewX(35)" />
+<PolygonPatternSymbolizer file="../img/farmland-green.svg" transform="rotate(35) skewX(-35)" />
+<PolygonPatternSymbolizer file="../img/farmland-blue.svg" transform="rotate(35) scale(2)" />
+<PolygonPatternSymbolizer file="../img/farmland-red.svg" transform="rotate(35) scale(3)" />
+
+
+<PolygonPatternSymbolizer file="../img/farmland.svg" transform="rotate([orientation]) skewX(45) scale(2)" />
+<PolygonPatternSymbolizer file="../img/farmland.svg" transform="rotate([orientation]) skewX(-45) scale(2)" />
+<PolygonPatternSymbolizer file="../img/farmland.svg" transform="rotate([orientation]) scale(2)" />
+<PolygonPatternSymbolizer file="../img/farmland-scale2.svg" transform="rotate([orientation]) scale(4)" />
+<PolygonPatternSymbolizer file="../img/farmland-scale3.svg" transform="rotate([orientation]) scale(6)" />
+<PolygonPatternSymbolizer file="../img/farmland-scale4.svg" transform="rotate([orientation]) scale(8)" />
