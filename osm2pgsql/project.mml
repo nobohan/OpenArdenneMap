@@ -355,6 +355,7 @@
     }
   ],
   "Stylesheet": [
+    "../cartoCSS/scales.mss",
     "../cartoCSS/palette.mss",
     "../cartoCSS/base.mss",
     "../cartoCSS/lines.mss",

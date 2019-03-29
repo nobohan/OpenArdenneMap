@@ -14,7 +14,7 @@ mapOutput = 'OpenArdenneMap.pdf'
 # NB: An A4 in 200 dpi is 1654 x 2339 px, or 21 cm x 29.5 cm
 # the ratio of format is sqrt(2)
 
-page = 'A3'  # An A2 is 4 A4
+page = 'A4'  # An A2 is 4 A4
 pages = (4, 3, 2, 1, 0)
 # Compute the scale
 page_size = int(page[1])
@@ -23,13 +23,15 @@ f = math.sqrt(2)**f1
 
 # increasing map_x and map_y lead to decreasing font and symbol size: not good
 map_x = int(f*4600)  # 4600 is the number of pixels for an A4 length
+
+# if 460: zoom = 13
 map_y = int(map_x/math.sqrt(2))
 m = Map(map_x, map_y)
 load_map(m, mapFile)
 
 # Bounding box (expressed in EPSG:3857, meters)
-x_center = 623000
-y_center = 6403000
+x_center = 620000
+y_center = 6400000
 
 scale = 20000
 delta_x = f*0.295*scale/math.cos(50*2*math.pi/360)
@@ -45,6 +47,7 @@ bbox = (Envelope(xmin, ymin, xmax, ymax))
 m.zoom_to_box(bbox)
 
 print("Scale = " + str(m.scale()))
+
 
 # Export to mapOutput
 render_to_file(m, mapOutput)
