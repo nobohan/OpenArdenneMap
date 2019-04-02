@@ -17,88 +17,2046 @@
   </FontSet>
   <Style filter-mode="first" name="landuse">
     <Rule>
-      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'needleleaved') and ([trees] = 'christmas_trees')]]></Filter>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
       <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="8" />
       <PolygonSymbolizer fill="#acefc7" />
-      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.3" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'needleleaved') and ([produce] = 'christmas_trees')]]></Filter>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
       <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="4" />
       <PolygonSymbolizer fill="#acefc7" />
-      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.3" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
-      <PolygonSymbolizer fill="#acefc7" />
-      <LineSymbolizer stroke="#444444" stroke-width="0.3" />
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
       <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="2" />
+      <PolygonSymbolizer fill="#acefc7" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'needleleaved') and ([trees] = 'christmas_trees')]]></Filter>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
       <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="1" />
       <PolygonSymbolizer fill="#acefc7" />
-      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.3" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'needleleaved') and ([produce] = 'christmas_trees')]]></Filter>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
       <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
       <PolygonSymbolizer fill="#acefc7" />
-      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.3" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
-      <PolygonSymbolizer fill="#acefc7" />
-      <LineSymbolizer stroke="#444444" stroke-width="0.3" />
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
       <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
-    </Rule>
-    <Rule>
-      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'broadleaved') and ([trees] = 'christmas_trees')]]></Filter>
-      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.25" />
       <PolygonSymbolizer fill="#acefc7" />
-      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.3" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'broadleaved') and ([produce] = 'christmas_trees')]]></Filter>
-      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.125" />
       <PolygonSymbolizer fill="#acefc7" />
-      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.3" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0625" />
       <PolygonSymbolizer fill="#acefc7" />
-      <LineSymbolizer stroke="#444444" stroke-width="0.3" />
-      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'broadleaved') and ([trees] = 'christmas_trees')]]></Filter>
-      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.03125" />
       <PolygonSymbolizer fill="#acefc7" />
-      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.3" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'broadleaved') and ([produce] = 'christmas_trees')]]></Filter>
-      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.015625" />
       <PolygonSymbolizer fill="#acefc7" />
-      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.3" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0078125" />
       <PolygonSymbolizer fill="#acefc7" />
-      <LineSymbolizer stroke="#444444" stroke-width="0.3" />
-      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
     </Rule>
     <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="8" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="4" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="2" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="1" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.25" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.125" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0625" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.03125" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.015625" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0078125" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="8" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="4" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="2" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="1" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.25" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.125" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0625" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.03125" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.015625" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0078125" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="8" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="4" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="2" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="1" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.25" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.125" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0625" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.03125" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.015625" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0078125" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'orchard')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="8" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'orchard')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="4" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'orchard')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="2" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'orchard')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="1" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'orchard')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'orchard')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.25" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'orchard')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'orchard')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'orchard')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.03125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'orchard')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.015625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'orchard')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0078125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'cemetery')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="8" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'cemetery')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="4" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'cemetery')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="2" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'cemetery')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="1" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'cemetery')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'cemetery')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.25" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'cemetery')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'cemetery')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'cemetery')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.03125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'cemetery')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.015625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'cemetery')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0078125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'camp_site')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="8" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'camp_site')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="4" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'camp_site')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="2" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'camp_site')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="1" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'camp_site')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'camp_site')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.25" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'camp_site')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'camp_site')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'camp_site')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.03125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'camp_site')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.015625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees') and ([type] = 'camp_site')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0078125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
       <Filter><![CDATA[([trees] = 'christmas_trees')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="8" />
       <PolygonSymbolizer fill="#acefc7" />
       <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
-      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.3" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([produce] = 'christmas_trees')]]></Filter>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="4" />
       <PolygonSymbolizer fill="#acefc7" />
       <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
-      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="2" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="1" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.25" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.03125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.015625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([trees] = 'christmas_trees')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0078125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="8" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="4" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="2" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="1" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.25" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.125" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0625" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.03125" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.015625" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0078125" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="8" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="4" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="2" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="1" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.25" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.125" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0625" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.03125" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.015625" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0078125" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="8" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="4" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="2" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="1" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.25" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.125" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0625" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.03125" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.015625" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0078125" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="8" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="4" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="2" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="1" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.25" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.125" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0625" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.03125" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.015625" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0078125" />
+      <PolygonSymbolizer fill="#acefc7" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'orchard')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="8" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'orchard')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="4" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'orchard')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="2" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'orchard')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="1" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'orchard')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'orchard')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.25" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'orchard')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'orchard')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'orchard')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.03125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'orchard')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.015625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'orchard')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0078125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'cemetery')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="8" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'cemetery')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="4" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'cemetery')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="2" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'cemetery')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="1" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'cemetery')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'cemetery')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.25" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'cemetery')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'cemetery')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'cemetery')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.03125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'cemetery')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.015625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'cemetery')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0078125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'camp_site')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="8" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'camp_site')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="4" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'camp_site')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="2" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'camp_site')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="1" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'camp_site')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'camp_site')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.25" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'camp_site')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'camp_site')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'camp_site')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.03125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'camp_site')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.015625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees') and ([type] = 'camp_site')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0078125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="8" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="4" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="2" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="1" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.25" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.03125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.015625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([produce] = 'christmas_trees')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0078125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([type] = 'meadow')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="8" />
+      <PolygonPatternSymbolizer file="../img/meadow.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'meadow')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="4" />
+      <PolygonPatternSymbolizer file="../img/meadow.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'meadow')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="2" />
+      <PolygonPatternSymbolizer file="../img/meadow.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'meadow')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="1" />
+      <PolygonPatternSymbolizer file="../img/meadow.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'meadow')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+      <PolygonPatternSymbolizer file="../img/meadow.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'meadow')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.25" />
+      <PolygonPatternSymbolizer file="../img/meadow.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'meadow')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.125" />
+      <PolygonPatternSymbolizer file="../img/meadow.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'meadow')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0625" />
+      <PolygonPatternSymbolizer file="../img/meadow.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'meadow')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.03125" />
+      <PolygonPatternSymbolizer file="../img/meadow.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'meadow')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.015625" />
+      <PolygonPatternSymbolizer file="../img/meadow.svg" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'meadow')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0078125" />
+      <PolygonPatternSymbolizer file="../img/meadow.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([type] = 'industrial')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="16" />
+      <PolygonPatternSymbolizer file="../img/industrial.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'industrial')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="8" />
+      <PolygonPatternSymbolizer file="../img/industrial.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'industrial')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="4" />
+      <PolygonPatternSymbolizer file="../img/industrial.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'industrial')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="2" />
+      <PolygonPatternSymbolizer file="../img/industrial.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'industrial')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="1" />
+      <PolygonPatternSymbolizer file="../img/industrial.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'industrial')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+      <PolygonPatternSymbolizer file="../img/industrial.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'industrial')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.25" />
+      <PolygonPatternSymbolizer file="../img/industrial.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'industrial')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.125" />
+      <PolygonPatternSymbolizer file="../img/industrial.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'industrial')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.0625" />
+      <PolygonPatternSymbolizer file="../img/industrial.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'industrial')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.03125" />
+      <PolygonPatternSymbolizer file="../img/industrial.svg" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'industrial')]]></Filter>
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.015625" />
+      <PolygonPatternSymbolizer file="../img/industrial.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="8" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="4" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="2" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="1" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.5" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.25" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.0625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.03125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.015625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.0078125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="8" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="4" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="2" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="1" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.5" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.25" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.0625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.03125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.015625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'needleleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.0078125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="8" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="4" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="2" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="1" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.5" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.25" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.0625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.03125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.015625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.0078125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="8" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="4" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="2" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="1" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.5" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.25" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.0625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.03125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.015625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'broadleaved')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.0078125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="8" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="4" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="2" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="1" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.5" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.25" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.0625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.03125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.015625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest.svg" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'forest')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.0078125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="8" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="4" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="2" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="1" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.5" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.25" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.0625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.03125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest.svg" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.015625" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest.svg" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'wood')]]></Filter>
+      <LineSymbolizer stroke="#444444" stroke-width="0.0078125" />
+      <PolygonSymbolizer fill="#acefc7" />
+      <PolygonPatternSymbolizer file="../img/forest.svg" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'school')]]></Filter>
@@ -112,16 +2070,11 @@
       <Filter><![CDATA[([type] = 'orchard')]]></Filter>
       <PolygonSymbolizer fill="#acefc7" />
       <PolygonPatternSymbolizer file="../img/orchard.svg" />
-      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.3" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland')]]></Filter>
       <PolygonSymbolizer fill="#ffffff" />
-    </Rule>
-    <Rule>
-      <Filter><![CDATA[([type] = 'meadow')]]></Filter>
-      <PolygonPatternSymbolizer file="../img/meadow.svg" />
-      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.3" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'university')]]></Filter>
@@ -164,11 +2117,6 @@
       <PolygonSymbolizer fill="#ffffff" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'industrial')]]></Filter>
-      <PolygonPatternSymbolizer file="../img/industrial.svg" />
-      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.6" />
-    </Rule>
-    <Rule>
       <Filter><![CDATA[([type] = 'hospital')]]></Filter>
       <PolygonSymbolizer fill="#ffffff" />
     </Rule>
@@ -179,18 +2127,6 @@
     <Rule>
       <Filter><![CDATA[([type] = 'golf_course')]]></Filter>
       <PolygonSymbolizer fill="#ffffff" />
-    </Rule>
-    <Rule>
-      <Filter><![CDATA[([type] = 'forest')]]></Filter>
-      <PolygonSymbolizer fill="#acefc7" />
-      <LineSymbolizer stroke="#444444" stroke-width="0.3" />
-      <PolygonPatternSymbolizer file="../img/forest.svg" />
-    </Rule>
-    <Rule>
-      <Filter><![CDATA[([type] = 'wood')]]></Filter>
-      <PolygonSymbolizer fill="#acefc7" />
-      <LineSymbolizer stroke="#444444" stroke-width="0.3" />
-      <PolygonPatternSymbolizer file="../img/forest.svg" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'common')]]></Filter>
@@ -207,12 +2143,12 @@
     <Rule>
       <Filter><![CDATA[([type] = 'cemetery')]]></Filter>
       <PolygonPatternSymbolizer file="../img/cemetery.svg" />
-      <LineSymbolizer stroke="#111111" stroke-width="0.3" />
+      <LineSymbolizer stroke="#111111" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'camp_site')]]></Filter>
       <PolygonPatternSymbolizer file="../img/camping.svg" />
-      <LineSymbolizer stroke="#111111" stroke-width="0.3" />
+      <LineSymbolizer stroke="#111111" stroke-width="0.5" />
     </Rule>
   </Style>
   <Layer name="landuse" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
@@ -234,57 +2170,132 @@
   </Layer>
   <Style filter-mode="first" name="contour">
     <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([main] = 'yes')]]></Filter>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="48" />
+      <TextSymbolizer fill="#bc1e44" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="2" line-spacing="1" placement="line" size="35" wrap-width="60"><![CDATA[[level]]]></TextSymbolizer>
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([main] = 'yes')]]></Filter>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="24" />
+      <TextSymbolizer fill="#bc1e44" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="2" line-spacing="1" placement="line" size="35" wrap-width="60"><![CDATA[[level]]]></TextSymbolizer>
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([main] = 'yes')]]></Filter>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="12" />
+      <TextSymbolizer fill="#bc1e44" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="2" line-spacing="1" placement="line" size="35" wrap-width="60"><![CDATA[[level]]]></TextSymbolizer>
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([main] = 'yes')]]></Filter>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="6" />
+      <TextSymbolizer fill="#bc1e44" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="2" line-spacing="1" placement="line" size="35" wrap-width="60"><![CDATA[[level]]]></TextSymbolizer>
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
       <Filter><![CDATA[([main] = 'yes')]]></Filter>
       <LineSymbolizer stroke="#bc1e44" stroke-width="3" />
       <TextSymbolizer fill="#bc1e44" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="2" line-spacing="1" placement="line" size="35" wrap-width="60"><![CDATA[[level]]]></TextSymbolizer>
     </Rule>
     <Rule>
-      <MaxScaleDenominator>1500</MaxScaleDenominator>
-      <LineSymbolizer stroke="#bc1e44" stroke-width="1.5" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>2500</MaxScaleDenominator>
-      <MinScaleDenominator>1500</MinScaleDenominator>
-      <LineSymbolizer stroke="#bc1e44" stroke-width="0" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>5000</MaxScaleDenominator>
-      <MinScaleDenominator>2500</MinScaleDenominator>
-      <LineSymbolizer stroke="#bc1e44" stroke-width="0" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>12500</MaxScaleDenominator>
-      <MinScaleDenominator>5000</MinScaleDenominator>
-      <LineSymbolizer stroke="#bc1e44" stroke-width="150" />
-    </Rule>
-    <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <MinScaleDenominator>12500</MinScaleDenominator>
-      <LineSymbolizer stroke="#bc1e44" stroke-width="0" />
+      <Filter><![CDATA[([main] = 'yes')]]></Filter>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="1.5" />
+      <TextSymbolizer fill="#bc1e44" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="2" line-spacing="1" placement="line" size="35" wrap-width="60"><![CDATA[[level]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>50000</MaxScaleDenominator>
       <MinScaleDenominator>25000</MinScaleDenominator>
-      <LineSymbolizer stroke="#bc1e44" stroke-width="0" />
+      <Filter><![CDATA[([main] = 'yes')]]></Filter>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="0.75" />
+      <TextSymbolizer fill="#bc1e44" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="2" line-spacing="1" placement="line" size="35" wrap-width="60"><![CDATA[[level]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
       <MinScaleDenominator>50000</MinScaleDenominator>
-      <LineSymbolizer stroke="#bc1e44" stroke-width="0.07500000000000001" />
+      <Filter><![CDATA[([main] = 'yes')]]></Filter>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="0.375" />
+      <TextSymbolizer fill="#bc1e44" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="2" line-spacing="1" placement="line" size="35" wrap-width="60"><![CDATA[[level]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>200000</MaxScaleDenominator>
       <MinScaleDenominator>100000</MinScaleDenominator>
-      <LineSymbolizer stroke="#bc1e44" stroke-width="0.07500000000000001" />
+      <Filter><![CDATA[([main] = 'yes')]]></Filter>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="0.1875" />
+      <TextSymbolizer fill="#bc1e44" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="2" line-spacing="1" placement="line" size="35" wrap-width="60"><![CDATA[[level]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>400000</MaxScaleDenominator>
       <MinScaleDenominator>200000</MinScaleDenominator>
-      <LineSymbolizer stroke="#bc1e44" stroke-width="0.07500000000000001" />
+      <Filter><![CDATA[([main] = 'yes')]]></Filter>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="0.09375" />
+      <TextSymbolizer fill="#bc1e44" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="2" line-spacing="1" placement="line" size="35" wrap-width="60"><![CDATA[[level]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MinScaleDenominator>400000</MinScaleDenominator>
-      <LineSymbolizer stroke="#bc1e44" stroke-width="0.07500000000000001" />
+      <Filter><![CDATA[([main] = 'yes')]]></Filter>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="0.046875" />
+      <TextSymbolizer fill="#bc1e44" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="2" line-spacing="1" placement="line" size="35" wrap-width="60"><![CDATA[[level]]]></TextSymbolizer>
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="24" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="12" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="6" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="1.5" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="0.75" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="0.375" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="0.1875" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="0.09375" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="0.046875" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <LineSymbolizer stroke="#bc1e44" stroke-width="0.0234375" />
     </Rule>
   </Style>
   <Layer name="contour" srs="+proj=lcc +lat_1=51.16666723333333 +lat_2=49.8333339 +lat_0=90 +lon_0=4.367486666666666 +x_0=150000.013 +y_0=5400088.438 +ellps=intl +towgs84=-106.869,52.2978,-103.724,0.3366,-0.457,1.8422,-1.2747 +units=m +no_defs" status="on">
@@ -323,30 +2334,390 @@
   </Layer>
   <Style filter-mode="first" name="waterway-top">
     <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
       <Filter><![CDATA[([type] = 'river')]]></Filter>
-      <LineSymbolizer stroke="#c4c4ef" stroke-width="8" />
+      <LineSymbolizer stroke="#c4c4ef" stroke-width="134.39999999999998" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'river')]]></Filter>
+      <LineSymbolizer stroke="#c4c4ef" stroke-width="67.19999999999999" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'river')]]></Filter>
+      <LineSymbolizer stroke="#c4c4ef" stroke-width="33.599999999999994" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'river')]]></Filter>
+      <LineSymbolizer stroke="#c4c4ef" stroke-width="16.799999999999997" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'river')]]></Filter>
+      <LineSymbolizer stroke="#c4c4ef" stroke-width="8.399999999999999" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'river')]]></Filter>
+      <LineSymbolizer stroke="#c4c4ef" stroke-width="4.199999999999999" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'river')]]></Filter>
+      <LineSymbolizer stroke="#c4c4ef" stroke-width="2.0999999999999996" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'river')]]></Filter>
+      <LineSymbolizer stroke="#c4c4ef" stroke-width="1.0499999999999998" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'river')]]></Filter>
+      <LineSymbolizer stroke="#c4c4ef" stroke-width="0.5249999999999999" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'river')]]></Filter>
+      <LineSymbolizer stroke="#c4c4ef" stroke-width="0.26249999999999996" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'river')]]></Filter>
+      <LineSymbolizer stroke="#c4c4ef" stroke-width="0.13124999999999998" />
     </Rule>
   </Style>
   <Style filter-mode="first" name="waterway">
     <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
       <Filter><![CDATA[([type] = 'ditch')]]></Filter>
-      <LineSymbolizer stroke="#7d7ded" stroke-width="2" />
+      <LineSymbolizer stroke="#7d7ded" stroke-width="96" />
     </Rule>
     <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'ditch')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="48" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'ditch')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="24" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'ditch')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="12" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'ditch')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="6" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'ditch')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'ditch')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="1.5" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'ditch')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="0.75" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'ditch')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="0.375" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'ditch')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="0.1875" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'ditch')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="0.09375" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
       <Filter><![CDATA[([type] = 'drain')]]></Filter>
-      <LineSymbolizer stroke="#7d7ded" stroke-width="2" />
+      <LineSymbolizer stroke="#7d7ded" stroke-width="96" />
     </Rule>
     <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'drain')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="48" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'drain')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="24" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'drain')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="12" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'drain')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="6" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'drain')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'drain')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="1.5" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'drain')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="0.75" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'drain')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="0.375" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'drain')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="0.1875" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'drain')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="0.09375" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([type] = 'stream')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="64" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'stream')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="32" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'stream')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="16" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'stream')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="8" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'stream')]]></Filter>
       <LineSymbolizer stroke="#7d7ded" stroke-width="4" />
     </Rule>
     <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'stream')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'stream')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="1" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'stream')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'stream')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="0.25" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'stream')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="0.125" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'stream')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="0.0625" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([type] = 'canal')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="64" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'canal')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="32" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'canal')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="16" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'canal')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="8" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'canal')]]></Filter>
       <LineSymbolizer stroke="#7d7ded" stroke-width="4" />
     </Rule>
     <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'canal')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'canal')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="1" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'canal')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'canal')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="0.25" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'canal')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="0.125" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'canal')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-width="0.0625" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([type] = 'river')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-linecap="round" stroke-linejoin="round" stroke-width="192" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'river')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-linecap="round" stroke-linejoin="round" stroke-width="96" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'river')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'river')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-linecap="round" stroke-linejoin="round" stroke-width="24" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'river')]]></Filter>
       <LineSymbolizer stroke="#7d7ded" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'river')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'river')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'river')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'river')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'river')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.375" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'river')]]></Filter>
+      <LineSymbolizer stroke="#7d7ded" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.1875" />
     </Rule>
   </Style>
   <Layer name="waterway" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
@@ -390,13 +2761,83 @@
   </Layer>
   <Style filter-mode="first" name="landuse_overlays">
     <Rule>
-      <Filter><![CDATA[([type] = 'wetland')]]></Filter>
-      <PolygonPatternSymbolizer file="../img/wetland.svg" />
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([type] = 'nature_reserve')]]></Filter>
+      <LineSymbolizer stroke="#41da7f" stroke-dasharray="1, 1" stroke-opacity="0.3" stroke-width="40" />
+      <PolygonSymbolizer fill="#41da7f" fill-opacity="0.1" />
     </Rule>
     <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'nature_reserve')]]></Filter>
-      <LineSymbolizer stroke="#41da7f" stroke-dasharray="1, 1" stroke-opacity="0.3" stroke-width="2" />
+      <LineSymbolizer stroke="#41da7f" stroke-dasharray="1, 1" stroke-opacity="0.3" stroke-width="20" />
       <PolygonSymbolizer fill="#41da7f" fill-opacity="0.1" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'nature_reserve')]]></Filter>
+      <LineSymbolizer stroke="#41da7f" stroke-dasharray="1, 1" stroke-opacity="0.3" stroke-width="10" />
+      <PolygonSymbolizer fill="#41da7f" fill-opacity="0.1" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'nature_reserve')]]></Filter>
+      <LineSymbolizer stroke="#41da7f" stroke-dasharray="1, 1" stroke-opacity="0.3" stroke-width="5" />
+      <PolygonSymbolizer fill="#41da7f" fill-opacity="0.1" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'nature_reserve')]]></Filter>
+      <LineSymbolizer stroke="#41da7f" stroke-dasharray="1, 1" stroke-opacity="0.3" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#41da7f" fill-opacity="0.1" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'nature_reserve')]]></Filter>
+      <LineSymbolizer stroke="#41da7f" stroke-dasharray="1, 1" stroke-opacity="0.3" stroke-width="1.25" />
+      <PolygonSymbolizer fill="#41da7f" fill-opacity="0.1" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'nature_reserve')]]></Filter>
+      <LineSymbolizer stroke="#41da7f" stroke-dasharray="1, 1" stroke-opacity="0.3" stroke-width="0.625" />
+      <PolygonSymbolizer fill="#41da7f" fill-opacity="0.1" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'nature_reserve')]]></Filter>
+      <LineSymbolizer stroke="#41da7f" stroke-dasharray="1, 1" stroke-opacity="0.3" stroke-width="0.3125" />
+      <PolygonSymbolizer fill="#41da7f" fill-opacity="0.1" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'nature_reserve')]]></Filter>
+      <LineSymbolizer stroke="#41da7f" stroke-dasharray="1, 1" stroke-opacity="0.3" stroke-width="0.15625" />
+      <PolygonSymbolizer fill="#41da7f" fill-opacity="0.1" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'nature_reserve')]]></Filter>
+      <LineSymbolizer stroke="#41da7f" stroke-dasharray="1, 1" stroke-opacity="0.3" stroke-width="0.078125" />
+      <PolygonSymbolizer fill="#41da7f" fill-opacity="0.1" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'nature_reserve')]]></Filter>
+      <LineSymbolizer stroke="#41da7f" stroke-dasharray="1, 1" stroke-opacity="0.3" stroke-width="0.0390625" />
+      <PolygonSymbolizer fill="#41da7f" fill-opacity="0.1" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'wetland')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/wetland.svg" />
     </Rule>
   </Style>
   <Layer name="landuse_overlays" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
@@ -6620,8 +9061,68 @@
   </Layer>
   <Style filter-mode="first" name="buildings">
     <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <LineSymbolizer stroke="#2b2b2b" stroke-width="6.4" />
       <PolygonSymbolizer fill="#444444" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <LineSymbolizer stroke="#2b2b2b" stroke-width="3.2" />
+      <PolygonSymbolizer fill="#444444" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <LineSymbolizer stroke="#2b2b2b" stroke-width="1.6" />
+      <PolygonSymbolizer fill="#444444" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <LineSymbolizer stroke="#2b2b2b" stroke-width="0.8" />
+      <PolygonSymbolizer fill="#444444" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
       <LineSymbolizer stroke="#2b2b2b" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#444444" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <LineSymbolizer stroke="#2b2b2b" stroke-width="0.2" />
+      <PolygonSymbolizer fill="#444444" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <LineSymbolizer stroke="#2b2b2b" stroke-width="0.1" />
+      <PolygonSymbolizer fill="#444444" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <LineSymbolizer stroke="#2b2b2b" stroke-width="0.05" />
+      <PolygonSymbolizer fill="#444444" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <LineSymbolizer stroke="#2b2b2b" stroke-width="0.025" />
+      <PolygonSymbolizer fill="#444444" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <LineSymbolizer stroke="#2b2b2b" stroke-width="0.0125" />
+      <PolygonSymbolizer fill="#444444" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <LineSymbolizer stroke="#2b2b2b" stroke-width="0.00625" />
+      <PolygonSymbolizer fill="#444444" />
     </Rule>
   </Style>
   <Layer name="buildings" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
@@ -6641,12 +9142,132 @@
   </Layer>
   <Style filter-mode="first" name="rotated_buildings">
     <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
       <Filter><![CDATA[([building] = 'chapel')]]></Filter>
-      <MarkersSymbolizer file="../img/church.svg" height="25" transform="rotate([orientation])" />
+      <MarkersSymbolizer file="../img/church.svg" height="96" transform="rotate([orientation])" />
     </Rule>
     <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([building] = 'chapel')]]></Filter>
+      <MarkersSymbolizer file="../img/church.svg" height="72" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([building] = 'chapel')]]></Filter>
+      <MarkersSymbolizer file="../img/church.svg" height="48" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([building] = 'chapel')]]></Filter>
+      <MarkersSymbolizer file="../img/church.svg" height="31.2" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([building] = 'chapel')]]></Filter>
+      <MarkersSymbolizer file="../img/church.svg" height="24" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([building] = 'chapel')]]></Filter>
+      <MarkersSymbolizer file="../img/church.svg" height="16.8" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([building] = 'chapel')]]></Filter>
+      <MarkersSymbolizer file="../img/church.svg" height="12" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([building] = 'chapel')]]></Filter>
+      <MarkersSymbolizer file="../img/church.svg" height="8.4" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([building] = 'chapel')]]></Filter>
+      <MarkersSymbolizer file="../img/church.svg" height="6" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([building] = 'chapel')]]></Filter>
+      <MarkersSymbolizer file="../img/church.svg" height="4.319999999999999" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([building] = 'chapel')]]></Filter>
+      <MarkersSymbolizer file="../img/church.svg" height="3" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750</MaxScaleDenominator>
+      <Filter><![CDATA[([building] = 'church')]]></Filter>
+      <MarkersSymbolizer allow-overlap="true" file="../img/church.svg" height="160" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500</MaxScaleDenominator>
+      <MinScaleDenominator>750</MinScaleDenominator>
+      <Filter><![CDATA[([building] = 'church')]]></Filter>
+      <MarkersSymbolizer allow-overlap="true" file="../img/church.svg" height="120" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>2500</MaxScaleDenominator>
+      <MinScaleDenominator>1500</MinScaleDenominator>
+      <Filter><![CDATA[([building] = 'church')]]></Filter>
+      <MarkersSymbolizer allow-overlap="true" file="../img/church.svg" height="80" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <Filter><![CDATA[([building] = 'church')]]></Filter>
+      <MarkersSymbolizer allow-overlap="true" file="../img/church.svg" height="52" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
       <Filter><![CDATA[([building] = 'church')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/church.svg" height="40" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([building] = 'church')]]></Filter>
+      <MarkersSymbolizer allow-overlap="true" file="../img/church.svg" height="28" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([building] = 'church')]]></Filter>
+      <MarkersSymbolizer allow-overlap="true" file="../img/church.svg" height="20" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([building] = 'church')]]></Filter>
+      <MarkersSymbolizer allow-overlap="true" file="../img/church.svg" height="14" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([building] = 'church')]]></Filter>
+      <MarkersSymbolizer allow-overlap="true" file="../img/church.svg" height="10" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([building] = 'church')]]></Filter>
+      <MarkersSymbolizer allow-overlap="true" file="../img/church.svg" height="7.199999999999999" transform="rotate([orientation])" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([building] = 'church')]]></Filter>
+      <MarkersSymbolizer allow-overlap="true" file="../img/church.svg" height="5" transform="rotate([orientation])" />
     </Rule>
   </Style>
   <Layer name="rotated_buildings" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">

@@ -30,10 +30,10 @@ m = Map(map_x, map_y)
 load_map(m, mapFile)
 
 # Bounding box (expressed in EPSG:3857, meters)
-x_center = 620000
-y_center = 6400000
+x_center = 616167
+y_center = 6398834
 
-scale = 20000
+scale = 10000
 delta_x = f*0.295*scale/math.cos(50*2*math.pi/360)
 delta_y = delta_x/math.sqrt(2)
 xmin = x_center - delta_x/2

@@ -40,6 +40,9 @@ Avec osm2pgsql, éditer le fichier `osm2pgsql/OpenArdenneMap.style`.
 
 Avec imposm, éditer le fichier `imposm/imposm-mapping.py`.
 
+## Échelle
+
+Originellement, le style a été développé pour des impressions papier à haute résolution (300 dpi) à une échelle correspondant au niveau de zoom 16. Actuellement, le style est compatible pour les niveaux de zoom de 10 à 20. En dehors de ces niveaux, utiliser ce style peut donner lieu à des fortes superpositions d'éléments.
 
 ## Pour changer le style de la carte
 Éditer les fichiers `mss` en utilisant le language cartoCSS et utiliser `carto` pour générer le fichier mapnik `OpenArdenneMap.xml`:
