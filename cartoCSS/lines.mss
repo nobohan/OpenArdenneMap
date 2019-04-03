@@ -11,10 +11,14 @@
 
 /* Road width variables that are used in road & bridge styles */
 
+@huge: 16;
 @large: 10;
 @medium: 8;
 @small: 5;
 @mini: 4;
+@tiny: 3;
+
+@outline: 2;
 
 /* ---- Casing ----------------------------------------------- */
 
@@ -37,7 +41,7 @@
   [type='motorway'],
   [type='motorway_link'] {
     line-color: #111;
-    [bridge=1] { line-color: #111 * 0.8; line-width: @large + 2 + 6; }
+    [bridge=1] { line-color: #111 * 0.8; line-width: @huge + @outline; }
   }
   [type='trunk'],
   [type='trunk_link'] {
@@ -47,23 +51,23 @@
   [type='primary'],
   [type='primary_link'] {
     line-color: @primary_case;
-    [bridge=1] { line-color: @primary_case * 0.8; line-width: @large + 6; }
+    [bridge=1] { line-color: @primary_case * 0.8; line-width: @large + @outline; }
   }
   [type='secondary'],
   [type='secondary_link'] {
     line-color: @secondary_case;
-    [bridge=1] { line-color: @secondary_case; line-width: @large + 6; }
+    [bridge=1] { line-color: @secondary_case; line-width: @large + @outline; }
   }
   [stylegroup='railway'] {
     line-color: #111;
-    [bridge=1] { line-color: @secondary_case; line-width: @mini + 2 + 6; }
+    [bridge=1] { line-color: @secondary_case; line-width: @large + @outline; }
     [type='disused'] { line-opacity: 0.5; }
   }
   [tunnel=1] { line-dasharray: 3,3; }
 
   [stylegroup='minorroad'],
   [stylegroup='service'] {
-    [bridge=1] { line-width: @small + 2 + 4; }
+    [bridge=1] { line-width: @medium + @outline; }
   }
 
   [stylegroup='noauto'] {
@@ -73,18 +77,18 @@
   }
 
   /* -- widths -- */
-  [stylegroup='motorway'] { line-width: @large + 2; }
-  [stylegroup='mainroad'] { line-width: @large + 3; }
-  [stylegroup='minorroad']{ line-width: @small + 2; }
+  [stylegroup='motorway'] { line-width: @large + @outline; }
+  [stylegroup='mainroad'] { line-width: @large + @outline*1.5; }
+  [stylegroup='minorroad']{ line-width: @small + @outline; }
 
-  [stylegroup='railway']  { line-width: @small + 2; }
+  [stylegroup='railway']  { line-width: @small + @outline; }
   [stylegroup='service']{
-    [tracktype='grade1'] { line-width: @small + 2; line-color: #111}
-    [tracktype='grade2'] { line-width: @small + 2; }
-    [tracktype='grade3'] { line-width: @small + 2; }
-    [tracktype='grade4'] { line-width: @mini + 2; line-dasharray: 8, 8}
-    [tracktype='grade5'] { line-width: @mini + 2; line-dasharray: 8, 8}
-    line-width: @medium / 2 + 3;
+    [tracktype='grade1'] { line-width: @small + @outline; line-color: #111}
+    [tracktype='grade2'] { line-width: @small + @outline; }
+    [tracktype='grade3'] { line-width: @small + @outline; }
+    [tracktype='grade4'] { line-width: @mini + @outline; line-dasharray: 8, 8}
+    [tracktype='grade5'] { line-width: @mini + @outline; line-dasharray: 8, 8}
+    line-width: @small + @outline;
   }
 
 }
@@ -153,7 +157,7 @@
     [tracktype='grade3'] { line-width: @small; }
     [tracktype='grade4'] { line-width: @mini; }
     [tracktype='grade5'] { line-width: @mini; }
-    line-width: @medium / 2;
+    line-width: @small;
   }
 }
 
@@ -164,7 +168,7 @@
   [type='motorway'],
   [type='motorway_link'] {
     line-color: #fff;
-    line-width: 2;
+    line-width: @outline;
     line-dasharray: 5,5;
   }
 
@@ -193,7 +197,7 @@
   /* -- widths -- */
 
 
-  [stylegroup='railway']  { line-width: 2 + 1; }
+  [stylegroup='railway']  { line-width: @outline * 1.5; }
 
 }
 
@@ -209,15 +213,15 @@
 /* ================================================================== */
 
 #aeroway {
-  line-color:@aeroway;
-  line-cap:butt;
-  line-join:miter;
+  line-color: @aeroway;
+  line-cap: butt;
+  line-join: miter;
   [type='runway'] {
-    line-width:12;
-    line-color:@darkgray;
+    line-width: @huge;
+    line-color: @darkgray;
   }
   [type='taxiway'] {
-    line-width:3;
+    line-width: @tiny;
   }
 }
 
@@ -230,12 +234,12 @@
 #linear_features {
   [type = 'hedge'], [type = 'tree_row'] {
       line-color: darken(@green,30%);
-      line-width: 3;
+      line-width: @tiny;
       line-dasharray: 3,5;
   }
   [type = 'line'] {
       line-color: @black;
-      line-width: 2;
+      line-width: @outline;
   }
   [type = 'embankment'] {
       line-pattern-file: url(../img/embankment.svg);
@@ -244,7 +248,7 @@
       line-pattern-file: url(../img/cliff.svg);
   }
   [type = 'cutline'] {
-      line-width: 2;
+      line-width: @outline;
       line-dasharray: 25, 15;
       line-color: @darkgray;
   }
@@ -265,7 +269,7 @@
 }
   [admin_level = "8"] {
       line-color: @admin;
-      line-width: 3;
+      line-width: @mini;
       line-dasharray: 20, 10, 5;
   }
 }
