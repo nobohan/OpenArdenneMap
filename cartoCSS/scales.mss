@@ -56,3 +56,5 @@
 @tiny: 3;
 
 @outline: 2;
+
+@bridge_marker: 16;

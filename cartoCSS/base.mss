@@ -80,17 +80,17 @@ Map { background-color: @purewhite; }
   [type='commercial']    { polygon-fill: @industrial; }
   [type='common']        { polygon-fill: @park; }
   [type='forest'], [type='wood'] {
-    [zoom <= 10] { line-width: @landuse_line_width*@z10; }
-    [zoom = 11] { line-width: @landuse_line_width*@z11; }
-    [zoom = 12] { line-width: @landuse_line_width*@z12; }
-    [zoom = 13] { line-width: @landuse_line_width*@z13; }
-    [zoom = 14] { line-width: @landuse_line_width*@z14; }
-    [zoom = 15] { line-width: @landuse_line_width*@z15; }
-    [zoom = 16] { line-width: @landuse_line_width*@z16; }
-    [zoom = 17] { line-width: @landuse_line_width*@z17; }
-    [zoom = 18] { line-width: @landuse_line_width*@z18; }
-    [zoom = 19] { line-width: @landuse_line_width*@z19; }
-    [zoom >= 20] { line-width: @landuse_line_width*@z20; }
+    [zoom <= 10] { line-width: @landuse_line_width*@z10; polygon-pattern-transform: scale(@z10);}
+    [zoom = 11] { line-width: @landuse_line_width*@z11; polygon-pattern-transform: scale(@z11);}
+    [zoom = 12] { line-width: @landuse_line_width*@z12; polygon-pattern-transform: scale(@z12);}
+    [zoom = 13] { line-width: @landuse_line_width*@z13; polygon-pattern-transform: scale(@z13);}
+    [zoom = 14] { line-width: @landuse_line_width*@z14; polygon-pattern-transform: scale(@z14);}
+    [zoom = 15] { line-width: @landuse_line_width*@z15; polygon-pattern-transform: scale(@z15);}
+    [zoom = 16] { line-width: @landuse_line_width*@z16; polygon-pattern-transform: scale(1);}
+    [zoom = 17] { line-width: @landuse_line_width*@z17; polygon-pattern-transform: scale(@z17);}
+    [zoom = 18] { line-width: @landuse_line_width*@z18; polygon-pattern-transform: scale(@z18);}
+    [zoom = 19] { line-width: @landuse_line_width*@z19; polygon-pattern-transform: scale(@z19);}
+    [zoom >= 20] { line-width: @landuse_line_width*@z20; polygon-pattern-transform: scale(@z20);}
     polygon-fill: @green;
     line-color: @darkgray;
     polygon-pattern-file: url(../img/forest.svg);
