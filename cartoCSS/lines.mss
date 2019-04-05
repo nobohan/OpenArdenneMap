@@ -1,24 +1,12 @@
 /* LINES.MSS CONTENTS
  * - Roads
- * - various point features
- *
+ * - other linear features
  */
 
 
 /* ==================================================================
    ROAD & RAIL LINES
 /* ================================================================== */
-
-/* Road width variables that are used in road & bridge styles */
-
-@huge: 16;
-@large: 10;
-@medium: 8;
-@small: 5;
-@mini: 4;
-@tiny: 3;
-
-@outline: 2;
 
 /* ---- Casing ----------------------------------------------- */
 
@@ -51,16 +39,55 @@
   [type='primary'],
   [type='primary_link'] {
     line-color: @primary_case;
-    [bridge=1] { line-color: @primary_case * 0.8; line-width: @large + @outline; }
+    [bridge=1] {
+      [zoom <= 10] { line-width: (@large + @outline)*@z10; }
+      [zoom = 11] { line-width: (@large + @outline)*@z11; }
+      [zoom = 12] { line-width: (@large + @outline)*@z12; }
+      [zoom = 13] { line-width: (@large + @outline)*@z13; }
+      [zoom = 14] { line-width: (@large + @outline)*@z14; }
+      [zoom = 15] { line-width: (@large + @outline)*@z15; }
+      [zoom = 16] { line-width: (@large + @outline)*@z16; }
+      [zoom = 17] { line-width: (@large + @outline)*@z17; }
+      [zoom = 18] { line-width: (@large + @outline)*@z18; }
+      [zoom = 19] { line-width: (@large + @outline)*@z19; }
+      [zoom >= 20] { line-width: (@large + @outline)*@z20; }
+      line-color: @primary_case * 0.8;
+    }
   }
   [type='secondary'],
   [type='secondary_link'] {
     line-color: @secondary_case;
-    [bridge=1] { line-color: @secondary_case; line-width: @large + @outline; }
+    [bridge=1] {
+      [zoom <= 10] { line-width: (@large + @outline)*@z10; }
+      [zoom = 11] { line-width: (@large + @outline)*@z11; }
+      [zoom = 12] { line-width: (@large + @outline)*@z12; }
+      [zoom = 13] { line-width: (@large + @outline)*@z13; }
+      [zoom = 14] { line-width: (@large + @outline)*@z14; }
+      [zoom = 15] { line-width: (@large + @outline)*@z15; }
+      [zoom = 16] { line-width: (@large + @outline)*@z16; }
+      [zoom = 17] { line-width: (@large + @outline)*@z17; }
+      [zoom = 18] { line-width: (@large + @outline)*@z18; }
+      [zoom = 19] { line-width: (@large + @outline)*@z19; }
+      [zoom >= 20] { line-width: (@large + @outline)*@z20; }
+      line-color: @secondary_case;
+    }
   }
   [stylegroup='railway'] {
     line-color: #111;
-    [bridge=1] { line-color: @secondary_case; line-width: @large + @outline; }
+    [bridge=1] {
+      [zoom <= 10] { line-width: (@large + @outline)*@z10; }
+      [zoom = 11] { line-width: (@large + @outline)*@z11; }
+      [zoom = 12] { line-width: (@large + @outline)*@z12; }
+      [zoom = 13] { line-width: (@large + @outline)*@z13; }
+      [zoom = 14] { line-width: (@large + @outline)*@z14; }
+      [zoom = 15] { line-width: (@large + @outline)*@z15; }
+      [zoom = 16] { line-width: (@large + @outline)*@z16; }
+      [zoom = 17] { line-width: (@large + @outline)*@z17; }
+      [zoom = 18] { line-width: (@large + @outline)*@z18; }
+      [zoom = 19] { line-width: (@large + @outline)*@z19; }
+      [zoom >= 20] { line-width: (@large + @outline)*@z20; }
+      line-color: @secondary_case;
+    }
     [type='disused'] { line-opacity: 0.5; }
   }
   [tunnel=1] { line-dasharray: 3,3; }
@@ -77,8 +104,32 @@
   }
 
   /* -- widths -- */
-  [stylegroup='motorway'] { line-width: @large + @outline; }
-  [stylegroup='mainroad'] { line-width: @large + @outline*1.5; }
+  [stylegroup='motorway'] {
+    [zoom <= 10] { line-width: (@large + @outline)*@z10; }
+    [zoom = 11] { line-width: (@large + @outline)*@z11; }
+    [zoom = 12] { line-width: (@large + @outline)*@z12; }
+    [zoom = 13] { line-width: (@large + @outline)*@z13; }
+    [zoom = 14] { line-width: (@large + @outline)*@z14; }
+    [zoom = 15] { line-width: (@large + @outline)*@z15; }
+    [zoom = 16] { line-width: (@large + @outline)*@z16; }
+    [zoom = 17] { line-width: (@large + @outline)*@z17; }
+    [zoom = 18] { line-width: (@large + @outline)*@z18; }
+    [zoom = 19] { line-width: (@large + @outline)*@z19; }
+    [zoom >= 20] { line-width: (@large + @outline)*@z20; }
+  }
+  [stylegroup='mainroad'] {
+    [zoom <= 10] { line-width: (@large + @outline*1.5)*@z10; }
+    [zoom = 11] { line-width: (@large + @outline*1.5)*@z11; }
+    [zoom = 12] { line-width: (@large + @outline*1.5)*@z12; }
+    [zoom = 13] { line-width: (@large + @outline*1.5)*@z13; }
+    [zoom = 14] { line-width: (@large + @outline*1.5)*@z14; }
+    [zoom = 15] { line-width: (@large + @outline*1.5)*@z15; }
+    [zoom = 16] { line-width: (@large + @outline*1.5)*@z16; }
+    [zoom = 17] { line-width: (@large + @outline*1.5)*@z17; }
+    [zoom = 18] { line-width: (@large + @outline*1.5)*@z18; }
+    [zoom = 19] { line-width: (@large + @outline*1.5)*@z19; }
+    [zoom >= 20] { line-width: (@large + @outline*1.5)*@z20; }
+  }
   [stylegroup='minorroad']{ line-width: @small + @outline; }
 
   [stylegroup='railway']  { line-width: @small + @outline; }
@@ -264,7 +315,7 @@
 #boundaries {
 [admin_level = "6"] {
     line-color: @admin;
-    line-width: 6;
+    line-width: @small;
     line-dasharray: 20, 10, 5;
 }
   [admin_level = "8"] {
