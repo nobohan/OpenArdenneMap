@@ -6566,9 +6566,9 @@
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
       <Parameter name="id"><![CDATA[bridge_symbol]]></Parameter>
       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
-      <Parameter name="table"><![CDATA[( SELECT way, highway, CAST(90+degrees(ST_Azimuth(ST_StartPoint(planet_osm_line.way), ST_EndPoint(planet_osm_line.way))) AS VARCHAR(255)) AS orientation 
- FROM planet_osm_line WHERE bridge NOT IN ('', '0', 'no') 
- AND highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') 
+      <Parameter name="table"><![CDATA[( SELECT way, highway, CAST(90+degrees(ST_Azimuth(ST_StartPoint(planet_osm_line.way), ST_EndPoint(planet_osm_line.way))) AS VARCHAR(255)) AS orientation
+ FROM planet_osm_line WHERE bridge NOT IN ('', '0', 'no')
+ AND highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway')
 ) AS data]]></Parameter>
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
@@ -6612,7 +6612,7 @@
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT way, building, name, CAST(degrees(ST_Azimuth(ST_Centroid(l.way),ST_Centroid(ST_SimplifyPreserveTopology(l.way,100)))) AS VARCHAR(255)) AS orientation, area
     FROM planet_osm_polygon
- AS l WHERE "building" IN ('church','chapel') 
+ AS l WHERE "building" IN ('church','chapel')
 ) AS data]]></Parameter>
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
@@ -6958,7 +6958,7 @@
       <Parameter name="id"><![CDATA[point_features]]></Parameter>
       <Parameter name="project"><![CDATA[OpenArdenneMap]]></Parameter>
       <Parameter name="srs"></Parameter>
-      <Parameter name="table"><![CDATA[( SELECT way, power, man_made, amenity, historic, leisure, tourism, public_transport, "tower:type", bus, name 
+      <Parameter name="table"><![CDATA[( SELECT way, power, man_made, amenity, historic, leisure, tourism, public_transport, "tower:type", bus, name
   FROM planet_osm_point
 )  AS data]]></Parameter>
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
@@ -6982,18 +6982,18 @@
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
       <Parameter name="id"><![CDATA[pitch]]></Parameter>
       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
-      <Parameter name="table"><![CDATA[( SELECT way, sport, 
- CASE WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,100))) >= 5) THEN 
- (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3))) 
+      <Parameter name="table"><![CDATA[( SELECT way, sport,
+ CASE WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,100))) >= 5) THEN
+ (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3)))
    THEN CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3))) AS VARCHAR(255))
-  ELSE CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2))) AS VARCHAR(255)) 
- END) END AS orientation, CASE WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,100))) >= 5) THEN 
+  ELSE CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2))) AS VARCHAR(255))
+ END) END AS orientation, CASE WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,100))) >= 5) THEN
  (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3)))
   THEN CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) AS INTEGER)
   ELSE CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1),
  ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3)) AS INTEGER)
  END)
- END AS length 
+ END AS length
  FROM planet_osm_polygon AS l WHERE leisure = 'pitch' and sport IN ('soccer', 'tennis')) AS data]]></Parameter>
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
@@ -7159,7 +7159,7 @@
       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT way, waterway AS type, name
   FROM planet_osm_line
-  WHERE waterway IN ('canal', 'river', 'stream') 
+  WHERE waterway IN ('canal', 'river', 'stream')
     AND name IS NOT NULL
 ) AS data]]></Parameter>
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
@@ -7182,18 +7182,18 @@
       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
       <Parameter name="key_field"><![CDATA[]]></Parameter>
-      <Parameter name="table"><![CDATA[( SELECT way, railway AS type, name, z_order 
-  FROM planet_osm_point 
-  WHERE railway IN ('station', 'level_crossing') 
+      <Parameter name="table"><![CDATA[( SELECT way, railway AS type, name, z_order
+  FROM planet_osm_point
+  WHERE railway IN ('station', 'level_crossing')
   ORDER BY z_order NULLS LAST
-) AS DATA 
+) AS DATA
 ]]></Parameter>
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
   <Style filter-mode="first" name="label28km">
     <Rule>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-50" dy="-60" fill="#111111" fontset-name="fontset-0" halo-fill="#ff9703" halo-radius="3" placement="point" size="120"><![CDATA['Plan B - 28 km']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-50" dy="-60" fill="#111111" fontset-name="fontset-0" halo-fill="#f100f9" halo-radius="3" placement="point" size="120"><![CDATA['28 km']]></TextSymbolizer>
     </Rule>
   </Style>
   <Layer name="label28km" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
@@ -7206,25 +7206,10 @@
       <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
-  <Style filter-mode="first" name="label_planA">
-    <Rule>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-50" dy="10" fill="#111111" fontset-name="fontset-0" halo-fill="#ff00ff" halo-radius="3" placement="point" size="120"><![CDATA['Plan A']]></TextSymbolizer>
-    </Rule>
-  </Style>
-  <Layer name="label_planA" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
-    <StyleName><![CDATA[label_planA]]></StyleName>
-    <Datasource>
-      <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
-      <Parameter name="file"><![CDATA[../geojson/start.shp]]></Parameter>
-      <Parameter name="id"><![CDATA[label_planA]]></Parameter>
-      <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
-      <Parameter name="type"><![CDATA[shape]]></Parameter>
-    </Datasource>
-  </Layer>
   <Style filter-mode="first" name="vtt28km">
     <Rule>
-      <LineSymbolizer offset="- 10" stroke="#ff9703" stroke-opacity="0.7" stroke-width="9" />
-      <MarkersSymbolizer file="../img/arrow.png" height="12" offset="- 10" placement="line" spacing="400" />
+      <LineSymbolizer offset="- 10" stroke="#f100f9" stroke-opacity="0.7" stroke-width="9" />
+      <MarkersSymbolizer file="../img/arrow.png" height="16" offset="- 10" placement="line" spacing="400" />
     </Rule>
   </Style>
   <Layer name="vtt28km" srs="+proj=longlat +datum=WGS84 +no_defs " status="on">
@@ -7237,37 +7222,4 @@
       <Parameter name="type"><![CDATA[geojson]]></Parameter>
     </Datasource>
   </Layer>
-  <Style filter-mode="first" name="vtt_planA">
-    <Rule>
-      <LineSymbolizer offset="- 10" stroke="#ff00ff" stroke-opacity="0.7" stroke-width="9" />
-      <MarkersSymbolizer file="../img/arrow.png" height="12" offset="- 10" placement="line" spacing="400" />
-    </Rule>
-  </Style>
-  <Layer name="vtt_planA" srs="+proj=longlat +datum=WGS84 +no_defs " status="on">
-    <StyleName><![CDATA[vtt_planA]]></StyleName>
-    <Datasource>
-      <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
-      <Parameter name="file"><![CDATA[../geojson/aller1.geojson]]></Parameter>
-      <Parameter name="id"><![CDATA[vtt_planA]]></Parameter>
-      <Parameter name="srs"><![CDATA[+proj=longlat +datum=WGS84 +no_defs]]></Parameter>
-      <Parameter name="type"><![CDATA[geojson]]></Parameter>
-    </Datasource>
-  </Layer>
-  <Style filter-mode="first" name="vtt_planA">
-    <Rule>
-      <LineSymbolizer offset="- 10" stroke="#ff00ff" stroke-opacity="0.7" stroke-width="9" />
-      <MarkersSymbolizer file="../img/arrow.png" height="12" offset="- 10" placement="line" spacing="400" />
-    </Rule>
-  </Style>
-  <Layer name="vtt_planA" srs="+proj=longlat +datum=WGS84 +no_defs " status="on">
-    <StyleName><![CDATA[vtt_planA]]></StyleName>
-    <Datasource>
-      <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
-      <Parameter name="file"><![CDATA[../geojson/retour1.geojson]]></Parameter>
-      <Parameter name="id"><![CDATA[vtt_planA]]></Parameter>
-      <Parameter name="srs"><![CDATA[+proj=longlat +datum=WGS84 +no_defs]]></Parameter>
-      <Parameter name="type"><![CDATA[geojson]]></Parameter>
-    </Datasource>
-  </Layer>
 </Map>
-
