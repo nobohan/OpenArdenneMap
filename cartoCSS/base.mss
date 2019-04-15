@@ -93,11 +93,18 @@ Map { background-color: @purewhite; }
     [zoom >= 20] { line-width: @landuse_line_width*@z20; }
     polygon-fill: @green;
     line-color: @darkgray;
+
     [zoom <= 14] { polygon-pattern-file: url(../img/forest_z14.svg); }
     [zoom > 14] { polygon-pattern-file: url(../img/forest.svg); }
     [leaf_type='broadleaved'] {
       [zoom <= 14] { polygon-pattern-file: url(../img/forest_bl_z14.svg); }
-      [zoom > 14] { polygon-pattern-file: url(../img/forest_bl.svg); }
+      [zoom > 14] {
+        polygon-pattern-file: url(../img/forest_bl.svg);
+        [area > 200000] {
+          line-pattern-file: url(../img/forest-border.svg);
+          line-pattern-offset: -10;
+        }
+      }
     }
     [leaf_type='needleleaved'] {
       [zoom <= 14] { polygon-pattern-file: url(../img/forest_nl_z14.svg); }

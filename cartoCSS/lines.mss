@@ -668,19 +668,6 @@
     [zoom = 19] { line-width: @small*@z19; }
     [zoom >= 20] { line-width: @small*@z20; }
   }
-  [admin_level = "8"] {
-    [zoom <= 10] { line-width: @mini*@z10; }
-    [zoom = 11] { line-width: @mini*@z11; }
-    [zoom = 12] { line-width: @mini*@z12; }
-    [zoom = 13] { line-width: @mini*@z13; }
-    [zoom = 14] { line-width: @mini*@z14; }
-    [zoom = 15] { line-width: @mini*@z15; }
-    [zoom = 16] { line-width: @mini*@z16; }
-    [zoom = 17] { line-width: @mini*@z17; }
-    [zoom = 18] { line-width: @mini*@z18; }
-    [zoom = 19] { line-width: @mini*@z19; }
-    [zoom >= 20] { line-width: @mini*@z20; }
-  }
 }
 
 /******************************************************************* */
