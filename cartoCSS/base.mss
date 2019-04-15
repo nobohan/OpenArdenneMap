@@ -14,10 +14,10 @@ Map { background-color: @purewhite; }
 
 #contour  {
   line-color: @contour;
-  [zoom <= 10] { line-width: @contour_minor_line_width*@z10; }
-  [zoom = 11] { line-width: @contour_minor_line_width*@z11; }
-  [zoom = 12] { line-width: @contour_minor_line_width*@z12; }
-  [zoom = 13] { line-width: @contour_minor_line_width*@z13; }
+  [zoom <= 10] { line-width: 0; }
+  [zoom = 11] { line-width: 0; }
+  [zoom = 12] { line-width: 0; }
+  [zoom = 13] { line-width: 0; }
   [zoom = 14] { line-width: @contour_minor_line_width*@z14; }
   [zoom = 15] { line-width: @contour_minor_line_width*@z15; }
   [zoom = 16] { line-width: @contour_minor_line_width*@z16; }
@@ -26,8 +26,8 @@ Map { background-color: @purewhite; }
   [zoom = 19] { line-width: @contour_minor_line_width*@z19; }
   [zoom >= 20] { line-width: @contour_minor_line_width*@z20; }
   [main="yes"] {
-    [zoom <= 10] { line-width: @contour_major_line_width*@z10; }
-    [zoom = 11] { line-width: @contour_major_line_width*@z11; }
+    [zoom <= 10] { line-width: 0; }
+    [zoom = 11] { line-width: 0; }
     [zoom = 12] { line-width: @contour_major_line_width*@z12; }
     [zoom = 13] { line-width: @contour_major_line_width*@z13; }
     [zoom = 14] { line-width: @contour_major_line_width*@z14; }

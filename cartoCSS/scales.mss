@@ -14,6 +14,18 @@
 @z19: 8;
 @z20: 16;
 
+@z10_road: 0.5;
+@z11_road: 0.5;
+@z12_road: 0.5;
+@z13_road: 0.6;
+@z14_road: 0.7;
+@z15_road: 0.8;
+@z16_road: 1; /* scale = 2 */
+@z17_road: 1.3;
+@z18_road: 2;
+@z19_road: 3;
+@z20_road: 4;
+
 @z10_marker: 0.125;
 @z11_marker: 0.18;
 @z12_marker: 0.25;
@@ -26,11 +38,11 @@
 @z19_marker: 3;
 @z20_marker: 4;
 
-@z10_label: 0.125;
-@z11_label: 0.18;
-@z12_label: 0.25;
-@z13_label: 0.35;
-@z14_label: 0.5;
+@z10_label: 0.2;
+@z11_label: 0.25;
+@z12_label: 0.3;
+@z13_label: 0.4;
+@z14_label: 0.55;
 @z15_label: 0.7;
 @z16_label: 1; /* scale = 2 */
 @z17_label: 1.3;
