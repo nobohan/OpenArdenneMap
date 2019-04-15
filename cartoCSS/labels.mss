@@ -4,11 +4,7 @@
  * - area labels
  * - waterway labels
  */
-@supra_text_size_alfphabet: 5;
-@text_size_l : 60 + @supra_text_size_alfphabet;
-@text_size_m : 40 + @supra_text_size_alfphabet;
-@text_size_s : 30 + @supra_text_size_alfphabet;
-@text_size_xs : 20 + @supra_text_size_alfphabet;
+
 
 /* Font sets are defined in palette.mss */
 
@@ -18,10 +14,20 @@
 
 #contour {
     [main="yes"] {
+        [zoom <= 10] { text-size: @text_size_s*@z10_label; }
+        [zoom = 11] { text-size: @text_size_s*@z11_label; }
+        [zoom = 12] { text-size: @text_size_s*@z12_label; }
+        [zoom = 13] { text-size: @text_size_s*@z13_label; }
+        [zoom = 14] { text-size: @text_size_s*@z14_label; }
+        [zoom = 15] { text-size: @text_size_s*@z15_label; }
+        [zoom = 16] { text-size: @text_size_s*@z16_label; }
+        [zoom = 17] { text-size: @text_size_s*@z17_label; }
+        [zoom = 18] { text-size: @text_size_s*@z18_label; }
+        [zoom = 19] { text-size: @text_size_s*@z19_label; }
+        [zoom >= 20] { text-size: @text_size_s*@z20_label; }
         text-name:'[level]';
         text-face-name:@sans;
         text-placement:line;
-        text-size: @text_size_s;
         text-wrap-width: 60;
         text-line-spacing: 1;
         text-fill: @contour;
@@ -39,13 +45,23 @@
 /* ---- Cities ------------------------------------------------------ */
 
 #place::city[type='city'] {
-  text-name:'[name]';
-  text-face-name:@sans;
-  text-placement:point;
-  text-fill:@city_text;
-  text-halo-fill:@city_halo;
+  [zoom <= 10] { text-size: @text_size_l*@z10_label*1.2; }
+  [zoom = 11] { text-size: @text_size_l*@z11_label*1.2; }
+  [zoom = 12] { text-size: @text_size_l*@z12_label*1.2; }
+  [zoom = 13] { text-size: @text_size_l*@z13_label*1.2; }
+  [zoom = 14] { text-size: @text_size_l*@z14_label*1.2; }
+  [zoom = 15] { text-size: @text_size_l*@z15_label*1.2; }
+  [zoom = 16] { text-size: @text_size_l*@z16_label*1.2; }
+  [zoom = 17] { text-size: @text_size_l*@z17_label*1.2; }
+  [zoom = 18] { text-size: @text_size_l*@z18_label*1.2; }
+  [zoom = 19] { text-size: @text_size_l*@z19_label*1.2; }
+  [zoom >= 20] { text-size: @text_size_l*@z20_label*1.2; }
+  text-name: '[name]';
+  text-face-name: @sans;
+  text-placement: point;
+  text-fill: @city_text;
+  text-halo-fill: @city_halo;
   text-halo-radius: 4;
-  text-size:@text_size_l+6;
   text-character-spacing: 20;
   text-wrap-width: 400;
   text-transform: uppercase;
@@ -55,15 +71,25 @@
 
 #place::small[type='town'],
 #place::town[type='village'] {
+  [zoom <= 10] { text-size: @text_size_l*@z10_label; }
+  [zoom = 11] { text-size: @text_size_l*@z11_label; }
+  [zoom = 12] { text-size: @text_size_l*@z12_label; }
+  [zoom = 13] { text-size: @text_size_l*@z13_label; }
+  [zoom = 14] { text-size: @text_size_l*@z14_label; }
+  [zoom = 15] { text-size: @text_size_l*@z15_label; }
+  [zoom = 16] { text-size: @text_size_l*@z16_label; }
+  [zoom = 17] { text-size: @text_size_l*@z17_label; }
+  [zoom = 18] { text-size: @text_size_l*@z18_label; }
+  [zoom = 19] { text-size: @text_size_l*@z19_label; }
+  [zoom >= 20] { text-size: @text_size_l*@z20_label; }
   text-name:'[name]';
-  text-face-name:@sans;
-  text-placement:point;
-  text-fill:@town_text;
-  text-halo-fill:@town_halo;
+  text-face-name: @sans;
+  text-placement: point;
+  text-fill: @town_text;
+  text-halo-fill: @town_halo;
   text-halo-radius: 4;
   text-wrap-width: 50;
   text-line-spacing: 2;
-  text-size:@text_size_l;
   text-character-spacing: 20;
   text-line-spacing: 6;
   text-allow-overlap: true;
@@ -77,12 +103,22 @@
 #place::small[type='hamlet'],
 #place::small[type='neighbourhood'],
 #place::small[type='isolated_dwelling'] {
-  text-name:'[name]';
-  text-face-name:@sans;
-  text-placement:point;
-  text-fill:@other_text;
-  text-size:@text_size_s;
-  text-halo-fill:@other_halo;
+  [zoom <= 10] { text-size: @text_size_s*@z10_label; }
+  [zoom = 11] { text-size: @text_size_s*@z11_label; }
+  [zoom = 12] { text-size: @text_size_s*@z12_label; }
+  [zoom = 13] { text-size: @text_size_s*@z13_label; }
+  [zoom = 14] { text-size: @text_size_s*@z14_label; }
+  [zoom = 15] { text-size: @text_size_s*@z15_label; }
+  [zoom = 16] { text-size: @text_size_s*@z16_label; }
+  [zoom = 17] { text-size: @text_size_s*@z17_label; }
+  [zoom = 18] { text-size: @text_size_s*@z18_label; }
+  [zoom = 19] { text-size: @text_size_s*@z19_label; }
+  [zoom >= 20] { text-size: @text_size_s*@z20_label; }
+  text-name: '[name]';
+  text-face-name: @sans;
+  text-placement: point;
+  text-fill: @other_text;
+  text-halo-fill: @other_halo;
   text-halo-radius: 4;
   text-character-spacing: 5;
   text-wrap-width: 120;
@@ -91,15 +127,24 @@
 }
 
 #place::small[type='locality'] {
-  /*text-name:'[name]';*/
+  [zoom <= 10] { text-size: @text_size_m*@z10_label; }
+  [zoom = 11] { text-size: @text_size_m*@z11_label; }
+  [zoom = 12] { text-size: @text_size_m*@z12_label; }
+  [zoom = 13] { text-size: @text_size_m*@z13_label; }
+  [zoom = 14] { text-size: @text_size_m*@z14_label; }
+  [zoom = 15] { text-size: @text_size_m*@z15_label; }
+  [zoom = 16] { text-size: @text_size_m*@z16_label; }
+  [zoom = 17] { text-size: @text_size_m*@z17_label; }
+  [zoom = 18] { text-size: @text_size_m*@z18_label; }
+  [zoom = 19] { text-size: @text_size_m*@z19_label; }
+  [zoom >= 20] { text-size: @text_size_m*@z20_label; }
   text-name: '';
-  text-face-name:@sans;
-  text-placement:point;
-  text-fill:@locality_text;
-  text-halo-fill:@locality_halo;
+  text-face-name: @sans;
+  text-placement: point;
+  text-fill: @locality_text;
+  text-halo-fill: @locality_halo;
   text-halo-radius: 4;
   text-wrap-width: 30;
-  text-size:@text_size_m;
   text-wrap-width: 60;
   text-line-spacing: 1;
   text-allow-overlap: false;
@@ -112,9 +157,19 @@
 // =====================================================================
 
 #area_label {
+  [zoom <= 10] { text-size: @text_size_s*@z10_label; }
+  [zoom = 11] { text-size: @text_size_s*@z11_label; }
+  [zoom = 12] { text-size: @text_size_s*@z12_label; }
+  [zoom = 13] { text-size: @text_size_s*@z13_label; }
+  [zoom = 14] { text-size: @text_size_s*@z14_label; }
+  [zoom = 15] { text-size: @text_size_s*@z15_label; }
+  [zoom = 16] { text-size: @text_size_s*@z16_label; }
+  [zoom = 17] { text-size: @text_size_s*@z17_label; }
+  [zoom = 18] { text-size: @text_size_s*@z18_label; }
+  [zoom = 19] { text-size: @text_size_s*@z19_label; }
+  [zoom >= 20] { text-size: @text_size_s*@z20_label; }
   text-name: "";
   text-face-name:@sans;
-  text-size: @text_size_s;
   text-character-spacing: 1;
   text-halo-radius: 3;
   text-wrap-width:30;
@@ -146,15 +201,11 @@
   }
   [type='school'] {
     text-name: "'Éc.'";
-    text-size: @text_size_s;
     text-dy: -20;
-    /*text-dx: -20;*/
   }
   [type='farmyard'] {
     text-name: "'Fme'";
-    text-size: @text_size_s;
     text-dy: -20;
-    /*text-dx: -15;*/
     text-allow-overlap: false;
     text-repeat-distance: 60;
   }
@@ -180,19 +231,39 @@
 #waterway_label[type='river'],
 #waterway_label[type='canal'],
 #waterway_label[type='stream'] {
-    text-name: '[name]';
-    text-face-name: @sans;
-    text-fill: @darkblue;
-    text-halo-fill: lighten(@water, 10%);
-    text-halo-radius: 3;
-    text-placement: line;
-    text-repeat-distance: 1200;
-    text-size: @text_size_m;
-    text-spacing: 300;
+  [zoom <= 10] { text-size: @text_size_m*@z10_label; }
+  [zoom = 11] { text-size: @text_size_m*@z11_label; }
+  [zoom = 12] { text-size: @text_size_m*@z12_label; }
+  [zoom = 13] { text-size: @text_size_m*@z13_label; }
+  [zoom = 14] { text-size: @text_size_m*@z14_label; }
+  [zoom = 15] { text-size: @text_size_m*@z15_label; }
+  [zoom = 16] { text-size: @text_size_m*@z16_label; }
+  [zoom = 17] { text-size: @text_size_m*@z17_label; }
+  [zoom = 18] { text-size: @text_size_m*@z18_label; }
+  [zoom = 19] { text-size: @text_size_m*@z19_label; }
+  [zoom >= 20] { text-size: @text_size_m*@z20_label; }
+  text-name: '[name]';
+  text-face-name: @sans;
+  text-fill: @darkblue;
+  text-halo-fill: lighten(@water, 10%);
+  text-halo-radius: 3;
+  text-placement: line;
+  text-repeat-distance: 1200;
+  text-spacing: 300;
 }
 
 #waterway_label[type='stream'] {
-    text-size: @text_size_s;
+  [zoom <= 10] { text-size: @text_size_s*@z10_label; }
+  [zoom = 11] { text-size: @text_size_s*@z11_label; }
+  [zoom = 12] { text-size: @text_size_s*@z12_label; }
+  [zoom = 13] { text-size: @text_size_s*@z13_label; }
+  [zoom = 14] { text-size: @text_size_s*@z14_label; }
+  [zoom = 15] { text-size: @text_size_s*@z15_label; }
+  [zoom = 16] { text-size: @text_size_s*@z16_label; }
+  [zoom = 17] { text-size: @text_size_s*@z17_label; }
+  [zoom = 18] { text-size: @text_size_s*@z18_label; }
+  [zoom = 19] { text-size: @text_size_s*@z19_label; }
+  [zoom >= 20] { text-size: @text_size_s*@z20_label; }
 }
 
 
@@ -202,12 +273,22 @@
 
 #train_elements {
   [type='station'] {
-    text-name:'Gare';
-    text-face-name:@sans;
-    text-placement:point;
-    text-fill:@other_text;
-    text-size:@text_size_m;
-    text-halo-fill:@other_halo;
+    [zoom <= 10] { text-size: @text_size_m*@z10_label; }
+    [zoom = 11] { text-size: @text_size_m*@z11_label; }
+    [zoom = 12] { text-size: @text_size_m*@z12_label; }
+    [zoom = 13] { text-size: @text_size_m*@z13_label; }
+    [zoom = 14] { text-size: @text_size_m*@z14_label; }
+    [zoom = 15] { text-size: @text_size_m*@z15_label; }
+    [zoom = 16] { text-size: @text_size_m*@z16_label; }
+    [zoom = 17] { text-size: @text_size_m*@z17_label; }
+    [zoom = 18] { text-size: @text_size_m*@z18_label; }
+    [zoom = 19] { text-size: @text_size_m*@z19_label; }
+    [zoom >= 20] { text-size: @text_size_m*@z20_label; }
+    text-name: 'Gare';
+    text-face-name: @sans;
+    text-placement: point;
+    text-fill: @other_text;
+    text-halo-fill: @other_halo;
     text-halo-radius: 4;
     text-character-spacing: 2;
     text-line-spacing: 2;

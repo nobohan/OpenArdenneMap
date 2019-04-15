@@ -26,6 +26,25 @@
 @z19_marker: 3;
 @z20_marker: 4;
 
+@z10_label: 0.125;
+@z11_label: 0.18;
+@z12_label: 0.25;
+@z13_label: 0.35;
+@z14_label: 0.5;
+@z15_label: 0.7;
+@z16_label: 1; /* scale = 2 */
+@z17_label: 1.3;
+@z18_label: 2;
+@z19_label: 3;
+@z20_label: 4;
+
+@supra_text_size_alfphabet: 5;
+@text_size_l : 60 + @supra_text_size_alfphabet;
+@text_size_m : 40 + @supra_text_size_alfphabet;
+@text_size_s : 30 + @supra_text_size_alfphabet;
+@text_size_xs : 20 + @supra_text_size_alfphabet;
+
+
 /* =============== */
 /*    BASE.MSS
 /* =============== */
@@ -58,3 +77,10 @@
 @outline: 2;
 
 @bridge_marker: 16;
+
+
+/* =============== */
+/*    POINTS.MSS
+/* =============== */
+
+@pitch_marker: 40;
