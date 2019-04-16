@@ -74,10 +74,10 @@
   [zoom <= 10] { text-size: @text_size_l*@z10_label; }
   [zoom = 11] { text-size: @text_size_l*@z11_label; }
   [zoom = 12] { text-size: @text_size_l*@z12_label; }
-  [zoom = 13] { text-size: @text_size_l*@z13_label; }
-  [zoom = 14] { text-size: @text_size_l*@z14_label; }
-  [zoom = 15] { text-size: @text_size_l*@z15_label; }
-  [zoom = 16] { text-size: @text_size_l*@z16_label; }
+  [zoom = 13] { text-size: @text_size_l*@z13_label; text-dy: 10; }
+  [zoom = 14] { text-size: @text_size_l*@z14_label; text-dy: 20; }
+  [zoom = 15] { text-size: @text_size_l*@z15_label; text-dy: 100; }
+  [zoom = 16] { text-size: @text_size_l*@z16_label; text-dy: 200; }
   [zoom = 17] { text-size: @text_size_l*@z17_label; }
   [zoom = 18] { text-size: @text_size_l*@z18_label; }
   [zoom = 19] { text-size: @text_size_l*@z19_label; }
@@ -93,8 +93,6 @@
   text-character-spacing: 20;
   text-line-spacing: 6;
   text-allow-overlap: true;
-  text-dy: 200;
-
 }
 
 /* ---- Other small places ------------------------------------------ */
