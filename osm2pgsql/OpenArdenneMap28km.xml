@@ -7193,7 +7193,7 @@
   </Layer>
   <Style filter-mode="first" name="label28km">
     <Rule>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-50" dy="-60" fill="#111111" fontset-name="fontset-0" halo-fill="#ff9703" halo-radius="3" placement="point" size="120"><![CDATA['Plan B - 28 km']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-50" dy="-60" fill="#111111" fontset-name="fontset-0" halo-fill="#ff9703" halo-radius="3" placement="point" size="120"><![CDATA['28 km']]></TextSymbolizer>
     </Rule>
   </Style>
   <Layer name="label28km" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">

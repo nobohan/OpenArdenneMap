@@ -337,6 +337,7 @@
     "../cartoCSS/base.mss",
     "../cartoCSS/lines.mss",
     "../cartoCSS/points.mss",
+"../cartoCSS/vtt.mss"
     "../cartoCSS/labels.mss"
   ],
   "attribution": "Data \u00a9 OpenStreetMap (and) contributors, ODbL",

@@ -389,7 +389,8 @@
     "../cartoCSS/base.mss",
     "../cartoCSS/lines.mss",
     "../cartoCSS/labels.mss",
-    "../cartoCSS/points.mss"
+    "../cartoCSS/points.mss",
+    "../cartoCSS/vtt.mss"
   ],
   "attribution": "Data \u00a9 OpenStreetMap (and) contributors, ODbL",
   "bounds": [
