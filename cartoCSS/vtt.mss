@@ -100,9 +100,10 @@
 @vtt42km: #FFBF00;
 @vtt56km: #2E2E2E;
 
-@pink: #ff9703;
-@lo: 9;
-@lop: 0.7;
+@pink: #fc16e9;
+@lo: 15;
+@lop: 0.8;
+@mk: 16;
 
 #vtt28km {
   line-color: @pink;
@@ -110,7 +111,7 @@
   line-offset: -@lo+1;
   line-opacity: @lop;
   marker-file: url(../img/arrow.png);
-  marker-height: 12;
+  marker-height: @mk;
   marker-placement: line;
   marker-spacing: 400;
   marker-offset: -@lo+1;
@@ -121,7 +122,7 @@
   line-offset: -@lo+1;
   line-opacity: @lop;
   marker-file: url(../img/arrow.png);
-  marker-height: 12;
+  marker-height: @mk;
   marker-placement: line;
   marker-spacing: 400;
   marker-offset: -@lo+1;
@@ -132,7 +133,7 @@
   line-offset: -@lo+1;
   line-opacity: @lop;
   marker-file: url(../img/arrow.png);
-  marker-height: 12;
+  marker-height: @mk;
   marker-placement: line;
   marker-spacing: 400;
   marker-offset: -@lo+1;
@@ -143,7 +144,7 @@
   line-offset: -@lo+1;
   line-opacity: @lop;
   marker-file: url(../img/arrow.png);
-  marker-height: 12;
+  marker-height: @mk;
   marker-placement: line;
   marker-spacing: 400;
   marker-offset: -@lo+1;
@@ -155,7 +156,7 @@
   line-offset: -@lo+1;
   line-opacity: 1;
   marker-file: url(../img/arrow.png);
-  marker-height: 12;
+  marker-height: @mk;
   marker-placement: line;
   marker-spacing: 400;
   marker-offset: -@lo+1;
@@ -168,7 +169,7 @@
   line-opacity: 1;
   line-dasharray: 12,6;
   marker-file: url(../img/arrow.png);
-  marker-height: 12;
+  marker-height: @mk;
   marker-placement: line;
   marker-spacing: 400;
   marker-offset: -@lo+1;
