@@ -246,7 +246,7 @@
     <StyleName><![CDATA[contour]]></StyleName>
     <Datasource>
       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
-      <Parameter name="file"><![CDATA[../../Elevation/contour_anlier.shp]]></Parameter>
+      <Parameter name="file"><![CDATA[../../../../Elevation/contour_anlier.shp]]></Parameter>
       <Parameter name="id"><![CDATA[contour]]></Parameter>
       <Parameter name="srs"><![CDATA[+proj=lcc +lat_1=51.16666723333333 +lat_2=49.8333339 +lat_0=90 +lon_0=4.367486666666666 +x_0=150000.013 +y_0=5400088.438 +ellps=intl +towgs84=-106.869,52.2978,-103.724,0.3366,-0.457,1.8422,-1.2747 +units=m +no_defs]]></Parameter>
       <Parameter name="type"><![CDATA[shape]]></Parameter>
@@ -7193,7 +7193,8 @@
   </Layer>
   <Style filter-mode="first" name="vtt56km">
     <Rule>
-      <LineSymbolizer offset="4" stroke="#fc14b6" stroke-width="5" />
+      <LineSymbolizer offset="- 10" stroke="#ff9703" stroke-opacity="0.7" stroke-width="9" />
+      <MarkersSymbolizer file="../img/arrow.png" height="12" offset="- 10" placement="line" spacing="400" />
     </Rule>
   </Style>
   <Layer name="vtt56km" srs="+proj=longlat +datum=WGS84 +no_defs " status="on">

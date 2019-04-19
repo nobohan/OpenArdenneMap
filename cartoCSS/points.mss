@@ -130,22 +130,9 @@
 
 @pink: #ff9703;
 
-#label10km {
-    text-name:"'Marche - 10 km'";
-    text-face-name:@sans;
-    text-placement:point;
-    text-fill:@black;
-    text-size: 120;
-    text-character-spacing: 2;
-    text-allow-overlap: true;
-    text-halo-fill: @pink;
-    text-halo-radius: 3;
-    text-dy: -60;
-    text-dx: -50;
-}
 
 #label28km {
-    text-name:"'Plan B - 28 km'";
+    text-name:"'28 km'";
     text-face-name:@sans;
     text-placement:point;
     text-fill:@black;
@@ -159,7 +146,7 @@
 }
 
 #label32km {
-    text-name:"'Plan B - 32 km'";
+    text-name:"'32 km'";
     text-face-name:@sans;
     text-placement:point;
     text-fill:@black;
@@ -173,7 +160,7 @@
 }
 
 #label42km {
-    text-name:"'Plan B - 42 km'";
+    text-name:"'42 km'";
     text-face-name:@sans;
     text-placement:point;
     text-fill:@black;
@@ -187,7 +174,7 @@
 }
 
 #label56km {
-    text-name:"'Plan B - 56 km'";
+    text-name:"'56 km'";
     text-face-name:@sans;
     text-placement:point;
     text-fill:@black;
@@ -197,20 +184,6 @@
     text-halo-fill: @pink;
     text-halo-radius: 3;
     text-dy: -60;
-    text-dx: -50;
-}
-
-#label_planA {
-    text-name:"'Plan A'";
-    text-face-name:@sans;
-    text-placement:point;
-    text-fill:@black;
-    text-size: 120;
-    text-character-spacing: 2;
-    text-allow-overlap: true;
-    text-halo-fill: #FF00FF;
-    text-halo-radius: 3;
-    text-dy: 10;
     text-dx: -50;
 }
 
@@ -228,7 +201,7 @@
     text-dx: -50;
 }
 #label_marche2 {
-    text-name:"'Marche 8 km (pointillé)'";
+    text-name:"'Marche 6 km (pointillé)'";
     text-face-name:@sans;
     text-placement:point;
     text-fill:@black;

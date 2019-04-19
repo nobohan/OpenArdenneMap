@@ -332,30 +332,6 @@
   marker-offset: -@lo+1;
 }
 
-#vtt_planA{
-  line-color: #FF00FF;
-  line-width: @lo;
-  line-offset: -@lo+1;
-  line-opacity: @lop;
-  marker-file: url(../img/arrow.png);
-  marker-height: 12;
-  marker-placement: line;
-  marker-spacing: 400;
-  marker-offset: -@lo+1;
-}
-
-#marche12km_planA {
-  line-color: #FF00FF;
-  line-width: @lo;
-  line-offset: -@lo+1;
-  line-opacity: 1;
-  marker-file: url(../img/arrow.png);
-  marker-height: 12;
-  marker-placement: line;
-  marker-spacing: 400;
-  marker-offset: -@lo+1;
-}
-
 #marche12km_planB {
   line-color: @pink;
   line-width: @lo;
