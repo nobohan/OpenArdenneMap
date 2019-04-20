@@ -2,7 +2,7 @@
 import math
 from mapnik import Envelope, Map, load_map, render_to_file
 
-def make_map(distance, scale, x_center = 622000, y_center = 6406400, pageFormat = 'A3'):
+def make_map(distance, scale, x_center = 621000, y_center = 6406900, pageFormat = 'A2'):
     # The mapFile is generated using carto from cartoCSS files.
     # /!\ Choose the right importer here: osm2pgsql or imposm!
     mapFile = 'osm2pgsql/OpenArdenneMap' + distance + '.xml'
@@ -39,8 +39,8 @@ def make_map(distance, scale, x_center = 622000, y_center = 6406400, pageFormat 
     render_to_file(m, mapOutput)
 
 
-make_map('Marche', 20000, 618000, 6398000, 'A4')
-make_map('28km', 25000, 621000, 6403500)
-make_map('32km', 25000, 621000, 6403500)
-make_map('42km', 30000, 621000, 6406000)
-make_map('56km', 38000)
+make_map('Marche', 15000, 618000, 6398000, 'A3')
+make_map('28km', 20000, 621000, 6403500)
+make_map('32km', 20000, 621000, 6403500)
+make_map('42km', 20000, 621000, 6403500)
+make_map('56km', 25000)

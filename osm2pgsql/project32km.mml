@@ -362,9 +362,39 @@
         "type": "shape"
       },
       "class": "",
-      "geometry": "linestring",
+      "geometry": "point",
       "id": "label32km",
       "name": "label32km",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
+        "file": "../geojson/ravitos.shp",
+        "id": "ravitos",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "type": "shape"
+      },
+      "class": "",
+      "geometry": "point",
+      "id": "ravitos",
+      "name": "ravitos",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
+        "file": "../geojson/profile.shp",
+        "id": "profil32km",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "type": "shape"
+      },
+      "class": "",
+      "geometry": "point",
+      "id": "profil32km",
+      "name": "profil32km",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "status": "on"
     },

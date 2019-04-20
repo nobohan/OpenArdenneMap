@@ -89,6 +89,41 @@
     text-dx: 550;
 }
 
+#ravitos {
+    marker-file: url(../img/star.png);
+    text-name:"'Ravitaillement'";
+    text-face-name:@sans;
+    text-placement:point;
+    text-fill:@black;
+    text-size: 45;
+    text-character-spacing: 2;
+    text-allow-overlap: true;
+    text-halo-fill: @pink;
+    text-halo-radius: 3;
+}
+
+@profile_size: 450;
+#profil28km {
+    marker-file: url(../img/profil28km.png);
+    marker-allow-overlap: true;
+    marker-height: @profile_size;
+}
+#profil32km {
+    marker-file: url(../img/profil32km.png);
+    marker-allow-overlap: true;
+    marker-height: @profile_size;
+}
+#profil42km {
+    marker-file: url(../img/profil42km.png);
+    marker-allow-overlap: true;
+    marker-height: @profile_size;
+}
+#profil56km {
+    marker-file: url(../img/profil56km.png);
+    marker-allow-overlap: true;
+    marker-height: @profile_size;
+}
+
 
 /* ================================================================== */
 /* VTT

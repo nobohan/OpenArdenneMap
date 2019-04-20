@@ -61,8 +61,8 @@
 /*    BASE.MSS
 /* =============== */
 
-@contour_minor_line_width: 1;
-@contour_major_line_width: 2;
+@contour_minor_line_width: 0.8;
+@contour_major_line_width: 1.6;
 
 @landuse_line_width: 0.5;
 
@@ -86,7 +86,7 @@
 @mini: 4;
 @tiny: 3;
 
-@outline: 2;
+@outline: 4;
 
 @bridge_marker: 16;
 
