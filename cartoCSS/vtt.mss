@@ -107,21 +107,73 @@
     marker-file: url(../img/profil28km.png);
     marker-allow-overlap: true;
     marker-height: @profile_size;
+    text-name:"'(c) Contributeurs OpenStreetMap - style OpenArdenneMap'";
+    text-face-name: @sans;
+    text-placement: point;
+    text-fill: @black;
+    text-character-spacing: 2;
+    text-line-spacing: 2;
+    text-wrap-width: 1000;
+    text-halo-fill: @other_halo;
+    text-halo-radius: 10;
+    text-size: 35;
+    text-dy: 1000;
+    text-dx: 950;
+    text-allow-overlap: true;
 }
 #profil32km {
     marker-file: url(../img/profil32km.png);
     marker-allow-overlap: true;
     marker-height: @profile_size;
+    text-name:"'(c) Contributeurs OpenStreetMap - style OpenArdenneMap'";
+    text-face-name: @sans;
+    text-placement: point;
+    text-fill: @black;
+    text-character-spacing: 2;
+    text-line-spacing: 2;
+    text-wrap-width: 1000;
+    text-halo-fill: @other_halo;
+    text-halo-radius: 10;
+    text-size: 35;
+    text-dy: 1000;
+    text-dx: 950;
+    text-allow-overlap: true;
 }
 #profil42km {
     marker-file: url(../img/profil42km.png);
     marker-allow-overlap: true;
     marker-height: @profile_size;
+    text-name:"'(c) Contributeurs OpenStreetMap - style OpenArdenneMap'";
+    text-face-name: @sans;
+    text-placement: point;
+    text-fill: @black;
+    text-character-spacing: 2;
+    text-line-spacing: 2;
+    text-wrap-width: 1000;
+    text-halo-fill: @other_halo;
+    text-halo-radius: 10;
+    text-size: 35;
+    text-dy: 1000;
+    text-dx: 950;
+    text-allow-overlap: true;
 }
 #profil56km {
     marker-file: url(../img/profil56km.png);
     marker-allow-overlap: true;
     marker-height: @profile_size;
+    text-name:"'(c) Contributeurs OpenStreetMap - style OpenArdenneMap'";
+    text-face-name: @sans;
+    text-placement: point;
+    text-fill: @black;
+    text-character-spacing: 2;
+    text-line-spacing: 2;
+    text-wrap-width: 1000;
+    text-halo-fill: @other_halo;
+    text-halo-radius: 10;
+    text-size: 35;
+    text-dy: -250;
+    text-dx: 940;
+    text-allow-overlap: true;
 }
 
 
