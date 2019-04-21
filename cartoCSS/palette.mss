@@ -46,6 +46,7 @@ Map { font-directory: url(../fonts); }
 
 @red:               #fcb88a; /*#E55779; /*#db794c;*/
 @green:             #bef4d4; /*#3d9142;   #5ADD84*/
+@green2:            #8fd6b1;
 @blue:              #c4c4ef; /*#aeaeef;*/
 @darkblue:          #7d7ded;
 

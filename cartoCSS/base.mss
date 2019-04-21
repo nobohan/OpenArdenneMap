@@ -97,8 +97,9 @@ Map { background-color: @purewhite; }
     [zoom <= 14] { polygon-pattern-file: url(../img/forest_z14.svg); }
     [zoom > 14] { polygon-pattern-file: url(../img/forest.svg); }
     [leaf_type='broadleaved'] {
-      [zoom <= 14] { polygon-pattern-file: url(../img/forest_bl_z14.svg); }
+      [zoom <= 14] { polygon-fill: @green; polygon-pattern-file: url(../img/forest_bl_z14.svg); }
       [zoom > 14] {
+        polygon-fill: @green;
         polygon-pattern-file: url(../img/forest_bl.svg);
         [area > 200000] {
           line-pattern-file: url(../img/forest-border.svg);
@@ -107,8 +108,8 @@ Map { background-color: @purewhite; }
       }
     }
     [leaf_type='needleleaved'] {
-      [zoom <= 14] { polygon-pattern-file: url(../img/forest_nl_z14.svg); }
-      [zoom > 14] { polygon-pattern-file: url(../img/forest_nl.svg); }
+      [zoom <= 14] { polygon-fill: @green; polygon-pattern-file: url(../img/forest_nl_z14.svg); }
+      [zoom > 14] { polygon-fill: @green; polygon-pattern-file: url(../img/forest_nl.svg); }
     }
   }
   [type='golf_course']   { polygon-fill: @sports; }

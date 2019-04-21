@@ -233,32 +233,32 @@
       [zoom >= 20] { line-width: (@small + @outline)*@z20_road; }
     }
     [tracktype='grade4'] {
-      [zoom <= 10] { line-width: (@mini + @outline)*@z10_road; }
-      [zoom = 11] { line-width: (@mini + @outline)*@z11_road; }
-      [zoom = 12] { line-width: (@mini + @outline)*@z12_road; }
-      [zoom = 13] { line-width: (@mini + @outline)*@z13_road; }
-      [zoom = 14] { line-width: (@mini + @outline)*@z14_road; }
-      [zoom = 15] { line-width: (@mini + @outline)*@z15_road; }
-      [zoom = 16] { line-width: (@mini + @outline)*@z16_road; }
-      [zoom = 17] { line-width: (@mini + @outline)*@z17_road; }
-      [zoom = 18] { line-width: (@mini + @outline)*@z18_road; }
-      [zoom = 19] { line-width: (@mini + @outline)*@z19_road; }
-      [zoom >= 20] { line-width: (@mini + @outline)*@z20_road; }
-      line-dasharray: 8, 8;
+      [zoom <= 10] { line-width: (@tiny + @outline)*@z10_road; }
+      [zoom = 11] { line-width: (@tiny + @outline)*@z11_road; }
+      [zoom = 12] { line-width: (@tiny + @outline)*@z12_road; }
+      [zoom = 13] { line-width: (@tiny + @outline)*@z13_road; }
+      [zoom = 14] { line-width: (@tiny + @outline)*@z14_road; }
+      [zoom = 15] { line-width: (@tiny + @outline)*@z15_road; }
+      [zoom = 16] { line-width: (@tiny + @outline)*@z16_road; }
+      [zoom = 17] { line-width: (@tiny + @outline)*@z17_road; }
+      [zoom = 18] { line-width: (@tiny + @outline)*@z18_road; }
+      [zoom = 19] { line-width: (@tiny + @outline)*@z19_road; }
+      [zoom >= 20] { line-width: (@tiny + @outline)*@z20_road; }
+
     }
     [tracktype='grade5'] {
-      [zoom <= 10] { line-width: (@mini + @outline)*@z10_road; }
-      [zoom = 11] { line-width: (@mini + @outline)*@z11_road; }
-      [zoom = 12] { line-width: (@mini + @outline)*@z12_road; }
-      [zoom = 13] { line-width: (@mini + @outline)*@z13_road; }
-      [zoom = 14] { line-width: (@mini + @outline)*@z14_road; }
-      [zoom = 15] { line-width: (@mini + @outline)*@z15_road; }
-      [zoom = 16] { line-width: (@mini + @outline)*@z16_road; }
-      [zoom = 17] { line-width: (@mini + @outline)*@z17_road; }
-      [zoom = 18] { line-width: (@mini + @outline)*@z18_road; }
-      [zoom = 19] { line-width: (@mini + @outline)*@z19_road; }
-      [zoom >= 20] { line-width: (@mini + @outline)*@z20_road; }
-      line-dasharray: 8, 8;
+      [zoom <= 10] { line-width: (@tiny + @outline)*@z10_road; }
+      [zoom = 11] { line-width: (@tiny + @outline)*@z11_road; }
+      [zoom = 12] { line-width: (@tiny + @outline)*@z12_road; }
+      [zoom = 13] { line-width: (@tiny + @outline)*@z13_road; }
+      [zoom = 14] { line-width: (@tiny + @outline)*@z14_road; }
+      [zoom = 15] { line-width: (@tiny + @outline)*@z15_road; }
+      [zoom = 16] { line-width: (@tiny + @outline)*@z16_road; }
+      [zoom = 17] { line-width: (@tiny + @outline)*@z17_road; }
+      [zoom = 18] { line-width: (@tiny + @outline)*@z18_road; }
+      [zoom = 19] { line-width: (@tiny + @outline)*@z19_road; }
+      [zoom >= 20] { line-width: (@tiny + @outline)*@z20_road; }
+
     }
     [zoom <= 10] { line-width: (@small + @outline)*@z10_road; }
     [zoom = 11] { line-width: (@small + @outline)*@z11_road; }
@@ -424,30 +424,30 @@
       [zoom >= 20] { line-width: @small*@z20_road; }
     }
     [tracktype='grade4'] {
-      [zoom <= 10] { line-width: @mini*@z10_road; }
-      [zoom = 11] { line-width: @mini*@z11_road; }
-      [zoom = 12] { line-width: @mini*@z12_road; }
-      [zoom = 13] { line-width: @mini*@z13_road; }
-      [zoom = 14] { line-width: @mini*@z14_road; }
-      [zoom = 15] { line-width: @mini*@z15_road; }
-      [zoom = 16] { line-width: @mini*@z16_road; }
-      [zoom = 17] { line-width: @mini*@z17_road; }
-      [zoom = 18] { line-width: @mini*@z18_road; }
-      [zoom = 19] { line-width: @mini*@z19_road; }
-      [zoom >= 20] { line-width: @mini*@z20_road; }
+      [zoom <= 10] { line-width: @tiny*@z10_road; }
+      [zoom = 11] { line-width: @tiny*@z11_road; }
+      [zoom = 12] { line-width: @tiny*@z12_road; }
+      [zoom = 13] { line-width: @tiny*@z13_road; }
+      [zoom = 14] { line-width: @tiny*@z14_road; }
+      [zoom = 15] { line-width: @tiny*@z15_road; }
+      [zoom = 16] { line-width: @tiny*@z16_road; }
+      [zoom = 17] { line-width: @tiny*@z17_road; }
+      [zoom = 18] { line-width: @tiny*@z18_road; }
+      [zoom = 19] { line-width: @tiny*@z19_road; }
+      [zoom >= 20] { line-width: @tiny*@z20_road; }
     }
     [tracktype='grade5'] {
-      [zoom <= 10] { line-width: @mini*@z10_road; }
-      [zoom = 11] { line-width: @mini*@z11_road; }
-      [zoom = 12] { line-width: @mini*@z12_road; }
-      [zoom = 13] { line-width: @mini*@z13_road; }
-      [zoom = 14] { line-width: @mini*@z14_road; }
-      [zoom = 15] { line-width: @mini*@z15_road; }
-      [zoom = 16] { line-width: @mini*@z16_road; }
-      [zoom = 17] { line-width: @mini*@z17_road; }
-      [zoom = 18] { line-width: @mini*@z18_road; }
-      [zoom = 19] { line-width: @mini*@z19_road; }
-      [zoom >= 20] { line-width: @mini*@z20_road; }
+      [zoom <= 10] { line-width: @tiny*@z10_road; }
+      [zoom = 11] { line-width: @tiny*@z11_road; }
+      [zoom = 12] { line-width: @tiny*@z12_road; }
+      [zoom = 13] { line-width: @tiny*@z13_road; }
+      [zoom = 14] { line-width: @tiny*@z14_road; }
+      [zoom = 15] { line-width: @tiny*@z15_road; }
+      [zoom = 16] { line-width: @tiny*@z16_road; }
+      [zoom = 17] { line-width: @tiny*@z17_road; }
+      [zoom = 18] { line-width: @tiny*@z18_road; }
+      [zoom = 19] { line-width: @tiny*@z19_road; }
+      [zoom >= 20] { line-width: @tiny*@z20_road; }
     }
     [zoom <= 10] { line-width: @small*@z10_road; }
     [zoom = 11] { line-width: @small*@z11_road; }
