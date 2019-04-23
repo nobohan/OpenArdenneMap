@@ -32,10 +32,38 @@
         text-line-spacing: 1;
         text-fill: @contour;
         text-halo-fill: #ffffff;
-        text-halo-radius:2;
+        text-halo-radius: 2;
     }
 }
 
+
+/* ================================================================== */
+/* STREET LABELS
+/* ================================================================== */
+
+#street_label {
+  text-name:'[name]';
+  text-face-name: @sans;
+  text-placement: line;
+  text-wrap-width: 400;
+  text-character-spacing: 2;
+  text-line-spacing: 1;
+  text-fill: @road_text;
+  text-halo-fill: #ffffff;
+  text-halo-radius: 2;
+  [zoom = 12] {
+    text-allow-overlap: true;
+    text-placement-type: dummy;
+    text-size: @text_size_xs;
+  }
+  [zoom >= 16] {
+    text-name:'[name]';
+    text-allow-overlap: true;
+    text-placement-type: dummy;
+    text-size: @text_size_m;
+  }
+
+}
 
 
 /* ================================================================== */

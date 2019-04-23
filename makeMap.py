@@ -3,11 +3,10 @@
 import math
 from mapnik import Map, Envelope, render_to_file, load_map
 
-PAGE_FORMAT = 'A4'
 PAGES = (4, 3, 2, 1, 0)
 
-X_CENTER = 616167
-Y_CENTER = 6398834
+X_CENTER = 428900
+Y_CENTER = 6551200
 LATITUDE = 50 # in degrees
 
 # The mapFile is generated using carto from cartoCSS files.
@@ -15,11 +14,11 @@ LATITUDE = 50 # in degrees
 MAPNIK_FILE = 'osm2pgsql/OpenArdenneMap.xml'
 
 
-def make_map(map_output, scale=20000):
+def make_map(map_output, scale=20000, page_format = 'A4', x = X_CENTER, y = Y_CENTER):
     "Make a map as a function of the scale"
 
     # Compute the scale
-    page_size = int(PAGE_FORMAT[1])
+    page_size = int(page_format[1])
     f = math.sqrt(2)**PAGES[page_size]
 
     # increasing map_x and map_y lead to decreasing font and symbol size: not good
@@ -31,15 +30,12 @@ def make_map(map_output, scale=20000):
     load_map(m, MAPNIK_FILE)
 
     # Bounding box (expressed in EPSG:3857, meters)
-    x_center = X_CENTER
-    y_center = Y_CENTER
-
     delta_x = f*0.295*scale/math.cos(LATITUDE*2*math.pi/360)
     delta_y = delta_x/math.sqrt(2)
-    xmin = x_center - delta_x/2
-    xmax = x_center + delta_x/2
-    ymin = y_center - delta_y/2
-    ymax = y_center + delta_y/2
+    xmin = x - delta_x/2
+    xmax = x + delta_x/2
+    ymin = y - delta_y/2
+    ymax = y + delta_y/2
 
     bbox = (Envelope(xmin, ymin, xmax, ymax))
     m.zoom_to_box(bbox)
@@ -47,8 +43,6 @@ def make_map(map_output, scale=20000):
 
     render_to_file(m, map_output)
 
-
-
-make_map('OAM_5000.pdf', 5000)
-make_map('OAM_20000.pdf', 20000)
-make_map('OAM_100000.pdf', 100000)
+make_map('OAM_brugelette_zoom_A4.pdf', 4000, 'A4', 428900, 6550200)
+make_map('OAM_brugelette_full_A1.pdf', 12500, 'A1')
+make_map('OAM_brugelette_full_A4.pdf', 12500, 'A4')

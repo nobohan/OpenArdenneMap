@@ -48,6 +48,7 @@ Map { font-directory: url(../fonts); }
 @green:             #acefc7; /*#3d9142;   #5ADD84*/
 @blue:              #c4c4ef; /*#aeaeef;*/
 @darkblue:          #7d7ded;
+@yellow:            #fce232;
 
 @contour:           #bc1e44; /*#b06435;*/
 
@@ -67,7 +68,7 @@ Map { font-directory: url(../fonts); }
 @hospital:          @purewhite;
 @school:            @purewhite;
 @sports:            @purewhite;
-@residential:       @purewhite;
+@residential:       @gray;
 @commercial:        @purewhite;
 @industrial:        @purewhite;
 @parking:           @purewhite;
@@ -94,11 +95,11 @@ Map { font-directory: url(../fonts); }
 @trunk_case:        @trunk_line * 0.9;
 
 @primary_line:      @black;
-@primary_fill:      @red;
+@primary_fill:      @yellow;
 @primary_case:      @primary_line * 0.9;
 
 @secondary_line:    @black;
-@secondary_fill:    @red;
+@secondary_fill:    @yellow;
 @secondary_case:    @secondary_line * 0.9;
 
 @standard_line:     @black;
