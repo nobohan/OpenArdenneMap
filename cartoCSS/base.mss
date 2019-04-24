@@ -241,6 +241,22 @@ Map { background-color: @purewhite; }
   [zoom >= 20] { line-width: @building_line_width*@z20; }
   polygon-fill: @building;
   line-color: darken(@building,10%);
+  [type='church'], [type='chapel']{
+    polygon-fill: @violet;
+    line-color: @gray;
+  }
+  [type='farm'], [type='farm_auxiliary'], [type='barn']{
+    polygon-fill: @brown;
+    line-color: darken(@brown,10%);
+  }
+  [type='government'], [type='sports_center'], [type='school']{
+    polygon-fill: @yellow;
+    line-color: @gray;
+  }
+  [type='commercial'], [type='industrial']{
+    polygon-fill: @red;
+    line-color: darken(@red,70%);
+  }
 }
 
 #rotated_buildings {
@@ -336,11 +352,11 @@ Map { background-color: @purewhite; }
       [zoom >= 20] { line-width: @river_line_width*@z20/2; }
     }
     /* === HYDRO_ARROW === */
-    marker-file: url(../img/arrow-hydro.png);
-    marker-height: 12;
-    marker-placement: line;
-    marker-spacing: 700;
-    marker-offset: @river_line_width*1.7;
+    /* marker-file: url(../img/arrow-hydro.png);
+    /* marker-height: 12;
+    /* marker-placement: line;
+    /* marker-spacing: 700;
+    /* marker-offset: @river_line_width*1.7; */
   }
 }
 

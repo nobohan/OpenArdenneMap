@@ -50,6 +50,8 @@ Map { font-directory: url(../fonts); }
 @blue:              #c4c4ef; /*#aeaeef;*/
 @darkblue:          #7d7ded;
 @yellow:            #fce232;
+@brown:             #a34921;
+@violet:            #bc2ff6;
 
 @contour:           #bc1e44; /*#b06435;*/
 
