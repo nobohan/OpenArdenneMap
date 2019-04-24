@@ -335,6 +335,12 @@ Map { background-color: @purewhite; }
       [zoom = 19] { line-width: @river_line_width*@z19/2; }
       [zoom >= 20] { line-width: @river_line_width*@z20/2; }
     }
+    /* === HYDRO_ARROW === */
+    marker-file: url(../img/arrow-hydro.png);
+    marker-height: 12;
+    marker-placement: line;
+    marker-spacing: 700;
+    marker-offset: @river_line_width*1.7;
   }
 }
 
