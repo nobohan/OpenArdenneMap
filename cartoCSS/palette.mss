@@ -71,7 +71,7 @@ Map { font-directory: url(../fonts); }
 @hospital:          @purewhite;
 @school:            @purewhite;
 @sports:            @purewhite;
-@residential:       @purewhite;
+@residential:       @lightgray;
 @commercial:        @purewhite;
 @industrial:        @purewhite;
 @parking:           @purewhite;
