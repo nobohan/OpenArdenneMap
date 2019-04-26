@@ -21,19 +21,15 @@
     },
     {
       "Datasource": {
-        "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
-        "file": "../contour/mnt_brugelette_25m_gdalhillshade_3857.tif",
+        "file": "../contour/mnt_brugelette_25m_gdalhillshade_3857_enhanced.tif",
         "id": "hillshade",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "type": "gdal"
       },
-      "class": "",
       "geometry": "raster",
       "id": "hillshade",
       "name": "hillshade",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "3857",
-      "status": "off"
+      "status": "on"
     },
     {
       "Datasource": {
@@ -401,7 +397,7 @@
       "id": "mask",
       "name": "mask",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "status": "on"
+      "status": "off"
     }
   ],
   "Stylesheet": [

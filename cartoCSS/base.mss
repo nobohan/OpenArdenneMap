@@ -377,13 +377,6 @@ Map { background-color: @purewhite; }
 
 
 #hillshade {
-    raster-opacity: 0.8;
-    /* raster-comp-op: grain-merge;*/
-    /* raster-scaling: bilinear;*/
-    raster-opacity:1;
-    raster-scaling:lanczos;
-    raster-colorizer-default-mode: linear;
-    raster-colorizer-default-color: transparent;
-    /*raster-colorizer-default-color: @black;*/
-    raster-colorizer-stops: stop(116, #111111), stop(200, #ffffff), stop(230, @red);
+    raster-opacity: 1;
+    raster-comp-op: grain-merge;
 }
