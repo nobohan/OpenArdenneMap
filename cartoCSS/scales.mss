@@ -2,6 +2,8 @@
  * All scale-dependent label, width and marker sizes
  */
 
+@extra_road_width: 1.6;
+
 @z10: 0.015625;
 @z11: 0.03125;
 @z12: 0.0625;
@@ -14,17 +16,19 @@
 @z19: 8;
 @z20: 16;
 
-@z10_road: 0.5;
-@z11_road: 0.5;
-@z12_road: 0.5;
-@z13_road: 0.6;
-@z14_road: 0.7;
-@z15_road: 0.8;
-@z16_road: 1; /* scale = 2 */
-@z17_road: 1.3;
-@z18_road: 2;
-@z19_road: 3;
-@z20_road: 4;
+
+
+@z10_road: 0.5*@extra_road_width;
+@z11_road: 0.5*@extra_road_width;
+@z12_road: 0.5*@extra_road_width;
+@z13_road: 0.6*@extra_road_width;
+@z14_road: 0.7*@extra_road_width;
+@z15_road: 0.8*@extra_road_width;
+@z16_road: 1*@extra_road_width; /* scale = 2 */
+@z17_road: 1.3*@extra_road_width;
+@z18_road: 2*@extra_road_width;
+@z19_road: 3*@extra_road_width;
+@z20_road: 4*@extra_road_width;
 
 @z10_marker: 0.125;
 @z11_marker: 0.18;
@@ -86,7 +90,7 @@
 @mini: 4;
 @tiny: 3;
 
-@outline: 2;
+@outline: 4;
 
 @bridge_marker: 16;
 

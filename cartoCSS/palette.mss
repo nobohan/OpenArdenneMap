@@ -90,19 +90,19 @@ Map { font-directory: url(../fonts); }
  */
 
 @motorway_line:     @black;
-@motorway_fill:     @red;
+@motorway_fill:     @yellow;
 @motorway_case:     @motorway_line * 0.9;
 
 @trunk_line:        @black;
-@trunk_fill:        @red;
+@trunk_fill:        @yellow;
 @trunk_case:        @trunk_line * 0.9;
 
 @primary_line:      @black;
-@primary_fill:      @red;
+@primary_fill:      @yellow;
 @primary_case:      @primary_line * 0.9;
 
 @secondary_line:    @black;
-@secondary_fill:    @red;
+@secondary_fill:    @yellow;
 @secondary_case:    @secondary_line * 0.9;
 
 @standard_line:     @black;
