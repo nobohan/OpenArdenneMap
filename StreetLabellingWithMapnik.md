@@ -48,9 +48,13 @@ where:
 # How to force labelling
 
 * decrease the font-size (ça c'est malin)
-* replace some text by abbrev.
-* 
+* replace some text by some abbrev.: TODO
+* clear-label-cache": "on" au niveau de la couche: pas vu d'effet
+* text-upright: the default value is auto seems to maximise the placement. Other values 
 
+a tester:
+* text-label-position-tolerance
+* wrapper les labels
 
 
 # Reading

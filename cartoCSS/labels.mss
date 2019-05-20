@@ -51,15 +51,19 @@
   text-fill: @road_text;
   text-halo-fill: #ffffff;
   text-halo-radius: 2;
+  text-placement-type: list;
+  /*text-vertical-alignment: top;*/
+  /*text-repeat-distance: 1000;*/
+  text-upright: auto;
+  text-horizontal-alignment: adjust;
   [zoom = 12] {
     text-allow-overlap: true;
-    text-placement-type: dummy;
     text-size: @text_size_xs;
   }
   [zoom >= 16] {
     text-name:'[name]';
     text-allow-overlap: true;
-    text-placement-type: dummy;
+    text-label-position-tolerance: -1;
     text-size: @text_size_m;
   }
 
