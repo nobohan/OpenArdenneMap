@@ -42,29 +42,39 @@
 /* ================================================================== */
 
 #street_label {
-  text-name:'[name]';
+  text-name: '[name]';
   text-face-name: @sans;
   text-placement: line;
-  text-wrap-width: 400;
   text-character-spacing: 2;
   text-line-spacing: 1;
   text-fill: @road_text;
   text-halo-fill: #ffffff;
   text-halo-radius: 2;
-  text-placement-type: list;
+  /*text-placement-type: simple;*/
+  /*text-placements: "E,NE,SE,W,NW,SW";*/
   /*text-vertical-alignment: top;*/
-  /*text-repeat-distance: 1000;*/
+  text-repeat-distance: 1000;
+  /* text-margin: 1000;*/
   text-upright: auto;
-  text-horizontal-alignment: adjust;
-  [zoom = 12] {
-    text-allow-overlap: true;
-    text-size: @text_size_xs;
+  /*text-horizontal-alignment: adjust;*/
+  /*text-simplify: 1000;*/
+  /*text-force-odd-labels: true;*/
+  /*text-label-position-tolerance: -1;*/
+  text-allow-overlap: true;
+  text-spacing: 0;
+  text-size: @text_size_s;
+  [length<=1000]{
+    text-name: '[short_name]';
+    text-wrap-width: 100;
+    text-spacing: 1000;
   }
-  [zoom >= 16] {
-    text-name:'[name]';
-    text-allow-overlap: true;
-    text-label-position-tolerance: -1;
-    text-size: @text_size_m;
+  [length>1000]{
+    text-name: '[name]';
+    text-wrap-width: 400;
+  }
+  [zoom > 17] {
+    text-size: @text_size_l;
+    text-wrap-width: 200;
   }
 
 }

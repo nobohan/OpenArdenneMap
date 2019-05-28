@@ -48,13 +48,22 @@ where:
 # How to force labelling
 
 * decrease the font-size (ça c'est malin)
-* replace some text by some abbrev.: TODO
+* replace some text by some abbrev.
 * clear-label-cache": "on" au niveau de la couche: pas vu d'effet
-* text-upright: the default value is auto seems to maximise the placement. Other values 
+* text-upright: the default value ("auto") seems to maximise the placement. Other values can result in nice placement, but often
+with a lower number of street labels.
+* text-simplify: You can use this parameter to simplify the geometry that is labeled. It seems it can have a (limited) effect on the label placement: some labels have disappeared and some others appeared when testing this parameter.
+* text-repeat-distance: Put some values (in pixels) to increase the distance between two labels when labels are repeated along a same feature.
 
 a tester:
 * text-label-position-tolerance
-* wrapper les labels
+* wrapper les labels, mais seulement si la distance est faible!
+
+
+## Replace some text by abbrev.
+
+* replace the text by a set of abbrev.
+
 
 
 # Reading
