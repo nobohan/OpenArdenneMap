@@ -53,7 +53,6 @@
   /*text-placement-type: simple;*/
   /*text-placements: "E,NE,SE,W,NW,SW";*/
   /*text-vertical-alignment: top;*/
-  text-repeat-distance: 1000;
   /* text-margin: 1000;*/
   text-upright: auto;
   /*text-horizontal-alignment: adjust;*/
@@ -66,15 +65,19 @@
   [length<=1000]{
     text-name: '[short_name]';
     text-wrap-width: 100;
-    text-spacing: 1000;
+    text-repeat-distance: 2000;
+    text-character-spacing: 0.1;
+    /*text-label-position-tolerance: 10;*/
   }
   [length>1000]{
     text-name: '[name]';
     text-wrap-width: 400;
+    text-character-spacing: 4;
   }
-  [zoom > 17] {
+  [zoom > 17]{
     text-size: @text_size_l;
     text-wrap-width: 200;
+
   }
 
 }
@@ -94,10 +97,6 @@
   [zoom = 14] { text-size: @text_size_l*@z14_label*1.2; }
   [zoom = 15] { text-size: @text_size_l*@z15_label*1.2; }
   [zoom = 16] { text-size: @text_size_l*@z16_label*1.2; }
-  [zoom = 17] { text-size: @text_size_l*@z17_label*1.2; }
-  [zoom = 18] { text-size: @text_size_l*@z18_label*1.2; }
-  [zoom = 19] { text-size: @text_size_l*@z19_label*1.2; }
-  [zoom >= 20] { text-size: @text_size_l*@z20_label*1.2; }
   text-name: '[name]';
   text-face-name: @sans;
   text-placement: point;
@@ -107,6 +106,7 @@
   text-character-spacing: 20;
   text-wrap-width: 400;
   text-transform: uppercase;
+  [zoom > 17] { text-size: 0;}
 }
 
 /* ---- Towns ------------------------------------------------------- */
@@ -135,6 +135,7 @@
   text-character-spacing: 20;
   text-line-spacing: 6;
   text-allow-overlap: true;
+  [zoom > 17] { text-name: '';}
 }
 
 /* ---- Other small places ------------------------------------------ */
@@ -290,6 +291,7 @@
   text-placement: line;
   text-repeat-distance: 1200;
   text-spacing: 300;
+  [zoom > 17]{ text-name: '';}
 }
 
 #waterway_label[type='stream'] {
