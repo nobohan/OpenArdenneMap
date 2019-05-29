@@ -6660,168 +6660,168 @@
   <Style filter-mode="first" name="point_features">
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([bus] = 'yes') and ([historic] = 'archaeological_site')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="2" dx="0" dy="-5" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="25" wrap-width="50"><![CDATA['Bus']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="2" dx="0" dy="-5" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="25" wrap-width="50"><![CDATA['Bus']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/bus.svg" height="8" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([bus] = 'yes') and ([historic] = 'ruins')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="2" dx="0" dy="-5" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="25" wrap-width="50"><![CDATA['Bus']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="2" dx="0" dy="-5" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="25" wrap-width="50"><![CDATA['Bus']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/bus.svg" height="8" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([bus] = 'yes')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/bus.svg" height="8" />
-      <TextSymbolizer allow-overlap="false" character-spacing="2" dx="0" dy="-5" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="25"><![CDATA['Bus']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="2" dx="0" dy="-5" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="25"><![CDATA['Bus']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([power] = 'tower') and ([tower:type] = 'communication') and ([historic] = 'archaeological_site')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="12" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35" wrap-width="50"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="12" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35" wrap-width="50"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/ruins.svg" height="15" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([power] = 'tower') and ([tower:type] = 'communication') and ([historic] = 'ruins')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="12" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35" wrap-width="50"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="12" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35" wrap-width="50"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/ruins.svg" height="15" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([power] = 'tower') and ([tower:type] = 'communication') and ([leisure] = 'picnic_table') and ([historic] = 'wayside_cross') and ([amenity] = 'fountain')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([power] = 'tower') and ([tower:type] = 'communication') and ([leisure] = 'picnic_table') and ([historic] = 'wayside_cross')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([power] = 'tower') and ([tower:type] = 'communication') and ([leisure] = 'picnic_table') and ([amenity] = 'fountain')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([power] = 'tower') and ([tower:type] = 'communication') and ([leisure] = 'picnic_table')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer file="../img/picnic.svg" height="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([power] = 'tower') and ([tower:type] = 'communication') and ([tourism] = 'picnic_site') and ([historic] = 'wayside_cross') and ([amenity] = 'fountain')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([power] = 'tower') and ([tower:type] = 'communication') and ([tourism] = 'picnic_site') and ([historic] = 'wayside_cross')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([power] = 'tower') and ([tower:type] = 'communication') and ([tourism] = 'picnic_site') and ([amenity] = 'fountain')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([power] = 'tower') and ([tower:type] = 'communication') and ([tourism] = 'picnic_site')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer file="../img/picnic.svg" height="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([power] = 'tower') and ([tower:type] = 'communication') and ([historic] = 'wayside_cross') and ([amenity] = 'fountain')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/cross.svg" height="25" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([power] = 'tower') and ([tower:type] = 'communication') and ([historic] = 'wayside_cross')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/cross.svg" height="25" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([power] = 'tower') and ([tower:type] = 'communication') and ([amenity] = 'fountain')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/fountain.svg" height="10" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([power] = 'tower') and ([tower:type] = 'communication')]]></Filter>
       <MarkersSymbolizer file="../img/tower.svg" height="4" />
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([man_made] = 'mast') and ([tower:type] = 'communication') and ([historic] = 'archaeological_site')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="12" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35" wrap-width="50"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="12" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35" wrap-width="50"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/ruins.svg" height="15" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([man_made] = 'mast') and ([tower:type] = 'communication') and ([historic] = 'ruins')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="12" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35" wrap-width="50"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="12" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35" wrap-width="50"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/ruins.svg" height="15" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([man_made] = 'mast') and ([tower:type] = 'communication') and ([leisure] = 'picnic_table') and ([historic] = 'wayside_cross') and ([amenity] = 'fountain')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([man_made] = 'mast') and ([tower:type] = 'communication') and ([leisure] = 'picnic_table') and ([historic] = 'wayside_cross')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([man_made] = 'mast') and ([tower:type] = 'communication') and ([leisure] = 'picnic_table') and ([amenity] = 'fountain')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([man_made] = 'mast') and ([tower:type] = 'communication') and ([leisure] = 'picnic_table')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer file="../img/picnic.svg" height="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([man_made] = 'mast') and ([tower:type] = 'communication') and ([tourism] = 'picnic_site') and ([historic] = 'wayside_cross') and ([amenity] = 'fountain')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([man_made] = 'mast') and ([tower:type] = 'communication') and ([tourism] = 'picnic_site') and ([historic] = 'wayside_cross')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([man_made] = 'mast') and ([tower:type] = 'communication') and ([tourism] = 'picnic_site') and ([amenity] = 'fountain')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([man_made] = 'mast') and ([tower:type] = 'communication') and ([tourism] = 'picnic_site')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer file="../img/picnic.svg" height="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([man_made] = 'mast') and ([tower:type] = 'communication') and ([historic] = 'wayside_cross') and ([amenity] = 'fountain')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/cross.svg" height="25" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([man_made] = 'mast') and ([tower:type] = 'communication') and ([historic] = 'wayside_cross')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/cross.svg" height="25" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([man_made] = 'mast') and ([tower:type] = 'communication') and ([amenity] = 'fountain')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dx="-5" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
       <MarkersSymbolizer allow-overlap="true" file="../img/fountain.svg" height="10" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([man_made] = 'mast') and ([tower:type] = 'communication')]]></Filter>
       <MarkersSymbolizer file="../img/tower.svg" height="4" />
-      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" dy="-8" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35"><![CDATA['Pyl.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([historic] = 'archaeological_site')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/ruins.svg" height="15" />
-      <TextSymbolizer character-spacing="2" dx="12" dy="-5" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35" wrap-width="50"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="2" dx="12" dy="-5" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35" wrap-width="50"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([historic] = 'ruins')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/ruins.svg" height="15" />
-      <TextSymbolizer character-spacing="2" dx="12" dy="-5" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35" wrap-width="50"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="2" dx="12" dy="-5" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35" wrap-width="50"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([leisure] = 'picnic_table') and ([historic] = 'wayside_cross') and ([amenity] = 'fountain')]]></Filter>
@@ -6884,12 +6884,12 @@
     <Rule>
       <Filter><![CDATA[([historic] = 'archaeological_site')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/ruins.svg" height="15" />
-      <TextSymbolizer character-spacing="2" dx="12" dy="-5" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35" wrap-width="50"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="2" dx="12" dy="-5" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35" wrap-width="50"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([historic] = 'ruins')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/ruins.svg" height="15" />
-      <TextSymbolizer character-spacing="2" dx="12" dy="-5" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="1" line-spacing="2" placement="point" size="35" wrap-width="50"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="2" dx="12" dy="-5" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="1" line-spacing="2" placement="point" size="35" wrap-width="50"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([leisure] = 'picnic_table') and ([historic] = 'wayside_cross') and ([amenity] = 'fountain')]]></Filter>
@@ -7006,35 +7006,35 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'suburb')]]></Filter>
-      <TextSymbolizer character-spacing="5" dy="-50" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="4" line-spacing="2" placement="point" size="35" wrap-width="120"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="5" dy="-50" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="4" line-spacing="2" placement="point" size="35" wrap-width="120"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'hamlet')]]></Filter>
-      <TextSymbolizer character-spacing="5" dy="-50" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="4" line-spacing="2" placement="point" size="35" wrap-width="120"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="5" dy="-50" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="4" line-spacing="2" placement="point" size="35" wrap-width="120"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'neighbourhood')]]></Filter>
-      <TextSymbolizer character-spacing="5" dy="-50" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="4" line-spacing="2" placement="point" size="35" wrap-width="120"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="5" dy="-50" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="4" line-spacing="2" placement="point" size="35" wrap-width="120"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'isolated_dwelling')]]></Filter>
-      <TextSymbolizer character-spacing="5" dy="-50" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="4" line-spacing="2" placement="point" size="35" wrap-width="120"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="5" dy="-50" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="4" line-spacing="2" placement="point" size="35" wrap-width="120"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'town')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="20" dy="200" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="4" line-spacing="2" placement="point" size="65" wrap-width="50"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="20" dy="200" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="4" line-spacing="2" placement="point" size="65" wrap-width="50"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
   </Style>
   <Style filter-mode="first" name="place-town">
     <Rule>
       <Filter><![CDATA[([type] = 'village')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="20" dy="200" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="4" line-spacing="2" placement="point" size="65" wrap-width="50"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="20" dy="200" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="4" line-spacing="2" placement="point" size="65" wrap-width="50"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
   </Style>
   <Style filter-mode="first" name="place-city">
     <Rule>
       <Filter><![CDATA[([type] = 'city')]]></Filter>
-      <TextSymbolizer character-spacing="20" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="4" placement="point" size="71" text-transform="uppercase" wrap-width="400"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="20" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="4" placement="point" size="71" text-transform="uppercase" wrap-width="400"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
   </Style>
   <Layer name="place" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
@@ -7169,7 +7169,7 @@
   <Style filter-mode="first" name="train_elements">
     <Rule>
       <Filter><![CDATA[([type] = 'station')]]></Filter>
-      <TextSymbolizer character-spacing="2" dx="-30" dy="-50" fill="#111111" fontset-name="fontset-0" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="4" line-spacing="2" placement="point" size="45"><![CDATA[Gare]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="2" dx="-30" dy="-50" fill="#111111" fontset-name="fontset-0" halo-fill="#4bd4ff" halo-radius="4" line-spacing="2" placement="point" size="45"><![CDATA[Gare]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'level_crossing')]]></Filter>
