@@ -102,7 +102,17 @@ The default value will in general maximise the positioning, but smaller values c
 
 # Other ideas
 
-* problème de répétition des labels quand le segment est coupé. 
+* problème de répétition des labels quand le segment est coupé.
+
+Solution: fusionner les rues sur base du nom (et du type):
+```
+DROP TABLE IF EXISTS osm_named_highways;
+CREATE TABLE osm_named_highways AS
+SELECT name, ST_LineMerge(ST_Union(way)) AS way, highway
+FROM planet_osm_line
+WHERE "highway" IS NOT NULL AND "name" IS NOT NULL
+GROUP BY name, highway
+```
 * put the road layers above the building layer
 * Combine the effects and make the effects dependent on street lengths
    * faire plusieurs "short_name" avec des règles d'abbreviations de plus en plus strictes

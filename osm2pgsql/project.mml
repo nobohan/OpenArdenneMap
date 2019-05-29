@@ -330,23 +330,22 @@
         "key_field": "",
         "project": "OpenArdenneMap",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "(SELECT name, way, ST_Length(way) AS length, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, tracktype, access, 'fill' AS render,
+        "table": "(SELECT name, ST_LineMerge(ST_Union(way)) AS way, ST_Length(ST_Union(way)) AS length, highway AS type, 0 AS tunnel, 0 AS bridge, 'fill' AS render,
           CASE
             WHEN highway IN ('motorway', 'trunk') THEN 'motorway'
             WHEN highway IN ('primary', 'secondary') THEN 'mainroad'
             WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'
             WHEN highway IN ('service', 'track') THEN 'service'
             WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'
-            WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'
             ELSE 'other'
           END AS stylegroup,
           replace(replace(replace(replace(replace(replace(name, 'Rue', 'R.'), 'Saint', 'St'), 'Chemin', 'Ch.'), 'Place', 'Pl.'), 'Avenue', 'Av.'), 'Boulevard', 'Bd.')
           AS short_name
           FROM planet_osm_line
-          WHERE (highway IS NOT NULL OR railway IS NOT NULL)
+          WHERE (highway IS NOT NULL)
             AND (tunnel IS NULL OR tunnel = 'no')
             AND (bridge IS NULL OR bridge = 'no')
-          ORDER BY z_order
+          GROUP BY name, highway
         ) AS data",
         "type": "postgis"
       },
