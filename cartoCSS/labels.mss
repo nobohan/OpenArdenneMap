@@ -76,7 +76,7 @@
   }
   [zoom > 17]{
     text-size: @text_size_l;
-    text-wrap-width: 200;
+    text-wrap-width: 250;
 
   }
 

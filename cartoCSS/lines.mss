@@ -551,6 +551,240 @@
 }
 
 /* ================================================================== */
+/* SIDEWALK
+/* ================================================================== */
+
+#sidewalk::right {
+  line-color: darken(@green, 40%);
+  /*line-dasharray: 40, 15;*/
+  line-join: round;
+  line-cap: butt;
+
+  /* -- offsets -- */
+  [stylegroup='mainroad'] {
+    [zoom <= 10] { line-offset: 0.5*(@large + @outline*1.5)*@z10_road; }
+    [zoom = 11] { line-offset: 0.5*(@large + @outline*1.5)*@z11_road; }
+    [zoom = 12] { line-offset: 0.5*(@large + @outline*1.5)*@z12_road; }
+    [zoom = 13] { line-offset: 0.5*(@large + @outline*1.5)*@z13_road; }
+    [zoom = 14] { line-offset: 0.5*(@large + @outline*1.5)*@z14_road; }
+    [zoom = 15] { line-offset: 0.5*(@large + @outline*1.5)*@z15_road; }
+    [zoom = 16] { line-offset: 0.5*(@large + @outline*1.5)*@z16_road; }
+    [zoom = 17] { line-offset: 0.5*(@large + @outline*1.5)*@z17_road; }
+    [zoom = 18] { line-offset: 0.5*(@large + @outline*1.5)*@z18_road; }
+    [zoom = 19] { line-offset: 0.5*(@large + @outline*1.5)*@z19_road; }
+    [zoom >= 20] { line-offset: 0.5*(@large + @outline*1.5)*@z20_road; }
+  }
+  [stylegroup='minorroad'] {
+    [zoom <= 10] { line-offset: 0.5*(@small + @outline)*@z10_road; }
+    [zoom = 11] { line-offset: 0.5*(@small + @outline)*@z11_road; }
+    [zoom = 12] { line-offset: 0.5*(@small + @outline)*@z12_road; }
+    [zoom = 13] { line-offset: 0.5*(@small + @outline)*@z13_road; }
+    [zoom = 14] { line-offset: 0.5*(@small + @outline)*@z14_road; }
+    [zoom = 15] { line-offset: 0.5*(@small + @outline)*@z15_road; }
+    [zoom = 16] { line-offset: 0.5*(@small + @outline)*@z16_road; }
+    [zoom = 17] { line-offset: 0.5*(@small + @outline)*@z17_road; }
+    [zoom = 18] { line-offset: 0.5*(@small + @outline)*@z18_road; }
+    [zoom = 19] { line-offset: 0.5*(@small + @outline)*@z19_road; }
+    [zoom >= 20] { line-offset: 0.5*(@small + @outline)*@z20_road; }
+  }
+  [stylegroup='service']{
+    [tracktype='grade1'] {
+      [zoom <= 10] { line-offset: 0.5*(@small + @outline)*@z10_road; }
+      [zoom = 11] { line-offset: 0.5*(@small + @outline)*@z11_road; }
+      [zoom = 12] { line-offset: 0.5*(@small + @outline)*@z12_road; }
+      [zoom = 13] { line-offset: 0.5*(@small + @outline)*@z13_road; }
+      [zoom = 14] { line-offset: 0.5*(@small + @outline)*@z14_road; }
+      [zoom = 15] { line-offset: 0.5*(@small + @outline)*@z15_road; }
+      [zoom = 16] { line-offset: 0.5*(@small + @outline)*@z16_road; }
+      [zoom = 17] { line-offset: 0.5*(@small + @outline)*@z17_road; }
+      [zoom = 18] { line-offset: 0.5*(@small + @outline)*@z18_road; }
+      [zoom = 19] { line-offset: 0.5*(@small + @outline)*@z19_road; }
+      [zoom >= 20] { line-offset: 0.5*(@small + @outline)*@z20_road; }
+    }
+    [tracktype='grade2'] {
+      [zoom <= 10] { line-offset: 0.5*(@small + @outline)*@z10_road; }
+      [zoom = 11] { line-offset: 0.5*(@small + @outline)*@z11_road; }
+      [zoom = 12] { line-offset: 0.5*(@small + @outline)*@z12_road; }
+      [zoom = 13] { line-offset: 0.5*(@small + @outline)*@z13_road; }
+      [zoom = 14] { line-offset: 0.5*(@small + @outline)*@z14_road; }
+      [zoom = 15] { line-offset: 0.5*(@small + @outline)*@z15_road; }
+      [zoom = 16] { line-offset: 0.5*(@small + @outline)*@z16_road; }
+      [zoom = 17] { line-offset: 0.5*(@small + @outline)*@z17_road; }
+      [zoom = 18] { line-offset: 0.5*(@small + @outline)*@z18_road; }
+      [zoom = 19] { line-offset: 0.5*(@small + @outline)*@z19_road; }
+      [zoom >= 20] { line-offset: 0.5*(@small + @outline)*@z20_road; }
+    }
+    [tracktype='grade3'] {
+      [zoom <= 10] { line-offset: 0.5*(@small + @outline)*@z10_road; }
+      [zoom = 11] { line-offset: 0.5*(@small + @outline)*@z11_road; }
+      [zoom = 12] { line-offset: 0.5*(@small + @outline)*@z12_road; }
+      [zoom = 13] { line-offset: 0.5*(@small + @outline)*@z13_road; }
+      [zoom = 14] { line-offset: 0.5*(@small + @outline)*@z14_road; }
+      [zoom = 15] { line-offset: 0.5*(@small + @outline)*@z15_road; }
+      [zoom = 16] { line-offset: 0.5*(@small + @outline)*@z16_road; }
+      [zoom = 17] { line-offset: 0.5*(@small + @outline)*@z17_road; }
+      [zoom = 18] { line-offset: 0.5*(@small + @outline)*@z18_road; }
+      [zoom = 19] { line-offset: 0.5*(@small + @outline)*@z19_road; }
+      [zoom >= 20] { line-offset: 0.5*(@small + @outline)*@z20_road; }
+    }
+    [tracktype='grade4'] {
+      [zoom <= 10] { line-offset: 0.5*(@mini + @outline)*@z10_road; }
+      [zoom = 11] { line-offset: 0.5*(@mini + @outline)*@z11_road; }
+      [zoom = 12] { line-offset: 0.5*(@mini + @outline)*@z12_road; }
+      [zoom = 13] { line-offset: 0.5*(@mini + @outline)*@z13_road; }
+      [zoom = 14] { line-offset: 0.5*(@mini + @outline)*@z14_road; }
+      [zoom = 15] { line-offset: 0.5*(@mini + @outline)*@z15_road; }
+      [zoom = 16] { line-offset: 0.5*(@mini + @outline)*@z16_road; }
+      [zoom = 17] { line-offset: 0.5*(@mini + @outline)*@z17_road; }
+      [zoom = 18] { line-offset: 0.5*(@mini + @outline)*@z18_road; }
+      [zoom = 19] { line-offset: 0.5*(@mini + @outline)*@z19_road; }
+      [zoom >= 20] { line-offset: 0.5*(@mini + @outline)*@z20_road; }
+    }
+    [tracktype='grade5'] {
+      [zoom <= 10] { line-offset: 0.5*(@mini + @outline)*@z10_road; }
+      [zoom = 11] { line-offset: 0.5*(@mini + @outline)*@z11_road; }
+      [zoom = 12] { line-offset: 0.5*(@mini + @outline)*@z12_road; }
+      [zoom = 13] { line-offset: 0.5*(@mini + @outline)*@z13_road; }
+      [zoom = 14] { line-offset: 0.5*(@mini + @outline)*@z14_road; }
+      [zoom = 15] { line-offset: 0.5*(@mini + @outline)*@z15_road; }
+      [zoom = 16] { line-offset: 0.5*(@mini + @outline)*@z16_road; }
+      [zoom = 17] { line-offset: 0.5*(@mini + @outline)*@z17_road; }
+      [zoom = 18] { line-offset: 0.5*(@mini + @outline)*@z18_road; }
+      [zoom = 19] { line-offset: 0.5*(@mini + @outline)*@z19_road; }
+      [zoom >= 20] { line-offset: 0.5*(@mini + @outline)*@z20_road; }
+    }
+    [zoom <= 10] { line-offset: 0.5*(@small + @outline)*@z10_road; }
+    [zoom = 11] { line-offset: 0.5*(@small + @outline)*@z11_road; }
+    [zoom = 12] { line-offset: 0.5*(@small + @outline)*@z12_road; }
+    [zoom = 13] { line-offset: 0.5*(@small + @outline)*@z13_road; }
+    [zoom = 14] { line-offset: 0.5*(@small + @outline)*@z14_road; }
+    [zoom = 15] { line-offset: 0.5*(@small + @outline)*@z15_road; }
+    [zoom = 16] { line-offset: 0.5*(@small + @outline)*@z16_road; }
+    [zoom = 17] { line-offset: 0.5*(@small + @outline)*@z17_road; }
+    [zoom = 18] { line-offset: 0.5*(@small + @outline)*@z18_road; }
+    [zoom = 19] { line-offset: 0.5*(@small + @outline)*@z19_road; }
+    [zoom >= 20] { line-offset: 0.5*(@small + @outline)*@z20_road; }
+  }
+  [sidewalk='right'], [sidewalk='both'] {line-width: @large*3;}
+  line-width: 0;
+}
+
+#sidewalk::left {
+  line-color: darken(@green, 40%);
+  /*line-dasharray: 40, 15;*/
+  line-join: round;
+  line-cap: butt;
+
+  /* -- offsets -- */
+  [stylegroup='mainroad'] {
+    [zoom <= 10] { line-offset: -0.5*(@large + @outline*1.5)*@z10_road; }
+    [zoom = 11] { line-offset: -0.5*(@large + @outline*1.5)*@z11_road; }
+    [zoom = 12] { line-offset: -0.5*(@large + @outline*1.5)*@z12_road; }
+    [zoom = 13] { line-offset: -0.5*(@large + @outline*1.5)*@z13_road; }
+    [zoom = 14] { line-offset: -0.5*(@large + @outline*1.5)*@z14_road; }
+    [zoom = 15] { line-offset: -0.5*(@large + @outline*1.5)*@z15_road; }
+    [zoom = 16] { line-offset: -0.5*(@large + @outline*1.5)*@z16_road; }
+    [zoom = 17] { line-offset: -0.5*(@large + @outline*1.5)*@z17_road; }
+    [zoom = 18] { line-offset: -0.5*(@large + @outline*1.5)*@z18_road; }
+    [zoom = 19] { line-offset: -0.5*(@large + @outline*1.5)*@z19_road; }
+    [zoom >= 20] { line-offset: -0.5*(@large + @outline*1.5)*@z20_road; }
+  }
+  [stylegroup='minorroad'] {
+    [zoom <= 10] { line-offset: -0.5*(@small + @outline)*@z10_road; }
+    [zoom = 11] { line-offset: -0.5*(@small + @outline)*@z11_road; }
+    [zoom = 12] { line-offset: -0.5*(@small + @outline)*@z12_road; }
+    [zoom = 13] { line-offset: -0.5*(@small + @outline)*@z13_road; }
+    [zoom = 14] { line-offset: -0.5*(@small + @outline)*@z14_road; }
+    [zoom = 15] { line-offset: -0.5*(@small + @outline)*@z15_road; }
+    [zoom = 16] { line-offset: -0.5*(@small + @outline)*@z16_road; }
+    [zoom = 17] { line-offset: -0.5*(@small + @outline)*@z17_road; }
+    [zoom = 18] { line-offset: -0.5*(@small + @outline)*@z18_road; }
+    [zoom = 19] { line-offset: -0.5*(@small + @outline)*@z19_road; }
+    [zoom >= 20] { line-offset: -0.5*(@small + @outline)*@z20_road; }
+  }
+  [stylegroup='service']{
+    [tracktype='grade1'] {
+      [zoom <= 10] { line-offset: -0.5*(@small + @outline)*@z10_road; }
+      [zoom = 11] { line-offset: -0.5*(@small + @outline)*@z11_road; }
+      [zoom = 12] { line-offset: -0.5*(@small + @outline)*@z12_road; }
+      [zoom = 13] { line-offset: -0.5*(@small + @outline)*@z13_road; }
+      [zoom = 14] { line-offset: -0.5*(@small + @outline)*@z14_road; }
+      [zoom = 15] { line-offset: -0.5*(@small + @outline)*@z15_road; }
+      [zoom = 16] { line-offset: -0.5*(@small + @outline)*@z16_road; }
+      [zoom = 17] { line-offset: -0.5*(@small + @outline)*@z17_road; }
+      [zoom = 18] { line-offset: -0.5*(@small + @outline)*@z18_road; }
+      [zoom = 19] { line-offset: -0.5*(@small + @outline)*@z19_road; }
+      [zoom >= 20] { line-offset: -0.5*(@small + @outline)*@z20_road; }
+    }
+    [tracktype='grade2'] {
+      [zoom <= 10] { line-offset: -0.5*(@small + @outline)*@z10_road; }
+      [zoom = 11] { line-offset: -0.5*(@small + @outline)*@z11_road; }
+      [zoom = 12] { line-offset: -0.5*(@small + @outline)*@z12_road; }
+      [zoom = 13] { line-offset: -0.5*(@small + @outline)*@z13_road; }
+      [zoom = 14] { line-offset: -0.5*(@small + @outline)*@z14_road; }
+      [zoom = 15] { line-offset: -0.5*(@small + @outline)*@z15_road; }
+      [zoom = 16] { line-offset: -0.5*(@small + @outline)*@z16_road; }
+      [zoom = 17] { line-offset: -0.5*(@small + @outline)*@z17_road; }
+      [zoom = 18] { line-offset: -0.5*(@small + @outline)*@z18_road; }
+      [zoom = 19] { line-offset: -0.5*(@small + @outline)*@z19_road; }
+      [zoom >= 20] { line-offset: -0.5*(@small + @outline)*@z20_road; }
+    }
+    [tracktype='grade3'] {
+      [zoom <= 10] { line-offset: -0.5*(@small + @outline)*@z10_road; }
+      [zoom = 11] { line-offset: -0.5*(@small + @outline)*@z11_road; }
+      [zoom = 12] { line-offset: -0.5*(@small + @outline)*@z12_road; }
+      [zoom = 13] { line-offset: -0.5*(@small + @outline)*@z13_road; }
+      [zoom = 14] { line-offset: -0.5*(@small + @outline)*@z14_road; }
+      [zoom = 15] { line-offset: -0.5*(@small + @outline)*@z15_road; }
+      [zoom = 16] { line-offset: -0.5*(@small + @outline)*@z16_road; }
+      [zoom = 17] { line-offset: -0.5*(@small + @outline)*@z17_road; }
+      [zoom = 18] { line-offset: -0.5*(@small + @outline)*@z18_road; }
+      [zoom = 19] { line-offset: -0.5*(@small + @outline)*@z19_road; }
+      [zoom >= 20] { line-offset: -0.5*(@small + @outline)*@z20_road; }
+    }
+    [tracktype='grade4'] {
+      [zoom <= 10] { line-offset: -0.5*(@mini + @outline)*@z10_road; }
+      [zoom = 11] { line-offset: -0.5*(@mini + @outline)*@z11_road; }
+      [zoom = 12] { line-offset: -0.5*(@mini + @outline)*@z12_road; }
+      [zoom = 13] { line-offset: -0.5*(@mini + @outline)*@z13_road; }
+      [zoom = 14] { line-offset: -0.5*(@mini + @outline)*@z14_road; }
+      [zoom = 15] { line-offset: -0.5*(@mini + @outline)*@z15_road; }
+      [zoom = 16] { line-offset: -0.5*(@mini + @outline)*@z16_road; }
+      [zoom = 17] { line-offset: -0.5*(@mini + @outline)*@z17_road; }
+      [zoom = 18] { line-offset: -0.5*(@mini + @outline)*@z18_road; }
+      [zoom = 19] { line-offset: -0.5*(@mini + @outline)*@z19_road; }
+      [zoom >= 20] { line-offset: -0.5*(@mini + @outline)*@z20_road; }
+    }
+    [tracktype='grade5'] {
+      [zoom <= 10] { line-offset: -0.5*(@mini + @outline)*@z10_road; }
+      [zoom = 11] { line-offset: -0.5*(@mini + @outline)*@z11_road; }
+      [zoom = 12] { line-offset: -0.5*(@mini + @outline)*@z12_road; }
+      [zoom = 13] { line-offset: -0.5*(@mini + @outline)*@z13_road; }
+      [zoom = 14] { line-offset: -0.5*(@mini + @outline)*@z14_road; }
+      [zoom = 15] { line-offset: -0.5*(@mini + @outline)*@z15_road; }
+      [zoom = 16] { line-offset: -0.5*(@mini + @outline)*@z16_road; }
+      [zoom = 17] { line-offset: -0.5*(@mini + @outline)*@z17_road; }
+      [zoom = 18] { line-offset: -0.5*(@mini + @outline)*@z18_road; }
+      [zoom = 19] { line-offset: -0.5*(@mini + @outline)*@z19_road; }
+      [zoom >= 20] { line-offset: -0.5*(@mini + @outline)*@z20_road; }
+    }
+    [zoom <= 10] { line-offset: -0.5*(@small + @outline)*@z10_road; }
+    [zoom = 11] { line-offset: -0.5*(@small + @outline)*@z11_road; }
+    [zoom = 12] { line-offset: -0.5*(@small + @outline)*@z12_road; }
+    [zoom = 13] { line-offset: -0.5*(@small + @outline)*@z13_road; }
+    [zoom = 14] { line-offset: -0.5*(@small + @outline)*@z14_road; }
+    [zoom = 15] { line-offset: -0.5*(@small + @outline)*@z15_road; }
+    [zoom = 16] { line-offset: -0.5*(@small + @outline)*@z16_road; }
+    [zoom = 17] { line-offset: -0.5*(@small + @outline)*@z17_road; }
+    [zoom = 18] { line-offset: -0.5*(@small + @outline)*@z18_road; }
+    [zoom = 19] { line-offset: -0.5*(@small + @outline)*@z19_road; }
+    [zoom >= 20] { line-offset: -0.5*(@small + @outline)*@z20_road; }
+  }
+  [sidewalk='left'], [sidewalk= 'both'] {line-width: @large*3;}
+  line-width: 0;
+}
+
+/* ================================================================== */
 /* AEROWAYS
 /* ================================================================== */
 

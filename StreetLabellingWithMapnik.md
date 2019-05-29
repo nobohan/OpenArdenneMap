@@ -102,6 +102,7 @@ The default value will in general maximise the positioning, but smaller values c
 
 # Other ideas
 
+* problème de répétition des labels quand le segment est coupé. 
 * put the road layers above the building layer
 * Combine the effects and make the effects dependent on street lengths
    * faire plusieurs "short_name" avec des règles d'abbreviations de plus en plus strictes

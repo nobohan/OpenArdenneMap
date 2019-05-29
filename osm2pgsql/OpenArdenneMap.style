@@ -140,6 +140,7 @@ node,way   ref          text         linear
 node,way   religion     text         linear
 node,way   route        text         linear
 node,way   service      text         linear
+way        sidewalk     text         linear
 node,way   shop         text         polygon
 node,way   sport        text         polygon
 node,way   surface      text         linear
