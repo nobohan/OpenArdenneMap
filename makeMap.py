@@ -44,6 +44,6 @@ def make_map(map_output, scale=20000, page_format = 'A4', x = X_CENTER, y = Y_CE
     render_to_file(m, map_output)
 
 make_map('OAM_brugelette_zoom_A4.pdf', 4000, 'A4', 428900, 6550200)
-#make_map('OAM_brugelette_full_A1.pdf', 12500, 'A1')
+make_map('OAM_brugelette_full_A1.pdf', 12500, 'A1')
 make_map('OAM_brugelette_full_A4.pdf', 12500, 'A4')
 make_map('OAM_brugelette_full_A5.png', 12500, 'A5')
