@@ -50,36 +50,73 @@
   text-fill: @road_text;
   text-halo-fill: #ffffff;
   text-halo-radius: 2;
-  /*text-placement-type: simple;*/
-  /*text-placements: "E,NE,SE,W,NW,SW";*/
   /*text-vertical-alignment: top;*/
   /* text-margin: 1000;*/
   text-upright: auto;
   /*text-horizontal-alignment: adjust;*/
-  /*text-simplify: 1000;*/
-  /*text-force-odd-labels: true;*/
-  /*text-label-position-tolerance: -1;*/
   text-allow-overlap: true;
-  text-spacing: 0;
   text-size: @text_size_s;
-  [length<=1000]{
-    text-name: '[short_name]';
-    text-wrap-width: 100;
-    text-repeat-distance: 2000;
-    text-character-spacing: 0.1;
-    /*text-label-position-tolerance: 10;*/
-  }
-  [length>1000]{
-    text-name: '[name]';
-    text-wrap-width: 400;
-    text-character-spacing: 4;
+  text-line-spacing: 25;
+  [zoom <= 17]{
+    [length <= 1000]{
+      text-name: '[short_name]';
+      text-wrap-width: 100;
+      text-repeat-distance: 2000;
+      text-character-spacing: 0.1;
+    }
+    [length > 1000]{
+      text-name: '[name]';
+      text-wrap-width: 400;
+      text-character-spacing: 4;
+      text-spacing: 900;
+    }
+    [stylegroup= "noauto"], [stylegroup="service"] {
+      text-size: @text_size_s*0.8;
+      [length <= 1000] {
+        text-wrap-width: 800;
+      }
+    }
+    [stylegroup= "mainroad"] {
+      text-transform: uppercase;
+      text-size: @text_size_s*0.8
+    }
   }
   [zoom > 17]{
-    text-size: @text_size_l;
+    text-size: @text_size_m;
     text-wrap-width: 250;
-
+    [length <= 500]{
+      text-name: '[short_name]';
+      text-wrap-width: 100;
+      text-repeat-distance: 2000;
+      text-character-spacing: 0.1;
+    }
+    [length > 500], [length <= 1000]{
+      text-name: '[short_name]';
+      text-wrap-width: 400;
+    }
+    [length > 1000]{
+      text-name: '[name]';
+      text-spacing: 900;
+      text-character-spacing: 4;
+    }
+    [stylegroup= "noauto"], [stylegroup="service"] {
+      text-size: @text_size_m*0.8;
+      [length <= 1000] {
+        text-wrap-width: 800;
+      }
+    }
+    [stylegroup= "mainroad"] {
+      text-transform: uppercase;
+      text-size: @text_size_m*0.8
+    }
   }
-
+  [stylegroup= "noauto"], [stylegroup="service"] {
+    text-dy: 14;
+    text-wrap-width: 800;
+    [length <= 1000] {
+      text-wrap-width: 800;
+    }
+  }
 }
 
 

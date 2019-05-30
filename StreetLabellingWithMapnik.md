@@ -114,10 +114,16 @@ WHERE "highway" IS NOT NULL AND "name" IS NOT NULL
 GROUP BY name, highway
 ```
 * put the road layers above the building layer
+
 * Combine the effects and make the effects dependent on street lengths
    * faire plusieurs "short_name" avec des règles d'abbreviations de plus en plus strictes
    * augmenter text-character-spacing là où il y a de la place.
+
 * Set the main street in bold / larger font size?
+
+* change font-style de sentier/track
+
+
 
 # Inspirations from paper maps
 

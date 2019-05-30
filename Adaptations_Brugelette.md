@@ -11,7 +11,7 @@ Adaptations pour Brugelette
 
 La carte globale est au format A0 à l'échelle 1:12500.
 
-Des mini-cartes (zoom) des villages peuvent se mettre sur les bords
+Des mini-cartes (zoom) des villages peuvent se mettre sur les bords. Il y aurait l'équivalent de 2 A4 en portrait pour mettre ces mini-cartes.
 
 Quels villages?
 
@@ -21,4 +21,7 @@ Quels villages?
 * Attre
 * Mévergnies
 
-ou Brugelette-Mévergnies ensemble. 
+ou Brugelette-Mévergnies ensemble.
+
+
+* Eviter service=parking_aisle 
