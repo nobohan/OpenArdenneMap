@@ -190,7 +190,7 @@
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "key_field": "",
-        "table": "( SELECT way, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, tracktype, access, 'fill' AS render,\n  CASE\n    WHEN highway IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN highway IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN highway IN ('service', 'track') THEN 'service'\n    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL OR railway IS NOT NULL)\n    AND (tunnel IS NULL OR tunnel = 'no')\n    AND (bridge IS NULL OR bridge = 'no')\n  ORDER BY z_order\n) AS data",
+        "table": "( SELECT way, COALESCE(highway, railway) AS type, service, 0 AS tunnel, 0 AS bridge, tracktype, access, 'fill' AS render,\n  CASE\n    WHEN highway IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN highway IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN highway IN ('service', 'track') THEN 'service'\n    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL OR railway IS NOT NULL)\n    AND (tunnel IS NULL OR tunnel = 'no')\n    AND (bridge IS NULL OR bridge = 'no')\n AND (service IS NULL OR service != 'parking_aisle')\n ORDER BY z_order\n) AS data",
         "type": "postgis"
       },
       "geometry": "linestring",
@@ -333,7 +333,7 @@
         "key_field": "",
         "project": "OpenArdenneMap",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "(SELECT name, ST_LineMerge(ST_Union(way)) AS way, ST_Length(ST_Union(way)) AS length, highway AS type, 0 AS tunnel, 0 AS bridge, 'fill' AS render,
+        "table": "(SELECT name, ST_LineMerge(ST_Union(way)) AS way, ST_Length(ST_Union(way)) AS length, highway AS type, service, 0 AS tunnel, 0 AS bridge, 'fill' AS render,
           CASE
             WHEN highway IN ('motorway', 'trunk') THEN 'motorway'
             WHEN highway IN ('primary', 'secondary') THEN 'mainroad'
@@ -348,7 +348,8 @@
           WHERE (highway IS NOT NULL)
             AND (tunnel IS NULL OR tunnel = 'no')
             AND (bridge IS NULL OR bridge = 'no')
-          GROUP BY name, highway
+            AND (service IS NULL OR service != 'parking_aisle')
+          GROUP BY name, highway, service
         ) AS data",
         "type": "postgis"
       },
