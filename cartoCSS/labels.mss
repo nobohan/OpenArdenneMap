@@ -57,66 +57,62 @@
   text-allow-overlap: true;
   text-size: @text_size_s;
   text-line-spacing: 25;
+  [stylegroup = "mainroad"] {
+    text-transform: uppercase;
+    text-size: @text_size_s*0.8
+  }
+  [stylegroup = "noauto"], [stylegroup = "service"] {
+    text-dy: 14;
+    text-size: @text_size_s*0.8;
+    text-wrap-width: 800;
+  }
+  [stylegroup = "noauto"] {
+    text-dy: 10;
+  }
+
+  /* Low scale maps (global map) */
   [zoom <= 17]{
     [length <= 1000]{
       text-name: '[short_name]';
       text-wrap-width: 100;
-      text-repeat-distance: 2000;
       text-character-spacing: 0.1;
     }
     [length > 1000]{
       text-name: '[name]';
       text-wrap-width: 400;
-      text-character-spacing: 4;
+      text-character-spacing: 6;
       text-spacing: 900;
     }
-    [stylegroup= "noauto"], [stylegroup="service"] {
-      text-size: @text_size_s*0.8;
-      [length <= 1000] {
-        text-wrap-width: 800;
-      }
-    }
-    [stylegroup= "mainroad"] {
-      text-transform: uppercase;
-      text-size: @text_size_s*0.8
-    }
   }
+
+
+  /* High scale maps (Mini-maps) */
   [zoom > 17]{
     text-size: @text_size_m;
-    text-wrap-width: 250;
-    [length <= 500]{
+    [length <= 300]{
       text-name: '[short_name]';
       text-wrap-width: 100;
       text-repeat-distance: 2000;
       text-character-spacing: 0.1;
     }
-    [length > 500], [length <= 1000]{
+    [length > 300]{
       text-name: '[short_name]';
       text-wrap-width: 400;
     }
     [length > 1000]{
       text-name: '[name]';
-      text-spacing: 900;
+      text-spacing: 1200;
       text-character-spacing: 4;
+      text-wrap-width: 400;
     }
     [stylegroup= "noauto"], [stylegroup="service"] {
       text-size: @text_size_m*0.8;
-      [length <= 1000] {
-        text-wrap-width: 800;
-      }
     }
     [stylegroup= "mainroad"] {
-      text-transform: uppercase;
       text-size: @text_size_m*0.8
     }
   }
-  [stylegroup= "noauto"], [stylegroup="service"] {
-    text-dy: 14;
-    text-wrap-width: 800;
-    [length <= 1000] {
-      text-wrap-width: 800;
-    }
-  }
+
 }
 
 
