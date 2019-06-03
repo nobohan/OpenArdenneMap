@@ -74,7 +74,7 @@
 
 @church_marker: 40;
 
-@river_line_width: 12;
+@river_line_width: 8;
 @stream_line_width: 4;
 
 

@@ -451,12 +451,16 @@ or
 or
 `mutool poster -x 2 -y 2 A2.pdf A4.pdf`
 
+### printing mini-maps for brugelette
 
-# TODOs
-* palettes
-* feature: point of view
 
-# post SQL queries
-```
-psql -d osm -c 'ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;'
-```
+When passing from a mapnik-A4 to a real A4, dimensions are divided by 5.46.
+
+So for a non-standard map, the pdf size should be reduced by this factor (5.46):
+
+1) Lire la taille
+`pdfinfo A4.pdf`
+2) exporter
+`pdfjam --outfile A4.pdf --landscape --papersize '{WIDTH, HEIGHT}' nosize.pdf`
+
+eg.: pdfjam --outfile test.pdf --landscape --papersize '{12cm, 4cm}' cambron.pdf

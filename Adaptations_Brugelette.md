@@ -24,12 +24,14 @@ Quels villages?
 ou Brugelette-Mévergnies ensemble.
 
 
-* Eviter service=parking_aisle au zoom global: OK
+* afficher la grille de l'index des rues
+* very short name ? (street labels)
+* filtrer des features de PARADISIO
+* hydro trop large au zoom > 17
+* compo cartes:
+  * pour chaque village, déterminer bbox
+  * formatPdfFiles pour chaque village
 
-* rendre terrain de pelote
-
-* ajouter une fleche hydro: OK
 
 * encodage
   * hydro
-  * erreur de spike d'une rue dans attre
