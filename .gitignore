@@ -4,3 +4,5 @@
 /contour/
 /osm-files/
 /.ropeproject/
+/osm2pgsql/OpenArdenneMap.xml
+/imposm/OpenArdenneMap.xml

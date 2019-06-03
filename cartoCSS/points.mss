@@ -220,4 +220,7 @@
             }
         }
     }
+    [sport='pelote'] {
+        line-color: @black;
+    }
 }
