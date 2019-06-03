@@ -24,8 +24,12 @@ Quels villages?
 ou Brugelette-Mévergnies ensemble.
 
 
-* Eviter service=parking_aisle au zoom global
+* Eviter service=parking_aisle au zoom global: OK
 
 * rendre terrain de pelote
 
-* ajouter une fleche hydro
+* ajouter une fleche hydro: OK
+
+* encodage
+  * hydro
+  * erreur de spike d'une rue dans attre

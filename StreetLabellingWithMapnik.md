@@ -100,12 +100,37 @@ Put some values (in pixels) to increase the distance between two labels when lab
 The default value will in general maximise the positioning, but smaller values can reduce the number of text labels.
 
 
+# Mixing the rules
 
-# Other ideas
+A nice render can be achieved when mixing the above-mentioned properties and by setting rules based on the street length.
 
-* problème de répétition des labels quand le segment est coupé.
+For instance, the following set 3 different street labelling behaviour based on the street length:
 
-Solution: fusionner les rues sur base du nom (et du type):
+```
+[length <= 300]{
+  text-name: '[short_name]';
+  text-wrap-width: 100;
+  text-repeat-distance: 2000;
+  text-character-spacing: 0.1;
+}
+[length > 300]{
+  text-name: '[short_name]';
+  text-wrap-width: 400;
+}
+[length > 1000]{
+  text-name: '[name]';
+  text-spacing: 1200;
+  text-character-spacing: 4;
+  text-wrap-width: 400;
+}
+```
+
+where `[short_name]` is an abbreviated name. For smallest streets (<=300 pixels), street names will be abbreviated and wrapped after only 100 pixels. The second rule (street with length between 300 and 1000 pixels) increases the wrapping distance while the last one also increase the `text-character-spacing`.
+
+# Merge the streets that are adjacents
+
+Often, the street in OSM are splitted at numerous points for various reasons (because other tags are present, simply because the user digitalize in several segments, ....). To avoid repetition of the same label along a splitted street, we can merge the adjacent segments together after having grouping the street by their name:
+
 ```
 DROP TABLE IF EXISTS osm_named_highways;
 CREATE TABLE osm_named_highways AS
@@ -114,17 +139,11 @@ FROM planet_osm_line
 WHERE "highway" IS NOT NULL AND "name" IS NOT NULL
 GROUP BY name, highway
 ```
-* put the road layers above the building layer
 
-* Combine the effects and make the effects dependent on street lengths
-   * faire plusieurs "short_name" avec des règles d'abbreviations de plus en plus strictes
-   * augmenter text-character-spacing là où il y a de la place.
 
+# Other ideas
 * Set the main street in bold / larger font size?
-
 * change font-style de sentier/track
-
-
 
 # Inspirations from paper maps
 

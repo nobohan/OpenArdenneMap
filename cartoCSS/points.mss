@@ -220,7 +220,8 @@
             }
         }
     }
-    [sport='pelote'] {
+    [sport='balle_pelote'] {
         line-color: @black;
+        line-width: @large;
     }
 }
