@@ -37,7 +37,7 @@ def make_map(map_output, scale=20000, page_format = 'A4', x = X_CENTER, y = Y_CE
     ymin = y - delta_y/2
     ymax = y + delta_y/2
 
-    print('extent =' + str(xmin) + ', ' + str(ymin) + ', ' + str(xmax) + ', ' + str(ymax))
+    print('Extent = ' + str(xmin) + ', ' + str(ymin) + ', ' + str(xmax) + ', ' + str(ymax))
 
     bbox = (Envelope(xmin, ymin, xmax, ymax))
     m.zoom_to_box(bbox)
@@ -53,19 +53,14 @@ def make_map_bbox(map_output, xmin, ymin, xmax, ymax, scale=6000):
     delta_x = xmax-xmin
     delta_y = ymax-ymin
     ratio = delta_x/delta_y
-    print(ratio)
 
     f = delta_x / (0.295*scale/math.cos(LATITUDE*2*math.pi/360))
-    print(f)
-    # increasing map_x and map_y lead to decreasing font and symbol size: not good
     map_x = int(f*4600)  # 4600 is the number of pixels for an A4 length
-    print(map_x)
-
     map_y = int(map_x/ratio)
     m = Map(map_x, map_y)
     load_map(m, MAPNIK_FILE)
 
-    print('extent =' + str(xmin) + ', ' + str(ymin) + ', ' + str(xmax) + ', ' + str(ymax))
+    print('Extent = ' + str(xmin) + ', ' + str(ymin) + ', ' + str(xmax) + ', ' + str(ymax))
 
     bbox = (Envelope(xmin, ymin, xmax, ymax))
     m.zoom_to_box(bbox)
@@ -74,7 +69,7 @@ def make_map_bbox(map_output, xmin, ymin, xmax, ymax, scale=6000):
     render_to_file(m, map_output)
 
 # make_map('zoom_brugelette.pdf', 6000, 'A4', 428900, 6550200)
-make_map('zoom_cambron.pdf', 6000, 'A4', 431731, 6548724)
+# make_map('zoom_cambron.pdf', 6000, 'A4', 431731, 6548724)
 # make_map('zoom_gages.pdf', 6000, 'A4', 433089, 6551963)
 # make_map('zoom_attre.pdf', 6000, 'A4', 427241, 6551797)
 # make_map('zoom_mevergnies.pdf', 6000, 'A4', 428618, 6551557)
@@ -82,5 +77,8 @@ make_map('OAM_brugelette_full_A1.pdf', 12500, 'A1')
 make_map('OAM_brugelette_full_A4.pdf', 12500, 'A4')
 make_map('OAM_brugelette_full_A5.png', 12500, 'A5')
 
+make_map_bbox('attre.pdf', 426400, 6550700, 428080, 6553290)
+make_map_bbox('brugelette.pdf', 428250, 6549000, 429700, 6551000)
 make_map_bbox('cambron.pdf', 431200, 6548130, 432320, 6549300)
-# TODO other villages
+make_map_bbox('gages.pdf', 432280, 6550950, 433750, 6552600)
+make_map_bbox('mevergnies.pdf', 428370, 6551000, 429240, 6552270)
