@@ -277,20 +277,19 @@ Map { background-color: @purewhite; }
 
 #rotated_buildings {
   [building='church'] {
-    [zoom <= 10] { marker-height: @church_marker*@z10; }
-    [zoom = 11] { marker-height: @church_marker*@z11; }
-    [zoom = 12] { marker-height: @church_marker*@z12; }
-    [zoom = 13] { marker-height: @church_marker*@z13; }
-    [zoom = 14] { marker-height: @church_marker*@z14; }
-    [zoom = 15] { marker-height: @church_marker*@z15; }
-    [zoom = 16] { marker-height: @church_marker*@z16; }
-    [zoom = 17] { marker-height: @church_marker*@z17; }
-    [zoom = 18] { marker-height: @church_marker*@z18; }
-    [zoom = 19] { marker-height: @church_marker*@z19; }
-    [zoom >= 20] { marker-height: @church_marker*@z20; }
-    marker-file: url(../img/church.svg);
-    marker-transform: rotate([orientation]);
-    marker-allow-overlap: true;
+    [zoom <= 17] {
+      marker-height: @church_marker;
+      marker-file: url(../img/church.svg);
+      marker-transform: rotate([orientation]);
+      marker-allow-overlap: true;
+    }
+    [zoom > 17] {
+      /*polygon-pattern-file: url(../img/church-pattern.svg);*/
+      marker-file: url(../img/church-pattern.svg);
+      marker-height: @church_marker*1.1;
+      marker-transform: rotate([orientation]);
+      marker-allow-overlap: true;
+    }
   }
   [building='chapel'] {
     [zoom <= 10] { marker-height: @church_marker*@z10*0.6; }

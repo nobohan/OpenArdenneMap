@@ -28,14 +28,20 @@ ou Brugelette-Mévergnies ensemble.
 ## DONE
 * hydro trop large au zoom > 17
 * afficher la grille de l'index des rues avec le label
+* changer le symbole des églises pour les mini-maps
 
 ## TODO
 
 * very short name ? (street labels)
 * filtrer des features de PARADISIO
-* changer ou supprimer le symbole des églises dans les mini-cartes
-
+* revoir les dash-array des mini-maps
 
 
 ## Encodage
 * hydro
+* orientation correcte church
+  * Attre
+  * Brugelette
+  * mevergnies
+  * Cambron: 10°
+  * Gages
