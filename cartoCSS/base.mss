@@ -18,6 +18,22 @@ Map { background-color: @purewhite; }
   polygon-opacity: 0.8;
 }
 
+/* ================================================================== */
+/* GRID
+/* ================================================================== */
+
+#grid {
+  polygon-opacity: 0;
+  line-color: @black;
+  line-width: 5;
+}
+
+#grid::label {
+  text-face-name: @sans;
+  text-size: @text_size_l;
+  text-name: '[col]+[row]';
+  text-allow-overlap: true;
+}
 
 /* ================================================================== */
 /* CONTOUR

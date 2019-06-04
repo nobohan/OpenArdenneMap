@@ -23,15 +23,19 @@ Quels villages?
 
 ou Brugelette-Mévergnies ensemble.
 
+# Détails (liste non-exhaustive)
 
-* afficher la grille de l'index des rues
+## DONE
+* hydro trop large au zoom > 17
+* afficher la grille de l'index des rues avec le label
+
+## TODO
+
 * very short name ? (street labels)
 * filtrer des features de PARADISIO
-* hydro trop large au zoom > 17
-* compo cartes:
-  * pour chaque village, déterminer bbox
-  * formatPdfFiles pour chaque village
+* changer ou supprimer le symbole des églises dans les mini-cartes
 
 
-* encodage
-  * hydro
+
+## Encodage
+* hydro
