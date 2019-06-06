@@ -35,6 +35,7 @@ ou Brugelette-Mévergnies ensemble.
 * very short name ? (street labels)
 * filtrer des features de PARADISIO
 * revoir les dash-array des mini-maps
+* orientation en dur des églises
 
 
 ## Encodage

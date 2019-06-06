@@ -280,14 +280,43 @@ Map { background-color: @purewhite; }
     [zoom <= 17] {
       marker-height: @church_marker;
       marker-file: url(../img/church.svg);
-      marker-transform: rotate([orientation]);
+      [osm_id=203802634] { /* Attre */
+        marker-transform: rotate(-68);
+      }
+      [osm_id=677442860] { /* Brugelette */
+        marker-transform: rotate(-53);
+      }
+      [osm_id=321824285] { /* Cambron */
+        marker-transform: rotate(-99);
+      }
+      [osm_id=674066050] { /* Gages */
+        marker-transform: rotate(84);
+      }
+      [osm_id=673210333] { /* Mevergnies */
+        marker-transform: rotate(-90);
+      }
+      /*marker-transform: rotate([orientation]);*/
       marker-allow-overlap: true;
     }
     [zoom > 17] {
-      /*polygon-pattern-file: url(../img/church-pattern.svg);*/
       marker-file: url(../img/church-pattern.svg);
-      marker-height: @church_marker*1.1;
-      marker-transform: rotate([orientation]);
+      marker-height: @church_marker*1.2;
+      [osm_id=203802634] { /* Attre */
+        marker-transform: rotate(-68);
+      }
+      [osm_id=677442860] { /* Brugelette */
+        marker-transform: rotate(-53);
+      }
+      [osm_id=321824285] { /* Cambron */
+        marker-transform: rotate(-99);
+      }
+      [osm_id=674066050] { /* Gages */
+        marker-transform: rotate(84);
+      }
+      [osm_id=673210333] { /* Mevergnies */
+        marker-transform: rotate(-90);
+      }
+      /*marker-transform: rotate([orientation]);*/
       marker-allow-overlap: true;
     }
   }
