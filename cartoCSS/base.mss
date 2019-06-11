@@ -127,7 +127,7 @@ Map { background-color: @purewhite; }
       [zoom <= 14] { polygon-pattern-file: url(../img/forest_bl_z14.svg); }
       [zoom > 14] {
         polygon-pattern-file: url(../img/forest_bl.svg);
-        [area > 200000] {
+        [area > 50000] {
           line-pattern-file: url(../img/forest-border.svg);
           line-pattern-offset: -10;
         }

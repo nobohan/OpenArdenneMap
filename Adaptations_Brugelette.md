@@ -29,20 +29,16 @@ ou Brugelette-Mévergnies ensemble.
 * hydro trop large au zoom > 17
 * afficher la grille de l'index des rues avec le label
 * changer le symbole des églises pour les mini-maps
+* hard-codage des orientation des églises
 
 ## TODO
 
 * very short name ? (street labels)
 * filtrer des features de PARADISIO
+   WHERE NOT ST_WITHIN(way, way_paradisio)
 * revoir les dash-array des mini-maps
-* orientation en dur des églises
+* cacher zone militaires
 
 
 ## Encodage
 * hydro
-* orientation correcte church
-  * Attre
-  * Brugelette
-  * mevergnies
-  * Cambron: 10°
-  * Gages
