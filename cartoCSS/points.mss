@@ -11,6 +11,7 @@
  #train_elements {
    [type='level_crossing'] {
      marker-file: url(../img/level-crossing.svg);
+     marker-transform: rotate(25);
      [zoom <= 10] { marker-height: @large*@z10; }
      [zoom = 11] { marker-height: @large*@z11; }
      [zoom = 12] { marker-height: @large*@z12; }
@@ -68,17 +69,17 @@
         }
     }
     [amenity = 'fountain'] {
-        [zoom <= 10] { marker-height: @large*@z10; text-size: @text_size_s*@z10_label; }
-        [zoom = 11] { marker-height: @large*@z11; text-size: @text_size_s*@z11_label; }
-        [zoom = 12] { marker-height: @large*@z12; text-size: @text_size_s*@z12_label; }
-        [zoom = 13] { marker-height: @large*@z13; text-size: @text_size_s*@z13_label; }
-        [zoom = 14] { marker-height: @large*@z14; text-size: @text_size_s*@z14_label; }
-        [zoom = 15] { marker-height: @large*@z15; text-size: @text_size_s*@z15_label; }
-        [zoom = 16] { marker-height: @large*@z16; text-size: @text_size_s*@z16_label; }
-        [zoom = 17] { marker-height: @large*@z17; text-size: @text_size_s*@z17_label; }
-        [zoom = 18] { marker-height: @large*@z18; text-size: @text_size_s*@z18_label; }
-        [zoom = 19] { marker-height: @large*@z19; text-size: @text_size_s*@z19_label; }
-        [zoom >= 20] { marker-height: @large*@z20; text-size: @text_size_s*@z20_label; }
+        [zoom <= 10] { marker-height: @large*@z10_marker; text-size: @text_size_s*@z10_label; }
+        [zoom = 11] { marker-height: @large*@z11_marker; text-size: @text_size_s*@z11_label; }
+        [zoom = 12] { marker-height: @large*@z12_marker; text-size: @text_size_s*@z12_label; }
+        [zoom = 13] { marker-height: @large*@z13_marker; text-size: @text_size_s*@z13_label; }
+        [zoom = 14] { marker-height: @large*@z14_marker; text-size: @text_size_s*@z14_label; }
+        [zoom = 15] { marker-height: @large*@z15_marker; text-size: @text_size_s*@z15_label; }
+        [zoom = 16] { marker-height: @large*@z16_marker; text-size: @text_size_s*@z16_label; }
+        [zoom = 17] { marker-height: @large*@z17_marker; text-size: @text_size_s*@z17_label; }
+        [zoom = 18] { marker-height: @large*@z18_marker; text-size: @text_size_s*@z18_label; }
+        [zoom = 19] { marker-height: @large*@z19_marker; text-size: @text_size_s*@z19_label; }
+        [zoom >= 20] { marker-height: @large*@z20_marker; text-size: @text_size_s*@z20_label; }
         marker-file: url(../img/fountain.svg);
         marker-allow-overlap: true;
         text-name:"'Font.'";
@@ -222,6 +223,13 @@
     }
     [sport='balle_pelote'] {
         line-color: @black;
-        line-width: @large;
+        line-width: @medium;
+        text-name: "'Pelote'";
+        text-face-name: @sans;
+        text-size: @text_size_s;
+        text-allow-overlap: true;
+        text-dy: 25;
+        text-halo-fill: #ffffff;
+        text-halo-radius: 2;
     }
 }

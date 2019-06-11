@@ -36,7 +36,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.6"
-     inkscape:cx="484.92674"
+     inkscape:cx="453.58745"
      inkscape:cy="615.34758"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -67,7 +67,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="opacity:0.98999999;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4138)"
+       style="opacity:0.98999999;fill:#feffff;fill-opacity:0;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4138)"
        id="rect4136"
        width="45"
        height="10.000009"
@@ -75,12 +75,12 @@
        y="461.92105"
        transform="matrix(1.117901,-0.20522217,0.05495375,4.1747468,-14.91158,-1434.9596)" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#111111;stroke-width:8.44792461;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#feffff;fill-rule:evenodd;stroke:#111111;stroke-width:8.44792461;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:0"
        d="m 461.3838,415.86331 -45.37092,39.32444 v 0"
        id="path4140"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#111111;stroke-width:8.47772217;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#feffff;fill-rule:evenodd;stroke:#111111;stroke-width:8.47772217;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:0"
        d="m 417.12742,416.06207 45.31247,39.55205 v 0"
        id="path4140-3"
        inkscape:connector-curvature="0" />

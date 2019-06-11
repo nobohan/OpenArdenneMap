@@ -72,7 +72,7 @@
 
 @building_line_width: 0.4;
 
-@church_marker: 40;
+@church_marker: 50;
 
 @river_line_width: 8;
 @stream_line_width: 4;
@@ -99,4 +99,4 @@
 /*    POINTS.MSS
 /* =============== */
 
-@pitch_marker: 40;
+@pitch_marker: 30;

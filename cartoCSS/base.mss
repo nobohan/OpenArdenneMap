@@ -24,14 +24,18 @@ Map { background-color: @purewhite; }
 
 #grid {
   polygon-opacity: 0;
-  line-color: @black;
-  line-width: 5;
+  line-color: lighten(@black, 70%);
+  line-opacity: 0.4;
+  line-width: 10;
 }
 
 #grid::label {
   text-face-name: @sans;
-  text-size: @text_size_l;
+  text-size: @text_size_l*4;
+  text-opacity: 0.4;
+  text-fill: lighten(@black, 70%);
   text-name: '[col]+[row]';
+
   text-allow-overlap: true;
 }
 
@@ -217,6 +221,20 @@ Map { background-color: @purewhite; }
   }
 }
 
+#zoo [name = 'Pairi Daiza'] {
+  polygon-fill: @white;
+  polygon-opacity: 0.4;
+  polygon-pattern-file: url(../img/industrial.svg);
+  line-width: @tiny;
+  text-name: '[name]';
+  text-face-name: @sans;
+  text-fill: @black;
+  text-transform: uppercase;
+  text-character-spacing: 14;
+  text-size: @text_size_l;
+  text-allow-overlap: true;
+}
+
 #landuse_overlays {
   [type='nature_reserve'] {
     [zoom <= 10] { line-width: @landuse_line_width*@z10*5; }
@@ -257,10 +275,12 @@ Map { background-color: @purewhite; }
   [zoom >= 20] { line-width: @building_line_width*@z20; }
   polygon-fill: @building;
   line-color: darken(@building,10%);
-  /* [type='church'], [type='chapel']{
-  /*  polygon-fill: @violet;
-  /*  line-color: @gray;
-  /* }
+  [zoom <= 17] {
+    [type='church'], [type='chapel']{
+      polygon: none;
+      line-width: 0;
+    }
+  }
   /* [type='farm'], [type='farm_auxiliary'], [type='barn']{
   /*  polygon-fill: @brown;
   /*  line-color: darken(@brown,10%);
@@ -321,19 +341,14 @@ Map { background-color: @purewhite; }
     }
   }
   [building='chapel'] {
-    [zoom <= 10] { marker-height: @church_marker*@z10*0.6; }
-    [zoom = 11] { marker-height: @church_marker*@z11*0.6; }
-    [zoom = 12] { marker-height: @church_marker*@z12*0.6; }
-    [zoom = 13] { marker-height: @church_marker*@z13*0.6; }
-    [zoom = 14] { marker-height: @church_marker*@z14*0.6; }
-    [zoom = 15] { marker-height: @church_marker*@z15*0.6; }
-    [zoom = 16] { marker-height: @church_marker*@z16*0.6; }
-    [zoom = 17] { marker-height: @church_marker*@z17*0.6; }
-    [zoom = 18] { marker-height: @church_marker*@z18*0.6; }
-    [zoom = 19] { marker-height: @church_marker*@z19*0.6; }
-    [zoom >= 20] { marker-height: @church_marker*@z20*0.6; }
-    marker-file: url(../img/church.svg);
-    marker-transform: rotate([orientation]);
+    text-name: "'Chap.'";
+    text-face-name: @sans;
+    text-allow-overlap: true;
+    text-dy: 25;
+    text-halo-fill: #ffffff;
+    text-halo-radius: 2;
+    [zoom <= 17] { text-size: @text_size_s; }
+    [zoom > 17] { text-size: @text_size_m; }
   }
 }
 
@@ -397,10 +412,11 @@ Map { background-color: @purewhite; }
     }
     /* === HYDRO_ARROW === */
     marker-file: url(../img/arrow-hydro.png);
-    marker-height: 12;
+    marker-height: 16;
     marker-placement: line;
     marker-spacing: 1200;
-    marker-offset: @river_line_width*1.7;
+    [type='river'] { marker-offset: @river_line_width*2.5; }
+    [type='stream'] { marker-offset: @river_line_width*1.7; }
     [zoom > 17] {
       marker-spacing: 1400;
       marker-offset: @river_line_width*3;

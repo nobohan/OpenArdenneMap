@@ -49,11 +49,7 @@
   text-line-spacing: 1;
   text-fill: @road_text;
   text-halo-fill: #ffffff;
-  text-halo-radius: 2;
-  /*text-vertical-alignment: top;*/
-  /* text-margin: 1000;*/
-  text-upright: auto;
-  /*text-horizontal-alignment: adjust;*/
+  text-halo-radius: 6;
   text-allow-overlap: true;
   text-size: @text_size_s;
   text-line-spacing: 25;
@@ -168,6 +164,8 @@
   text-character-spacing: 20;
   text-line-spacing: 6;
   text-allow-overlap: true;
+  text-dy: 40;
+  text-dx: -250;
   [zoom > 17] { text-name: '';}
 }
 
@@ -280,20 +278,20 @@
   [type='farmyard'] {
     text-name: "'Fme'";
     text-dy: -20;
-    text-allow-overlap: false;
+    text-allow-overlap: true;
     text-repeat-distance: 60;
   }
   [type='forest'] {
     text-face-name: @sans_lt_italic;
     /*text-size: @text_size_l; /*[area]/100000*/
-    text-size: 100/([area]*[area]);
+    /*text-size: 100/([area]*[area]);*/
     text-fill: lighten(@black, 10%);
     text-transform: uppercase;
-    text-character-spacing: 80;
+    text-character-spacing: 10;
     text-line-spacing: 150;
     text-wrap-width: 200;
     text-allow-overlap: true;
-    text-name: "";
+    text-name: '[name]';
   }
 }
 
@@ -360,6 +358,7 @@
     [zoom = 19] { text-size: @text_size_m*@z19_label; }
     [zoom >= 20] { text-size: @text_size_m*@z20_label; }
     text-name: 'Gare';
+    text-allow-overlap: true;
     text-face-name: @sans;
     text-placement: point;
     text-fill: @other_text;

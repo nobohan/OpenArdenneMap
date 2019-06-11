@@ -859,17 +859,17 @@
   }
   [type = 'line'] {
     line-color: @black;
-    [zoom <= 10] { line-width: @outline*@z10; }
-    [zoom = 11] { line-width: @outline*@z11; }
-    [zoom = 12] { line-width: @outline*@z12; }
-    [zoom = 13] { line-width: @outline*@z13; }
-    [zoom = 14] { line-width: @outline*@z14; }
-    [zoom = 15] { line-width: @outline*@z15; }
-    [zoom = 16] { line-width: @outline*@z16; }
-    [zoom = 17] { line-width: @outline*@z17; }
-    [zoom = 18] { line-width: @outline*@z18; }
-    [zoom = 19] { line-width: @outline*@z19; }
-    [zoom >= 20] { line-width: @outline*@z20; }
+    [zoom <= 10] { line-width: @mini/2*@z10; }
+    [zoom = 11] { line-width: @mini/2*@z11; }
+    [zoom = 12] { line-width: @mini/2*@z12; }
+    [zoom = 13] { line-width: @mini/2*@z13; }
+    [zoom = 14] { line-width: @mini/2*@z14; }
+    [zoom = 15] { line-width: @mini/2*@z15; }
+    [zoom = 16] { line-width: @mini/2*@z16; }
+    [zoom = 17] { line-width: @mini/2*@z17; }
+    [zoom = 18] { line-width: @mini/2*@z18; }
+    [zoom = 19] { line-width: @mini/2*@z19; }
+    [zoom >= 20] { line-width: @mini/2*@z20; }
   }
   [type = 'embankment'] {
       line-pattern-file: url(../img/embankment.svg);
