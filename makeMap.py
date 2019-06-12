@@ -76,8 +76,8 @@ def make_map_bbox(map_output, xmin, ymin, xmax, ymax, scale=6000):
 make_map('OAM_brugelette_full_A1.pdf', 12500, 'A1')
 make_map('OAM_brugelette_full_A4.pdf', 12500, 'A4')
 
-make_map_bbox('attre.pdf', 426400, 6550700, 428080, 6553290)
+make_map_bbox('attre.pdf', 426400, 6551610, 428080, 6553290)
 make_map_bbox('brugelette.pdf', 428250, 6549000, 429700, 6551000)
 make_map_bbox('cambron.pdf', 431200, 6548130, 432320, 6549300)
-make_map_bbox('gages.pdf', 432280, 6550950, 433750, 6552600)
-make_map_bbox('mevergnies.pdf', 428370, 6551000, 429240, 6552270)
+make_map_bbox('gages.pdf', 432280, 6551200, 433750, 6552600)
+make_map_bbox('mevergnies.pdf', 428370, 6551000, 429240, 6552400)
