@@ -31,18 +31,8 @@ ou Brugelette-Mévergnies ensemble.
 * changer le symbole des églises pour les mini-maps
 * hard-codage des orientation des églises
 * revoir les dash-array des mini-maps
-
-
-## TODO
-
-* very short name ? (street labels)
 * filtrer des features de PARADISIO
-
-SELECT way, railway AS type, name, z_order
-FROM planet_osm_point
-WHERE railway IN ('station', 'level_crossing')
-ORDER BY z_order NULLS LAST
-
+```
 SELECT way, railway AS type, name, z_order
 FROM planet_osm_point
 WHERE railway IN ('station', 'level_crossing') AND NOT ST_WITHIN(way, (SELECT way
@@ -50,14 +40,15 @@ WHERE railway IN ('station', 'level_crossing') AND NOT ST_WITHIN(way, (SELECT wa
   WHERE osm_id = 251508700)
 )
 ORDER BY z_order NULLS LAST
+```
 
-Use this: 
+## TODO
 
-AND NOT ST_WITHIN(way, (SELECT way \n FROM planet_osm_polygon \n  WHERE osm_id = 251508700) \n )
-
+* very short name ? (street labels)
+  * certains noms n'apparaissent tjs pas
+  * certains noms sont trop abbrégés (Rue -> R.)
 
 * cacher zone militaires
 
 
 ## Encodage
-* hydro

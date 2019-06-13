@@ -84,28 +84,44 @@
 
   /* High scale maps (Mini-maps) */
   [zoom > 17]{
-    text-size: @text_size_m;
-    [length <= 300]{
+    [length <= 100] {
+      text-name: '[very_short_name]';
+      text-wrap-width: 20;
+      text-character-spacing: 0.1;
+      text-size: @text_size_xs;
+      text-max-char-angle-delta: 50;
+    }
+    [length > 100] {
+      text-name: '[very_short_name]';
+      text-wrap-width: 110;
+      text-character-spacing: 0.1;
+      text-size: @text_size_xs;
+      text-max-char-angle-delta: 50;
+    }
+    [length > 150]{
       text-name: '[short_name]';
-      text-wrap-width: 100;
+      text-wrap-width: 300;
       text-repeat-distance: 2000;
       text-character-spacing: 0.1;
+      text-size: @text_size_s;
     }
-    [length > 300]{
+    [length > 400]{
       text-name: '[short_name]';
-      text-wrap-width: 400;
+      text-wrap-width: 600;
+      text-size: @text_size_m;
     }
     [length > 1000]{
       text-name: '[name]';
       text-spacing: 1200;
       text-character-spacing: 4;
-      text-wrap-width: 400;
+      text-wrap-width: 800;
+      text-size: @text_size_m;
     }
     [stylegroup= "noauto"], [stylegroup="service"] {
       text-size: @text_size_m*0.8;
     }
     [stylegroup= "mainroad"] {
-      text-size: @text_size_m*0.8
+      text-size: @text_size_m
     }
   }
 
