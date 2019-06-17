@@ -43,11 +43,6 @@ ORDER BY z_order NULLS LAST
 ```
 
 ## TODO
-
-* very short name ? (street labels)
-  * certains noms n'apparaissent tjs pas
-  * certains noms sont trop abbrégés (Rue -> R.)
-
 * cacher zone militaires
 
 
