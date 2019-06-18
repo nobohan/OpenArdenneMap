@@ -42,6 +42,9 @@ WHERE railway IN ('station', 'level_crossing') AND NOT ST_WITHIN(way, (SELECT wa
 ORDER BY z_order NULLS LAST
 ```
 
+ajout rcn_ref (point noeuds vélo)
+
+
 # Légende avec Mapnik
 
 ## commandes
@@ -55,3 +58,8 @@ carto legend.mml > legend.xml && python legend.py
 2) Add corresponding items in `legend.geojson`: this layer stores the geometric information for each legend item.
 
 3) For the denomination (text labels as "Forêt mixte") of the legend items only, add entries in legend_label.mss. The corresponding layer should be in `legend.mml` as well.
+
+# OSM history
+```
+carto --quiet osm2pgsql/project-history.mml > osm2pgsql/brugelette-history.xml && cp osm2pgsql/brugelette-history.xml ../../../OSM-History/osm-history-rendered-cl/osm-history-renderer/data/xml/brugelette-history.xml
+```
