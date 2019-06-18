@@ -42,8 +42,16 @@ WHERE railway IN ('station', 'level_crossing') AND NOT ST_WITHIN(way, (SELECT wa
 ORDER BY z_order NULLS LAST
 ```
 
-## TODO
-* cacher zone militaires
+# Légende avec Mapnik
 
+## commandes
+```
+carto legend.mml > legend.xml && python legend.py
+```
 
-## Encodage
+## How to build the legend
+1) Add layers in `legend.mml`: the same numbers of layers should be in legend.mml as in the mml map file.
+
+2) Add corresponding items in `legend.geojson`: this layer stores the geometric information for each legend item.
+
+3) For the denomination (text labels as "Forêt mixte") of the legend items only, add entries in legend_label.mss. The corresponding layer should be in `legend.mml` as well.

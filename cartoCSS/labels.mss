@@ -257,10 +257,10 @@
   [zoom = 19] { text-size: @text_size_s*@z19_label; }
   [zoom >= 20] { text-size: @text_size_s*@z20_label; }
   text-name: "";
-  text-face-name:@sans;
+  text-face-name: @sans;
   text-character-spacing: 1;
   text-halo-radius: 3;
-  text-wrap-width:30;
+  text-wrap-width: 30;
   text-fill: @black;
   text-halo-fill: #fff;
   // Specific style overrides for different types of areas:
@@ -290,10 +290,12 @@
   [type='school'] {
     text-name: "'Éc.'";
     text-dy: -20;
+    text-allow-overlap: true;
   }
   [type='farmyard'] {
     text-name: "'Fme'";
     text-dy: -20;
+    text-size: 120;
     text-allow-overlap: true;
     text-repeat-distance: 60;
   }
