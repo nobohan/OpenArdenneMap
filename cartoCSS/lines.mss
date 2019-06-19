@@ -899,24 +899,28 @@
 
 /* ================================================================== */
 /* BOUNDARIES
+
 /* ================================================================== */
 
-#boundaries {
+#boundaries [admin_level='8'] {
   line-color: @admin;
-  line-dasharray: 20, 10, 5;
-  [admin_level = "6"] {
-    [zoom <= 10] { line-width: @small*@z10; }
-    [zoom = 11] { line-width: @small*@z11; }
-    [zoom = 12] { line-width: @small*@z12; }
-    [zoom = 13] { line-width: @small*@z13; }
-    [zoom = 14] { line-width: @small*@z14; }
-    [zoom = 15] { line-width: @small*@z15; }
-    [zoom = 16] { line-width: @small*@z16; }
-    [zoom = 17] { line-width: @small*@z17; }
-    [zoom = 18] { line-width: @small*@z18; }
-    [zoom = 19] { line-width: @small*@z19; }
-    [zoom >= 20] { line-width: @small*@z20; }
-  }
+  line-dasharray: 20, 10, 10;
+  [zoom <= 10] { line-width: @mini*@z10; }
+  [zoom = 11] { line-width: @mini*@z11; }
+  [zoom = 12] { line-width: @mini*@z12; }
+  [zoom = 13] { line-width: @mini*@z13; }
+  [zoom = 14] { line-width: @mini*@z14; }
+  [zoom = 15] { line-width: @mini*@z15; }
+  [zoom = 16] { line-width: @mini*@z16; }
+  [zoom = 17] { line-width: @mini*@z17; }
+  [zoom = 18] { line-width: @mini*@z18; }
+  [zoom = 19] { line-width: @mini*@z19; }
+  [zoom >= 20] { line-width: @mini*@z20; }
 }
 
+#boundaries::offset [admin_level='8'][name='Brugelette'] {
+  line-color: @gray;
+  line-offset: 20;
+  line-width: 34;
+}
 /******************************************************************* */
