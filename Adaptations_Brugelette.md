@@ -63,3 +63,15 @@ carto legend.mml > legend.xml && python legend.py
 ```
 carto --quiet osm2pgsql/project-history.mml > osm2pgsql/brugelette-history.xml && cp osm2pgsql/brugelette-history.xml ../../../OSM-History/osm-history-rendered-cl/osm-history-renderer/data/xml/brugelette-history.xml
 ```
+
+
+# About svg patterns rendered as images
+
+https://github.com/mapnik/mapnik/issues/4007
+
+SVG support from Mapnik 3.0.12. Mapnik 3.0.19 seems the last installed version on ubuntu 18.04!
+
+https://github.com/mapnik/mapnik/pull/4009: novembre 2018: do not rasterize svg pattern
+
+
+merge commit: https://github.com/mapnik/mapnik/commit/abcd96be0ea72ff00a1e6e0908e3175d5d8914a3
