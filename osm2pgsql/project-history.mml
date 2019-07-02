@@ -4,10 +4,10 @@
       "Datasource": {
         "dbname": "postgres",
         "user": "postgres",
-        "host": "localhost",
-        "port": "5439",
+        "host": "db",
+        "port": "5432",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "geom",
+        "geometry_field": "way",
 
         "id": "landuse",
         "key_field": "",
@@ -27,10 +27,10 @@
       "Datasource": {
         "dbname": "postgres",
         "user": "postgres",
-        "host": "localhost",
-        "port": "5439",
+        "host": "db",
+        "port": "5432",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "geom",
+        "geometry_field": "way",
 
         "key_field": "",
         "table": "( SELECT way, waterway AS type\n  FROM planet_osm_line\n  WHERE waterway IN ('river', 'canal', 'stream', 'ditch', 'drain')\n) AS data",
@@ -46,10 +46,10 @@
       "Datasource": {
         "dbname": "postgres",
         "user": "postgres",
-        "host": "localhost",
-        "port": "5439",
+        "host": "db",
+        "port": "5432",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "geom",
+        "geometry_field": "way",
 
         "id": "water",
         "key_field": "",
@@ -69,10 +69,10 @@
       "Datasource": {
         "dbname": "postgres",
         "user": "postgres",
-        "host": "localhost",
-        "port": "5439",
+        "host": "db",
+        "port": "5432",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "geom",
+        "geometry_field": "way",
 
         "id": "landuse_overlays",
         "key_field": "",
@@ -91,10 +91,10 @@
       "Datasource": {
         "dbname": "postgres",
         "user": "postgres",
-        "host": "localhost",
-        "port": "5439",
+        "host": "db",
+        "port": "5432",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "geom",
+        "geometry_field": "way",
 
         "key_field": "",
         "table": "( SELECT way, \"building\" AS type\n  FROM planet_osm_polygon\n  WHERE building NOT IN ('', '0','false', 'no')\n  ORDER BY ST_YMin(ST_Envelope(way)) DESC\n) AS data",
@@ -110,10 +110,10 @@
       "Datasource": {
         "dbname": "postgres",
         "user": "postgres",
-        "host": "localhost",
-        "port": "5439",
+        "host": "db",
+        "port": "5432",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "geom",
+        "geometry_field": "way",
 
         "id": "aeroway",
         "key_field": "",
@@ -133,10 +133,10 @@
       "Datasource": {
         "dbname": "postgres",
         "user": "postgres",
-        "host": "localhost",
-        "port": "5439",
+        "host": "db",
+        "port": "5432",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "geom",
+        "geometry_field": "way",
 
         "key_field": "",
         "table": "( SELECT way, highway AS type, sidewalk, 0 AS tunnel, 0 AS bridge, tracktype, access, 'fill' AS render,\n  CASE\n    WHEN highway IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN highway IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN highway IN ('service', 'track') THEN 'service'\n    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n  ELSE 'other' END AS stylegroup\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL AND sidewalk IS NOT NULL)\n    AND (tunnel IS NULL OR tunnel = 'no')\n    AND (bridge IS NULL OR bridge = 'no')\n  ORDER BY z_order\n) AS data",
@@ -156,10 +156,10 @@
       "Datasource": {
         "dbname": "postgres",
         "user": "postgres",
-        "host": "localhost",
-        "port": "5439",
+        "host": "db",
+        "port": "5432",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "geom",
+        "geometry_field": "way",
 
         "id": "tunnel",
         "key_field": "",
@@ -179,10 +179,10 @@
       "Datasource": {
         "dbname": "postgres",
         "user": "postgres",
-        "host": "localhost",
-        "port": "5439",
+        "host": "db",
+        "port": "5432",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "geom",
+        "geometry_field": "way",
 
         "key_field": "",
         "table": "( SELECT way, COALESCE(highway, railway) AS type, service, 0 AS tunnel, 0 AS bridge, tracktype, access, 'fill' AS render,\n  CASE\n    WHEN highway IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN highway IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN highway IN ('service', 'track') THEN 'service'\n    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL OR railway IS NOT NULL)\n    AND (tunnel IS NULL OR tunnel = 'no')\n    AND (bridge IS NULL OR bridge = 'no')\n AND (service IS NULL OR service != 'parking_aisle') AND (NOT ST_WITHIN(way, (SELECT way \n FROM planet_osm_polygon \n  WHERE osm_id = 251508700) \n)) \n ORDER BY z_order\n) AS data",
@@ -199,10 +199,10 @@
       "Datasource": {
         "dbname": "postgres",
         "user": "postgres",
-        "host": "localhost",
-        "port": "5439",
+        "host": "db",
+        "port": "5432",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "geom",
+        "geometry_field": "way",
 
         "id": "bridge",
         "key_field": "",
@@ -222,10 +222,10 @@
       "Datasource": {
         "dbname": "postgres",
         "user": "postgres",
-        "host": "localhost",
-        "port": "5439",
+        "host": "db",
+        "port": "5432",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "geom",
+        "geometry_field": "way",
 
         "id": "bridge_symbol",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
@@ -243,10 +243,10 @@
       "Datasource": {
         "dbname": "postgres",
         "user": "postgres",
-        "host": "localhost",
-        "port": "5439",
+        "host": "db",
+        "port": "5432",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "geom",
+        "geometry_field": "way",
 
         "table": "( SELECT way, building, osm_id, name, CAST(degrees(ST_Azimuth(ST_Centroid(l.way),ST_Centroid(ST_SimplifyPreserveTopology(l.way,100)))) AS VARCHAR(255)) AS orientation, area\n    FROM planet_osm_polygon\n AS l WHERE \"building\" IN ('church','chapel') \n) AS data",
         "type": "postgis"
@@ -262,10 +262,10 @@
       "Datasource": {
         "dbname": "postgres",
         "user": "postgres",
-        "host": "localhost",
-        "port": "5439",
+        "host": "db",
+        "port": "5432",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "geom",
+        "geometry_field": "way",
 
         "id": "linear_features",
         "project": "OpenArdenneMap",
@@ -284,33 +284,10 @@
       "Datasource": {
         "dbname": "postgres",
         "user": "postgres",
-        "host": "localhost",
-        "port": "5439",
+        "host": "db",
+        "port": "5432",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "geom",
-
-        "id": "point_features",
-        "project": "OpenArdenneMap",
-        "srs": null,
-        "table": "( SELECT way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", bus, name \n  FROM planet_osm_point\n WHERE NOT ST_WITHIN(way, (SELECT way \n FROM planet_osm_polygon \n  WHERE osm_id = 251508700) \n ))  AS data",
-        "type": "postgis"
-      },
-      "class": "",
-      "geometry": "point",
-      "id": "point_features",
-      "name": "point_features",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
-      "status": "off"
-    },
-    {
-      "Datasource": {
-        "dbname": "postgres",
-        "user": "postgres",
-        "host": "localhost",
-        "port": "5439",
-        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "geom",
+        "geometry_field": "way",
 
         "id": "pitch",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
@@ -328,10 +305,10 @@
       "Datasource": {
         "dbname": "postgres",
         "user": "postgres",
-        "host": "localhost",
-        "port": "5439",
+        "host": "db",
+        "port": "5432",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "geom",
+        "geometry_field": "way",
 
         "id": "landuse_label",
         "key_field": "",
@@ -351,10 +328,10 @@
       "Datasource": {
         "dbname": "postgres",
         "user": "postgres",
-        "host": "localhost",
-        "port": "5439",
+        "host": "db",
+        "port": "5432",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "geom",
+        "geometry_field": "way",
 
         "id": "waterway_label",
         "key_field": "",
@@ -374,10 +351,10 @@
       "Datasource": {
         "dbname": "postgres",
         "user": "postgres",
-        "host": "localhost",
-        "port": "5439",
+        "host": "db",
+        "port": "5432",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "geom",
+        "geometry_field": "way",
 
         "id": "street_label",
         "key_field": "",
@@ -417,16 +394,16 @@
       "Datasource": {
         "dbname": "postgres",
         "user": "postgres",
-        "host": "localhost",
-        "port": "5439",
+        "host": "db",
+        "port": "5432",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "geom",
+        "geometry_field": "way",
 
         "id": "place",
         "key_field": "",
         "project": "OpenArdenneMap",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, place AS type, name, z_order, population\n  FROM planet_osm_point\n  WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality')\n  ORDER BY population DESC NULLS LAST\n) AS data",
+        "table": "( SELECT way, place AS type, name, population\n  FROM planet_osm_point\n  WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality')\n  ORDER BY population DESC NULLS LAST\n) AS data",
         "type": "postgis"
       },
       "geometry": "point",
@@ -440,10 +417,10 @@
       "Datasource": {
         "dbname": "postgres",
         "user": "postgres",
-        "host": "localhost",
-        "port": "5439",
+        "host": "db",
+        "port": "5432",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "geom",
+        "geometry_field": "way",
 
         "key_field": "",
         "table": "( SELECT way, railway AS type, name, z_order \n  FROM planet_osm_point \n  WHERE railway IN ('station', 'level_crossing') AND NOT ST_WITHIN(way, (SELECT way \n FROM planet_osm_polygon \n  WHERE osm_id = 251508700) \n )\n  ORDER BY z_order NULLS LAST\n) AS DATA \n",
@@ -466,10 +443,10 @@
       "Datasource": {
         "dbname": "postgres",
         "user": "postgres",
-        "host": "localhost",
-        "port": "5439",
+        "host": "db",
+        "port": "5432",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "geom",
+        "geometry_field": "way",
 
         "id": "zoo",
         "project": "OpenArdenneMap",

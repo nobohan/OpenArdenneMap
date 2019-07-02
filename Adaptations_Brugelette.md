@@ -75,3 +75,9 @@ https://github.com/mapnik/mapnik/pull/4009: novembre 2018: do not rasterize svg 
 
 
 merge commit: https://github.com/mapnik/mapnik/commit/abcd96be0ea72ff00a1e6e0908e3175d5d8914a3
+
+Master version of Mapnik DID render the svg pattern as vector!
+
+* Arrow-hydro: marker symbolizer don't work with a svg: it does not appear on the map.
+See related: https://github.com/mapnik/mapnik/wiki/Svg-rendering-gochas
+Mapnik LOG> 2019-06-27 09:20:05: SVG support error: <marker-end> attribute is not supported: Or la fleche faite dans inkscape a un attribut arrow-end. 

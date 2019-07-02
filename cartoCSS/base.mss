@@ -411,7 +411,7 @@ Map { background-color: @purewhite; }
       [zoom >= 20] { line-width: @river_line_width*@z20/2; }
     }
     /* === HYDRO_ARROW === */
-    marker-file: url(../img/arrow-hydro.png);
+    marker-file: url(../img/arrow.svg);
     marker-height: 16;
     marker-placement: line;
     marker-spacing: 1200;
