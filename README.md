@@ -61,6 +61,13 @@ ou bien (avec imposm):
 carto imposm/project.mml > imposm/OpenArdenneMap.xml && python makeMap.py
 ```
 
+Si vous préférez travailler avec les bindings node-mapnik, il y a aussi:
+
+```
+node makeMap.js
+```
+
+
 ## Mettre à jour la base de données avec osm2pgsql
 
 Voici la commande pour mettre à jour avec osm2pgsql. La table de sélection des tags OSM est dans le fichier `OpenArdenneMap.style`. Ce fichier est légèrement adapté du fichier style d'osm2pgsql par défaut.
