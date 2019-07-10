@@ -1,7 +1,7 @@
 Docker image for installing Mapnik and printing your map
 --------------------------------------------------------
 
-Thanks to Marc Ducobu, there is now a docker image for installing the **last** version of Mapnik to use with OpenArdenneMap. Running the very last version (the dev version) of Mapnik is not yet another developer caprice but rather useful since, in 2019, only the last version of Mapnik offers a sound support for SVG pattern rendering without rasterisation of the pattern. This is important for map printing.  
+Thanks to Marc Ducobu, there is now a docker image for installing the **last** version of Mapnik to use with OpenArdenneMap. Running the very last version (the dev version) of Mapnik is not yet another developer caprice but rather useful since, in 2019, only the last version of Mapnik offers a sound support for SVG pattern rendering without rasterisation of the pattern. This is crucial for map printing.  
 
 # Installation
 
@@ -14,7 +14,7 @@ $ docker-compose build
 This may take 1 hour (mainly due to the Mapnik compilation)!
 
 # Usage
-carto osm2pgsql/project.mml > osm2pgsql/OpenArdenneMap.xml && python makeMap.py
+
 ```bash
 $ docker-compose up
 ```
