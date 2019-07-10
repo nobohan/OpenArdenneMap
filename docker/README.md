@@ -24,12 +24,17 @@ In the `docker-compose.yml` file, there is the mapping of the volume between the
 To do so, open a bash terminal in the container with:
 
 ```bash
-$ docker-compose run tool /bin/bash
+$ docker-compose run mapnik /bin/bash
 ```
 
-Then, change directory to /home/OpenArdenneMap and you can run the commands in the OpenArdenneMap README for importing the data and make some maps.
+Then, change directory to /var/OpenArdenneMap and you can run the commands in the OpenArdenneMap README for importing the data and make some maps (THIS DOES NOT WORK AT THE MOMENT)
 
 
 # Future
 
-So far, this docker image does not install the database needed for making the maps, so you still need to install it on your machine. 
+So far, this docker image does not install the database needed for making the maps, so you still need to install it on your machine.
+
+List of things to install for a full docker machine
+* add a postgis container
+* install lastest carto
+* osm2pgsql

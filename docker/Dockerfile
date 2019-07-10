@@ -6,9 +6,9 @@ RUN apt-get update && apt-get install -y git make python clang libboost-dev \
 libicu-dev libz3-dev libfreetype6-dev libxml2-dev libharfbuzz-dev \
 libboost-system-dev libboost-filesystem-dev libboost-regex-dev \
 libboost-program-options-dev libproj-dev libgdal-dev \
-wget curl libboost-python-dev libboost-thread-dev 
+wget curl libboost-python-dev libboost-thread-dev
 
-# install pip 
+# install pip
 
 RUN mkdir /var/mapnik
 
@@ -31,3 +31,5 @@ RUN make && make install
 
 WORKDIR /var/mapnik/python-mapnik
 RUN python setup.py install
+
+WORKDIR /var
