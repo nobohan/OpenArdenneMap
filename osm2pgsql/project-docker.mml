@@ -1,0 +1,406 @@
+{
+  "Layer": [
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "host": "db",
+        "user": "osmpg",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "landuse",
+        "project": "OpenArdenneMap",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "( SELECT way, leaf_type, leaf_cycle, trees, produce, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon\n  ORDER BY way_area DESC\n) AS data",
+        "type": "postgis"
+      },
+      "geometry": "polygon",
+      "id": "landuse",
+      "name": "landuse",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
+        "file": "../contour/contour_anlier.shp",
+        "id": "contour",
+        "srs": "+proj=lcc +lat_1=51.16666723333333 +lat_2=49.8333339 +lat_0=90 +lon_0=4.367486666666666 +x_0=150000.013 +y_0=5400088.438 +ellps=intl +towgs84=-106.869,52.2978,-103.724,0.3366,-0.457,1.8422,-1.2747 +units=m +no_defs",
+        "type": "shape"
+      },
+      "geometry": "linestring",
+      "id": "contour",
+      "name": "contour",
+      "srs": "+proj=lcc +lat_1=51.16666723333333 +lat_2=49.8333339 +lat_0=90 +lon_0=4.367486666666666 +x_0=150000.013 +y_0=5400088.438 +ellps=intl +towgs84=-106.869,52.2978,-103.724,0.3366,-0.457,1.8422,-1.2747 +units=m +no_defs",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "host": "db",
+        "user": "osmpg",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "table": "( SELECT way, admin_level\n  FROM planet_osm_line\n  WHERE boundary IN ('administrative')\n) AS data",
+        "type": "postgis"
+      },
+      "geometry": "linestring",
+      "id": "boundaries",
+      "name": "boundaries",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "host": "db",
+        "user": "osmpg",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "table": "( SELECT way, waterway AS type\n  FROM planet_osm_line\n  WHERE waterway IN ('river', 'canal', 'stream', 'ditch', 'drain')\n) AS data",
+        "type": "postgis"
+      },
+      "geometry": "linestring",
+      "id": "waterway",
+      "name": "waterway",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "host": "db",
+        "user": "osmpg",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "water",
+        "project": "OpenArdenneMap",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "( SELECT way, way_area AS area\n  FROM planet_osm_polygon\n  WHERE \"natural\" IN ('water', 'pond')\n    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream')\n) AS data",
+        "type": "postgis"
+      },
+      "geometry": "polygon",
+      "id": "water",
+      "name": "water",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "host": "db",
+        "user": "osmpg",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "landuse_overlays",
+        "project": "OpenArdenneMap",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "( SELECT way, way_area AS area, COALESCE(leisure, \"natural\") AS type\n  FROM planet_osm_polygon\n  WHERE leisure = 'nature_reserve' OR \"natural\" = 'wetland'\n ORDER BY way_area DESC\n) AS data",
+        "type": "postgis"
+      },
+      "geometry": "polygon",
+      "id": "landuse_overlays",
+      "name": "landuse_overlays",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "host": "db",
+        "user": "osmpg",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "aeroway",
+        "project": "OpenArdenneMap",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "( SELECT way, aeroway AS type\n  FROM planet_osm_line\n  WHERE aeroway IN ('apron', 'runway', 'taxiway')\n) AS data",
+        "type": "postgis"
+      },
+      "geometry": "linestring",
+      "id": "aeroway",
+      "name": "aeroway",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "host": "db",
+        "user": "osmpg",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "tunnel",
+        "project": "OpenArdenneMap",
+        "srs": null,
+        "table": "( SELECT way, COALESCE(highway, railway) AS type, 0 AS bridge, access, render, layer, tracktype, 1 as tunnel,\n  CASE\n    WHEN highway IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN highway IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN highway IN ('service', 'track') THEN 'service'\n    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM (\n    SELECT *, '1_outline' AS render FROM planet_osm_line\n    WHERE tunnel NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '2_line' AS render FROM planet_osm_line\n    WHERE tunnel NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '3_inline' AS render FROM planet_osm_line\n    WHERE tunnel NOT IN ('', '0', 'no')\n  ) AS tunnels\n  ORDER BY layer ASC, render ASC\n) AS data",
+        "type": "postgis"
+      },
+      "geometry": "linestring",
+      "id": "tunnel",
+      "name": "tunnel",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "host": "db",
+        "user": "osmpg",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "table": "( SELECT way, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, tracktype, access, 'fill' AS render,\n  CASE\n    WHEN highway IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN highway IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN highway IN ('service', 'track') THEN 'service'\n    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL OR railway IS NOT NULL)\n    AND (tunnel IS NULL OR tunnel = 'no')\n    AND (bridge IS NULL OR bridge = 'no')\n  ORDER BY z_order\n) AS data",
+        "type": "postgis"
+      },
+      "geometry": "linestring",
+      "id": "roads",
+      "name": "roads",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "host": "db",
+        "user": "osmpg",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "bridge",
+        "project": "OpenArdenneMap",
+        "srs": null,
+        "table": "( SELECT way, COALESCE(highway, railway) AS type, 1 AS bridge, access, render, layer, tracktype, 0 as tunnel,\n  CASE\n    WHEN highway IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN highway IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN highway IN ('service', 'track') THEN 'service'\n    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM (\n    SELECT *, '1_outline' AS render FROM planet_osm_line\n    WHERE bridge NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '2_line' AS render FROM planet_osm_line\n    WHERE bridge NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '3_inline' AS render FROM planet_osm_line\n    WHERE bridge NOT IN ('', '0', 'no')\n  ) AS bridges\n  ORDER BY layer ASC, render ASC\n) AS data",
+        "type": "postgis"
+      },
+      "geometry": "linestring",
+      "id": "bridge",
+      "name": "bridge",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "host": "db",
+        "user": "osmpg",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "bridge_symbol",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "( SELECT way, highway, CAST(90+degrees(ST_Azimuth(ST_StartPoint(planet_osm_line.way), ST_EndPoint(planet_osm_line.way))) AS VARCHAR(255)) AS orientation \n FROM planet_osm_line WHERE bridge NOT IN ('', '0', 'no') \n AND highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') \n) AS data",
+        "type": "postgis"
+      },
+      "geometry": "linestring",
+      "id": "bridge_symbol",
+      "name": "bridge_symbol",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "host": "db",
+        "user": "osmpg",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "table": "( SELECT way, \"building\" AS type\n  FROM planet_osm_polygon\n  WHERE building NOT IN ('', '0','false', 'no')\n  ORDER BY ST_YMin(ST_Envelope(way)) DESC\n) AS data",
+        "type": "postgis"
+      },
+      "geometry": "polygon",
+      "id": "buildings",
+      "name": "buildings",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "host": "db",
+        "user": "osmpg",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "table": "( SELECT way, building, name, CAST(degrees(ST_Azimuth(ST_Centroid(l.way),ST_Centroid(ST_SimplifyPreserveTopology(l.way,100)))) AS VARCHAR(255)) AS orientation, area\n    FROM planet_osm_polygon\n AS l WHERE \"building\" IN ('church','chapel') \n) AS data",
+        "type": "postgis"
+      },
+      "geometry": "polygon",
+      "id": "rotated_buildings",
+      "name": "rotated_buildings",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "host": "db",
+        "user": "osmpg",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "linear_features",
+        "project": "OpenArdenneMap",
+        "srs": null,
+        "table": "( SELECT way, COALESCE(man_made, barrier, power, \"natural\") AS type FROM planet_osm_line)  AS data",
+        "type": "postgis"
+      },
+      "geometry": "linestring",
+      "id": "linear_features",
+      "name": "linear_features",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "host": "db",
+        "user": "osmpg",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "point_features",
+        "project": "OpenArdenneMap",
+        "srs": null,
+        "table": "( SELECT way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", bus, name \n  FROM planet_osm_point\n)  AS data",
+        "type": "postgis"
+      },
+      "geometry": "point",
+      "id": "point_features",
+      "name": "point_features",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "host": "db",
+        "user": "osmpg",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "pitch",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "( SELECT way, sport, \n CASE WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,100))) >= 5) THEN \n (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3))) \n   THEN CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3))) AS VARCHAR(255))\n  ELSE CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2))) AS VARCHAR(255)) \n END) END AS orientation, CASE WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,100))) >= 5) THEN \n (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3)))\n  THEN CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) AS INTEGER)\n  ELSE CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1),\n ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3)) AS INTEGER)\n END)\n END AS length \n FROM planet_osm_polygon AS l WHERE leisure = 'pitch' and sport IN ('soccer', 'tennis')) AS data",
+        "type": "postgis"
+      },
+      "geometry": "point",
+      "id": "pitch",
+      "name": "pitch",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "host": "db",
+        "user": "osmpg",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "place",
+        "project": "OpenArdenneMap",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "( SELECT way, place AS type, name, z_order, population\n  FROM planet_osm_point\n  WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality')\n  ORDER BY population DESC NULLS LAST\n) AS data",
+        "type": "postgis"
+      },
+      "geometry": "point",
+      "id": "place",
+      "name": "place",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "host": "db",
+        "user": "osmpg",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "landuse_label",
+        "project": "OpenArdenneMap",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "( SELECT COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type,\n name, way_area AS area,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE name IS NOT NULL\n    AND way && !bbox!\n    AND ST_IsValid(way)\n\n  UNION ALL\n\n  SELECT 'building' AS type, name, way_area AS area,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE name IS NOT NULL\n    AND building NOT IN ('', 'no', '0', 'false')\n    AND way && !bbox!\n    AND ST_IsValid(way)\n  ORDER BY area DESC\n) AS data",
+        "type": "postgis"
+      },
+      "geometry": "point",
+      "id": "area_label",
+      "name": "area_label",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "host": "db",
+        "user": "osmpg",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "waterway_label",
+        "project": "OpenArdenneMap",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "( SELECT way, waterway AS type, name\n  FROM planet_osm_line\n  WHERE waterway IN ('canal', 'river', 'stream') \n    AND name IS NOT NULL\n) AS data",
+        "type": "postgis"
+      },
+      "geometry": "linestring",
+      "id": "waterway_label",
+      "name": "waterway_label",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "host": "db",
+        "user": "osmpg",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "table": "( SELECT way, railway AS type, name, z_order \n  FROM planet_osm_point \n  WHERE railway IN ('station', 'level_crossing') \n  ORDER BY z_order NULLS LAST\n) AS DATA \n",
+        "type": "postgis"
+      },
+      "advanced": {},
+      "extent": [
+        -122.85990918289764,
+        47.38001179491598,
+        -121.86970418303555,
+        47.842970094896586
+      ],
+      "geometry": "point",
+      "id": "train_elements",
+      "name": "train_elements",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913"
+    }
+  ],
+  "Stylesheet": [
+    "../cartoCSS/scales.mss",
+    "../cartoCSS/palette.mss",
+    "../cartoCSS/base.mss",
+    "../cartoCSS/lines.mss",
+    "../cartoCSS/labels.mss",
+    "../cartoCSS/points.mss"
+  ],
+  "attribution": "Data \u00a9 OpenStreetMap (and) contributors, ODbL",
+  "bounds": [
+    -180,
+    -85.0511,
+    180,
+    85.0511
+  ],
+  "center": [
+    0,
+    20,
+    4
+  ],
+  "description": "",
+  "format": "png",
+  "interactivity": false,
+  "maxzoom": 18,
+  "minzoom": 0,
+  "name": "OpenArdenneMap",
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+}

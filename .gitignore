@@ -1,6 +1,7 @@
 *.pdf
 *.cache
 *.osm
+*.xml
 /contour/
 /osm-files/
 /.ropeproject/

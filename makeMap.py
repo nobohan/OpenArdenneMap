@@ -48,7 +48,4 @@ def make_map(map_output, scale=20000):
     render_to_file(m, map_output)
 
 
-
-make_map('OAM_5000.pdf', 5000)
 make_map('OAM_20000.pdf', 20000)
-make_map('OAM_100000.pdf', 100000)
