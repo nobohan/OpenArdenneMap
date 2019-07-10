@@ -6,7 +6,8 @@ RUN apt-get update && apt-get install -y git make python clang libboost-dev \
 libicu-dev libz3-dev libfreetype6-dev libxml2-dev libharfbuzz-dev \
 libboost-system-dev libboost-filesystem-dev libboost-regex-dev \
 libboost-program-options-dev libproj-dev libgdal-dev \
-wget curl libboost-python-dev libboost-thread-dev
+wget curl libboost-python-dev libboost-thread-dev \
+libcairo2-dev osm2pgsql
 
 # install pip
 
@@ -33,3 +34,10 @@ WORKDIR /var/mapnik/python-mapnik
 RUN python setup.py install
 
 WORKDIR /var
+
+# Install carto (nvm -> npm -> carto)
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+
+RUN /bin/bash -c 'source "/root/.nvm/nvm.sh" ;\
+  nvm install node ;\
+  npm install carto -g'

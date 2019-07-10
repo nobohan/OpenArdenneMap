@@ -5,3 +5,10 @@ services:
     build: .
     volumes:
        - ..:/var/OpenArdenneMap
+  db:
+    image: mdillon/postgis
+    ports:
+      - "5439:5432"
+    environment:
+      - POSTGRES_USER=osmpg
+      - POSTGRES_DB=osmpg_db

@@ -3,6 +3,7 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "host": "localhost",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "landuse",
@@ -49,6 +50,7 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "host": "localhost",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "key_field": "",
@@ -65,6 +67,7 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "host": "localhost",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "key_field": "",
@@ -80,6 +83,7 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "host": "localhost",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "water",
@@ -99,6 +103,7 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "host": "localhost",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "landuse_overlays",
@@ -132,6 +137,7 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "host": "localhost",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "key_field": "",
@@ -147,6 +153,7 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "host": "localhost",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "aeroway",
@@ -166,6 +173,7 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "host": "localhost",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "key_field": "",
@@ -185,6 +193,7 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "host": "localhost",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "tunnel",
@@ -204,6 +213,7 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "host": "localhost",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "key_field": "",
@@ -220,6 +230,7 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "host": "localhost",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "bridge",
@@ -239,6 +250,7 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "host": "localhost",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "bridge_symbol",
@@ -256,6 +268,7 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "host": "localhost",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "table": "( SELECT way, building, osm_id, name, CAST(degrees(ST_Azimuth(ST_Centroid(l.way),ST_Centroid(ST_SimplifyPreserveTopology(l.way,100)))) AS VARCHAR(255)) AS orientation, area\n    FROM planet_osm_polygon\n AS l WHERE \"building\" IN ('church','chapel') \n) AS data",
@@ -271,6 +284,7 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "host": "localhost",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "linear_features",
@@ -289,6 +303,7 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "host": "localhost",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "point_features",
@@ -308,6 +323,7 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "host": "localhost",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "pitch",
@@ -325,6 +341,7 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "host": "localhost",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "landuse_label",
@@ -344,6 +361,7 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "host": "localhost",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "waterway_label",
@@ -363,6 +381,7 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "host": "localhost",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "street_label",
@@ -402,6 +421,7 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "host": "localhost",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "place",
@@ -421,6 +441,7 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "host": "localhost",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "key_field": "",
@@ -443,6 +464,7 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "host": "localhost",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "zoo",

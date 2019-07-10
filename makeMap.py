@@ -52,10 +52,14 @@ def make_map_bbox(map_output, xmin, ymin, xmax, ymax, scale=6000):
     # Compute the scale
     delta_x = xmax-xmin
     delta_y = ymax-ymin
-    ratio = delta_x/delta_y
+    print(delta_x)
+    print(delta_y)
+    ratio = delta_x/float(delta_y)
 
     f = delta_x / (0.295*scale/math.cos(LATITUDE*2*math.pi/360))
     map_x = int(f*4600)  # 4600 is the number of pixels for an A4 length
+    print(map_x)
+    print(ratio)
     map_y = int(map_x/ratio)
     m = Map(map_x, map_y)
     load_map(m, MAPNIK_FILE)
@@ -68,11 +72,6 @@ def make_map_bbox(map_output, xmin, ymin, xmax, ymax, scale=6000):
 
     render_to_file(m, map_output)
 
-# make_map('zoom_brugelette.pdf', 6000, 'A4', 428900, 6550200)
-# make_map('zoom_cambron.pdf', 6000, 'A4', 431731, 6548724)
-# make_map('zoom_gages.pdf', 6000, 'A4', 433089, 6551963)
-# make_map('zoom_attre.pdf', 6000, 'A4', 427241, 6551797)
-# make_map('zoom_mevergnies.pdf', 6000, 'A4', 428618, 6551557)
 make_map('OAM_brugelette_full_A1.pdf', 12500, 'A1')
 make_map('OAM_brugelette_full_A4.pdf', 12500, 'A4')
 
