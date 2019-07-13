@@ -49,7 +49,7 @@
   text-line-spacing: 1;
   text-fill: @road_text;
   text-halo-fill: #ffffff;
-  text-halo-radius: 6;
+  text-halo-radius: 2;
   text-allow-overlap: true;
   text-size: @text_size_s;
   text-line-spacing: 25;
@@ -267,24 +267,24 @@
   [type='park'] {
     text-face-name: @sans_lt_italic;
     text-fill: @green;
-    text-halo-fill: lighten(@park, 10%);
+    text-halo-fill: @park;
   }
   [type='tourism'], [type='industrial'] {
     text-name: '[name]';
   }
   [type='hospital'] {
     text-fill: @black;
-    text-halo-fill: lighten(@hospital, 10%);
+    text-halo-fill: @hospital;
   }
   [type='college'],
   [type='university'] {
     text-fill: @black;
-    text-halo-fill: lighten(@hospital, 10%);
+    text-halo-fill: @hospital;
   }
   [type='water'] {
     text-name: '[name]';
-    text-fill: @darkblue;
-    text-halo-fill: lighten(@water, 10%);
+    text-fill: @water;
+    text-halo-fill: @purewhite;
     text-halo-radius: 3;
   }
   [type='school'] {
@@ -303,7 +303,7 @@
     text-face-name: @sans_lt_italic;
     /*text-size: @text_size_l; /*[area]/100000*/
     /*text-size: 100/([area]*[area]);*/
-    text-fill: lighten(@black, 10%);
+    text-fill: @black;
     text-transform: uppercase;
     text-character-spacing: 10;
     text-line-spacing: 150;
@@ -334,8 +334,8 @@
   [zoom >= 20] { text-size: @text_size_m*@z20_label; }
   text-name: '[name]';
   text-face-name: @sans;
-  text-fill: @darkblue;
-  text-halo-fill: lighten(@water, 10%);
+  text-fill: @water;
+  text-halo-fill: @purewhite;
   text-halo-radius: 3;
   text-placement: line;
   text-repeat-distance: 1200;

@@ -24,7 +24,7 @@
     line-cap: butt;
   }
   line-join: round;
-  line-color: @standard_case;
+  line-color: @black;
   [bridge=1] { line-color: @standard_case * 0.8; }
   [type='motorway'],
   [type='motorway_link'] {
@@ -86,7 +86,7 @@
     }
   }
   [stylegroup='railway'] {
-    line-color: #111;
+    line-color: @black;
     [bridge=1] {
       [zoom <= 10] { line-width: (@large + @outline)*@z10_road; }
       [zoom = 11] { line-width: (@large + @outline)*@z11_road; }
@@ -382,8 +382,8 @@
     [zoom = 14] { line-width: @small*@z14_road; }
     [zoom = 15] { line-width: @small*@z15_road; }
     [zoom = 16] { line-width: @small*@z16_road; }
-    [zoom = 17] { line-width: @small*@z17_road; }
-    [zoom = 18] { line-width: @small*@z18_road; }
+    [zoom = 17] { line-width: @small*@z17_road/4; }
+    [zoom = 18] { line-width: @small*@z18_road/4; }
     [zoom = 19] { line-width: @small*@z19_road; }
     [zoom >= 20] { line-width: @small*@z20_road; }
     line-dasharray: 15, 15;
@@ -561,7 +561,7 @@
 /* ================================================================== */
 
 #sidewalk::right {
-  line-color: darken(@green, 40%);
+  line-color: @yellow;
   /*line-dasharray: 40, 15;*/
   line-join: round;
   line-cap: butt;
@@ -676,7 +676,7 @@
 }
 
 #sidewalk::left {
-  line-color: darken(@green, 40%);
+  line-color: @yellow;
   /*line-dasharray: 40, 15;*/
   line-join: round;
   line-cap: butt;
@@ -810,7 +810,7 @@
     [zoom = 18] { line-width: @huge*@z18; }
     [zoom = 19] { line-width: @huge*@z19; }
     [zoom >= 20] { line-width: @huge*@z20; }
-    line-color: @darkgray;
+    line-color: @black;
   }
   [type='taxiway'] {
     [zoom <= 10] { line-width: @tiny*@z10; }
@@ -846,7 +846,7 @@
     [zoom = 18] { line-width: @tiny*@z18; }
     [zoom = 19] { line-width: @tiny*@z19; }
     [zoom >= 20] { line-width: @tiny*@z20; }
-    line-color: darken(@green,30%);
+    line-color: @green;
     [zoom <= 17] {
       line-width: 3;
       line-dasharray: 1,6;
@@ -890,7 +890,7 @@
     [zoom = 19] { line-width: @outline*@z19; }
     [zoom >= 20] { line-width: @outline*@z20; }
     line-dasharray: 25, 15;
-    line-color: @darkgray;
+    line-color: @black;
   }
 }
 
@@ -919,7 +919,7 @@
 }
 
 #boundaries::offset [admin_level='8'][name='Brugelette'] {
-  line-color: @gray;
+  line-color: @black;
   line-offset: 20;
   line-width: 34;
 }

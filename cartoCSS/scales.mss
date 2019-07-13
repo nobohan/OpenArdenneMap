@@ -68,7 +68,7 @@
 @contour_minor_line_width: 1;
 @contour_major_line_width: 1.5;
 
-@landuse_line_width: 0.5;
+@landuse_line_width: 2;
 
 @building_line_width: 0.4;
 
@@ -84,13 +84,13 @@
 
 /* Road width variables */
 @huge: 16;
-@large: 10;
-@medium: 7;
-@small: 5;
-@mini: 4;
-@tiny: 3;
+@large: 7;
+@medium: 5;
+@small: 4;
+@mini: 3;
+@tiny: 2;
 
-@outline: 4;
+@outline: 2;
 
 @bridge_marker: 12;
 

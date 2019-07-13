@@ -39,39 +39,34 @@ Map { font-directory: url(../fonts); }
 /* ================================================================== */
 
 @purewhite:         #ffffff;
-@white:             #fcfcf4;
-@black:             #111111;
-@darkgray:          #444444;
-@gray:              #bbbbbb;
-@lightgray:         #dddddd;
+@black:             @marron;
+@green:             #00694e;
+@blue:              #0072ce;
+@yellow:            #f6eb61;
+@jaunepale:		#f1e6b2;
+@marron:		#5e4b3c;
+@rouge:			#c63527;
 
-@red:               #e8889f; /*#E55779; /*#db794c;*/
-@green:             #acefc7; /*#3d9142;   #5ADD84*/
-@blue:              #c4c4ef; /*#aeaeef;*/
-@darkblue:          #7d7ded;
-@yellow:            #fce232;
-@brown:             #a34921;
-@violet:            #bc2ff6;
-
-@contour:           #bc1e44; /*#b06435;*/
+@contour:           @marron;
 
 /* ================================================================== */
 /* LANDUSE & LANDCOVER COLORS
 /* ================================================================== */
 
-@land:              @purewhite;
+@land:              @yellow;
 @water:             @blue;
 @grass:             @purewhite;
 @park:              @purewhite;
 @cemetery:          @purewhite;
 @wooded:            @green;
-@agriculture:       @purewhite;
-@farmyard:          @purewhite;
-@building:          @darkgray;
+@agriculture:       @yellow;
+@farmyard:          @yellow;
+@farmland:          @yellow;
+@building:          @marron;
 @hospital:          @purewhite;
 @school:            @purewhite;
 @sports:            @purewhite;
-@residential:       @lightgray;
+@residential:       @jaunepale;
 @commercial:        @purewhite;
 @industrial:        @purewhite;
 @parking:           @purewhite;
@@ -89,35 +84,35 @@ Map { font-directory: url(../fonts); }
  *         inner fill (inline).
  */
 
-@motorway_line:     @black;
-@motorway_fill:     @yellow;
+@motorway_line:     @rouge;
+@motorway_fill:     @purewhite;
 @motorway_case:     @motorway_line * 0.9;
 
-@trunk_line:        @black;
-@trunk_fill:        @yellow;
+@trunk_line:        @rouge;
+@trunk_fill:        @purewhite;
 @trunk_case:        @trunk_line * 0.9;
 
-@primary_line:      @black;
-@primary_fill:      @yellow;
+@primary_line:      @rouge;
+@primary_fill:      @purewhite;
 @primary_case:      @primary_line * 0.9;
 
-@secondary_line:    @black;
-@secondary_fill:    @yellow;
+@secondary_line:    @rouge;
+@secondary_fill:    @purewhite;
 @secondary_case:    @secondary_line * 0.9;
 
-@standard_line:     @black;
-@standard_fill:     @white;
+@standard_line:     @rouge;
+@standard_fill:     @purewhite;
 @standard_case:     @standard_line * 0.9;
 
-@pedestrian_line:   @black;
-@pedestrian_fill:   @white;
+@pedestrian_line:   @rouge;
+@pedestrian_fill:   @purewhite;
 @pedestrian_case:   @land;
 
-@cycle_line:        @black;
-@cycle_fill:        @white;
+@cycle_line:        @rouge;
+@cycle_fill:        @purewhite;
 @cycle_case:        @land;
 
-@rail_line:         @black;
+@rail_line:         @rouge;
 @rail_fill:         #fff;
 @rail_case:         @land;
 
@@ -135,7 +130,7 @@ Map { font-directory: url(../fonts); }
 
 /* We set up a default halo color for places so you can edit them all
    at once or override each individually. */
-@place_halo:        fadeout(#fff,25%);
+@place_halo:        #fff;
 
 @country_text:      @black;
 @country_halo:      @place_halo;

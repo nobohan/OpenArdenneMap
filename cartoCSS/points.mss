@@ -85,7 +85,7 @@
         text-name:"'Font.'";
         text-face-name: @sans;
         text-placement: point;
-        text-fill: @darkblue;
+        text-fill: @water;
         text-character-spacing: 2;
         text-line-spacing: 2;
         text-dy: -16;
