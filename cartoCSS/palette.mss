@@ -39,32 +39,34 @@ Map { font-directory: url(../fonts); }
 /* ================================================================== */
 
 @purewhite:         #ffffff;
-@black:             @marron;
-@green:             #00694e;
+@black:             @vertdark;
+@green:             #3e7d4a;
 @blue:              #0072ce;
-@yellow:            #f2a900;
+@yellow:            #fdd757;
 @jaunepale:		#f3dd6d;
 @marron:		#5e4b3c;
 @rouge:			#c63527;
+@rose: 			#ffc7dc;
+@vertdark: 		#005844;
 
-@contour:           @marron;
+@contour:           @vertdark;
 
 /* ================================================================== */
 /* LANDUSE & LANDCOVER COLORS
 /* ================================================================== */
 
-@land:              @yellow;
+@land:              @rose;
 @water:             @blue;
 @grass:             @purewhite;
 @park:              @purewhite;
 @cemetery:          @purewhite;
 @wooded:            @green;
-@agriculture:       @jaunepale;
-@farmyard:          @jaunepale;
-@farmland:          @jaunepale;
-@building:          @marron;
-@hospital:          @purewhite;
-@school:            @purewhite;
+@agriculture:       @rose;
+@farmyard:          @rose;
+@farmland:          @rose;
+@building:          @rouge;
+@hospital:          @rouge;
+@school:            @rouge;
 @sports:            @purewhite;
 @residential:       @yellow;
 @commercial:        @purewhite;
