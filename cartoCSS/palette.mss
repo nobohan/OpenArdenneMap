@@ -42,8 +42,8 @@ Map { font-directory: url(../fonts); }
 @black:             @marron;
 @green:             #00694e;
 @blue:              #0072ce;
-@yellow:            #f6eb61;
-@jaunepale:		#f1e6b2;
+@yellow:            #f2a900;
+@jaunepale:		#f3dd6d;
 @marron:		#5e4b3c;
 @rouge:			#c63527;
 
@@ -59,14 +59,14 @@ Map { font-directory: url(../fonts); }
 @park:              @purewhite;
 @cemetery:          @purewhite;
 @wooded:            @green;
-@agriculture:       @yellow;
-@farmyard:          @yellow;
-@farmland:          @yellow;
+@agriculture:       @jaunepale;
+@farmyard:          @jaunepale;
+@farmland:          @jaunepale;
 @building:          @marron;
 @hospital:          @purewhite;
 @school:            @purewhite;
 @sports:            @purewhite;
-@residential:       @jaunepale;
+@residential:       @yellow;
 @commercial:        @purewhite;
 @industrial:        @purewhite;
 @parking:           @purewhite;

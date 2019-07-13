@@ -124,23 +124,18 @@
 
   [stylegroup='noauto'] {
     line-cap: butt;
-    [zoom <= 10] { line-width: @tiny*@z10_road; }
-    [zoom = 11] { line-width: @tiny*@z11_road; }
-    [zoom = 12] { line-width: @tiny*@z12_road; }
-    [zoom = 13] { line-width: @tiny*@z13_road; }
-    [zoom = 14] { line-width: @tiny*@z14_road; }
-    [zoom = 15] { line-width: @tiny*@z15_road; }
-    [zoom = 16] { line-width: @tiny*@z16_road; }
-    [zoom = 17] { line-width: @tiny*@z17_road; }
-    [zoom = 18] { line-width: @tiny*@z18_road; }
-    [zoom = 19] { line-width: @tiny*@z19_road; }
-    [zoom >= 20] { line-width: @tiny*@z20_road; }
-    [zoom <= 17]{
-      line-dasharray: 10, 8;
-    }
-    [zoom > 17]{
-      line-dasharray: 20, 16;
-    }
+    [zoom <= 10] { line-width: (@minus+@outline)*@z10_road; }
+    [zoom = 11] { line-width: (@minus+@outline)*@z11_road; }
+    [zoom = 12] { line-width: (@minus+@outline)*@z12_road; }
+    [zoom = 13] { line-width: (@minus+@outline)*@z13_road; }
+    [zoom = 14] { line-width: (@minus+@outline)*@z14_road; }
+    [zoom = 15] { line-width: (@minus+@outline)*@z15_road; }
+    [zoom = 16] { line-width: (@minus+@outline)*@z16_road; }
+    [zoom = 17] { line-width: (@minus+@outline)*@z17_road; }
+    [zoom = 18] { line-width: (@minus+@outline)*@z18_road; }
+    [zoom = 19] { line-width: (@minus+@outline)*@z19_road; }
+    [zoom >= 20] { line-width: (@minus+@outline)*@z20_road; }
+
     line-color: @black;
   }
 
@@ -372,7 +367,20 @@
     [zoom = 19] { line-width: @medium*@z19_road; }
     [zoom >= 20] { line-width: @medium*@z20_road; }
   }
-  [stylegroup='noauto'] { line-width: 0; }
+  [stylegroup='noauto'] {
+    [zoom <= 10] { line-width: @minus*@z10_road; }
+    [zoom = 11] { line-width: @tiny*@z11_road; }
+    [zoom = 12] { line-width: @tiny*@z12_road; }
+    [zoom = 13] { line-width: @tiny*@z13_road; }
+    [zoom = 14] { line-width: @tiny*@z14_road; }
+    [zoom = 15] { line-width: @tiny*@z15_road; }
+    [zoom = 16] { line-width: @tiny*@z16_road; }
+    [zoom = 17] { line-width: @minus*@z17_road; }
+    [zoom = 18] { line-width: @minus*@z18_road; }
+    [zoom = 19] { line-width: @tiny*@z19_road; }
+    [zoom >= 20] { line-width: @tiny*@z20_road; }
+    line-color: @yellow;
+  }
   [type='cutline'] { line-width: 0; }
   [stylegroup='railway'] {
     [zoom <= 10] { line-width: @small*@z10_road; }

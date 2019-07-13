@@ -89,6 +89,7 @@
 @small: 4;
 @mini: 3;
 @tiny: 2;
+@minus: 1.2;
 
 @outline: 2;
 
