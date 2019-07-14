@@ -241,11 +241,10 @@
       [zoom = 14] { line-width: (@mini + @outline)*@z14_road; }
       [zoom = 15] { line-width: (@mini + @outline)*@z15_road; }
       [zoom = 16] { line-width: (@mini + @outline)*@z16_road; }
-      [zoom = 17] { line-width: (@mini + @outline)*@z17_road; }
-      [zoom = 18] { line-width: (@mini + @outline)*@z18_road; }
+      [zoom = 17] { line-width: @tiny + @outline; }
+      [zoom = 18] { line-width: @tiny + @outline; }
       [zoom = 19] { line-width: (@mini + @outline)*@z19_road; }
       [zoom >= 20] { line-width: (@mini + @outline)*@z20_road; }
-      line-dasharray: 8, 8;
     }
     [tracktype='grade5'] {
       [zoom <= 10] { line-width: (@mini + @outline)*@z10_road; }
@@ -445,8 +444,8 @@
       [zoom = 14] { line-width: @mini*@z14_road; }
       [zoom = 15] { line-width: @mini*@z15_road; }
       [zoom = 16] { line-width: @mini*@z16_road; }
-      [zoom = 17] { line-width: @mini*@z17_road; }
-      [zoom = 18] { line-width: @mini*@z18_road; }
+      [zoom = 17] { line-width: @tiny; }
+      [zoom = 18] { line-width: @tiny; }
       [zoom = 19] { line-width: @mini*@z19_road; }
       [zoom >= 20] { line-width: @mini*@z20_road; }
     }

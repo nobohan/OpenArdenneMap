@@ -106,6 +106,7 @@ Map { background-color: @rose; }
   [type='commercial']    { polygon-fill: @industrial; }
   [type='common']        { polygon-fill: @park; }
   [type='forest'], [type='wood'] {
+    polygon-fill: @green;
     [zoom <= 10] { line-width: @landuse_line_width*@z10;}
     [zoom = 11] { line-width: @landuse_line_width*@z11; }
     [zoom = 12] { line-width: @landuse_line_width*@z12; }
@@ -117,20 +118,13 @@ Map { background-color: @rose; }
     [zoom = 18] { line-width: 2; }
     [zoom = 19] { line-width: @landuse_line_width*@z19; }
     [zoom >= 20] { line-width: @landuse_line_width*@z20; }
-    polygon-fill: @green;
-    line-color: @black;
 
+    line-color: @black;
     [zoom <= 14] { polygon-pattern-file: url(../img/forest_z14.svg); }
     [zoom > 14] { polygon-pattern-file: url(../img/forest.svg); }
     [leaf_type='broadleaved'] {
       [zoom <= 14] { polygon-pattern-file: url(../img/forest_bl_z14.svg); }
-      [zoom > 14] {
-        polygon-pattern-file: url(../img/forest_bl.svg);
-        [area > 50000] {
-          line-pattern-file: url(../img/forest-border.svg);
-          line-pattern-offset: -10;
-        }
-      }
+      [zoom > 14] { polygon-pattern-file: url(../img/forest_bl.svg); }
     }
     [leaf_type='needleleaved'] {
       [zoom <= 14] { polygon-pattern-file: url(../img/forest_nl_z14.svg); }
@@ -149,18 +143,18 @@ Map { background-color: @rose; }
     [zoom = 15] { line-width: @landuse_line_width*@z15*2; }
     [zoom = 16] { line-width: @landuse_line_width*@z16*2; }
     [zoom = 17] { line-width: 2; }
-    [zoom = 18] { line-width: 2*2; }
+    [zoom = 18] { line-width: 2; }
     [zoom = 19] { line-width: @landuse_line_width*@z19*2; }
     [zoom >= 20] { line-width: @landuse_line_width*@z20*2; }
     polygon-pattern-file: url(../img/industrial.svg);
     line-color: @black;
   }
-  [type='park']          { polygon-fill: @park; }
+  [type='park']          { polygon-fill: @park; line-color: @black; line-width: 2; }
   [type='parking']       { polygon-fill: @parking; }
   [type='pedestrian']    { polygon-fill: @pedestrian_fill; }
   [type='pitch']         { polygon-fill: @sports; }
   [type='residential']   { polygon-fill: @residential; line-color: @black; line-width: 2; }
-  [type='scrub'], [type='heath'] { polygon-pattern-file: url(../img/heath.svg) }
+  [type='scrub'], [type='heath'] { polygon-pattern-file: url(../img/heath.svg); line-color: @black; line-width: 2; }
   [type='sports_center'] { polygon-fill: @sports; }
   [type='stadium']       { polygon-fill: @sports; }
   [type='university']    { polygon-fill: @school; }
@@ -179,7 +173,7 @@ Map { background-color: @rose; }
     polygon-pattern-file: url(../img/meadow.svg);
     line-color: @black;
   }
-  [type='farmland']      { polygon-fill: @agriculture; }
+  [type='farmland']      { polygon-fill: @agriculture; line-color: @black; line-width: 2;}
   [type='orchard']       {
     [zoom <= 10] { line-width: @landuse_line_width*@z10; }
     [zoom = 11] { line-width: @landuse_line_width*@z11; }
@@ -196,8 +190,8 @@ Map { background-color: @rose; }
     polygon-pattern-file: url(../img/orchard.svg);
     line-color: @black;
   }
-  [type='farmyard']      { line-color: @farmyard; }
-  [type='school']        { polygon-fill: @school; }
+  [type='farmyard']      { line-color: @farmyard; line-color: @black; line-width: 2; }
+  [type='school']        { polygon-fill: @school; line-color: @black; line-width: 2; }
   [trees='christmas_trees'], [produce='christmas_trees'] {
     [zoom <= 10] { line-width: @landuse_line_width*@z10; }
     [zoom = 11] { line-width: @landuse_line_width*@z11; }
@@ -247,13 +241,14 @@ Map { background-color: @rose; }
     polygon-fill: @wooded;
   }
   [type='wetland'] {
-    polygon-pattern-file: url(../img/wetland.svg);
+    polygon-pattern-file: url(../img/wetland.svg); line-color: @black; line-width: 2;
   }
 }
 
 
 /* ---- BUILDINGS ---- */
 #buildings {
+  polygon-fill: @building;
   [zoom <= 10] { line-width: @building_line_width*@z10; }
   [zoom = 11] { line-width: @building_line_width*@z11; }
   [zoom = 12] { line-width: @building_line_width*@z12; }
@@ -265,7 +260,7 @@ Map { background-color: @rose; }
   [zoom = 18] { line-width: 2; }
   [zoom = 19] { line-width: @building_line_width*@z19; }
   [zoom >= 20] { line-width: @building_line_width*@z20; }
-  polygon-fill: @building;
+
   line-color: @black;
   [zoom <= 17] {
     [type='church'], [type='chapel']{
@@ -351,7 +346,7 @@ Map { background-color: @rose; }
 
 #water {
   polygon-fill: @water;
-  line-color: @water;
+  line-color: @black; line-width: 2;
 }
 
 /* ================================================================== */
@@ -360,7 +355,7 @@ Map { background-color: @rose; }
 
 
 #waterway { [type='river'], [type='stream'], [type='canal'], [type='ditch'], [type='drain'] {
-    line-color: @water;
+    line-color: @black;
     [type='river'] {
       [zoom <= 10] { line-width: @river_line_width*@z10; }
       [zoom = 11] { line-width: @river_line_width*@z11; }
@@ -369,8 +364,8 @@ Map { background-color: @rose; }
       [zoom = 14] { line-width: @river_line_width*@z14; }
       [zoom = 15] { line-width: @river_line_width*@z15; }
       [zoom = 16] { line-width: @river_line_width*@z16; }
-      [zoom = 17] { line-width: @river_line_width*@z17; }
-      [zoom = 18] { line-width: @river_line_width*@z18; }
+      [zoom = 17] { line-width: 12; }
+      [zoom = 18] { line-width: 12; }
       [zoom = 19] { line-width: @river_line_width*@z19; }
       [zoom >= 20] { line-width: @river_line_width*@z20; }
       line-cap: round;
@@ -384,8 +379,8 @@ Map { background-color: @rose; }
       [zoom = 14] { line-width: @stream_line_width*@z14; }
       [zoom = 15] { line-width: @stream_line_width*@z15; }
       [zoom = 16] { line-width: @stream_line_width*@z16; }
-      [zoom = 17] { line-width: @stream_line_width*@z17; }
-      [zoom = 18] { line-width: @stream_line_width*@z18; }
+      [zoom = 17] { line-width: 2; }
+      [zoom = 18] { line-width: 2; }
       [zoom = 19] { line-width: @stream_line_width*@z19; }
       [zoom >= 20] { line-width: @stream_line_width*@z20; }
     }
@@ -397,8 +392,8 @@ Map { background-color: @rose; }
       [zoom = 14] { line-width: @river_line_width*@z14/2; }
       [zoom = 15] { line-width: @river_line_width*@z15/2; }
       [zoom = 16] { line-width: @river_line_width*@z16/2; }
-      [zoom = 17] { line-width: @river_line_width*@z17/2; }
-      [zoom = 18] { line-width: @river_line_width*@z18/2; }
+      [zoom = 17] { line-width: 2; }
+      [zoom = 18] { line-width: 2; }
       [zoom = 19] { line-width: @river_line_width*@z19/2; }
       [zoom >= 20] { line-width: @river_line_width*@z20/2; }
     }
@@ -424,8 +419,8 @@ Map { background-color: @rose; }
   [zoom = 14] { line-width: @river_line_width*@z14 * 0.7; }
   [zoom = 15] { line-width: @river_line_width*@z15 * 0.7; }
   [zoom = 16] { line-width: @river_line_width*@z16 * 0.7; }
-  [zoom = 17] { line-width: @river_line_width*@z17 * 0.7; }
-  [zoom = 18] { line-width: @river_line_width*@z18 * 0.7; }
+  [zoom = 17] { line-width: 8; }
+  [zoom = 18] { line-width: 8; }
   [zoom = 19] { line-width: @river_line_width*@z19 * 0.7; }
   [zoom >= 20] { line-width: @river_line_width*@z20 * 0.7; }
   line-color: @water;
