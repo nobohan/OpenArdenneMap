@@ -66,8 +66,8 @@ Map { font-directory: url(../fonts); }
 @farmland:          @rose;
 @building:          @rouge;
 @hospital:          @rouge;
-@school:            @rouge;
-@sports:            @purewhite;
+@school:            @rose;
+@sports:            @rose;
 @residential:       @yellow;
 @commercial:        @purewhite;
 @industrial:        @purewhite;
