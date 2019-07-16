@@ -52,29 +52,35 @@ Map { background-color: @white; }
   [type='university']    { polygon-fill: @school; }
   [type='meadow']        { polygon-pattern-file:url(../img/meadow.svg); line-width:0.5; line-color: @gray; }
   [type='farmland']      {
-      [orientation < 10 ] { polygon-pattern-file: url(../img/pattern-40.svg); }
-      [orientation < 20 ] { polygon-pattern-file: url(../img/pattern-20.svg); }
-      [orientation < 40 ] { polygon-pattern-file: url(../img/pattern-40.svg); }
-      [orientation < 60 ] { polygon-pattern-file: url(../img/pattern-60.svg); }
-      [orientation < 80 ] { polygon-pattern-file: url(../img/pattern-80.svg); }
-      [orientation < 90 ] { polygon-pattern-file: url(../img/pattern-90.svg); }
-      [orientation < 100 ] { polygon-pattern-file: url(../img/pattern-40.svg); }
-      [orientation < 110 ] { polygon-pattern-file: url(../img/pattern-20.svg); }
-      [orientation < 130 ] { polygon-pattern-file: url(../img/pattern-40.svg); }
-      [orientation < 150 ] { polygon-pattern-file: url(../img/pattern-60.svg); }
-      [orientation < 170 ] { polygon-pattern-file: url(../img/pattern-80.svg); }
-      [orientation < 180 ] { polygon-pattern-file: url(../img/pattern-90.svg); }
-      polygon-pattern-file: url(../img/pattern-40.svg);
-      text-name: [orientation];
-      text-face-name: @sans;
-      text-size: @text_size_s;
-      text-character-spacing: 1;
-      text-halo-radius: 3;
-      text-wrap-width: 30;
-      text-fill: @black;
-      text-halo-fill: #fff;
-      text-face-name: @sans_lt_italic;
-      text-fill: @green;
+      [orientation < 10 ] { polygon-pattern-file: url(../img/pattern.svg); }
+      [orientation > 10 ] { polygon-pattern-file: url(../img/pattern-10.svg); }
+      [orientation > 20 ] { polygon-pattern-file: url(../img/pattern-20.svg); }
+      [orientation > 40 ] { polygon-pattern-file: url(../img/pattern-40.svg); }
+      [orientation > 60 ] { polygon-pattern-file: url(../img/pattern-60.svg); }
+      [orientation > 80 ] { polygon-pattern-file: url(../img/pattern-80.svg); }
+      [orientation > 90 ] { polygon-pattern-file: url(../img/pattern-90.svg); }
+      [orientation > 110 ] { polygon-pattern-file: url(../img/pattern-20.svg); polygon-pattern-transform: "rotate(90)"}
+      [orientation > 130 ] { polygon-pattern-file: url(../img/pattern-40.svg); polygon-pattern-transform: "rotate(90)"}
+      [orientation > 150 ] { polygon-pattern-file: url(../img/pattern-60.svg); polygon-pattern-transform: "rotate(90)"}
+      [orientation > 170 ] { polygon-pattern-file: url(../img/pattern-80.svg); polygon-pattern-transform: "rotate(90)"}
+      [orientation > 180 ] { polygon-pattern-file: url(../img/pattern-90.svg); polygon-pattern-transform: "rotate(90)"}
+      [orientation > 200 ] { polygon-pattern-file: url(../img/pattern-20.svg); }
+      [orientation > 220 ] { polygon-pattern-file: url(../img/pattern-40.svg); }
+      [orientation > 240 ] { polygon-pattern-file: url(../img/pattern-60.svg); }
+      [orientation > 260 ] { polygon-pattern-file: url(../img/pattern-80.svg); }
+      [orientation > 270 ] { polygon-pattern-file: url(../img/pattern-90.svg); }
+      [orientation > 280 ] { polygon-pattern-file: url(../img/pattern-20.svg); polygon-pattern-transform: "rotate(90)"}
+      [orientation > 310 ] { polygon-pattern-file: url(../img/pattern-40.svg); polygon-pattern-transform: "rotate(90)"}
+      [orientation > 330 ] { polygon-pattern-file: url(../img/pattern-60.svg); polygon-pattern-transform: "rotate(90)"}
+      [orientation > 340 ] { polygon-pattern-file: url(../img/pattern-90.svg); polygon-pattern-transform: "rotate(90)"}
+      polygon-pattern-file: url(../img/pattern.svg);
+      line-width: 0.5;
+      line-color: @gray;
+      /*text-name: [orientation];*/
+      /*text-face-name: @sans;*/
+      /*text-size: @text_size_s;*/
+      /*text-fill: @black;*/
+
 
       /*polygon-pattern-transform: "rotate([orientation]) scale(2) skewX(45)";*/
   }
