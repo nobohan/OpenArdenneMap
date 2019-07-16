@@ -31,8 +31,8 @@ load_map(m, mapFile)
 x_center = 595220
 y_center = 6384555
 # # center marbehan
-# x_center = 623000
-# y_center = 6403000
+x_center = 623000
+y_center = 6403000
 
 scale = 16000
 delta_x = f*0.295*scale/math.cos(50*2*math.pi/360)
