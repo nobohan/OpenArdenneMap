@@ -80,15 +80,13 @@ Map { background-color: @white; }
       /*text-face-name: @sans;*/
       /*text-size: @text_size_s;*/
       /*text-fill: @black;*/
-
-
       /*polygon-pattern-transform: "rotate([orientation]) scale(2) skewX(45)";*/
   }
   [type='orchard']       { polygon-pattern-file:url(../img/orchard.svg); line-width:0.5; line-color: @gray; }
   [type='farmyard']      { line-color: @farmyard; }
   [type='school']        { polygon-fill: @school; }
   [trees='christmas_trees'], [produce='christmas_trees'] {
-    polygon-fill: @green;
+    polygon-fill: @bottle;
     polygon-pattern-file: url(../img/christmas_trees.svg);
     line-width: 0.5;
     line-color: @gray;

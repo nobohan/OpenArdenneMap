@@ -19,13 +19,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 340) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-90.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 340) and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-90.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -36,13 +36,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 330) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-60.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 330) and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-60.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -53,13 +53,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 310) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-40.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 310) and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-40.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -70,13 +70,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 280) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-20.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 280) and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-20.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -87,13 +87,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 270) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-90.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 270) and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-90.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -104,13 +104,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 260) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-80.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 260) and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-80.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -121,13 +121,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 240) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-60.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 240) and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-60.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -138,13 +138,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 220) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-40.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 220) and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-40.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -155,13 +155,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 200) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-20.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 200) and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-20.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -172,13 +172,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 180) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-90.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 180) and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-90.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -189,13 +189,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 170) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-80.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 170) and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-80.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -206,13 +206,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 150) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-60.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 150) and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-60.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -223,13 +223,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 130) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-40.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 130) and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-40.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -240,13 +240,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 110) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-20.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 110) and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-20.svg" transform="rotate(90)" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -257,13 +257,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 90) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-90.svg" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 90) and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-90.svg" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -274,13 +274,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 80) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-80.svg" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 80) and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-80.svg" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -291,13 +291,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 60) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-60.svg" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 60) and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-60.svg" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -308,13 +308,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 40) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-40.svg" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 40) and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-40.svg" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -325,13 +325,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 20) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-20.svg" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 20) and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-20.svg" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -342,13 +342,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 10) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-10.svg" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 10) and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-10.svg" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -359,13 +359,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] < 10) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern.svg" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] < 10) and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern.svg" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -376,13 +376,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'needleleaved') and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'needleleaved') and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -394,13 +394,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'needleleaved') and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'needleleaved') and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/forest_nl.svg" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -412,13 +412,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'broadleaved') and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'broadleaved') and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -430,13 +430,13 @@
     <Rule>
       <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'broadleaved') and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'wood') and ([leaf_type] = 'broadleaved') and ([produce] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/forest_bl.svg" />
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -447,13 +447,13 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([trees] = 'christmas_trees')]]></Filter>
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([produce] = 'christmas_trees')]]></Filter>
-      <PolygonSymbolizer fill="#26b424" />
+      <PolygonSymbolizer fill="#698785" />
       <PolygonPatternSymbolizer file="../img/christmas_trees.svg" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
