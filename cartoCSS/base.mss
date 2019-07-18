@@ -431,5 +431,30 @@ line-color: @black;
     [zoom >= 20] { line-width: @mini*@z20; }
 }
 
+#boundaries::other_limits1 [osm_id=163268185] {
+    line-color: @admin;
+    line-dasharray: 10, 10;
+    [zoom = 17] { line-width: 6; }
+    [zoom = 18] { line-width: 6; }
+}
+#boundaries::other_limits2 [osm_id=162123361] {
+    line-color: @admin;
+    line-dasharray: 10, 10;
+    [zoom = 17] { line-width: 6; }
+    [zoom = 18] { line-width: 6; }
+}
+#boundaries::other_limits3 [osm_id=163733039] {
+    line-color: @admin;
+    line-dasharray: 10, 10;
+    [zoom = 17] { line-width: 6; }
+    [zoom = 18] { line-width: 6; }
+}
+#boundaries::other_limits4 [osm_id=162458695] {
+    line-color: @admin;
+    line-dasharray: 10, 10;
+    [zoom = 17] { line-width: 6; }
+    [zoom = 18] { line-width: 6; }
+}
 
+/*[osm_id=163268185], [osm_id=162123361], [osm_id=163733039] could be rendered together but it bugs */
 /******************************************************************* */
