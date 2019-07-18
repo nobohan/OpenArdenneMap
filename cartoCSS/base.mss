@@ -260,15 +260,15 @@ Map { background-color: @rose; }
   [zoom >= 20] { line-width: @building_line_width*@z20; }
 
   line-color: @black;
-  [zoom <= 18] {
-    [type='church'], [type='chapel']{
-polygon-fill: @building;
-line-color: @black;
-      line-width: 2;
-      marker-file: url(../img/cross.svg);
-      marker-height: @church_marker*1.2;
-    }
-  }
+  /*[zoom <= 18] {
+  /*  [type='church'], [type='chapel']{
+  /*    polygon-fill: @building;
+  /*    line-color: @black;
+  /*    line-width: 2;
+  /*    marker-file: url(../img/cross.svg);
+  /*    marker-height: @church_marker*1.2;
+  /*  }
+  /*}
   /* [type='farm'], [type='farm_auxiliary'], [type='barn']{
   /*  polygon-fill: @marron;
   /*  line-color: @marron;
@@ -285,7 +285,7 @@ line-color: @black;
 
 #rotated_buildings {
   [building='church'] {
-      marker-height: @church_marker;
+      marker-height: @church_marker*0.8;
       marker-file: url(../img/cross.svg);
       [osm_id=203802634] { /* Attre */
         marker-transform: rotate(-68);
@@ -300,11 +300,11 @@ line-color: @black;
         marker-transform: rotate(84);
       }
       [osm_id=673210333] { /* Mevergnies */
-        marker-transform: rotate(0);
+        marker-transform: rotate(-90);
       }
       /*marker-transform: rotate([orientation]);*/
-      marker-allow-overlap: false;
-
+      marker-allow-overlap: true;
+      [zoom > 17] {marker-height: @church_marker*1.8;}
 
   }
 
