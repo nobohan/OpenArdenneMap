@@ -19,12 +19,14 @@
      [zoom = 14] { marker-height: @large*@z14; }
      [zoom = 15] { marker-height: @large*@z15; }
      [zoom = 16] { marker-height: @large*@z16; }
-     [zoom = 17] { marker-height: @large*@z17; }
-     [zoom = 18] { marker-height: @large*@z18; }
+     [zoom = 17] { marker-height: 30; }
+     [zoom = 18] { marker-height: 30; }
      [zoom = 19] { marker-height: @large*@z19; }
      [zoom >= 20] { marker-height: @large*@z20; }
    }
  }
+
+ 
 
 /* ================================================================== */
 /* VARIOUS POINT FEATURES
@@ -56,7 +58,7 @@
             [zoom = 18] { text-size: @text_size_s*@z18_label; }
             [zoom = 19] { text-size: @text_size_s*@z19_label; }
             [zoom >= 20] { text-size: @text_size_s*@z20_label; }
-            text-name: "'Pyl.'";
+            text-name: "''";
             text-face-name: @sans;
             text-placement: point;
             text-fill: @black;
@@ -114,8 +116,8 @@
         [zoom = 14] { marker-height: @large*@z14; }
         [zoom = 15] { marker-height: @large*@z15; }
         [zoom = 16] { marker-height: @large*@z16; }
-        [zoom = 17] { marker-height: @large*@z17; }
-        [zoom = 18] { marker-height: @large*@z18; }
+        [zoom = 17] { marker-height: @medium*@z17; }
+        [zoom = 18] { marker-height: @medium*@z18; }
         [zoom = 19] { marker-height: @large*@z19; }
         [zoom >= 20] { marker-height: @large*@z20; }
         marker-file: url(../img/picnic.svg);
@@ -147,7 +149,7 @@
         text-dx: 12;
     }
     [public_transport = 'stop_position'] {
-        ['bus' = 'yes'] {
+        ['bus' = 'yes']  {
             [zoom <= 10] { marker-height: @large*@z10; text-size: @text_size_xs*@z10_label; }
             [zoom = 11] { marker-height: @large*@z11; text-size: @text_size_xs*@z11_label; }
             [zoom = 12] { marker-height: @large*@z12; text-size: @text_size_xs*@z12_label; }
@@ -155,8 +157,8 @@
             [zoom = 14] { marker-height: @large*@z14; text-size: @text_size_xs*@z14_label; }
             [zoom = 15] { marker-height: @large*@z15; text-size: @text_size_xs*@z15_label; }
             [zoom = 16] { marker-height: @large*@z16; text-size: @text_size_xs*@z16_label; }
-            [zoom = 17] { marker-height: @large*@z17; text-size: @text_size_xs*@z17_label; }
-            [zoom = 18] { marker-height: @large*@z18; text-size: @text_size_xs*@z18_label; }
+            [zoom = 17] { marker-height: @pitch_marker*2; text-size: @text_size_xs*@z17_label; }
+            [zoom = 18] { marker-height: @pitch_marker*2; text-size: @text_size_xs*@z18_label; }
             [zoom = 19] { marker-height: @large*@z19; text-size: @text_size_xs*@z19_label; }
             [zoom >= 20] { marker-height: @large*@z20; text-size: @text_size_xs*@z20_label; }
             marker-file: url(../img/bus.svg);
@@ -172,9 +174,15 @@
             text-dy: -5;
             text-dx: 0;
             text-allow-overlap: false;
-        }
     }
+
+
 }
+
+
+}
+
+
 
 
 /* ================================================================== */
@@ -223,10 +231,11 @@
     }
     [sport='balle_pelote'] {
         line-color: @black;
-        line-width: @medium;
+        line-width: 2;
         text-name: "'Pelote'";
         text-face-name: @sans;
         text-size: @text_size_s;
+        text-fill: @black;
         text-allow-overlap: true;
         text-dy: 25;
         text-halo-fill: #ffffff;

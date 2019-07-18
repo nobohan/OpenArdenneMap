@@ -14,7 +14,7 @@ Map { background-color: @rose; }
 /* ================================================================== */
 
 #mask {
-  polygon-fill: @purewhite;
+
 }
 
 /* ================================================================== */
@@ -104,7 +104,7 @@ Map { background-color: @rose; }
   }
   [type='college']       { polygon-fill: @school; line-color: @black; line-width: 2; }
   [type='commercial']    { polygon-fill: @industrial; line-color: @black; line-width: 2; }
-  [type='common']        { polygon-fill: @park; line-color: @black; line-width: 2; }
+  [type='common']        { polygon-fill: @park; line-color: @black; line-width: 2;  }
   [type='forest'], [type='wood'] {
     polygon-fill: @green;
     [zoom <= 10] { line-width: @landuse_line_width*@z10;}
@@ -118,7 +118,6 @@ Map { background-color: @rose; }
     [zoom = 18] { line-width: 2; }
     [zoom = 19] { line-width: @landuse_line_width*@z19; }
     [zoom >= 20] { line-width: @landuse_line_width*@z20; }
-
     line-color: @black;
     [zoom <= 14] { polygon-pattern-file: url(../img/forest_z14.svg); }
     [zoom > 14] { polygon-pattern-file: url(../img/forest.svg); }
@@ -149,16 +148,17 @@ Map { background-color: @rose; }
     polygon-pattern-file: url(../img/industrial.svg);
     line-color: @black;
   }
-  [type='park']          { polygon-fill: @park; line-color: @black; line-width: 2; }
+  [type='park']          { polygon-fill: @park; polygon-pattern-file: url(../img/park.svg); line-color: @black; line-width: 2; }
   [type='parking']       { polygon-fill: @parking; line-color: @black; line-width: 2;  }
   [type='pedestrian']    { polygon-fill: @pedestrian_fill; line-color: @black; line-width: 2;}
   [type='pitch']         { polygon-fill: @sports; line-color: @black; line-width: 2;}
   [type='residential']   { polygon-fill: @residential; line-color: @black; line-width: 2; }
   [type='scrub'], [type='heath'] { polygon-pattern-file: url(../img/heath.svg); line-color: @black; line-width: 2; }
-  [type='sports_center'] { polygon-fill: @sports; line-width: 2; }
-  [type='stadium']       { polygon-fill: @sports; line-width: 2; }
-  [type='university']    { polygon-fill: @school; line-width: 2; }
+  [type='sports_center'] { polygon-fill: @sports; line-color: @black; line-width: 2; }
+  [type='stadium']       { polygon-fill: @sports; line-color: @black; line-width: 2; }
+  [type='university']    { polygon-fill: @school; line-color: @black; line-width: 2; }
   [type='meadow']        {
+    polygon-pattern-file: url(../img/meadow.svg);
     [zoom <= 10] { line-width: @landuse_line_width*@z10; }
     [zoom = 11] { line-width: @landuse_line_width*@z11; }
     [zoom = 12] { line-width: @landuse_line_width*@z12; }
@@ -170,7 +170,6 @@ Map { background-color: @rose; }
     [zoom = 18] { line-width: 2; }
     [zoom = 19] { line-width: @landuse_line_width*@z19; }
     [zoom >= 20] { line-width: @landuse_line_width*@z20; }
-    polygon-pattern-file: url(../img/meadow.svg);
     line-color: @black;
   }
   [type='farmland']      { polygon-fill: @agriculture; line-color: @black; line-width: 2;}
@@ -190,7 +189,7 @@ Map { background-color: @rose; }
     polygon-pattern-file: url(../img/orchard.svg);
     line-color: @black;
   }
-  [type='farmyard']      { line-color: @farmyard; line-color: @black; line-width: 2; }
+  [type='farmyard']      { line-color: @black; line-width: 2; }
   [type='school']        { polygon-fill: @school; line-color: @black; line-width: 2; }
   [trees='christmas_trees'], [produce='christmas_trees'] {
     [zoom <= 10] { line-width: @landuse_line_width*@z10; }
@@ -211,8 +210,8 @@ Map { background-color: @rose; }
 }
 
 #zoo [name = 'Pairi Daiza'] {
-  polygon-fill: @purewhite;
   polygon-pattern-file: url(../img/industrial.svg);
+  line-color: @black;
   line-width: @tiny;
   text-name: '[name]';
   text-face-name: @sans;
@@ -262,10 +261,13 @@ Map { background-color: @rose; }
   [zoom >= 20] { line-width: @building_line_width*@z20; }
 
   line-color: @black;
-  [zoom <= 17] {
+  [zoom <= 18] {
     [type='church'], [type='chapel']{
-      polygon: none;
-      line-width: 0;
+polygon-fill: @building;
+line-color: @black;
+      line-width: 2;
+      marker-file: url(../img/cross.svg);
+      marker-height: @church_marker*1.2;
     }
   }
   /* [type='farm'], [type='farm_auxiliary'], [type='barn']{
@@ -284,9 +286,8 @@ Map { background-color: @rose; }
 
 #rotated_buildings {
   [building='church'] {
-    [zoom <= 17] {
       marker-height: @church_marker;
-      marker-file: url(../img/church.svg);
+      marker-file: url(../img/cross.svg);
       [osm_id=203802634] { /* Attre */
         marker-transform: rotate(-68);
       }
@@ -300,44 +301,14 @@ Map { background-color: @rose; }
         marker-transform: rotate(84);
       }
       [osm_id=673210333] { /* Mevergnies */
-        marker-transform: rotate(-90);
+        marker-transform: rotate(0);
       }
       /*marker-transform: rotate([orientation]);*/
       marker-allow-overlap: false;
-    }
-    [zoom > 17] {
-      marker-file: url(../img/church-pattern.svg);
-      marker-height: @church_marker*1.2;
-      [osm_id=203802634] { /* Attre */
-        marker-transform: rotate(-68);
-      }
-      [osm_id=677442860] { /* Brugelette */
-        marker-transform: rotate(-53);
-      }
-      [osm_id=321824285] { /* Cambron */
-        marker-transform: rotate(-99);
-      }
-      [osm_id=674066050] { /* Gages */
-        marker-transform: rotate(84);
-      }
-      [osm_id=673210333] { /* Mevergnies */
-        marker-transform: rotate(-90);
-      }
-      /*marker-transform: rotate([orientation]);*/
-      marker-allow-overlap: false;
-    }
+   
+
   }
-  [building='chapel'] {
-    text-name: "'Chap.'";
-    text-face-name: @sans;
-    text-allow-overlap: false;
-    text-dy: 25;
-    text-halo-fill: #ffffff;
-    text-halo-radius: 2;
-    [zoom <= 17] { text-size: @text_size_s; }
-    [zoom > 17] { text-size: @text_size_m; }
-    text-fill: @black;
-  }
+
 }
 
 /* ================================================================== */
@@ -356,7 +327,7 @@ Map { background-color: @rose; }
 
 
 #waterway { [type='river'], [type='stream'], [type='canal'], [type='ditch'], [type='drain'] {
-    line-color: @black;
+    line-color: @water;
     [type='river'] {
       [zoom <= 10] { line-width: @river_line_width*@z10; }
       [zoom = 11] { line-width: @river_line_width*@z11; }
@@ -380,8 +351,8 @@ Map { background-color: @rose; }
       [zoom = 14] { line-width: @stream_line_width*@z14; }
       [zoom = 15] { line-width: @stream_line_width*@z15; }
       [zoom = 16] { line-width: @stream_line_width*@z16; }
-      [zoom = 17] { line-width: 2; }
-      [zoom = 18] { line-width: 2; }
+      [zoom = 17] { line-width: 6; }
+      [zoom = 18] { line-width: 6; }
       [zoom = 19] { line-width: @stream_line_width*@z19; }
       [zoom >= 20] { line-width: @stream_line_width*@z20; }
     }
@@ -393,14 +364,14 @@ Map { background-color: @rose; }
       [zoom = 14] { line-width: @river_line_width*@z14/2; }
       [zoom = 15] { line-width: @river_line_width*@z15/2; }
       [zoom = 16] { line-width: @river_line_width*@z16/2; }
-      [zoom = 17] { line-width: 2; }
-      [zoom = 18] { line-width: 2; }
+      [zoom = 17] { line-width: 3; }
+      [zoom = 18] { line-width: 3; }
       [zoom = 19] { line-width: @river_line_width*@z19/2; }
       [zoom >= 20] { line-width: @river_line_width*@z20/2; }
     }
     /* === HYDRO_ARROW === */
     marker-file: url(../img/arrow.svg);
-    marker-height: 2.5;
+    marker-height: 2;
     marker-placement: line;
     marker-spacing: 1200;
     [type='river'] { marker-offset: @river_line_width*2.5; }
@@ -432,3 +403,36 @@ Map { background-color: @rose; }
     raster-opacity: 1;
     raster-comp-op: grain-merge;
 }
+
+/* ================================================================== */
+/* BOUNDARIES
+
+/* ================================================================== */
+#boundaries::offset [admin_level='8'][name='Brugelette'] {
+  line-color: @rouge;
+  line-offset: 14;
+  line-width: 34;
+  line-cap: round;
+  line-join: round;
+}
+
+#boundaries [admin_level='8'] {
+  line-color: @admin;
+  line-dasharray: 10, 10;
+  [zoom <= 10] { line-width: @mini*@z10; }
+  [zoom = 11] { line-width: @mini*@z11; }
+  [zoom = 12] { line-width: @mini*@z12; }
+  [zoom = 13] { line-width: @mini*@z13; }
+  [zoom = 14] { line-width: @mini*@z14; }
+  [zoom = 15] { line-width: @mini*@z15; }
+  [zoom = 16] { line-width: @mini*@z16; }
+  [zoom = 17] { line-width: 6; }
+  [zoom = 18] { line-width: 6; }
+  [zoom = 19] { line-width: @mini*@z19; }
+  [zoom >= 20] { line-width: @mini*@z20; }
+}
+
+
+/******************************************************************* */
+
+

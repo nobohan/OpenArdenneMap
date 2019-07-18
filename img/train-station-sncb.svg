@@ -15,7 +15,7 @@
    version="1.1"
    id="svg829"
    inkscape:version="0.92.2 2405546, 2018-03-11"
-   sodipodi:docname="arrow.svg">
+   sodipodi:docname="train-station-sncb.svg">
   <defs
      id="defs823">
     <marker
@@ -69,8 +69,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="22.4"
-     inkscape:cx="446.69962"
-     inkscape:cy="688.15488"
+     inkscape:cx="437.99426"
+     inkscape:cy="677.44059"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -88,7 +88,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -97,16 +97,17 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:none;stroke:#0072ce;stroke-width:0.70555556;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 114.39556,114.34672 h 3.68897"
-       id="path823"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       style="fill:#005844;fill-opacity:1;stroke-width:0.26458329;stroke:none"
+       d="m 116.43331,116.22946 c -1.16639,0 -2.10853,0.61248 -2.10853,1.37724 0,0.76476 0.94214,1.37724 2.10853,1.37724 1.16638,0 2.10853,-0.61918 2.10853,-1.37724 0,-0.75807 -0.94215,-1.37724 -2.10853,-1.37724"
+       id="path1229" />
     <path
-       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#0072ce;stroke-width:0.70555556;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 117.9465,114.19164 0.13803,0.15508 -0.13803,0.15508 z"
-       id="rect847"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccc" />
+       style="stroke-width:0.26458329;fill:#ffffff;stroke:none"
+       d="m 116.43331,118.83918 c -0.96223,0 -1.74623,-0.5539 -1.74623,-1.23248 0,-0.67858 0.784,-1.23249 1.74623,-1.23249 0.96223,0 1.74623,0.55391 1.74623,1.23249 0,0.67858 -0.784,1.23248 -1.74623,1.23248"
+       id="path2437" />
+    <path
+       id="path1231"
+       style="stroke-width:0.26458329;fill:#005844;fill-opacity:1;stroke:none"
+       d="m 117.11189,117.57421 c -0.046,-0.0201 -0.046,-0.0267 0,-0.0527 0.11801,-0.0729 0.18825,-0.20332 0.18407,-0.34222 0,-0.25686 -0.34222,-0.51374 -0.88943,-0.51374 -0.31628,-10e-4 -0.62337,0.1004 -0.87604,0.2895 -0.046,0.0394 -0.0394,0.0594 -0.0259,0.0729 l 0.0795,0.092 c 0.0259,0.0267 0.0394,0.0201 0.0527,0.007 0.0594,-0.046 0.0661,-0.0201 0.0661,0.0326 v 0.90952 c 0,0.0527 -0.007,0.0795 -0.0661,0.0326 -0.0134,-0.0134 -0.0259,-0.0201 -0.0527,0.007 l -0.0854,0.0987 c -0.0134,0.0201 -0.0259,0.0394 0.0267,0.0728 0.26441,0.18073 0.57567,0.27947 0.89613,0.28364 0.61247,0 0.99485,-0.25686 0.99485,-0.59992 0.006,-0.23093 -0.18574,-0.34306 -0.30457,-0.38908 m -0.92868,-0.58715 c 0,-0.0594 0.0394,-0.092 0.1121,-0.092 h 0.15144 c 0.15647,-0.007 0.28951,0.11459 0.29621,0.27109 v 0.0125 c -0.002,0.16148 -0.13472,0.29117 -0.29621,0.28951 h -0.21754 c -0.0326,0 -0.046,-0.0134 -0.046,-0.046 z m 0.34222,1.34364 h -0.23093 c -0.0729,0 -0.11211,-0.0326 -0.11211,-0.092 v -0.52712 c 0,-0.0326 0.0134,-0.046 0.046,-0.046 h 0.29702 c 0.18659,0 0.33887,0.14977 0.34222,0.33635 0.002,0.17991 -0.1414,0.32717 -0.3213,0.32968 -0.007,0 -0.0134,0 -0.0209,-7.7e-4" />
   </g>
 </svg>

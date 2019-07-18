@@ -14,7 +14,7 @@
    viewBox="0 0 744.09448819 1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
    sodipodi:docname="ruins.svg">
   <defs
      id="defs4" />
@@ -26,15 +26,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="3.959798"
-     inkscape:cx="288.79688"
-     inkscape:cy="708.49332"
+     inkscape:cx="238.16298"
+     inkscape:cy="748.89942"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="1313"
-     inkscape:window-height="744"
-     inkscape:window-x="53"
-     inkscape:window-y="24"
+     inkscape:window-width="1877"
+     inkscape:window-height="1029"
+     inkscape:window-x="43"
+     inkscape:window-y="27"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -57,21 +57,21 @@
      inkscape:groupmode="layer"
      id="layer1">
     <ellipse
-       style="fill:#111111;fill-opacity:1;stroke:#111111;stroke-width:12;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99215686"
+       style="fill:#005844;fill-opacity:1;stroke:#005844;stroke-width:12;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4153"
        cx="262.13458"
        cy="309.64752"
        rx="12.121831"
        ry="12.374369" />
     <ellipse
-       style="fill:#111111;fill-opacity:1;stroke:#111111;stroke-width:12;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99215686"
+       style="fill:#005844;fill-opacity:1;stroke:#005844;stroke-width:12;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4153-3"
        cx="238.90106"
        cy="350.55875"
        rx="12.121831"
        ry="12.374369" />
     <ellipse
-       style="fill:#111111;fill-opacity:1;stroke:#111111;stroke-width:12;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99215686"
+       style="fill:#005844;fill-opacity:1;stroke:#005844;stroke-width:12;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4153-6"
        cx="286.63077"
        cy="350.55872"

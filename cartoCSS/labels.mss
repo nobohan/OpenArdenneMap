@@ -265,7 +265,7 @@
   text-halo-fill: #fff;
   // Specific style overrides for different types of areas:
   [type='park'] {
-    text-face-name: @sans_lt_italic;
+    text-face-name: @sans;
     text-fill: @green;
     text-halo-fill: @park;
   }
@@ -292,15 +292,9 @@
     text-dy: -20;
     text-allow-overlap: true;
   }
-  [type='farmyard'] {
-    text-name: "'Fme'";
-    text-dy: -20;
-    text-size: 120;
-    text-allow-overlap: true;
-    text-repeat-distance: 60;
-  }
+
   [type='forest'] {
-    text-face-name: @sans_lt_italic;
+    text-face-name: @sans;
     /*text-size: @text_size_l; /*[area]/100000*/
     /*text-size: 100/([area]*[area]);*/
     text-fill: @black;
@@ -358,35 +352,5 @@
 }
 
 
-/* ================================================================== */
-/* TRAIN STATIONS
-/* ================================================================== */
-
-#train_elements {
-  [type='station'] {
-    [zoom <= 10] { text-size: @text_size_m*@z10_label; }
-    [zoom = 11] { text-size: @text_size_m*@z11_label; }
-    [zoom = 12] { text-size: @text_size_m*@z12_label; }
-    [zoom = 13] { text-size: @text_size_m*@z13_label; }
-    [zoom = 14] { text-size: @text_size_m*@z14_label; }
-    [zoom = 15] { text-size: @text_size_m*@z15_label; }
-    [zoom = 16] { text-size: @text_size_m*@z16_label; }
-    [zoom = 17] { text-size: @text_size_m*@z17_label; }
-    [zoom = 18] { text-size: @text_size_m*@z18_label; }
-    [zoom = 19] { text-size: @text_size_m*@z19_label; }
-    [zoom >= 20] { text-size: @text_size_m*@z20_label; }
-    text-name: 'Gare';
-    text-allow-overlap: true;
-    text-face-name: @sans;
-    text-placement: point;
-    text-fill: @other_text;
-    text-halo-fill: @other_halo;
-    text-halo-radius: 4;
-    text-character-spacing: 2;
-    text-line-spacing: 2;
-    text-dy: -50;
-    text-dx: -30;
-  }
-}
 
 /* ****************************************************************** */

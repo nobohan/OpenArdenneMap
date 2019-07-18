@@ -14,7 +14,7 @@
    viewBox="0 0 744.09448819 1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
    sodipodi:docname="camping.svg">
   <defs
      id="defs4" />
@@ -25,16 +25,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
-     inkscape:cx="399.18281"
-     inkscape:cy="602.69753"
+     inkscape:zoom="11.2"
+     inkscape:cx="421.90602"
+     inkscape:cy="616.6261"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="true"
-     inkscape:window-width="1313"
-     inkscape:window-height="744"
-     inkscape:window-x="53"
-     inkscape:window-y="24"
+     showgrid="false"
+     inkscape:window-width="1877"
+     inkscape:window-height="1029"
+     inkscape:window-x="43"
+     inkscape:window-y="27"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
@@ -57,38 +57,16 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#111111;stroke-width:1.36129773;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 373.40884,475.87081 11.64523,0"
-       id="path4158-3-5"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#111111;stroke-width:1.36129773;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 373.40884,475.87081 8.26969,-13.40087"
-       id="path4160-6-3"
+       sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       id="path7073"
+       d="m 376.9522,461.61203 8.26969,13.40087 h -11.813 l 8.26969,-13.40087"
+       style="fill:none;fill-rule:evenodd;stroke:#005844;stroke-width:1.36125004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#111111;stroke-width:1.36129773;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 385.05407,475.87081 -9.45083,-13.40087"
-       id="path4162-7-5"
+       style="fill:none;fill-rule:evenodd;stroke:#005844;stroke-width:1.36125004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 391.18211,476.05106 8.26969,13.40087 h -11.813 l 8.26969,-13.40087"
+       id="path7075"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#111111;stroke-width:1.36129773;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 392.81322,497.35034 11.64523,0"
-       id="path4158-3-5-6"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#111111;stroke-width:1.36129773;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 392.81322,497.35034 8.26969,-13.40088"
-       id="path4160-6-3-2"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#111111;stroke-width:1.36129773;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 404.45845,497.35034 -9.45083,-13.40088"
-       id="path4162-7-5-9"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cccc" />
   </g>
 </svg>

@@ -83,15 +83,15 @@
 /* =============== */
 
 /* Road width variables */
-@huge: 16;
-@large: 7;
-@medium: 5;
-@small: 4;
-@mini: 3;
-@tiny: 2;
-@minus: 1.2;
+@huge: 20;
+@large: 17;
+@medium: 11;
+@small: 7;
+@mini: 5;
+@tiny: 3;
+@minus: 2;
 
-@outline: 2;
+@outline: 4;
 
 @bridge_marker: 12;
 

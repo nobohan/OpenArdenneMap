@@ -48,6 +48,7 @@ Map { font-directory: url(../fonts); }
 @rouge:			#c63527;
 @rose: 			#ffc7dc;
 @vertdark: 		#005844;
+@vertpale: 		#00b188;
 
 @contour:           @vertdark;
 
@@ -58,7 +59,7 @@ Map { font-directory: url(../fonts); }
 @land:              @rose;
 @water:             @blue;
 @grass:             @purewhite;
-@park:              @purewhite;
+@park:              @green;
 @cemetery:          @purewhite;
 @wooded:            @green;
 @agriculture:       @rose;
@@ -88,23 +89,23 @@ Map { font-directory: url(../fonts); }
 
 @motorway_line:     @rouge;
 @motorway_fill:     @purewhite;
-@motorway_case:     @motorway_line * 0.9;
+@motorway_case:     @motorway_line;
 
 @trunk_line:        @rouge;
 @trunk_fill:        @purewhite;
-@trunk_case:        @trunk_line * 0.9;
+@trunk_case:        @trunk_line;
 
 @primary_line:      @rouge;
 @primary_fill:      @purewhite;
-@primary_case:      @primary_line * 0.9;
+@primary_case:      @primary_line;
 
 @secondary_line:    @rouge;
 @secondary_fill:    @purewhite;
-@secondary_case:    @secondary_line * 0.9;
+@secondary_case:    @secondary_line;
 
 @standard_line:     @rouge;
 @standard_fill:     @purewhite;
-@standard_case:     @standard_line * 0.9;
+@standard_case:     @standard_line;
 
 @pedestrian_line:   @rouge;
 @pedestrian_fill:   @purewhite;

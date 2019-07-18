@@ -14,7 +14,7 @@
    viewBox="0 0 744.09448819 1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
    sodipodi:docname="forest_z14.svg"
    inkscape:export-filename="/media/julien/data/Projets/Geomatique/OSM/Mapnik/artwork/meadow.png"
    inkscape:export-xdpi="90"
@@ -28,15 +28,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.80869823"
-     inkscape:cx="85.034121"
-     inkscape:cy="463.91215"
+     inkscape:zoom="4.574688"
+     inkscape:cx="326.44735"
+     inkscape:cy="652.89294"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="true"
-     inkscape:window-width="1865"
-     inkscape:window-height="1025"
-     inkscape:window-x="55"
+     showgrid="false"
+     inkscape:window-width="1877"
+     inkscape:window-height="1029"
+     inkscape:window-x="43"
      inkscape:window-y="27"
      inkscape:window-maximized="1">
     <inkscape:grid
@@ -67,26 +67,26 @@
        x="233.82079"
        y="377.36221" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#111111;stroke-width:0.81305951;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#005844;stroke-width:0.81305951;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 251.72497,410.56101 4.22683,-11.73505 4.22683,11.73505"
        id="path4401"
        inkscape:connector-curvature="0" />
     <ellipse
-       style="fill:none;fill-opacity:1;stroke:#111111;stroke-width:0.81324089;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#005844;stroke-width:0.81324089;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4403"
        cx="302.83987"
        cy="395.72604"
        rx="4.2268286"
        ry="3.9116836" />
     <ellipse
-       style="fill:none;fill-opacity:1;stroke:#111111;stroke-width:0.81324089;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#005844;stroke-width:0.81324089;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4403-2"
        cx="274.44821"
        cy="444.9425"
        rx="4.2268286"
        ry="3.9116836" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#111111;stroke-width:0.81324089px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#005844;stroke-width:0.81324089px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 311.52742,461.93076 4.22683,-11.73505 4.22683,11.73505"
        id="path4401-2"
        inkscape:connector-curvature="0" />

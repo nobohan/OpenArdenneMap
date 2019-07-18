@@ -14,7 +14,7 @@
    viewBox="0 0 744.09448819 1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.4 (unknown)"
    sodipodi:docname="cross.svg">
   <defs
      id="defs4" />
@@ -26,14 +26,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.6"
-     inkscape:cx="372.76804"
+     inkscape:cx="295.98233"
      inkscape:cy="667.43089"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="true"
-     inkscape:window-width="1865"
-     inkscape:window-height="1025"
-     inkscape:window-x="55"
+     showgrid="false"
+     inkscape:window-width="2493"
+     inkscape:window-height="1385"
+     inkscape:window-x="2627"
      inkscape:window-y="27"
      inkscape:window-maximized="1">
     <inkscape:grid
@@ -57,12 +57,12 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:#7d0000;fill-opacity:1;fill-rule:evenodd;stroke:#111111;stroke-width:9.32381821;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:9.32343752;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 356.25,358.61221 c 0,88.901 0,88.901 0,88.901"
        id="path4155-3"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:#111111;fill-opacity:1;fill-rule:evenodd;stroke:#111111;stroke-width:9.32381821;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:9.32343752;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 331.80328,385.32759 h 48.89344"
        id="path4157-6"
        inkscape:connector-curvature="0" />

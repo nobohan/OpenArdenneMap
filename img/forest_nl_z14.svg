@@ -14,7 +14,7 @@
    viewBox="0 0 744.09448819 1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
    sodipodi:docname="forest_nl_z14.svg"
    inkscape:export-filename="/media/julien/data/Projets/Geomatique/OSM/Mapnik/artwork/meadow.png"
    inkscape:export-xdpi="90"
@@ -28,15 +28,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.80869823"
-     inkscape:cx="16.252603"
-     inkscape:cy="526.20688"
+     inkscape:zoom="2.287344"
+     inkscape:cx="351.51671"
+     inkscape:cy="662.91998"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="true"
-     inkscape:window-width="1865"
-     inkscape:window-height="1025"
-     inkscape:window-x="55"
+     showgrid="false"
+     inkscape:window-width="1877"
+     inkscape:window-height="1029"
+     inkscape:window-x="43"
      inkscape:window-y="27"
      inkscape:window-maximized="1">
     <inkscape:grid
@@ -67,29 +67,29 @@
        x="233.82079"
        y="377.36221" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#111111;stroke-width:0.81305951;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#005844;stroke-width:0.81305951;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 252.78111,407.45173 4.22683,-11.73505 4.22683,11.73505"
        id="path4401"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#111111;stroke-width:0.81324089px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#005844;stroke-width:0.81324089px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 296.19823,398.54804 4.22683,-11.73505 4.22682,11.73505"
        id="path4401-2-6"
        inkscape:connector-curvature="0"
        inkscape:transform-center-x="-2.1122936"
        inkscape:transform-center-y="2.8691844" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#111111;stroke-width:0.81324089px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#005844;stroke-width:0.81324089px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 283.75508,450.75639 4.22682,-11.73506 4.22683,11.73506"
        id="path4401-2-3"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#111111;stroke-width:0.81324089px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#005844;stroke-width:0.81324089px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 311.52742,462.96719 4.22683,-11.73506 4.22683,11.73506"
        id="path4401-2"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#111111;stroke-width:0.81305951;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#005844;stroke-width:0.81305951;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 243.09365,431.56342 4.22683,-11.73506 4.22683,11.73506"
        id="path4401-3"
        inkscape:connector-curvature="0" />
