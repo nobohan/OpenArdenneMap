@@ -6,7 +6,7 @@ from mapnik import *
 mapFile = 'legend.xml'
 
 # The mapOutput can be have different extension; png, pdf, svg, ...
-mapOutput = 'legend.svg'
+mapOutput = 'legend.pdf'
 
 map_x = 3000
 map_y = 1300

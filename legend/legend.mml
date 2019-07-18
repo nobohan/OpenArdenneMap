@@ -7,16 +7,6 @@
         "file": "legend.geojson"
       },
       "geometry": "polygon",
-      "name": "landuse",
-      "id": "landuse",
-      "status": "on"
-    },
-    {
-      "Datasource": {
-        "type": "geojson",
-        "file": "legend.geojson"
-      },
-      "geometry": "polygon",
       "name": "legend_labels",
       "id": "legend_labels",
       "status": "on"
@@ -29,16 +19,6 @@
       "geometry": "polygon",
       "name": "water_legend",
       "id": "water_legend",
-      "status": "on"
-    },
-    {
-      "Datasource": {
-        "type": "geojson",
-        "file": "legend.geojson"
-      },
-      "geometry": "polygon",
-      "name": "buildings_legend",
-      "id": "buildings_legend",
       "status": "on"
     },
     {
@@ -129,6 +109,36 @@
       "geometry": "linestring",
       "name": "sidewalk",
       "id": "sidewalk",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "type": "geojson",
+        "file": "legend.geojson"
+      },
+      "geometry": "point",
+      "name": "train_elements_legend",
+      "id": "train_elements_legend",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "type": "geojson",
+        "file": "legend.geojson"
+      },
+      "geometry": "polygon",
+      "name": "buildings_legend",
+      "id": "buildings_legend",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "type": "geojson",
+        "file": "legend.geojson"
+      },
+      "geometry": "polygon",
+      "name": "landuse",
+      "id": "landuse",
       "status": "on"
     }
   ],

@@ -49,6 +49,7 @@
     }
     [point_features = 'school'] { text-name:"'École'"; }
     [buildings_legend = 'church'] { text-name:"'Église'"; }
+    [buildings_legend_name = 'building'] { text-name:"'Bâti'"; }
     [bridge_symbol_legend = 'bridge'] { text-name:"'Passerelle'"; }
     [type = 'ruins'] { text-name:"'Ruines, site archéologique'"; }
     [type = 'wayside_cross'] { text-name:"'Croix'"; }
@@ -62,39 +63,48 @@
     [type = 'city'] {text-name: "Ville";}
     [type = 'village'] {text-name: "Village";}
     [type = 'hamlet'] {text-name: "Hameau";}
+    [type = 'level_crossing'] {
+       text-name:"'Passage à niveau'";
+       text-allow-overlap:true;
+       text-halo-fill: @rose;
+       text-halo-radius: 20;
+    }
 }
 
 
 /* special style for some stuffs */
-#sidewalk [sidewalk="sidewalk"] {
-    line-color: darken(@green, 40%);
-    line-cap: butt;
-    line-width: 8;
-    line-offset: 8;
+#sidewalk
+    { [sidewalk="sidewalk"] {
+        line-color: @vertpale;
+        line-cap: butt;
+        line-width: 8;
+        line-offset: 8;
+    }
 }
 
-
-
-#water_legend{
+#water_legend {
     [type='water'] {
         polygon-fill: @water;
-        line-color: @darkblue;
+        line-color: @blue;
     }
 }
 
 
 #waterway_legend {
-    line-color: @darkblue;
     [waterway_legend='river'] {
+        line-color: @blue;
         line-width: 16;
     }
     [waterway_legend='stream'] {
+        line-color: @blue;
         line-width: 6;
     }
 }
-#waterway_legend::top [waterway_legend='river'] {
-  line-width: 12;
-  line-color: @water;
+#waterway_legend::top {
+    [waterway_legend='river'] {
+        line-width: 12;
+        line-color: @water;
+    }
 }
 
 
@@ -106,10 +116,22 @@
 }
 
 #buildings_legend {
+    [buildings_legend='building']{
+        polygon-fill: @building;
+        line-width: 2;
+        line-color: @black;
+    }
     [buildings_legend='church'] {
-        marker-file: url(../img/church.svg);
+        polygon-fill: @building;
+        line-width: 2;
+        line-color: @black;
+    }
+}
+#buildings_legend::top {
+    [buildings_legend='church'] {
+        marker-file: url(../img/cross.svg);
         marker-height: 40;
-        marker-transform: rotate(180);
+        marker-transform: rotate(90);
     }
 }
 
@@ -122,11 +144,18 @@
     [point_features = 'picnic_table'] {
         marker-file: url(../img/picnic.svg);
         marker-height: 12;
-        marker-allow-overlap: true; /* always render */
+        marker-allow-overlap: true;
     }
     [type = 'tower'], [type = 'mast'] {
         marker-file: url(../img/tower.svg);
         marker-height: 4;
         marker-allow-overlap:true;
     }
+}
+
+#train_elements_legend {
+  [type='level_crossing'] {
+    marker-file: url(../img/level-crossing.svg);
+    marker-height: 30;
+  }
 }
