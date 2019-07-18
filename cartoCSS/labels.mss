@@ -288,8 +288,10 @@
     text-halo-radius: 3;
   }
   [type='school'] {
-    text-name: "'Éc.'";
+    /*text-name: "'Éc.'";*/
+    text-name: '[name]';
     text-dy: -20;
+    text-size: @text_size_s;
     text-allow-overlap: true;
   }
 
