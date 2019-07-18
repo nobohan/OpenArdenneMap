@@ -26,7 +26,7 @@
    }
  }
 
- 
+
 
 /* ================================================================== */
 /* VARIOUS POINT FEATURES
@@ -189,7 +189,10 @@
 /* ROTATED PITCHES
 /* ================================================================== */
 
-#pitch { [orientation != ''] {
+#pitch {
+  line-color: @black;
+  line-width: 2;
+  [orientation != ''] {
     [sport='soccer'] {
         [length > 100] {
             [zoom <= 10] { marker-height: @pitch_marker*@z10; }
@@ -207,6 +210,7 @@
             marker-height: @pitch_marker;
             marker-transform: rotate([orientation]);
             marker-allow-overlap: true;
+            line-width: 0;
             }
         }
     [sport='tennis'] {
@@ -226,6 +230,7 @@
             marker-height: @pitch_marker/2;
             marker-transform: rotate([orientation]);
             marker-allow-overlap: true;
+            line-width: 0;
             }
         }
     }

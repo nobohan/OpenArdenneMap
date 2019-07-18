@@ -151,7 +151,6 @@ Map { background-color: @rose; }
   [type='park']          { polygon-fill: @park; polygon-pattern-file: url(../img/park.svg); line-color: @black; line-width: 2; }
   [type='parking']       { polygon-fill: @parking; line-color: @black; line-width: 2;  }
   [type='pedestrian']    { polygon-fill: @pedestrian_fill; line-color: @black; line-width: 2;}
-  [type='pitch']         { polygon-fill: @sports; line-color: @black; line-width: 2;}
   [type='residential']   { polygon-fill: @residential; line-color: @black; line-width: 2; }
   [type='scrub'], [type='heath'] { polygon-pattern-file: url(../img/heath.svg); line-color: @black; line-width: 2; }
   [type='sports_center'] { polygon-fill: @sports; line-color: @black; line-width: 2; }
@@ -305,7 +304,7 @@ line-color: @black;
       }
       /*marker-transform: rotate([orientation]);*/
       marker-allow-overlap: false;
-   
+
 
   }
 
@@ -434,5 +433,3 @@ line-color: @black;
 
 
 /******************************************************************* */
-
-
