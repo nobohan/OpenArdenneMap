@@ -415,20 +415,20 @@ line-color: @black;
   line-join: round;
 }
 
-#boundaries [admin_level='8'] {
-  line-color: @admin;
-  line-dasharray: 10, 10;
-  [zoom <= 10] { line-width: @mini*@z10; }
-  [zoom = 11] { line-width: @mini*@z11; }
-  [zoom = 12] { line-width: @mini*@z12; }
-  [zoom = 13] { line-width: @mini*@z13; }
-  [zoom = 14] { line-width: @mini*@z14; }
-  [zoom = 15] { line-width: @mini*@z15; }
-  [zoom = 16] { line-width: @mini*@z16; }
-  [zoom = 17] { line-width: 6; }
-  [zoom = 18] { line-width: 6; }
-  [zoom = 19] { line-width: @mini*@z19; }
-  [zoom >= 20] { line-width: @mini*@z20; }
+#boundaries [admin_level='8'][name='Brugelette'] {
+    line-color: @admin;
+    line-dasharray: 10, 10;
+    [zoom <= 10] { line-width: @mini*@z10; }
+    [zoom = 11] { line-width: @mini*@z11; }
+    [zoom = 12] { line-width: @mini*@z12; }
+    [zoom = 13] { line-width: @mini*@z13; }
+    [zoom = 14] { line-width: @mini*@z14; }
+    [zoom = 15] { line-width: @mini*@z15; }
+    [zoom = 16] { line-width: @mini*@z16; }
+    [zoom = 17] { line-width: 6; }
+    [zoom = 18] { line-width: 6; }
+    [zoom = 19] { line-width: @mini*@z19; }
+    [zoom >= 20] { line-width: @mini*@z20; }
 }
 
 
