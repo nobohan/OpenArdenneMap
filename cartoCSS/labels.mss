@@ -79,6 +79,9 @@
       text-character-spacing: 6;
       text-spacing: 900;
     }
+    [stylegroup = "noauto"] {
+        text-wrap-width: 800;
+    }
   }
 
 
