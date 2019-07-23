@@ -144,10 +144,12 @@ way        sidewalk     text         linear
 node,way   shop         text         polygon
 node,way   sport        text         polygon
 node,way   surface      text         linear
+node       station	text         linear
 node,way   toll         text         linear
 node,way   tourism      text         polygon
 node,way   tower:type   text         linear
 way        tracktype    text         linear
+node       train	text         linear
 node,way   trees        text         polygon
 node,way   tunnel       text         linear
 node,way   water        text         polygon

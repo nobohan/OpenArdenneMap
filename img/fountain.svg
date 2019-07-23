@@ -14,7 +14,7 @@
    viewBox="0 0 744.09448819 1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.2 2405546, 2018-03-11"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="fountain.svg">
   <defs
      id="defs4" />
@@ -25,16 +25,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="154.06414"
+     inkscape:zoom="3.959798"
+     inkscape:cx="399.42062"
      inkscape:cy="780.96696"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1877"
-     inkscape:window-height="1029"
-     inkscape:window-x="43"
-     inkscape:window-y="27"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -52,12 +52,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <ellipse
-       style="fill:#0072ce;fill-opacity:1;stroke:#0072ce;stroke-width:12.00118113;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4134"
-       cx="407.14285"
-       cy="371.64792"
-       rx="20"
-       ry="19.285715" />
+    <path
+       style="fill:#0072ce;fill-opacity:1;stroke:none;stroke-width:0.99999994"
+       d="M 372.24219 325.50977 L 372.24219 403.54297 L 395.72656 403.54297 L 395.72656 357.70508 L 435.48828 357.70508 C 436.39568 357.70508 437.13477 358.44347 437.13477 359.35156 L 437.13477 369.21484 C 437.13477 369.93062 437.71391 370.50977 438.42969 370.50977 L 448.78711 370.50977 C 449.50289 370.50977 450.08203 369.93062 450.08203 369.21484 L 450.08203 359.35156 C 450.08133 351.30615 443.53369 344.75977 435.48828 344.75977 L 422.59375 344.77148 L 422.59375 335.77539 L 429.95898 335.77539 C 430.67476 335.77539 431.25391 335.19554 431.25391 334.48047 L 431.25391 326.95703 C 431.25391 326.24197 430.67476 325.66211 429.95898 325.66211 L 406.13867 325.66211 C 405.4236 325.66211 404.84375 326.24197 404.84375 326.95703 L 404.84375 334.48047 C 404.84375 335.19554 405.4236 335.77539 406.13867 335.77539 L 413.50586 335.77539 L 413.50586 344.7793 L 395.72656 344.79492 L 395.72656 325.50977 L 372.24219 325.50977 z M 443.39844 372.33203 C 442.97494 372.33203 442.55133 372.51506 442.3125 372.88281 C 441.45512 374.20234 437.17578 380.93595 437.17578 383.89062 C 437.17578 387.32155 439.96681 390.11328 443.39844 390.11328 C 446.82936 390.11328 449.62109 387.32225 449.62109 383.89062 C 449.62109 380.93595 445.34105 374.20234 444.48438 372.88281 C 444.2452 372.51506 443.82193 372.33203 443.39844 372.33203 z "
+       transform="scale(0.9375)"
+       id="path5131" />
   </g>
 </svg>

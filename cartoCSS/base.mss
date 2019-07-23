@@ -149,7 +149,7 @@ Map { background-color: @rose; }
     line-color: @black;
   }
   [type='park']          { polygon-fill: @park; polygon-pattern-file: url(../img/park.svg); line-color: @black; line-width: 2; }
-  [type='parking']       { polygon-fill: @parking; line-color: @black; line-width: 2;  }
+  [type='parking']       { polygon-fill: @parking; marker-file: url(../img/parking-fill.svg); marker-height: 20; line-color: @black; line-width: 2;  } 
   [type='pedestrian']    { polygon-fill: @pedestrian_fill; line-color: @black; line-width: 2;}
   [type='residential']   { polygon-fill: @residential; line-color: @black; line-width: 2; }
   [type='scrub'], [type='heath'] { polygon-pattern-file: url(../img/heath.svg); line-color: @black; line-width: 2; }
@@ -285,7 +285,7 @@ Map { background-color: @rose; }
 
 #rotated_buildings {
   [building='church'] {
-      marker-height: @church_marker*0.8;
+      marker-height: @church_marker*0.5;
       marker-file: url(../img/cross.svg);
       [osm_id=203802634] { /* Attre */
         marker-transform: rotate(-68);
@@ -304,7 +304,7 @@ Map { background-color: @rose; }
       }
       /*marker-transform: rotate([orientation]);*/
       marker-allow-overlap: true;
-      [zoom > 17] {marker-height: @church_marker*1.8;}
+      [zoom > 17] {marker-height: @church_marker*0.5;}
 
   }
 

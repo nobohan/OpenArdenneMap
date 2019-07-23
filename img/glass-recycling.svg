@@ -36,10 +36,10 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="2560"
-     inkscape:window-height="1412"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-width="2493"
+     inkscape:window-height="1385"
+     inkscape:window-x="2627"
+     inkscape:window-y="27"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -58,9 +58,16 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       id="circle5153"
        style="opacity:1;fill:#005844;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.3003124;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 281.62272,328.85163 A 5.8709286,5.8709286 0 0 1 275.7518,334.72256 5.8709286,5.8709286 0 0 1 269.88087,328.85163 5.8709286,5.8709286 0 0 1 275.7518,322.98071 5.8709286,5.8709286 0 0 1 281.62272,328.85163 Z M 257.09531,328.85163 A 5.8709286,5.8709286 0 0 1 251.22437,334.72256 5.8709286,5.8709286 0 0 1 245.35345,328.85163 5.8709286,5.8709286 0 0 1 251.22437,322.98071 5.8709286,5.8709286 0 0 1 257.09531,328.85163 Z M 263.48787,304.45531 C 247.34779,304.45531 234.2648,317.5383 234.2648,333.67839 V 369.68809 H 230.48099 V 378.55935 H 296.49677 V 369.68809 H 292.71297 V 333.67839 C 292.71297,317.53831 279.62793,304.45531 263.48787,304.45531 Z"
-       inkscape:connector-curvature="0" />
+       d="m 263.48787,304.45531 c -16.14008,0 -29.22307,13.08299 -29.22307,29.22308 v 36.0097 h -3.78381 v 8.87126 h 66.01578 v -8.87126 h -3.7838 v -36.0097 c 0,-16.14008 -13.08504,-29.22308 -29.2251,-29.22308 z"
+       id="circle5153" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.3003124;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 281.62272,328.85163 a 5.8709286,5.8709286 0 0 1 -5.87092,5.87093 5.8709286,5.8709286 0 0 1 -5.87093,-5.87093 5.8709286,5.8709286 0 0 1 5.87093,-5.87092 5.8709286,5.8709286 0 0 1 5.87092,5.87092 z"
+       id="path13" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.3003124;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 257.09531,328.85163 a 5.8709286,5.8709286 0 0 1 -5.87094,5.87093 5.8709286,5.8709286 0 0 1 -5.87092,-5.87093 5.8709286,5.8709286 0 0 1 5.87092,-5.87092 5.8709286,5.8709286 0 0 1 5.87094,5.87092 z"
+       id="path11" />
   </g>
 </svg>

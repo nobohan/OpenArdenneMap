@@ -46,13 +46,13 @@
   text-face-name: @sans;
   text-placement: line;
   text-character-spacing: 2;
-  text-line-spacing: 1;
+  text-line-spacing: -10;
   text-fill: @road_text;
   text-halo-fill: #ffffff;
   text-halo-radius: 2;
   text-allow-overlap: true;
   text-size: @text_size_s;
-  text-line-spacing: 25;
+  text-line-spacing: 5;
   [stylegroup = "mainroad"] {
     text-transform: uppercase;
     text-size: @text_size_s*0.8
@@ -168,8 +168,8 @@
   [zoom = 14] { text-size: @text_size_l*@z14_label; text-dy: 20; }
   [zoom = 15] { text-size: @text_size_l*@z15_label; text-dy: 100; }
   [zoom = 16] { text-size: @text_size_l*@z16_label; text-dy: 200; }
-  [zoom = 17] { text-size: @text_size_l*@z17_label; }
-  [zoom = 18] { text-size: @text_size_l*@z18_label; }
+  [zoom = 17] { text-size: 0; }
+  [zoom = 18] { text-size: 0; }
   [zoom = 19] { text-size: @text_size_l*@z19_label; }
   [zoom >= 20] { text-size: @text_size_l*@z20_label; }
   text-name:'[name]';
@@ -294,8 +294,9 @@
     /*text-name: "'Éc.'";*/
     text-name: '[name]';
     text-dy: -20;
-    text-size: @text_size_s;
+    text-size: @text_size_xs;
     text-allow-overlap: true;
+    text-line-spacing: -5;
   }
 
   [type='forest'] {

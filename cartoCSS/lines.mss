@@ -100,8 +100,8 @@
       [zoom = 14] { line-width: (@large + @outline)*@z14_road; }
       [zoom = 15] { line-width: (@large + @outline)*@z15_road; }
       [zoom = 16] { line-width: (@large + @outline)*@z16_road; }
-      [zoom = 17] { line-width: @large + @outline; }
-      [zoom = 18] { line-width: @large + @outline; }
+      [zoom = 17] { line-width: @small + @outline; }
+      [zoom = 18] { line-width: @small + @outline; }
       [zoom = 19] { line-width: (@large + @outline)*@z19_road; }
       [zoom >= 20] { line-width: (@large + @outline)*@z20_road; }
     }
@@ -505,7 +505,7 @@
 
 
 /* ---- Bridge fill for dashed lines -------------------------------- */
-#tunnel[render='2_line'],
+#tunnel[render='1_line'],
 #bridge[render='2_line']{
   /* -- colors & styles -- */
   [stylegroup='noauto'] {
@@ -514,7 +514,7 @@
     line-join: round;
   }
   [stylegroup='railway'] {
-    line-color: @land;
+    line-color: @black;
     line-join: round;
   }
   /* -- widths -- */
@@ -526,8 +526,8 @@
     [zoom = 14] { line-width: @outline*@z14_road*1.5; }
     [zoom = 15] { line-width: @outline*@z15_road*1.5; }
     [zoom = 16] { line-width: @outline*@z16_road*1.5; }
-    [zoom = 17] { line-width: @outline*@z17_road*1.5; }
-    [zoom = 18] { line-width: @outline*@z18_road*1.5; }
+    [zoom = 17] { line-width: @small + @outline; }
+    [zoom = 18] { line-width: @small + @outline; }
     [zoom = 19] { line-width: @outline*@z19_road*1.5; }
     [zoom >= 20] { line-width: @outline*@z20_road*1.5; }
   }
@@ -542,8 +542,8 @@
   [zoom = 14] { marker-height: @bridge_marker*@z14_road; }
   [zoom = 15] { marker-height: @bridge_marker*@z15_road; }
   [zoom = 16] { marker-height: @bridge_marker*@z16_road; }
-  [zoom = 17] { marker-height: 12; }
-  [zoom = 18] { marker-height: 12; }
+  [zoom = 17] { marker-height: 8; }
+  [zoom = 18] { marker-height: 8; }
   [zoom = 19] { marker-height: @bridge_marker*@z19_road; }
   [zoom >= 20] { marker-height: @bridge_marker*@z20_road; }
   marker-file: url(../img/bridge.svg);

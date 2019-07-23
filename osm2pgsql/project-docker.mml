@@ -130,13 +130,13 @@
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "file": "../grid/grid.shp",
         "id": "grid",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+	"srs": "+proj=lcc +lat_1=51.16666723333333 +lat_2=49.8333339 +lat_0=90 +lon_0=4.367486666666666 +x_0=150000.013 +y_0=5400088.438 +ellps=intl +towgs84=-106.869,52.2978,-103.724,0.3366,-0.457,1.8422,-1.2747 +units=m +no_defs",
         "type": "shape"
       },
       "geometry": "linestring",
       "id": "grid",
       "name": "grid",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs": "+proj=lcc +lat_1=51.16666723333333 +lat_2=49.8333339 +lat_0=90 +lon_0=4.367486666666666 +x_0=150000.013 +y_0=5400088.438 +ellps=intl +towgs84=-106.869,52.2978,-103.724,0.3366,-0.457,1.8422,-1.2747 +units=m +no_defs",
       "srs-name": "900913",
       "status": "on"
     },
@@ -325,7 +325,7 @@
         "id": "point_features",
         "project": "OpenArdenneMap",
         "srs": null,
-        "table": "( SELECT way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", bus, name \n  FROM planet_osm_point\n WHERE NOT ST_WITHIN(way, (SELECT way \n FROM planet_osm_polygon \n  WHERE osm_id = 251508700) \n ))  AS data",
+        "table": "( SELECT way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", bus, train, railway, station, name \n  FROM planet_osm_point\n WHERE NOT ST_WITHIN(way, (SELECT way \n FROM planet_osm_polygon \n  WHERE osm_id = 251508700) \n ))  AS data",
         "type": "postgis"
       },
       "class": "",
