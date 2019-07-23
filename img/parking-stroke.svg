@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="parking-stroke.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="410.13781"
+     inkscape:cy="778.94665"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#0072ce;stroke-width:10.62992129;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 198.87381,282.94534 H 271.32068 C 278.66575,282.94534 284.57893,288.85852 284.57893,296.2036 V 369.56221 C 284.57893,376.90728 278.66575,382.82047 271.32068,382.82047 H 198.87381 C 191.52874,382.82047 185.61555,376.90728 185.61555,369.56221 V 296.2036 C 185.61555,288.85852 191.52874,282.94534 198.87381,282.94534 Z"
+       id="rect825" />
+    <g
+       aria-label="P"
+       style="font-style:normal;font-weight:normal;font-size:5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#0072ce;fill-opacity:1;stroke:none;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="text823">
+      <path
+         d="M 259.30185,310.94605 C 257.38185,309.18605 255.30185,307.74605 252.90185,306.70605 250.50185,305.74605 247.86185,305.18605 245.14185,305.18605 H 208.26185 V 361.98605 H 219.54185 V 344.94605 H 245.14185 C 247.86185,344.94605 250.50185,344.46605 252.90185,343.42605 255.30185,342.38605 257.46185,340.94605 259.22185,339.10605 260.98185,337.34605 262.42185,335.18605 263.46185,332.78605 264.50185,330.38605 265.06185,327.82605 265.06185,325.10605 265.06185,322.38605 264.50185,319.74605 263.54185,317.34605 262.50185,314.94605 261.06185,312.86605 259.30185,310.94605 Z M 251.22185,331.10605 C 249.62185,332.70605 247.54185,333.50605 245.14185,333.50605 H 219.54185 V 316.46605 H 245.14185 C 246.26185,316.46605 247.30185,316.70605 248.34185,317.10605 249.30185,317.58605 250.26185,318.14605 251.06185,318.94605 251.86185,319.74605 252.42185,320.62605 252.90185,321.66605 253.38185,322.70605 253.62185,323.82605 253.62185,325.10605 253.62185,327.50605 252.82185,329.50605 251.22185,331.10605 Z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:extra-expanded;font-size:80px;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet Extra-Expanded';fill:#0072ce;stroke-width:0.9375px;fill-opacity:1"
+         id="path827" />
+    </g>
+  </g>
+</svg>
