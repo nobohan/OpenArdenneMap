@@ -54,7 +54,11 @@
     [type = 'ruins'] { text-name:"'Ruines, site archéologique'"; }
     [type = 'wayside_cross'] { text-name:"'Croix'"; }
     [point_features = 'picnic_table'] { text-name:"'Table de picnic'"; }
-    [type = 'fountain'] { text-name:"'Fontaine, lavoir'"; }
+    [point_features = 'fountain'] { text-name:"'Fontaine, lavoir'"; }
+    [point_features = 'bench'] { text-name:"'Banc'"; }
+    [point_features = 'parking'] { text-name:"'Parking'"; }
+    [point_features = 'waste_basket'] { text-name:"'Poubelle'"; }
+    [point_features = 'recycling'] { text-name:"'Bulle à verres'"; }
     [type = 'stop_position'] {
         ['bus' = 'yes'] {
             text-name:"'Arrêt de bus'";
@@ -149,6 +153,31 @@
     [type = 'tower'], [type = 'mast'] {
         marker-file: url(../img/tower.svg);
         marker-height: 4;
+        marker-allow-overlap:true;
+    }
+    [point_features = 'fountain'] {
+        marker-file: url(../img/fountain.svg);
+        marker-height: 25;
+        marker-allow-overlap:true;
+    }
+    [point_features = 'parking'] {
+        marker-file: url(../img/parking-fill.svg);
+        marker-height: 25;
+        marker-allow-overlap:true;
+    }
+    [point_features = 'recycling'] {
+        marker-file: url(../img/glass-recycling.svg);
+        marker-height: 25;
+        marker-allow-overlap:true;
+    }
+    [point_features = 'bench'] {
+        marker-file: url(../img/bench.svg);
+        marker-height: 25;
+        marker-allow-overlap:true;
+    }
+    [point_features = 'waste_basket'] {
+        marker-file: url(../img/trashbin.svg);
+        marker-height: 25;
         marker-allow-overlap:true;
     }
 }
