@@ -48,7 +48,7 @@
         }
     }
     [buildings_legend = 'church'] { text-name:"'Église'"; }
-    [buildings_legend_name = 'building'] { text-name:"'Bâti'"; }
+    [buildings_legend_name = 'building'] { text-name:"'Bâtiments'"; }
     [bridge_symbol_legend = 'bridge'] { text-name:"'Passerelle'"; }
     [type = 'ruins'] { text-name:"'Ruines, site archéologique'"; }
     [type = 'wayside_cross'] { text-name:"'Croix'"; }
@@ -58,6 +58,8 @@
     [point_features = 'parking'] { text-name:"'Parking'"; }
     [point_features = 'waste_basket'] { text-name:"'Poubelle'"; }
     [point_features = 'recycling'] { text-name:"'Bulle à verres'"; }
+    [point_features = 'bus'] { text-name:"'Arrêt de bus'"; }
+    [point_features = 'train'] { text-name:"'Gare, point d\'arrêt'"; }
     [type = 'stop_position'] {
         ['bus' = 'yes'] {
             text-name:"'Arrêt de bus'";
@@ -175,6 +177,16 @@
     [point_features = 'waste_basket'] {
         marker-file: url(../img/trashbin.svg);
         marker-height: 10;
+        marker-allow-overlap:true;
+    }
+    [point_features = 'bus'] {
+        marker-file: url(../img/bus.svg);
+        marker-height: 20;
+        marker-allow-overlap:true;
+    }
+    [point_features = 'train'] {
+        marker-file: url(../img/train-station-sncb.svg);
+        marker-height: 20;
         marker-allow-overlap:true;
     }
 }
