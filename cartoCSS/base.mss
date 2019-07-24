@@ -149,13 +149,23 @@ Map { background-color: @rose; }
     line-color: @black;
   }
   [type='park']          { polygon-fill: @park; polygon-pattern-file: url(../img/park.svg); line-color: @black; line-width: 2; }
-  [type='parking']       { polygon-fill: @parking; marker-file: url(../img/parking-fill.svg); marker-height: 20; line-color: @black; line-width: 2;  } 
+
+  [type='parking']       {   
+  polygon-fill: @parking; 
+  line-color: @black; 
+  line-width: 2;
+  marker-file: url(../img/parking-fill.svg);     
+  [zoom = 17] { marker-height: 20; }
+  [zoom = 18] { marker-height: 30; }
+  } 
+
   [type='pedestrian']    { polygon-fill: @pedestrian_fill; line-color: @black; line-width: 2;}
   [type='residential']   { polygon-fill: @residential; line-color: @black; line-width: 2; }
   [type='scrub'], [type='heath'] { polygon-pattern-file: url(../img/heath.svg); line-color: @black; line-width: 2; }
   [type='sports_center'] { polygon-fill: @sports; line-color: @black; line-width: 2; }
   [type='stadium']       { polygon-fill: @sports; line-color: @black; line-width: 2; }
   [type='university']    { polygon-fill: @school; line-color: @black; line-width: 2; }
+
   [type='meadow']        {
     polygon-pattern-file: url(../img/meadow.svg);
     [zoom <= 10] { line-width: @landuse_line_width*@z10; }

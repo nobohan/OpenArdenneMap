@@ -55,10 +55,10 @@
 @z20_label: 4;
 
 @supra_text_size_alfphabet: 5;
-@text_size_l : 60 + @supra_text_size_alfphabet;
-@text_size_m : 40 + @supra_text_size_alfphabet;
-@text_size_s : 30 + @supra_text_size_alfphabet;
-@text_size_xs : 20 + @supra_text_size_alfphabet; 
+@text_size_l : 100 + @supra_text_size_alfphabet;
+@text_size_m : 65 + @supra_text_size_alfphabet;
+@text_size_s : 40 + @supra_text_size_alfphabet;
+@text_size_xs : 28 + @supra_text_size_alfphabet; 
 
 
 /* =============== */

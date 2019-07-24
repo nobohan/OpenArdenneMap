@@ -55,7 +55,7 @@
   text-line-spacing: 5;
   [stylegroup = "mainroad"] {
     text-transform: uppercase;
-    text-size: @text_size_s*0.8
+    text-size: @text_size_s*1
   }
   [stylegroup = "noauto"], [stylegroup = "service"] {
     text-dy: 14;
