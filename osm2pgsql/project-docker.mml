@@ -325,7 +325,7 @@
         "id": "point_features",
         "project": "OpenArdenneMap",
         "srs": null,
-        "table": "( SELECT way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", bus, train, railway, station, name \n  FROM planet_osm_point\n WHERE NOT ST_WITHIN(way, (SELECT way \n FROM planet_osm_polygon \n  WHERE osm_id = 251508700) \n ))  AS data",
+        "table": "( SELECT way, power, man_made, amenity, highway, historic, leisure, tourism, public_transport, \"tower:type\", bus, train, railway, station, name \n  FROM planet_osm_point\n WHERE NOT ST_WITHIN(way, (SELECT way \n FROM planet_osm_polygon \n  WHERE osm_id = 251508700) \n ))  AS data",
         "type": "postgis"
       },
       "class": "",

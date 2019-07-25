@@ -2,9 +2,9 @@
 
 /* legend variables */
 
-@black : #333333;
+@black : #005844;
 @font_size : 36;
-@font_color: @black;
+@font_color: #0072ce;
 @font: @sans;
 
 /* items definition */

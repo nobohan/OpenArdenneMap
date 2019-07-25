@@ -224,6 +224,37 @@
 
 }
 
+    [highway = 'bus_stop'] {
+        ['bus' = 'yes']  {
+            [zoom <= 10] { marker-height: @large*@z10; text-size: @text_size_xs*@z10_label; }
+            [zoom = 11] { marker-height: @large*@z11; text-size: @text_size_xs*@z11_label; }
+            [zoom = 12] { marker-height: @large*@z12; text-size: @text_size_xs*@z12_label; }
+            [zoom = 13] { marker-height: @large*@z13; text-size: @text_size_xs*@z13_label; }
+            [zoom = 14] { marker-height: @large*@z14; text-size: @text_size_xs*@z14_label; }
+            [zoom = 15] { marker-height: @large*@z15; text-size: @text_size_xs*@z15_label; }
+            [zoom = 16] { marker-height: @large*@z16; text-size: @text_size_xs*@z16_label; }
+            [zoom = 17] { marker-height: @pitch_marker*2; text-size: @text_size_xs*@z17_label; }
+            [zoom = 18] { marker-height: @pitch_marker*2*1.5; text-size: @text_size_xs*@z18_label; }
+            [zoom = 19] { marker-height: @large*@z19; text-size: @text_size_xs*@z19_label; }
+            [zoom >= 20] { marker-height: @large*@z20; text-size: @text_size_xs*@z20_label; }
+            marker-file: url(../img/bus.svg);
+            marker-allow-overlap: true;
+            text-name: "'Bus'";
+            text-face-name: @sans;
+            text-placement: point;
+            text-fill: @black;
+            text-character-spacing: 2;
+            text-line-spacing: 2;
+            text-halo-fill: @other_halo;
+            text-halo-radius: 1;
+            text-dy: -5;
+            text-dx: 0;
+            text-allow-overlap: false;
+    }
+
+
+}
+
     [public_transport = 'stop_position'] {
         ['train' = 'yes']  {
         ['railway' = 'station']  {
