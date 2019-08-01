@@ -55,24 +55,39 @@ Map { background-color: @white; }
       [orientation < 10 ] { polygon-pattern-file: url(../img/pattern.svg); }
       [orientation > 10 ] { polygon-pattern-file: url(../img/pattern-10.svg); }
       [orientation > 20 ] { polygon-pattern-file: url(../img/pattern-20.svg); }
+      [orientation > 30 ] { polygon-pattern-file: url(../img/pattern-30.svg); }
       [orientation > 40 ] { polygon-pattern-file: url(../img/pattern-40.svg); }
+      [orientation > 50 ] { polygon-pattern-file: url(../img/pattern-50.svg); }
       [orientation > 60 ] { polygon-pattern-file: url(../img/pattern-60.svg); }
+      [orientation > 70 ] { polygon-pattern-file: url(../img/pattern-70.svg); }
       [orientation > 80 ] { polygon-pattern-file: url(../img/pattern-80.svg); }
       [orientation > 90 ] { polygon-pattern-file: url(../img/pattern-90.svg); }
+      [orientation > 100 ] { polygon-pattern-file: url(../img/pattern-10.svg); polygon-pattern-transform: "rotate(90)"}
       [orientation > 110 ] { polygon-pattern-file: url(../img/pattern-20.svg); polygon-pattern-transform: "rotate(90)"}
+      [orientation > 120 ] { polygon-pattern-file: url(../img/pattern-30.svg); polygon-pattern-transform: "rotate(90)"}
       [orientation > 130 ] { polygon-pattern-file: url(../img/pattern-40.svg); polygon-pattern-transform: "rotate(90)"}
-      [orientation > 150 ] { polygon-pattern-file: url(../img/pattern-60.svg); polygon-pattern-transform: "rotate(90)"}
+      [orientation > 140 ] { polygon-pattern-file: url(../img/pattern-50.svg); polygon-pattern-transform: "rotate(90)"}
+      /*[orientation > 150 ] { polygon-pattern-file: url(../img/pattern-60.svg); polygon-pattern-transform: "rotate(90)"}*/
+      [orientation > 160 ] { polygon-pattern-file: url(../img/pattern-70.svg); polygon-pattern-transform: "rotate(90)"}
       [orientation > 170 ] { polygon-pattern-file: url(../img/pattern-80.svg); polygon-pattern-transform: "rotate(90)"}
       [orientation > 180 ] { polygon-pattern-file: url(../img/pattern-90.svg); polygon-pattern-transform: "rotate(90)"}
+      [orientation > 190 ] { polygon-pattern-file: url(../img/pattern-10.svg); }
       [orientation > 200 ] { polygon-pattern-file: url(../img/pattern-20.svg); }
+      [orientation > 210 ] { polygon-pattern-file: url(../img/pattern-30.svg); }
       [orientation > 220 ] { polygon-pattern-file: url(../img/pattern-40.svg); }
+      [orientation > 230 ] { polygon-pattern-file: url(../img/pattern-50.svg); }
       [orientation > 240 ] { polygon-pattern-file: url(../img/pattern-60.svg); }
+      [orientation > 250 ] { polygon-pattern-file: url(../img/pattern-70.svg); }
       [orientation > 260 ] { polygon-pattern-file: url(../img/pattern-80.svg); }
       [orientation > 270 ] { polygon-pattern-file: url(../img/pattern-90.svg); }
-      [orientation > 280 ] { polygon-pattern-file: url(../img/pattern-20.svg); polygon-pattern-transform: "rotate(90)"}
+      [orientation > 280 ] { polygon-pattern-file: url(../img/pattern-10.svg); polygon-pattern-transform: "rotate(90)"}
+      [orientation > 290 ] { polygon-pattern-file: url(../img/pattern-20.svg); polygon-pattern-transform: "rotate(90)"}
+      [orientation > 300 ] { polygon-pattern-file: url(../img/pattern-30.svg); polygon-pattern-transform: "rotate(90)"}
       [orientation > 310 ] { polygon-pattern-file: url(../img/pattern-40.svg); polygon-pattern-transform: "rotate(90)"}
-      [orientation > 330 ] { polygon-pattern-file: url(../img/pattern-60.svg); polygon-pattern-transform: "rotate(90)"}
-      [orientation > 340 ] { polygon-pattern-file: url(../img/pattern-90.svg); polygon-pattern-transform: "rotate(90)"}
+      [orientation > 320 ] { polygon-pattern-file: url(../img/pattern-50.svg); polygon-pattern-transform: "rotate(90)"}
+      /*[orientation > 330 ] { polygon-pattern-file: url(../img/pattern-60.svg); polygon-pattern-transform: "rotate(90)"}*/
+      [orientation > 340 ] { polygon-pattern-file: url(../img/pattern-70.svg); polygon-pattern-transform: "rotate(90)"}
+      [orientation > 350 ] { polygon-pattern-file: url(../img/pattern-80.svg); polygon-pattern-transform: "rotate(90)"}
       polygon-pattern-file: url(../img/pattern.svg);
       line-width: 0.5;
       line-color: @gray;
