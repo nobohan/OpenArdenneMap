@@ -169,7 +169,7 @@
     "../cartoCSS/lines.mss",
     "../cartoCSS/points.mss",
     "../cartoCSS/labels.mss",
-    "legend_label.mss"
+    "legend.mss"
   ],
   "attribution": "Data \u00a9 OpenStreetMap (and) contributors, ODbL",
   "bounds": [

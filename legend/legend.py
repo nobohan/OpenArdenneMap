@@ -10,7 +10,7 @@ from mapnik import *
 mapFile = 'legend.xml'
 
 # The mapOutput can be have different extension; png, pdf, svg, ...
-mapOutput = 'legend.svg'
+mapOutput = 'legend.pdf'
 
 map_x = 3000
 map_y = 1300
@@ -18,14 +18,6 @@ m = Map(map_x,map_y)
 load_map(m, mapFile)
 
 # Bounding box (expressed in dummy units)
-# x_center = 0
-# y_center = 0
-# delta_x = 200
-# delta_y = 200
-# xmin = x_center - delta_x/2
-# xmax = x_center + delta_x/2
-# ymin = y_center - delta_y/2
-# ymax = y_center + delta_y/2
 xmin = 0
 ymin = 0
 xmax = map_x

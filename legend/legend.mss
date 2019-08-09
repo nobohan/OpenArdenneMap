@@ -1,5 +1,3 @@
-/* TODO: Add line layer, add lines, point, and polygon in legend.geojson, add label in legend_label.mss */
-
 /* legend variables */
 
 @black : #333333;
@@ -9,9 +7,9 @@
 
 /* items definition */
 #legend_labels{
-    text-face-name:@font;
-    text-fill:@font_color;
-    text-size:@font_size;
+    text-face-name: @font;
+    text-fill: @font_color;
+    text-size: @font_size;
     text-dx: 180;
     text-dy: 0;
     text-character-spacing: 1.5;
@@ -53,15 +51,15 @@
             text-name:"'Pylône'";
         }
     }
-    [type = 'farmyard'] { text-name:"'Ferme'"; text-dy: -20; }
-    [type = 'school'] { text-name:"'École'"; text-dy: -20; }
+    [point_features = 'farm'] { text-name:"'Ferme'"; }
+    [point_features = 'school'] { text-name:"'École'"; }
     [type = 'church'] { text-name:"'Église'"; }
     [type = 'bridge'] { text-name:"'Passerelle'"; }
     [point_features = 'ruins'] { text-name:"'Ruines, site archéologique'"; }
     [point_features = 'wayside_cross'] { text-name:"'Croix'"; }
     [point_features = 'picnic_table'] { text-name:"'Table de picnic'"; }
     [type = 'fountain'] { text-name:"'Fontaine, lavoir'"; }
-    [type = 'stop_position'] {
+    [point_features = 'stop_position'] {
         ['bus' = 'yes'] {
             text-name:"'Arrêt de bus'";
         }
@@ -83,22 +81,22 @@
 
 #waterway_legend {
     [waterway_legend='river'] {
-        line-color: @blue;
+        line-color: @darkblue;
         line-width: 16;
     }
     [waterway_legend='stream'] {
-        line-color: @blue;
-        line-width: 6;
+        line-color: @darkblue;
+        line-width: 4;
     }
     [waterway_legend='ditch'] {
-        line-color: @blue;
-        line-width: 4;
+        line-color: @darkblue;
+        line-width: 3;
     }
 }
 #waterway_legend::top {
     [waterway_legend='river'] {
         line-width: 12;
-        line-color: @water;
+        line-color: @blue;
     }
 }
 
@@ -141,22 +139,50 @@
     [point_features = 'picnic_table'] {
         marker-file: url(../img/picnic.svg);
         marker-height: 12;
-        marker-allow-overlap: true; /* always render */
+        marker-allow-overlap: true;
     }
     [point_features = 'tower'], [type = 'mast'] {
         marker-file: url(../img/tower.svg);
         marker-height: 4;
-        marker-allow-overlap:true;
+        marker-allow-overlap: true;
+        text-name: "'Pyl.'";
+        text-size: @text_size_xs;
+        text-face-name: @font;
+        text-fill: @font_color;
+        text-dy: 12;
+        text-allow-overlap: true;
     }
     [point_features = 'ruins'] {
         marker-file: url(../img/ruins.svg);
         marker-height: 12;
-        marker-allow-overlap: true; /* always render */
+        marker-allow-overlap: true;
     }
     [point_features = 'wayside_cross'] {
         marker-file: url(../img/cross.svg);
-        marker-height: 18;
-        marker-allow-overlap: true; /* always render */
+        marker-height: 22;
+        marker-allow-overlap: true;
+    }
+    [point_features = 'farm'] {
+        text-name: "'Fme'";
+        text-size: @font_size;
+        text-face-name: @font;
+        text-fill: @font_color;
+    }
+    [point_features = 'school'] {
+        text-name: "'Éc.'";
+        text-size: @font_size;
+        text-face-name: @font;
+        text-fill: @font_color;
+    }
+    [point_features = 'stop_position'] {
+        text-name: "'Bus'";
+        text-size: @text_size_xs;
+        text-face-name: @font;
+        text-fill: @font_color;
+        text-dy: 12;
+        marker-file: url(../img/bus.svg);
+        marker-height: 12;
+        marker-allow-overlap: true;
     }
 
 }
