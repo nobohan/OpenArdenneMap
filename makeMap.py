@@ -3,11 +3,11 @@
 import math
 from mapnik import Map, Envelope, render_to_file, load_map
 
-PAGE_FORMAT = 'A4'
+PAGE_FORMAT = 'A0'
 PAGES = (4, 3, 2, 1, 0)
 
-X_CENTER = 616167
-Y_CENTER = 6398834
+X_CENTER = 622000
+Y_CENTER = 6406000
 LATITUDE = 50 # in degrees
 
 # The mapFile is generated using carto from cartoCSS files.

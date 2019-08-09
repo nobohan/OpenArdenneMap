@@ -1,0 +1,189 @@
+
+{
+  "Layer": [
+    {
+      "Datasource": {
+        "type": "geojson",
+        "file": "legend.geojson"
+      },
+      "geometry": "polygon",
+      "name": "landuse",
+      "id": "landuse",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "type": "geojson",
+        "file": "legend.geojson"
+      },
+      "geometry": "polygon",
+      "name": "legend_labels",
+      "id": "legend_labels",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "type": "geojson",
+        "file": "legend.geojson"
+      },
+      "geometry": "polygon",
+      "name": "water_legend",
+      "id": "water_legend",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "type": "geojson",
+        "file": "legend.geojson"
+      },
+      "geometry": "polygon",
+      "name": "buildings_legend",
+      "id": "buildings_legend",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "type": "geojson",
+        "file": "legend.geojson"
+      },
+      "geometry": "polygon",
+      "name": "bridge_symbol_legend",
+      "id": "bridge_symbol_legend",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "type": "geojson",
+        "file": "legend.geojson"
+      },
+      "geometry": "polygon",
+      "name": "landuse_overlays",
+      "id": "landuse_overlays",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "type": "geojson",
+        "file": "legend.geojson"
+      },
+      "geometry": "polygon",
+      "name": "area_label",
+      "id": "area_label",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "type": "geojson",
+        "file": "legend.geojson"
+      },
+      "geometry": "polygon",
+      "name": "extralandusages",
+      "id": "extralandusages",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "type": "geojson",
+        "file": "legend.geojson"
+      },
+      "geometry": "linestring",
+      "name": "roads",
+      "id": "roads",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "type": "geojson",
+        "file": "legend.geojson"
+      },
+      "geometry": "linestring",
+      "name": "linear_features",
+      "id": "linear_features",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "type": "geojson",
+        "file": "legend.geojson"
+      },
+      "geometry": "linestring",
+      "name": "contour",
+      "id": "contour",
+      "status": "off"
+    },
+    {
+      "Datasource": {
+        "type": "geojson",
+        "file": "legend.geojson"
+      },
+      "geometry": "linestring",
+      "name": "waterway",
+      "id": "waterway",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "type": "geojson",
+        "file": "legend.geojson"
+      },
+      "geometry": "linestring",
+      "name": "waterway_legend",
+      "id": "waterway_legend",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "type": "geojson",
+        "file": "legend.geojson"
+      },
+      "geometry": "point",
+      "name": "point_features",
+      "id": "point_features",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "type": "geojson",
+        "file": "legend.geojson"
+      },
+      "geometry": "linestring",
+      "name": "line_features",
+      "id": "line_features",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "type": "geojson",
+        "file": "legend.geojson"
+      },
+      "geometry": "point",
+      "name": "place_legend",
+      "id": "place_legend",
+      "status": "on"
+    }
+  ],
+  "Stylesheet": [
+    "../cartoCSS/palette.mss",
+    "../cartoCSS/scales.mss",
+    "../cartoCSS/base.mss",
+    "../cartoCSS/lines.mss",
+    "../cartoCSS/points.mss",
+    "../cartoCSS/labels.mss",
+    "legend_label.mss"
+  ],
+  "attribution": "Data \u00a9 OpenStreetMap (and) contributors, ODbL",
+  "bounds": [
+    -1,
+    -1,
+    1,
+    1
+  ],
+  "center": [
+    0,
+    0,
+    0
+  ],
+  "format": "png",
+  "interactivity": false,
+  "name": "OpenArdenneMap legend"
+ }
