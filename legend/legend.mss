@@ -28,7 +28,7 @@
     [type='camp_site'] { text-name:"'Camping'";}
     [waterway_legend='river'] {text-name: "'Rivière'";}
     [waterway_legend='stream'] {text-name: "'Ruisseau'";}
-    [waterway_legend='drain'] {text-name: "'Fossé'";}
+    [waterway_legend='ditch'] {text-name: "'Fossé'";}
     [type='wetland'] { text-name:"'Zone humide'";}
     [type='water'] { text-name:"'Étang, lac'";}
     [line='hedge'] {text-name:"'Haie'";}
@@ -82,20 +82,20 @@
 #waterway_legend {
     [waterway_legend='river'] {
         line-color: @darkblue;
-        line-width: 16;
+        line-width: 12;
     }
     [waterway_legend='stream'] {
         line-color: @darkblue;
-        line-width: 4;
+        line-width: 3;
     }
     [waterway_legend='ditch'] {
         line-color: @darkblue;
-        line-width: 3;
+        line-width: 2;
     }
 }
 #waterway_legend::top {
     [waterway_legend='river'] {
-        line-width: 12;
+        line-width: 9;
         line-color: @blue;
     }
 }
