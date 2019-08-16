@@ -14,7 +14,7 @@ mapOutput = 'legend.pdf'
 
 map_x = 3000
 map_y = 1300
-m = Map(map_x,map_y)
+m = Map(int(map_x*0.7), int(map_y*0.7))
 load_map(m, mapFile)
 
 # Bounding box (expressed in dummy units)

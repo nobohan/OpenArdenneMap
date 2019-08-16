@@ -1,7 +1,7 @@
 /* legend variables */
 
 @black : #333333;
-@font_size : 36;
+@font_size : 26;
 @font_color: @black;
 @font: @sans;
 
@@ -10,7 +10,7 @@
     text-face-name: @font;
     text-fill: @font_color;
     text-size: @font_size;
-    text-dx: 180;
+    text-dx: 120;
     text-dy: 0;
     text-character-spacing: 1.5;
     text-allow-overlap: false;
@@ -22,7 +22,7 @@
     [type='farmland'] { text-name:"'Terre cultivée'";}
     [type='meadow'] { text-name:"'Prairie'";}
     [type='orchard'] { text-name:"'Verger'";}
-    [type='christmas_trees'] { text-name:"'Sapins de Noël'";}
+    [trees='christmas_trees'] { text-name:"'Sapins de Noël'";}
     [type='industrial'] { text-name:"'Zone industrielle'";}
     [type='cemetery'] { text-name:"'Cimetière'";}
     [type='camp_site'] { text-name:"'Camping'";}
@@ -33,8 +33,8 @@
     [type='water'] { text-name:"'Étang, lac'";}
     [line='hedge'] {text-name:"'Haie'";}
     [line='line'] {text-name:"'Ligne électrique'"; text-allow-overlap: true;}
-    [type='embankment'] {text-name:"'Talus'";}
-    [type='cliff'] {text-name:"'Falaise, rochers'";}
+    [line='embankment'] {text-name:"'Talus'";}
+    [line='cliff'] {text-name:"'Falaise, rochers'";}
     [type='motorway'] { text-name: "'Autoroute'"}
     [type='primary'] { text-name: "'Route primaire'"}
     [type='secondary'] { text-name: "'Route secondaire'"}
@@ -44,7 +44,7 @@
     [tracktype='grade3'] { text-name: "'Chemin moyen'"}
     [tracktype='grade5'] { text-name: "'Mauvais chemin'"}
     [stylegroup='noauto'] { text-name: "'Sentier'"}
-    [type='cutline'] { text-name: "'Coupe-feu'"}
+    [line='cutline'] { text-name: "'Coupe-feu'"}
     [stylegroup='railway'] { text-name: "'Voie ferrée'"}
     [point_features = 'tower'] {
         ['tower_type' = 'communication'] {
@@ -58,7 +58,7 @@
     [point_features = 'ruins'] { text-name:"'Ruines, site archéologique'"; }
     [point_features = 'wayside_cross'] { text-name:"'Croix'"; }
     [point_features = 'picnic_table'] { text-name:"'Table de picnic'"; }
-    [type = 'fountain'] { text-name:"'Fontaine, lavoir'"; }
+    [point_features = 'fountain'] { text-name:"'Fontaine, lavoir'"; }
     [point_features = 'stop_position'] {
         ['bus' = 'yes'] {
             text-name:"'Arrêt de bus'";
@@ -123,22 +123,33 @@
     }
 }
 
-#line_features {
-  [line = 'hedge'] {
-    line-color: darken(@green,30%);
-    line-dasharray: 3,5;
-    line-width: 4;
-  }
-  [line = 'line'] {
-    line-color: @black;
-    line-width: 4;
-  }
+#line_features_legend {
+    [line = 'hedge'] {
+        line-color: darken(@green,30%);
+        line-dasharray: 3, 5;
+        line-width: 3;
+    }
+    [line = 'line'] {
+        line-color: @black;
+        line-width: 3;
+    }
+    [line = 'cutline'] {
+        line-width: 2;
+        line-dasharray: 25, 15;
+        line-color: @black;
+    }
+    [line = 'embankment'] {
+        line-pattern-file: url(../img/embankment.svg);
+    }
+    [line = 'cliff'] {
+        line-pattern-file: url(../img/cliff.svg);
+    }
 }
 
 #point_features {
     [point_features = 'picnic_table'] {
         marker-file: url(../img/picnic.svg);
-        marker-height: 12;
+        marker-height: 10;
         marker-allow-overlap: true;
     }
     [point_features = 'tower'], [type = 'mast'] {
@@ -149,17 +160,17 @@
         text-size: @text_size_xs;
         text-face-name: @font;
         text-fill: @font_color;
-        text-dy: 12;
+        text-dy: 8;
         text-allow-overlap: true;
     }
     [point_features = 'ruins'] {
         marker-file: url(../img/ruins.svg);
-        marker-height: 12;
+        marker-height: 10;
         marker-allow-overlap: true;
     }
     [point_features = 'wayside_cross'] {
         marker-file: url(../img/cross.svg);
-        marker-height: 22;
+        marker-height: 18;
         marker-allow-overlap: true;
     }
     [point_features = 'farm'] {
@@ -179,10 +190,23 @@
         text-size: @text_size_xs;
         text-face-name: @font;
         text-fill: @font_color;
-        text-dy: 12;
+        text-dy: 8;
         marker-file: url(../img/bus.svg);
-        marker-height: 12;
+        marker-height: 10;
         marker-allow-overlap: true;
+    }
+    [point_features = 'fountain'] {
+        marker-file: url(../img/fountain.svg);
+        marker-allow-overlap: true;
+        marker-height: 10;
+        text-name:"'Font.'";
+        text-face-name: @sans;
+        text-placement: point;
+        text-fill: @darkblue;
+        text-size: @text_size_xs;
+        text-character-spacing: 2;
+        text-line-spacing: 2;
+        text-dy: -16;
     }
 
 }
@@ -195,14 +219,14 @@
     text-character-spacing: 2;
     [type='city'] {
         text-name: "Bastogne";
-        text-size: 70;
+        text-size: @font_size*2;
     }
     [type='village'] {
         text-name: "Wisembach";
-        text-size: 52;
+        text-size: @font_size*1.5;
     }
     [type='hamlet'] {
         text-name: "'Hoûte-si-Ploût'";
-        text-size: 36;
+        text-size: @font_size;
     }
 }

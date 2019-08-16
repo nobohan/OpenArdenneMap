@@ -97,26 +97,6 @@
         "file": "legend.geojson"
       },
       "geometry": "linestring",
-      "name": "linear_features",
-      "id": "linear_features",
-      "status": "on"
-    },
-    {
-      "Datasource": {
-        "type": "geojson",
-        "file": "legend.geojson"
-      },
-      "geometry": "linestring",
-      "name": "contour",
-      "id": "contour",
-      "status": "off"
-    },
-    {
-      "Datasource": {
-        "type": "geojson",
-        "file": "legend.geojson"
-      },
-      "geometry": "linestring",
       "name": "waterway",
       "id": "waterway",
       "status": "on"
@@ -147,8 +127,8 @@
         "file": "legend.geojson"
       },
       "geometry": "linestring",
-      "name": "line_features",
-      "id": "line_features",
+      "name": "line_features_legend",
+      "id": "line_features_legend",
       "status": "on"
     },
     {
