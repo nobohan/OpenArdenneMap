@@ -132,7 +132,7 @@ GROUP BY name, highway
 
 This last map has "lost" some labels because of the adjacent street merging. If you still want some repetitions of labels, then you can set the `text-repeat-distance` parameter for repeating the labels and having full control on it.
 
-# Mixing the rules
+## Mixing the rules
 
 A nice render can be achieved when mixing the above-mentioned properties and especially by setting rules based on the street length.
 
@@ -147,17 +147,16 @@ For instance, the following lines set 5 different street labeling behaviours bas
   text-halo-fill: #ffffff;
   text-halo-radius: 6;
   text-allow-overlap: true;
+  text-max-char-angle-delta: 70;
   [length <= 100] {
     text-name: '[very_short_name]';
     text-wrap-width: 20;
     text-size: @text_size_xxs;
-    text-max-char-angle-delta: 50;
   }
   [length > 100] {
     text-name: '[very_short_name]';
     text-wrap-width: 100;
     text-size: @text_size_xxs;
-    text-max-char-angle-delta: 50;
   }
   [length > 150]{
     text-name: '[short_name]';
@@ -169,7 +168,7 @@ For instance, the following lines set 5 different street labeling behaviours bas
     text-wrap-width: 200;
     text-size: @text_size_xs;
   }
-  [length > 1000]{
+  [length > 1800]{
     text-name: '[name]';
     text-wrap-width: 600;
     text-size: @text_size_s;
@@ -187,7 +186,7 @@ where `[short_name]` is an abbreviated name and `[very_short_name]` an even more
 
 * Decrease the `text-character-spacing` will also condense your text labels, and so could help to place more labels. However, the default is already the smallest value.
 
-* Use "text-simplify". You can use this parameter to simplify the geometry that is labeled. It seems it can have a (limited) effect on the label placement: some labels have disappeared and some others appeared when testing this parameter.
+* Use `text-simplify`. You can use this parameter to simplify the geometry that is labeled. It seems it can have a (limited) effect on the label placement: some labels have disappeared and some others appeared when testing this parameter.
 
 * `text-repeat-distance` is very useful when making rules based on the length of the street. Put some values (in pixels) to increase the distance between two labels when labels are repeated along a same feature.
 
