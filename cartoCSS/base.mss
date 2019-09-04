@@ -9,7 +9,7 @@
 Map { background-color: @white; }
 
 /* ================================================================== */
-/* CONTOUR
+/* ELEVATION
 /* ================================================================== */
 
 #contour  {
@@ -18,6 +18,10 @@ Map { background-color: @white; }
   [main="yes"] {line-width: 2;}
 }
 
+#hillshade {
+    raster-opacity: 0.15;
+    raster-comp-op: grain-merge;
+}
 
 /* ================================================================== */
 /* LANDUSE & LANDCOVER

@@ -17,37 +17,54 @@
   </FontSet>
   <Style filter-mode="first" name="landuse-base">
     <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 350) and ([trees] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-80.svg" transform="rotate(90)" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 350) and ([produce] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-80.svg" transform="rotate(90)" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 350)]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-80.svg" transform="rotate(90)" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 340) and ([trees] = 'christmas_trees')]]></Filter>
-      <PolygonPatternSymbolizer file="../img/pattern-90.svg" transform="rotate(90)" />
+      <PolygonPatternSymbolizer file="../img/pattern-70.svg" transform="rotate(90)" />
       <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 340) and ([produce] = 'christmas_trees')]]></Filter>
-      <PolygonPatternSymbolizer file="../img/pattern-90.svg" transform="rotate(90)" />
+      <PolygonPatternSymbolizer file="../img/pattern-70.svg" transform="rotate(90)" />
       <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 340)]]></Filter>
-      <PolygonPatternSymbolizer file="../img/pattern-90.svg" transform="rotate(90)" />
+      <PolygonPatternSymbolizer file="../img/pattern-70.svg" transform="rotate(90)" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 330) and ([trees] = 'christmas_trees')]]></Filter>
-      <PolygonPatternSymbolizer file="../img/pattern-60.svg" transform="rotate(90)" />
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 320) and ([trees] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-50.svg" transform="rotate(90)" />
       <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 330) and ([produce] = 'christmas_trees')]]></Filter>
-      <PolygonPatternSymbolizer file="../img/pattern-60.svg" transform="rotate(90)" />
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 320) and ([produce] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-50.svg" transform="rotate(90)" />
       <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 330)]]></Filter>
-      <PolygonPatternSymbolizer file="../img/pattern-60.svg" transform="rotate(90)" />
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 320)]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-50.svg" transform="rotate(90)" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -68,20 +85,54 @@
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 280) and ([trees] = 'christmas_trees')]]></Filter>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 300) and ([trees] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-30.svg" transform="rotate(90)" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 300) and ([produce] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-30.svg" transform="rotate(90)" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 300)]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-30.svg" transform="rotate(90)" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 290) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-20.svg" transform="rotate(90)" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 290) and ([produce] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-20.svg" transform="rotate(90)" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 290)]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-20.svg" transform="rotate(90)" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 280) and ([trees] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-10.svg" transform="rotate(90)" />
       <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 280) and ([produce] = 'christmas_trees')]]></Filter>
-      <PolygonPatternSymbolizer file="../img/pattern-20.svg" transform="rotate(90)" />
+      <PolygonPatternSymbolizer file="../img/pattern-10.svg" transform="rotate(90)" />
       <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 280)]]></Filter>
-      <PolygonPatternSymbolizer file="../img/pattern-20.svg" transform="rotate(90)" />
+      <PolygonPatternSymbolizer file="../img/pattern-10.svg" transform="rotate(90)" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -119,6 +170,23 @@
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 250) and ([trees] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-70.svg" transform="rotate(90)" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 250) and ([produce] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-70.svg" transform="rotate(90)" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 250)]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-70.svg" transform="rotate(90)" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 240) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-60.svg" transform="rotate(90)" />
       <PolygonSymbolizer fill="#698785" />
@@ -133,6 +201,23 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 240)]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-60.svg" transform="rotate(90)" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 230) and ([trees] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-50.svg" transform="rotate(90)" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 230) and ([produce] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-50.svg" transform="rotate(90)" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 230)]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-50.svg" transform="rotate(90)" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -153,6 +238,23 @@
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 210) and ([trees] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-30.svg" transform="rotate(90)" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 210) and ([produce] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-30.svg" transform="rotate(90)" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 210)]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-30.svg" transform="rotate(90)" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 200) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-20.svg" transform="rotate(90)" />
       <PolygonSymbolizer fill="#698785" />
@@ -167,6 +269,23 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 200)]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-20.svg" transform="rotate(90)" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 190) and ([trees] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-10.svg" transform="rotate(90)" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 190) and ([produce] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-10.svg" transform="rotate(90)" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 190)]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-10.svg" transform="rotate(90)" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -204,20 +323,37 @@
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 150) and ([trees] = 'christmas_trees')]]></Filter>
-      <PolygonPatternSymbolizer file="../img/pattern-60.svg" transform="rotate(90)" />
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 160) and ([trees] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-70.svg" transform="rotate(90)" />
       <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 150) and ([produce] = 'christmas_trees')]]></Filter>
-      <PolygonPatternSymbolizer file="../img/pattern-60.svg" transform="rotate(90)" />
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 160) and ([produce] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-70.svg" transform="rotate(90)" />
       <PolygonSymbolizer fill="#698785" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 150)]]></Filter>
-      <PolygonPatternSymbolizer file="../img/pattern-60.svg" transform="rotate(90)" />
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 160)]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-70.svg" transform="rotate(90)" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 140) and ([trees] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-50.svg" transform="rotate(90)" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 140) and ([produce] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-50.svg" transform="rotate(90)" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 140)]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-50.svg" transform="rotate(90)" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -238,6 +374,23 @@
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 120) and ([trees] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-30.svg" transform="rotate(90)" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 120) and ([produce] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-30.svg" transform="rotate(90)" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 120)]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-30.svg" transform="rotate(90)" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 110) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-20.svg" transform="rotate(90)" />
       <PolygonSymbolizer fill="#698785" />
@@ -252,6 +405,23 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 110)]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-20.svg" transform="rotate(90)" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 100) and ([trees] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-10.svg" transform="rotate(90)" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 100) and ([produce] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-10.svg" transform="rotate(90)" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 100)]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-10.svg" transform="rotate(90)" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -289,6 +459,23 @@
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 70) and ([trees] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-70.svg" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 70) and ([produce] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-70.svg" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 70)]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-70.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 60) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-60.svg" />
       <PolygonSymbolizer fill="#698785" />
@@ -306,6 +493,23 @@
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 50) and ([trees] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-50.svg" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 50) and ([produce] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-50.svg" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 50)]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-50.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 40) and ([trees] = 'christmas_trees')]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-40.svg" />
       <PolygonSymbolizer fill="#698785" />
@@ -320,6 +524,23 @@
     <Rule>
       <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 40)]]></Filter>
       <PolygonPatternSymbolizer file="../img/pattern-40.svg" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 30) and ([trees] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-30.svg" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 30) and ([produce] = 'christmas_trees')]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-30.svg" />
+      <PolygonSymbolizer fill="#698785" />
+      <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'farmland') and ([orientation] > 30)]]></Filter>
+      <PolygonPatternSymbolizer file="../img/pattern-30.svg" />
       <LineSymbolizer stroke="#bbbbbb" stroke-width="0.5" />
     </Rule>
     <Rule>
@@ -576,19 +797,32 @@
     <StyleName><![CDATA[landuse-base]]></StyleName>
     <Datasource>
       <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="host"><![CDATA[db]]></Parameter>
-      <Parameter name="user"><![CDATA[osmpg]]></Parameter>
       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
       <Parameter name="id"><![CDATA[landuse]]></Parameter>
+      <Parameter name="key_field"><![CDATA[]]></Parameter>
       <Parameter name="project"><![CDATA[OpenArdenneMap]]></Parameter>
       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
-      <Parameter name="table"><![CDATA[( SELECT way, leaf_type, leaf_cycle, trees, produce, way_area AS area, CAST(degrees(ST_Azimuth(ST_Centroid(l.way), ST_Centroid(ST_SimplifyPreserveTopology(l.way, 100)))) AS NUMERIC) AS orientation,
+      <Parameter name="table"><![CDATA[( SELECT way, leaf_type, leaf_cycle, trees, produce, way_area AS area,
+ CAST(degrees(ST_Azimuth(ST_Centroid(l.way), ST_Centroid(ST_SimplifyPreserveTopology(l.way, 100)))) AS VARCHAR(255)) AS orientation,
  COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type
-  FROM planet_osm_polygon AS l 
+  FROM planet_osm_polygon AS l
   ORDER BY way_area DESC
 ) AS data]]></Parameter>
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+  <Style filter-mode="first" name="hillshade">
+    <Rule>
+      <RasterSymbolizer comp-op="grain-merge" opacity="0.15" />
+    </Rule>
+  </Style>
+  <Layer name="hillshade" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" status="on">
+    <StyleName><![CDATA[hillshade]]></StyleName>
+    <Datasource>
+      <Parameter name="file"><![CDATA[../../../Orval/MNT/qgis_hillshade_3857.tif]]></Parameter>
+      <Parameter name="id"><![CDATA[hillshade]]></Parameter>
+      <Parameter name="type"><![CDATA[gdal]]></Parameter>
     </Datasource>
   </Layer>
   <Style filter-mode="first" name="contour">
@@ -601,11 +835,11 @@
       <LineSymbolizer stroke="#bbbbbb" stroke-width="1" />
     </Rule>
   </Style>
-  <Layer name="contour" srs="+proj=lcc +lat_1=51.16666723333333 +lat_2=49.8333339 +lat_0=90 +lon_0=4.367486666666666 +x_0=150000.013 +y_0=5400088.438 +ellps=intl +towgs84=-106.869,52.2978,-103.724,0.3366,-0.457,1.8422,-1.2747 +units=m +no_defs" status="on">
+  <Layer name="contour" srs="+proj=lcc +lat_1=51.16666723333333 +lat_2=49.8333339 +lat_0=90 +lon_0=4.367486666666666 +x_0=150000.013 +y_0=5400088.438 +ellps=intl +towgs84=-106.869,52.2978,-103.724,0.3366,-0.457,1.8422,-1.2747 +units=m +no_defs" status="off">
     <StyleName><![CDATA[contour]]></StyleName>
     <Datasource>
       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
-      <Parameter name="file"><![CDATA[../contour/contour_orval.shp]]></Parameter>
+      <Parameter name="file"><![CDATA[../../../Orval/contour_orval.shp]]></Parameter>
       <Parameter name="id"><![CDATA[contour]]></Parameter>
       <Parameter name="srs"><![CDATA[+proj=lcc +lat_1=51.16666723333333 +lat_2=49.8333339 +lat_0=90 +lon_0=4.367486666666666 +x_0=150000.013 +y_0=5400088.438 +ellps=intl +towgs84=-106.869,52.2978,-103.724,0.3366,-0.457,1.8422,-1.2747 +units=m +no_defs]]></Parameter>
       <Parameter name="type"><![CDATA[shape]]></Parameter>
@@ -625,10 +859,9 @@
     <StyleName><![CDATA[boundaries]]></StyleName>
     <Datasource>
       <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="host"><![CDATA[db]]></Parameter>
-      <Parameter name="user"><![CDATA[osmpg]]></Parameter>
       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+      <Parameter name="key_field"><![CDATA[]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT way, admin_level
   FROM planet_osm_line
   WHERE boundary IN ('administrative')
@@ -669,10 +902,9 @@
     <StyleName><![CDATA[waterway-top]]></StyleName>
     <Datasource>
       <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="host"><![CDATA[db]]></Parameter>
-      <Parameter name="user"><![CDATA[osmpg]]></Parameter>
       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+      <Parameter name="key_field"><![CDATA[]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT way, waterway AS type
   FROM planet_osm_line
   WHERE waterway IN ('river', 'canal', 'stream', 'ditch', 'drain')
@@ -690,11 +922,10 @@
     <StyleName><![CDATA[water]]></StyleName>
     <Datasource>
       <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="host"><![CDATA[db]]></Parameter>
-      <Parameter name="user"><![CDATA[osmpg]]></Parameter>
       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
       <Parameter name="id"><![CDATA[water]]></Parameter>
+      <Parameter name="key_field"><![CDATA[]]></Parameter>
       <Parameter name="project"><![CDATA[OpenArdenneMap]]></Parameter>
       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT way, way_area AS area
@@ -720,11 +951,10 @@
     <StyleName><![CDATA[landuse_overlays]]></StyleName>
     <Datasource>
       <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="host"><![CDATA[db]]></Parameter>
-      <Parameter name="user"><![CDATA[osmpg]]></Parameter>
       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
       <Parameter name="id"><![CDATA[landuse_overlays]]></Parameter>
+      <Parameter name="key_field"><![CDATA[]]></Parameter>
       <Parameter name="project"><![CDATA[OpenArdenneMap]]></Parameter>
       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT way, way_area AS area, COALESCE(leisure, "natural") AS type
@@ -752,11 +982,10 @@
     <StyleName><![CDATA[aeroway]]></StyleName>
     <Datasource>
       <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="host"><![CDATA[db]]></Parameter>
-      <Parameter name="user"><![CDATA[osmpg]]></Parameter>
       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
       <Parameter name="id"><![CDATA[aeroway]]></Parameter>
+      <Parameter name="key_field"><![CDATA[]]></Parameter>
       <Parameter name="project"><![CDATA[OpenArdenneMap]]></Parameter>
       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT way, aeroway AS type
@@ -2784,11 +3013,10 @@
     <StyleName><![CDATA[tunnel]]></StyleName>
     <Datasource>
       <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="host"><![CDATA[db]]></Parameter>
-      <Parameter name="user"><![CDATA[osmpg]]></Parameter>
       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
       <Parameter name="id"><![CDATA[tunnel]]></Parameter>
+      <Parameter name="key_field"><![CDATA[]]></Parameter>
       <Parameter name="project"><![CDATA[OpenArdenneMap]]></Parameter>
       <Parameter name="srs"></Parameter>
       <Parameter name="table"><![CDATA[( SELECT way, COALESCE(highway, railway) AS type, 0 AS bridge, access, render, layer, tracktype, 1 as tunnel,
@@ -4849,10 +5077,9 @@
     <StyleName><![CDATA[roads-top]]></StyleName>
     <Datasource>
       <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="host"><![CDATA[db]]></Parameter>
-      <Parameter name="user"><![CDATA[osmpg]]></Parameter>
       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+      <Parameter name="key_field"><![CDATA[]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT way, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, tracktype, access, 'fill' AS render,
   CASE
     WHEN highway IN ('motorway', 'trunk') THEN 'motorway'
@@ -6889,11 +7116,10 @@
     <StyleName><![CDATA[bridge]]></StyleName>
     <Datasource>
       <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="host"><![CDATA[db]]></Parameter>
-      <Parameter name="user"><![CDATA[osmpg]]></Parameter>
       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
       <Parameter name="id"><![CDATA[bridge]]></Parameter>
+      <Parameter name="key_field"><![CDATA[]]></Parameter>
       <Parameter name="project"><![CDATA[OpenArdenneMap]]></Parameter>
       <Parameter name="srs"></Parameter>
       <Parameter name="table"><![CDATA[( SELECT way, COALESCE(highway, railway) AS type, 1 AS bridge, access, render, layer, tracktype, 0 as tunnel,
@@ -6929,8 +7155,6 @@
     <StyleName><![CDATA[bridge_symbol]]></StyleName>
     <Datasource>
       <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="host"><![CDATA[db]]></Parameter>
-      <Parameter name="user"><![CDATA[osmpg]]></Parameter>
       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
       <Parameter name="id"><![CDATA[bridge_symbol]]></Parameter>
@@ -6952,10 +7176,9 @@
     <StyleName><![CDATA[buildings]]></StyleName>
     <Datasource>
       <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="host"><![CDATA[db]]></Parameter>
-      <Parameter name="user"><![CDATA[osmpg]]></Parameter>
       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+      <Parameter name="key_field"><![CDATA[]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT way, "building" AS type
   FROM planet_osm_polygon
   WHERE building NOT IN ('', '0','false', 'no')
@@ -6978,8 +7201,6 @@
     <StyleName><![CDATA[rotated_buildings]]></StyleName>
     <Datasource>
       <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="host"><![CDATA[db]]></Parameter>
-      <Parameter name="user"><![CDATA[osmpg]]></Parameter>
       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT way, building, name, CAST(degrees(ST_Azimuth(ST_Centroid(l.way),ST_Centroid(ST_SimplifyPreserveTopology(l.way,100)))) AS VARCHAR(255)) AS orientation, area
@@ -7019,8 +7240,6 @@
     <StyleName><![CDATA[linear_features]]></StyleName>
     <Datasource>
       <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="host"><![CDATA[db]]></Parameter>
-      <Parameter name="user"><![CDATA[osmpg]]></Parameter>
       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
       <Parameter name="id"><![CDATA[linear_features]]></Parameter>
@@ -7327,8 +7546,6 @@
     <StyleName><![CDATA[point_features]]></StyleName>
     <Datasource>
       <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="host"><![CDATA[db]]></Parameter>
-      <Parameter name="user"><![CDATA[osmpg]]></Parameter>
       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
       <Parameter name="id"><![CDATA[point_features]]></Parameter>
@@ -7354,8 +7571,6 @@
     <StyleName><![CDATA[pitch]]></StyleName>
     <Datasource>
       <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="host"><![CDATA[db]]></Parameter>
-      <Parameter name="user"><![CDATA[osmpg]]></Parameter>
       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
       <Parameter name="id"><![CDATA[pitch]]></Parameter>
@@ -7420,11 +7635,10 @@
     <StyleName><![CDATA[place-small]]></StyleName>
     <Datasource>
       <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="host"><![CDATA[db]]></Parameter>
-      <Parameter name="user"><![CDATA[osmpg]]></Parameter>
       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
       <Parameter name="id"><![CDATA[place]]></Parameter>
+      <Parameter name="key_field"><![CDATA[]]></Parameter>
       <Parameter name="project"><![CDATA[OpenArdenneMap]]></Parameter>
       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT way, place AS type, name, z_order, population
@@ -7484,11 +7698,10 @@
     <StyleName><![CDATA[area_label]]></StyleName>
     <Datasource>
       <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="host"><![CDATA[db]]></Parameter>
-      <Parameter name="user"><![CDATA[osmpg]]></Parameter>
       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
       <Parameter name="id"><![CDATA[landuse_label]]></Parameter>
+      <Parameter name="key_field"><![CDATA[]]></Parameter>
       <Parameter name="project"><![CDATA[OpenArdenneMap]]></Parameter>
       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type,
@@ -7531,11 +7744,10 @@
     <StyleName><![CDATA[waterway_label]]></StyleName>
     <Datasource>
       <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="host"><![CDATA[db]]></Parameter>
-      <Parameter name="user"><![CDATA[osmpg]]></Parameter>
       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
       <Parameter name="id"><![CDATA[waterway_label]]></Parameter>
+      <Parameter name="key_field"><![CDATA[]]></Parameter>
       <Parameter name="project"><![CDATA[OpenArdenneMap]]></Parameter>
       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT way, waterway AS type, name
@@ -7560,10 +7772,9 @@
     <StyleName><![CDATA[train_elements]]></StyleName>
     <Datasource>
       <Parameter name="dbname"><![CDATA[osmpg_db]]></Parameter>
-      <Parameter name="host"><![CDATA[db]]></Parameter>
-      <Parameter name="user"><![CDATA[osmpg]]></Parameter>
       <Parameter name="extent"><![CDATA[-20037508.34,-20037508.34,20037508.34,20037508.34]]></Parameter>
       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+      <Parameter name="key_field"><![CDATA[]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT way, railway AS type, name, z_order 
   FROM planet_osm_point 
   WHERE railway IN ('station', 'level_crossing') 
