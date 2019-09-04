@@ -132,7 +132,7 @@
       "name": "grid",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "on"
+      "status": "off"
     },
     {
       "Datasource": {
@@ -397,7 +397,7 @@
             WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'
             ELSE 'other'
           END AS stylegroup,
-          replace(replace(replace(replace(replace(name, 'Saint', 'St'), 'Chemin', 'Ch.'), 'Place', 'Pl.'), 'Avenue', 'Av.'), 'Boulevard', 'Bd.')
+          replace(replace(replace(replace(replace(replace(name,'Rue', 'R.'), 'Saint', 'St'), 'Chemin', 'Ch.'), 'Place', 'Pl.'), 'Avenue', 'Av.'), 'Boulevard', 'Bd.')
           AS short_name,
           replace(replace(replace(replace(replace(replace(replace(name, 'Place de la Résistance', 'P. Résistance'), 'Rue', 'R.'), 'Saint', 'St'), 'Chemin', 'Ch.'), 'Place', 'Pl.'), 'Avenue', 'Av.'), 'Boulevard', 'Bd.')
           AS very_short_name
@@ -415,8 +415,8 @@
       "name": "street_label",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "clear-label-cache": "on",
-      "status": "on"
+      "status": "on",
+      "properties": {"clear-label-cache": "on"}
     },
     {
       "Datasource": {
@@ -436,7 +436,7 @@
       "name": "place",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "on"
+      "status": "off"
     },
     {
       "Datasource": {

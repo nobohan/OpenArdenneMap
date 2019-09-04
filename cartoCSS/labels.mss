@@ -42,89 +42,41 @@
 /* ================================================================== */
 
 #street_label {
-  text-name: '[name]';
+  text-name:'[very_short_name]';
   text-face-name: @sans;
+  text-size: @text_size_xxs;
   text-placement: line;
-  text-character-spacing: 2;
-  text-line-spacing: 1;
-  text-fill: @road_text;
   text-halo-fill: #ffffff;
   text-halo-radius: 6;
   text-allow-overlap: true;
-  text-size: @text_size_s;
-  text-line-spacing: 25;
-  [stylegroup = "mainroad"] {
-    text-transform: uppercase;
-    text-size: @text_size_s*0.8
+  text-max-char-angle-delta: 70;
+  [length <= 100] {
+    text-name: '[very_short_name]';
+    text-wrap-width: 20;
+    text-size: @text_size_xxs;
   }
-  [stylegroup = "noauto"], [stylegroup = "service"] {
-    text-dy: 14;
-    text-size: @text_size_s*0.8;
-    text-wrap-width: 800;
+  [length > 100] {
+    text-name: '[very_short_name]';
+    text-wrap-width: 100;
+    text-size: @text_size_xxs;
   }
-  [stylegroup = "noauto"] {
-    text-dy: 10;
+  [length > 150]{
+    text-name: '[short_name]';
+    text-wrap-width: 100;
+    text-size: @text_size_xs;
   }
-
-  /* Low scale maps (global map) */
-  [zoom <= 17]{
-    [length <= 1000]{
-      text-name: '[short_name]';
-      text-wrap-width: 100;
-      text-character-spacing: 0.1;
-    }
-    [length > 1000]{
-      text-name: '[name]';
-      text-wrap-width: 400;
-      text-character-spacing: 6;
-      text-spacing: 900;
-    }
+  [length > 400]{
+    text-name: '[short_name]';
+    text-wrap-width: 200;
+    text-size: @text_size_xs;
   }
-
-
-  /* High scale maps (Mini-maps) */
-  [zoom > 17]{
-    [length <= 100] {
-      text-name: '[very_short_name]';
-      text-wrap-width: 20;
-      text-character-spacing: 0.1;
-      text-size: @text_size_xs;
-      text-max-char-angle-delta: 50;
-    }
-    [length > 100] {
-      text-name: '[very_short_name]';
-      text-wrap-width: 110;
-      text-character-spacing: 0.1;
-      text-size: @text_size_xs;
-      text-max-char-angle-delta: 50;
-    }
-    [length > 150]{
-      text-name: '[short_name]';
-      text-wrap-width: 300;
-      text-repeat-distance: 2000;
-      text-character-spacing: 0.1;
-      text-size: @text_size_s;
-    }
-    [length > 400]{
-      text-name: '[short_name]';
-      text-wrap-width: 600;
-      text-size: @text_size_m;
-    }
-    [length > 1000]{
-      text-name: '[name]';
-      text-spacing: 1200;
-      text-character-spacing: 4;
-      text-wrap-width: 800;
-      text-size: @text_size_m;
-    }
-    [stylegroup= "noauto"], [stylegroup="service"] {
-      text-size: @text_size_m*0.8;
-    }
-    [stylegroup= "mainroad"] {
-      text-size: @text_size_m
-    }
+  [length > 1800]{
+    text-name: '[name]';
+    text-wrap-width: 600;
+    text-size: @text_size_s;
+    text-repeat-distance: 2000;
+    text-character-spacing: 2;
   }
-
 }
 
 

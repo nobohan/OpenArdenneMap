@@ -59,7 +59,7 @@
 @text_size_m : 40 + @supra_text_size_alfphabet;
 @text_size_s : 30 + @supra_text_size_alfphabet;
 @text_size_xs : 20 + @supra_text_size_alfphabet;
-
+@text_size_xxs : 15 + @supra_text_size_alfphabet;
 
 /* =============== */
 /*    BASE.MSS
