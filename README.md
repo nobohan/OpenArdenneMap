@@ -453,10 +453,33 @@ or
 
 
 # TODOs
-* palettes
-* feature: point of view
+* features:
+  * point of view
+  * Castle Chau
+  * Gué
+  * rotated culvert symbols
+  * réservoir (man_made = water_works, water_well, pumping_station ...)
+  * station d'epuration
+  * éolienne Eol.
+  * Poste
+  * police
+  * départ de promenade
+  * oeuvre d'art
+  * abbrev. certains labels (ruisseau, ...)
+
+* label des étangs orientés
+* chemins tracktype...
+* sentier balisés... (en option)
+* rotated_envelope (postgis update)
 
 # post SQL queries
 ```
 psql -d osm -c 'ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;'
 ```
+
+
+fixer historic sites:
+
+SELECT * FROM (( SELECT way, power, man_made, amenity, historic, leisure, tourism, public_transport, "tower:type", bus, name
+  FROM planet_osm_point)
+ UNION (SELECT ST_Centroid(way) AS way, power, man_made, amenity, historic, leisure, tourism, public_transport, "tower:type", NULL AS bus, name FROM planet_osm_polygon WHERE historic IS NOT NULL))  AS data
