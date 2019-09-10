@@ -208,16 +208,18 @@
     text-repeat-distance: 60;
   }
   [type='forest'] {
-    text-face-name: @sans_lt_italic;
-    /*text-size: @text_size_l; /*[area]/100000*/
-    text-size: 100/([area]*[area]);
-    text-fill: lighten(@black, 10%);
-    text-transform: uppercase;
-    text-character-spacing: 80;
-    text-line-spacing: 150;
-    text-wrap-width: 200;
-    text-allow-overlap: true;
-    text-name: "";
+      [area>5000000] {
+      text-face-name: @sans_lt_italic;
+      /*text-size: @text_size_l*[area]/5000000/4;*/
+      text-size: @text_size_l;
+      text-fill: lighten(@black, 10%);
+      text-transform: uppercase;
+      text-character-spacing: 80;
+      text-line-spacing: 150;
+      text-wrap-width: 200;
+      text-allow-overlap: true;
+      text-name: '[name]';
+    }
   }
 }
 
