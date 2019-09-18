@@ -94,7 +94,7 @@
         [zoom = 15] { marker-height: @large*@z15_marker; }
         [zoom = 16] { marker-height: @large*@z16_marker; }
         [zoom = 17] { marker-height: 14; }
-        [zoom = 18] { marker-height: 21; }
+        [zoom = 18] { marker-height: 30; }
         [zoom = 19] { marker-height: @large*@z19_marker; }
         [zoom >= 20] { marker-height: @large*@z20_marker; }
         marker-file: url(../img/glass-recycling.svg);
@@ -111,11 +111,11 @@
         [zoom = 15] { marker-height: @large*@z15_marker; }
         [zoom = 16] { marker-height: @large*@z16_marker; }
         [zoom = 17] { marker-height: 6; }
-        [zoom = 18] { marker-height: 9; }
+        [zoom = 18] { marker-height: 11; }
         [zoom = 19] { marker-height: @large*@z19_marker; }
         [zoom >= 20] { marker-height: @large*@z20_marker; }
         marker-file: url(../img/bench.svg);
-        marker-allow-overlap: true;
+        marker-allow-overlap: false;
         [zoom = 17] { marker: none; }
     }
 
@@ -128,7 +128,7 @@
         [zoom = 15] { marker-height: @large*@z15_marker; }
         [zoom = 16] { marker-height: @large*@z16_marker; }
         [zoom = 17] { marker-height: 10; }
-        [zoom = 18] { marker-height: 15; }
+        [zoom = 18] { marker-height: 18; }
         [zoom = 19] { marker-height: @large*@z19_marker; }
         [zoom >= 20] { marker-height: @large*@z20_marker; }
         marker-file: url(../img/trashbin.svg);
@@ -161,7 +161,7 @@
         [zoom = 15] { marker-height: @large*@z15; }
         [zoom = 16] { marker-height: @large*@z16; }
         [zoom = 17] { marker-height: 8; }
-        [zoom = 18] { marker-height: 12; }
+        [zoom = 18] { marker-height: 16; }
         [zoom = 19] { marker-height: @large*@z19; }
         [zoom >= 20] { marker-height: @large*@z20; }
         marker-file: url(../img/picnic.svg);
@@ -202,7 +202,7 @@
             [zoom = 14] { marker-height: @large*@z14; text-size: @text_size_xs*@z14_label; }
             [zoom = 15] { marker-height: @large*@z15; text-size: @text_size_xs*@z15_label; }
             [zoom = 16] { marker-height: @large*@z16; text-size: @text_size_xs*@z16_label; }
-            [zoom = 17] { marker-height: @pitch_marker*2; text-size: @text_size_xs*@z17_label; }
+            [zoom = 17] { marker-height: @pitch_marker*2.5; text-size: @text_size_xs*@z17_label; }
             [zoom = 18] { marker-height: @pitch_marker*2*1.5; text-size: @text_size_xs*@z18_label; }
             [zoom = 19] { marker-height: @large*@z19; text-size: @text_size_xs*@z19_label; }
             [zoom >= 20] { marker-height: @large*@z20; text-size: @text_size_xs*@z20_label; }
@@ -220,10 +220,7 @@
             text-dx: 0;
             text-allow-overlap: false;
     }
-
-
 }
-
     [highway = 'bus_stop'] {
         ['bus' = 'yes']  {
             [zoom <= 10] { marker-height: @large*@z10; text-size: @text_size_xs*@z10_label; }
@@ -233,7 +230,7 @@
             [zoom = 14] { marker-height: @large*@z14; text-size: @text_size_xs*@z14_label; }
             [zoom = 15] { marker-height: @large*@z15; text-size: @text_size_xs*@z15_label; }
             [zoom = 16] { marker-height: @large*@z16; text-size: @text_size_xs*@z16_label; }
-            [zoom = 17] { marker-height: @pitch_marker*2; text-size: @text_size_xs*@z17_label; }
+            [zoom = 17] { marker-height: @pitch_marker*2.5; text-size: @text_size_xs*@z17_label; }
             [zoom = 18] { marker-height: @pitch_marker*2*1.5; text-size: @text_size_xs*@z18_label; }
             [zoom = 19] { marker-height: @large*@z19; text-size: @text_size_xs*@z19_label; }
             [zoom >= 20] { marker-height: @large*@z20; text-size: @text_size_xs*@z20_label; }
@@ -265,8 +262,8 @@
             [zoom = 14] { marker-height: @large*@z14; text-size: @text_size_xs*@z14_label; }
             [zoom = 15] { marker-height: @large*@z15; text-size: @text_size_xs*@z15_label; }
             [zoom = 16] { marker-height: @large*@z16; text-size: @text_size_xs*@z16_label; }
-            [zoom = 17] { marker-height: 10; text-size: @text_size_xs*@z17_label; }
-            [zoom = 18] { marker-height: 15; text-size: @text_size_xs*@z18_label; }
+            [zoom = 17] { marker-height: 46; text-size: @text_size_xs*@z17_label; }
+            [zoom = 18] { marker-height: 50; text-size: @text_size_xs*@z18_label; }
             [zoom = 19] { marker-height: @large*@z19; text-size: @text_size_xs*@z19_label; }
             [zoom >= 20] { marker-height: @large*@z20; text-size: @text_size_xs*@z20_label; }
             marker-file: url(../img/train-station-sncb.svg);
