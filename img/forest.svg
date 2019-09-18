@@ -14,13 +14,11 @@
    viewBox="0 0 744.09448819 1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.2 2405546, 2018-03-11"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="forest.svg"
    inkscape:export-filename="/media/julien/data/Projets/Geomatique/OSM/Mapnik/artwork/meadow.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
-  <defs
-     id="defs4" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -29,20 +27,22 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.287344"
-     inkscape:cx="316.5073"
+     inkscape:cx="235.62747"
      inkscape:cy="641.38619"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1877"
-     inkscape:window-height="1029"
-     inkscape:window-x="43"
-     inkscape:window-y="27"
+     inkscape:window-width="2505"
+     inkscape:window-height="1412"
+     inkscape:window-x="55"
+     inkscape:window-y="0"
      inkscape:window-maximized="1">
     <inkscape:grid
-       type="xygrid"
-       id="grid4138" />
+       id="grid4138"
+       type="xygrid" />
   </sodipodi:namedview>
+  <defs
+     id="defs4" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -56,39 +56,38 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
+     id="layer1"
      inkscape:groupmode="layer"
-     id="layer1">
+     inkscape:label="Layer 1">
     <rect
-       style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.89282173;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.70588235"
+       transform="matrix(1.000000,0.000000,0.000000,1.000000,0.000000,0.000000)"
+       y="295.767"
+       x="214.30234"
+       height="191.59769"
+       width="195.18442"
        id="rect4150"
-       width="156.14754"
-       height="153.27815"
-       x="233.82079"
-       y="314.92676" />
+       style="stroke-opacity:0.70588235;fill-opacity:1;stroke:none;stroke-dasharray:none;stroke-miterlimit:4;stroke-width:1.57830068908;fill:none" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#005844;stroke-width:1.359;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 263.46627,370.94283 6.99872,-19.80046 6.99872,19.80046"
        id="path4401"
-       inkscape:connector-curvature="0" />
+       d="M251.3592 365.78708C251.3592 365.78708 260.1076 341.0365 260.1076 341.0365C260.1076 341.0365 268.856 365.78708 268.856 365.78708"
+       style="stroke-linejoin:miter;stroke-opacity:1;fill-rule:evenodd;stroke:#005844;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:2.40239531737;fill:none" />
     <ellipse
-       style="fill:none;fill-opacity:1;stroke:#005844;stroke-width:1.35930312;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       ry="8.2501898"
+       rx="8.7484016"
+       cy="334.49844"
+       cx="357.15335"
        id="path4403"
-       cx="348.10159"
-       cy="345.91193"
-       rx="6.9987211"
-       ry="6.6001515" />
+       style="stroke-opacity:1;fill-opacity:1;stroke:#005844;stroke-dasharray:none;stroke-miterlimit:4;stroke-width:2.40293109217;fill:none" />
     <ellipse
-       style="fill:none;fill-opacity:1;stroke:#005844;stroke-width:1.35930312;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       ry="8.2501898"
+       rx="8.7484016"
+       cy="438.30164"
+       cx="298.39023"
        id="path4403-2"
-       cx="301.09109"
-       cy="428.95447"
-       rx="6.9987211"
-       ry="6.6001515" />
+       style="stroke-opacity:1;fill-opacity:1;stroke:#005844;stroke-dasharray:none;stroke-miterlimit:4;stroke-width:2.40293109217;fill:none" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#005844;stroke-width:1.35930312px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 362.48629,457.61859 6.99872,-19.80046 6.99872,19.80046"
        id="path4401-2"
-       inkscape:connector-curvature="0" />
+       d="M375.13422 474.13178C375.13422 474.13178 383.88262 449.3812 383.88262 449.3812C383.88262 449.3812 392.63102 474.13178 392.63102 474.13178"
+       style="stroke-linejoin:miter;stroke-opacity:1;fill-rule:evenodd;stroke:#005844;stroke-linecap:butt;stroke-width:2.40293109217;fill:none" />
   </g>
 </svg>

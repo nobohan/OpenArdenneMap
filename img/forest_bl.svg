@@ -14,13 +14,11 @@
    viewBox="0 0 744.09448819 1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.4 (unknown)"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="forest_bl.svg"
    inkscape:export-filename="/media/julien/data/Projets/Geomatique/OSM/Mapnik/artwork/meadow.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
-  <defs
-     id="defs4" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -28,22 +26,24 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.80869823"
-     inkscape:cx="111.67589"
-     inkscape:cy="578.49611"
+     inkscape:zoom="1.6173965"
+     inkscape:cx="124.05515"
+     inkscape:cy="637.54265"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="2493"
-     inkscape:window-height="1385"
-     inkscape:window-x="2627"
-     inkscape:window-y="27"
+     inkscape:window-width="2505"
+     inkscape:window-height="1412"
+     inkscape:window-x="55"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:snap-others="true">
     <inkscape:grid
-       type="xygrid"
-       id="grid4138" />
+       id="grid4138"
+       type="xygrid" />
   </sodipodi:namedview>
+  <defs
+     id="defs4" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -57,47 +57,47 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
+     id="layer1"
      inkscape:groupmode="layer"
-     id="layer1">
+     inkscape:label="Layer 1">
     <g
-       id="g18"
-       transform="matrix(0.6,0,0,0.6,124.75782,156.62633)">
+       id="g18">
       <rect
-         y="314.92676"
-         x="233.82079"
-         height="153.27815"
-         width="156.14754"
+         transform="matrix(0.750000,0.000000,0.000000,0.750000,77.973637,97.891455)"
+         style="stroke-opacity:0.70588235;fill-opacity:1;stroke:none;stroke-dasharray:none;stroke-miterlimit:4;stroke-width:0.946980449511;fill:none"
          id="rect4150"
-         style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.89282173;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.70588235" />
+         width="156.14754"
+         height="153.27815"
+         x="233.82079"
+         y="314.92676" />
       <ellipse
-         ry="6.6001515"
-         rx="6.9987211"
-         cy="345.91193"
-         cx="348.10159"
+         style="stroke-opacity:1;fill-opacity:1;stroke:#005844;stroke-dasharray:none;stroke-miterlimit:4;stroke-width:1.44175868076;fill:none"
          id="path4403"
-         style="fill:none;fill-opacity:1;stroke:#005844;stroke-width:1.35930312;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <ellipse
-         ry="6.6001515"
+         cx="348.10159"
+         cy="345.91193"
          rx="6.9987211"
-         cy="428.95447"
-         cx="301.09109"
+         ry="6.6001515" />
+      <ellipse
+         style="stroke-opacity:1;fill-opacity:1;stroke:#005844;stroke-dasharray:none;stroke-miterlimit:4;stroke-width:1.44175868076;fill:none"
          id="path4403-2"
-         style="fill:none;fill-opacity:1;stroke:#005844;stroke-width:1.35930312;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <ellipse
-         ry="6.6001515"
+         cx="301.09109"
+         cy="428.95447"
          rx="6.9987211"
-         cy="370.99936"
-         cx="271.99042"
+         ry="6.6001515" />
+      <ellipse
+         style="stroke-opacity:1;fill-opacity:1;stroke:#005844;stroke-dasharray:none;stroke-miterlimit:4;stroke-width:1.44175868076;fill:none"
          id="path4403-2-3"
-         style="fill:none;fill-opacity:1;stroke:#005844;stroke-width:1.35930312;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <ellipse
-         ry="6.6001515"
+         cx="271.99042"
+         cy="370.99936"
          rx="6.9987211"
-         cy="446.17081"
-         cx="368.36276"
+         ry="6.6001515" />
+      <ellipse
+         style="stroke-opacity:1;fill-opacity:1;stroke:#005844;stroke-dasharray:none;stroke-miterlimit:4;stroke-width:1.44175868076;fill:none"
          id="path4403-2-6"
-         style="fill:none;fill-opacity:1;stroke:#005844;stroke-width:1.35930312;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         cx="368.36276"
+         cy="446.17081"
+         rx="6.9987211"
+         ry="6.6001515" />
     </g>
   </g>
 </svg>

@@ -14,10 +14,8 @@
    viewBox="0 0 744.09448819 1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.2 2405546, 2018-03-11"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="camping.svg">
-  <defs
-     id="defs4" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -26,20 +24,22 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="11.2"
-     inkscape:cx="421.90602"
+     inkscape:cx="388.8703"
      inkscape:cy="616.6261"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1877"
-     inkscape:window-height="1029"
-     inkscape:window-x="43"
-     inkscape:window-y="27"
+     inkscape:window-width="2505"
+     inkscape:window-height="1412"
+     inkscape:window-x="55"
+     inkscape:window-y="0"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
        id="grid4136" />
   </sodipodi:namedview>
+  <defs
+     id="defs4" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -57,16 +57,12 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       sodipodi:nodetypes="cccc"
-       inkscape:connector-curvature="0"
        id="path7073"
-       d="m 376.9522,461.61203 8.26969,13.40087 h -11.813 l 8.26969,-13.40087"
-       style="fill:none;fill-rule:evenodd;stroke:#005844;stroke-width:1.36125004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       d="M371.62074 453.67024C371.62074 453.67024 384.54214 474.6091 384.54214 474.6091C384.54214 474.6091 366.08433 474.6091 366.08433 474.6091C366.08433 474.6091 379.00571 453.67024 379.00571 453.67024"
+       style="stroke-linejoin:miter;stroke-opacity:1;fill-rule:evenodd;stroke:#005844;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:4.25390636893;fill:none" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#005844;stroke-width:1.36125004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 391.18211,476.05106 8.26969,13.40087 h -11.813 l 8.26969,-13.40087"
-       id="path7075"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccc" />
+       style="stroke-linejoin:miter;stroke-opacity:1;fill-rule:evenodd;stroke:#005844;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:4.25390636893;fill:none"
+       d="M393.85498 476.23123C393.85498 476.23123 406.77636 497.17009 406.77636 497.17009C406.77636 497.17009 388.31855 497.17009 388.31855 497.17009C388.31855 497.17009 401.23995 476.23123 401.23995 476.23123"
+       id="path7075" />
   </g>
 </svg>
