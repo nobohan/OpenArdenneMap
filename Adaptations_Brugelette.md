@@ -1,11 +1,11 @@
 Adaptations pour Brugelette
 ---------------------------
 
-# Rendu des trottoirs
 
-* ajout sidewalk dans fichier .style
-* nouvelle couche dans le projet
-* style et dimensions de cette couche
+# Scales
+
+The main map is at the scale 1:12500, which is equivalent to zoom = 17. There are also mini-maps at scale 1:6000 (zoom=18). The style is changing according to the zoom. Normally, scaling factors (i.e., `@z10` to `@z20` in cartoCSS/scale.mss) are used to automatically scale some elements from one zoom to another. But for Brugelette, we sometimes hard-coded marker size or line widths.
+
 
 # Mini-cartes
 
@@ -44,6 +44,12 @@ ORDER BY z_order NULLS LAST
 
 ajout rcn_ref (point noeuds vélo)
 
+# Rendu des trottoirs
+
+* ajout sidewalk dans fichier .style
+* nouvelle couche dans le projet
+* style et dimensions de cette couche
+
 
 # Légende avec Mapnik
 
@@ -80,4 +86,4 @@ Master version of Mapnik DID render the svg pattern as vector!
 
 * Arrow-hydro: marker symbolizer don't work with a svg: it does not appear on the map.
 See related: https://github.com/mapnik/mapnik/wiki/Svg-rendering-gochas
-Mapnik LOG> 2019-06-27 09:20:05: SVG support error: <marker-end> attribute is not supported: Or la fleche faite dans inkscape a un attribut arrow-end. 
+Mapnik LOG> 2019-06-27 09:20:05: SVG support error: <marker-end> attribute is not supported: Or la fleche faite dans inkscape a un attribut arrow-end.
