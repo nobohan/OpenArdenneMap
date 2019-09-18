@@ -14,7 +14,7 @@ $ docker-compose build
 This may take 1 hour (mainly due to the Mapnik compilation)!
 
 # Usage
-carto osm2pgsql/project.mml > osm2pgsql/OpenArdenneMap.xml && python makeMap.py
+
 ```bash
 $ docker-compose up
 ```
