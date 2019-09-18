@@ -80,7 +80,7 @@
         [zoom = 16] { marker-height: @large*@z16_marker; }
         [zoom = 17] { marker-height: 8; }
         [zoom = 18] { marker-height: 12; }
-        [zoom = 19] { marker-height: 24; }
+        [zoom = 19] { marker-height: 48; }
         [zoom >= 20] { marker-height: @large*@z20_marker; }
         marker-file: url(../img/fountain.svg);
         marker-allow-overlap: true;
