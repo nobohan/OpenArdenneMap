@@ -205,8 +205,8 @@
       [zoom = 14] { line-width: (@mini + @outline)*@z14_road; }
       [zoom = 15] { line-width: (@mini + @outline)*@z15_road; }
       [zoom = 16] { line-width: (@mini + @outline)*@z16_road; }
-      [zoom = 17] { line-width: @tiny + @outline; }
-      [zoom = 18] { line-width: @tiny + @outline; }
+      [zoom = 17] { line-width: @mini + @outline; }
+      [zoom = 18] { line-width: @mini + @outline; }
       [zoom = 19] { line-width: (@mini + @outline)*@z19_road; }
       [zoom >= 20] { line-width: (@mini + @outline)*@z20_road; }
       line-color: @black;
@@ -219,8 +219,8 @@
       [zoom = 14] { line-width: (@mini + @outline)*@z14_road; }
       [zoom = 15] { line-width: (@mini + @outline)*@z15_road; }
       [zoom = 16] { line-width: (@mini + @outline)*@z16_road; }
-      [zoom = 17] { line-width: @tiny + @outline; }
-      [zoom = 18] { line-width: @tiny + @outline; }
+      [zoom = 17] { line-width: @mini + @outline; }
+      [zoom = 18] { line-width: @mini + @outline; }
       [zoom = 19] { line-width: (@mini + @outline)*@z19_road; }
       [zoom >= 20] { line-width: (@mini + @outline)*@z20_road; }
 
@@ -233,8 +233,8 @@
       [zoom = 14] { line-width: (@mini + @outline)*@z14_road; }
       [zoom = 15] { line-width: (@mini + @outline)*@z15_road; }
       [zoom = 16] { line-width: (@mini + @outline)*@z16_road; }
-      [zoom = 17] { line-width: @tiny + @outline; }
-      [zoom = 18] { line-width: @tiny + @outline; }
+      [zoom = 17] { line-width: @mini + @outline; }
+      [zoom = 18] { line-width: @mini + @outline; }
       [zoom = 19] { line-width: (@mini + @outline)*@z19_road; }
       [zoom >= 20] { line-width: (@mini + @outline)*@z20_road; }
     }
@@ -246,8 +246,8 @@
       [zoom = 14] { line-width: (@mini + @outline)*@z14_road; }
       [zoom = 15] { line-width: (@mini + @outline)*@z15_road; }
       [zoom = 16] { line-width: (@mini + @outline)*@z16_road; }
-      [zoom = 17] { line-width: @tiny + @outline; }
-      [zoom = 18] { line-width: @tiny + @outline; }
+      [zoom = 17] { line-width: @mini + @outline; }
+      [zoom = 18] { line-width: @mini + @outline; }
       [zoom = 19] { line-width: (@mini + @outline)*@z19_road; }
       [zoom >= 20] { line-width: (@mini + @outline)*@z20_road; }
     }
@@ -259,8 +259,8 @@
       [zoom = 14] { line-width: (@mini + @outline)*@z14_road; }
       [zoom = 15] { line-width: (@mini + @outline)*@z15_road; }
       [zoom = 16] { line-width: (@mini + @outline)*@z16_road; }
-      [zoom = 17] { line-width: @tiny + @outline; }
-      [zoom = 18] { line-width: @tiny + @outline; }
+      [zoom = 17] { line-width: @mini + @outline; }
+      [zoom = 18] { line-width: @mini + @outline; }
       [zoom = 19] { line-width: (@mini + @outline)*@z19_road; }
       [zoom >= 20] { line-width: (@mini + @outline)*@z20_road; }
       line-color: @black;
@@ -272,8 +272,8 @@
     [zoom = 14] { line-width: (@mini + @outline)*@z14_road; }
     [zoom = 15] { line-width: (@mini + @outline)*@z15_road; }
     [zoom = 16] { line-width: (@mini + @outline)*@z16_road; }
-    [zoom = 17] { line-width: @tiny + @outline; }
-    [zoom = 18] { line-width: @tiny + @outline; }
+    [zoom = 17] { line-width: @mini + @outline; }
+    [zoom = 18] { line-width: @mini + @outline; }
     [zoom = 19] { line-width: (@mini + @outline)*@z19_road; }
     [zoom >= 20] { line-width: (@mini + @outline)*@z20_road; }
   }
@@ -408,8 +408,8 @@
       [zoom = 14] { line-width: @mini*@z14_road; }
       [zoom = 15] { line-width: @mini*@z15_road; }
       [zoom = 16] { line-width: @mini*@z16_road; }
-      [zoom = 17] { line-width: @tiny; }
-      [zoom = 18] { line-width: @tiny; }
+      [zoom = 17] { line-width: @mini; }
+      [zoom = 18] { line-width: @mini; }
       [zoom = 19] { line-width: @mini*@z19_road; }
       [zoom >= 20] { line-width: @mini*@z20_road; }
       line-color: @secondary_fill;
@@ -422,8 +422,8 @@
       [zoom = 14] { line-width: @mini*@z14_road; }
       [zoom = 15] { line-width: @mini*@z15_road; }
       [zoom = 16] { line-width: @mini*@z16_road; }
-      [zoom = 17] { line-width: @tiny; }
-      [zoom = 18] { line-width: @tiny; }
+      [zoom = 17] { line-width: @mini; }
+      [zoom = 18] { line-width: @mini; }
       [zoom = 19] { line-width: @mini*@z19_road; }
       [zoom >= 20] { line-width: @mini*@z20_road; }
     }
@@ -435,8 +435,8 @@
       [zoom = 14] { line-width: @mini*@z14_road; }
       [zoom = 15] { line-width: @mini*@z15_road; }
       [zoom = 16] { line-width: @mini*@z16_road; }
-      [zoom = 17] { line-width: @tiny; }
-      [zoom = 18] { line-width: @tiny; }
+      [zoom = 17] { line-width: @mini; }
+      [zoom = 18] { line-width: @mini; }
       [zoom = 19] { line-width: @mini*@z19_road; }
       [zoom >= 20] { line-width: @mini*@z20_road; }
     }
@@ -448,8 +448,8 @@
       [zoom = 14] { line-width: @mini*@z14_road; }
       [zoom = 15] { line-width: @mini*@z15_road; }
       [zoom = 16] { line-width: @mini*@z16_road; }
-      [zoom = 17] { line-width: @tiny; }
-      [zoom = 18] { line-width: @tiny; }
+      [zoom = 17] { line-width: @mini; }
+      [zoom = 18] { line-width: @mini; }
       [zoom = 19] { line-width: @mini*@z19_road; }
       [zoom >= 20] { line-width: @mini*@z20_road; }
     }
@@ -461,8 +461,8 @@
       [zoom = 14] { line-width: @mini*@z14_road; }
       [zoom = 15] { line-width: @mini*@z15_road; }
       [zoom = 16] { line-width: @mini*@z16_road; }
-      [zoom = 17] { line-width: @tiny; }
-      [zoom = 18] { line-width: @tiny; }
+      [zoom = 17] { line-width: @mini; }
+      [zoom = 18] { line-width: @mini; }
       [zoom = 19] { line-width: @mini*@z19_road; }
       [zoom >= 20] { line-width: @mini*@z20_road; }
     }
@@ -473,8 +473,8 @@
       [zoom = 14] { line-width: @mini*@z14_road; }
       [zoom = 15] { line-width: @mini*@z15_road; }
       [zoom = 16] { line-width: @mini*@z16_road; }
-      [zoom = 17] { line-width: @tiny; }
-      [zoom = 18] { line-width: @tiny; }
+      [zoom = 17] { line-width: @mini; }
+      [zoom = 18] { line-width: @mini; }
       [zoom = 19] { line-width: @mini*@z19_road; }
       [zoom >= 20] { line-width: @mini*@z20_road; }
   }

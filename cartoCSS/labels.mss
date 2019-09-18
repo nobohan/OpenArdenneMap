@@ -46,13 +46,12 @@
   text-face-name: @sans;
   text-placement: line;
   text-character-spacing: 2;
-  text-line-spacing: -10;
   text-fill: @road_text;
   text-halo-fill: #ffffff;
-  text-halo-radius: 2;
+  text-halo-radius: 5;
   text-allow-overlap: true;
   text-size: @text_size_s;
-  text-line-spacing: 5;
+  text-max-char-angle-delta: 50;
   [stylegroup = "mainroad"] {
     text-transform: uppercase;
     text-size: @text_size_s*1
