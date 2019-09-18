@@ -82,7 +82,7 @@ Map { background-color: @rose; }
     [zoom = 16] { line-width: @landuse_line_width*@z16; }
     [zoom = 17] { line-width: 2; }
     [zoom = 18] { line-width: 2; }
-    [zoom = 19] { line-width: @landuse_line_width*@z19; }
+    [zoom = 19] { line-width: 2; }
     [zoom >= 20] { line-width: @landuse_line_width*@z20; }
     polygon-pattern-file: url(../img/camping.svg);
     line-color: @black;
@@ -97,7 +97,7 @@ Map { background-color: @rose; }
     [zoom = 16] { line-width: @landuse_line_width*@z16; }
     [zoom = 17] { line-width: 2; }
     [zoom = 18] { line-width: 2; }
-    [zoom = 19] { line-width: @landuse_line_width*@z19; }
+    [zoom = 19] { line-width: 2; }
     [zoom >= 20] { line-width: @landuse_line_width*@z20; }
     polygon-pattern-file: url(../img/cemetery.svg);
     line-color: @black;
@@ -116,7 +116,7 @@ Map { background-color: @rose; }
     [zoom = 16] { line-width: @landuse_line_width*@z16; }
     [zoom = 17] { line-width: 2; }
     [zoom = 18] { line-width: 2; }
-    [zoom = 19] { line-width: @landuse_line_width*@z19; }
+    [zoom = 19] { line-width: 2; }
     [zoom >= 20] { line-width: @landuse_line_width*@z20; }
     line-color: @black;
     [zoom <= 14] { polygon-pattern-file: url(../img/forest_z14.svg); }
@@ -143,7 +143,7 @@ Map { background-color: @rose; }
     [zoom = 16] { line-width: @landuse_line_width*@z16*2; }
     [zoom = 17] { line-width: 2; }
     [zoom = 18] { line-width: 2; }
-    [zoom = 19] { line-width: @landuse_line_width*@z19*2; }
+    [zoom = 19] { line-width: 2; }
     [zoom >= 20] { line-width: @landuse_line_width*@z20*2; }
     polygon-pattern-file: url(../img/industrial.svg);
     line-color: @black;
@@ -155,13 +155,13 @@ Map { background-color: @rose; }
       line-width: 2;
   }
 
-  [type='parking']       {
+  [type='parking'] {
   polygon-fill: @parking;
-  line-color: @black;
-  line-width: 2;
-  marker-file: url(../img/parking-fill.svg);
-  [zoom = 17] { marker-height: 20; }
-  [zoom = 18] { marker-height: 30; }
+      line-color: @black;
+      line-width: 2;
+      marker-file: url(../img/parking-fill.svg);
+      [zoom = 17] { marker-height: 20; }
+      [zoom = 18] { marker-height: 30; }
   }
 
   [type='pedestrian']    { polygon-fill: @pedestrian_fill; line-color: @black; line-width: 2;}
@@ -182,7 +182,7 @@ Map { background-color: @rose; }
     [zoom = 16] { line-width: @landuse_line_width*@z16; }
     [zoom = 17] { line-width: 2; }
     [zoom = 18] { line-width: 2; }
-    [zoom = 19] { line-width: @landuse_line_width*@z19; }
+    [zoom = 19] { line-width: 2; }
     [zoom >= 20] { line-width: @landuse_line_width*@z20; }
     line-color: @black;
   }
@@ -319,7 +319,8 @@ Map { background-color: @rose; }
       }
       /*marker-transform: rotate([orientation]);*/
       marker-allow-overlap: true;
-      [zoom > 17] {marker-height: @church_marker*0.5;}
+      [zoom = 18] {marker-height: @church_marker*1;}
+      [zoom = 19] {marker-height: @church_marker*2;}
 
   }
 

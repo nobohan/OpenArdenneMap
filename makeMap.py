@@ -69,8 +69,8 @@ def make_map_bbox(map_output, xmin, ymin, xmax, ymax, scale=3000):
 
     render_to_file(m, map_output)
 
-# make_map('OAM_brugelette_full_A1.pdf', 12500, 'A1')
-# make_map('OAM_brugelette_full_A4.pdf', 12500, 'A4')
+make_map('OAM_brugelette_full_A1.pdf', 12500, 'A1')
+make_map('OAM_brugelette_full_A4.pdf', 12500, 'A4')
 
 make_map_bbox('attre.pdf', 425400, 6550610, 429080, 6554290)
 make_map_bbox('brugelette.pdf', 427250, 6548000, 430700, 6552000)
