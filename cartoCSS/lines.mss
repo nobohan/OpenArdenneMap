@@ -573,7 +573,7 @@
     [zoom = 16] { line-offset: 0.5*(@large + @outline*1.5)*@z16_road; }
     [zoom = 17] { line-offset: 0.5*(@large*2.5 + @outline)*0.8;  }
     [zoom = 18] { line-offset: 0.5*(@large*2 + @outline)*0.8;  }
-    [zoom = 19] { line-offset: 0.5*(@large + @outline*1.5)*@z19_road; }
+    [zoom = 19] { line-offset: 0.5*(@large + @outline)*@z19_road; }
     [zoom >= 20] { line-offset: 0.5*(@large + @outline*1.5)*@z20_road; }
   }
   [stylegroup='minorroad'] {
@@ -667,7 +667,10 @@
     [zoom = 19] { line-offset: 0.5*(@small + @outline)*@z19_road; }
     [zoom >= 20] { line-offset: 0.5*(@small + @outline)*@z20_road; }
   }
-  [sidewalk='right'], [sidewalk='both'] {line-width: @sidewalk_width;}
+  [sidewalk='right'], [sidewalk='both'] {
+      [zoom = 18] {line-width: @sidewalk_width;}
+      [zoom = 19] {line-width: @sidewalk_width*2.5;}
+  }
   line-width: 0;
 }
 
@@ -782,7 +785,10 @@
     [zoom = 19] { line-offset: -0.5*(@small + @outline)*@z19_road; }
     [zoom >= 20] { line-offset: -0.5*(@small + @outline)*@z20_road; }
   }
-  [sidewalk='left'], [sidewalk= 'both'] {line-width: @sidewalk_width;}
+  [sidewalk='left'], [sidewalk= 'both'] {
+      [zoom = 18] {line-width: @sidewalk_width;}
+      [zoom = 19] {line-width: @sidewalk_width*2.5;}
+  }
   line-width: 0;
 }
 

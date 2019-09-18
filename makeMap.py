@@ -46,7 +46,7 @@ def make_map(map_output, scale=20000, page_format = 'A4', x = X_CENTER, y = Y_CE
     render_to_file(m, map_output)
 
 
-def make_map_bbox(map_output, xmin, ymin, xmax, ymax, scale=6000):
+def make_map_bbox(map_output, xmin, ymin, xmax, ymax, scale=3000):
     "Make (mini)-map as a function of a bbox, for a defined scale"
 
     # Compute the scale
@@ -69,11 +69,12 @@ def make_map_bbox(map_output, xmin, ymin, xmax, ymax, scale=6000):
 
     render_to_file(m, map_output)
 
-make_map('OAM_brugelette_full_A1.pdf', 12500, 'A1')
-make_map('OAM_brugelette_full_A4.pdf', 12500, 'A4')
+# make_map('OAM_brugelette_full_A1.pdf', 12500, 'A1')
+# make_map('OAM_brugelette_full_A4.pdf', 12500, 'A4')
 
 make_map_bbox('attre.pdf', 425400, 6550610, 429080, 6554290)
 make_map_bbox('brugelette.pdf', 427250, 6548000, 430700, 6552000)
 make_map_bbox('cambron.pdf', 430200, 6547130, 433320, 6550300)
 make_map_bbox('gages.pdf', 431280, 6550200, 434750, 6553600)
 make_map_bbox('mevergnies.pdf', 427370, 6550000, 430240, 6553400)
+make_map_bbox('brugelette-mevergnies.pdf', 427250, 6548000, 430700, 6553400)

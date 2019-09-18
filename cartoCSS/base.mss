@@ -352,7 +352,7 @@ Map { background-color: @rose; }
       [zoom = 16] { line-width: @river_line_width*@z16; }
       [zoom = 17] { line-width: 12; }
       [zoom = 18] { line-width: 12; }
-      [zoom = 19] { line-width: @river_line_width*@z19; }
+      [zoom = 19] { line-width: 14; }
       [zoom >= 20] { line-width: @river_line_width*@z20; }
       line-cap: round;
       line-join: round;
@@ -367,7 +367,7 @@ Map { background-color: @rose; }
       [zoom = 16] { line-width: @stream_line_width*@z16; }
       [zoom = 17] { line-width: 6; }
       [zoom = 18] { line-width: 6; }
-      [zoom = 19] { line-width: @stream_line_width*@z19; }
+      [zoom = 19] { line-width: 10; }
       [zoom >= 20] { line-width: @stream_line_width*@z20; }
     }
     [type='ditch'], [type='drain'] {
@@ -393,6 +393,9 @@ Map { background-color: @rose; }
     [zoom > 17] {
       marker-spacing: 1400;
       marker-offset: @river_line_width*3;
+    }
+    [zoom = 19] {
+      marker-height: 4;
     }
   }
 }

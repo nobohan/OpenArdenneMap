@@ -27,7 +27,7 @@
 @z16_road: 1*@extra_road_width; /* scale = 2 */
 @z17_road: 1.3*@extra_road_width;
 @z18_road: 2*@extra_road_width;
-@z19_road: 3*@extra_road_width;
+@z19_road: 1.9;
 @z20_road: 4*@extra_road_width;
 
 @z10_marker: 0.125;

@@ -80,7 +80,7 @@
         [zoom = 16] { marker-height: @large*@z16_marker; }
         [zoom = 17] { marker-height: 8; }
         [zoom = 18] { marker-height: 12; }
-        [zoom = 19] { marker-height: @large*@z19_marker; }
+        [zoom = 19] { marker-height: 24; }
         [zoom >= 20] { marker-height: @large*@z20_marker; }
         marker-file: url(../img/fountain.svg);
         marker-allow-overlap: true;
@@ -95,13 +95,12 @@
         [zoom = 16] { marker-height: @large*@z16_marker; }
         [zoom = 17] { marker-height: 14; }
         [zoom = 18] { marker-height: 30; }
-        [zoom = 19] { marker-height: @large*@z19_marker; }
+        [zoom = 19] { marker-height: 60; }
         [zoom >= 20] { marker-height: @large*@z20_marker; }
         marker-file: url(../img/glass-recycling.svg);
-        marker-allow-overlap: true;
+        marker-allow-overlap: false;
         [zoom = 17] { marker: none; }
     }
-
     [amenity = 'bench'] {
         [zoom <= 10] { marker-height: @large*@z10_marker; }
         [zoom = 11] { marker-height: @large*@z11_marker; }
@@ -112,7 +111,7 @@
         [zoom = 16] { marker-height: @large*@z16_marker; }
         [zoom = 17] { marker-height: 6; }
         [zoom = 18] { marker-height: 11; }
-        [zoom = 19] { marker-height: @large*@z19_marker; }
+        [zoom = 19] { marker-height: 44; }
         [zoom >= 20] { marker-height: @large*@z20_marker; }
         marker-file: url(../img/bench.svg);
         marker-allow-overlap: false;
@@ -129,7 +128,7 @@
         [zoom = 16] { marker-height: @large*@z16_marker; }
         [zoom = 17] { marker-height: 10; }
         [zoom = 18] { marker-height: 18; }
-        [zoom = 19] { marker-height: @large*@z19_marker; }
+        [zoom = 19] { marker-height: 72; }
         [zoom >= 20] { marker-height: @large*@z20_marker; }
         marker-file: url(../img/trashbin.svg);
         marker-allow-overlap: true;
@@ -162,7 +161,7 @@
         [zoom = 16] { marker-height: @large*@z16; }
         [zoom = 17] { marker-height: 8; }
         [zoom = 18] { marker-height: 16; }
-        [zoom = 19] { marker-height: @large*@z19; }
+        [zoom = 19] { marker-height: 64; }
         [zoom >= 20] { marker-height: @large*@z20; }
         marker-file: url(../img/picnic.svg);
     }
@@ -264,7 +263,7 @@
             [zoom = 16] { marker-height: @large*@z16; text-size: @text_size_xs*@z16_label; }
             [zoom = 17] { marker-height: 46; text-size: @text_size_xs*@z17_label; }
             [zoom = 18] { marker-height: 50; text-size: @text_size_xs*@z18_label; }
-            [zoom = 19] { marker-height: @large*@z19; text-size: @text_size_xs*@z19_label; }
+            [zoom = 19] { marker-height: 100; text-size: @text_size_xs*@z19_label; }
             [zoom >= 20] { marker-height: @large*@z20; text-size: @text_size_xs*@z20_label; }
             marker-file: url(../img/train-station-sncb.svg);
             marker-allow-overlap: true;
