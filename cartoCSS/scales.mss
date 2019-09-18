@@ -58,7 +58,7 @@
 @text_size_l : 100 + @supra_text_size_alfphabet;
 @text_size_m : 65 + @supra_text_size_alfphabet;
 @text_size_s : 40 + @supra_text_size_alfphabet;
-@text_size_xs : 28 + @supra_text_size_alfphabet; 
+@text_size_xs : 28 + @supra_text_size_alfphabet;
 
 
 /* =============== */
@@ -91,7 +91,7 @@
 @tiny: 3;
 @minus: 2;
 
-@outline: 4;
+@outline: 6;
 
 @bridge_marker: 12;
 

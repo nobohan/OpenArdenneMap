@@ -70,12 +70,12 @@
   [zoom <= 17]{
     [length <= 1000]{
       text-name: '[short_name]';
-      text-wrap-width: 100;
+      text-wrap-width: 400;
       text-character-spacing: 0.1;
     }
     [length > 1000]{
       text-name: '[name]';
-      text-wrap-width: 400;
+      text-wrap-width: 1000;
       text-character-spacing: 6;
       text-spacing: 900;
     }

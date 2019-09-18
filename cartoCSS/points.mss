@@ -85,9 +85,6 @@
         marker-file: url(../img/fountain.svg);
         marker-allow-overlap: true;
     }
-
-
-
     [amenity = 'recycling'] {
         [zoom <= 10] { marker-height: @large*@z10_marker; }
         [zoom = 11] { marker-height: @large*@z11_marker; }
@@ -102,6 +99,7 @@
         [zoom >= 20] { marker-height: @large*@z20_marker; }
         marker-file: url(../img/glass-recycling.svg);
         marker-allow-overlap: true;
+        [zoom = 17] { marker: none; }
     }
 
     [amenity = 'bench'] {
@@ -118,6 +116,7 @@
         [zoom >= 20] { marker-height: @large*@z20_marker; }
         marker-file: url(../img/bench.svg);
         marker-allow-overlap: true;
+        [zoom = 17] { marker: none; }
     }
 
     [amenity = 'waste_basket'] {
@@ -134,6 +133,7 @@
         [zoom >= 20] { marker-height: @large*@z20_marker; }
         marker-file: url(../img/trashbin.svg);
         marker-allow-overlap: true;
+        [zoom = 17] { marker: none; }
     }
 
     [historic = 'wayside_cross'] {
