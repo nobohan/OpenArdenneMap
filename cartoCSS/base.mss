@@ -148,16 +148,21 @@ Map { background-color: @rose; }
     polygon-pattern-file: url(../img/industrial.svg);
     line-color: @black;
   }
-  [type='park']          { polygon-fill: @park; polygon-pattern-file: url(../img/park.svg); line-color: @black; line-width: 2; }
+  [type='park'] {
+      /*polygon-fill: @park;*/
+      polygon-pattern-file: url(../img/park.svg);
+      line-color: @black;
+      line-width: 2;
+  }
 
-  [type='parking']       {   
-  polygon-fill: @parking; 
-  line-color: @black; 
+  [type='parking']       {
+  polygon-fill: @parking;
+  line-color: @black;
   line-width: 2;
-  marker-file: url(../img/parking-fill.svg);     
+  marker-file: url(../img/parking-fill.svg);
   [zoom = 17] { marker-height: 20; }
   [zoom = 18] { marker-height: 30; }
-  } 
+  }
 
   [type='pedestrian']    { polygon-fill: @pedestrian_fill; line-color: @black; line-width: 2;}
   [type='residential']   { polygon-fill: @residential; line-color: @black; line-width: 2; }

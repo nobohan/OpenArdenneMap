@@ -267,9 +267,9 @@
   text-halo-fill: #fff;
   // Specific style overrides for different types of areas:
   [type='park'] {
-    text-face-name: @sans;
-    text-fill: @green;
-    text-halo-fill: @park;
+    text-name: '[name]';
+    text-allow-overlap: true;
+    text-wrap-width: 200;
   }
   [type='tourism'], [type='industrial'] {
     text-name: '[name]';
