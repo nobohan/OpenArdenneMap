@@ -166,7 +166,7 @@
     [zoom = 15] { line-width: (@large*2.5 + @outline*1.5)*@z15_road; }
     [zoom = 16] { line-width: (@large*2.5 + @outline*1.5)*@z16_road; }
     [zoom = 17] { line-width: @large*2.5 + @outline; }
-    [zoom = 18] { line-width: @large*2.5 + @outline; }
+    [zoom = 18] { line-width: @large*2 + @outline; }
     [zoom = 19] { line-width: (@large*2.5 + @outline*1.5)*@z19_road; }
     [zoom >= 20] { line-width: (@large*2.5 + @outline*1.5)*@z20_road; }
   }
@@ -353,7 +353,7 @@
     [zoom = 15] { line-width: @large*2.5*@z15_road; }
     [zoom = 16] { line-width: @large*2.5*@z16_road; }
     [zoom = 17] { line-width: @large*2.5; }
-    [zoom = 18] { line-width: @large*2.5; }
+    [zoom = 18] { line-width: @large*2; }
     [zoom = 19] { line-width: @large*2.5*@z19_road; }
     [zoom >= 20] { line-width: @large*2.5*@z20_road; }
   }
@@ -554,6 +554,8 @@
 /* SIDEWALK
 /* ================================================================== */
 
+@sidewalk_width: @large*2.5;
+
 #sidewalk::right {
   line-color: @vertpale;
   /*line-dasharray: 40, 15;*/
@@ -569,8 +571,8 @@
     [zoom = 14] { line-offset: 0.5*(@large + @outline*1.5)*@z14_road; }
     [zoom = 15] { line-offset: 0.5*(@large + @outline*1.5)*@z15_road; }
     [zoom = 16] { line-offset: 0.5*(@large + @outline*1.5)*@z16_road; }
-    [zoom = 17] { line-offset: 0.5*(@large + @outline)*0.8;  }
-    [zoom = 18] { line-offset: 0.5*(@large + @outline)*0.8;  }
+    [zoom = 17] { line-offset: 0.5*(@large*2.5 + @outline)*0.8;  }
+    [zoom = 18] { line-offset: 0.5*(@large*2 + @outline)*0.8;  }
     [zoom = 19] { line-offset: 0.5*(@large + @outline*1.5)*@z19_road; }
     [zoom >= 20] { line-offset: 0.5*(@large + @outline*1.5)*@z20_road; }
   }
@@ -582,8 +584,8 @@
     [zoom = 14] { line-offset: 0.5*(@small + @outline)*@z14_road; }
     [zoom = 15] { line-offset: 0.5*(@small + @outline)*@z15_road; }
     [zoom = 16] { line-offset: 0.5*(@small + @outline)*@z16_road; }
-    [zoom = 17] { line-offset: 0.5*(@small + @outline)*0.8; }
-    [zoom = 18] { line-offset: 0.5*(@small + @outline)*0.8; }
+    [zoom = 17] { line-offset: 0.5*(@large*1.5 + @outline)*0.8; }
+    [zoom = 18] { line-offset: 0.5*(@large*1.5 + @outline)*0.8; }
     [zoom = 19] { line-offset: 0.5*(@small + @outline)*@z19_road; }
     [zoom >= 20] { line-offset: 0.5*(@small + @outline)*@z20_road; }
   }
@@ -665,7 +667,7 @@
     [zoom = 19] { line-offset: 0.5*(@small + @outline)*@z19_road; }
     [zoom >= 20] { line-offset: 0.5*(@small + @outline)*@z20_road; }
   }
-  [sidewalk='right'], [sidewalk='both'] {line-width: @large;}
+  [sidewalk='right'], [sidewalk='both'] {line-width: @sidewalk_width;}
   line-width: 0;
 }
 
@@ -684,8 +686,8 @@
     [zoom = 14] { line-offset: -0.5*(@large + @outline*1.5)*@z14_road; }
     [zoom = 15] { line-offset: -0.5*(@large + @outline*1.5)*@z15_road; }
     [zoom = 16] { line-offset: -0.5*(@large + @outline*1.5)*@z16_road; }
-    [zoom = 17] { line-offset: -0.5*(@large + @outline)*0.8; }
-    [zoom = 18] { line-offset: -0.5*(@large + @outline)*0.8; }
+    [zoom = 17] { line-offset: -0.5*(@large*2.5 + @outline)*0.8; }
+    [zoom = 18] { line-offset: -0.5*(@large*2 + @outline)*0.8; }
     [zoom = 19] { line-offset: -0.5*(@large + @outline*1.5)*@z19_road; }
     [zoom >= 20] { line-offset: -0.5*(@large + @outline*1.5)*@z20_road; }
   }
@@ -697,8 +699,8 @@
     [zoom = 14] { line-offset: -0.5*(@small + @outline)*@z14_road; }
     [zoom = 15] { line-offset: -0.5*(@small + @outline)*@z15_road; }
     [zoom = 16] { line-offset: -0.5*(@small + @outline)*@z16_road; }
-    [zoom = 17] { line-offset: -0.5*(@small + @outline)*0.8; }
-    [zoom = 18] { line-offset: -0.5*(@small + @outline)*0.8; }
+    [zoom = 17] { line-offset: -0.5*(@large*1.5 + @outline)*0.8; }
+    [zoom = 18] { line-offset: -0.5*(@large*1.5 + @outline)*0.8; }
     [zoom = 19] { line-offset: -0.5*(@small + @outline)*@z19_road; }
     [zoom >= 20] { line-offset: -0.5*(@small + @outline)*@z20_road; }
   }
@@ -780,7 +782,7 @@
     [zoom = 19] { line-offset: -0.5*(@small + @outline)*@z19_road; }
     [zoom >= 20] { line-offset: -0.5*(@small + @outline)*@z20_road; }
   }
-  [sidewalk='left'], [sidewalk= 'both'] {line-width: @large;}
+  [sidewalk='left'], [sidewalk= 'both'] {line-width: @sidewalk_width;}
   line-width: 0;
 }
 
