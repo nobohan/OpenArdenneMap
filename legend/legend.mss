@@ -31,7 +31,7 @@
     [waterway_legend='river'] {text-name: "'Rivière'";}
     [waterway_legend='stream'] {text-name: "'Ruisseau'";}
     [type='water'] { text-name:"'Étang, lac'";}
-    [type='hedge'] {text-name:"'Haie, rangée d\'arbres'";}
+    [linear_features='hedge'] {text-name:"'Haie, rangée d\'arbres'";}
     [type='line'] {text-name:"'Ligne électrique'"; text-allow-overlap: true;}
     [type='motorway'] { text-name: "'Autoroute'"}
     [type='primary'] { text-name: "'Route primaire'"}
@@ -82,8 +82,8 @@
     { [sidewalk="sidewalk"] {
         line-color: @vertpale;
         line-cap: butt;
-        line-width: 8;
-        line-offset: 8;
+        line-width: 12;
+        line-offset: 16;
     }
 }
 
@@ -140,53 +140,58 @@
     }
 }
 
-#point_features {
+#linear_features {
+    [linear_features = 'hedge'] {
+        line-color: @green;
+        line-width: 8;
+        line-dasharray: 6,16;
+    }
+}
 
+#point_features {
     [point_features = 'picnic_table'] {
         marker-file: url(../img/picnic.svg);
-        marker-height: 8;
+        marker-height: 20;
         marker-allow-overlap: true;
     }
-
-
     [type = 'tower'], [type = 'mast'] {
         marker-file: url(../img/tower.svg);
-        marker-height: 20;
+        marker-height: 18;
         marker-allow-overlap:true;
     }
     [point_features = 'fountain'] {
         marker-file: url(../img/fountain.svg);
-        marker-height: 8;
+        marker-height: 22;
         marker-allow-overlap:true;
     }
     [point_features = 'parking'] {
         marker-file: url(../img/parking-fill.svg);
-        marker-height: 20;
+        marker-height: 28;
         marker-allow-overlap:true;
     }
     [point_features = 'recycling'] {
         marker-file: url(../img/glass-recycling.svg);
-        marker-height: 14;
+        marker-height: 24;
         marker-allow-overlap:true;
     }
     [point_features = 'bench'] {
         marker-file: url(../img/bench.svg);
-        marker-height: 6;
+        marker-height: 14;
         marker-allow-overlap:true;
     }
     [point_features = 'waste_basket'] {
         marker-file: url(../img/trashbin.svg);
-        marker-height: 10;
+        marker-height: 24;
         marker-allow-overlap:true;
     }
     [point_features = 'bus'] {
         marker-file: url(../img/bus.svg);
-        marker-height: 20;
+        marker-height: 40;
         marker-allow-overlap:true;
     }
     [point_features = 'train'] {
         marker-file: url(../img/train-station-sncb.svg);
-        marker-height: 20;
+        marker-height: 24;
         marker-allow-overlap:true;
     }
 }
