@@ -13,7 +13,7 @@ Un exemple peut être téléchargé [ici](http://www.nobohan.be/docs/OpenArdenne
 ::: ENGLISH BELOW :::
 
 # A propos
-OpenArdenneMap est un style de carte personnalisé basé sur OpenStreetMap. Il se fonde sur le style OSMBright et s'inspire, entre autres, de OpenTopoMap.
+OpenArdenneMap est un style de carte personnalisé basé sur OpenStreetMap. Il se fonde sur le style OSMBright et s'inspire, entre autres, de OpenTopoMap. Plus d'infos dans cet article [ici](https://blog.champs-libres.coop/carto/2018/12/18/openardennemap.html)
 
 # Installation
 ## Logiciels
@@ -236,7 +236,7 @@ Quelques commandes utiles pour l'impression en pdf:
 ::: ENGLISH :::
 
 # About
-OpenArdenneMap is a customized map using OpenStreetMap data. It is based on OSMBright and inspired by OpenTopoMap.
+OpenArdenneMap is a customized map using OpenStreetMap data. It is based on OSMBright and inspired by OpenTopoMap. More infos in this article (in French) [here](https://blog.champs-libres.coop/carto/2018/12/18/openardennemap.html) 
 
 
 # Installation
