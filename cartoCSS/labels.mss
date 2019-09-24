@@ -50,11 +50,11 @@
   text-halo-fill: #ffffff;
   text-halo-radius: 5;
   text-allow-overlap: true;
-  text-size: @text_size_s;
+  text-size: @text_size_s*1.2;
   text-max-char-angle-delta: 50;
   [stylegroup = "mainroad"] {
     text-transform: uppercase;
-    text-size: @text_size_s*1
+    text-size: @text_size_s*1.2
   }
   [stylegroup = "noauto"], [stylegroup = "service"] {
     text-dy: 14;
