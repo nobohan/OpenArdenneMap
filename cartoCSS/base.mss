@@ -142,10 +142,20 @@ Map { background-color: @white; }
 
 #rotated_buildings {
   [building='church'] {
-    marker-file: url(../img/church.svg);
-    marker-height: 40;
+    marker-file: url(../img/church-pattern.svg);
+    marker-height: 50;
     marker-transform: rotate([orientation]);
     marker-allow-overlap: true;
+    [osm_id = 316330499] {
+        marker-transform: rotate(95);
+    }
+    [osm_id = 622342108] {
+        marker-transform: rotate(-30);
+    }
+    [osm_id = 80777655] {
+        marker-transform: rotate(20);
+    }
+
   }
   [building='chapel'] {
     marker-file: url(../img/church.svg);
