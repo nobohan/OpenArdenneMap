@@ -81,7 +81,7 @@
   text-face-name:@sans;
   text-placement:point;
   text-fill:@other_text;
-  text-size:@text_size_s;
+  text-size:@text_size_m;
   text-halo-fill:@other_halo;
   text-halo-radius: 4;
   text-character-spacing: 5;
@@ -99,7 +99,7 @@
   text-halo-fill:@locality_halo;
   text-halo-radius: 4;
   text-wrap-width: 30;
-  text-size:@text_size_m;
+  text-size:@text_size_l;
   text-wrap-width: 60;
   text-line-spacing: 1;
   text-allow-overlap: false;
@@ -112,7 +112,7 @@
 // =====================================================================
 
 #area_label {
-  text-name: "";
+  text-name: '[name]';
   text-face-name:@sans;
   text-size: @text_size_s;
   text-character-spacing: 1;
@@ -145,13 +145,13 @@
     text-halo-radius: 3;
   }
   [type='school'] {
-    text-name: "'Éc.'";
+    text-name: '[name]';
     text-size: @text_size_s;
     text-dy: -20;
     /*text-dx: -20;*/
   }
   [type='farmyard'] {
-    text-name: "'Fme'";
+    text-name: '[name]';
     text-size: @text_size_s;
     text-dy: -20;
     /*text-dx: -15;*/
@@ -168,7 +168,7 @@
     text-line-spacing: 150;
     text-wrap-width: 200;
     text-allow-overlap: true;
-    text-name: "";
+    text-name: '[name]';
   }
 }
 

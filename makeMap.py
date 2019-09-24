@@ -24,19 +24,19 @@ f = math.sqrt(2)**f1
 # increasing map_x and map_y lead to decreasing font and symbol size: not good
 map_x = int(f*4600)  # 4600 is the number of pixels for an A4 length
 map_y = int(map_x/math.sqrt(2))
-m = Map(map_x, map_y)
+m = Map(map_y, map_x)
 load_map(m, mapFile)
 
 # Bounding box (expressed in EPSG:3857, meters)
-x_center = 595220
-y_center = 6384555
+x_center = 595000
+y_center = 6383660
 # center marbehan
 # x_center = 623000
 # y_center = 6403000
 
-scale = 16000
-delta_x = f*0.295*scale/math.cos(50*2*math.pi/360)
-delta_y = delta_x/math.sqrt(2)
+scale = 6200
+delta_y = f*0.295*scale/math.cos(50*2*math.pi/360)
+delta_x = delta_y/math.sqrt(2)
 xmin = x_center - delta_x/2
 xmax = x_center + delta_x/2
 ymin = y_center - delta_y/2

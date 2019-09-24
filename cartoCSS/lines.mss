@@ -10,10 +10,10 @@
 /* ================================================================== */
 
 /* Road width variables that are used in road & bridge styles */
-@large: 12;
-@medium: 10;
-@small: 8;
-@tiny: 5;
+@large: 15;
+@medium: 12;
+@small: 10;
+@tiny: 7;
 @mini: 4;
 
 /* ---- Casing ----------------------------------------------- */
@@ -63,32 +63,30 @@
 
   [stylegroup='minorroad'],
   [stylegroup='service'] {
-    [bridge=1] { line-width: @tiny + 2 + 4; }
+    [bridge=1] { line-color: @secondary_case; line-width: @tiny + 2 + 4; }
   }
 
   [stylegroup='noauto'] {
     line-width: @mini - 1;
     line-dasharray: 8, 8;
-    line-color: lighten(@black, 20%);
+    line-color: @black;
   }
 
   /* -- widths -- */
   [stylegroup='motorway'] { line-width: @medium + 2; }
-  [stylegroup='mainroad'] { line-width: @medium + 3; }
-  [stylegroup='minorroad']{ line-width: @tiny + 2; }
+  [stylegroup='mainroad'] { line-width: @medium + 4; }
+  [stylegroup='minorroad']{ line-width: @tiny + 4; }
 
   [stylegroup='railway']  { line-width: @tiny + 2; }
   [stylegroup='service']{
-    [tracktype='grade1'] { line-width: @tiny + 2; line-color: #111}
-    [tracktype='grade2'] { line-width: @tiny + 2; }
-    [tracktype='grade3'] { line-width: @tiny + 2; }
-    [tracktype='grade4'] { line-width: @mini + 2; line-dasharray: 8, 8}
-    [tracktype='grade5'] { line-width: @mini + 2; line-dasharray: 8, 8}
+    [tracktype='grade1'] { line-width: @tiny + 3; line-color: @secondary_fill;}
+    [tracktype='grade2'] { line-width: @tiny + 3; }
+    [tracktype='grade3'] { line-width: @tiny + 3; }
+    [tracktype='grade4'] { line-width: @mini + 3; line-dasharray: 8, 8; }
+    [tracktype='grade5'] { line-width: @mini + 3; line-dasharray: 8, 8; }
     line-width: @small / 2 + 3;
   }
-
 }
-
 
 /* This second group (roads) is the final layer for most of the roads */
 /* elements, which will give the center of the roads (inner fill) */
@@ -148,7 +146,7 @@
   [type='cutline'] { line-width: 0; }
   [stylegroup='railway']  { line-width: @tiny; line-dasharray: 15,15;}
   [stylegroup='service'] {
-    [tracktype='grade1'] { line-width: @tiny; line-color: @secondary_fill;}
+    [tracktype='grade1'] { line-width: @tiny; }
     [tracktype='grade2'] { line-width: @tiny; }
     [tracktype='grade3'] { line-width: @tiny; }
     [tracktype='grade4'] { line-width: @mini; }
@@ -168,12 +166,6 @@
     line-dasharray: 5,5;
   }
 
-  [stylegroup='service'] {
-    [tracktype='grade1'] {
-      line-width: @tiny ;
-      line-dasharray: 20,20;
-      line-color: #fff; }
-  }
 }
 
 

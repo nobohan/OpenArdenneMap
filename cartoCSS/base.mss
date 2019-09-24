@@ -29,7 +29,12 @@ Map { background-color: @white; }
 
 #landuse::base {
   [type='camp_site']     { polygon-pattern-file: url(../img/camping.svg); line-width:0.3; line-color: @black;}
-  [type='cemetery']      { polygon-pattern-file: url(../img/cemetery.svg); line-width:0.3; line-color: @black;}
+  [type='cemetery']      {
+      polygon-pattern-file: url(../img/cemetery.svg);
+      polygon-pattern-transform: "scale(2)";
+      line-width:0.3;
+      line-color: @black;
+  }
   [type='college']       { polygon-fill: @school; }
   [type='commercial']    { polygon-fill: @industrial; }
   [type='common']        { polygon-fill: @park; }
@@ -170,18 +175,18 @@ Map { background-color: @white; }
         {
         line-cap: round;
         line-join: round;
-        line-width: 12;
+        line-width: 16;
         }
     [type='stream'], [type='canal'] {
-        line-width: 6;
+        line-width: 10;
         }
     [type='ditch'], [type='drain'] {
-        line-width: 2;
+        line-width: 4;
         }
     }
 }
 
 #waterway::top [type='river'] {
-  line-width: 8;
+  line-width: 12;
   line-color: @water;
 }
