@@ -79,12 +79,12 @@
 
   [stylegroup='railway']  { line-width: @tiny + 2; }
   [stylegroup='service']{
-    [tracktype='grade1'] { line-width: @tiny + 3; line-color: @secondary_fill;}
+    [tracktype='grade1'] { line-width: @tiny + 3; }
     [tracktype='grade2'] { line-width: @tiny + 3; }
     [tracktype='grade3'] { line-width: @tiny + 3; }
     [tracktype='grade4'] { line-width: @mini + 3; line-dasharray: 8, 8; }
     [tracktype='grade5'] { line-width: @mini + 3; line-dasharray: 8, 8; }
-    line-width: @small / 2 + 3;
+    line-width: @tiny + 3;
   }
 }
 
@@ -151,7 +151,7 @@
     [tracktype='grade3'] { line-width: @tiny; }
     [tracktype='grade4'] { line-width: @mini; }
     [tracktype='grade5'] { line-width: @mini; }
-    line-width: @small / 2;
+    line-width: @tiny;
   }
 }
 
@@ -164,6 +164,10 @@
     line-color: #fff;
     line-width: 2;
     line-dasharray: 5,5;
+  }
+  [stylegroup='service'] {
+    [tracktype='grade1'] { line-width: @tiny; line-dasharray: 16, 16; line-color: @secondary_fill}
+    [tracktype='grade4'] { line-width: 1; line-offset: (@mini + 3)/2}
   }
 
 }
@@ -251,10 +255,10 @@
 
 #boundaries {
 [admin_level = "6"] {
-    line-color: @admin;
-    line-width: 6;
-    line-dasharray: 20, 10, 5;
-}
+      line-color: @admin;
+      line-width: 0;
+      line-dasharray: 20, 10, 5;
+  }
   [admin_level = "8"] {
       line-color: @admin;
       line-width: 3;

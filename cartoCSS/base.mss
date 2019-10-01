@@ -188,7 +188,7 @@ Map { background-color: @white; }
         line-width: 16;
         }
     [type='stream'], [type='canal'] {
-        line-width: 10;
+        line-width: 8;
         }
     [type='ditch'], [type='drain'] {
         line-width: 4;

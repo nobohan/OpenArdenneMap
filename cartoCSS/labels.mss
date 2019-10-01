@@ -183,11 +183,12 @@
     text-name: '[name]';
     text-face-name: @sans;
     text-fill: @darkblue;
-    text-halo-fill: lighten(@water, 10%);
+    text-halo-fill: lighten(@water, 60%);
     text-halo-radius: 3;
     text-placement: line;
     text-repeat-distance: 1200;
     text-size: @text_size_m;
+    text-character-spacing: 2;
     text-spacing: 300;
 }
 

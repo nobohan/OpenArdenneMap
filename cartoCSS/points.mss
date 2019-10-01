@@ -81,7 +81,7 @@
     [public_transport = 'stop_position'] {
         ['bus' = 'yes'] {
             marker-file: url(../img/bus.svg);
-            marker-height: 8;
+            marker-height: 12;
             marker-allow-overlap: true;
             text-name:"'Bus'";
             text-face-name:@sans;
