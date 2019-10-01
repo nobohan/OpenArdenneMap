@@ -813,594 +813,594 @@
   <Style filter-mode="first" name="legend_labels">
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([bus] = 'yes') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Arrêt de bus']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Arrêt de bus']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([bus] = 'yes')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Arrêt de bus']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Arrêt de bus']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([tower_type] = 'communication') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Pylône']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Pylône']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([tower_type] = 'communication')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Pylône']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Pylône']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'needleleaved') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Conifères']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Conifères']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'needleleaved')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Conifères']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Conifères']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'broadleaved') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Feuillus']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Feuillus']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'forest') and ([leaf_type] = 'broadleaved')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Feuillus']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Feuillus']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'hamlet') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA[Hameau]]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA[Hameau]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'hamlet')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA[Hameau]]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA[Hameau]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'village') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA[Village]]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA[Village]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'village')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA[Village]]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA[Village]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'city') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA[Ville]]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA[Ville]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'city')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA[Ville]]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA[Ville]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([type] = 'bridge') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Passerelle']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Passerelle']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([type] = 'bridge')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Passerelle']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Passerelle']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([type] = 'church') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Église']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Église']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([type] = 'church')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Église']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Église']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([stylegroup] = 'railway') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Voie ferrée']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Voie ferrée']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([stylegroup] = 'railway')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Voie ferrée']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Voie ferrée']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([line] = 'cutline')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Coupe-feu']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Coupe-feu']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([stylegroup] = 'noauto') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Sentier']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Sentier']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([stylegroup] = 'noauto')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Sentier']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Sentier']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([tracktype] = 'grade5') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Mauvais chemin']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Mauvais chemin']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([tracktype] = 'grade5')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Mauvais chemin']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Mauvais chemin']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([tracktype] = 'grade3') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Chemin moyen']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Chemin moyen']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([tracktype] = 'grade3')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Chemin moyen']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Chemin moyen']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([tracktype] = 'grade1') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Bon chemin']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Bon chemin']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([tracktype] = 'grade1')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Bon chemin']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Bon chemin']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([type] = 'primary') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Route primaire']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Route primaire']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([type] = 'primary')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Route primaire']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Route primaire']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([type] = 'tertiary') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Route mineure']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Route mineure']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([type] = 'tertiary')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Route mineure']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Route mineure']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([type] = 'secondary') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Route secondaire']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Route secondaire']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([type] = 'secondary')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Route secondaire']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Route secondaire']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([type] = 'motorway') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Autoroute']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Autoroute']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([type] = 'motorway')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Autoroute']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Autoroute']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([line] = 'cliff')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Falaise, rochers']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Falaise, rochers']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([line] = 'embankment')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Talus']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Talus']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Ligne électrique']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Ligne électrique']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([line] = 'hedge')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Haie']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Haie']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([type] = 'water')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Étang, lac']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Étang, lac']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([type] = 'wetland')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Zone humide']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Zone humide']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([waterway_legend] = 'ditch')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fossé']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fossé']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([waterway_legend] = 'stream')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Ruisseau']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Ruisseau']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([waterway_legend] = 'river')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Rivière']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Rivière']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([type] = 'camp_site')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Camping']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Camping']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([type] = 'cemetery')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Cimetière']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Cimetière']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([type] = 'industrial')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Zone industrielle']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Zone industrielle']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([trees] = 'christmas_trees')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Sapins de Noël']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Sapins de Noël']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([type] = 'orchard')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Verger']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Verger']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([type] = 'meadow')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Prairie']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Prairie']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([type] = 'farmland')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Terre cultivée']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Terre cultivée']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([type] = 'scrub')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Lande, bruyère']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Lande, bruyère']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position') and ([type] = 'forest')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Forêt mixte']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Forêt mixte']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'stop_position')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA[]]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA[]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'fountain') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fontaine, lavoir']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fontaine, lavoir']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'fountain')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fontaine, lavoir']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fontaine, lavoir']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'picnic_table') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Table de picnic']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Table de picnic']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'picnic_table')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Table de picnic']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Table de picnic']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'wayside_cross') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Croix']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Croix']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'wayside_cross')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Croix']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Croix']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'ruins') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Ruines, site archéologique']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Ruines, site archéologique']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'ruins')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Ruines, site archéologique']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Ruines, site archéologique']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'bridge') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Passerelle']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Passerelle']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'bridge')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Passerelle']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Passerelle']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'church') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Église']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Église']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'church')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Église']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Église']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'school') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['École']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['École']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'school')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['École']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['École']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'farm') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Ferme']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Ferme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'farm')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Ferme']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Ferme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([stylegroup] = 'railway') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Voie ferrée']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Voie ferrée']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([stylegroup] = 'railway')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Voie ferrée']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Voie ferrée']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([line] = 'cutline')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Coupe-feu']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Coupe-feu']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([stylegroup] = 'noauto') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Sentier']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Sentier']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([stylegroup] = 'noauto')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Sentier']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Sentier']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([tracktype] = 'grade5') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Mauvais chemin']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Mauvais chemin']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([tracktype] = 'grade5')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Mauvais chemin']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Mauvais chemin']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([tracktype] = 'grade3') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Chemin moyen']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Chemin moyen']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([tracktype] = 'grade3')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Chemin moyen']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Chemin moyen']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([tracktype] = 'grade1') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Bon chemin']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Bon chemin']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([tracktype] = 'grade1')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Bon chemin']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Bon chemin']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([type] = 'primary') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Route primaire']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Route primaire']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([type] = 'primary')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Route primaire']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Route primaire']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([type] = 'tertiary') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Route mineure']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Route mineure']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([type] = 'tertiary')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Route mineure']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Route mineure']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([type] = 'secondary') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Route secondaire']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Route secondaire']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([type] = 'secondary')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Route secondaire']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Route secondaire']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([type] = 'motorway') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Autoroute']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Autoroute']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([type] = 'motorway')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Autoroute']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Autoroute']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([line] = 'cliff')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Falaise, rochers']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Falaise, rochers']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([line] = 'embankment')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Talus']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Talus']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Ligne électrique']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Ligne électrique']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([line] = 'hedge')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Haie']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Haie']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([type] = 'water')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Étang, lac']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Étang, lac']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([type] = 'wetland')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Zone humide']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Zone humide']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([waterway_legend] = 'ditch')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fossé']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fossé']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([waterway_legend] = 'stream')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Ruisseau']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Ruisseau']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([waterway_legend] = 'river')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Rivière']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Rivière']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([type] = 'camp_site')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Camping']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Camping']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([type] = 'cemetery')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Cimetière']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Cimetière']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([type] = 'industrial')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Zone industrielle']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Zone industrielle']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([trees] = 'christmas_trees')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Sapins de Noël']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Sapins de Noël']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([type] = 'orchard')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Verger']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Verger']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([type] = 'meadow')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Prairie']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Prairie']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([type] = 'farmland')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Terre cultivée']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Terre cultivée']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([type] = 'scrub')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Lande, bruyère']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Lande, bruyère']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower') and ([type] = 'forest')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Forêt mixte']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Forêt mixte']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'tower')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA[]]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA[]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([stylegroup] = 'railway') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Voie ferrée']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Voie ferrée']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([stylegroup] = 'railway')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Voie ferrée']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Voie ferrée']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([line] = 'cutline')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Coupe-feu']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Coupe-feu']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([stylegroup] = 'noauto') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Sentier']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Sentier']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([stylegroup] = 'noauto')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Sentier']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Sentier']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([tracktype] = 'grade5') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Mauvais chemin']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Mauvais chemin']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([tracktype] = 'grade5')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Mauvais chemin']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Mauvais chemin']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([tracktype] = 'grade3') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Chemin moyen']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Chemin moyen']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([tracktype] = 'grade3')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Chemin moyen']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Chemin moyen']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([tracktype] = 'grade1') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Bon chemin']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Bon chemin']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([tracktype] = 'grade1')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Bon chemin']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Bon chemin']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'primary') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Route primaire']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Route primaire']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'primary')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Route primaire']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Route primaire']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'tertiary') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Route mineure']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Route mineure']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'tertiary')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Route mineure']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Route mineure']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'secondary') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Route secondaire']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Route secondaire']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'secondary')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Route secondaire']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Route secondaire']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'motorway') and ([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Autoroute']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Autoroute']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'motorway')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Autoroute']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Autoroute']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([line] = 'cliff')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Falaise, rochers']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Falaise, rochers']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([line] = 'embankment')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Talus']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Talus']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([line] = 'line')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Ligne électrique']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Ligne électrique']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([line] = 'hedge')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Haie']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Haie']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'water')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Étang, lac']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Étang, lac']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'wetland')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Zone humide']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Zone humide']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([waterway_legend] = 'ditch')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fossé']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fossé']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([waterway_legend] = 'stream')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Ruisseau']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Ruisseau']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([waterway_legend] = 'river')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Rivière']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Rivière']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'camp_site')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Camping']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Camping']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'cemetery')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Cimetière']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Cimetière']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'industrial')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Zone industrielle']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Zone industrielle']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([trees] = 'christmas_trees')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Sapins de Noël']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Sapins de Noël']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'orchard')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Verger']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Verger']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'meadow')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Prairie']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Prairie']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'farmland')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Terre cultivée']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Terre cultivée']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'scrub')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Lande, bruyère']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Lande, bruyère']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'forest')]]></Filter>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Forêt mixte']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Forêt mixte']]></TextSymbolizer>
     </Rule>
     <Rule>
-      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA[]]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="false" character-spacing="1.5" dx="120" dy="0" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA[]]></TextSymbolizer>
     </Rule>
   </Style>
   <Layer name="legend_labels" status="on">
@@ -3881,22 +3881,22 @@
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([leisure] = 'picnic_table') and ([historic] = 'wayside_cross') and ([point_features] = 'school') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([leisure] = 'picnic_table') and ([historic] = 'wayside_cross') and ([point_features] = 'school')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([leisure] = 'picnic_table') and ([historic] = 'wayside_cross') and ([point_features] = 'farm') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([leisure] = 'picnic_table') and ([historic] = 'wayside_cross') and ([point_features] = 'farm')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([leisure] = 'picnic_table') and ([historic] = 'wayside_cross') and ([point_features] = 'tower')]]></Filter>
@@ -3950,22 +3950,22 @@
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([leisure] = 'picnic_table') and ([point_features] = 'school') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([leisure] = 'picnic_table') and ([point_features] = 'school')]]></Filter>
       <MarkersSymbolizer file="../img/picnic.svg" height="12" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([leisure] = 'picnic_table') and ([point_features] = 'farm') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([leisure] = 'picnic_table') and ([point_features] = 'farm')]]></Filter>
       <MarkersSymbolizer file="../img/picnic.svg" height="12" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([leisure] = 'picnic_table') and ([point_features] = 'wayside_cross') and ([type] = 'mast')]]></Filter>
@@ -4041,22 +4041,22 @@
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([tourism] = 'picnic_site') and ([historic] = 'wayside_cross') and ([point_features] = 'school') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([tourism] = 'picnic_site') and ([historic] = 'wayside_cross') and ([point_features] = 'school')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([tourism] = 'picnic_site') and ([historic] = 'wayside_cross') and ([point_features] = 'farm') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([tourism] = 'picnic_site') and ([historic] = 'wayside_cross') and ([point_features] = 'farm')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([tourism] = 'picnic_site') and ([historic] = 'wayside_cross') and ([point_features] = 'tower')]]></Filter>
@@ -4110,22 +4110,22 @@
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([tourism] = 'picnic_site') and ([point_features] = 'school') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([tourism] = 'picnic_site') and ([point_features] = 'school')]]></Filter>
       <MarkersSymbolizer file="../img/picnic.svg" height="12" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([tourism] = 'picnic_site') and ([point_features] = 'farm') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([tourism] = 'picnic_site') and ([point_features] = 'farm')]]></Filter>
       <MarkersSymbolizer file="../img/picnic.svg" height="12" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([tourism] = 'picnic_site') and ([point_features] = 'wayside_cross') and ([type] = 'mast')]]></Filter>
@@ -4201,22 +4201,22 @@
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([historic] = 'wayside_cross') and ([point_features] = 'school') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/cross.svg" height="25" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([historic] = 'wayside_cross') and ([point_features] = 'school')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/cross.svg" height="25" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([historic] = 'wayside_cross') and ([point_features] = 'farm') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/cross.svg" height="25" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([historic] = 'wayside_cross') and ([point_features] = 'farm')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/cross.svg" height="25" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([historic] = 'wayside_cross') and ([point_features] = 'tower')]]></Filter>
@@ -4270,22 +4270,22 @@
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([power] = 'tower') and ([point_features] = 'school') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/tower.svg" height="4" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([power] = 'tower') and ([point_features] = 'school')]]></Filter>
       <MarkersSymbolizer file="../img/tower.svg" height="4" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([power] = 'tower') and ([point_features] = 'farm') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/tower.svg" height="4" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([power] = 'tower') and ([point_features] = 'farm')]]></Filter>
       <MarkersSymbolizer file="../img/tower.svg" height="4" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([power] = 'tower') and ([point_features] = 'wayside_cross') and ([type] = 'mast')]]></Filter>
@@ -4346,22 +4346,22 @@
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([man_made] = 'mast') and ([point_features] = 'school') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/tower.svg" height="4" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([man_made] = 'mast') and ([point_features] = 'school')]]></Filter>
       <MarkersSymbolizer file="../img/tower.svg" height="4" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([man_made] = 'mast') and ([point_features] = 'farm') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/tower.svg" height="4" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([man_made] = 'mast') and ([point_features] = 'farm')]]></Filter>
       <MarkersSymbolizer file="../img/tower.svg" height="4" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([man_made] = 'mast') and ([point_features] = 'wayside_cross') and ([type] = 'mast')]]></Filter>
@@ -4422,20 +4422,20 @@
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([point_features] = 'school') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/tower.svg" height="4" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([point_features] = 'school')]]></Filter>
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([point_features] = 'farm') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/tower.svg" height="4" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([point_features] = 'farm')]]></Filter>
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([public_transport] = 'stop_position') and ([point_features] = 'wayside_cross') and ([type] = 'mast')]]></Filter>
@@ -4537,22 +4537,22 @@
     <Rule>
       <Filter><![CDATA[([leisure] = 'picnic_table') and ([historic] = 'wayside_cross') and ([point_features] = 'school') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([leisure] = 'picnic_table') and ([historic] = 'wayside_cross') and ([point_features] = 'school')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([leisure] = 'picnic_table') and ([historic] = 'wayside_cross') and ([point_features] = 'farm') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([leisure] = 'picnic_table') and ([historic] = 'wayside_cross') and ([point_features] = 'farm')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([leisure] = 'picnic_table') and ([historic] = 'wayside_cross') and ([point_features] = 'tower')]]></Filter>
@@ -4606,22 +4606,22 @@
     <Rule>
       <Filter><![CDATA[([leisure] = 'picnic_table') and ([point_features] = 'school') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([leisure] = 'picnic_table') and ([point_features] = 'school')]]></Filter>
       <MarkersSymbolizer file="../img/picnic.svg" height="12" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([leisure] = 'picnic_table') and ([point_features] = 'farm') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([leisure] = 'picnic_table') and ([point_features] = 'farm')]]></Filter>
       <MarkersSymbolizer file="../img/picnic.svg" height="12" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([leisure] = 'picnic_table') and ([point_features] = 'wayside_cross') and ([type] = 'mast')]]></Filter>
@@ -4697,22 +4697,22 @@
     <Rule>
       <Filter><![CDATA[([tourism] = 'picnic_site') and ([historic] = 'wayside_cross') and ([point_features] = 'school') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([tourism] = 'picnic_site') and ([historic] = 'wayside_cross') and ([point_features] = 'school')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([tourism] = 'picnic_site') and ([historic] = 'wayside_cross') and ([point_features] = 'farm') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([tourism] = 'picnic_site') and ([historic] = 'wayside_cross') and ([point_features] = 'farm')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([tourism] = 'picnic_site') and ([historic] = 'wayside_cross') and ([point_features] = 'tower')]]></Filter>
@@ -4766,22 +4766,22 @@
     <Rule>
       <Filter><![CDATA[([tourism] = 'picnic_site') and ([point_features] = 'school') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([tourism] = 'picnic_site') and ([point_features] = 'school')]]></Filter>
       <MarkersSymbolizer file="../img/picnic.svg" height="12" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([tourism] = 'picnic_site') and ([point_features] = 'farm') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/picnic.svg" height="12" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([tourism] = 'picnic_site') and ([point_features] = 'farm')]]></Filter>
       <MarkersSymbolizer file="../img/picnic.svg" height="12" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([tourism] = 'picnic_site') and ([point_features] = 'wayside_cross') and ([type] = 'mast')]]></Filter>
@@ -4857,22 +4857,22 @@
     <Rule>
       <Filter><![CDATA[([historic] = 'wayside_cross') and ([point_features] = 'school') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/cross.svg" height="25" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([historic] = 'wayside_cross') and ([point_features] = 'school')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/cross.svg" height="25" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([historic] = 'wayside_cross') and ([point_features] = 'farm') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/cross.svg" height="25" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([historic] = 'wayside_cross') and ([point_features] = 'farm')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/cross.svg" height="25" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([historic] = 'wayside_cross') and ([point_features] = 'tower')]]></Filter>
@@ -4926,22 +4926,22 @@
     <Rule>
       <Filter><![CDATA[([power] = 'tower') and ([point_features] = 'school') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/tower.svg" height="4" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([power] = 'tower') and ([point_features] = 'school')]]></Filter>
       <MarkersSymbolizer file="../img/tower.svg" height="4" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([power] = 'tower') and ([point_features] = 'farm') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/tower.svg" height="4" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([power] = 'tower') and ([point_features] = 'farm')]]></Filter>
       <MarkersSymbolizer file="../img/tower.svg" height="4" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([power] = 'tower') and ([point_features] = 'wayside_cross') and ([type] = 'mast')]]></Filter>
@@ -5002,22 +5002,22 @@
     <Rule>
       <Filter><![CDATA[([man_made] = 'mast') and ([point_features] = 'school') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/tower.svg" height="4" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([man_made] = 'mast') and ([point_features] = 'school')]]></Filter>
       <MarkersSymbolizer file="../img/tower.svg" height="4" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([man_made] = 'mast') and ([point_features] = 'farm') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/tower.svg" height="4" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([man_made] = 'mast') and ([point_features] = 'farm')]]></Filter>
       <MarkersSymbolizer file="../img/tower.svg" height="4" />
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([man_made] = 'mast') and ([point_features] = 'wayside_cross') and ([type] = 'mast')]]></Filter>
@@ -5078,20 +5078,20 @@
     <Rule>
       <Filter><![CDATA[([point_features] = 'school') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/tower.svg" height="4" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'school')]]></Filter>
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Éc.']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Éc.']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'farm') and ([type] = 'mast')]]></Filter>
       <MarkersSymbolizer allow-overlap="true" file="../img/tower.svg" height="4" />
-      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" dy="8" fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'farm')]]></Filter>
-      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="26"><![CDATA['Fme']]></TextSymbolizer>
+      <TextSymbolizer fill="#333333" fontset-name="fontset-0" size="18"><![CDATA['Fme']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([point_features] = 'wayside_cross') and ([type] = 'mast')]]></Filter>
@@ -5165,15 +5165,15 @@
   <Style filter-mode="first" name="place_legend">
     <Rule>
       <Filter><![CDATA[([type] = 'hamlet')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" fontset-name="fontset-0" placement="point" size="26"><![CDATA['Hoûte-si-Ploût']]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" fontset-name="fontset-0" placement="point" size="18"><![CDATA['Hoûte-si-Ploût']]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'village')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" fontset-name="fontset-0" placement="point" size="39"><![CDATA[Wisembach]]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" fontset-name="fontset-0" placement="point" size="27"><![CDATA[Wisembach]]></TextSymbolizer>
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'city')]]></Filter>
-      <TextSymbolizer allow-overlap="true" character-spacing="2" fontset-name="fontset-0" placement="point" size="52"><![CDATA[Bastogne]]></TextSymbolizer>
+      <TextSymbolizer allow-overlap="true" character-spacing="2" fontset-name="fontset-0" placement="point" size="36"><![CDATA[Bastogne]]></TextSymbolizer>
     </Rule>
     <Rule>
       <TextSymbolizer allow-overlap="true" character-spacing="2" fontset-name="fontset-0" placement="point"><![CDATA[]]></TextSymbolizer>

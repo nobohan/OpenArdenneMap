@@ -1,7 +1,7 @@
 /* legend variables */
 
 @black : #333333;
-@font_size : 26;
+@font_size : 18;
 @font_color: @black;
 @font: @sans;
 
