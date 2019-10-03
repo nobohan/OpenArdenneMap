@@ -244,8 +244,8 @@
 #linear_features {
   [type = 'hedge'], [type = 'tree_row'] {
       line-color: darken(@green,30%);
-      line-width: 3;
-      line-dasharray: 3,5;
+      line-width: 4;
+      line-dasharray: 4, 6;
   }
   [type = 'line'] {
       line-color: @black;
