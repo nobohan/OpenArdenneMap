@@ -13,9 +13,9 @@ Map { background-color: @white; }
 /* ================================================================== */
 
 #contour  {
-  line-color: @contour;
-  line-width: 1;
-  [main="yes"] {line-width: 3;}
+    line-color: @contour;
+    line-width: 1;
+    [main="yes"] {line-width: 3;}
 }
 
 #hillshade {

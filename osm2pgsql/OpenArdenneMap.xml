@@ -826,12 +826,17 @@
   </Layer>
   <Style filter-mode="first" name="contour">
     <Rule>
-      <Filter><![CDATA[([main] = 'yes')]]></Filter>
+      <Filter><![CDATA[([length] > 20000) and ([main] = 'yes')]]></Filter>
       <LineSymbolizer stroke="#bbbbbb" stroke-width="3" />
       <TextSymbolizer fill="#444444" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="2" line-spacing="1" placement="line" size="25" wrap-width="60"><![CDATA[[level]]]></TextSymbolizer>
     </Rule>
     <Rule>
+      <Filter><![CDATA[([length] > 20000)]]></Filter>
       <LineSymbolizer stroke="#bbbbbb" stroke-width="1" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([main] = 'yes')]]></Filter>
+      <TextSymbolizer fill="#444444" fontset-name="fontset-0" halo-fill="#ffffff" halo-radius="2" line-spacing="1" placement="line" size="25" wrap-width="60"><![CDATA[[level]]]></TextSymbolizer>
     </Rule>
   </Style>
   <Layer name="contour" srs="+proj=lcc +lat_1=51.16666723333333 +lat_2=49.8333339 +lat_0=90 +lon_0=4.367486666666666 +x_0=150000.013 +y_0=5400088.438 +ellps=intl +towgs84=-106.869,52.2978,-103.724,0.3366,-0.457,1.8422,-1.2747 +units=m +no_defs" status="on">
@@ -1361,6 +1366,22 @@
       <LineSymbolizer stroke="#f1efe0" stroke-linecap="round" stroke-linejoin="round" stroke-width="7" />
     </Rule>
     <Rule>
+      <Filter><![CDATA[([render] = '3_inline') and ([stylegroup] = 'mainroad') and ([type] = 'primary') and ([tunnel] = 1)]]></Filter>
+      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="16" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([render] = '3_inline') and ([stylegroup] = 'mainroad') and ([type] = 'primary')]]></Filter>
+      <LineSymbolizer stroke="#f5812b" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([render] = '3_inline') and ([stylegroup] = 'mainroad') and ([type] = 'primary_link') and ([tunnel] = 1)]]></Filter>
+      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="16" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([render] = '3_inline') and ([stylegroup] = 'mainroad') and ([type] = 'primary_link')]]></Filter>
+      <LineSymbolizer stroke="#f5812b" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+    </Rule>
+    <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([stylegroup] = 'railway') and ([type] = 'disused') and ([tunnel] = 1)]]></Filter>
       <LineSymbolizer stroke="#ffffff" stroke-dasharray="15, 15" stroke-linecap="butt" stroke-opacity="0.67" stroke-width="7" />
     </Rule>
@@ -1441,16 +1462,12 @@
       <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="7" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([render] = '3_inline') and ([type] = 'primary') and ([tunnel] = 1) and ([stylegroup] = 'mainroad')]]></Filter>
-      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="12" />
-    </Rule>
-    <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'primary') and ([tunnel] = 1) and ([stylegroup] = 'motorway')]]></Filter>
       <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'primary') and ([tunnel] = 1)]]></Filter>
-      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" />
+      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-width="17" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'service')]]></Filter>
@@ -1469,16 +1486,12 @@
       <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="7" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([render] = '3_inline') and ([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'mainroad')]]></Filter>
-      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="12" />
-    </Rule>
-    <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'motorway')]]></Filter>
       <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'primary_link') and ([tunnel] = 1)]]></Filter>
-      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" />
+      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-width="17" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'trunk') and ([tunnel] = 1) and ([stylegroup] = 'service')]]></Filter>
@@ -1985,6 +1998,38 @@
       <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
     </Rule>
     <Rule>
+      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([type] = 'primary') and ([bridge] = 1) and ([tunnel] = 1)]]></Filter>
+      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([type] = 'primary') and ([bridge] = 1)]]></Filter>
+      <LineSymbolizer stroke="#0c0c0c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([type] = 'primary') and ([tunnel] = 1)]]></Filter>
+      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([type] = 'primary')]]></Filter>
+      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([type] = 'primary_link') and ([bridge] = 1) and ([tunnel] = 1)]]></Filter>
+      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([type] = 'primary_link') and ([bridge] = 1)]]></Filter>
+      <LineSymbolizer stroke="#0c0c0c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([type] = 'primary_link') and ([tunnel] = 1)]]></Filter>
+      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([type] = 'primary_link')]]></Filter>
+      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'minorroad') and ([bridge] = 1) and ([tunnel] = 1)]]></Filter>
       <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="13" />
     </Rule>
@@ -2050,27 +2095,27 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([type] = 'primary') and ([bridge] = 1) and ([stylegroup] = 'noauto')]]></Filter>
-      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="10, 10" stroke-linecap="butt" stroke-linejoin="round" stroke-width="18" />
+      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="10, 10" stroke-linecap="butt" stroke-linejoin="round" stroke-width="22" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([type] = 'primary') and ([bridge] = 1) and ([tunnel] = 1)]]></Filter>
-      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="18" />
+      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="22" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([type] = 'primary') and ([bridge] = 1)]]></Filter>
-      <LineSymbolizer stroke="#0c0c0c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="18" />
+      <LineSymbolizer stroke="#0c0c0c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="22" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([type] = 'primary_link') and ([bridge] = 1) and ([stylegroup] = 'noauto')]]></Filter>
-      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="10, 10" stroke-linecap="butt" stroke-linejoin="round" stroke-width="18" />
+      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="10, 10" stroke-linecap="butt" stroke-linejoin="round" stroke-width="22" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([type] = 'primary_link') and ([bridge] = 1) and ([tunnel] = 1)]]></Filter>
-      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="18" />
+      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="22" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([type] = 'primary_link') and ([bridge] = 1)]]></Filter>
-      <LineSymbolizer stroke="#0c0c0c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="18" />
+      <LineSymbolizer stroke="#0c0c0c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="22" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([type] = 'trunk') and ([bridge] = 1) and ([stylegroup] = 'mainroad') and ([tunnel] = 1)]]></Filter>
@@ -2309,14 +2354,6 @@
       <LineSymbolizer stroke="#f5812b" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([render] = '3_inline') and ([stylegroup] = 'mainroad') and ([type] = 'primary')]]></Filter>
-      <LineSymbolizer stroke="#f5812b" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" />
-    </Rule>
-    <Rule>
-      <Filter><![CDATA[([render] = '3_inline') and ([stylegroup] = 'mainroad') and ([type] = 'primary_link')]]></Filter>
-      <LineSymbolizer stroke="#f5812b" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" />
-    </Rule>
-    <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([stylegroup] = 'mainroad') and ([type] = 'trunk')]]></Filter>
       <LineSymbolizer stroke="#f5812b" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" />
     </Rule>
@@ -2390,11 +2427,11 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'primary')]]></Filter>
-      <LineSymbolizer stroke="#f5812b" />
+      <LineSymbolizer stroke="#f5812b" stroke-width="17" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'primary_link')]]></Filter>
-      <LineSymbolizer stroke="#f5812b" />
+      <LineSymbolizer stroke="#f5812b" stroke-width="17" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'trunk')]]></Filter>
@@ -2573,14 +2610,6 @@
       <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="16" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([tunnel] = 1) and ([type] = 'primary')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="16" />
-    </Rule>
-    <Rule>
-      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([tunnel] = 1) and ([type] = 'primary_link')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="16" />
-    </Rule>
-    <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([tunnel] = 1) and ([type] = 'trunk')]]></Filter>
       <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="16" />
     </Rule>
@@ -2610,14 +2639,6 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([type] = 'secondary_link')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-    </Rule>
-    <Rule>
-      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([type] = 'primary')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-    </Rule>
-    <Rule>
-      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([type] = 'primary_link')]]></Filter>
       <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
     </Rule>
     <Rule>
@@ -2746,11 +2767,11 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([tunnel] = 1) and ([type] = 'primary')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([tunnel] = 1) and ([type] = 'primary_link')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([tunnel] = 1) and ([type] = 'trunk')]]></Filter>
@@ -2786,11 +2807,11 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([type] = 'primary')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" />
+      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="20" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([type] = 'primary_link')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" />
+      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="20" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([type] = 'trunk')]]></Filter>
@@ -2858,20 +2879,36 @@
   </Layer>
   <Style filter-mode="first" name="roads-top">
     <Rule>
+      <Filter><![CDATA[([stylegroup] = 'service') and ([tracktype] = 'grade4') and ([type] = 'primary')]]></Filter>
+      <LineSymbolizer offset="3" stroke="#111111" stroke-dasharray="8, 12" stroke-width="2" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([stylegroup] = 'service') and ([tracktype] = 'grade4') and ([type] = 'primary_link')]]></Filter>
+      <LineSymbolizer offset="3" stroke="#111111" stroke-dasharray="8, 12" stroke-width="2" />
+    </Rule>
+    <Rule>
       <Filter><![CDATA[([stylegroup] = 'service') and ([tracktype] = 'grade4') and ([type] = 'motorway')]]></Filter>
-      <LineSymbolizer offset="4" stroke="#ffffff" stroke-dasharray="5, 5" stroke-width="1" />
+      <LineSymbolizer offset="3" stroke="#ffffff" stroke-dasharray="5, 5" stroke-width="2" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([stylegroup] = 'service') and ([tracktype] = 'grade4') and ([type] = 'motorway_link')]]></Filter>
-      <LineSymbolizer offset="4" stroke="#ffffff" stroke-dasharray="5, 5" stroke-width="1" />
+      <LineSymbolizer offset="3" stroke="#ffffff" stroke-dasharray="5, 5" stroke-width="2" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([stylegroup] = 'service') and ([tracktype] = 'grade4')]]></Filter>
-      <LineSymbolizer offset="4" stroke-width="1" />
+      <LineSymbolizer offset="3" stroke-width="2" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([stylegroup] = 'service') and ([tracktype] = 'grade1')]]></Filter>
       <LineSymbolizer stroke="#f5812b" stroke-dasharray="20, 20" stroke-width="7" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([stylegroup] = 'service') and ([type] = 'primary')]]></Filter>
+      <LineSymbolizer stroke="#111111" stroke-dasharray="8, 12" stroke-width="2" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([stylegroup] = 'service') and ([type] = 'primary_link')]]></Filter>
+      <LineSymbolizer stroke="#111111" stroke-dasharray="8, 12" stroke-width="2" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([stylegroup] = 'service') and ([type] = 'motorway')]]></Filter>
@@ -2880,6 +2917,14 @@
     <Rule>
       <Filter><![CDATA[([stylegroup] = 'service') and ([type] = 'motorway_link')]]></Filter>
       <LineSymbolizer stroke="#ffffff" stroke-dasharray="5, 5" stroke-width="2" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'primary')]]></Filter>
+      <LineSymbolizer stroke="#111111" stroke-dasharray="8, 12" stroke-width="2" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([type] = 'primary_link')]]></Filter>
+      <LineSymbolizer stroke="#111111" stroke-dasharray="8, 12" stroke-width="2" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'motorway')]]></Filter>
@@ -3252,6 +3297,22 @@
       <LineSymbolizer stroke="#f1efe0" stroke-linecap="round" stroke-linejoin="round" stroke-width="7" />
     </Rule>
     <Rule>
+      <Filter><![CDATA[([stylegroup] = 'mainroad') and ([type] = 'primary') and ([tunnel] = 1)]]></Filter>
+      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="16" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([stylegroup] = 'mainroad') and ([type] = 'primary')]]></Filter>
+      <LineSymbolizer stroke="#f5812b" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([stylegroup] = 'mainroad') and ([type] = 'primary_link') and ([tunnel] = 1)]]></Filter>
+      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="16" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([stylegroup] = 'mainroad') and ([type] = 'primary_link')]]></Filter>
+      <LineSymbolizer stroke="#f5812b" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+    </Rule>
+    <Rule>
       <Filter><![CDATA[([stylegroup] = 'railway') and ([type] = 'disused') and ([tunnel] = 1)]]></Filter>
       <LineSymbolizer stroke="#ffffff" stroke-dasharray="15, 15" stroke-linecap="butt" stroke-opacity="0.67" stroke-width="7" />
     </Rule>
@@ -3332,16 +3393,12 @@
       <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="7" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'primary') and ([tunnel] = 1) and ([stylegroup] = 'mainroad')]]></Filter>
-      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="12" />
-    </Rule>
-    <Rule>
       <Filter><![CDATA[([type] = 'primary') and ([tunnel] = 1) and ([stylegroup] = 'motorway')]]></Filter>
       <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'primary') and ([tunnel] = 1)]]></Filter>
-      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" />
+      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-width="17" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'service')]]></Filter>
@@ -3360,16 +3417,12 @@
       <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="7" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'mainroad')]]></Filter>
-      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="12" />
-    </Rule>
-    <Rule>
       <Filter><![CDATA[([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'motorway')]]></Filter>
       <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'primary_link') and ([tunnel] = 1)]]></Filter>
-      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" />
+      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-width="17" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'trunk') and ([tunnel] = 1) and ([stylegroup] = 'service')]]></Filter>
@@ -3632,14 +3685,6 @@
       <LineSymbolizer stroke="#f5812b" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([stylegroup] = 'mainroad') and ([type] = 'primary')]]></Filter>
-      <LineSymbolizer stroke="#f5812b" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" />
-    </Rule>
-    <Rule>
-      <Filter><![CDATA[([stylegroup] = 'mainroad') and ([type] = 'primary_link')]]></Filter>
-      <LineSymbolizer stroke="#f5812b" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" />
-    </Rule>
-    <Rule>
       <Filter><![CDATA[([stylegroup] = 'mainroad') and ([type] = 'trunk')]]></Filter>
       <LineSymbolizer stroke="#f5812b" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" />
     </Rule>
@@ -3713,11 +3758,11 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'primary')]]></Filter>
-      <LineSymbolizer stroke="#f5812b" />
+      <LineSymbolizer stroke="#f5812b" stroke-width="17" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'primary_link')]]></Filter>
-      <LineSymbolizer stroke="#f5812b" />
+      <LineSymbolizer stroke="#f5812b" stroke-width="17" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'trunk')]]></Filter>
@@ -4133,6 +4178,38 @@
       <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
     </Rule>
     <Rule>
+      <Filter><![CDATA[([stylegroup] = 'mainroad') and ([type] = 'primary') and ([bridge] = 1) and ([tunnel] = 1)]]></Filter>
+      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([stylegroup] = 'mainroad') and ([type] = 'primary') and ([bridge] = 1)]]></Filter>
+      <LineSymbolizer stroke="#0c0c0c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([stylegroup] = 'mainroad') and ([type] = 'primary') and ([tunnel] = 1)]]></Filter>
+      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([stylegroup] = 'mainroad') and ([type] = 'primary')]]></Filter>
+      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([stylegroup] = 'mainroad') and ([type] = 'primary_link') and ([bridge] = 1) and ([tunnel] = 1)]]></Filter>
+      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([stylegroup] = 'mainroad') and ([type] = 'primary_link') and ([bridge] = 1)]]></Filter>
+      <LineSymbolizer stroke="#0c0c0c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([stylegroup] = 'mainroad') and ([type] = 'primary_link') and ([tunnel] = 1)]]></Filter>
+      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([stylegroup] = 'mainroad') and ([type] = 'primary_link')]]></Filter>
+      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
       <Filter><![CDATA[([stylegroup] = 'minorroad') and ([bridge] = 1) and ([tunnel] = 1)]]></Filter>
       <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="13" />
     </Rule>
@@ -4198,27 +4275,27 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'primary') and ([bridge] = 1) and ([stylegroup] = 'noauto')]]></Filter>
-      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="10, 10" stroke-linecap="butt" stroke-linejoin="round" stroke-width="18" />
+      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="10, 10" stroke-linecap="butt" stroke-linejoin="round" stroke-width="22" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'primary') and ([bridge] = 1) and ([tunnel] = 1)]]></Filter>
-      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="18" />
+      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="22" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'primary') and ([bridge] = 1)]]></Filter>
-      <LineSymbolizer stroke="#0c0c0c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="18" />
+      <LineSymbolizer stroke="#0c0c0c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="22" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'primary_link') and ([bridge] = 1) and ([stylegroup] = 'noauto')]]></Filter>
-      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="10, 10" stroke-linecap="butt" stroke-linejoin="round" stroke-width="18" />
+      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="10, 10" stroke-linecap="butt" stroke-linejoin="round" stroke-width="22" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'primary_link') and ([bridge] = 1) and ([tunnel] = 1)]]></Filter>
-      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="18" />
+      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="22" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'primary_link') and ([bridge] = 1)]]></Filter>
-      <LineSymbolizer stroke="#0c0c0c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="18" />
+      <LineSymbolizer stroke="#0c0c0c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="22" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'trunk') and ([bridge] = 1) and ([stylegroup] = 'mainroad') and ([tunnel] = 1)]]></Filter>
@@ -4461,14 +4538,6 @@
       <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="16" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([stylegroup] = 'mainroad') and ([tunnel] = 1) and ([type] = 'primary')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="16" />
-    </Rule>
-    <Rule>
-      <Filter><![CDATA[([stylegroup] = 'mainroad') and ([tunnel] = 1) and ([type] = 'primary_link')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="16" />
-    </Rule>
-    <Rule>
       <Filter><![CDATA[([stylegroup] = 'mainroad') and ([tunnel] = 1) and ([type] = 'trunk')]]></Filter>
       <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="16" />
     </Rule>
@@ -4498,14 +4567,6 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([stylegroup] = 'mainroad') and ([type] = 'secondary_link')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-    </Rule>
-    <Rule>
-      <Filter><![CDATA[([stylegroup] = 'mainroad') and ([type] = 'primary')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-    </Rule>
-    <Rule>
-      <Filter><![CDATA[([stylegroup] = 'mainroad') and ([type] = 'primary_link')]]></Filter>
       <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
     </Rule>
     <Rule>
@@ -4634,11 +4695,11 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([tunnel] = 1) and ([type] = 'primary')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([tunnel] = 1) and ([type] = 'primary_link')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([tunnel] = 1) and ([type] = 'trunk')]]></Filter>
@@ -4674,11 +4735,11 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'primary')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" />
+      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="20" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'primary_link')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" />
+      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="20" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([type] = 'trunk')]]></Filter>
@@ -5094,6 +5155,22 @@
       <LineSymbolizer stroke="#f1efe0" stroke-linecap="round" stroke-linejoin="round" stroke-width="7" />
     </Rule>
     <Rule>
+      <Filter><![CDATA[([render] = '3_inline') and ([stylegroup] = 'mainroad') and ([type] = 'primary') and ([tunnel] = 1)]]></Filter>
+      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="16" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([render] = '3_inline') and ([stylegroup] = 'mainroad') and ([type] = 'primary')]]></Filter>
+      <LineSymbolizer stroke="#f5812b" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([render] = '3_inline') and ([stylegroup] = 'mainroad') and ([type] = 'primary_link') and ([tunnel] = 1)]]></Filter>
+      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="16" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([render] = '3_inline') and ([stylegroup] = 'mainroad') and ([type] = 'primary_link')]]></Filter>
+      <LineSymbolizer stroke="#f5812b" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+    </Rule>
+    <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([stylegroup] = 'railway') and ([type] = 'disused') and ([tunnel] = 1)]]></Filter>
       <LineSymbolizer stroke="#ffffff" stroke-dasharray="15, 15" stroke-linecap="butt" stroke-opacity="0.67" stroke-width="7" />
     </Rule>
@@ -5174,16 +5251,12 @@
       <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="7" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([render] = '3_inline') and ([type] = 'primary') and ([tunnel] = 1) and ([stylegroup] = 'mainroad')]]></Filter>
-      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="12" />
-    </Rule>
-    <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'primary') and ([tunnel] = 1) and ([stylegroup] = 'motorway')]]></Filter>
       <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'primary') and ([tunnel] = 1)]]></Filter>
-      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" />
+      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-width="17" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'service')]]></Filter>
@@ -5202,16 +5275,12 @@
       <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="7" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([render] = '3_inline') and ([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'mainroad')]]></Filter>
-      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="12" />
-    </Rule>
-    <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'primary_link') and ([tunnel] = 1) and ([stylegroup] = 'motorway')]]></Filter>
       <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="12" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'primary_link') and ([tunnel] = 1)]]></Filter>
-      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" />
+      <LineSymbolizer stroke="#f79e5c" stroke-linecap="butt" stroke-width="17" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'trunk') and ([tunnel] = 1) and ([stylegroup] = 'service')]]></Filter>
@@ -5718,6 +5787,38 @@
       <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
     </Rule>
     <Rule>
+      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([type] = 'primary') and ([bridge] = 1) and ([tunnel] = 1)]]></Filter>
+      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([type] = 'primary') and ([bridge] = 1)]]></Filter>
+      <LineSymbolizer stroke="#0c0c0c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([type] = 'primary') and ([tunnel] = 1)]]></Filter>
+      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([type] = 'primary')]]></Filter>
+      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([type] = 'primary_link') and ([bridge] = 1) and ([tunnel] = 1)]]></Filter>
+      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([type] = 'primary_link') and ([bridge] = 1)]]></Filter>
+      <LineSymbolizer stroke="#0c0c0c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([type] = 'primary_link') and ([tunnel] = 1)]]></Filter>
+      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
+      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([type] = 'primary_link')]]></Filter>
+      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="20" />
+    </Rule>
+    <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'minorroad') and ([bridge] = 1) and ([tunnel] = 1)]]></Filter>
       <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="13" />
     </Rule>
@@ -5783,27 +5884,27 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([type] = 'primary') and ([bridge] = 1) and ([stylegroup] = 'noauto')]]></Filter>
-      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="10, 10" stroke-linecap="butt" stroke-linejoin="round" stroke-width="18" />
+      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="10, 10" stroke-linecap="butt" stroke-linejoin="round" stroke-width="22" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([type] = 'primary') and ([bridge] = 1) and ([tunnel] = 1)]]></Filter>
-      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="18" />
+      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="22" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([type] = 'primary') and ([bridge] = 1)]]></Filter>
-      <LineSymbolizer stroke="#0c0c0c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="18" />
+      <LineSymbolizer stroke="#0c0c0c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="22" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([type] = 'primary_link') and ([bridge] = 1) and ([stylegroup] = 'noauto')]]></Filter>
-      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="10, 10" stroke-linecap="butt" stroke-linejoin="round" stroke-width="18" />
+      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="10, 10" stroke-linecap="butt" stroke-linejoin="round" stroke-width="22" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([type] = 'primary_link') and ([bridge] = 1) and ([tunnel] = 1)]]></Filter>
-      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="18" />
+      <LineSymbolizer stroke="#0c0c0c" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="22" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([type] = 'primary_link') and ([bridge] = 1)]]></Filter>
-      <LineSymbolizer stroke="#0c0c0c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="18" />
+      <LineSymbolizer stroke="#0c0c0c" stroke-linecap="butt" stroke-linejoin="round" stroke-width="22" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([type] = 'trunk') and ([bridge] = 1) and ([stylegroup] = 'mainroad') and ([tunnel] = 1)]]></Filter>
@@ -6042,14 +6143,6 @@
       <LineSymbolizer stroke="#f5812b" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([render] = '3_inline') and ([stylegroup] = 'mainroad') and ([type] = 'primary')]]></Filter>
-      <LineSymbolizer stroke="#f5812b" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" />
-    </Rule>
-    <Rule>
-      <Filter><![CDATA[([render] = '3_inline') and ([stylegroup] = 'mainroad') and ([type] = 'primary_link')]]></Filter>
-      <LineSymbolizer stroke="#f5812b" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" />
-    </Rule>
-    <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([stylegroup] = 'mainroad') and ([type] = 'trunk')]]></Filter>
       <LineSymbolizer stroke="#f5812b" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" />
     </Rule>
@@ -6123,11 +6216,11 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'primary')]]></Filter>
-      <LineSymbolizer stroke="#f5812b" />
+      <LineSymbolizer stroke="#f5812b" stroke-width="17" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'primary_link')]]></Filter>
-      <LineSymbolizer stroke="#f5812b" />
+      <LineSymbolizer stroke="#f5812b" stroke-width="17" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'trunk')]]></Filter>
@@ -6306,14 +6399,6 @@
       <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="16" />
     </Rule>
     <Rule>
-      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([tunnel] = 1) and ([type] = 'primary')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="16" />
-    </Rule>
-    <Rule>
-      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([tunnel] = 1) and ([type] = 'primary_link')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="16" />
-    </Rule>
-    <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([tunnel] = 1) and ([type] = 'trunk')]]></Filter>
       <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="16" />
     </Rule>
@@ -6343,14 +6428,6 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([type] = 'secondary_link')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-    </Rule>
-    <Rule>
-      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([type] = 'primary')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-    </Rule>
-    <Rule>
-      <Filter><![CDATA[([render] = '1_outline') and ([stylegroup] = 'mainroad') and ([type] = 'primary_link')]]></Filter>
       <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
     </Rule>
     <Rule>
@@ -6479,11 +6556,11 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([tunnel] = 1) and ([type] = 'primary')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([tunnel] = 1) and ([type] = 'primary_link')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" />
+      <LineSymbolizer stroke="#0f0f0f" stroke-dasharray="3, 3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="20" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([tunnel] = 1) and ([type] = 'trunk')]]></Filter>
@@ -6519,11 +6596,11 @@
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([type] = 'primary')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" />
+      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="20" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([type] = 'primary_link')]]></Filter>
-      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" />
+      <LineSymbolizer stroke="#0f0f0f" stroke-linecap="round" stroke-linejoin="round" stroke-width="20" />
     </Rule>
     <Rule>
       <Filter><![CDATA[([render] = '1_outline') and ([type] = 'trunk')]]></Filter>
