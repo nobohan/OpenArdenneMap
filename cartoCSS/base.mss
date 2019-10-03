@@ -15,7 +15,7 @@ Map { background-color: @white; }
 #contour  {
   line-color: @contour;
   line-width: 1;
-  [main="yes"] {line-width: 2;}
+  [main="yes"] {line-width: 3;}
 }
 
 #hillshade {
@@ -32,7 +32,7 @@ Map { background-color: @white; }
   [type='cemetery']      {
       polygon-pattern-file: url(../img/cemetery.svg);
       polygon-pattern-transform: "scale(2)";
-      line-width:0.3;
+      line-width:0.4;
       line-color: @black;
   }
   [type='college']       { polygon-fill: @school; }
@@ -40,7 +40,7 @@ Map { background-color: @white; }
   [type='common']        { polygon-fill: @park; }
   [type='forest'], [type='wood'] {
       polygon-fill: @bottle;
-      line-width: 0.3;
+      line-width: 0.6;
       line-color: @darkgray;
       polygon-pattern-file: url(../img/forest.svg);
       [leaf_type='broadleaved']  { polygon-pattern-file: url(../img/forest_bl.svg);}
@@ -98,15 +98,15 @@ Map { background-color: @white; }
       [orientation > 340 ] { polygon-pattern-file: url(../img/pattern-70.svg); polygon-pattern-transform: "rotate(90)"}
       [orientation > 350 ] { polygon-pattern-file: url(../img/pattern-80.svg); polygon-pattern-transform: "rotate(90)"}
       polygon-pattern-file: url(../img/pattern.svg);
-      line-width: 0.5;
-      line-color: @gray;
+      line-width: 0.6;
+      line-color: @darkgray;
       /*text-name: [orientation];*/
       /*text-face-name: @sans;*/
       /*text-size: @text_size_s;*/
       /*text-fill: @black;*/
       /*polygon-pattern-transform: "rotate([orientation]) scale(2) skewX(45)";*/
   }
-  [type='orchard']       { polygon-pattern-file:url(../img/orchard.svg); line-width:0.5; line-color: @gray; }
+  [type='orchard']       { polygon-pattern-file:url(../img/orchard.svg); line-width:0.6; line-color: @darkgray; }
   [type='farmyard']      { line-color: @farmyard; }
   [type='school']        { polygon-fill: @school; }
   [trees='christmas_trees'], [produce='christmas_trees'] {

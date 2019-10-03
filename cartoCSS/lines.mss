@@ -68,7 +68,7 @@
 
   [stylegroup='noauto'] {
     line-width: @mini - 1;
-    line-dasharray: 8, 8;
+    line-dasharray: 10, 10;
     line-color: @black;
   }
 
@@ -82,8 +82,8 @@
     [tracktype='grade1'] { line-width: @tiny + 3; }
     [tracktype='grade2'] { line-width: @tiny + 3; }
     [tracktype='grade3'] { line-width: @tiny + 3; }
-    [tracktype='grade4'] { line-width: @mini + 3; line-dasharray: 8, 8; }
-    [tracktype='grade5'] { line-width: @mini + 3; line-dasharray: 8, 8; }
+    [tracktype='grade4'] { line-width: @mini + 4; line-dasharray: 8, 12; }
+    [tracktype='grade5'] { line-width: @mini + 4; line-dasharray: 8, 12; }
     line-width: @tiny + 3;
   }
 }
@@ -166,8 +166,8 @@
     line-dasharray: 5,5;
   }
   [stylegroup='service'] {
-    [tracktype='grade1'] { line-width: @tiny; line-dasharray: 16, 16; line-color: @secondary_fill}
-    [tracktype='grade4'] { line-width: 1; line-offset: (@mini + 3)/2}
+    [tracktype='grade1'] { line-width: @tiny; line-dasharray: 20, 20; line-color: @secondary_fill}
+    [tracktype='grade4'] { line-width: 1; line-offset: (@mini + 4)/2}
   }
 
 }

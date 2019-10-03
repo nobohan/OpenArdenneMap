@@ -182,9 +182,9 @@
 #waterway_label[type='stream'] {
     text-name: '[name]';
     text-face-name: @sans;
-    text-fill: @darkblue;
-    text-halo-fill: lighten(@water, 60%);
-    text-halo-radius: 3;
+    text-fill: @blue;
+    text-halo-fill: @white;
+    text-halo-radius: 4;
     text-placement: line;
     text-repeat-distance: 1200;
     text-size: @text_size_m;
