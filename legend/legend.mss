@@ -1,7 +1,7 @@
 /* legend variables */
 
 @black : #333333;
-@font_size : 18;
+@font_size : 16;
 @font_color: @black;
 @font: @sans;
 
@@ -40,13 +40,14 @@
     [type='secondary'] { text-name: "'Route secondaire'"}
     [type='tertiary'] { text-name: "'Route mineure'"}
     [type='primary'] { text-name: "'Route primaire'"}
-    [tracktype='grade1'] { text-name: "'Bon chemin'"}
-    [tracktype='grade3'] { text-name: "'Chemin moyen'"}
+    [tracktype='grade1'] { text-name: "'Très bon chemin'"}
+    [tracktype='grade3'] { text-name: "'Bon chemin'"}
+    [tracktype='grade4'] { text-name: "'Chemin moyen'"}
     [tracktype='grade5'] { text-name: "'Mauvais chemin'"}
     [stylegroup='noauto'] { text-name: "'Sentier'"}
     [line='cutline'] { text-name: "'Coupe-feu'"}
     [stylegroup='railway'] { text-name: "'Voie ferrée'"}
-    [point_features = 'tower'] {
+    [point_features = 'tower_with_label'] {
         ['tower_type' = 'communication'] {
             text-name:"'Pylône'";
         }
@@ -152,7 +153,7 @@
         marker-height: 10;
         marker-allow-overlap: true;
     }
-    [point_features = 'tower'], [type = 'mast'] {
+    [point_features = 'tower_with_label'], [type = 'mast'] {
         marker-file: url(../img/tower.svg);
         marker-height: 4;
         marker-allow-overlap: true;
@@ -162,6 +163,11 @@
         text-fill: @font_color;
         text-dy: 8;
         text-allow-overlap: true;
+    }
+    [point_features = 'tower'], [type = 'mast'] {
+        marker-file: url(../img/tower.svg);
+        marker-height: 4;
+        marker-allow-overlap: true;
     }
     [point_features = 'ruins'] {
         marker-file: url(../img/ruins.svg);
@@ -202,8 +208,10 @@
         text-name:"'Font.'";
         text-face-name: @sans;
         text-placement: point;
-        text-fill: @darkblue;
-        text-size: @text_size_xs;
+        text-fill: @blue;
+        text-halo-fill: @white;
+        text-halo-radius: 4;
+        text-size: @text_size_xs*0.75;
         text-character-spacing: 2;
         text-line-spacing: 2;
         text-dy: -16;
@@ -222,11 +230,11 @@
         text-size: @font_size*2;
     }
     [type='village'] {
-        text-name: "Wisembach";
+        text-name: "Margny";
         text-size: @font_size*1.5;
     }
     [type='hamlet'] {
-        text-name: "'Hoûte-si-Ploût'";
+        text-name: "'Orval'";
         text-size: @font_size;
     }
 }
