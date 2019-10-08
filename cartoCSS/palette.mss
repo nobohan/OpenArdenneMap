@@ -39,16 +39,16 @@ Map { font-directory: url(../fonts); }
 /* ================================================================== */
 
 @purewhite:         #ffffff;
-@black:             @vertdark;
-@green:             #3e7d4a;
-@blue:              #0072ce;
-@yellow:            #fdd757;
-@jaunepale:		#f3dd6d;
-@marron:		#5e4b3c;
-@rouge:			#c63527;
-@rose: 			#ffc7dc;
-@vertdark: 		#005844;
-@vertpale: 		#00b188;
+@black:             @vertdark; /*pantone*/
+@green:             #4c817b; /*vertdark trame*/
+@blue:              #006AC6; /*pantone*/
+@yellow:            #F8E59A; /*pantone*/
+ /*@jaunepale:		#f3dd6d;*/
+ /*@marron:		#5e4b3c;*/
+@rouge:			#F9423A; /*pantone*/
+@rose: 			#F5DADF; /*pantone*/
+@vertdark: 		#003d19;
+@vertpale: 		#00b188;  /*comment on le fait?*/
 
 @contour:           @vertdark;
 
