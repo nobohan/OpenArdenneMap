@@ -23,12 +23,12 @@ Map { background-color: @rose; }
 
 #grid {
   line-color: @blue;
-  line-width: 2	;
+  line-width: 0	;
 }
 
 #grid::label {
   text-face-name: @sans;
-  text-size: @text_size_l*2;
+  text-size: 0;
   text-fill: @blue;
   text-name: '[col]+[row]';
   text-allow-overlap: true;

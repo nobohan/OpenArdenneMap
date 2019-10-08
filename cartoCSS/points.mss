@@ -232,9 +232,9 @@
             [zoom = 14] { marker-height: @large*@z14; text-size: @text_size_xs*@z14_label; }
             [zoom = 15] { marker-height: @large*@z15; text-size: @text_size_xs*@z15_label; }
             [zoom = 16] { marker-height: @large*@z16; text-size: @text_size_xs*@z16_label; }
-            [zoom = 17] { marker-height: 46; text-size: @text_size_xs*@z17_label; }
-            [zoom = 18] { marker-height: 50; text-size: @text_size_xs*@z18_label; }
-            [zoom = 19] { marker-height: 120; text-size: @text_size_xs*@z19_label; }
+            [zoom = 17] { marker-height: 92; text-size: @text_size_xs*@z17_label; }
+            [zoom = 18] { marker-height: 100; text-size: @text_size_xs*@z18_label; }
+            [zoom = 19] { marker-height: 240; text-size: @text_size_xs*@z19_label; }
             [zoom >= 20] { marker-height: @large*@z20; text-size: @text_size_xs*@z20_label; }
             marker-file: url(../img/train-station-sncb.svg);
             marker-allow-overlap: true;

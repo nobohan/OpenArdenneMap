@@ -169,7 +169,14 @@
     [zoom = 18] { line-width: @large*2 + @outline; }
     [zoom = 19] { line-width: (@large*2.5 + @outline*1.5)*@z19_road; }
     [zoom >= 20] { line-width: (@large*2.5 + @outline*1.5)*@z20_road; }
+     [ref='N523'] {
+       line-width: @large*3.5 + @outline; }
+     [ref='N56'] {
+       line-width: @large*3.5 + @outline; }
+
+
   }
+
   [stylegroup='minorroad'] {
     [zoom <= 10] { line-width: (@large*1.5 + @outline)*@z10_road; }
     [zoom = 11] { line-width: (@large*1.5 + @outline)*@z11_road; }
@@ -356,6 +363,10 @@
     [zoom = 18] { line-width: @large*2; }
     [zoom = 19] { line-width: @large*2.5*@z19_road; }
     [zoom >= 20] { line-width: @large*2.5*@z20_road; }
+     [ref='N523'] {
+       line-width: @large*3.5; }
+     [ref='N56'] {
+       line-width: @large*3.5; }
   }
   [stylegroup='minorroad']{
     [zoom <= 10] { line-width: @large*1.5*@z10_road; }

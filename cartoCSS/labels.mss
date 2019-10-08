@@ -359,8 +359,7 @@
 /* ================================================================== */
 
 #waterway_label[type='river'],
-#waterway_label[type='canal'],
-#waterway_label[type='stream'] {
+#waterway_label[type='canal'] {
   [zoom <= 10] { text-size: @text_size_m*@z10_label; }
   [zoom = 11] { text-size: @text_size_m*@z11_label; }
   [zoom = 12] { text-size: @text_size_m*@z12_label; }
@@ -395,6 +394,15 @@
   [zoom = 18] { text-size: @text_size_s*@z18_label; }
   [zoom = 19] { text-size: @text_size_s*@z19_label; }
   [zoom >= 20] { text-size: @text_size_s*@z20_label; }
+  text-name: '[name]';
+  text-face-name: @sans;
+  text-fill: @water;
+  text-halo-fill: @purewhite;
+  text-halo-radius: 3;
+  text-placement: line;
+  text-repeat-distance: 1200;
+  text-spacing: 300;
+  [zoom > 17]{ text-name: '';}
 }
 
 
