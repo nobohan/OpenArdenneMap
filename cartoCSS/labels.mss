@@ -48,7 +48,7 @@
   text-character-spacing: 2;
   text-fill: @road_text;
   text-halo-fill: #ffffff;
-  text-halo-radius: 5;
+  text-halo-radius: 7;
   text-allow-overlap: true;
   text-size: @text_size_s*1.2;
   text-max-char-angle-delta: 50;
@@ -89,14 +89,14 @@
     [length <= 100] {
       text-name: '[very_short_name]';
       text-wrap-width: 20;
-      text-character-spacing: 0.1;
+      text-character-spacing: 0;
       text-size: @text_size_xs;
       text-max-char-angle-delta: 50;
     }
     [length > 100] {
       text-name: '[very_short_name]';
       text-wrap-width: 110;
-      text-character-spacing: 0.1;
+      text-character-spacing: 0;
       text-size: @text_size_xs;
       text-max-char-angle-delta: 50;
     }
@@ -104,7 +104,7 @@
       text-name: '[short_name]';
       text-wrap-width: 300;
       text-repeat-distance: 2000;
-      text-character-spacing: 0.1;
+      text-character-spacing: 0;
       text-size: @text_size_s;
     }
     [length > 400]{
@@ -130,14 +130,14 @@
     [length <= 100] {
       text-name: '[very_short_name]';
       text-wrap-width: 20;
-      text-character-spacing: 0.1;
+      text-character-spacing: 0;
       text-size: @text_size_s;
       text-max-char-angle-delta: 50;
     }
     [length > 100] {
       text-name: '[very_short_name]';
       text-wrap-width: 110;
-      text-character-spacing: 0.1;
+      text-character-spacing: 0;
       text-size: @text_size_s;
       text-max-char-angle-delta: 50;
     }
@@ -145,7 +145,7 @@
       text-name: '[short_name]';
       text-wrap-width: 300;
       text-repeat-distance: 2000;
-      text-character-spacing: 0.1;
+      text-character-spacing: 0;
       text-size: @text_size_m;
     }
     [length > 400]{
@@ -315,6 +315,8 @@
   [type='tourism'], [type='industrial'] {
     text-name: '[name]';
   }
+
+
   [type='hospital'] {
     text-fill: @black;
     text-halo-fill: @hospital;
@@ -328,6 +330,7 @@
     text-name: '[name]';
     text-fill: @water;
     text-halo-fill: @purewhite;
+    text-allow-overlap: true;
     text-halo-radius: 3;
   }
   [type='school'] {

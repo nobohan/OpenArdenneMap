@@ -40,15 +40,16 @@ Map { font-directory: url(../fonts); }
 
 @purewhite:         #ffffff;
 @black:             @vertdark; /*pantone*/
-@green:             #4c817b; /*vertdark trame*/
+@green:             #4f7f78; /*70% vertdark*/
 @blue:              #006AC6; /*pantone*/
+@bluefill:	    #3387c3; /*80% bleu*/ 
 @yellow:            #F8E59A; /*pantone*/
  /*@jaunepale:		#f3dd6d;*/
  /*@marron:		#5e4b3c;*/
 @rouge:			#F9423A; /*pantone*/
 @rose: 			#F5DADF; /*pantone*/
 @vertdark: 		#003d19;
-@vertpale: 		#00b188;  /*comment on le fait?*/
+@vertpale: 		#9f5f73;  /*trottoir*/
 
 @contour:           @vertdark;
 

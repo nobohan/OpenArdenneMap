@@ -565,7 +565,7 @@
 /* SIDEWALK
 /* ================================================================== */
 
-@sidewalk_width: @large*2.5;
+@sidewalk_width: @large*2;
 
 #sidewalk::right {
   line-color: @vertpale;

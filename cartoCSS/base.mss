@@ -342,7 +342,7 @@ Map { background-color: @rose; }
 
 
 #water {
-  polygon-fill: @water;
+  polygon-fill: @bluefill;
   line-color: @black; line-width: 2;
 }
 
