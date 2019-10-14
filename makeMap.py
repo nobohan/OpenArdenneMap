@@ -69,12 +69,27 @@ def make_map_bbox(map_output, xmin, ymin, xmax, ymax, scale=3000):
 
     render_to_file(m, map_output)
 
-make_map('OAM_brugelette_full_A1.pdf', 12500, 'A1')
-make_map('OAM_brugelette_full_A4.pdf', 12500, 'A4')
+# in EPSG:3857
+# /!\ the last line of project.mll file must be defined in EPSG:3857 as follows:
+# "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
 
+make_map('OAM_brugelette_full_A0.pdf', 12500, 'A0')
 make_map_bbox('attre.pdf', 425400, 6550610, 429080, 6554290)
 make_map_bbox('brugelette.pdf', 427250, 6548000, 430700, 6552000)
 make_map_bbox('cambron.pdf', 430200, 6547130, 433320, 6550300)
 make_map_bbox('gages.pdf', 431280, 6550200, 434750, 6553600)
 make_map_bbox('mevergnies.pdf', 427370, 6550000, 430240, 6553400)
 make_map_bbox('brugelette-mevergnies.pdf', 427250, 6548000, 430700, 6553400)
+
+# # in EPSG:31370, see https://epsg.io/transform#s_srs=3857&t_srs=31370&x=429080.0000000&y=6554290.0000000
+# /!\ the last line of project.mll file must be defined in EPSG:31370 as follows:
+# "srs": "+proj=lcc +lat_1=51.16666723333333 +lat_2=49.8333339 +lat_0=90 +lon_0=4.367486666666666 +x_0=150000.013 +y_0=5400088.438 +ellps=intl +towgs84=-106.869,52.2978,-103.724,0.3366,-0.457,1.8422,-1.2747 +units=m +no_defs",
+
+
+# make_map('OAM_brugelette_full_A1_10000.pdf', 8000, 'A1', 114952, 143391)
+# make_map_bbox('attre.pdf', 111251.85, 143253.24, 113608.35, 145570.04)
+# # make_map_bbox('brugelette.pdf', 427250, 6548000, 430700, 6552000)
+# make_map_bbox('cambron.pdf', 114289.52, 141024.01, 116287.46, 143021.95)
+# make_map_bbox('gages.pdf', 114989.61, 142966.99, 117209.97, 145108.89)
+# # make_map_bbox('mevergnies.pdf', 427370, 6550000, 430240, 6553400)
+# make_map_bbox('brugelette-mevergnies.pdf', 112416.57, 141589.07, 114634.37, 144998.76)
