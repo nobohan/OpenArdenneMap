@@ -14,7 +14,7 @@
    viewBox="0 0 744.09448819 1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.4 (unknown)"
    sodipodi:docname="forest.svg"
    inkscape:export-filename="/media/julien/data/Projets/Geomatique/OSM/Mapnik/artwork/meadow.png"
    inkscape:export-xdpi="90"
@@ -27,15 +27,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.287344"
-     inkscape:cx="235.62747"
+     inkscape:cx="161.96124"
      inkscape:cy="641.38619"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="2505"
-     inkscape:window-height="1412"
-     inkscape:window-x="55"
-     inkscape:window-y="0"
+     inkscape:window-width="2493"
+     inkscape:window-height="1385"
+     inkscape:window-x="2627"
+     inkscape:window-y="27"
      inkscape:window-maximized="1">
     <inkscape:grid
        id="grid4138"
@@ -70,24 +70,24 @@
     <path
        id="path4401"
        d="M251.3592 365.78708C251.3592 365.78708 260.1076 341.0365 260.1076 341.0365C260.1076 341.0365 268.856 365.78708 268.856 365.78708"
-       style="stroke-linejoin:miter;stroke-opacity:1;fill-rule:evenodd;stroke:#005844;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:2.40239531737;fill:none" />
+       style="stroke-linejoin:miter;stroke-opacity:1;fill-rule:evenodd;stroke:#003d19;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:2.40239532;fill:none" />
     <ellipse
        ry="8.2501898"
        rx="8.7484016"
        cy="334.49844"
        cx="357.15335"
        id="path4403"
-       style="stroke-opacity:1;fill-opacity:1;stroke:#005844;stroke-dasharray:none;stroke-miterlimit:4;stroke-width:2.40293109217;fill:none" />
+       style="stroke-opacity:1;fill-opacity:1;stroke:#003d19;stroke-dasharray:none;stroke-miterlimit:4;stroke-width:2.40293109;fill:none" />
     <ellipse
        ry="8.2501898"
        rx="8.7484016"
        cy="438.30164"
        cx="298.39023"
        id="path4403-2"
-       style="stroke-opacity:1;fill-opacity:1;stroke:#005844;stroke-dasharray:none;stroke-miterlimit:4;stroke-width:2.40293109217;fill:none" />
+       style="stroke-opacity:1;fill-opacity:1;stroke:#003d19;stroke-dasharray:none;stroke-miterlimit:4;stroke-width:2.40293109;fill:none" />
     <path
        id="path4401-2"
        d="M375.13422 474.13178C375.13422 474.13178 383.88262 449.3812 383.88262 449.3812C383.88262 449.3812 392.63102 474.13178 392.63102 474.13178"
-       style="stroke-linejoin:miter;stroke-opacity:1;fill-rule:evenodd;stroke:#005844;stroke-linecap:butt;stroke-width:2.40293109217;fill:none" />
+       style="stroke-linejoin:miter;stroke-opacity:1;fill-rule:evenodd;stroke:#003d19;stroke-linecap:butt;stroke-width:2.40293109;fill:none" />
   </g>
 </svg>

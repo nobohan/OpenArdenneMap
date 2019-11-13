@@ -14,7 +14,7 @@
    viewBox="0 0 210 297"
    version="1.1"
    id="svg829"
-   inkscape:version="0.92.2 2405546, 2018-03-11"
+   inkscape:version="0.92.4 (unknown)"
    sodipodi:docname="train-station-sncb.svg">
   <defs
      id="defs823">
@@ -69,14 +69,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="22.4"
-     inkscape:cx="437.99426"
+     inkscape:cx="430.47194"
      inkscape:cy="677.44059"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1877"
-     inkscape:window-height="1029"
-     inkscape:window-x="43"
+     inkscape:window-width="2493"
+     inkscape:window-height="1385"
+     inkscape:window-x="2627"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:snap-global="true" />
@@ -88,7 +88,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -98,7 +98,7 @@
      id="layer1">
     <path
        inkscape:connector-curvature="0"
-       style="fill:#005844;fill-opacity:1;stroke-width:0.26458329;stroke:none"
+       style="fill:#003d19;fill-opacity:1;stroke-width:0.26458329;stroke:none"
        d="m 116.43331,116.22946 c -1.16639,0 -2.10853,0.61248 -2.10853,1.37724 0,0.76476 0.94214,1.37724 2.10853,1.37724 1.16638,0 2.10853,-0.61918 2.10853,-1.37724 0,-0.75807 -0.94215,-1.37724 -2.10853,-1.37724"
        id="path1229" />
     <path
@@ -107,7 +107,7 @@
        id="path2437" />
     <path
        id="path1231"
-       style="stroke-width:0.26458329;fill:#005844;fill-opacity:1;stroke:none"
+       style="stroke-width:0.26458329;fill:#003d19;fill-opacity:1;stroke:none"
        d="m 117.11189,117.57421 c -0.046,-0.0201 -0.046,-0.0267 0,-0.0527 0.11801,-0.0729 0.18825,-0.20332 0.18407,-0.34222 0,-0.25686 -0.34222,-0.51374 -0.88943,-0.51374 -0.31628,-10e-4 -0.62337,0.1004 -0.87604,0.2895 -0.046,0.0394 -0.0394,0.0594 -0.0259,0.0729 l 0.0795,0.092 c 0.0259,0.0267 0.0394,0.0201 0.0527,0.007 0.0594,-0.046 0.0661,-0.0201 0.0661,0.0326 v 0.90952 c 0,0.0527 -0.007,0.0795 -0.0661,0.0326 -0.0134,-0.0134 -0.0259,-0.0201 -0.0527,0.007 l -0.0854,0.0987 c -0.0134,0.0201 -0.0259,0.0394 0.0267,0.0728 0.26441,0.18073 0.57567,0.27947 0.89613,0.28364 0.61247,0 0.99485,-0.25686 0.99485,-0.59992 0.006,-0.23093 -0.18574,-0.34306 -0.30457,-0.38908 m -0.92868,-0.58715 c 0,-0.0594 0.0394,-0.092 0.1121,-0.092 h 0.15144 c 0.15647,-0.007 0.28951,0.11459 0.29621,0.27109 v 0.0125 c -0.002,0.16148 -0.13472,0.29117 -0.29621,0.28951 h -0.21754 c -0.0326,0 -0.046,-0.0134 -0.046,-0.046 z m 0.34222,1.34364 h -0.23093 c -0.0729,0 -0.11211,-0.0326 -0.11211,-0.092 v -0.52712 c 0,-0.0326 0.0134,-0.046 0.046,-0.046 h 0.29702 c 0.18659,0 0.33887,0.14977 0.34222,0.33635 0.002,0.17991 -0.1414,0.32717 -0.3213,0.32968 -0.007,0 -0.0134,0 -0.0209,-7.7e-4" />
   </g>
 </svg>

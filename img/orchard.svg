@@ -14,7 +14,7 @@
    viewBox="0 0 744.09448819 1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.2 2405546, 2018-03-11"
+   inkscape:version="0.92.4 (unknown)"
    sodipodi:docname="orchard.svg"
    inkscape:export-filename="/media/julien/data/Projets/Geomatique/OSM/Mapnik/artwork/meadow.png"
    inkscape:export-xdpi="90"
@@ -29,14 +29,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="4.574688"
-     inkscape:cx="267.40552"
+     inkscape:cx="230.57241"
      inkscape:cy="753.00623"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1877"
-     inkscape:window-height="1029"
-     inkscape:window-x="43"
+     inkscape:window-width="2493"
+     inkscape:window-height="1385"
+     inkscape:window-x="2627"
      inkscape:window-y="27"
      inkscape:window-maximized="1">
     <inkscape:grid
@@ -67,28 +67,28 @@
        x="233.38361"
        y="332.19568" />
     <ellipse
-       style="fill:none;fill-opacity:1;stroke:#175024;stroke-width:0.99692696;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#003d19;stroke-width:0.99692696;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4403-8-9-6"
        cx="253.70334"
        cy="341.39563"
        rx="3.163013"
        ry="2.8486612" />
     <ellipse
-       style="fill:none;fill-opacity:1;stroke:#175024;stroke-width:0.99692696;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#003d19;stroke-width:0.99692696;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4403-8-9-6-7"
        cx="253.70334"
        cy="357.34262"
        rx="3.163013"
        ry="2.8486612" />
     <ellipse
-       style="fill:none;fill-opacity:1;stroke:#175024;stroke-width:0.99692696;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#003d19;stroke-width:0.99692696;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4403-8-9-6-7-5"
        cx="238.62245"
        cy="357.34262"
        rx="3.163013"
        ry="2.8486612" />
     <ellipse
-       style="fill:none;fill-opacity:1;stroke:#175024;stroke-width:0.99692696;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#003d19;stroke-width:0.99692696;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4403-8-9-6-7-3"
        cx="238.62245"
        cy="341.39563"

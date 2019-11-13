@@ -14,7 +14,7 @@
    viewBox="0 0 744.09448819 1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   inkscape:version="0.92.4 (unknown)"
    sodipodi:docname="parking-fill.svg">
   <defs
      id="defs4" />
@@ -26,15 +26,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="410.13781"
+     inkscape:cx="325.03246"
      inkscape:cy="778.94665"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1057"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-width="2493"
+     inkscape:window-height="1385"
+     inkscape:window-x="2627"
+     inkscape:window-y="27"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -53,7 +53,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="opacity:1;fill:#0072ce;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.30031264;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#006ac6;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.30031264;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 198.87381,282.94534 H 271.32068 C 278.66575,282.94534 284.57893,288.85852 284.57893,296.2036 V 369.56221 C 284.57893,376.90728 278.66575,382.82047 271.32068,382.82047 H 198.87381 C 191.52874,382.82047 185.61555,376.90728 185.61555,369.56221 V 296.2036 C 185.61555,288.85852 191.52874,282.94534 198.87381,282.94534 Z"
        id="rect825" />
     <g

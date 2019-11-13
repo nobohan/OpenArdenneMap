@@ -14,7 +14,7 @@
    viewBox="0 0 744.09448819 1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.4 (unknown)"
    sodipodi:docname="meadow.svg"
    inkscape:export-filename="/media/julien/data/Projets/Geomatique/OSM/Mapnik/artwork/meadow.png"
    inkscape:export-xdpi="90"
@@ -27,15 +27,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="4.5746881"
-     inkscape:cx="187.52264"
+     inkscape:cx="150.68953"
      inkscape:cy="742.58669"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="2505"
-     inkscape:window-height="1412"
-     inkscape:window-x="55"
-     inkscape:window-y="0"
+     inkscape:window-width="2493"
+     inkscape:window-height="1385"
+     inkscape:window-x="2627"
+     inkscape:window-y="27"
      inkscape:window-maximized="1">
     <inkscape:grid
        id="grid4138"
@@ -62,29 +62,29 @@
     <path
        id="path914"
        d="M147.37773 339.2743C147.06241 332.4874 149.69015 331.87694 149.69015 331.87694"
-       style="stroke-linejoin:miter;stroke-opacity:1;fill-rule:evenodd;stroke:#005844;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:1.2653614331;fill:none" />
+       style="stroke-linejoin:miter;stroke-opacity:1;fill-rule:evenodd;stroke:#003d19;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:1.26536143;fill:none" />
     <path
        id="path916"
        d="M135.6588 337.10582C135.34346 330.31893 137.97122 329.70848 137.97122 329.70848"
-       style="stroke-linejoin:miter;stroke-opacity:1;fill-rule:evenodd;stroke:#005844;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:1.2653614331;fill:none" />
+       style="stroke-linejoin:miter;stroke-opacity:1;fill-rule:evenodd;stroke:#003d19;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:1.26536143;fill:none" />
     <path
        id="path918"
        d="M144.02005 366.81818C143.70471 360.03126 146.33246 359.42081 146.33246 359.42081C146.33246 359.42081 146.33246 359.42081 146.33246 359.42081"
-       style="stroke-linejoin:miter;stroke-opacity:1;fill-rule:evenodd;stroke:#005844;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:1.2653614331;fill:none" />
+       style="stroke-linejoin:miter;stroke-opacity:1;fill-rule:evenodd;stroke:#003d19;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:1.26536143;fill:none" />
     <path
        id="path920"
        d="M153.90371 359.5166C153.58839 352.72968 156.21613 352.11924 156.21613 352.11924"
-       style="stroke-linejoin:miter;stroke-opacity:1;fill-rule:evenodd;stroke:#005844;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:1.26536151796;fill:none" />
+       style="stroke-linejoin:miter;stroke-opacity:1;fill-rule:evenodd;stroke:#003d19;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:1.26536152;fill:none" />
     <path
-       style="stroke-linejoin:miter;stroke-opacity:1;fill-rule:evenodd;stroke:#005844;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:1.2653614331;fill:none"
+       style="stroke-linejoin:miter;stroke-opacity:1;fill-rule:evenodd;stroke:#003d19;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:1.26536143;fill:none"
        d="M158.91341 330.41435C158.59809 323.62745 161.22583 323.01699 161.22583 323.01699"
        id="path922" />
     <path
        id="path924"
        d="M129.04707 351.93138C128.73174 345.14447 131.35949 344.53401 131.35949 344.53401"
-       style="stroke-linejoin:miter;stroke-opacity:1;fill-rule:evenodd;stroke:#005844;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:1.2653614331;fill:none" />
+       style="stroke-linejoin:miter;stroke-opacity:1;fill-rule:evenodd;stroke:#003d19;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:1.26536143;fill:none" />
     <path
-       style="stroke-linejoin:miter;stroke-opacity:1;fill-rule:evenodd;stroke:#005844;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:1.26536151796;fill:none"
+       style="stroke-linejoin:miter;stroke-opacity:1;fill-rule:evenodd;stroke:#003d19;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:1.26536152;fill:none"
        d="M139.68165 355.40305C139.36632 348.61614 141.99407 348.00569 141.99407 348.00569"
        id="path950" />
   </g>

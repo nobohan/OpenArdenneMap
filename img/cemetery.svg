@@ -14,7 +14,7 @@
    viewBox="0 0 744.09448819 1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.4 (unknown)"
    sodipodi:docname="cemetery.svg">
   <sodipodi:namedview
      id="base"
@@ -23,17 +23,18 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="170.59456"
-     inkscape:cy="620.15836"
+     inkscape:zoom="17.336716"
+     inkscape:cx="344.08667"
+     inkscape:cy="646.62389"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="2505"
-     inkscape:window-height="1412"
-     inkscape:window-x="55"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1">
+     inkscape:window-width="2493"
+     inkscape:window-height="1385"
+     inkscape:window-x="2627"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     showguides="false">
     <inkscape:grid
        id="grid4136"
        type="xygrid" />
@@ -60,11 +61,11 @@
        style="stroke-dasharray:none;stroke-width:2.81250001;stroke-miterlimit:4"
        id="g7053">
       <path
-         style="stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;fill-rule:evenodd;stroke:#005844;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:2.81250001;fill:#7d0000"
+         style="stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;fill-rule:evenodd;stroke:#003d19;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:2.81250001;fill:none"
          d="M322.8041325 417.191425C322.8041325 441.914675 322.8041325 441.914675 322.8041325 441.914675"
          id="path4155" />
       <path
-         style="stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;fill-rule:evenodd;stroke:#005844;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:2.81250001;fill:#7d0000"
+         style="stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;fill-rule:evenodd;stroke:#003d19;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:2.81250001;fill:none"
          d="M316.127395 424.62095C316.127395 424.62095 329.4808575 424.62095 329.4808575 424.62095"
          id="path4157" />
     </g>
@@ -72,11 +73,11 @@
        style="stroke-dasharray:none;stroke-width:2.81250001;stroke-miterlimit:4"
        id="g7057">
       <path
-         style="stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;fill-rule:evenodd;stroke:#005844;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:2.81250001;fill:#7d0000"
+         style="stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;fill-rule:evenodd;stroke:#003d19;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:2.81250001;fill:none"
          d="M338.5251325 425.9044875C338.5251325 450.62775 338.5251325 450.62775 338.5251325 450.62775"
          id="path4155-3" />
       <path
-         style="stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;fill-rule:evenodd;stroke:#005844;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:2.81250001;fill:#7d0000"
+         style="stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;fill-rule:evenodd;stroke:#003d19;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:2.81250001;fill:none"
          d="M331.848395 433.334C331.848395 433.334 345.201845 433.334 345.201845 433.334"
          id="path4157-6" />
     </g>

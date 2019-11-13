@@ -14,7 +14,7 @@
    viewBox="0 0 744.09448819 1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.2 2405546, 2018-03-11"
+   inkscape:version="0.92.4 (unknown)"
    sodipodi:docname="church.svg">
   <defs
      id="defs4" />
@@ -26,14 +26,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="99.33146"
+     inkscape:cx="-21.025683"
      inkscape:cy="774.02597"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1877"
-     inkscape:window-height="1029"
-     inkscape:window-x="43"
+     inkscape:window-width="2493"
+     inkscape:window-height="1385"
+     inkscape:window-x="2627"
      inkscape:window-y="27"
      inkscape:window-maximized="1" />
   <metadata
@@ -58,7 +58,7 @@
        id="path4137-3"
        inkscape:connector-curvature="0" />
     <ellipse
-       style="fill:#ffffff;fill-opacity:0;stroke:#005844;stroke-width:24;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:0;stroke:#003d19;stroke-width:24;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4140-6"
        cx="387.24557"
        cy="-305.82272"
@@ -66,12 +66,12 @@
        ry="33.323727"
        transform="scale(1,-1)" />
     <path
-       style="fill:#ffffff;fill-rule:evenodd;stroke:#005844;stroke-width:24.00000006;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:0"
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#003d19;stroke-width:24.00000006;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:0"
        d="m 387.14097,339.82065 0,85.48074"
        id="path4142-7"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:#ffffff;fill-rule:evenodd;stroke:#005844;stroke-width:24.00000006;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:0"
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#003d19;stroke-width:24.00000006;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:0"
        d="m 355.82624,393.66966 c 60.60915,0 60.60915,0 60.60915,0"
        id="path4144-5"
        inkscape:connector-curvature="0" />
