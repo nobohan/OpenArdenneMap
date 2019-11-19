@@ -6,8 +6,7 @@ from mapnik import Map, Envelope, render_to_file, load_map
 PAGE_FORMAT = 'A0'
 PAGES = (4, 3, 2, 1, 0)
 
-X_CENTER = 622000
-Y_CENTER = 6406000
+
 LATITUDE = 50 # in degrees
 
 # The mapFile is generated using carto from cartoCSS files.
@@ -15,7 +14,7 @@ LATITUDE = 50 # in degrees
 MAPNIK_FILE = 'osm2pgsql/OpenArdenneMap.xml'
 
 
-def make_map(map_output, scale=20000):
+def make_map(map_output, scale=20000, x_center = 622000, y_center = 6406000):
     "Make a map as a function of the scale"
 
     # Compute the scale
@@ -31,9 +30,6 @@ def make_map(map_output, scale=20000):
     load_map(m, MAPNIK_FILE)
 
     # Bounding box (expressed in EPSG:3857, meters)
-    x_center = X_CENTER
-    y_center = Y_CENTER
-
     delta_x = f*0.295*scale/math.cos(LATITUDE*2*math.pi/360)
     delta_y = delta_x/math.sqrt(2)
     xmin = x_center - delta_x/2
@@ -48,4 +44,5 @@ def make_map(map_output, scale=20000):
     render_to_file(m, map_output)
 
 
-make_map('OAM_20000.pdf', 20000)
+make_map('OAM_ourthe.pdf', 20000, 634700, 6470651)
+make_map('OAM_vlaamsardens.pdf', 20000, 313167, 6582271)
