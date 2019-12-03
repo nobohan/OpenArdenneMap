@@ -16,19 +16,24 @@ Un exemple peut être téléchargé [ici](http://www.nobohan.be/docs/OpenArdenne
 OpenArdenneMap est un style de carte personnalisé basé sur OpenStreetMap. Il se fonde sur le style OSMBright et s'inspire, entre autres, de OpenTopoMap. Plus d'infos dans cet article [ici](https://blog.champs-libres.coop/carto/2018/12/18/openardennemap.html)
 
 # Installation
-## Logiciels
-Si vous ne pouvez pas utiliser l'ensemble des scripts de ce dépôt, contactez-moi (nobohan.be#contact).
+## Par image docker
+Il y a maintenant une image docker et un fichier docker-compose pour installer la pile logicielle permettant de démarrer le projet. Voir dans le dossier `./docker/`
 
-Il est conseillé d'utiliser un environnment virtuel Python. Les librairies suivantes sont installées:
+## En installant la pile logicielle
+
+### Pile logicielle
+Il est conseillé d'utiliser un environnement virtuel Python. Les librairies/logiciels suivants sont installés:
 * mapnik
 * python-mapnik
-* imposm
+* osm2pgsql ou imposm
 * carto
-  * (Pour ces 4 premiers points, cfr l'installation de OSMBright)
+* postgreSQL + PostGIS
+
+Puis:
 * cloner ou télécharger les fichiers OpenArdenneMap
 * télécharger les données OSM en fichier .osm (avec JOSM) ou bien en .pbf (par ex. sur download.geofabrik.de)
 
-## Mise en place de la base de données postgresql
+### Mise en place de la base de données postgresql
 Lancer le script `create-db.sh`. Il faut l'éditer auparavant selon le chemin de votre environnement virtuel.
 
 # Usage
@@ -236,21 +241,25 @@ Quelques commandes utiles pour l'impression en pdf:
 ::: ENGLISH :::
 
 # About
-OpenArdenneMap is a customized map using OpenStreetMap data. It is based on OSMBright and inspired by OpenTopoMap. More infos in this article (in French) [here](https://blog.champs-libres.coop/carto/2018/12/18/openardennemap.html) 
+OpenArdenneMap is a customized map using OpenStreetMap data. It is based on OSMBright and inspired by OpenTopoMap. More infos in this article (in French) [here](https://blog.champs-libres.coop/carto/2018/12/18/openardennemap.html)
 
 
 # Installation
+## By docker
+There is a docker image in the folder `docker`.
 
-## Stack
+## By installing this stack
+### Stack
 * This was developed inside a python virtual environment
 * Install Mapnik & python-mapnik
 * Install impsom OR osm2pgsql
 * Install carto
   * (For these last three points, have a look at OSMBright)
+  
 * Clone or download the OpenArdenneMap files
 * download the OSM data as a .osm file (using JOSM) or as a .pbf file (e.g. on download.geofabrik.de)
 
-## Set up the postgresql database
+### Set up the postgresql database
 Run the script `create-db.sh`. Edit it before according to the path of your virtual environment.
 
 # Usage
