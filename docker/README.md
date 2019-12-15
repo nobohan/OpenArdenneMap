@@ -37,6 +37,8 @@ Then, change directory to /var/OpenArdenneMap and you can run the following comm
 root@51834f3f5bbd: osm2pgsql -c -G -H db -U osmpg -d osmpg_db -S osm2pgsql/OpenArdenneMap.style osm-files/extract.osm
 ```
 
+where `extract.osm` is your osm (or pbf) file. 
+
 (or simply use `import.sh`).
 
 ## Make the maps

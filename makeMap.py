@@ -3,7 +3,7 @@
 import math
 from mapnik import Map, Envelope, render_to_file, load_map
 
-PAGE_FORMAT = 'A0'
+PAGE_FORMAT = 'A2'
 PAGES = (4, 3, 2, 1, 0)
 
 
@@ -43,6 +43,7 @@ def make_map(map_output, scale=20000, x_center = 622000, y_center = 6406000):
 
     render_to_file(m, map_output)
 
-
-make_map('OAM_ourthe.pdf', 20000, 634700, 6470651)
-make_map('OAM_vlaamsardens.pdf', 20000, 313167, 6582271)
+make_map('OAM.pdf', 20000, 625000, 6404000)
+# make_map('OAM_semois_herbeumont.pdf', 20000, 582188,6407536)
+# make_map('OAM_ourthe.pdf', 20000, 634700, 6470651)
+# make_map('OAM_vlaamsardens.pdf', 20000, 313167, 6582271)

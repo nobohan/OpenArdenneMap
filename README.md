@@ -255,7 +255,7 @@ There is a docker image in the folder `docker`.
 * Install impsom OR osm2pgsql
 * Install carto
   * (For these last three points, have a look at OSMBright)
-  
+
 * Clone or download the OpenArdenneMap files
 * download the OSM data as a .osm file (using JOSM) or as a .pbf file (e.g. on download.geofabrik.de)
 
@@ -464,8 +464,6 @@ or
 # TODOs
 * features:
   * point of view
-  * Castle Chau
-  * Gué
   * rotated culvert symbols
   * réservoir (man_made = water_works, water_well, pumping_station ...)
   * station d'epuration
@@ -475,11 +473,15 @@ or
   * départ de promenade
   * oeuvre d'art
   * abbrev. certains labels (ruisseau, ...)
+  * superscript writing
+  * #world[[population] % 50 = 0] pour contour lines
 
 * label des étangs orientés
 * chemins tracktype...
 * sentier balisés... (en option)
 * rotated_envelope (postgis update)
+* revoir project file: better formatting, remove useless key, project key OAM?
+
 
 # post SQL queries
 ```

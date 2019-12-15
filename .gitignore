@@ -1,7 +1,7 @@
 *.pdf
 *.cache
 *.osm
-*.xml
+/osm2pgsql/*.xml
 /contour/
 /osm-files/
 /.ropeproject/

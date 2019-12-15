@@ -25,7 +25,7 @@
         [zoom = 18] { text-size: @text_size_s*@z18_label; }
         [zoom = 19] { text-size: @text_size_s*@z19_label; }
         [zoom >= 20] { text-size: @text_size_s*@z20_label; }
-        text-name:'[level]';
+        text-name:'[ELEV]';
         text-face-name:@sans;
         text-placement:line;
         text-wrap-width: 60;
