@@ -27,7 +27,9 @@ Il est conseillé d'utiliser un environnement virtuel Python. Les librairies/log
 * python-mapnik
 * osm2pgsql ou imposm
 * carto
-* postgreSQL + PostGIS
+* postgreSQL + PostGIS 2.5.4+
+
+Notez que certaines nouvelles fonctions de postgis sont utilisées (ST_OrientedEnvelope), donc il vaut mieux installer un postgis de version >2.5.4 pour profiter de toutes les fonctionnalités du style de la carte.
 
 Puis:
 * cloner ou télécharger les fichiers OpenArdenneMap
@@ -257,9 +259,12 @@ There is a docker image in the folder `docker`.
 * Install impsom OR osm2pgsql
 * Install carto
   * (For these last three points, have a look at OSMBright)
+* postgreSQL + postgis 2.5.4+
 
 * Clone or download the OpenArdenneMap files
 * download the OSM data as a .osm file (using JOSM) or as a .pbf file (e.g. on download.geofabrik.de)
+
+Note that some brand new PostGIS functions are used (ST_OrientedEnvelope), so it is better to install a postgis >2.5.4 to benefit to all of the functionnalities of the map style. 
 
 ### Set up the postgresql database
 Run the script `create-db.sh`. Edit it before according to the path of your virtual environment.

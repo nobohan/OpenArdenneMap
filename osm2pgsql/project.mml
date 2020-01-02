@@ -303,7 +303,7 @@
             "(
                 SELECT way, \"building\" AS type
                 FROM planet_osm_polygon
-                WHERE building NOT IN ('', '0','false', 'no')
+                WHERE building NOT IN ('', '0','false', 'no', 'church','chapel')
                 ORDER BY ST_YMin(ST_Envelope(way)) DESC
             ) AS data",
         "type": "postgis"
@@ -321,7 +321,14 @@
         "geometry_field": "way",
         "table":
             "(
-                SELECT way, building, name, CAST(degrees(ST_Azimuth(ST_Centroid(l.way),ST_Centroid(ST_SimplifyPreserveTopology(l.way,100)))) AS VARCHAR(255)) AS orientation, area
+                SELECT way, building, name, area,
+                    CAST(degrees(
+                        CASE
+                            WHEN ST_Distance(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 1), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2)) > ST_Distance(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 3))
+                                THEN ST_Azimuth(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 1), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2))
+                            ELSE ST_Azimuth(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 3))
+                        END
+                    ) AS VARCHAR(255)) AS orientation
                 FROM planet_osm_polygon AS l
                 WHERE \"building\" IN ('church','chapel')
             ) AS data",

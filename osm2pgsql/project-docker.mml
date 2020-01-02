@@ -327,7 +327,7 @@
             "(
                 SELECT way, \"building\" AS type
                 FROM planet_osm_polygon
-                WHERE building NOT IN ('', '0','false', 'no')
+                WHERE building NOT IN ('', '0','false', 'no', 'church','chapel')
                 ORDER BY ST_YMin(ST_Envelope(way)) DESC
             ) AS data",
         "type": "postgis"
