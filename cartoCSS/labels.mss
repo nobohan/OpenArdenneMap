@@ -13,7 +13,7 @@
 /* ================================================================== */
 
 #contour {
-    [main="yes"] {
+    [[ELEV] % 20 = 0] {
         [zoom <= 10] { text-size: @text_size_s*@z10_label; }
         [zoom = 11] { text-size: @text_size_s*@z11_label; }
         [zoom = 12] { text-size: @text_size_s*@z12_label; }
