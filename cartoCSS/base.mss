@@ -6,7 +6,7 @@
  *
  */
 
-Map { background-color: @purewhite; }
+Map { background-color: @background; }
 
 /* ================================================================== */
 /* CONTOUR
@@ -59,21 +59,6 @@ Map { background-color: @purewhite; }
     [zoom = 19] { line-width: @landuse_line_width*@z19; }
     [zoom >= 20] { line-width: @landuse_line_width*@z20; }
     polygon-pattern-file: url(../img/camping.svg);
-    line-color: @black;
-  }
-  [type='cemetery'] {
-    [zoom <= 10] { line-width: @landuse_line_width*@z10; }
-    [zoom = 11] { line-width: @landuse_line_width*@z11; }
-    [zoom = 12] { line-width: @landuse_line_width*@z12; }
-    [zoom = 13] { line-width: @landuse_line_width*@z13; }
-    [zoom = 14] { line-width: @landuse_line_width*@z14; }
-    [zoom = 15] { line-width: @landuse_line_width*@z15; }
-    [zoom = 16] { line-width: @landuse_line_width*@z16; }
-    [zoom = 17] { line-width: @landuse_line_width*@z17; }
-    [zoom = 18] { line-width: @landuse_line_width*@z18; }
-    [zoom = 19] { line-width: @landuse_line_width*@z19; }
-    [zoom >= 20] { line-width: @landuse_line_width*@z20; }
-    polygon-pattern-file: url(../img/cemetery.svg);
     line-color: @black;
   }
   [type='college']       { polygon-fill: @school; }
@@ -212,6 +197,23 @@ Map { background-color: @purewhite; }
   [type='wetland'] {
     polygon-pattern-file: url(../img/wetland.svg);
   }
+}
+
+#cemetery {
+  [zoom <= 10] { line-width: @landuse_line_width*@z10; }
+  [zoom = 11] { line-width: @landuse_line_width*@z11; }
+  [zoom = 12] { line-width: @landuse_line_width*@z12; }
+  [zoom = 13] { line-width: @landuse_line_width*@z13; }
+  [zoom = 14] { line-width: @landuse_line_width*@z14; }
+  [zoom = 15] { line-width: @landuse_line_width*@z15; }
+  [zoom = 16] { line-width: @landuse_line_width*@z16; }
+  [zoom = 17] { line-width: @landuse_line_width*@z17; }
+  [zoom = 18] { line-width: @landuse_line_width*@z18; }
+  [zoom = 19] { line-width: @landuse_line_width*@z19; }
+  [zoom >= 20] { line-width: @landuse_line_width*@z20; }
+  polygon-fill: @background;
+  polygon-pattern-file: url(../img/cemetery.svg);
+  line-color: @black;
 }
 
 

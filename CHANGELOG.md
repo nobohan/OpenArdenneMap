@@ -5,8 +5,8 @@
 
 ### Changes
 - inline definition of master contour lines in `base.mss` (see README.md > Contour lines)
-- lighter representation of drain and ditch
--
+- lighter representation of drains and ditches
+- create a new layer for cemeteries and put in on top of roads layers
 
 
 ## v0.1.0 2019-12-15

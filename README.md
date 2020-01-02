@@ -466,7 +466,7 @@ or
 
 
 # TODOs
-* features:
+* new features:
   * point of view
   * réservoir (man_made = water_works, water_well, pumping_station ...)
   * station d'epuration
@@ -475,9 +475,9 @@ or
   * police
   * départ de promenade
   * oeuvre d'art
-  * abbrev. certains labels (ruisseau, ...)
-  * path in cemetery
 
+
+* abbrev. certains labels (ruisseau, ...)
 * label des étangs orientés
 * rotated culvert symbols
 * chemins tracktype...
