@@ -371,14 +371,12 @@
         "srs": null,
         "table":
             "(
-                (
-                    SELECT way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", bus, ford, name, replace(name, 'Château', 'Chau') as short_name
-                    FROM planet_osm_point
-                ) UNION (
-                    SELECT ST_Centroid(way) AS way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", NULL AS bus, NULL AS ford, name, replace(name, 'Château', 'Chau') as short_name
-                    FROM planet_osm_polygon
-                    WHERE historic IS NOT NULL
-                )
+                SELECT way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", bus, ford, name, replace(name, 'Château', 'Chau') as short_name
+                FROM planet_osm_point
+                UNION
+                SELECT ST_Centroid(way) AS way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", NULL AS bus, NULL AS ford, name, replace(name, 'Château', 'Chau') as short_name
+                FROM planet_osm_polygon
+                WHERE historic IS NOT NULL
             ) AS data",
         "type": "postgis"
       },
@@ -458,13 +456,13 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table":
             "(
-                SELECT COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type, name, way_area AS area, ST_PointOnSurface(way) AS way
+                SELECT COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type, replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name, way_area AS area, ST_PointOnSurface(way) AS way
                 FROM planet_osm_polygon
                 WHERE name IS NOT NULL
                     AND way && !bbox!
                     AND ST_IsValid(way)
                 UNION ALL
-                SELECT 'building' AS type, name, way_area AS area, ST_PointOnSurface(way) AS way
+                SELECT 'building' AS type, replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name, way_area AS area, ST_PointOnSurface(way) AS way
                 FROM planet_osm_polygon
                 WHERE name IS NOT NULL
                     AND building NOT IN ('', 'no', '0', 'false')
@@ -492,11 +490,18 @@
             "(
                 SELECT way, waterway AS type, name
                 FROM planet_osm_line
-                WHERE waterway IN ('canal', 'river', 'stream')
-                    AND name IS NOT NULL
+                WHERE waterway IN ('canal', 'river', 'stream') AND name IS NOT NULL
+                UNION ALL
+                SELECT
+                    ST_LineMerge(ST_ApproximateMedialAxis(ST_SimplifyPreserveTopology(way, 50))) AS way,
+                    water AS type,
+                    replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name
+                FROM planet_osm_polygon
+                WHERE water IN ('pond', 'lake', 'basin', 'reservoir') AND name IS NOT NULL AND way_area > 10000
             ) AS data",
         "type": "postgis"
       },
+      "properties": { "clear-label-cache": "on" },
       "geometry": "linestring",
       "id": "waterway_label",
       "name": "waterway_label",

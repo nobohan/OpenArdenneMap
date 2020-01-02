@@ -264,7 +264,7 @@ There is a docker image in the folder `docker`.
 * Clone or download the OpenArdenneMap files
 * download the OSM data as a .osm file (using JOSM) or as a .pbf file (e.g. on download.geofabrik.de)
 
-Note that some brand new PostGIS functions are used (ST_OrientedEnvelope), so it is better to install a postgis >2.5.4 to benefit to all of the functionnalities of the map style. 
+Note that some brand new PostGIS functions are used (ST_OrientedEnvelope), so it is better to install a postgis >2.5.4 to benefit to all of the functionnalities of the map style.
 
 ### Set up the postgresql database
 Run the script `create-db.sh`. Edit it before according to the path of your virtual environment.
@@ -487,7 +487,6 @@ or
 * rotated culvert symbols
 * chemins tracktype...
 * sentier balisés... (en option)
-* rotated_envelope (postgis update)
 * superscript writing
 
 # post SQL queries
