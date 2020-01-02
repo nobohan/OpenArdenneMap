@@ -25,7 +25,7 @@ Map { background-color: @purewhite; }
   [zoom = 18] { line-width: @contour_minor_line_width*@z18; }
   [zoom = 19] { line-width: @contour_minor_line_width*@z19; }
   [zoom >= 20] { line-width: @contour_minor_line_width*@z20; }
-  [main="yes"] {
+  [[ELEV] % 20 = 0] {
     [zoom <= 10] { line-width: 0; }
     [zoom = 11] { line-width: 0; }
     [zoom = 12] { line-width: @contour_major_line_width*@z12; }
