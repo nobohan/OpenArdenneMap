@@ -106,6 +106,8 @@
         text-face-name: @sans;
         text-placement: point;
         text-fill: @darkblue;
+        text-halo-fill: #ffffff;
+        text-halo-radius:2;
         text-character-spacing: 2;
         text-dy: -16;
         text-allow-overlap: false;

@@ -468,7 +468,6 @@ or
 # TODOs
 * features:
   * point of view
-  * rotated culvert symbols
   * réservoir (man_made = water_works, water_well, pumping_station ...)
   * station d'epuration
   * éolienne Eol.
@@ -477,16 +476,14 @@ or
   * départ de promenade
   * oeuvre d'art
   * abbrev. certains labels (ruisseau, ...)
-  * superscript writing
-  * drains
   * path in cemetery
 
 * label des étangs orientés
+* rotated culvert symbols
 * chemins tracktype...
 * sentier balisés... (en option)
 * rotated_envelope (postgis update)
-* revoir project file: better formatting, remove useless key, project key OAM?
-
+* superscript writing
 
 # post SQL queries
 ```

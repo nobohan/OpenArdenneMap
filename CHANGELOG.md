@@ -4,7 +4,9 @@
 
 
 ### Changes
-- 
+- inline definition of master contour lines in `base.mss` (see README.md > Contour lines)
+- lighter representation of drain and ditch
+-
 
 
 ## v0.1.0 2019-12-15
