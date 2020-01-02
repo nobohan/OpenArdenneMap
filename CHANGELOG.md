@@ -7,6 +7,7 @@
 - inline definition of master contour lines in `base.mss` (see README.md > Contour lines)
 - lighter representation of drains and ditches
 - create a new layer for cemeteries and put in on top of roads layers
+- better computation of building orientation with ST_orientedEnvelope. Needs postgis 2.5.4+
 
 
 ## v0.1.0 2019-12-15
