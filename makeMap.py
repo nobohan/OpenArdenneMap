@@ -43,4 +43,4 @@ def make_map(map_output, scale=20000, x_center=622000, y_center=6406000):
 
     render_to_file(m, map_output)
 
-make_map('OAM.pdf', 20000, 674578, 6549052)
+make_map('OAM.pdf', 20000)

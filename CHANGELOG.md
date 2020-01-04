@@ -9,6 +9,7 @@
 - create a new layer for cemeteries and put in on top of roads layers
 - better computation of building orientation with ST_OrientedEnvelope. Needs postgis 2.5.4+.
 - orientation of water areas labels using ST_ApproximateMedialAxis. Needs postgis 2.5.4+.
+- Add some abbreviation for "Ruisseau" using Unicode superscript.
 
 
 ## v0.1.0 2019-12-15

@@ -480,10 +480,10 @@ or
   * police
   * départ de promenade
   * oeuvre d'art
+  * piscine
 
 
 * abbrev. certains labels (ruisseau, ...)
-* label des étangs orientés
 * rotated culvert symbols
 * chemins tracktype...
 * sentier balisés... (en option)

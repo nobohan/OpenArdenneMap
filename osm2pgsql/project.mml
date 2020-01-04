@@ -488,7 +488,7 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table":
             "(
-                SELECT way, waterway AS type, name
+                SELECT way, waterway AS type, replace(name, 'Ruisseau', 'Rᵃᵘ') AS name
                 FROM planet_osm_line
                 WHERE waterway IN ('canal', 'river', 'stream') AND name IS NOT NULL
                 UNION ALL
