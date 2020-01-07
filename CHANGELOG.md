@@ -10,6 +10,7 @@
 - better computation of building orientation with ST_OrientedEnvelope. Needs postgis 2.5.4+.
 - orientation of water areas labels using ST_ApproximateMedialAxis. Needs postgis 2.5.4+.
 - Add some abbreviation for "Ruisseau" using Unicode superscript.
+- Refinement of track and path symbolisation according to track_type and trail_visibility.
 
 
 ## v0.1.0 2019-12-15
