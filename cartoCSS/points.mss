@@ -113,17 +113,17 @@
         text-allow-overlap: false;
     }
     [historic = 'wayside_cross'] {
-        [zoom <= 10] { marker-height: @huge*@z10; }
-        [zoom = 11] { marker-height: @huge*@z11; }
-        [zoom = 12] { marker-height: @huge*@z12; }
-        [zoom = 13] { marker-height: @huge*@z13; }
-        [zoom = 14] { marker-height: @huge*@z14; }
-        [zoom = 15] { marker-height: @huge*@z15; }
-        [zoom = 16] { marker-height: @huge*@z16; }
-        [zoom = 17] { marker-height: @huge*@z17; }
-        [zoom = 18] { marker-height: @huge*@z18; }
-        [zoom = 19] { marker-height: @huge*@z19; }
-        [zoom >= 20] { marker-height: @huge*@z20; }
+        [zoom <= 10] { marker-height: @huge*1.5*@z10; }
+        [zoom = 11] { marker-height: @huge*1.5*@z11; }
+        [zoom = 12] { marker-height: @huge*1.5*@z12; }
+        [zoom = 13] { marker-height: @huge*1.5*@z13; }
+        [zoom = 14] { marker-height: @huge*1.5*@z14; }
+        [zoom = 15] { marker-height: @huge*1.5*@z15; }
+        [zoom = 16] { marker-height: @huge*1.5*@z16; }
+        [zoom = 17] { marker-height: @huge*1.5*@z17; }
+        [zoom = 18] { marker-height: @huge*1.5*@z18; }
+        [zoom = 19] { marker-height: @huge*1.5*@z19; }
+        [zoom >= 20] { marker-height: @huge*1.5*@z20; }
         marker-file: url(../img/cross.svg);
         marker-allow-overlap: true;
     }

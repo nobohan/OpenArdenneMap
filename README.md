@@ -485,7 +485,6 @@ or
 
 * abbrev. certains labels (ruisseau, ...)
 * rotated culvert symbols
-* chemins tracktype...
 * sentier balisés... (en option)
 * superscript writing
 
