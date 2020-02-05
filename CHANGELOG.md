@@ -2,6 +2,7 @@
 
 ### Description
 
+Some enhancements with the labels, automatic curvature and precise classification of tracks. See the blog post <http://www.nobohan.be/2020/02/05/openardennemap-livraison-hiver-2019-2020/>
 
 ### Changes
 - inline definition of master contour lines in `base.mss` (see README.md > Contour lines)
