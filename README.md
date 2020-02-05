@@ -483,10 +483,10 @@ or
   * piscine
 
 
-* abbrev. certains labels (ruisseau, ...)
 * rotated culvert symbols
 * sentier balisés... (en option)
-* superscript writing
+* sub/superscript writing
+* tile-server
 
 # post SQL queries
 ```
