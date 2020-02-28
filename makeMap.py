@@ -43,4 +43,13 @@ def make_map(map_output, scale=20000, x_center=622000, y_center=6406000):
 
     render_to_file(m, map_output)
 
-make_map('OAM.pdf', 20000)
+make_map('OAM_10000.pdf', 10000)
+make_map('OAM_20000.pdf', 20000)
+make_map('OAM_40000.pdf', 40000)
+
+
+for zoom in range(10, 18):
+    print(zoom)
+    scale = math.exp((zoom-30.2877123795495)/-1.44269504088896)
+    print(scale)
+    make_map('OAM_zoom{}.png'.format(zoom), scale)
