@@ -452,11 +452,10 @@ or
 `mutool poster -x 2 -y 2 A2.pdf A4.pdf`
 
 
-# TODOs
-* palettes
-* feature: point of view
+# vtt
 
-# post SQL queries
-```
-psql -d osm -c 'ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;'
-```
+
+* change distances
+* update to latest OpenArdenneMap
+* add grid ?
+* improve ravito labels and attributions

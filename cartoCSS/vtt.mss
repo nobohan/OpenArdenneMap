@@ -6,8 +6,8 @@
 @pink: #ff9703;
 
 
-#label28km {
-    text-name:"'28 km'";
+#label27km {
+    text-name:"'27 km'";
     text-face-name:@sans;
     text-placement:point;
     text-fill:@black;
@@ -20,8 +20,8 @@
     text-dx: -50;
 }
 
-#label32km {
-    text-name:"'32 km'";
+#label35km {
+    text-name:"'35 km'";
     text-face-name:@sans;
     text-placement:point;
     text-fill:@black;
@@ -34,8 +34,8 @@
     text-dx: -50;
 }
 
-#label42km {
-    text-name:"'42 km'";
+#label45km {
+    text-name:"'45 km'";
     text-face-name:@sans;
     text-placement:point;
     text-fill:@black;
@@ -48,8 +48,8 @@
     text-dx: -50;
 }
 
-#label56km {
-    text-name:"'56 km'";
+#label55km {
+    text-name:"'55 km'";
     text-face-name:@sans;
     text-placement:point;
     text-fill:@black;
@@ -61,6 +61,21 @@
     text-dy: -60;
     text-dx: -50;
 }
+
+#label78km {
+    text-name:"'78 km'";
+    text-face-name:@sans;
+    text-placement:point;
+    text-fill:@black;
+    text-size: 120;
+    text-character-spacing: 2;
+    text-allow-overlap: true;
+    text-halo-fill: @pink;
+    text-halo-radius: 3;
+    text-dy: -60;
+    text-dx: -50;
+}
+
 
 #label_marche1 {
     text-name:"'Marche 12 km'";
@@ -85,7 +100,7 @@
     text-allow-overlap: true;
     text-halo-fill: @pink;
     text-halo-radius: 3;
-    text-dy: 560;
+    text-dy: 550;
     text-dx: 550;
 }
 
@@ -103,8 +118,8 @@
 }
 
 @profile_size: 450;
-#profil28km {
-    marker-file: url(../img/profil28km.png);
+#profil27km {
+    marker-file: url(../img/profil27km.png);
     marker-allow-overlap: true;
     marker-height: @profile_size;
     text-name:"'(c) Contributeurs OpenStreetMap - style OpenArdenneMap'";
@@ -121,8 +136,8 @@
     text-dx: 950;
     text-allow-overlap: true;
 }
-#profil32km {
-    marker-file: url(../img/profil32km.png);
+#profil35km {
+    marker-file: url(../img/profil35km.png);
     marker-allow-overlap: true;
     marker-height: @profile_size;
     text-name:"'(c) Contributeurs OpenStreetMap - style OpenArdenneMap'";
@@ -139,8 +154,8 @@
     text-dx: 950;
     text-allow-overlap: true;
 }
-#profil42km {
-    marker-file: url(../img/profil42km.png);
+#profil45km {
+    marker-file: url(../img/profil45km.png);
     marker-allow-overlap: true;
     marker-height: @profile_size;
     text-name:"'(c) Contributeurs OpenStreetMap - style OpenArdenneMap'";
@@ -157,8 +172,8 @@
     text-dx: 950;
     text-allow-overlap: true;
 }
-#profil56km {
-    marker-file: url(../img/profil56km.png);
+#profil55km {
+    marker-file: url(../img/profil55km.png);
     marker-allow-overlap: true;
     marker-height: @profile_size;
     text-name:"'(c) Contributeurs OpenStreetMap - style OpenArdenneMap'";
@@ -181,18 +196,18 @@
 /* VTT
 /* ================================================================== */
 
-@vtt28km: #d95f02;
-@vtt32km: #7570b3;
+@vtt27km: #d95f02;
+@vtt35km: #7570b3;
 @vtt41km: #e7298a;
-@vtt42km: #FFBF00;
-@vtt56km: #2E2E2E;
+@vtt45km: #FFBF00;
+@vtt55km: #2E2E2E;
 
 @pink: #fc16e9;
 @lo: 15;
 @lop: 0.8;
 @mk: 16;
 
-#vtt28km {
+#vtt27km {
   line-color: @pink;
   line-width: @lo;
   line-offset: -@lo+1;
@@ -203,7 +218,7 @@
   marker-spacing: 400;
   marker-offset: -@lo+1;
 }
-#vtt32km {
+#vtt35km {
   line-color: @pink;
   line-width: @lo;
   line-offset: -@lo+1;
@@ -214,7 +229,7 @@
   marker-spacing: 400;
   marker-offset: -@lo+1;
 }
-#vtt42km {
+#vtt45km {
   line-color: @pink;
   line-width: @lo;
   line-offset: -@lo+1;
@@ -225,7 +240,7 @@
   marker-spacing: 400;
   marker-offset: -@lo+1;
 }
-#vtt56km {
+#vtt55km {
   line-color: @pink;
   line-width: @lo;
   line-offset: -@lo+1;
