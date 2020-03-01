@@ -456,6 +456,6 @@ or
 
 
 * change distances
+* improve ravito labels and attributions
 * update to latest OpenArdenneMap
 * add grid ?
-* improve ravito labels and attributions
