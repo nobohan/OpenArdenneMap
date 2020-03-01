@@ -90,18 +90,40 @@
         text-dy: -16;
         text-dx: -5;
     }
+    [ford = 'yes'] {
+        [zoom <= 10] { text-size: 0; }
+        [zoom = 11] { text-size: @text_size_s*@z11_label; }
+        [zoom = 12] { text-size: @text_size_s*@z12_label; }
+        [zoom = 13] { text-size: @text_size_s*@z13_label; }
+        [zoom = 14] { text-size: @text_size_s*@z14_label; }
+        [zoom = 15] { text-size: @text_size_s*@z15_label; }
+        [zoom = 16] { text-size: @text_size_s*@z16_label; }
+        [zoom = 17] { text-size: @text_size_s*@z17_label; }
+        [zoom = 18] { text-size: @text_size_s*@z18_label; }
+        [zoom = 19] { text-size: @text_size_s*@z19_label; }
+        [zoom >= 20] { text-size: @text_size_s*@z20_label; }
+        text-name:"'Gué'";
+        text-face-name: @sans;
+        text-placement: point;
+        text-fill: @darkblue;
+        text-halo-fill: #ffffff;
+        text-halo-radius: 2;
+        text-character-spacing: 2;
+        text-dy: -16;
+        text-allow-overlap: false;
+    }
     [historic = 'wayside_cross'] {
-        [zoom <= 10] { marker-height: @huge*@z10; }
-        [zoom = 11] { marker-height: @huge*@z11; }
-        [zoom = 12] { marker-height: @huge*@z12; }
-        [zoom = 13] { marker-height: @huge*@z13; }
-        [zoom = 14] { marker-height: @huge*@z14; }
-        [zoom = 15] { marker-height: @huge*@z15; }
-        [zoom = 16] { marker-height: @huge*@z16; }
-        [zoom = 17] { marker-height: @huge*@z17; }
-        [zoom = 18] { marker-height: @huge*@z18; }
-        [zoom = 19] { marker-height: @huge*@z19; }
-        [zoom >= 20] { marker-height: @huge*@z20; }
+        [zoom <= 10] { marker-height: @huge*1.5*@z10; }
+        [zoom = 11] { marker-height: @huge*1.5*@z11; }
+        [zoom = 12] { marker-height: @huge*1.5*@z12; }
+        [zoom = 13] { marker-height: @huge*1.5*@z13; }
+        [zoom = 14] { marker-height: @huge*1.5*@z14; }
+        [zoom = 15] { marker-height: @huge*1.5*@z15; }
+        [zoom = 16] { marker-height: @huge*1.5*@z16; }
+        [zoom = 17] { marker-height: @huge*1.5*@z17; }
+        [zoom = 18] { marker-height: @huge*1.5*@z18; }
+        [zoom = 19] { marker-height: @huge*1.5*@z19; }
+        [zoom >= 20] { marker-height: @huge*1.5*@z20; }
         marker-file: url(../img/cross.svg);
         marker-allow-overlap: true;
     }
@@ -139,11 +161,35 @@
         text-fill: @black;
         text-character-spacing: 2;
         text-line-spacing: 2;
-        text-wrap-width: 50;
+        text-wrap-width: 100;
         text-halo-fill: @other_halo;
         text-halo-radius: 1;
-        text-dy: -5;
         text-dx: 12;
+        text-allow-overlap: true;
+    }
+    [historic = 'castle'] {
+        [zoom <= 10] { text-size: @text_size_s*@z10_label; }
+        [zoom = 11] { text-size: @text_size_s*@z11_label; }
+        [zoom = 12] { text-size: @text_size_s*@z12_label; }
+        [zoom = 13] { text-size: @text_size_s*@z13_label; }
+        [zoom = 14] { text-size: @text_size_s*@z14_label; }
+        [zoom = 15] { text-size: @text_size_s*@z15_label; }
+        [zoom = 16] { text-size: @text_size_s*@z16_label; }
+        [zoom = 17] { text-size: @text_size_s*@z17_label; }
+        [zoom = 18] { text-size: @text_size_s*@z18_label; }
+        [zoom = 19] { text-size: @text_size_s*@z19_label; }
+        [zoom >= 20] { text-size: @text_size_s*@z20_label; }
+        text-name:'[short_name]';
+        text-face-name: @sans;
+        text-placement: point;
+        text-fill: @black;
+        text-character-spacing: 2;
+        text-line-spacing: 2;
+        text-wrap-width: 100;
+        text-halo-fill: @other_halo;
+        text-halo-radius: 1;
+        text-dx: 12;
+        text-allow-overlap: true;
     }
     [public_transport = 'stop_position'] {
         ['bus' = 'yes'] {

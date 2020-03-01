@@ -6,10 +6,13 @@
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "landuse",
-        "key_field": "",
-        "project": "OpenArdenneMap",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, leaf_type, leaf_cycle, trees, produce, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon\n  ORDER BY way_area DESC\n) AS data",
+        "table":
+            "(
+                SELECT way, leaf_type, leaf_cycle, trees, produce, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type
+                FROM planet_osm_polygon
+                ORDER BY way_area DESC
+            ) AS data",
         "type": "postgis"
       },
       "geometry": "polygon",
@@ -22,12 +25,11 @@
     {
       "Datasource": {
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
-        "file": "../../Elevation/contour_anlier.shp",
+        "file": "../contour/beautiful_contour_belgium.shp",
         "id": "contour",
         "srs": "+proj=lcc +lat_1=51.16666723333333 +lat_2=49.8333339 +lat_0=90 +lon_0=4.367486666666666 +x_0=150000.013 +y_0=5400088.438 +ellps=intl +towgs84=-106.869,52.2978,-103.724,0.3366,-0.457,1.8422,-1.2747 +units=m +no_defs",
         "type": "shape"
       },
-      "class": "",
       "geometry": "linestring",
       "id": "contour",
       "name": "contour",
@@ -39,23 +41,32 @@
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
-        "key_field": "",
-        "table": "( SELECT way, admin_level\n  FROM planet_osm_line\n  WHERE boundary IN ('administrative')\n) AS data",
+        "table":
+            "(
+                SELECT way, admin_level
+                FROM planet_osm_line
+                WHERE boundary IN ('administrative')
+            ) AS data",
         "type": "postgis"
       },
       "geometry": "linestring",
       "id": "boundaries",
       "name": "boundaries",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "status": "on"
     },
     {
       "Datasource": {
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
-        "key_field": "",
-        "table": "( SELECT way, waterway AS type\n  FROM planet_osm_line\n  WHERE waterway IN ('river', 'canal', 'stream', 'ditch', 'drain')\n) AS data",
+        "table":
+            "(
+                SELECT way, waterway AS type
+                FROM planet_osm_line
+                WHERE waterway IN ('river', 'canal', 'stream', 'ditch', 'drain')
+            ) AS data",
         "type": "postgis"
       },
       "geometry": "linestring",
@@ -70,10 +81,13 @@
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "water",
-        "key_field": "",
-        "project": "OpenArdenneMap",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, way_area AS area\n  FROM planet_osm_polygon\n  WHERE \"natural\" IN ('water', 'pond')\n    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream')\n) AS data",
+        "table":
+            "(
+                SELECT way, way_area AS area
+                FROM planet_osm_polygon
+                WHERE \"natural\" IN ('water', 'pond') OR landuse IN ('reservoir') OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream')
+            ) AS data",
         "type": "postgis"
       },
       "geometry": "polygon",
@@ -89,10 +103,14 @@
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "landuse_overlays",
-        "key_field": "",
-        "project": "OpenArdenneMap",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, way_area AS area, COALESCE(leisure, \"natural\") AS type\n  FROM planet_osm_polygon\n  WHERE leisure = 'nature_reserve' OR \"natural\" = 'wetland'\n ORDER BY way_area DESC\n) AS data",
+        "table":
+            "(
+                SELECT way, way_area AS area, COALESCE(leisure, \"natural\") AS type
+                FROM planet_osm_polygon
+                WHERE leisure = 'nature_reserve' OR \"natural\" = 'wetland'
+                ORDER BY way_area DESC
+            ) AS data",
         "type": "postgis"
       },
       "geometry": "polygon",
@@ -107,10 +125,13 @@
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "aeroway",
-        "key_field": "",
-        "project": "OpenArdenneMap",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, aeroway AS type\n  FROM planet_osm_line\n  WHERE aeroway IN ('apron', 'runway', 'taxiway')\n) AS data",
+        "table":
+            "(
+                SELECT way, aeroway AS type
+                FROM planet_osm_line
+                WHERE aeroway IN ('apron', 'runway', 'taxiway')
+            ) AS data",
         "type": "postgis"
       },
       "geometry": "linestring",
@@ -126,10 +147,30 @@
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "tunnel",
-        "key_field": "",
-        "project": "OpenArdenneMap",
         "srs": null,
-        "table": "( SELECT way, COALESCE(highway, railway) AS type, 0 AS bridge, access, render, layer, tracktype, 1 as tunnel,\n  CASE\n    WHEN highway IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN highway IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN highway IN ('service', 'track') THEN 'service'\n    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM (\n    SELECT *, '1_outline' AS render FROM planet_osm_line\n    WHERE tunnel NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '2_line' AS render FROM planet_osm_line\n    WHERE tunnel NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '3_inline' AS render FROM planet_osm_line\n    WHERE tunnel NOT IN ('', '0', 'no')\n  ) AS tunnels\n  ORDER BY layer ASC, render ASC\n) AS data",
+        "table":
+            "(
+                SELECT way, COALESCE(highway, railway) AS type, 0 AS bridge, access, render, layer, tracktype, trail_visibility, 1 as tunnel,
+                    CASE
+                        WHEN highway IN ('motorway', 'trunk') THEN 'motorway'
+                        WHEN highway IN ('primary', 'secondary') THEN 'mainroad'
+                        WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'
+                        WHEN highway IN ('service', 'track') THEN 'service'
+                        WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'
+                        WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'
+                        ELSE 'other' END AS stylegroup
+                    FROM (
+                        SELECT *, '1_outline' AS render FROM planet_osm_line
+                        WHERE tunnel NOT IN ('', '0', 'no')
+                        UNION ALL
+                        SELECT *, '2_line' AS render FROM planet_osm_line
+                        WHERE tunnel NOT IN ('', '0', 'no')
+                        UNION ALL
+                        SELECT *, '3_inline' AS render FROM planet_osm_line
+                        WHERE tunnel NOT IN ('', '0', 'no')
+                    ) AS tunnels
+                    ORDER BY layer ASC, render ASC
+                ) AS data",
         "type": "postgis"
       },
       "geometry": "linestring",
@@ -143,8 +184,23 @@
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
-        "key_field": "",
-        "table": "( SELECT way, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, tracktype, access, 'fill' AS render,\n  CASE\n    WHEN highway IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN highway IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN highway IN ('service', 'track') THEN 'service'\n    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL OR railway IS NOT NULL)\n    AND (tunnel IS NULL OR tunnel = 'no')\n    AND (bridge IS NULL OR bridge = 'no')\n  ORDER BY z_order\n) AS data",
+        "table":
+            "(
+                SELECT way, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, tracktype, trail_visibility, access, 'fill' AS render,
+                    CASE
+                        WHEN highway IN ('motorway', 'trunk') THEN 'motorway'
+                        WHEN highway IN ('primary', 'secondary') THEN 'mainroad'
+                        WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'
+                        WHEN highway IN ('service', 'track') THEN 'service'
+                        WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'
+                        WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'
+                        ELSE 'other' END AS stylegroup
+                    FROM planet_osm_line
+                    WHERE (highway IS NOT NULL OR railway IS NOT NULL)
+                        AND (tunnel IS NULL OR tunnel = 'no')
+                        AND (bridge IS NULL OR bridge = 'no')
+                    ORDER BY z_order
+                ) AS data",
         "type": "postgis"
       },
       "geometry": "linestring",
@@ -160,10 +216,30 @@
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "bridge",
-        "key_field": "",
-        "project": "OpenArdenneMap",
         "srs": null,
-        "table": "( SELECT way, COALESCE(highway, railway) AS type, 1 AS bridge, access, render, layer, tracktype, 0 as tunnel,\n  CASE\n    WHEN highway IN ('motorway', 'trunk') THEN 'motorway'\n    WHEN highway IN ('primary', 'secondary') THEN 'mainroad'\n    WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'\n    WHEN highway IN ('service', 'track') THEN 'service'\n    WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS stylegroup\n  FROM (\n    SELECT *, '1_outline' AS render FROM planet_osm_line\n    WHERE bridge NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '2_line' AS render FROM planet_osm_line\n    WHERE bridge NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '3_inline' AS render FROM planet_osm_line\n    WHERE bridge NOT IN ('', '0', 'no')\n  ) AS bridges\n  ORDER BY layer ASC, render ASC\n) AS data",
+        "table":
+            "(
+                SELECT way, COALESCE(highway, railway) AS type, 1 AS bridge, access, render, layer, tracktype, trail_visibility, 0 as tunnel,
+                    CASE
+                        WHEN highway IN ('motorway', 'trunk') THEN 'motorway'
+                        WHEN highway IN ('primary', 'secondary') THEN 'mainroad'
+                        WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'
+                        WHEN highway IN ('service', 'track') THEN 'service'
+                        WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'
+                        WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'
+                        ELSE 'other' END AS stylegroup
+                    FROM (
+                        SELECT *, '1_outline' AS render FROM planet_osm_line
+                        WHERE bridge NOT IN ('', '0', 'no')
+                        UNION ALL
+                        SELECT *, '2_line' AS render FROM planet_osm_line
+                        WHERE bridge NOT IN ('', '0', 'no')
+                        UNION ALL
+                        SELECT *, '3_inline' AS render FROM planet_osm_line
+                        WHERE bridge NOT IN ('', '0', 'no')
+                    ) AS bridges
+                ORDER BY layer ASC, render ASC
+            ) AS data",
         "type": "postgis"
       },
       "geometry": "linestring",
@@ -180,7 +256,12 @@
         "geometry_field": "way",
         "id": "bridge_symbol",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, highway, CAST(90+degrees(ST_Azimuth(ST_StartPoint(planet_osm_line.way), ST_EndPoint(planet_osm_line.way))) AS VARCHAR(255)) AS orientation \n FROM planet_osm_line WHERE bridge NOT IN ('', '0', 'no') \n AND highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') \n) AS data",
+        "table":
+            "(
+                SELECT way, highway, CAST(90+degrees(ST_Azimuth(ST_StartPoint(planet_osm_line.way), ST_EndPoint(planet_osm_line.way))) AS VARCHAR(255)) AS orientation
+                FROM planet_osm_line WHERE bridge NOT IN ('', '0', 'no')
+                AND highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway')
+            ) AS data",
         "type": "postgis"
       },
       "geometry": "linestring",
@@ -195,8 +276,36 @@
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
-        "key_field": "",
-        "table": "( SELECT way, \"building\" AS type\n  FROM planet_osm_polygon\n  WHERE building NOT IN ('', '0','false', 'no')\n  ORDER BY ST_YMin(ST_Envelope(way)) DESC\n) AS data",
+        "id": "cemetery",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table":
+            "(
+                SELECT way, way_area AS area, COALESCE(landuse, amenity) AS type
+                FROM planet_osm_polygon
+                WHERE landuse = 'cemetery' OR amenity= 'grave_yard'
+                ORDER BY way_area DESC
+            ) AS data",
+        "type": "postgis"
+      },
+      "geometry": "polygon",
+      "id": "cemetery",
+      "name": "cemetery",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "table":
+            "(
+                SELECT way, \"building\" AS type
+                FROM planet_osm_polygon
+                WHERE building NOT IN ('', '0','false', 'no', 'church','chapel')
+                ORDER BY ST_YMin(ST_Envelope(way)) DESC
+            ) AS data",
         "type": "postgis"
       },
       "geometry": "polygon",
@@ -210,7 +319,19 @@
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
-        "table": "( SELECT way, building, name, CAST(degrees(ST_Azimuth(ST_Centroid(l.way),ST_Centroid(ST_SimplifyPreserveTopology(l.way,100)))) AS VARCHAR(255)) AS orientation, area\n    FROM planet_osm_polygon\n AS l WHERE \"building\" IN ('church','chapel') \n) AS data",
+        "table":
+            "(
+                SELECT way, building, name, area,
+                    CAST(degrees(
+                        CASE
+                            WHEN ST_Distance(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 1), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2)) > ST_Distance(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 3))
+                                THEN ST_Azimuth(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 1), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2))
+                            ELSE ST_Azimuth(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 3))
+                        END
+                    ) AS VARCHAR(255)) AS orientation
+                FROM planet_osm_polygon AS l
+                WHERE \"building\" IN ('church','chapel')
+            ) AS data",
         "type": "postgis"
       },
       "geometry": "polygon",
@@ -226,9 +347,12 @@
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "linear_features",
-        "project": "OpenArdenneMap",
         "srs": null,
-        "table": "( SELECT way, COALESCE(man_made, barrier, power, \"natural\") AS type FROM planet_osm_line)  AS data",
+        "table":
+            "(
+                SELECT way, COALESCE(man_made, barrier, power, \"natural\") AS type
+                FROM planet_osm_line
+            ) AS data",
         "type": "postgis"
       },
       "geometry": "linestring",
@@ -244,12 +368,19 @@
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "point_features",
-        "project": "OpenArdenneMap",
         "srs": null,
-        "table": "( SELECT way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", bus, name \n  FROM planet_osm_point\n)  AS data",
+        "table":
+            "(
+                SELECT way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", bus, ford, name, replace(name, 'Château', 'Chau') as short_name
+                FROM planet_osm_point
+                UNION
+                SELECT ST_Centroid(way) AS way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", NULL AS bus, NULL AS ford, name, replace(name, 'Château', 'Chau') as short_name
+                FROM planet_osm_polygon
+                WHERE historic IS NOT NULL
+            ) AS data",
         "type": "postgis"
       },
-      "class": "",
+
       "geometry": "point",
       "id": "point_features",
       "name": "point_features",
@@ -264,7 +395,26 @@
         "geometry_field": "way",
         "id": "pitch",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, sport, \n CASE WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,100))) >= 5) THEN \n (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3))) \n   THEN CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3))) AS VARCHAR(255))\n  ELSE CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2))) AS VARCHAR(255)) \n END) END AS orientation, CASE WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,100))) >= 5) THEN \n (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3)))\n  THEN CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) AS INTEGER)\n  ELSE CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1),\n ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3)) AS INTEGER)\n END)\n END AS length \n FROM planet_osm_polygon AS l WHERE leisure = 'pitch' and sport IN ('soccer', 'tennis')) AS data",
+        "table":
+            "(
+                SELECT way, sport,
+                    CASE
+                        WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,100))) >= 5) THEN
+                            (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3)))
+                            THEN CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3))) AS VARCHAR(255))
+                            ELSE CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2))) AS VARCHAR(255))
+                            END)
+                        END AS orientation,
+                    CASE
+                        WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,100))) >= 5) THEN
+                            (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3)))
+                            THEN CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) AS INTEGER)
+                            ELSE CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3)) AS INTEGER)
+                            END)
+                        END AS length
+                FROM planet_osm_polygon AS l
+                WHERE leisure = 'pitch' and sport IN ('soccer', 'tennis')
+            ) AS data",
         "type": "postgis"
       },
       "geometry": "point",
@@ -280,10 +430,14 @@
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "place",
-        "key_field": "",
-        "project": "OpenArdenneMap",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, place AS type, name, z_order, population\n  FROM planet_osm_point\n  WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality')\n  ORDER BY population DESC NULLS LAST\n) AS data",
+        "table":
+            "(
+                SELECT way, place AS type, name, z_order, population
+                FROM planet_osm_point
+                WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality')
+                ORDER BY population DESC NULLS LAST
+            ) AS data",
         "type": "postgis"
       },
       "geometry": "point",
@@ -299,10 +453,23 @@
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "landuse_label",
-        "key_field": "",
-        "project": "OpenArdenneMap",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type,\n name, way_area AS area,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE name IS NOT NULL\n    AND way && !bbox!\n    AND ST_IsValid(way)\n\n  UNION ALL\n\n  SELECT 'building' AS type, name, way_area AS area,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE name IS NOT NULL\n    AND building NOT IN ('', 'no', '0', 'false')\n    AND way && !bbox!\n    AND ST_IsValid(way)\n  ORDER BY area DESC\n) AS data",
+        "table":
+            "(
+                SELECT COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type, replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name, way_area AS area, ST_PointOnSurface(way) AS way
+                FROM planet_osm_polygon
+                WHERE name IS NOT NULL
+                    AND way && !bbox!
+                    AND ST_IsValid(way)
+                UNION ALL
+                SELECT 'building' AS type, replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name, way_area AS area, ST_PointOnSurface(way) AS way
+                FROM planet_osm_polygon
+                WHERE name IS NOT NULL
+                    AND building NOT IN ('', 'no', '0', 'false')
+                    AND way && !bbox!
+                    AND ST_IsValid(way)
+                ORDER BY area DESC
+            ) AS data",
         "type": "postgis"
       },
       "geometry": "point",
@@ -318,12 +485,23 @@
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "waterway_label",
-        "key_field": "",
-        "project": "OpenArdenneMap",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, waterway AS type, name\n  FROM planet_osm_line\n  WHERE waterway IN ('canal', 'river', 'stream') \n    AND name IS NOT NULL\n) AS data",
+        "table":
+            "(
+                SELECT way, waterway AS type, replace(name, 'Ruisseau', 'Rᵃᵘ') AS name
+                FROM planet_osm_line
+                WHERE waterway IN ('canal', 'river', 'stream') AND name IS NOT NULL
+                UNION ALL
+                SELECT
+                    ST_LineMerge(ST_ApproximateMedialAxis(ST_SimplifyPreserveTopology(way, 50))) AS way,
+                    water AS type,
+                    replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name
+                FROM planet_osm_polygon
+                WHERE water IN ('pond', 'lake', 'basin', 'reservoir') AND name IS NOT NULL AND way_area > 10000
+            ) AS data",
         "type": "postgis"
       },
+      "properties": { "clear-label-cache": "on" },
       "geometry": "linestring",
       "id": "waterway_label",
       "name": "waterway_label",
@@ -336,11 +514,15 @@
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
-        "key_field": "",
-        "table": "( SELECT way, railway AS type, name, z_order \n  FROM planet_osm_point \n  WHERE railway IN ('station', 'level_crossing') \n  ORDER BY z_order NULLS LAST\n) AS DATA \n",
+        "table":
+            "(
+                SELECT way, railway AS type, name, z_order
+                FROM planet_osm_point
+                WHERE railway IN ('station', 'level_crossing')
+                ORDER BY z_order NULLS LAST
+            ) AS DATA",
         "type": "postgis"
       },
-      "advanced": {},
       "extent": [
         -122.85990918289764,
         47.38001179491598,
@@ -352,21 +534,6 @@
       "name": "train_elements",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913"
-    },
-    {
-      "Datasource": {
-        "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
-        "file": "../geojson/marbehan_56km.geojson",
-        "id": "vtt56km",
-        "srs": "+proj=longlat +datum=WGS84 +no_defs",
-        "type": "geojson"
-      },
-      "class": "",
-      "geometry": "linestring",
-      "id": "vtt56km",
-      "name": "vtt56km",
-      "srs": "+proj=longlat +datum=WGS84 +no_defs ",
-      "status": "on"
     }
   ],
   "Stylesheet": [

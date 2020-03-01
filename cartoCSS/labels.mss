@@ -13,7 +13,7 @@
 /* ================================================================== */
 
 #contour {
-    [main="yes"] {
+    [[ELEV] % 20 = 0] {
         [zoom <= 10] { text-size: @text_size_s*@z10_label; }
         [zoom = 11] { text-size: @text_size_s*@z11_label; }
         [zoom = 12] { text-size: @text_size_s*@z12_label; }
@@ -192,10 +192,12 @@
     text-halo-fill: lighten(@hospital, 10%);
   }
   [type='water'] {
-    text-name: '[name]';
-    text-fill: @darkblue;
-    text-halo-fill: lighten(@water, 10%);
-    text-halo-radius: 3;
+      [area < 10000] {
+          text-name: '[name]';
+          text-fill: @darkblue;
+          text-halo-fill: lighten(@water, 10%);
+          text-halo-radius: 3;
+      }
   }
   [type='school'] {
     text-name: "'Éc.'";
@@ -208,16 +210,18 @@
     text-repeat-distance: 60;
   }
   [type='forest'] {
-    text-face-name: @sans_lt_italic;
-    /*text-size: @text_size_l; /*[area]/100000*/
-    text-size: 100/([area]*[area]);
-    text-fill: lighten(@black, 10%);
-    text-transform: uppercase;
-    text-character-spacing: 80;
-    text-line-spacing: 150;
-    text-wrap-width: 200;
-    text-allow-overlap: true;
-    text-name: "";
+      [area>5000000] {
+      text-face-name: @sans_lt_italic;
+      /*text-size: @text_size_l*[area]/5000000/4;*/
+      text-size: @text_size_l;
+      text-fill: lighten(@black, 10%);
+      text-transform: uppercase;
+      text-character-spacing: 80;
+      text-line-spacing: 150;
+      text-wrap-width: 200;
+      text-allow-overlap: true;
+      text-name: '[name]';
+    }
   }
 }
 
@@ -226,42 +230,56 @@
 /* WATERWAY LABELS
 /* ================================================================== */
 
-#waterway_label[type='river'],
-#waterway_label[type='canal'],
-#waterway_label[type='stream'] {
-  [zoom <= 10] { text-size: @text_size_m*@z10_label; }
-  [zoom = 11] { text-size: @text_size_m*@z11_label; }
-  [zoom = 12] { text-size: @text_size_m*@z12_label; }
-  [zoom = 13] { text-size: @text_size_m*@z13_label; }
-  [zoom = 14] { text-size: @text_size_m*@z14_label; }
-  [zoom = 15] { text-size: @text_size_m*@z15_label; }
-  [zoom = 16] { text-size: @text_size_m*@z16_label; }
-  [zoom = 17] { text-size: @text_size_m*@z17_label; }
-  [zoom = 18] { text-size: @text_size_m*@z18_label; }
-  [zoom = 19] { text-size: @text_size_m*@z19_label; }
-  [zoom >= 20] { text-size: @text_size_m*@z20_label; }
-  text-name: '[name]';
-  text-face-name: @sans;
-  text-fill: @darkblue;
-  text-halo-fill: lighten(@water, 10%);
-  text-halo-radius: 3;
-  text-placement: line;
-  text-repeat-distance: 1200;
-  text-spacing: 300;
-}
+#waterway_label {
+    text-name: '[name]';
+    text-face-name: @sans;
+    text-fill: @darkblue;
+    text-halo-fill: lighten(@water, 10%);
+    text-halo-radius: 3;
+    text-placement: line;
+    text-repeat-distance: 1200;
+    [type='pond'], [type='lake'], [type='basin'], [type='reservoir'] {
+        [zoom <= 10] { text-size: @text_size_s*@z10_label; }
+        [zoom = 11] { text-size: @text_size_s*@z11_label; }
+        [zoom = 12] { text-size: @text_size_s*@z12_label; }
+        [zoom = 13] { text-size: @text_size_s*@z13_label; }
+        [zoom = 14] { text-size: @text_size_s*@z14_label; }
+        [zoom = 15] { text-size: @text_size_s*@z15_label; }
+        [zoom = 16] { text-size: @text_size_s*@z16_label; }
+        [zoom = 17] { text-size: @text_size_s*@z17_label; }
+        [zoom = 18] { text-size: @text_size_s*@z18_label; }
+        [zoom = 19] { text-size: @text_size_s*@z19_label; }
+        [zoom >= 20] { text-size: @text_size_s*@z20_label; }
+        text-max-char-angle-delta: 50;
+        text-allow-overlap: true;
+    }
+    [type='river'], [type='canal'] {
+        [zoom <= 10] { text-size: @text_size_m*@z10_label; }
+        [zoom = 11] { text-size: @text_size_m*@z11_label; }
+        [zoom = 12] { text-size: @text_size_m*@z12_label; }
+        [zoom = 13] { text-size: @text_size_m*@z13_label; }
+        [zoom = 14] { text-size: @text_size_m*@z14_label; }
+        [zoom = 15] { text-size: @text_size_m*@z15_label; }
+        [zoom = 16] { text-size: @text_size_m*@z16_label; }
+        [zoom = 17] { text-size: @text_size_m*@z17_label; }
+        [zoom = 18] { text-size: @text_size_m*@z18_label; }
+        [zoom = 19] { text-size: @text_size_m*@z19_label; }
+        [zoom >= 20] { text-size: @text_size_m*@z20_label; }
+    }
+    [type='stream'] {
+        [zoom <= 10] { text-size: @text_size_s*@z10_label; }
+        [zoom = 11] { text-size: @text_size_s*@z11_label; }
+        [zoom = 12] { text-size: @text_size_s*@z12_label; }
+        [zoom = 13] { text-size: @text_size_s*@z13_label; }
+        [zoom = 14] { text-size: @text_size_s*@z14_label; }
+        [zoom = 15] { text-size: @text_size_s*@z15_label; }
+        [zoom = 16] { text-size: @text_size_s*@z16_label; }
+        [zoom = 17] { text-size: @text_size_s*@z17_label; }
+        [zoom = 18] { text-size: @text_size_s*@z18_label; }
+        [zoom = 19] { text-size: @text_size_s*@z19_label; }
+        [zoom >= 20] { text-size: @text_size_s*@z20_label; }
+    }
 
-#waterway_label[type='stream'] {
-  [zoom <= 10] { text-size: @text_size_s*@z10_label; }
-  [zoom = 11] { text-size: @text_size_s*@z11_label; }
-  [zoom = 12] { text-size: @text_size_s*@z12_label; }
-  [zoom = 13] { text-size: @text_size_s*@z13_label; }
-  [zoom = 14] { text-size: @text_size_s*@z14_label; }
-  [zoom = 15] { text-size: @text_size_s*@z15_label; }
-  [zoom = 16] { text-size: @text_size_s*@z16_label; }
-  [zoom = 17] { text-size: @text_size_s*@z17_label; }
-  [zoom = 18] { text-size: @text_size_s*@z18_label; }
-  [zoom = 19] { text-size: @text_size_s*@z19_label; }
-  [zoom >= 20] { text-size: @text_size_s*@z20_label; }
 }
 
 
