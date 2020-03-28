@@ -200,8 +200,10 @@
         }
     }
     [type='school'] {
-        text-name: "'Éc.'";
-        text-dy: -20;
+        [zoom >= 16] {
+            text-name: "'Éc.'";
+            text-dy: -20;
+        }
     }
     [type='farmyard'] {
         [zoom >= 15] {
@@ -213,8 +215,9 @@
     }
     [type='forest'] {
         [area > 5000000] {
+            [zoom > 10] { text-size: @text_size_l; }
+            [zoom >= 18] { text-size: @text_size_l*[area]/5000000/4; }
             text-face-name: @sans_lt_italic;
-            text-size: @text_size_l*[area]/5000000/4;
             text-fill: lighten(@black, 10%);
             text-transform: uppercase;
             text-character-spacing: 80;
