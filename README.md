@@ -481,6 +481,8 @@ or
   * départ de promenade
   * oeuvre d'art
   * piscine
+  * caillebotis
+  * fagnes spéciales...
 
 
 * rotated culvert symbols
