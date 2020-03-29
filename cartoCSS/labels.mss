@@ -13,26 +13,25 @@
 /* ================================================================== */
 
 #contour {
+    text-name:'[ELEV]';
+    text-face-name:@sans;
+    text-placement:line;
+    text-wrap-width: 60;
+    text-line-spacing: 1;
+    text-fill: @contour;
+    text-halo-fill: #ffffff;
+    text-halo-radius:2;
+    [zoom <= 14] { text-size: 0; }
+    [zoom = 15] { text-size: @text_size_s*@z15_label; }
+    [zoom = 16] { text-size: @text_size_s*@z16_label; }
+    [zoom = 17] { text-size: @text_size_s*@z17_label; }
+    [zoom = 18] { text-size: @text_size_s*@z18_label; }
+    [zoom = 19] { text-size: @text_size_s*@z19_label; }
+    [zoom >= 20] { text-size: @text_size_s*@z20_label; }
     [[ELEV] % 20 = 0] {
-        [zoom <= 10] { text-size: @text_size_s*@z10_label; }
-        [zoom = 11] { text-size: @text_size_s*@z11_label; }
-        [zoom = 12] { text-size: @text_size_s*@z12_label; }
+        [zoom <= 12] { text-size: 0; }
         [zoom = 13] { text-size: @text_size_s*@z13_label; }
         [zoom = 14] { text-size: @text_size_s*@z14_label; }
-        [zoom = 15] { text-size: @text_size_s*@z15_label; }
-        [zoom = 16] { text-size: @text_size_s*@z16_label; }
-        [zoom = 17] { text-size: @text_size_s*@z17_label; }
-        [zoom = 18] { text-size: @text_size_s*@z18_label; }
-        [zoom = 19] { text-size: @text_size_s*@z19_label; }
-        [zoom >= 20] { text-size: @text_size_s*@z20_label; }
-        text-name:'[ELEV]';
-        text-face-name:@sans;
-        text-placement:line;
-        text-wrap-width: 60;
-        text-line-spacing: 1;
-        text-fill: @contour;
-        text-halo-fill: #ffffff;
-        text-halo-radius:2;
     }
 }
 
@@ -215,8 +214,10 @@
     }
     [type='forest'] {
         [area > 5000000] {
-            [zoom > 10] { text-size: @text_size_l; }
-            [zoom >= 18] { text-size: @text_size_l*[area]/5000000/4; }
+
+            [zoom > 10] { text-size: 0; }
+            [zoom = 18] { text-size: @text_size_l*[area]/5000000/4; }
+
             text-face-name: @sans_lt_italic;
             text-fill: lighten(@black, 10%);
             text-transform: uppercase;
