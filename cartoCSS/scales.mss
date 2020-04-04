@@ -2,17 +2,31 @@
  * All scale-dependent label, width and marker sizes
  */
 
+/* scale factor double for each level of zoom */
 @z10: 0.015625;
 @z11: 0.03125;
 @z12: 0.0625;
 @z13: 0.125;
 @z14: 0.25;
 @z15: 0.5;
-@z16: 1; /* scale = 2 */
+@z16: 1; /* scale = 1/20000 */
 @z17: 2;
 @z18: 4;
 @z19: 8;
 @z20: 16;
+
+/* scale factor double until z16 and then gently increases */
+@z10_contour: 0.015625;
+@z11_contour: 0.03125;
+@z12_contour: 0.0625;
+@z13_contour: 0.125;
+@z14_contour: 0.25;
+@z15_contour: 0.5;
+@z16_contour: 1; /* scale = 1/20000 */
+@z17_contour: 1.5;
+@z18_contour: 2;
+@z19_contour: 2.5;
+@z20_contour: 3;
 
 @z10_road: 0.5;
 @z11_road: 0.5;
@@ -20,7 +34,7 @@
 @z13_road: 0.6;
 @z14_road: 0.7;
 @z15_road: 0.8;
-@z16_road: 1; /* scale = 2 */
+@z16_road: 1; /* scale = 1/20000 */
 @z17_road: 1.3;
 @z18_road: 2;
 @z19_road: 3;
@@ -32,7 +46,7 @@
 @z13_marker: 0.35;
 @z14_marker: 0.5;
 @z15_marker: 0.7;
-@z16_marker: 1; /* scale = 2 */
+@z16_marker: 1; /* scale = 1/20000 */
 @z17_marker: 1.3;
 @z18_marker: 2;
 @z19_marker: 3;
@@ -44,7 +58,7 @@
 @z13_label: 0.4;
 @z14_label: 0.55;
 @z15_label: 0.7;
-@z16_label: 1; /* scale = 2 */
+@z16_label: 1; /* scale = 1/20000 */
 @z17_label: 1.3;
 @z18_label: 2;
 @z19_label: 3;

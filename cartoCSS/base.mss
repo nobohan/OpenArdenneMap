@@ -15,22 +15,22 @@ Map { background-color: @background; }
 #contour  {
     line-color: @contour;
     [zoom <= 14] { line-width: 0; }
-    [zoom = 15] { line-width: @contour_minor_line_width*@z15; }
-    [zoom = 16] { line-width: @contour_minor_line_width*@z16; }
-    [zoom = 17] { line-width: @contour_minor_line_width*@z17; }
-    [zoom = 18] { line-width: @contour_minor_line_width*@z18; }
-    [zoom = 19] { line-width: @contour_minor_line_width*@z19; }
-    [zoom >= 20] { line-width: @contour_minor_line_width*@z20; }
+    [zoom = 15] { line-width: @contour_minor_line_width*@z15_contour; }
+    [zoom = 16] { line-width: @contour_minor_line_width*@z16_contour; }
+    [zoom = 17] { line-width: @contour_minor_line_width*@z17_contour; }
+    [zoom = 18] { line-width: @contour_minor_line_width*@z18_contour; }
+    [zoom = 19] { line-width: @contour_minor_line_width*@z19_contour; }
+    [zoom >= 20] { line-width: @contour_minor_line_width*@z20_contour; }
     [[ELEV] % 20 = 0] {
         [zoom <= 12] { line-width: 0; }
-        [zoom = 13] { line-width: @contour_major_line_width*@z13; }
-        [zoom = 14] { line-width: @contour_major_line_width*@z14; }
-        [zoom = 15] { line-width: @contour_major_line_width*@z15; }
-        [zoom = 16] { line-width: @contour_major_line_width*@z16; }
-        [zoom = 17] { line-width: @contour_major_line_width*@z17; }
-        [zoom = 18] { line-width: @contour_major_line_width*@z18; }
-        [zoom = 19] { line-width: @contour_major_line_width*@z19; }
-        [zoom >= 20] { line-width: @contour_major_line_width*@z20; }
+        [zoom = 13] { line-width: @contour_major_line_width*@z13_contour; }
+        [zoom = 14] { line-width: @contour_major_line_width*@z14_contour; }
+        [zoom = 15] { line-width: @contour_major_line_width*@z15_contour; }
+        [zoom = 16] { line-width: @contour_major_line_width*@z16_contour; }
+        [zoom = 17] { line-width: @contour_major_line_width*@z17_contour; }
+        [zoom = 18] { line-width: @contour_major_line_width*@z18_contour; }
+        [zoom = 19] { line-width: @contour_major_line_width*@z19_contour; }
+        [zoom >= 20] { line-width: @contour_major_line_width*@z20_contour; }
     }
 }
 
