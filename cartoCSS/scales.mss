@@ -40,6 +40,7 @@
 @z19_road: 3;
 @z20_road: 4;
 
+/* scale factor double only one zoom level on 2 (based on sqrt(2))  */
 @z10_marker: 0.125;
 @z11_marker: 0.18;
 @z12_marker: 0.25;
@@ -47,9 +48,9 @@
 @z14_marker: 0.5;
 @z15_marker: 0.7;
 @z16_marker: 1; /* scale = 1/20000 */
-@z17_marker: 1.3;
+@z17_marker: 1.4;
 @z18_marker: 2;
-@z19_marker: 3;
+@z19_marker: 2.8;
 @z20_marker: 4;
 
 @z10_label: 0.2;
