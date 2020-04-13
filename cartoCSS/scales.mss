@@ -60,12 +60,13 @@
 @z14_label: 0.55;
 @z15_label: 0.7;
 @z16_label: 1; /* scale = 1/20000 */
-@z17_label: 1.3;
+@z17_label: 1.4;
 @z18_label: 2;
-@z19_label: 3;
+@z19_label: 2.8;
 @z20_label: 4;
 
 @supra_text_size_alfphabet: 5;
+@text_size_xl : 90 + @supra_text_size_alfphabet;
 @text_size_l : 60 + @supra_text_size_alfphabet;
 @text_size_m : 40 + @supra_text_size_alfphabet;
 @text_size_s : 30 + @supra_text_size_alfphabet;

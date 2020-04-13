@@ -44,54 +44,81 @@
 /* ---- Cities ------------------------------------------------------ */
 
 #place::city[type='city'] {
-  [zoom <= 10] { text-size: @text_size_l*@z10_label*1.2; }
-  [zoom = 11] { text-size: @text_size_l*@z11_label*1.2; }
-  [zoom = 12] { text-size: @text_size_l*@z12_label*1.2; }
-  [zoom = 13] { text-size: @text_size_l*@z13_label*1.2; }
-  [zoom = 14] { text-size: @text_size_l*@z14_label*1.2; }
-  [zoom = 15] { text-size: @text_size_l*@z15_label*1.2; }
-  [zoom = 16] { text-size: @text_size_l*@z16_label*1.2; }
-  [zoom = 17] { text-size: @text_size_l*@z17_label*1.2; }
-  [zoom = 18] { text-size: @text_size_l*@z18_label*1.2; }
-  [zoom = 19] { text-size: @text_size_l*@z19_label*1.2; }
-  [zoom >= 20] { text-size: @text_size_l*@z20_label*1.2; }
-  text-name: '[name]';
-  text-face-name: @sans;
-  text-placement: point;
-  text-fill: @city_text;
-  text-halo-fill: @city_halo;
-  text-halo-radius: 4;
-  text-character-spacing: 20;
-  text-wrap-width: 400;
-  text-transform: uppercase;
+    [zoom <= 10] { text-size: @text_size_xl*@z10_label*1.2; }
+    [zoom = 11] { text-size: @text_size_xl*@z11_label*1.2; }
+    [zoom = 12] { text-size: @text_size_xl*@z12_label*1.2; }
+    [zoom = 13] { text-size: @text_size_xl*@z13_label*1.2; }
+    [zoom = 14] { text-size: @text_size_xl*@z14_label*1.2; }
+    [zoom = 15] { text-size: @text_size_xl*@z15_label*1.2; }
+    [zoom = 16] { text-size: @text_size_xl*@z16_label*1.2; }
+    [zoom = 17] { text-size: @text_size_xl*@z17_label*1.2; }
+    [zoom = 18] { text-size: @text_size_xl*@z18_label*1.2; }
+    [zoom = 19] { text-size: @text_size_xl*@z19_label*1.2; }
+    [zoom >= 20] { text-size: @text_size_xl*@z20_label*1.2; }
+    text-name: '[name]';
+    text-face-name: @sans;
+    text-placement: point;
+    text-fill: @city_text;
+    text-halo-fill: @city_halo;
+    text-halo-radius: 4;
+    text-character-spacing: 20;
+    text-wrap-width: 400;
+    text-transform: uppercase;
+    text-avoid-edges: true;
 }
 
 /* ---- Towns ------------------------------------------------------- */
 
-#place::small[type='town'],
+#place::small[type='town'] {
+    [zoom <= 10] { text-size: @text_size_xl*@z10_label; }
+    [zoom = 11] { text-size: @text_size_xl*@z11_label; }
+    [zoom = 12] { text-size: @text_size_xl*@z12_label; }
+    [zoom = 13] { text-size: @text_size_xl*@z13_label; text-dy: 10; }
+    [zoom = 14] { text-size: @text_size_xl*@z14_label; text-dy: 20; }
+    [zoom = 15] { text-size: @text_size_xl*@z15_label; text-dy: 100; }
+    [zoom = 16] { text-size: @text_size_xl*@z16_label; text-dy: 200; }
+    [zoom = 17] { text-size: @text_size_xl*@z17_label; }
+    [zoom = 18] { text-size: @text_size_xl*@z18_label; }
+    [zoom = 19] { text-size: @text_size_xl*@z19_label; }
+    [zoom >= 20] { text-size: @text_size_xl*@z20_label; }
+    text-name:'[name]';
+    text-face-name: @sans;
+    text-placement: point;
+    text-fill: @town_text;
+    text-halo-fill: @town_halo;
+    text-halo-radius: 4;
+    text-wrap-width: 50;
+    text-line-spacing: 2;
+    text-character-spacing: 20;
+    text-line-spacing: 6;
+    text-allow-overlap: true;
+    text-avoid-edges: true;
+}
+
 #place::town[type='village'] {
-  [zoom <= 10] { text-size: @text_size_l*@z10_label; }
-  [zoom = 11] { text-size: @text_size_l*@z11_label; }
-  [zoom = 12] { text-size: @text_size_l*@z12_label; }
-  [zoom = 13] { text-size: @text_size_l*@z13_label; text-dy: 10; }
-  [zoom = 14] { text-size: @text_size_l*@z14_label; text-dy: 20; }
-  [zoom = 15] { text-size: @text_size_l*@z15_label; text-dy: 100; }
-  [zoom = 16] { text-size: @text_size_l*@z16_label; text-dy: 200; }
-  [zoom = 17] { text-size: @text_size_l*@z17_label; }
-  [zoom = 18] { text-size: @text_size_l*@z18_label; }
-  [zoom = 19] { text-size: @text_size_l*@z19_label; }
-  [zoom >= 20] { text-size: @text_size_l*@z20_label; }
-  text-name:'[name]';
-  text-face-name: @sans;
-  text-placement: point;
-  text-fill: @town_text;
-  text-halo-fill: @town_halo;
-  text-halo-radius: 4;
-  text-wrap-width: 50;
-  text-line-spacing: 2;
-  text-character-spacing: 20;
-  text-line-spacing: 6;
-  text-allow-overlap: true;
+    [zoom <= 10] { text-size: @text_size_l*@z10_label; }
+    [zoom = 11] { text-size: @text_size_l*@z11_label; }
+    [zoom = 12] { text-size: @text_size_l*@z12_label; }
+    [zoom = 13] { text-size: @text_size_l*@z13_label; text-dy: 10; }
+    [zoom = 14] { text-size: @text_size_l*@z14_label; text-dy: 20; }
+    [zoom = 15] { text-size: @text_size_l*@z15_label; text-dy: 100; }
+    [zoom = 16] { text-size: @text_size_l*@z16_label; text-dy: 200; }
+    [zoom = 17] { text-size: @text_size_l*@z17_label; }
+    [zoom = 18] { text-size: @text_size_l*@z18_label; }
+    [zoom = 19] { text-size: @text_size_l*@z19_label; }
+    [zoom >= 20] { text-size: @text_size_l*@z20_label; }
+    text-name:'[name]';
+    text-face-name: @sans;
+    text-placement: point;
+    text-fill: @town_text;
+    text-halo-fill: @town_halo;
+    text-halo-radius: 4;
+    text-wrap-width: 50;
+    text-line-spacing: 2;
+    text-character-spacing: 20;
+    text-line-spacing: 6;
+    text-allow-overlap: true;
+    text-avoid-edges: true;
 }
 
 /* ---- Other small places ------------------------------------------ */
