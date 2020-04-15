@@ -164,7 +164,6 @@
         [zoom = 18] { text-size: @text_size_s*@z18_label; }
         [zoom = 19] { text-size: @text_size_s*@z19_label; }
         [zoom >= 20] { text-size: @text_size_s*@z20_label; }
-
     }
 }
 
@@ -193,55 +192,56 @@
     text-fill: @black;
     text-halo-fill: #fff;
     // Specific style overrides for different types of areas:
-    [type='park'] {
-        text-face-name: @sans_lt_italic;
-        text-fill: @green;
-        text-halo-fill: lighten(@park, 10%);
-    }
-    [type='tourism'], [type='industrial'] {
-        text-name: '[name]';
-    }
-    [type='hospital'] {
-        text-fill: @black;
-        text-halo-fill: lighten(@hospital, 10%);
-    }
-    [type='college'],
-    [type='university'] {
-        text-fill: @black;
-        text-halo-fill: lighten(@hospital, 10%);
-    }
-    [type='water'] {
-        [area < 10000] {
+    [zoom >= 15] {
+        [type='park'] {
+            text-face-name: @sans_lt_italic;
+            text-fill: @green;
+            text-halo-fill: lighten(@park, 10%);
+        }
+        [type='tourism'], [type='industrial'] {
             text-name: '[name]';
-            text-fill: @darkblue;
-            text-halo-fill: lighten(@water, 10%);
-            text-halo-radius: 3;
         }
-    }
-    [type='school'] {
-        [zoom >= 16] {
-            text-name: "'Éc.'";
-            text-dy: -20;
+        [type='hospital'] {
+            text-name: '[name]';
+            text-fill: @black;
+            text-halo-fill: lighten(@hospital, 10%);
         }
-    }
-    [type='farmyard'] {
-        [zoom >= 15] {
+        [type='college'],
+        [type='university'] {
+            text-name: '[name]';
+            text-fill: @black;
+            text-halo-fill: lighten(@hospital, 10%);
+        }
+        [type='farmyard'] {
             text-name: "'Fme'";
             text-dy: -20;
-            text-allow-overlap: false;
             text-repeat-distance: 60;
         }
     }
+    [zoom >= 16] {
+        [type='school'] {
+            text-name: "'Éc.'";
+            text-dy: -20;
+        }
+        [type='water'] {
+            [area < 10000] {
+                text-name: '[name]';
+                text-fill: @darkblue;
+                text-halo-fill: lighten(@water, 10%);
+                text-halo-radius: 3;
+            }
+        }
+    }
+
     [type='forest'] {
         [area > 5000000] {
-
-            [zoom > 10] { text-size: 0; }
-            [zoom = 18] { text-size: @text_size_l*[area]/5000000/4; }
-
+            [zoom = 16] { text-size: @text_size_l*[area]/5000000/16; text-character-spacing: 10; }
+            [zoom = 17] { text-size: @text_size_l*[area]/5000000/8; text-character-spacing: 20; }
+            [zoom = 18] { text-size: @text_size_l*[area]/5000000/4; text-character-spacing: 40; }
+            [zoom = 19] { text-size: @text_size_l*[area]/5000000/2; text-character-spacing: 80; }
             text-face-name: @sans_lt_italic;
             text-fill: lighten(@black, 10%);
             text-transform: uppercase;
-            text-character-spacing: 80;
             text-line-spacing: 150;
             text-wrap-width: 200;
             text-allow-overlap: true;
