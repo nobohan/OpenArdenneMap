@@ -313,29 +313,26 @@
 /* ================================================================== */
 
 #train_elements {
-  [type='station'] {
-    [zoom <= 10] { text-size: @text_size_m*@z10_label; }
-    [zoom = 11] { text-size: @text_size_m*@z11_label; }
-    [zoom = 12] { text-size: @text_size_m*@z12_label; }
-    [zoom = 13] { text-size: @text_size_m*@z13_label; }
-    [zoom = 14] { text-size: @text_size_m*@z14_label; }
-    [zoom = 15] { text-size: @text_size_m*@z15_label; }
-    [zoom = 16] { text-size: @text_size_m*@z16_label; }
-    [zoom = 17] { text-size: @text_size_m*@z17_label; }
-    [zoom = 18] { text-size: @text_size_m*@z18_label; }
-    [zoom = 19] { text-size: @text_size_m*@z19_label; }
-    [zoom >= 20] { text-size: @text_size_m*@z20_label; }
-    text-name: 'Gare';
-    text-face-name: @sans;
-    text-placement: point;
-    text-fill: @other_text;
-    text-halo-fill: @other_halo;
-    text-halo-radius: 4;
-    text-character-spacing: 2;
-    text-line-spacing: 2;
-    text-dy: -50;
-    text-dx: -30;
-  }
+    [zoom >= 13] {
+        [type='station'] {
+            [zoom = 13] { text-size: @text_size_m*@z13_label; }
+            [zoom = 14] { text-size: @text_size_m*@z14_label; }
+            [zoom = 15] { text-size: @text_size_m*@z15_label; }
+            [zoom = 16] { text-size: @text_size_m*@z16_label; text-dy: -50; text-dx: -30; }
+            [zoom = 17] { text-size: @text_size_m*@z17_label; }
+            [zoom = 18] { text-size: @text_size_m*@z18_label; }
+            [zoom = 19] { text-size: @text_size_m*@z19_label; }
+            [zoom >= 20] { text-size: @text_size_m*@z20_label; }
+            text-name: 'Gare';
+            text-face-name: @sans;
+            text-placement: point;
+            text-fill: @other_text;
+            text-halo-fill: @other_halo;
+            text-halo-radius: 4;
+            text-character-spacing: 2;
+            text-line-spacing: 2;
+        }
+    }
 }
 
 /* ****************************************************************** */

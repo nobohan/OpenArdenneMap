@@ -9,20 +9,17 @@
  /* ================================================================== */
 
  #train_elements {
-   [type='level_crossing'] {
-     marker-file: url(../img/level-crossing.svg);
-     [zoom <= 10] { marker-height: @large*@z10; }
-     [zoom = 11] { marker-height: @large*@z11; }
-     [zoom = 12] { marker-height: @large*@z12; }
-     [zoom = 13] { marker-height: @large*@z13; }
-     [zoom = 14] { marker-height: @large*@z14; }
-     [zoom = 15] { marker-height: @large*@z15; }
-     [zoom = 16] { marker-height: @large*@z16; }
-     [zoom = 17] { marker-height: @large*@z17; }
-     [zoom = 18] { marker-height: @large*@z18; }
-     [zoom = 19] { marker-height: @large*@z19; }
-     [zoom >= 20] { marker-height: @large*@z20; }
-   }
+     [zoom >= 15] {
+         [type='level_crossing'] {
+             marker-file: url(../img/level-crossing.svg);
+             [zoom = 15] { marker-height: @large*@z15_marker; }
+             [zoom = 16] { marker-height: @large*@z16_marker; }
+             [zoom = 17] { marker-height: @large*@z17_marker; }
+             [zoom = 18] { marker-height: @large*@z18_marker; }
+             [zoom = 19] { marker-height: @large*@z19_marker; }
+             [zoom >= 20] { marker-height: @large*@z20_marker; }
+         }
+     }
  }
 
 /* ================================================================== */
