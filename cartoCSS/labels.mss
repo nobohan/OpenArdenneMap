@@ -115,9 +115,9 @@
         [zoom = 13] { text-size: @text_size_l*@z13_label; text-character-spacing: 1; }
         [zoom = 14] { text-size: @text_size_l*@z14_label; text-character-spacing: 1; }
         [zoom = 15] { text-size: @text_size_l*@z15_label; text-character-spacing: 10; }
-        [zoom = 16] { text-size: @text_size_l*@z16_label; text-character-spacing: 20; }
-        [zoom = 17] { text-size: @text_size_l*@z17_label; }
-        [zoom = 18] { text-size: @text_size_l*@z18_label; }
+        [zoom = 16] { text-size: @text_size_l*@z16_label; text-character-spacing: 20; text-dy: 100;}
+        [zoom = 17] { text-size: @text_size_l*@z17_label; text-dy: 200;}
+        [zoom = 18] { text-size: @text_size_l*@z18_label; text-dy: 400;}
         [zoom = 19] { text-size: @text_size_l*@z19_label; }
         [zoom >= 20] { text-size: @text_size_l*@z20_label; }
     }

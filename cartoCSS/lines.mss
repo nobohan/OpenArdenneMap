@@ -641,56 +641,60 @@
 /* ================================================================== */
 
 #linear_features {
-  [type = 'hedge'], [type = 'tree_row'] {
-    [zoom <= 10] { line-width: @tiny*@z10; }
-    [zoom = 11] { line-width: @tiny*@z11; }
-    [zoom = 12] { line-width: @tiny*@z12; }
-    [zoom = 13] { line-width: @tiny*@z13; }
-    [zoom = 14] { line-width: @tiny*@z14; }
-    [zoom = 15] { line-width: @tiny*@z15; }
-    [zoom = 16] { line-width: @tiny*@z16; }
-    [zoom = 17] { line-width: @tiny*@z17; }
-    [zoom = 18] { line-width: @tiny*@z18; }
-    [zoom = 19] { line-width: @tiny*@z19; }
-    [zoom >= 20] { line-width: @tiny*@z20; }
-    line-color: darken(@green,30%);
-    line-dasharray: 3,5;
-  }
-  [type = 'line'] {
-    line-color: @black;
-    [zoom <= 10] { line-width: @outline*@z10; }
-    [zoom = 11] { line-width: @outline*@z11; }
-    [zoom = 12] { line-width: @outline*@z12; }
-    [zoom = 13] { line-width: @outline*@z13; }
-    [zoom = 14] { line-width: @outline*@z14; }
-    [zoom = 15] { line-width: @outline*@z15; }
-    [zoom = 16] { line-width: @outline*@z16; }
-    [zoom = 17] { line-width: @outline*@z17; }
-    [zoom = 18] { line-width: @outline*@z18; }
-    [zoom = 19] { line-width: @outline*@z19; }
-    [zoom >= 20] { line-width: @outline*@z20; }
-  }
-  [type = 'embankment'] {
-      line-pattern-file: url(../img/embankment.svg);
-  }
-  [type = 'cliff'] {
-      line-pattern-file: url(../img/cliff.svg);
-  }
-  [type = 'cutline'] {
-    [zoom <= 10] { line-width: @outline*@z10; }
-    [zoom = 11] { line-width: @outline*@z11; }
-    [zoom = 12] { line-width: @outline*@z12; }
-    [zoom = 13] { line-width: @outline*@z13; }
-    [zoom = 14] { line-width: @outline*@z14; }
-    [zoom = 15] { line-width: @outline*@z15; }
-    [zoom = 16] { line-width: @outline*@z16; }
-    [zoom = 17] { line-width: @outline*@z17; }
-    [zoom = 18] { line-width: @outline*@z18; }
-    [zoom = 19] { line-width: @outline*@z19; }
-    [zoom >= 20] { line-width: @outline*@z20; }
-    line-dasharray: 25, 15;
-    line-color: @darkgray;
-  }
+    [zoom >= 14] {
+        [type = 'hedge'], [type = 'tree_row'] {
+            line-color: darken(@green,30%);
+            line-dasharray: 3, 5;
+            [zoom = 14] { line-width: @tiny*@z14_marker; }
+            [zoom = 15] { line-width: @tiny*@z15_marker; }
+            [zoom = 16] { line-width: @tiny*@z16_marker; }
+            [zoom = 17] { line-width: @tiny*@z17_marker; line-dasharray: 3, 5; }
+            [zoom = 18] { line-width: @tiny*@z18_marker; line-dasharray: 6, 10; }
+            [zoom = 19] { line-width: @tiny*@z19_marker; line-dasharray: 12, 20; }
+            [zoom >= 20] { line-width: @tiny*@z20_marker; line-dasharray: 24, 40; }
+        }
+    }
+
+    [type = 'line'] {
+        [zoom >= 12] {
+            line-color: @black;
+            [zoom = 12] { line-width: @outline*@z12_marker; }
+            [zoom = 13] { line-width: @outline*@z13_marker; }
+            [zoom = 14] { line-width: @outline*@z14_marker; }
+            [zoom = 15] { line-width: @outline*@z15_marker; }
+            [zoom = 16] { line-width: @outline*@z16_marker; }
+            [zoom = 17] { line-width: @outline*@z17_marker; }
+            [zoom = 18] { line-width: @outline*@z18_marker; }
+            [zoom = 19] { line-width: @outline*@z19_marker; }
+            [zoom >= 20] { line-width: @outline*@z20_marker; }
+        }
+    }
+    [zoom >= 16] {
+        [type = 'embankment'] {
+            line-pattern-file: url(../img/embankment.svg);
+        }
+    }
+    [zoom >= 14] {
+        [type = 'cliff'] {
+            line-pattern-file: url(../img/cliff.svg);
+        }
+    }
+
+    [type = 'cutline'] {
+        [zoom >= 13] {
+            line-dasharray: 25, 15;
+            line-color: @darkgray;
+            [zoom = 13] { line-width: @outline*@z14; }
+            [zoom = 14] { line-width: @outline*@z14; }
+            [zoom = 15] { line-width: @outline*@z15; }
+            [zoom = 16] { line-width: @outline*@z16; }
+            [zoom = 17] { line-width: @outline*@z17_marker; line-dasharray: 35, 22;}
+            [zoom = 18] { line-width: @outline*@z18_marker; line-dasharray: 50, 30;}
+            [zoom = 19] { line-width: @outline*@z19_marker; line-dasharray: 75, 45;}
+            [zoom >= 20] { line-width: @outline*@z20_marker; line-dasharray: 100, 60;}
+
+        }
+    }
 }
 
 /******************************************************************* */

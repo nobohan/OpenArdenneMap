@@ -88,26 +88,23 @@
         text-dx: -5;
     }
     [ford = 'yes'] {
-        [zoom <= 10] { text-size: 0; }
-        [zoom = 11] { text-size: @text_size_s*@z11_label; }
-        [zoom = 12] { text-size: @text_size_s*@z12_label; }
-        [zoom = 13] { text-size: @text_size_s*@z13_label; }
-        [zoom = 14] { text-size: @text_size_s*@z14_label; }
-        [zoom = 15] { text-size: @text_size_s*@z15_label; }
-        [zoom = 16] { text-size: @text_size_s*@z16_label; }
-        [zoom = 17] { text-size: @text_size_s*@z17_label; }
-        [zoom = 18] { text-size: @text_size_s*@z18_label; }
-        [zoom = 19] { text-size: @text_size_s*@z19_label; }
-        [zoom >= 20] { text-size: @text_size_s*@z20_label; }
-        text-name:"'Gué'";
-        text-face-name: @sans;
-        text-placement: point;
-        text-fill: @darkblue;
-        text-halo-fill: #ffffff;
-        text-halo-radius: 2;
-        text-character-spacing: 2;
-        text-dy: -16;
-        text-allow-overlap: false;
+        [zoom >= 14] {
+            text-name:"'Gué'";
+            text-face-name: @sans;
+            text-placement: point;
+            text-fill: @darkblue;
+            text-halo-fill: #ffffff;
+            text-halo-radius: 2;
+            text-character-spacing: 2;
+            text-allow-overlap: false;
+            [zoom = 14] { text-size: @text_size_s*@z14_label; text-dy: 0;}
+            [zoom = 15] { text-size: @text_size_s*@z15_label; text-dy: -8;}
+            [zoom = 16] { text-size: @text_size_s*@z16_label; text-dy: -16; }
+            [zoom = 17] { text-size: @text_size_s*@z17_label; text-dy: -20;}
+            [zoom = 18] { text-size: @text_size_s*@z18_label; text-dy: -24;}
+            [zoom = 19] { text-size: @text_size_s*@z19_label; text-dy: -28;}
+            [zoom >= 20] { text-size: @text_size_s*@z20_label; text-dy: -32;}
+        }
     }
     [historic = 'wayside_cross'] {
         [zoom <= 10] { marker-height: @huge*1.5*@z10; }
