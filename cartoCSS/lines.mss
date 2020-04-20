@@ -121,35 +121,29 @@
       [zoom >= 20] { line-width: (@medium + @outline)*@z20_road; }
     }
   }
-
   [stylegroup='noauto'] {
-    [zoom <= 10] { line-width: @tiny*@z10_road; }
-    [zoom = 11] { line-width: @tiny*@z11_road; }
-    [zoom = 12] { line-width: @tiny*@z12_road; }
-    [zoom = 13] { line-width: @tiny*@z13_road; }
-    [zoom = 14] { line-width: @tiny*@z14_road; }
-    [zoom = 15] { line-width: @tiny*@z15_road; }
-    [zoom = 16] { line-width: @tiny*@z16_road; }
-    [zoom = 17] { line-width: @tiny*@z17_road; }
-    [zoom = 18] { line-width: @tiny*@z18_road; }
-    [zoom = 19] { line-width: @tiny*@z19_road; }
-    [zoom >= 20] { line-width: @tiny*@z20_road; }
-    line-dasharray: 8, 8;
-    line-color: @black;
-    [trail_visibility='bad'], [trail_visibility='horrible'] {
-        [zoom <= 10] { line-width: @tiny*@z10_road; }
-        [zoom = 11] { line-width: @tiny*@z11_road; }
-        [zoom = 12] { line-width: @tiny*@z12_road; }
-        [zoom = 13] { line-width: @tiny*@z13_road; }
-        [zoom = 14] { line-width: @tiny*@z14_road; }
-        [zoom = 15] { line-width: @tiny*@z15_road; }
-        [zoom = 16] { line-width: @tiny*@z16_road; }
-        [zoom = 17] { line-width: @tiny*@z17_road; }
-        [zoom = 18] { line-width: @tiny*@z18_road; }
-        [zoom = 19] { line-width: @tiny*@z19_road; }
-        [zoom >= 20] { line-width: @tiny*@z20_road; }
-        line-dasharray: 8, 16;
-    }
+      [zoom >= 13] {
+          line-dasharray: 8, 8;
+          line-color: @black;
+          [zoom = 13] { line-width: @tiny*@z13_road; }
+          [zoom = 14] { line-width: @tiny*@z14_road; }
+          [zoom = 15] { line-width: @tiny*@z15_road; }
+          [zoom = 16] { line-width: @tiny*@z16_road; }
+          [zoom = 17] { line-width: @tiny*@z17_road; line-dasharray: 16, 16;}
+          [zoom = 18] { line-width: @tiny*@z18_road; line-dasharray: 32, 32;}
+          [zoom = 19] { line-width: @tiny*@z19_road; line-dasharray: 64, 64;}
+          [zoom >= 20] { line-width: @tiny*@z20_road; line-dasharray: 64, 64;}
+
+          [trail_visibility='bad'], [trail_visibility='horrible'] {
+              [zoom >= 15] {
+                  line-dasharray: 8, 16;
+                  [zoom = 17] { line-dasharray: 16, 32;}
+                  [zoom = 18] { line-dasharray: 32, 64;}
+                  [zoom = 19] { line-dasharray: 64, 128;}
+                  [zoom >= 20] { line-dasharray: 64, 128;}
+              }
+          }
+      }
   }
 
   /* -- widths -- */
