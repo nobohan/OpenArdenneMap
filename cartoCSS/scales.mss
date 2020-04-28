@@ -28,8 +28,8 @@
 @z19_contour: 2.5;
 @z20_contour: 3;
 
-@z10_road: 0.5;
-@z11_road: 0.5;
+@z10_road: 0.3;
+@z11_road: 0.4;
 @z12_road: 0.5;
 @z13_road: 0.6;
 @z14_road: 0.7;
