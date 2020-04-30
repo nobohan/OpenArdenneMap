@@ -478,9 +478,10 @@ or
   * éolienne Eol.
   * Poste
   * police
-  * départ de promenade
+  * départ de promenade, guide post
   * oeuvre d'art
   * piscine
+  * chemins nommés (ex Chemin des Princes)
 
 
 * rotated culvert symbols

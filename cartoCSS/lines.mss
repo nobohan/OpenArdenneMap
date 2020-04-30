@@ -198,14 +198,15 @@
     [zoom = 19] { line-width: (@small + @outline)*@z19_road; }
     [zoom >= 20] { line-width: (@small + @outline)*@z20_road; }
   }
-  [stylegroup='service'][zoom >= 12]{
-      line-color: @black;
+  [stylegroup='service'] {
       [zoom >= 12] {
           [tracktype='grade1'], [tracktype='grade2'] {
+              line-color: @black;
               [zoom = 12] { line-width: (@small + @outline)*@z12_road; }
           }
       }
       [zoom >= 13] {
+          line-color: @black;
           [zoom = 13] { line-width: (@small + @outline)*@z13_road; }
           [zoom = 14] { line-width: (@small + @outline)*@z14_road; }
           [zoom = 15] { line-width: (@small + @outline)*@z15_road; }
@@ -474,19 +475,17 @@
 
 /* ---- Bridge symbol layer -------------------------------- */
 #bridge_symbol {
-  [zoom <= 10] { marker-height: @bridge_marker*@z10_road; }
-  [zoom = 11] { marker-height: @bridge_marker*@z11_road; }
-  [zoom = 12] { marker-height: @bridge_marker*@z12_road; }
-  [zoom = 13] { marker-height: @bridge_marker*@z13_road; }
-  [zoom = 14] { marker-height: @bridge_marker*@z14_road; }
-  [zoom = 15] { marker-height: @bridge_marker*@z15_road; }
-  [zoom = 16] { marker-height: @bridge_marker*@z16_road; }
-  [zoom = 17] { marker-height: @bridge_marker*@z17_road; }
-  [zoom = 18] { marker-height: @bridge_marker*@z18_road; }
-  [zoom = 19] { marker-height: @bridge_marker*@z19_road; }
-  [zoom >= 20] { marker-height: @bridge_marker*@z20_road; }
-  marker-file: url(../img/bridge.svg);
-  marker-transform: rotate([orientation]);
+    [zoom >= 14] {
+        [zoom = 14] { marker-height: @bridge_marker*@z14_road; }
+        [zoom = 15] { marker-height: @bridge_marker*@z15_road; }
+        [zoom = 16] { marker-height: @bridge_marker*@z16_road; }
+        [zoom = 17] { marker-height: @bridge_marker*@z17_road; }
+        [zoom = 18] { marker-height: @bridge_marker*@z18_road; }
+        [zoom = 19] { marker-height: @bridge_marker*@z19_road; }
+        [zoom >= 20] { marker-height: @bridge_marker*@z20_road; }
+        marker-file: url(../img/bridge.svg);
+        marker-transform: rotate([orientation]);
+    }
 }
 
 /* ================================================================== */

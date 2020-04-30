@@ -28,16 +28,16 @@
 @z19_contour: 2.5;
 @z20_contour: 3;
 
-@z10_road: 0.3;
-@z11_road: 0.4;
-@z12_road: 0.5;
-@z13_road: 0.6;
+@z10_road: 0.2;
+@z11_road: 0.3;
+@z12_road: 0.4;
+@z13_road: 0.55;
 @z14_road: 0.7;
 @z15_road: 0.8;
 @z16_road: 1; /* scale = 1/20000 */
-@z17_road: 1.3;
+@z17_road: 1.4;
 @z18_road: 2;
-@z19_road: 3;
+@z19_road: 2.8;
 @z20_road: 4;
 
 /* scale factor double only one zoom level on 2 (based on sqrt(2))  */

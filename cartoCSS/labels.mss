@@ -98,7 +98,7 @@
 }
 
 #place::village[type='village'] {
-    [zoom >= 11] {
+    [zoom >= 12] {
         text-name:'[name]';
         text-face-name: @sans;
         text-placement: point;
@@ -111,7 +111,6 @@
         text-line-spacing: 6;
         text-allow-overlap: true;
         text-avoid-edges: true;
-        [zoom = 11] { text-size: @text_size_l*@z11_label; text-character-spacing: 1; text-allow-overlap: false; }
         [zoom = 12] { text-size: @text_size_l*@z12_label; text-character-spacing: 1; text-allow-overlap: false; }
         [zoom = 13] { text-size: @text_size_l*@z13_label; text-character-spacing: 1; }
         [zoom = 14] { text-size: @text_size_l*@z14_label; text-character-spacing: 1; }
@@ -292,10 +291,7 @@
         [zoom = 19] { text-size: @text_size_m*@z19_label; }
         [zoom >= 20] { text-size: @text_size_m*@z20_label; }
     }
-    [type='stream'] {
-        [zoom <= 10] { text-size: @text_size_s*@z10_label; }
-        [zoom = 11] { text-size: @text_size_s*@z11_label; }
-        [zoom = 12] { text-size: @text_size_s*@z12_label; }
+    [type='stream'][zoom >= 13] {
         [zoom = 13] { text-size: @text_size_s*@z13_label; }
         [zoom = 14] { text-size: @text_size_s*@z14_label; }
         [zoom = 15] { text-size: @text_size_s*@z15_label; }
