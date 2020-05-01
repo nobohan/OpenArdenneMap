@@ -110,8 +110,7 @@
         }
     }
     [leisure = 'picnic_table'], [tourism = 'picnic_site'] {
-        [zoom >= 14] {
-            [zoom = 14] { marker-height: @large*@z14_marker; }
+        [zoom >= 15] {
             [zoom = 15] { marker-height: @large*@z15_marker; }
             [zoom = 16] { marker-height: @large*@z16_marker; }
             [zoom = 17] { marker-height: @large*@z17_marker; }
