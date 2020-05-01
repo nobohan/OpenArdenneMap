@@ -82,7 +82,7 @@ Map { background-color: @background; }
         }
     }
     [type='forest'], [type='wood'] {
-        [zoom <= 13] { line-width: 0; }
+        [zoom <= 13] { line-width: @landuse_line_width*@z16; }
         [zoom = 14] { line-width: @landuse_line_width*@z16; }
         [zoom = 15] { line-width: @landuse_line_width*@z16; }
         [zoom = 16] { line-width: @landuse_line_width*@z16; }
@@ -114,7 +114,7 @@ Map { background-color: @background; }
     }
 
     [type='industrial']    {
-        [zoom <= 13] { line-width: 0; }
+        [zoom <= 13] { line-width: @landuse_line_width*@z16*2; }
         [zoom = 14] { line-width: @landuse_line_width*@z16*2; }
         [zoom = 15] { line-width: @landuse_line_width*@z16*2; }
         [zoom = 16] { line-width: @landuse_line_width*@z16*2; }
