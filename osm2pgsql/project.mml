@@ -435,7 +435,7 @@
             "(
                 SELECT way, place AS type, name, z_order, population
                 FROM planet_osm_point
-                WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality')
+                WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality', 'isolated_dwelling')
                 ORDER BY population DESC NULLS LAST
             ) AS data",
         "type": "postgis"

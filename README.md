@@ -478,11 +478,12 @@ or
   * éolienne Eol.
   * Poste
   * police
-  * départ de promenade
+  * départ de promenade, guide post
   * oeuvre d'art
   * piscine
   * caillebotis
   * fagnes spéciales...
+  * chemins nommés (ex Chemin des Princes)
 
 
 * rotated culvert symbols
