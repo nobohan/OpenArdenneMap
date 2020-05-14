@@ -2,7 +2,7 @@
 
 ### Description
 
-A huge modification: the style was extended from zoom 10 to 20. See the blog post <http://www.nobohan.be/2020/05/13/openardennemap-scaling/>
+A huge modification: the style was extended from zoom 10 to 20. See the blog post <http://www.nobohan.be/2020/05/14/openardennemap-scaling/>
 
 ### Changes
 - The style of all map features (polygones, lines, points, labels) was modified for the zoom levels from 10 to 20. A lot of features were hidden at low zoom levels.
