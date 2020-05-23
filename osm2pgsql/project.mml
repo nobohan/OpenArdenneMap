@@ -4,13 +4,13 @@
       "Datasource": {
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "way",
+        "geometry_field": "rotated_way",
         "id": "landuse",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table":
             "(
-                SELECT way, leaf_type, leaf_cycle, trees, produce, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type
-                FROM planet_osm_polygon
+                SELECT rotated_way, leaf_type, leaf_cycle, trees, produce, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type
+                FROM planet_osm_polygon_semoy
                 ORDER BY way_area DESC
             ) AS data",
         "type": "postgis"
@@ -40,11 +40,11 @@
       "Datasource": {
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "way",
+        "geometry_field": "rotated_way",
         "table":
             "(
-                SELECT way, admin_level
-                FROM planet_osm_line
+                SELECT rotated_way, admin_level
+                FROM planet_osm_line_semoy
                 WHERE boundary IN ('administrative')
             ) AS data",
         "type": "postgis"
@@ -60,11 +60,11 @@
       "Datasource": {
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "way",
+        "geometry_field": "rotated_way",
         "table":
             "(
-                SELECT way, waterway AS type
-                FROM planet_osm_line
+                SELECT rotated_way, waterway AS type
+                FROM planet_osm_line_semoy
                 WHERE waterway IN ('river', 'canal', 'stream', 'ditch', 'drain')
             ) AS data",
         "type": "postgis"
@@ -79,13 +79,13 @@
       "Datasource": {
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "way",
+        "geometry_field": "rotated_way",
         "id": "water",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table":
             "(
-                SELECT way, way_area AS area
-                FROM planet_osm_polygon
+                SELECT rotated_way, way_area AS area
+                FROM planet_osm_polygon_semoy
                 WHERE \"natural\" IN ('water', 'pond') OR landuse IN ('reservoir') OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream')
             ) AS data",
         "type": "postgis"
@@ -101,13 +101,13 @@
       "Datasource": {
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "way",
+        "geometry_field": "rotated_way",
         "id": "landuse_overlays",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table":
             "(
-                SELECT way, way_area AS area, COALESCE(leisure, \"natural\") AS type
-                FROM planet_osm_polygon
+                SELECT rotated_way, way_area AS area, COALESCE(leisure, \"natural\") AS type
+                FROM planet_osm_polygon_semoy
                 WHERE leisure = 'nature_reserve' OR \"natural\" = 'wetland'
                 ORDER BY way_area DESC
             ) AS data",
@@ -123,13 +123,13 @@
       "Datasource": {
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "way",
+        "geometry_field": "rotated_way",
         "id": "aeroway",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table":
             "(
-                SELECT way, aeroway AS type
-                FROM planet_osm_line
+                SELECT rotated_way, aeroway AS type
+                FROM planet_osm_line_semoy
                 WHERE aeroway IN ('apron', 'runway', 'taxiway')
             ) AS data",
         "type": "postgis"
@@ -145,12 +145,12 @@
       "Datasource": {
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "way",
+        "geometry_field": "rotated_way",
         "id": "tunnel",
         "srs": null,
         "table":
             "(
-                SELECT way, COALESCE(highway, railway) AS type, 0 AS bridge, access, render, layer, tracktype, trail_visibility, 1 as tunnel,
+                SELECT rotated_way, COALESCE(highway, railway) AS type, 0 AS bridge, access, render, layer, tracktype, trail_visibility, 1 as tunnel,
                     CASE
                         WHEN highway IN ('motorway', 'trunk') THEN 'motorway'
                         WHEN highway IN ('primary', 'secondary') THEN 'mainroad'
@@ -160,13 +160,13 @@
                         WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'
                         ELSE 'other' END AS stylegroup
                     FROM (
-                        SELECT *, '1_outline' AS render FROM planet_osm_line
+                        SELECT *, '1_outline' AS render FROM planet_osm_line_semoy
                         WHERE tunnel NOT IN ('', '0', 'no')
                         UNION ALL
-                        SELECT *, '2_line' AS render FROM planet_osm_line
+                        SELECT *, '2_line' AS render FROM planet_osm_line_semoy
                         WHERE tunnel NOT IN ('', '0', 'no')
                         UNION ALL
-                        SELECT *, '3_inline' AS render FROM planet_osm_line
+                        SELECT *, '3_inline' AS render FROM planet_osm_line_semoy
                         WHERE tunnel NOT IN ('', '0', 'no')
                     ) AS tunnels
                     ORDER BY layer ASC, render ASC
@@ -183,10 +183,10 @@
       "Datasource": {
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "way",
+        "geometry_field": "rotated_way",
         "table":
             "(
-                SELECT way, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, tracktype, trail_visibility, access, 'fill' AS render,
+                SELECT rotated_way, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, tracktype, trail_visibility, access, 'fill' AS render,
                     CASE
                         WHEN highway IN ('motorway', 'trunk') THEN 'motorway'
                         WHEN highway IN ('primary', 'secondary') THEN 'mainroad'
@@ -195,7 +195,7 @@
                         WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'
                         WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'
                         ELSE 'other' END AS stylegroup
-                    FROM planet_osm_line
+                    FROM planet_osm_line_semoy
                     WHERE (highway IS NOT NULL OR railway IS NOT NULL)
                         AND (tunnel IS NULL OR tunnel = 'no')
                         AND (bridge IS NULL OR bridge = 'no')
@@ -214,12 +214,12 @@
       "Datasource": {
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "way",
+        "geometry_field": "rotated_way",
         "id": "bridge",
         "srs": null,
         "table":
             "(
-                SELECT way, COALESCE(highway, railway) AS type, 1 AS bridge, access, render, layer, tracktype, trail_visibility, 0 as tunnel,
+                SELECT rotated_way, COALESCE(highway, railway) AS type, 1 AS bridge, access, render, layer, tracktype, trail_visibility, 0 as tunnel,
                     CASE
                         WHEN highway IN ('motorway', 'trunk') THEN 'motorway'
                         WHEN highway IN ('primary', 'secondary') THEN 'mainroad'
@@ -229,13 +229,13 @@
                         WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'
                         ELSE 'other' END AS stylegroup
                     FROM (
-                        SELECT *, '1_outline' AS render FROM planet_osm_line
+                        SELECT *, '1_outline' AS render FROM planet_osm_line_semoy
                         WHERE bridge NOT IN ('', '0', 'no')
                         UNION ALL
-                        SELECT *, '2_line' AS render FROM planet_osm_line
+                        SELECT *, '2_line' AS render FROM planet_osm_line_semoy
                         WHERE bridge NOT IN ('', '0', 'no')
                         UNION ALL
-                        SELECT *, '3_inline' AS render FROM planet_osm_line
+                        SELECT *, '3_inline' AS render FROM planet_osm_line_semoy
                         WHERE bridge NOT IN ('', '0', 'no')
                     ) AS bridges
                 ORDER BY layer ASC, render ASC
@@ -253,13 +253,13 @@
       "Datasource": {
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "way",
+        "geometry_field": "rotated_way",
         "id": "bridge_symbol",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table":
             "(
-                SELECT way, highway, CAST(90+degrees(ST_Azimuth(ST_StartPoint(planet_osm_line.way), ST_EndPoint(planet_osm_line.way))) AS VARCHAR(255)) AS orientation
-                FROM planet_osm_line WHERE bridge NOT IN ('', '0', 'no')
+                SELECT rotated_way, highway, CAST(90+degrees(ST_Azimuth(ST_StartPoint(planet_osm_line_semoy.rotated_way), ST_EndPoint(planet_osm_line_semoy.rotated_way))) AS VARCHAR(255)) AS orientation
+                FROM planet_osm_line_semoy WHERE bridge NOT IN ('', '0', 'no')
                 AND highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway')
             ) AS data",
         "type": "postgis"
@@ -275,13 +275,13 @@
       "Datasource": {
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "way",
+        "geometry_field": "rotated_way",
         "id": "cemetery",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table":
             "(
-                SELECT way, way_area AS area, COALESCE(landuse, amenity) AS type
-                FROM planet_osm_polygon
+                SELECT rotated_way, way_area AS area, COALESCE(landuse, amenity) AS type
+                FROM planet_osm_polygon_semoy
                 WHERE landuse = 'cemetery' OR amenity= 'grave_yard'
                 ORDER BY way_area DESC
             ) AS data",
@@ -298,13 +298,13 @@
       "Datasource": {
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "way",
+        "geometry_field": "rotated_way",
         "table":
             "(
-                SELECT way, \"building\" AS type
-                FROM planet_osm_polygon
+                SELECT rotated_way, \"building\" AS type
+                FROM planet_osm_polygon_semoy
                 WHERE building NOT IN ('', '0','false', 'no', 'church','chapel')
-                ORDER BY ST_YMin(ST_Envelope(way)) DESC
+                ORDER BY ST_YMin(ST_Envelope(rotated_way)) DESC
             ) AS data",
         "type": "postgis"
       },
@@ -318,18 +318,18 @@
       "Datasource": {
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "way",
+        "geometry_field": "rotated_way",
         "table":
             "(
-                SELECT way, building, name, area,
+                SELECT rotated_way, building, name, area,
                     CAST(degrees(
                         CASE
-                            WHEN ST_Distance(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 1), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2)) > ST_Distance(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 3))
-                                THEN ST_Azimuth(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 1), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2))
-                            ELSE ST_Azimuth(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 3))
+                            WHEN ST_Distance(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.rotated_way)), 1), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.rotated_way)), 2)) > ST_Distance(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.rotated_way)), 2), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.rotated_way)), 3))
+                                THEN ST_Azimuth(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.rotated_way)), 1), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.rotated_way)), 2))
+                            ELSE ST_Azimuth(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.rotated_way)), 2), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.rotated_way)), 3))
                         END
                     ) AS VARCHAR(255)) AS orientation
-                FROM planet_osm_polygon AS l
+                FROM planet_osm_polygon_semoy AS l
                 WHERE \"building\" IN ('church','chapel')
             ) AS data",
         "type": "postgis"
@@ -345,13 +345,13 @@
       "Datasource": {
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "way",
+        "geometry_field": "rotated_way",
         "id": "linear_features",
         "srs": null,
         "table":
             "(
-                SELECT way, COALESCE(man_made, barrier, power, \"natural\") AS type
-                FROM planet_osm_line
+                SELECT rotated_way, COALESCE(man_made, barrier, power, \"natural\") AS type
+                FROM planet_osm_line_semoy
             ) AS data",
         "type": "postgis"
       },
@@ -366,16 +366,16 @@
       "Datasource": {
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "way",
+        "geometry_field": "rotated_way",
         "id": "point_features",
         "srs": null,
         "table":
             "(
-                SELECT way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", bus, ford, name, replace(name, 'Château', 'Chau') as short_name
-                FROM planet_osm_point
+                SELECT rotated_way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", bus, ford, name, replace(name, 'Château', 'Chau') as short_name
+                FROM planet_osm_point_semoy
                 UNION
-                SELECT ST_Centroid(way) AS way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", NULL AS bus, NULL AS ford, name, replace(name, 'Château', 'Chau') as short_name
-                FROM planet_osm_polygon
+                SELECT ST_Centroid(rotated_way) AS rotated_way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", NULL AS bus, NULL AS ford, name, replace(name, 'Château', 'Chau') as short_name
+                FROM planet_osm_polygon_semoy
                 WHERE historic IS NOT NULL
             ) AS data",
         "type": "postgis"
@@ -392,27 +392,27 @@
       "Datasource": {
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "way",
+        "geometry_field": "rotated_way",
         "id": "pitch",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table":
             "(
-                SELECT way, sport,
+                SELECT rotated_way, sport,
                     CASE
-                        WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,100))) >= 5) THEN
-                            (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3)))
-                            THEN CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3))) AS VARCHAR(255))
-                            ELSE CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2))) AS VARCHAR(255))
+                        WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.rotated_way,100))) >= 5) THEN
+                            (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.rotated_way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.rotated_way,100))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.rotated_way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.rotated_way,100))),3)))
+                            THEN CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.rotated_way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.rotated_way,100))),3))) AS VARCHAR(255))
+                            ELSE CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.rotated_way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.rotated_way,100))),2))) AS VARCHAR(255))
                             END)
                         END AS orientation,
                     CASE
-                        WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,100))) >= 5) THEN
-                            (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3)))
-                            THEN CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) AS INTEGER)
-                            ELSE CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3)) AS INTEGER)
+                        WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.rotated_way,100))) >= 5) THEN
+                            (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.rotated_way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.rotated_way,100))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.rotated_way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.rotated_way,100))),3)))
+                            THEN CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.rotated_way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.rotated_way,100))),2)) AS INTEGER)
+                            ELSE CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.rotated_way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.rotated_way,100))),3)) AS INTEGER)
                             END)
                         END AS length
-                FROM planet_osm_polygon AS l
+                FROM planet_osm_polygon_semoy AS l
                 WHERE leisure = 'pitch' and sport IN ('soccer', 'tennis')
             ) AS data",
         "type": "postgis"
@@ -428,13 +428,13 @@
       "Datasource": {
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "way",
+        "geometry_field": "rotated_way",
         "id": "place",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table":
             "(
-                SELECT way, place AS type, name, z_order, population
-                FROM planet_osm_point
+                SELECT rotated_way, place AS type, name, z_order, population
+                FROM planet_osm_point_semoy
                 WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality', 'isolated_dwelling')
                 ORDER BY population DESC NULLS LAST
             ) AS data",
@@ -451,23 +451,23 @@
       "Datasource": {
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "way",
+        "geometry_field": "rotated_way",
         "id": "landuse_label",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table":
             "(
-                SELECT COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type, replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name, way_area AS area, ST_PointOnSurface(way) AS way
-                FROM planet_osm_polygon
+                SELECT COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type, replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name, way_area AS area, ST_PointOnSurface(rotated_way) AS rotated_way
+                FROM planet_osm_polygon_semoy
                 WHERE name IS NOT NULL
-                    AND way && !bbox!
-                    AND ST_IsValid(way)
+                    AND rotated_way && !bbox!
+                    AND ST_IsValid(rotated_way)
                 UNION ALL
-                SELECT 'building' AS type, replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name, way_area AS area, ST_PointOnSurface(way) AS way
-                FROM planet_osm_polygon
+                SELECT 'building' AS type, replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name, way_area AS area, ST_PointOnSurface(rotated_way) AS rotated_way
+                FROM planet_osm_polygon_semoy
                 WHERE name IS NOT NULL
                     AND building NOT IN ('', 'no', '0', 'false')
-                    AND way && !bbox!
-                    AND ST_IsValid(way)
+                    AND rotated_way && !bbox!
+                    AND ST_IsValid(rotated_way)
                 ORDER BY area DESC
             ) AS data",
         "type": "postgis"
@@ -483,20 +483,20 @@
       "Datasource": {
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "way",
+        "geometry_field": "rotated_way",
         "id": "waterway_label",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table":
             "(
-                SELECT way, waterway AS type, replace(name, 'Ruisseau', 'Rᵃᵘ') AS name
-                FROM planet_osm_line
+                SELECT rotated_way, waterway AS type, replace(name, 'Ruisseau', 'Rᵃᵘ') AS name
+                FROM planet_osm_line_semoy
                 WHERE waterway IN ('canal', 'river', 'stream') AND name IS NOT NULL
                 UNION ALL
                 SELECT
-                    ST_LineMerge(ST_ApproximateMedialAxis(ST_SimplifyPreserveTopology(way, 50))) AS way,
+                    ST_LineMerge(ST_ApproximateMedialAxis(ST_SimplifyPreserveTopology(rotated_way, 50))) AS rotated_way,
                     water AS type,
                     replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name
-                FROM planet_osm_polygon
+                FROM planet_osm_polygon_semoy
                 WHERE water IN ('pond', 'lake', 'basin', 'reservoir') AND name IS NOT NULL AND way_area > 10000
             ) AS data",
         "type": "postgis"
@@ -513,11 +513,11 @@
       "Datasource": {
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "way",
+        "geometry_field": "rotated_way",
         "table":
             "(
-                SELECT way, railway AS type, name, z_order
-                FROM planet_osm_point
+                SELECT rotated_way, railway AS type, name, z_order
+                FROM planet_osm_point_semoy
                 WHERE railway IN ('station', 'level_crossing')
                 ORDER BY z_order NULLS LAST
             ) AS DATA",
