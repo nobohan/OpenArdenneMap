@@ -14,7 +14,7 @@ LATITUDE = 50 # in degrees
 MAPNIK_FILE = 'osm2pgsql/OpenArdenneMap.xml'
 
 
-def make_map(map_output, scale=20000, x_center=622000, y_center=6406000):
+def make_map(map_output, scale=42000, x_center=587488, y_center=6406205):
     "Make a map as a function of the scale"
 
     # Compute the scale
@@ -36,6 +36,55 @@ def make_map(map_output, scale=20000, x_center=622000, y_center=6406000):
     xmax = x_center + delta_x/2
     ymin = y_center - delta_y/2
     ymax = y_center + delta_y/2
+    
+    print(delta_x)
+    
+    
+    bbox = (Envelope(xmin, ymin, xmax, ymax))
+    m.zoom_to_box(bbox)
+    print("Scale = " + str(m.scale()))
+
+    render_to_file(m, map_output)
+
+def make_map_bbox(map_output, xmin, ymin, xmax, ymax, scale=3000):
+    "Make map as a function of a bbox, for a defined scale"
+
+    # Compute the scale
+    delta_x = xmax-xmin
+    delta_y = ymax-ymin
+    ratio = delta_x/float(delta_y)
+
+    f = delta_x / (0.295*scale/math.cos(LATITUDE*2*math.pi/360))
+    map_x = int(f*4600)  # 4600 is the number of pixels for an A4 length
+
+    map_y = int(map_x/ratio)
+    m = Map(map_x, map_y)
+    load_map(m, MAPNIK_FILE)
+
+    print('Extent = ' + str(xmin) + ', ' + str(ymin) + ', ' + str(xmax) + ', ' + str(ymax))
+
+    bbox = (Envelope(xmin, ymin, xmax, ymax))
+    m.zoom_to_box(bbox)
+    print('Scale = ' + str(m.scale()))
+
+    render_to_file(m, map_output)
+
+def make_map_paper(map_output, width, height, scale=42000, x_center=587488, y_center=6406205):
+    "Make map as a function of a paper dimension (width and height), for a given scale and geographic center"
+
+    map_y = int(height * 4600/0.295) # 4600 px for a A4 length
+    map_x = int(width * 4600/0.295)
+
+    m = Map(map_x, map_y)
+    load_map(m, MAPNIK_FILE)
+
+    # Bounding box (expressed in EPSG:3857, meters)
+    delta_x = width * scale / math.cos(LATITUDE*2*math.pi/360)
+    delta_y = height * scale / math.cos(LATITUDE*2*math.pi/360)
+    xmin = x_center - delta_x/2
+    xmax = x_center + delta_x/2
+    ymin = y_center - delta_y/2
+    ymax = y_center + delta_y/2
 
     bbox = (Envelope(xmin, ymin, xmax, ymax))
     m.zoom_to_box(bbox)
@@ -43,13 +92,5 @@ def make_map(map_output, scale=20000, x_center=622000, y_center=6406000):
 
     render_to_file(m, map_output)
 
-# make_map('OAM_10000.pdf', 10000, 614244,6406084)
-# make_map('OAM_20000.pdf', 20000, 614244,6406084)
-make_map('OAM_semoy.pdf', 42000, 587488, 6406205)
-
-#
-# for zoom in range(18, 10, -1):
-#     print(zoom)
-#     scale = math.exp((zoom-30.2877123795495)/-1.44269504088896)
-#     print(scale)
-#     make_map('OAM_zoom{}.png'.format(zoom), scale, 614244, 6406084)
+make_map('OAM_semoy_test.pdf')
+make_map_paper('OAM_semoy.pdf', 0.8, 2)
