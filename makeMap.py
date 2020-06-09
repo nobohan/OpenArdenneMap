@@ -93,4 +93,4 @@ def make_map_paper(map_output, width, height, scale=42000, x_center=587488, y_ce
     render_to_file(m, map_output)
 
 make_map('OAM_semoy_test.pdf')
-#make_map_paper('OAM_semoy.pdf', 0.8, 2)
+make_map_paper('OAM_semoy.pdf', 0.8, 2)

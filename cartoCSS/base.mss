@@ -14,7 +14,8 @@ Map { background-color: @background; }
 /* ================================================================== */
 
 #hillshade  {
-    raster-opacity: 0.6;
+    raster-opacity: 1;
+    raster-comp-op: grain-merge;
 }
 
 /* ================================================================== */
