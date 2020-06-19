@@ -9,6 +9,16 @@
 Map { background-color: @background; }
 
 /* ================================================================== */
+/* HILLSHADE
+/* ================================================================== */
+
+#hillshade {
+    raster-scaling: bilinear;
+    /*raster-comp-op: grain-merge;*/
+    raster-opacity: 0.7;
+}
+
+/* ================================================================== */
 /* CONTOUR
 /* ================================================================== */
 
@@ -33,7 +43,6 @@ Map { background-color: @background; }
         [zoom >= 20] { line-width: @contour_major_line_width*@z20_contour; }
     }
 }
-
 
 /* ================================================================== */
 /* LANDUSE & LANDCOVER
