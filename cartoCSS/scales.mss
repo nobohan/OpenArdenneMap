@@ -16,17 +16,17 @@
 @z20: 16;
 
 /* scale factor double until z16 and then gently increases */
-@z10_contour: 0.015625;
-@z11_contour: 0.03125;
+@z10_contour: 0.0625;
+@z11_contour: 0.0625;
 @z12_contour: 0.0625;
-@z13_contour: 0.125;
-@z14_contour: 0.25;
-@z15_contour: 0.5;
-@z16_contour: 1; /* scale = 1/20000 */
-@z17_contour: 1.5;
-@z18_contour: 2;
-@z19_contour: 2.5;
-@z20_contour: 3;
+@z13_contour: 0.0625;
+@z14_contour: 0.125;
+@z15_contour: 0.25;
+@z16_contour: 0.5; /* scale = 1/20000 */
+@z17_contour: 1;
+@z18_contour: 1.5;
+@z19_contour: 2;
+@z20_contour: 2;
 
 @z10_road: 0.2;
 @z11_road: 0.3;
