@@ -15,7 +15,7 @@ Map { background-color: @background; }
 
 #hillshade  {
     raster-scaling: bilinear;
-    raster-comp-op: grain-merge;
+    raster-comp-op: multiply;
     raster-opacity: 0.6;
 }
 

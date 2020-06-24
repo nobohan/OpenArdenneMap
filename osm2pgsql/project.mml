@@ -39,7 +39,7 @@
     },
     {
       "Datasource": {
-        "file": "../../../Semoy/data/hillshade_semoy_srtm_be_3857_rotated_qgis.tif",
+        "file": "../../../Semoy/data/hillshade_semoy_fused_3857_semi_transparent_rotated_qgis.tif",
         "type": "gdal"
       },
       "geometry": "raster",
