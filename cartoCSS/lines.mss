@@ -394,6 +394,18 @@
               [zoom >= 20] { line-width: @small*@z20_road; line-dasharray: 32, 16;}
           }
       }
+      [zoom >= 16] {
+          [zoom = 16] { text-size: @text_size_s*@z16_label; }
+          [zoom = 17] { text-size: @text_size_s*@z17_label; }
+          [zoom = 18] { text-size: @text_size_s*@z18_label; }
+          [zoom = 19] { text-size: @text_size_s*@z19_label; }
+          [zoom >= 20] { text-size: @text_size_s*@z20_label; }
+          text-name: '[name]';
+          text-face-name: @sans;
+          text-placement: line;
+          text-dy: -8;
+          text-fill: @other_text;
+      }
   }
 }
 
