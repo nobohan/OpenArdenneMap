@@ -39,7 +39,7 @@
     },
     {
       "Datasource": {
-        "file": "../../../Semoy/data/hillshade_semoy_fused_3857_semi_transparent_rotated_qgis.tif",
+        "file": "../../../Semoy/data_thirdway/hillshade_dem_semoy_3857_rotated_warp_semi_transparent_gimped.tif",
         "type": "gdal"
       },
       "geometry": "raster",
@@ -66,7 +66,7 @@
       "name": "boundaries",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "on"
+      "status": "off"
     },
     {
       "Datasource": {
@@ -75,7 +75,7 @@
         "geometry_field": "rotated_way",
         "table":
             "(
-                SELECT rotated_way, waterway AS type
+                SELECT rotated_way, name, waterway AS type
                 FROM planet_osm_line_semoy
                 WHERE waterway IN ('river', 'canal', 'stream', 'ditch', 'drain')
             ) AS data",
@@ -96,9 +96,9 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table":
             "(
-                SELECT rotated_way, way_area AS area
+                SELECT rotated_way, name, way_area AS area
                 FROM planet_osm_polygon_semoy
-                WHERE \"natural\" IN ('water', 'pond') OR landuse IN ('reservoir') OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream')
+                WHERE \"natural\" IN ('water', 'pond') OR landuse IN ('reservoir') OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'stream')
             ) AS data",
         "type": "postgis"
       },

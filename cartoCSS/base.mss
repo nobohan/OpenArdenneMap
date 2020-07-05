@@ -279,6 +279,9 @@ Map { background-color: @background; }
 
 #water {
     polygon-fill: @water;
+    [name='La Semois'], [name='La Semoy'] {
+        polygon-fill: #9e91ff;
+    }
     line-color: @darkblue;
 }
 
@@ -301,8 +304,10 @@ Map { background-color: @background; }
         [zoom = 18] { line-width: @river_line_width*@z18; }
         [zoom = 19] { line-width: @river_line_width*@z19; }
         [zoom >= 20] { line-width: @river_line_width*@z20; }
-        line-cap: round;
-        line-join: round;
+        [name='La Semois'], [name='La Semoy'] {
+            line-color: #9e91ff;
+            line-width: @river_line_width*2;
+        }
     }
     [type='stream'], [type='canal'] {
         [zoom >= 14] {
@@ -347,6 +352,10 @@ Map { background-color: @background; }
         [zoom = 19] { line-width: @river_line_width*@z19 * 0.7; }
         [zoom >= 20] { line-width: @river_line_width*@z20 * 0.7; }
         line-color: @water;
+        [name='La Semois'], [name='La Semoy'] {
+            line-width: @river_line_width*1.8;
+            line-color: #9489ed;
+        }
     }
     [type='stream'], [type='canal'] {
         [zoom >= 18] {
@@ -354,6 +363,15 @@ Map { background-color: @background; }
             [zoom = 19] { line-width: @stream_line_width*@z19 * 0.7; }
             [zoom >= 20] { line-width: @stream_line_width*@z20 * 0.7; }
             line-color: @water;
+        }
+    }
+}
+
+#waterway::ultratop {
+    [type='river'] {
+        [name='La Semois'], [name='La Semoy'] {
+            line-color: #aea3ff;
+            line-width: @river_line_width*1.4;
         }
     }
 }
