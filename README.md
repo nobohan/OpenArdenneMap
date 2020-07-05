@@ -484,6 +484,7 @@ or
   * caillebotis
   * fagnes spéciales...
   * chemins nommés (ex Chemin des Princes)
+  * forest labels
 
 
 * rotated culvert symbols
