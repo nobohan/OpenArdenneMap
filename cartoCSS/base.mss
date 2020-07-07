@@ -305,7 +305,7 @@ Map { background-color: @background; }
         [zoom = 19] { line-width: @river_line_width*@z19; }
         [zoom >= 20] { line-width: @river_line_width*@z20; }
         [name='La Semois'], [name='La Semoy'] {
-            line-color: #9e91ff;
+            line-color: #1f00db;
             line-width: @river_line_width*2;
         }
     }
@@ -353,8 +353,8 @@ Map { background-color: @background; }
         [zoom >= 20] { line-width: @river_line_width*@z20 * 0.7; }
         line-color: @water;
         [name='La Semois'], [name='La Semoy'] {
-            line-width: @river_line_width*1.8;
-            line-color: #9489ed;
+            line-width: @river_line_width*1.2;
+            line-color: #5b5bff;
         }
     }
     [type='stream'], [type='canal'] {
@@ -370,8 +370,8 @@ Map { background-color: @background; }
 #waterway::ultratop {
     [type='river'] {
         [name='La Semois'], [name='La Semoy'] {
-            line-color: #aea3ff;
-            line-width: @river_line_width*1.4;
+            line-color: #9e9eff;
+            line-width: @river_line_width*0.5;
         }
     }
 }

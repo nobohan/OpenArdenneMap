@@ -55,10 +55,10 @@
 
 @z10_label: 0.2;
 @z11_label: 0.25;
-@z12_label: 0.3;
-@z13_label: 0.4;
-@z14_label: 0.55;
-@z15_label: 0.7;
+@z12_label: 0.4;
+@z13_label: 0.6;
+@z14_label: 0.7;
+@z15_label: 0.85;
 @z16_label: 1; /* scale = 1/20000 */
 @z17_label: 1.4;
 @z18_label: 2;
