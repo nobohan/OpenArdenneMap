@@ -98,7 +98,7 @@
             "(
                 SELECT rotated_way, name, way_area AS area
                 FROM planet_osm_polygon_semoy
-                WHERE \"natural\" IN ('water', 'pond') OR landuse IN ('reservoir') OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'stream')
+                WHERE (\"natural\" IN ('water', 'pond') and name NOT IN ('Semois')) OR landuse IN ('reservoir') OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'stream')
             ) AS data",
         "type": "postgis"
       },
@@ -323,6 +323,26 @@
       "geometry": "polygon",
       "id": "buildings",
       "name": "buildings",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "rotated_way",
+        "table":
+            "(
+                SELECT rotated_way
+                FROM bati_picc_rotated
+                WHERE ST_Area(rotated_way) > 15
+                ORDER BY ST_YMin(ST_Envelope(rotated_way)) DESC
+            ) AS data",
+        "type": "postgis"
+      },
+      "geometry": "polygon",
+      "id": "buildings-picc",
+      "name": "buildings-picc",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913"
     },

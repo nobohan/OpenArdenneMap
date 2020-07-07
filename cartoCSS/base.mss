@@ -224,7 +224,7 @@ Map { background-color: @background; }
 
 
 /* ---- BUILDINGS ---- */
-#buildings {
+#buildings, #buildings-picc {
     [zoom >= 12] {
         [zoom = 12] { line-width: @building_line_width*@z12; }
         [zoom = 13] { line-width: @building_line_width*@z13; }
