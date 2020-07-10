@@ -39,7 +39,7 @@
     },
     {
       "Datasource": {
-        "file": "../../../Semoy/data_thirdway/hillshade_dem_semoy_3857_rotated_warp_semi_transparent_gimped.tif",
+        "file": "../../../Semoy/data_thirdway/hillshade_dem_semoy_3857_rotated_warp_semi_transparent.tif",
         "type": "gdal"
       },
       "geometry": "raster",
