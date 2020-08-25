@@ -141,7 +141,7 @@
             text-halo-fill: @other_halo;
             text-halo-radius: 1;
             text-dx: 12;
-            text-allow-overlap: true;
+            text-allow-overlap: false;
         }
     }
     [historic = 'castle'] {

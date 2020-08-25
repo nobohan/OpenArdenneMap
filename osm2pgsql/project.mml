@@ -39,7 +39,7 @@
     },
     {
       "Datasource": {
-        "file": "../../../Semoy/data_thirdway/hillshade_dem_semoy_3857_rotated_warp_semi_transparent.tif",
+        "file": "../../../Semoy/data_thirdway/hillshade_dem_semoy_3857_rotated_warp_semi_transparent_gimp.tif",
         "type": "gdal"
       },
       "geometry": "raster",
@@ -98,7 +98,7 @@
             "(
                 SELECT rotated_way, name, way_area AS area
                 FROM planet_osm_polygon_semoy
-                WHERE (\"natural\" IN ('water', 'pond') and name NOT IN ('Semois')) OR landuse IN ('reservoir') OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'stream')
+                WHERE (\"natural\" IN ('water', 'pond') AND name NOT IN ('Semois', 'Semoy')) OR landuse IN ('reservoir') OR (waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'stream', 'riverbank') AND name NOT IN ('Semois', 'Semoy'))
             ) AS data",
         "type": "postgis"
       },
