@@ -94,6 +94,5 @@ def make_map_paper(map_output, width, height, scale=42000, x_center=587488, y_ce
 
 make_map('OAM_semoy_test.pdf')
 #make_map_paper('OAM_semoy.tif', 0.8, 2)
-make_map_paper('OAM_semoy.svg', 0.8, 2)
-#make_map_paper('OAM_semoy_70X200.tif', 0.7, 2)
+make_map_paper('OAM_semoy_70X200.tif', 0.7, 2)
 #make_map_paper('OAM_semoy.pdf', 0.8, 2)
