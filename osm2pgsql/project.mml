@@ -98,8 +98,13 @@
             "(
                 SELECT rotated_way, name, way_area AS area
                 FROM planet_osm_polygon_semoy
-                WHERE (\"natural\" IN ('water', 'pond') AND name NOT IN ('Semois', 'Semoy')) OR landuse IN ('reservoir') OR (waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'stream', 'riverbank') AND name NOT IN ('Semois', 'Semoy'))
-            ) AS data",
+                WHERE
+                    CASE WHEN name IS NOT NULL THEN 
+	                  (\"natural\" IN ('water', 'pond') AND name NOT IN ('Semois', 'Semoy', 'NULL')) OR landuse IN ('reservoir') OR (waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'stream', 'riverbank') AND name NOT IN ('Semois', 'Semoy'))
+                    ELSE
+                    \"natural\" IN ('water', 'pond') OR landuse IN ('reservoir') OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'stream', 'riverbank')
+                    END
+              ) AS data",
         "type": "postgis"
       },
       "geometry": "polygon",
