@@ -498,7 +498,7 @@
 
 /* ---- Bridge symbol layer -------------------------------- */
 #bridge_symbol {
-    [length < 50] {
+    [length < 100] {
         [zoom >= 14] {
             [zoom = 14] { marker-height: @bridge_marker*@z14_road; }
             [zoom = 15] { marker-height: @bridge_marker*@z15_road; }
@@ -511,29 +511,45 @@
             marker-transform: rotate([orientation]);
         }
     }
-    text-name: '[length]';
-    text-face-name: @sans;
 }
 
 #bridge_symbol::bottom {
-    [length >= 50] {
-          line-width: 20;
-          line-color: @black;
+    [length >= 100] {
+        [zoom < 14] { line-width: 0; }
+        [zoom = 14] { line-width: (@medium + @outline)*@z14_road; }
+        [zoom = 15] { line-width: (@medium + @outline)*@z15_road; }
+        [zoom = 16] { line-width: (@medium + @outline)*@z16_road; }
+        [zoom = 17] { line-width: (@medium + @outline)*@z17_road; }
+        [zoom = 18] { line-width: (@medium + @outline)*@z18_road; }
+        [zoom = 19] { line-width: (@medium + @outline)*@z19_road; }
+        [zoom >= 20] { line-width: (@medium + @outline)*@z20_road; }
+        line-color: @black;
     }
 }
 
 #bridge_symbol::middle {
-    [length >= 50] {
-          line-width: 15;
-          line-color: @white;
+    [length >= 100] {
+        [zoom < 14] { line-width: 0; }
+        [zoom = 14] { line-width: (@medium)*@z14_road; }
+        [zoom = 15] { line-width: (@medium)*@z15_road; }
+        [zoom = 16] { line-width: (@medium)*@z16_road; }
+        [zoom = 17] { line-width: (@medium)*@z17_road; }
+        [zoom = 18] { line-width: (@medium)*@z18_road; }
+        [zoom = 19] { line-width: (@medium)*@z19_road; }
+        [zoom >= 20] { line-width: (@medium)*@z20_road; }
+        line-color: @white;
     }
 }
 
 #bridge_symbol::top {
-    [length >= 50] {
-          line-width: 4;
-          line-color: @black;
-          line-dasharray: 8, 8;
+    [length >= 100] {
+        line-width: @tiny;
+        line-color: @black;
+        line-dasharray: 8, 8;
+        [zoom = 17] { line-width: @tiny*@z17_road; line-dasharray: 16, 16;}
+        [zoom = 18] { line-width: @tiny*@z18_road; line-dasharray: 32, 32;}
+        [zoom = 19] { line-width: @tiny*@z19_road; line-dasharray: 64, 64;}
+        [zoom >= 20] { line-width: @tiny*@z20_road; line-dasharray: 64, 64;}
     }
 }
 
