@@ -481,9 +481,9 @@ or
   * départ de promenade, guide post
   * oeuvre d'art
   * piscine
-  * caillebotis
+  * caillebotis: voir couche bridge_symbol if length > X
   * fagnes spéciales...
-  * chemins nommés (ex Chemin des Princes)
+  * chemins nommés (ex Chemin des Princes): ok
 
 
 * rotated culvert symbols

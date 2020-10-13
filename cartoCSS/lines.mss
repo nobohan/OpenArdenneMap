@@ -498,16 +498,42 @@
 
 /* ---- Bridge symbol layer -------------------------------- */
 #bridge_symbol {
-    [zoom >= 14] {
-        [zoom = 14] { marker-height: @bridge_marker*@z14_road; }
-        [zoom = 15] { marker-height: @bridge_marker*@z15_road; }
-        [zoom = 16] { marker-height: @bridge_marker*@z16_road; }
-        [zoom = 17] { marker-height: @bridge_marker*@z17_road; }
-        [zoom = 18] { marker-height: @bridge_marker*@z18_road; }
-        [zoom = 19] { marker-height: @bridge_marker*@z19_road; }
-        [zoom >= 20] { marker-height: @bridge_marker*@z20_road; }
-        marker-file: url(../img/bridge.svg);
-        marker-transform: rotate([orientation]);
+    [length < 50] {
+        [zoom >= 14] {
+            [zoom = 14] { marker-height: @bridge_marker*@z14_road; }
+            [zoom = 15] { marker-height: @bridge_marker*@z15_road; }
+            [zoom = 16] { marker-height: @bridge_marker*@z16_road; }
+            [zoom = 17] { marker-height: @bridge_marker*@z17_road; }
+            [zoom = 18] { marker-height: @bridge_marker*@z18_road; }
+            [zoom = 19] { marker-height: @bridge_marker*@z19_road; }
+            [zoom >= 20] { marker-height: @bridge_marker*@z20_road; }
+            marker-file: url(../img/bridge.svg);
+            marker-transform: rotate([orientation]);
+        }
+    }
+    text-name: '[length]';
+    text-face-name: @sans;
+}
+
+#bridge_symbol::bottom {
+    [length >= 50] {
+          line-width: 20;
+          line-color: @black;
+    }
+}
+
+#bridge_symbol::middle {
+    [length >= 50] {
+          line-width: 15;
+          line-color: @white;
+    }
+}
+
+#bridge_symbol::top {
+    [length >= 50] {
+          line-width: 4;
+          line-color: @black;
+          line-dasharray: 8, 8;
     }
 }
 
