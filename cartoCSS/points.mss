@@ -58,6 +58,18 @@
             }
         }
     }
+    [power = 'generator'], ['generator:source' = 'wind'] {
+        [zoom >= 14] {
+            [zoom = 14] { marker-height: @windmill_marker*@z14_marker; }
+            [zoom = 15] { marker-height: @windmill_marker*@z15_marker; }
+            [zoom = 16] { marker-height: @windmill_marker*@z16_marker; }
+            [zoom = 17] { marker-height: @windmill_marker*@z17_marker; }
+            [zoom = 18] { marker-height: @windmill_marker*@z18_marker; }
+            [zoom = 19] { marker-height: @windmill_marker*@z19_marker; }
+            [zoom >= 20] { marker-height: @windmill_marker*@z20_marker; }
+            marker-file: url(../img/windmill.svg);
+        }
+    }
     [amenity = 'fountain'] {
         [zoom >= 15] {
             [zoom = 15] { marker-height: @large*@z15_marker; text-size: @text_size_s*@z15_label; }

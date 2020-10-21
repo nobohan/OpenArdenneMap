@@ -386,10 +386,10 @@
         "srs": null,
         "table":
             "(
-                SELECT way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", bus, ford, name, replace(name, 'Château', 'Chau') as short_name
+                SELECT way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", \"generator:source\", bus, ford, name, replace(name, 'Château', 'Chau') as short_name
                 FROM planet_osm_point
                 UNION
-                SELECT ST_Centroid(way) AS way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", NULL AS bus, NULL AS ford, name, replace(name, 'Château', 'Chau') as short_name
+                SELECT ST_Centroid(way) AS way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", \"generator:source\", NULL AS bus, NULL AS ford, name, replace(name, 'Château', 'Chau') as short_name
                 FROM planet_osm_polygon
                 WHERE historic IS NOT NULL
             ) AS data",

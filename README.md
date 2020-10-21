@@ -481,7 +481,7 @@ or
   * départ de promenade, guide post
   * oeuvre d'art
   * piscine
-  * caillebotis: voir couche bridge_symbol if length > 100
+  * caillebotis: voir couche bridge_symbol if length > 100: ok
   * fagnes spéciales...
   * chemins nommés (ex Chemin des Princes): ok
 
