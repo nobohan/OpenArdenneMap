@@ -113,3 +113,4 @@
 
 @pitch_marker: 40;
 @windmill_marker: 32;
+@viewpoint_marker: 32;

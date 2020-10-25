@@ -205,6 +205,18 @@
             }
         }
     }
+    [tourism = 'viewpoint'] {
+        [zoom >= 14] {
+            [zoom = 14] { marker-height: @viewpoint_marker*@z14_marker; }
+            [zoom = 15] { marker-height: @viewpoint_marker*@z15_marker; }
+            [zoom = 16] { marker-height: @viewpoint_marker*@z16_marker; }
+            [zoom = 17] { marker-height: @viewpoint_marker*@z17_marker; }
+            [zoom = 18] { marker-height: @viewpoint_marker*@z18_marker; }
+            [zoom = 19] { marker-height: @viewpoint_marker*@z19_marker; }
+            [zoom >= 20] { marker-height: @viewpoint_marker*@z20_marker; }
+            marker-file: url(../img/viewpoint.svg);
+        }
+    }
 }
 
 
