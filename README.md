@@ -475,7 +475,7 @@ or
   * point of view
   * réservoir (man_made = water_works, water_well, pumping_station ...)
   * station d'epuration
-  * éolienne Eol.
+  * éolienne Eol. ok
   * Poste
   * police
   * départ de promenade, guide post

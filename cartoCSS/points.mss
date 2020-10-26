@@ -215,6 +215,7 @@
             [zoom = 19] { marker-height: @viewpoint_marker*@z19_marker; }
             [zoom >= 20] { marker-height: @viewpoint_marker*@z20_marker; }
             marker-file: url(../img/viewpoint.svg);
+            marker-transform: rotate([orientation]);
         }
     }
 }
