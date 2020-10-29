@@ -390,13 +390,18 @@
                     way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", \"generator:source\", bus, ford, name, 
                     replace(name, 'Château', 'Chau') as short_name,
                     CASE  
-                       WHEN direction = 'N' THEN 0
-                       WHEN direction = 'S' THEN 180
-                       WHEN direction = 'W' THEN 270
-                       WHEN direction = 'E' THEN 90
-                       ELSE REGEXP_REPLACE(COALESCE(direction::character varying, '0'), '[^0-9]*' ,'0')::integer
+                        WHEN direction = 'N-E' THEN 45
+                        WHEN direction = 'E' THEN 90
+                        WHEN direction = 'S-E' THEN 135
+                        WHEN direction = 'S' THEN 180
+                        WHEN direction = 'S-W' THEN 225
+                        WHEN direction = 'W' THEN 270
+                        WHEN direction = 'N-W' THEN 315
+                        WHEN direction ~ '-' THEN 0
+                        WHEN direction ~ '\\.' THEN 0
+                        WHEN direction ~ ';' THEN 0
+                        ELSE REGEXP_REPLACE(COALESCE(direction::character varying, '0'), '[^0-9]*' ,'0')::integer
                     END AS orientation
-
                 FROM planet_osm_point
                 UNION
                 SELECT 
