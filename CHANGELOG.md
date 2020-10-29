@@ -1,3 +1,15 @@
+## v0.4.0 summer2020
+
+### Description
+
+Some new map features and some enhancement
+
+### Changes
+- New map feature: modern windmill used for generating electricity ('power' = 'generator' and 'generator:source' = 'wind'] )
+- New map feature: touristic viewpoint ('tourism'='viewpoint') oriented according to the direction tag.
+- New line symboliser for highway=path and bridge=yes of a sufficient length, meaning to render "caillebotis". 
+- Add an optional layer for hillshading
+
 ## v0.3.0 scaling
 
 ### Description
