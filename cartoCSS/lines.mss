@@ -394,6 +394,18 @@
               [zoom >= 20] { line-width: @small*@z20_road; line-dasharray: 32, 16;}
           }
       }
+      [zoom >= 16] {
+          [zoom = 16] { text-size: @text_size_s*@z16_label; }
+          [zoom = 17] { text-size: @text_size_s*@z17_label; }
+          [zoom = 18] { text-size: @text_size_s*@z18_label; }
+          [zoom = 19] { text-size: @text_size_s*@z19_label; }
+          [zoom >= 20] { text-size: @text_size_s*@z20_label; }
+          text-name: '[name]';
+          text-face-name: @sans;
+          text-placement: line;
+          text-dy: -8;
+          text-fill: @other_text;
+      }
   }
 }
 
@@ -486,16 +498,58 @@
 
 /* ---- Bridge symbol layer -------------------------------- */
 #bridge_symbol {
-    [zoom >= 14] {
-        [zoom = 14] { marker-height: @bridge_marker*@z14_road; }
-        [zoom = 15] { marker-height: @bridge_marker*@z15_road; }
-        [zoom = 16] { marker-height: @bridge_marker*@z16_road; }
-        [zoom = 17] { marker-height: @bridge_marker*@z17_road; }
-        [zoom = 18] { marker-height: @bridge_marker*@z18_road; }
-        [zoom = 19] { marker-height: @bridge_marker*@z19_road; }
-        [zoom >= 20] { marker-height: @bridge_marker*@z20_road; }
-        marker-file: url(../img/bridge.svg);
-        marker-transform: rotate([orientation]);
+    [length < 100] {
+        [zoom >= 14] {
+            [zoom = 14] { marker-height: @bridge_marker*@z14_road; }
+            [zoom = 15] { marker-height: @bridge_marker*@z15_road; }
+            [zoom = 16] { marker-height: @bridge_marker*@z16_road; }
+            [zoom = 17] { marker-height: @bridge_marker*@z17_road; }
+            [zoom = 18] { marker-height: @bridge_marker*@z18_road; }
+            [zoom = 19] { marker-height: @bridge_marker*@z19_road; }
+            [zoom >= 20] { marker-height: @bridge_marker*@z20_road; }
+            marker-file: url(../img/bridge.svg);
+            marker-transform: rotate([orientation]);
+        }
+    }
+}
+
+#bridge_symbol::bottom {
+    [length >= 100] {
+        [zoom < 14] { line-width: 0; }
+        [zoom = 14] { line-width: (@medium + @outline)*@z14_road; }
+        [zoom = 15] { line-width: (@medium + @outline)*@z15_road; }
+        [zoom = 16] { line-width: (@medium + @outline)*@z16_road; }
+        [zoom = 17] { line-width: (@medium + @outline)*@z17_road; }
+        [zoom = 18] { line-width: (@medium + @outline)*@z18_road; }
+        [zoom = 19] { line-width: (@medium + @outline)*@z19_road; }
+        [zoom >= 20] { line-width: (@medium + @outline)*@z20_road; }
+        line-color: @black;
+    }
+}
+
+#bridge_symbol::middle {
+    [length >= 100] {
+        [zoom < 14] { line-width: 0; }
+        [zoom = 14] { line-width: (@medium)*@z14_road; }
+        [zoom = 15] { line-width: (@medium)*@z15_road; }
+        [zoom = 16] { line-width: (@medium)*@z16_road; }
+        [zoom = 17] { line-width: (@medium)*@z17_road; }
+        [zoom = 18] { line-width: (@medium)*@z18_road; }
+        [zoom = 19] { line-width: (@medium)*@z19_road; }
+        [zoom >= 20] { line-width: (@medium)*@z20_road; }
+        line-color: @white;
+    }
+}
+
+#bridge_symbol::top {
+    [length >= 100] {
+        line-width: @tiny;
+        line-color: @black;
+        line-dasharray: 8, 8;
+        [zoom = 17] { line-width: @tiny*@z17_road; line-dasharray: 16, 16;}
+        [zoom = 18] { line-width: @tiny*@z18_road; line-dasharray: 32, 32;}
+        [zoom = 19] { line-width: @tiny*@z19_road; line-dasharray: 64, 64;}
+        [zoom >= 20] { line-width: @tiny*@z20_road; line-dasharray: 64, 64;}
     }
 }
 

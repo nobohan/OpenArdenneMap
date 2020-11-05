@@ -475,15 +475,15 @@ or
   * point of view
   * réservoir (man_made = water_works, water_well, pumping_station ...)
   * station d'epuration
-  * éolienne Eol.
+  * éolienne Eol. ok
   * Poste
   * police
   * départ de promenade, guide post
   * oeuvre d'art
   * piscine
-  * caillebotis
+  * caillebotis: voir couche bridge_symbol if length > 100: ok
   * fagnes spéciales...
-  * chemins nommés (ex Chemin des Princes)
+  * chemins nommés (ex Chemin des Princes): ok
 
 
 * rotated culvert symbols

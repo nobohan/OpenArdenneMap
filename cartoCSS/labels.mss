@@ -139,13 +139,15 @@
         text-character-spacing: 5;
         text-wrap-width: 120;
         text-line-spacing: 2;
+        text-allow-overlap: true;
+        
         [zoom = 14] { text-size: @text_size_s*@z14_label; }
-        [zoom = 15] { text-size: @text_size_s*@z15_label; }
-        [zoom = 16] { text-size: @text_size_s*@z16_label; }
-        [zoom = 17] { text-size: @text_size_s*@z17_label; }
-        [zoom = 18] { text-size: @text_size_s*@z18_label; }
-        [zoom = 19] { text-size: @text_size_s*@z19_label; }
-        [zoom >= 20] { text-size: @text_size_s*@z20_label; }
+        [zoom = 15] { text-size: @text_size_s*@z15_label; text-dy: 10;}
+        [zoom = 16] { text-size: @text_size_s*@z16_label; text-dy: 20;}
+        [zoom = 17] { text-size: @text_size_s*@z17_label; text-dy: 40;}
+        [zoom = 18] { text-size: @text_size_s*@z18_label; text-dy: 50;}
+        [zoom = 19] { text-size: @text_size_s*@z19_label; text-dy: 60; }
+        [zoom >= 20] { text-size: @text_size_s*@z20_label; text-dy: 70;}
     }
 }
 
