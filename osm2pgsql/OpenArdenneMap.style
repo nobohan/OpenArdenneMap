@@ -110,7 +110,7 @@ node       ele          text         linear
 node,way   embankment   text         linear
 node,way   foot         text         linear
 node       ford         text         linear
-node,way   generator:source    text  linear
+node,way   generator:source text  linear
 node,way   harbour      text         polygon
 node,way   highway      text         linear
 node,way   historic     text         polygon
@@ -128,7 +128,9 @@ node,way   military     text         polygon
 node,way   motorcar     text         linear
 node,way   name         text         linear
 node,way   natural      text         polygon  # natural=coastline tags are discarded by a hard coded rule in osm2pgsql
+node,way   network      text         linear
 node,way   office       text         polygon
+way        osmc:symbol  text         linear
 node,way   oneway       text         linear
 node,way   operator     text         linear
 node,way   place        text         polygon
@@ -152,6 +154,7 @@ way        tracktype    text         linear
 way        trail_visibility text     linear
 node,way   trees        text         polygon
 node,way   tunnel       text         linear
+way        signed_direction text     linear
 node,way   water        text         polygon
 node,way   waterway     text         polygon
 node,way   wetland      text         polygon
