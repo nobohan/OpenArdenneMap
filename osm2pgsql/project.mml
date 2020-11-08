@@ -275,7 +275,7 @@
                     ST_Length(planet_osm_line.way) AS length,
                     CAST(90+degrees(ST_Azimuth(ST_StartPoint(planet_osm_line.way), ST_EndPoint(planet_osm_line.way))) AS VARCHAR(255)) AS orientation
                 FROM planet_osm_line WHERE bridge NOT IN ('', '0', 'no')
-                AND highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway')
+                AND highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway', 'boardwalk')
             ) AS data",
         "type": "postgis"
       },
