@@ -687,18 +687,24 @@
 #trails {
     line-color: @blue;
     [zoom <= 13] { line-width: 0 }
-    [zoom = 14] { line-width: @small*@z14; line-offset: @small*@z14;}
-    [zoom = 15] { line-width: @small*@z15; line-offset: @small*@z15;}
-    [zoom = 16] { line-width: @small*@z16; line-offset: @small*@z16;}
-    [zoom = 17] { line-width: @small*@z17; line-offset: @small*@z17;}
-    [zoom = 18] { line-width: @small*@z18; line-offset: @small*@z18;}
-    [zoom = 19] { line-width: @small*@z19; line-offset: @small*@z19;}
-    [zoom >= 20] { line-width: @small*@z20; line-offset: @small*@z20;}
+    [zoom = 14] { line-width: @small*@z14; line-offset: @small*@z14; text-size: @text_size_s*@z14_label;}
+    [zoom = 15] { line-width: @small*@z15; line-offset: @small*@z15; text-size: @text_size_s*@z15_label;}
+    [zoom = 16] { line-width: @small*@z16; line-offset: @small*@z16; text-size: @text_size_s*@z16_label;}
+    [zoom = 17] { line-width: @small*@z17; line-offset: @small*@z17; text-size: @text_size_s*@z17_label;}
+    [zoom = 18] { line-width: @small*@z18; line-offset: @small*@z18; text-size: @text_size_s*@z18_label;}
+    [zoom = 19] { line-width: @small*@z19; line-offset: @small*@z19; text-size: @text_size_s*@z19_label;}
+    [zoom >= 20] { line-width: @small*@z20; line-offset: @small*@z20; text-size: @text_size_s*@z20_label;}
     text-name: '[name]';
     text-face-name: @sans;
     text-placement: line;
     text-dy: -8;
     text-fill: @other_text;
+
+    shield-file: '[shield_uri]'; /* get color from osmc:symbol */
+    shield-size: 10;
+    shield-name: 'test'; /* get number of osmc:symbol */
+    shield-face-name: @sans;
+    shield-placement: line;
 }
 
 /******************************************************************* */
