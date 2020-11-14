@@ -701,7 +701,7 @@
     text-fill: @other_text;
 
     shield-file: '[shield_uri]'; /* get color from osmc:symbol */
-    shield-size: 10;
+    shield-size: 12; /* shield text size, not img size */
     shield-name: 'test'; /* get number of osmc:symbol */
     shield-face-name: @sans;
     shield-placement: line;
