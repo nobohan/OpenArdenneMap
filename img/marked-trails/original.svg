@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="350" height="200" version="1.1" id="svg8" sodipodi:docname="Belgium_walkingroutes_purplerectangle.svg" inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata id="metadata14">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs id="defs12"/>
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1526" inkscape:window-height="886" id="namedview10" showgrid="false" inkscape:zoom="2.0914286" inkscape:cx="172.26666" inkscape:cy="144.30035" inkscape:window-x="55" inkscape:window-y="27" inkscape:window-maximized="0" inkscape:current-layer="svg8"/>
+  <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+  <rect style="fill:#ffffff;stroke:#000000;stroke-width:2" x="0" y="0" width="350" height="200" id="svg_2"/>
+  <rect style="fill:#ad629b;stroke:#000000;stroke-width:0;stroke-dasharray:none;fill-opacity:1" id="svg_5" height="160" width="270" y="20" x="40.000004" stroke-linecap="null" stroke-linejoin="null"/>
+<script xmlns="">try {
+                        Object.defineProperty(screen, "availTop", { value: 0 });
+                    } catch (e) {}
+                    try {
+                        Object.defineProperty(screen, "availLeft", { value: 0 });
+                    } catch (e) {}
+                    try {
+                        Object.defineProperty(screen, "availWidth", { value: 1920 });
+                    } catch (e) {}
+                    try {
+                        Object.defineProperty(screen, "availHeight", { value: 1080 });
+                    } catch (e) {}
+                    try {
+                        Object.defineProperty(screen, "colorDepth", { value: 24 });
+                    } catch (e) {}
+                    try {
+                        Object.defineProperty(screen, "pixelDepth", { value: 24 });
+                    } catch (e) {}
+                    try {
+                        Object.defineProperty(navigator, "hardwareConcurrency", { value: 8 });
+                    } catch (e) {}
+                    try {
+                        Object.defineProperty(navigator, "appVersion", { value: "5.0 (X11)" });
+                    } catch (e) {}
+                    try {
+                        Object.defineProperty(navigator, "doNotTrack", { value: "unspecified" });
+                    } catch (e) {}
+                    
+            try {
+                window.screenY = 0
+            } catch (e) { }
+        
+            try {
+                window.screenTop = 0
+            } catch (e) { }
+        
+            try {
+                window.top.window.outerHeight = window.screen.height
+            } catch (e) { }
+        
+            try {
+                window.screenX = 0
+            } catch (e) { }
+        
+            try {
+                window.screenLeft = 0
+            } catch (e) { }
+        
+            try {
+                window.top.window.outerWidth = window.screen.width
+            } catch (e) { }
+        </script></svg>

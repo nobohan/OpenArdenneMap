@@ -700,9 +700,10 @@
     text-dy: -8;
     text-fill: @other_text;
 
-    shield-file: '[shield_uri]'; /* get color from osmc:symbol */
+    shield-file: url(../img/marked-trails/original.svg);
     shield-size: 12; /* shield text size, not img size */
-    shield-name: 'test'; /* get number of osmc:symbol */
+    shield-fill: @white;
+    shield-name: '[marked_text]'; /* get number of osmc:symbol */
     shield-face-name: @sans;
     shield-placement: line;
 }
