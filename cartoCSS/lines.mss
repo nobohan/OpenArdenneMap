@@ -685,27 +685,35 @@
 /* ================================================================== */
 
 #trails {
-    line-color: @blue;
+    line-color: darken(@green, 60%);
+    line-opacity: 0.7;
     [zoom <= 13] { line-width: 0 }
-    [zoom = 14] { line-width: @small*@z14; line-offset: @small*@z14; text-size: @text_size_s*@z14_label;}
-    [zoom = 15] { line-width: @small*@z15; line-offset: @small*@z15; text-size: @text_size_s*@z15_label;}
-    [zoom = 16] { line-width: @small*@z16; line-offset: @small*@z16; text-size: @text_size_s*@z16_label;}
-    [zoom = 17] { line-width: @small*@z17; line-offset: @small*@z17; text-size: @text_size_s*@z17_label;}
-    [zoom = 18] { line-width: @small*@z18; line-offset: @small*@z18; text-size: @text_size_s*@z18_label;}
-    [zoom = 19] { line-width: @small*@z19; line-offset: @small*@z19; text-size: @text_size_s*@z19_label;}
-    [zoom >= 20] { line-width: @small*@z20; line-offset: @small*@z20; text-size: @text_size_s*@z20_label;}
-    text-name: '[name]';
-    text-face-name: @sans;
-    text-placement: line;
-    text-dy: -8;
-    text-fill: @other_text;
-
-    shield-file: url(../img/marked-trails/original.svg);
-    shield-size: 12; /* shield text size, not img size */
+    [zoom = 14] { line-width: @medium*@z14; line-offset: @medium*@z14; shield-size: @text_size_xs*@z14_label;}
+    [zoom = 15] { line-width: @medium*@z15; line-offset: @medium*@z15; shield-size: @text_size_xs*@z15_label;}
+    [zoom = 16] { line-width: @medium*@z16; line-offset: @medium*@z16; shield-size: @text_size_xs*@z16_label;}
+    [zoom = 17] { line-width: @medium*@z17; line-offset: @medium*@z17; shield-size: @text_size_xs*@z17_label;}
+    [zoom = 18] { line-width: @medium*@z18; line-offset: @medium*@z18; shield-size: @text_size_xs*@z18_label;}
+    [zoom = 19] { line-width: @medium*@z19; line-offset: @medium*@z19; shield-size: @text_size_xs*@z19_label;}
+    [zoom >= 20] { line-width: @medium*@z20; line-offset: @medium*@z20; shield-size: @text_size_xs*@z20_label;}
+    shield-file: '[shield_uri]';
     shield-fill: @white;
-    shield-name: '[marked_text]'; /* get number of osmc:symbol */
-    shield-face-name: @sans;
+    shield-name: '[marked_text]';
+    shield-face-name: @sans_bold;
     shield-placement: line;
+    shield-spacing: 700;
+}
+
+
+#trails_wip::top {
+    line-color: @white;
+    [zoom <= 13] { line-width: 0 }
+    [zoom = 14] { line-width: @mini*@z14; line-offset: @medium*@z14; shield-size: @text_size_xs*@z14_label;}
+    [zoom = 15] { line-width: @mini*@z15; line-offset: @medium*@z15; shield-size: @text_size_xs*@z15_label;}
+    [zoom = 16] { line-width: @mini*@z16; line-offset: @medium*@z16; shield-size: @text_size_xs*@z16_label;}
+    [zoom = 17] { line-width: @mini*@z17; line-offset: @medium*@z17; shield-size: @text_size_xs*@z17_label;}
+    [zoom = 18] { line-width: @mini*@z18; line-offset: @medium*@z18; shield-size: @text_size_xs*@z18_label;}
+    [zoom = 19] { line-width: @mini*@z19; line-offset: @medium*@z19; shield-size: @text_size_xs*@z19_label;}
+    [zoom >= 20] { line-width: @mini*@z20; line-offset: @medium*@z20; shield-size: @text_size_xs*@z20_label;}
 }
 
 /******************************************************************* */

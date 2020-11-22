@@ -580,6 +580,7 @@
             "(
                 SELECT 
                     way, name, network,
+                    SPLIT_PART(\"osmc:symbol\",':', 1) AS color,
                     SPLIT_PART(\"osmc:symbol\",':', 4) AS marked_text,
                     '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 3) || '.svg' as shield_uri
                 FROM planet_osm_line
