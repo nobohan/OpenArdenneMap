@@ -579,7 +579,8 @@
         "table":
             "(
                 SELECT 
-                    way, name, network,
+                    way, name, network, signed_direction,
+                    distance || ' km' AS distance_km,
                     SPLIT_PART(\"osmc:symbol\",':', 1) AS color,
                     SPLIT_PART(\"osmc:symbol\",':', 4) AS marked_text,
                     '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 3) || '.svg' as shield_uri

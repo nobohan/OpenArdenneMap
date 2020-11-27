@@ -688,19 +688,34 @@
     line-color: darken(@green, 60%);
     line-opacity: 0.7;
     [zoom <= 13] { line-width: 0 }
-    [zoom = 14] { line-width: @medium*@z14; line-offset: @medium*@z14; shield-size: @text_size_xs*@z14_label;}
-    [zoom = 15] { line-width: @medium*@z15; line-offset: @medium*@z15; shield-size: @text_size_xs*@z15_label;}
-    [zoom = 16] { line-width: @medium*@z16; line-offset: @medium*@z16; shield-size: @text_size_xs*@z16_label;}
-    [zoom = 17] { line-width: @medium*@z17; line-offset: @medium*@z17; shield-size: @text_size_xs*@z17_label;}
-    [zoom = 18] { line-width: @medium*@z18; line-offset: @medium*@z18; shield-size: @text_size_xs*@z18_label;}
-    [zoom = 19] { line-width: @medium*@z19; line-offset: @medium*@z19; shield-size: @text_size_xs*@z19_label;}
-    [zoom >= 20] { line-width: @medium*@z20; line-offset: @medium*@z20; shield-size: @text_size_xs*@z20_label;}
+    [zoom = 14] { line-width: @medium*@z14; line-offset: @medium*@z14; shield-size: @text_size_xs*@z14_label; marker-offset:@medium*@z14*2; text-size: @text_size_xs*@z14_label; }
+    [zoom = 15] { line-width: @medium*@z15; line-offset: @medium*@z15; shield-size: @text_size_xs*@z15_label; marker-offset:@medium*@z15*2; text-size: @text_size_xs*@z15_label; }
+    [zoom = 16] { line-width: @medium*@z16; line-offset: @medium*@z16; shield-size: @text_size_xs*@z16_label; marker-offset:@medium*@z16*2; text-size: @text_size_xs*@z16_label; }
+    [zoom = 17] { line-width: @medium*@z17; line-offset: @medium*@z17; shield-size: @text_size_xs*@z17_label; marker-offset:@medium*@z17*2; text-size: @text_size_xs*@z17_label; }
+    [zoom = 18] { line-width: @medium*@z18; line-offset: @medium*@z18; shield-size: @text_size_xs*@z18_label; marker-offset:@medium*@z18*2; text-size: @text_size_xs*@z18_label; }
+    [zoom = 19] { line-width: @medium*@z19; line-offset: @medium*@z19; shield-size: @text_size_xs*@z19_label; marker-offset:@medium*@z19*2; text-size: @text_size_xs*@z19_label; }
+    [zoom >= 20] { line-width: @medium*@z20; line-offset: @medium*@z20; shield-size: @text_size_xs*@z20_label; marker-offset:@medium*@z20*2; text-size: @text_size_xs*@z20_label; }
+    
     shield-file: '[shield_uri]';
     shield-fill: @white;
     shield-name: '[marked_text]';
     shield-face-name: @sans_bold;
     shield-placement: line;
     shield-spacing: 700;
+    
+    [signed_direction = 'yes'] {
+        marker-file: url(../img/arrow.png);
+        marker-height: @large;
+        marker-placement: line;
+        marker-spacing: 400;
+    } 
+
+    text-name: '[distance_km]';
+    text-face-name: @sans;
+    text-placement: line;
+    text-dy: -8;
+    text-fill: @other_text;
+    text-spacing: 600;
 }
 
 

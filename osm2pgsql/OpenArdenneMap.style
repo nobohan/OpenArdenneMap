@@ -106,6 +106,7 @@ node,way   cutting      text         linear
 node,way   denomination text         linear
 node,way   disused      text         linear
 node,way   direction    text         linear
+node,way   distance     text         linear
 node       ele          text         linear
 node,way   embankment   text         linear
 node,way   foot         text         linear
