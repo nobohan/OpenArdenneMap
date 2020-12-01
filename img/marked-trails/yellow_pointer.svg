@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="13.481774mm"
-   height="7.9891996mm"
-   viewBox="0 0 13.481774 7.9891996"
+   width="14.000644mm"
+   height="8.0868464mm"
+   viewBox="0 0 14.000643 8.0868463"
    version="1.1"
    id="svg836"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="11.2"
-     inkscape:cx="-5.5229211"
-     inkscape:cy="17.415803"
+     inkscape:cx="27.903131"
+     inkscape:cy="27.76816"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -39,10 +39,19 @@
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0">
+     fit-margin-bottom="0"
+     showguides="true"
+     inkscape:guide-bbox="true">
     <inkscape:grid
        type="xygrid"
-       id="grid816" />
+       id="grid816"
+       originx="-2.8238109"
+       originy="4.5039403" />
+    <sodipodi:guide
+       position="-6.3200906,14.378568"
+       orientation="1,0"
+       id="guide4853"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <metadata
      id="metadata833">
@@ -52,7 +61,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -60,19 +69,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-48.947917,-214.92746)">
-    <rect
-       style="fill:#fffff9;fill-opacity:1;stroke:#ffffff;stroke-width:0.40000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="svg_5"
-       height="7.9891987"
-       width="13.481773"
-       y="214.97916"
-       x="48.947918"
-       stroke-linecap="null"
-       stroke-linejoin="null" />
+     transform="translate(-51.771728,-219.33375)">
     <path
-       style="fill:#fedd00;fill-opacity:1;stroke:none;stroke-width:0.26785475px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 49.172079,215.19248 13.054519,7.54036 H 49.172079 Z"
+       style="fill:#fedd00;fill-opacity:1;stroke:#ffffff;stroke-width:0.40000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 51.971728,219.68024 13.054519,7.54036 H 51.971728 Z"
        id="path818"
        inkscape:connector-curvature="0" />
   </g>

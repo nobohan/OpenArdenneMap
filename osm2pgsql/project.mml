@@ -583,7 +583,12 @@
                     distance || ' km' AS distance_km,
                     SPLIT_PART(\"osmc:symbol\",':', 1) AS color,
                     SPLIT_PART(\"osmc:symbol\",':', 4) AS marked_text,
-                    '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 3) || '.svg' as shield_uri
+                    CASE
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 3) <> '' THEN 
+                            '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 3) || '.svg'
+                        ELSE
+                            '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 1) || '_rectangle.svg'  
+                    END shield_uri
                 FROM planet_osm_line
                 WHERE route in ('hiking', 'foot')
             ) AS data",
@@ -621,7 +626,7 @@
       "name": "trails_start",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "on"
+      "status": "off"
     },
   ],
   "Stylesheet": [

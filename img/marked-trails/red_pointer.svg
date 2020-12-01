@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.2"
-     inkscape:cx="10.994936"
-     inkscape:cy="17.415803"
+     inkscape:zoom="7.919596"
+     inkscape:cx="21.568314"
+     inkscape:cy="8.3436607"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -62,7 +62,7 @@
      id="layer1"
      transform="translate(-48.947917,-214.92746)">
     <rect
-       style="fill:#fffff9;fill-opacity:1;stroke:#ffffff;stroke-width:0.40000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="svg_5"
        height="7.9891987"
        width="13.481773"
@@ -71,7 +71,7 @@
        stroke-linecap="null"
        stroke-linejoin="null" />
     <path
-       style="fill:#d22730;fill-opacity:1;stroke:none;stroke-width:0.26785475px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#d22730;fill-opacity:1;stroke:#ffffff;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        d="m 49.172079,215.19248 13.054519,7.54036 H 49.172079 Z"
        id="path818"
        inkscape:connector-curvature="0" />
