@@ -684,7 +684,7 @@
 /* HIKING TRAILS
 /* ================================================================== */
 
-#trails::bottom {
+#trails {
     line-color: darken(@green, 60%);
     line-opacity: 0.6;
     [zoom <= 13] { line-width: 0 }
@@ -708,7 +708,7 @@
         marker-height: @large;
         marker-placement: line;
         marker-spacing: 400;
-    } 
+    }
 
     text-name: '[distance_km]';
     text-face-name: @sans;
@@ -721,8 +721,6 @@
 }
 
 #trails_start {
-
-
     [zoom = 14] { marker-height: @viewpoint_marker*@z14_marker; }
     [zoom = 15] { marker-height: @viewpoint_marker*@z15_marker; }
     [zoom = 16] { marker-height: @viewpoint_marker*@z16_marker; }
@@ -732,14 +730,6 @@
     [zoom >= 20] { marker-height: @viewpoint_marker*@z20_marker; }
     marker-file: url(../img/ruins.svg);
     marker-allow-overlap: true;
-
-    shield-file: '[shield_uri]';
-    shield-fill: @white;
-    shield-name: '[marked_text]';
-    shield-face-name: @sans_bold;
-    shield-placement: point;
-    shield-spacing: 700;
-    shield-size: @text_size_xs*@z19_label;
 }
 
 #trails-wip::top {
