@@ -582,7 +582,12 @@
                     way, name, network, signed_direction,
                     distance || ' km' AS distance_km,
                     SPLIT_PART(\"osmc:symbol\",':', 1) AS color,
-                    SPLIT_PART(\"osmc:symbol\",':', 4) AS marked_text,
+                    CASE
+                        WHEN LENGTH(SPLIT_PART(\"osmc:symbol\",':', 4)) < 4 THEN 
+                            SPLIT_PART(\"osmc:symbol\",':', 4)
+                        ELSE
+                            ''  
+                    END marked_text,
                     CASE
                         WHEN SPLIT_PART(\"osmc:symbol\",':', 3) <> '' THEN 
                             '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 3) || '.svg'
@@ -626,7 +631,7 @@
       "name": "trails_start",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "off"
+      "status": "on"
     },
   ],
   "Stylesheet": [
