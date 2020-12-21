@@ -721,27 +721,25 @@
 }
 
 #trails_start {
-    [zoom = 14] { marker-height: @viewpoint_marker*@z14_marker; }
-    [zoom = 15] { marker-height: @viewpoint_marker*@z15_marker; }
-    [zoom = 16] { marker-height: @viewpoint_marker*@z16_marker; }
-    [zoom = 17] { marker-height: @viewpoint_marker*@z17_marker; }
-    [zoom = 18] { marker-height: @viewpoint_marker*@z18_marker; }
-    [zoom = 19] { marker-height: @viewpoint_marker*@z19_marker; }
-    [zoom >= 20] { marker-height: @viewpoint_marker*@z20_marker; }
-    marker-file: url(../img/ruins.svg);
-    marker-allow-overlap: true;
-}
+    [zoom = 14] { marker-height: @trail_marker*@z14_marker; text-size: @text_size_s*@z14_label;}
+    [zoom = 15] { marker-height: @trail_marker*@z15_marker; text-size: @text_size_s*@z15_label;}
+    [zoom = 16] { marker-height: @trail_marker*@z16_marker; text-size: @text_size_s*@z16_label;}
+    [zoom = 17] { marker-height: @trail_marker*@z17_marker; text-size: @text_size_s*@z17_label;}
+    [zoom = 18] { marker-height: @trail_marker*@z18_marker; text-size: @text_size_s*@z18_label;}
+    [zoom = 19] { marker-height: @trail_marker*@z19_marker; text-size: @text_size_s*@z19_label;}
+    [zoom >= 20] { marker-height: @trail_marker*@z20_marker; text-size: @text_size_s*@z20_label;}
+    marker-file: url(../img/trail_start.svg);
 
-#trails-wip::top {
-    line-color: @white;
-    [zoom <= 13] { line-width: 0 }
-    [zoom = 14] { line-width: @mini*@z14/4; line-offset: @medium*@z14;}
-    [zoom = 15] { line-width: @mini*@z15/4; line-offset: @medium*@z15;}
-    [zoom = 16] { line-width: @mini*@z16/4; line-offset: @medium*@z16;}
-    [zoom = 17] { line-width: @mini*@z17/4; line-offset: @medium*@z17;}
-    [zoom = 18] { line-width: @mini*@z18/4; line-offset: @medium*@z18;}
-    [zoom = 19] { line-width: @mini*@z19/4; line-offset: @medium*@z19;}
-    [zoom >= 20] { line-width: @mini*@z20/4; line-offset: @medium*@z20;}
+    text-name: "'Départ Prom.'";
+    text-allow-overlap: true;
+    text-dy: -12;
+    text-dx: -16;
+    text-face-name:@sans;
+    text-character-spacing: 1;
+    text-halo-radius: 2;
+    text-fill: darken(@green, 60%);
+    text-halo-fill: #ffffff;
+
 }
 
 /******************************************************************* */
