@@ -698,6 +698,9 @@
     
     shield-file: '[shield_uri]';
     shield-fill: @white;
+    [text_color = 'black'] {
+        shield-fill: @black;
+    }
     shield-name: '[marked_text]';
     shield-face-name: @sans_bold;
     shield-placement: line;

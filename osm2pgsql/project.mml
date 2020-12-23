@@ -583,11 +583,17 @@
                     distance || ' km' AS distance_km,
                     SPLIT_PART(\"osmc:symbol\",':', 1) AS color,
                     CASE
-                        WHEN LENGTH(SPLIT_PART(\"osmc:symbol\",':', 4)) < 4 THEN 
+                        WHEN LENGTH(SPLIT_PART(\"osmc:symbol\",':', 4)) < 4 THEN
                             SPLIT_PART(\"osmc:symbol\",':', 4)
                         ELSE
-                            ''  
+                            ''
                     END marked_text,
+                    CASE
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 3) IN ('red_lower') THEN
+                            'black'
+                        ELSE
+                            'white'
+                    END text_color,
                     CASE
                         WHEN SPLIT_PART(\"osmc:symbol\",':', 3) <> '' THEN 
                             '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 3) || '.svg'
