@@ -621,14 +621,11 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table":
             "(
-                SELECT 
-                    ST_StartPoint(way) AS way, name, network, signed_direction,
-                    distance || ' km' AS distance_km,
-                    SPLIT_PART(\"osmc:symbol\",':', 1) AS color,
-                    SPLIT_PART(\"osmc:symbol\",':', 4) AS marked_text,
-                    '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 3) || '.svg' as shield_uri
-                FROM planet_osm_line
-                WHERE route in ('hiking', 'foot')
+             SELECT ST_Centroid((ST_Dump(start_point.geom)).geom) AS way
+             FROM (
+                SELECT ST_Union(ST_Buffer(ST_StartPoint(way), 100)) AS geom
+                FROM planet_osm_line 
+                WHERE route in ('hiking', 'foot') AND network IN ('lwn')) AS start_point
             ) AS data",
         "type": "postgis"
       },

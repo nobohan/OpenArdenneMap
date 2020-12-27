@@ -732,7 +732,8 @@
     [zoom = 19] { marker-height: @trail_marker*@z19_marker; text-size: @text_size_s*@z19_label;}
     [zoom >= 20] { marker-height: @trail_marker*@z20_marker; text-size: @text_size_s*@z20_label;}
     marker-file: url(../img/trail_start.svg);
-
+    marker-allow-overlap: true; 
+    
     text-name: "'Départ Prom.'";
     text-allow-overlap: true;
     text-dy: -12;

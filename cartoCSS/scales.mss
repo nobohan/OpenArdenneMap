@@ -114,4 +114,4 @@
 @pitch_marker: 40;
 @windmill_marker: 32;
 @viewpoint_marker: 42;
-@trail_marker: 80;
+@trail_marker: 120;
