@@ -685,65 +685,90 @@
 /* ================================================================== */
 
 #trails {
-    line-color: darken(@green, 60%);
-    line-opacity: 0.6;
-    [zoom <= 13] { line-width: 0 }
-    [zoom = 14] { line-width: @medium*@z14; line-offset: @medium*@z14; shield-size: @text_size_xs*@z14_label; marker-offset:@medium*@z14*2; text-size: @text_size_xs*@z14_label; }
-    [zoom = 15] { line-width: @medium*@z15; line-offset: @medium*@z15; shield-size: @text_size_xs*@z15_label; marker-offset:@medium*@z15*2; text-size: @text_size_xs*@z15_label; }
-    [zoom = 16] { line-width: @medium*@z16; line-offset: @medium*@z16; shield-size: @text_size_xs*@z16_label; marker-offset:@medium*@z16*2; text-size: @text_size_xs*@z16_label; }
-    [zoom = 17] { line-width: @medium*@z17; line-offset: @medium*@z17; shield-size: @text_size_xs*@z17_label; marker-offset:@medium*@z17*2; text-size: @text_size_xs*@z17_label; }
-    [zoom = 18] { line-width: @medium*@z18; line-offset: @medium*@z18; shield-size: @text_size_xs*@z18_label; marker-offset:@medium*@z18*2; text-size: @text_size_xs*@z18_label; }
-    [zoom = 19] { line-width: @medium*@z19; line-offset: @medium*@z19; shield-size: @text_size_xs*@z19_label; marker-offset:@medium*@z19*2; text-size: @text_size_xs*@z19_label; }
-    [zoom >= 20] { line-width: @medium*@z20; line-offset: @medium*@z20; shield-size: @text_size_xs*@z20_label; marker-offset:@medium*@z20*2; text-size: @text_size_xs*@z20_label; }
-    
-    shield-file: '[shield_uri]';
-    shield-fill: @white;
-    [text_color = 'black'] {
-        shield-fill: @black;
-    }
-    shield-name: '[marked_text]';
-    shield-face-name: @sans_bold;
-    shield-placement: line;
-    shield-spacing: 700;
-    
-    [signed_direction = 'yes'] {
-        marker-file: url(../img/arrow.png);
-        marker-height: @large;
-        marker-placement: line;
-        marker-spacing: 400;
-    }
+    [network != 'lwn'] {
+        [zoom >= 13] {
+            [zoom = 13] { line-width: @medium*@z13_road; line-offset: @medium*@z13_road; shield-size: @text_size_xs*@z13_label; shield-transform: scale(@z13_label); shield-spacing: 400; }
+            [zoom = 14] { line-width: @medium*@z14_road; line-offset: @medium*@z14_road; shield-size: @text_size_xs*@z14_label; shield-transform: scale(@z14_label); shield-spacing: 500; }
+            
+            line-color: darken(@green, 60%);
+            line-opacity: 0.6;
 
-    text-name: '[distance_km]';
-    text-face-name: @sans;
-    text-placement: line;
-    text-dy: -8;
-    text-spacing: 600;
-    text-fill: darken(@green, 60%);
-    text-halo-fill: #ffffff;
-    text-halo-radius:2;
+            shield-file: '[shield_uri]';
+            shield-fill: @white;
+            [text_color = 'black'] {
+                shield-fill: @black;
+            }
+            shield-name: '[marked_text]';
+            shield-face-name: @sans_bold;
+            shield-placement: line;
+        }
+    }
+    [zoom >= 15] {
+        [zoom = 15] { line-width: @medium*@z15_road; line-offset: @medium*@z15_road; shield-size: @text_size_xs*@z15_label; text-size: @text_size_xs*@z15_label; shield-spacing: 600; text-spacing: 600; }
+        [zoom = 16] { line-width: @medium*@z16_road; line-offset: @medium*@z16_road; shield-size: @text_size_xs*@z16_label; text-size: @text_size_xs*@z16_label; shield-spacing: 700; text-spacing: 700; }
+        [zoom = 17] { line-width: @medium*@z17_road; line-offset: @medium*@z17_road; shield-size: @text_size_xs*@z17_label; text-size: @text_size_xs*@z17_label; shield-transform: scale(@z17_label); shield-spacing: 900; text-spacing: 900; }
+        [zoom = 18] { line-width: @medium*@z18_road; line-offset: @medium*@z18_road; shield-size: @text_size_xs*@z18_label; text-size: @text_size_xs*@z18_label; shield-transform: scale(@z18_label); shield-spacing: 1200; text-spacing: 1200; }
+        [zoom = 19] { line-width: @medium*@z19_road; line-offset: @medium*@z19_road; shield-size: @text_size_xs*@z19_label; text-size: @text_size_xs*@z19_label; shield-transform: scale(@z19_label); shield-spacing: 1800; text-spacing: 1800; }
+        [zoom >= 20] { line-width: @medium*@z20_road; line-offset: @medium*@z20_road; shield-size: @text_size_xs*@z20_label; text-size: @text_size_xs*@z20_label; shield-transform: scale(@z20_label); shield-spacing: 2400; text-spacing: 2400; }
+        
+        line-color: darken(@green, 60%);
+        line-opacity: 0.6;
+
+        shield-file: '[shield_uri]';
+        shield-fill: @white;
+        [text_color = 'black'] {
+            shield-fill: @black;
+        }
+        shield-name: '[marked_text]';
+        shield-face-name: @sans_bold;
+        shield-placement: line;
+        
+        [signed_direction = 'yes'] {
+            [zoom >= 14] {
+                [zoom = 14] { marker-height: @large*@z14_marker; marker-offset:@medium*@z14*2; }
+                [zoom = 15] { marker-height: @large*@z15_marker; marker-offset:@medium*@z15*2; }
+                [zoom = 16] { marker-height: @large*@z16_marker; marker-offset:@medium*@z16*2; }
+                [zoom = 17] { marker-height: @large*@z17_marker; marker-offset:@medium*@z17*2; }
+                [zoom = 18] { marker-height: @large*@z18_marker; marker-offset:@medium*@z18*2; }
+                [zoom = 19] { marker-height: @large*@z19_marker; marker-offset:@medium*@z19*2; }
+                [zoom >= 20] { marker-height: @large*@z20_marker; marker-offset:@medium*@z20*2; }
+                marker-file: url(../img/arrow.png);
+                marker-placement: line;
+                marker-spacing: 400;
+            }
+        }
+
+        text-name: '[distance_km]';
+        text-face-name: @sans;
+        text-placement: line;
+        text-dy: -8;
+        text-fill: darken(@green, 60%);
+        text-halo-fill: #ffffff;
+        text-halo-radius:2;
+    }
 }
 
 #trails_start {
-    [zoom = 14] { marker-height: @trail_marker*@z14_marker; text-size: @text_size_s*@z14_label;}
-    [zoom = 15] { marker-height: @trail_marker*@z15_marker; text-size: @text_size_s*@z15_label;}
-    [zoom = 16] { marker-height: @trail_marker*@z16_marker; text-size: @text_size_s*@z16_label;}
-    [zoom = 17] { marker-height: @trail_marker*@z17_marker; text-size: @text_size_s*@z17_label;}
-    [zoom = 18] { marker-height: @trail_marker*@z18_marker; text-size: @text_size_s*@z18_label;}
-    [zoom = 19] { marker-height: @trail_marker*@z19_marker; text-size: @text_size_s*@z19_label;}
-    [zoom >= 20] { marker-height: @trail_marker*@z20_marker; text-size: @text_size_s*@z20_label;}
-    marker-file: url(../img/trail_start.svg);
-    marker-allow-overlap: true; 
-    
-    text-name: "'Départ Prom.'";
-    text-allow-overlap: true;
-    text-dy: -12;
-    text-dx: -16;
-    text-face-name:@sans;
-    text-character-spacing: 1;
-    text-halo-radius: 2;
-    text-fill: darken(@green, 60%);
-    text-halo-fill: #ffffff;
-
+    [zoom >= 15] {
+        [zoom = 15] { marker-height: @trail_marker*@z15_marker; text-size: @text_size_s*@z15_label;}
+        [zoom = 16] { marker-height: @trail_marker*@z16_marker; text-size: @text_size_s*@z16_label;}
+        [zoom = 17] { marker-height: @trail_marker*@z17_marker; text-size: @text_size_s*@z17_label;}
+        [zoom = 18] { marker-height: @trail_marker*@z18_marker; text-size: @text_size_s*@z18_label;}
+        [zoom = 19] { marker-height: @trail_marker*@z19_marker; text-size: @text_size_s*@z19_label;}
+        [zoom >= 20] { marker-height: @trail_marker*@z20_marker; text-size: @text_size_s*@z20_label;}
+        marker-file: url(../img/trail_start.svg);
+        marker-allow-overlap: true; 
+        
+        text-name: "'Départ Prom.'";
+        text-allow-overlap: true;
+        text-dy: -12;
+        text-dx: -16;
+        text-face-name:@sans;
+        text-character-spacing: 1;
+        text-halo-radius: 2;
+        text-fill: darken(@green, 60%);
+        text-halo-fill: #ffffff;
+    }
 }
 
 /******************************************************************* */
