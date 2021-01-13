@@ -1,3 +1,14 @@
+## v0.5.0 marked-trails
+
+### Description
+
+Add a new map feature: marked trails based on the type=route AND route=hiking relations. Similar to the hiking.waymarkedtrails.org overlay. At the moment, only hiking and foot route relations are supported. 
+
+### Changes
+- Add a "trails" layer that shows the hiking marked trails with a thick, offset line; a shield representing the most common marked trails symbols encountered in Ardenne; the distance of the track (if this a short, local trail) and the direction of the way (if the marked symbols are available only in one direction).
+- Add a "trails_start" layer showing the starting point of marked trails. Starting point that are closes to each other (<100m) are first merged into one single point. 
+
+
 ## v0.4.0 summer2020
 
 ### Description
