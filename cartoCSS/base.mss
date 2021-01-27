@@ -207,7 +207,7 @@ Map { background-color: @background; }
 }
 
 #cemetery {
-    [zoom >= 15] {
+    [type='cemetery'], [type='grave_yard'], [zoom >= 15] {
         [zoom = 15] { line-width: @landuse_line_width*@z15; }
         [zoom = 16] { line-width: @landuse_line_width*@z16; }
         [zoom = 17] { line-width: @landuse_line_width*@z17; }
