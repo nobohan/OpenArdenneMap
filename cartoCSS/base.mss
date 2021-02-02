@@ -60,8 +60,6 @@ Map { background-color: @background; }
             polygon-pattern-file: url(../img/camping.svg);
             line-color: @black;
         }
-    }
-    [zoom >= 15] {
         [type='college'], [type='university'], [type='school'] {
             polygon-fill: @school;
         }
@@ -157,7 +155,7 @@ Map { background-color: @background; }
     [type='farmland'] {
         polygon-fill: @agriculture;
     }
-    [type='orchard']       {
+    [type='orchard'] {
         [zoom <= 13] { line-width: 0; }
         [zoom = 14] { line-width: @landuse_line_width*@z16; }
         [zoom = 15] { line-width: @landuse_line_width*@z16; }
@@ -170,18 +168,20 @@ Map { background-color: @background; }
         polygon-pattern-file: url(../img/orchard.svg);
         line-color: @gray;
     }
-    [trees='christmas_trees'], [produce='christmas_trees'] {
-        [zoom <= 13] { line-width: 0; }
-        [zoom = 14] { line-width: @landuse_line_width*@z16; }
-        [zoom = 15] { line-width: @landuse_line_width*@z16; }
-        [zoom = 16] { line-width: @landuse_line_width*@z16; }
-        [zoom = 17] { line-width: @landuse_line_width*@z17; }
-        [zoom = 18] { line-width: @landuse_line_width*@z18; }
-        [zoom = 19] { line-width: @landuse_line_width*@z19; }
-        [zoom >= 20] { line-width: @landuse_line_width*@z20; }
-        polygon-fill: @green;
-        polygon-pattern-file: url(../img/christmas_trees.svg);
-        line-color: @gray;
+    [type='plant_nursery'] {
+        [trees='christmas_trees'], [produce='christmas_trees'] {
+            [zoom <= 13] { line-width: 0; }
+            [zoom = 14] { line-width: @landuse_line_width*@z16; }
+            [zoom = 15] { line-width: @landuse_line_width*@z16; }
+            [zoom = 16] { line-width: @landuse_line_width*@z16; }
+            [zoom = 17] { line-width: @landuse_line_width*@z17; }
+            [zoom = 18] { line-width: @landuse_line_width*@z18; }
+            [zoom = 19] { line-width: @landuse_line_width*@z19; }
+            [zoom >= 20] { line-width: @landuse_line_width*@z20; }
+            polygon-fill: @green;
+            polygon-pattern-file: url(../img/christmas_trees.svg);
+            line-color: @gray;
+        }
     }
 }
 
@@ -207,16 +207,18 @@ Map { background-color: @background; }
 }
 
 #cemetery {
-    [type='cemetery'], [type='grave_yard'], [zoom >= 15] {
-        [zoom = 15] { line-width: @landuse_line_width*@z15; }
-        [zoom = 16] { line-width: @landuse_line_width*@z16; }
-        [zoom = 17] { line-width: @landuse_line_width*@z17; }
-        [zoom = 18] { line-width: @landuse_line_width*@z18; }
-        [zoom = 19] { line-width: @landuse_line_width*@z19; }
-        [zoom >= 20] { line-width: @landuse_line_width*@z20; }
-        polygon-fill: @background;
-        polygon-pattern-file: url(../img/cemetery.svg);
-        line-color: @black;
+    [type='cemetery'], [type='grave_yard'] {
+        [zoom >= 15] {
+            [zoom = 15] { line-width: @landuse_line_width*@z15; }
+            [zoom = 16] { line-width: @landuse_line_width*@z16; }
+            [zoom = 17] { line-width: @landuse_line_width*@z17; }
+            [zoom = 18] { line-width: @landuse_line_width*@z18; }
+            [zoom = 19] { line-width: @landuse_line_width*@z19; }
+            [zoom >= 20] { line-width: @landuse_line_width*@z20; }
+            polygon-fill: @background;
+            polygon-pattern-file: url(../img/cemetery.svg);
+            line-color: @black;
+        }
     }
 }
 
