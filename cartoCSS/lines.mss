@@ -689,7 +689,7 @@
         [zoom >= 13] {
             [zoom = 13] { line-width: @medium*@z13_road; line-offset: @medium*@z13_road; shield-size: @text_size_xs*@z13_label; shield-transform: scale(@z13_label); shield-spacing: 400; }
             [zoom = 14] { line-width: @medium*@z14_road; line-offset: @medium*@z14_road; shield-size: @text_size_xs*@z14_label; shield-transform: scale(@z14_label); shield-spacing: 500; }
-            
+
             line-color: darken(@green, 60%);
             line-opacity: 0.6;
 
@@ -710,7 +710,7 @@
         [zoom = 18] { line-width: @medium*@z18_road; line-offset: @medium*@z18_road; shield-size: @text_size_xs*@z18_label; text-size: @text_size_xs*@z18_label; shield-transform: scale(@z18_label); shield-spacing: 1200; text-spacing: 1200; }
         [zoom = 19] { line-width: @medium*@z19_road; line-offset: @medium*@z19_road; shield-size: @text_size_xs*@z19_label; text-size: @text_size_xs*@z19_label; shield-transform: scale(@z19_label); shield-spacing: 1800; text-spacing: 1800; }
         [zoom >= 20] { line-width: @medium*@z20_road; line-offset: @medium*@z20_road; shield-size: @text_size_xs*@z20_label; text-size: @text_size_xs*@z20_label; shield-transform: scale(@z20_label); shield-spacing: 2400; text-spacing: 2400; }
-        
+
         line-color: darken(@green, 60%);
         line-opacity: 0.6;
 
@@ -722,7 +722,7 @@
         shield-name: '[marked_text]';
         shield-face-name: @sans_bold;
         shield-placement: line;
-        
+
         [signed_direction = 'yes'] {
             [zoom >= 14] {
                 [zoom = 14] { marker-height: @large*@z14_marker; marker-offset:@medium*@z14*2; }
@@ -757,16 +757,16 @@
         [zoom = 19] { marker-height: @trail_marker*@z19_marker; text-size: @text_size_s*@z19_label;}
         [zoom >= 20] { marker-height: @trail_marker*@z20_marker; text-size: @text_size_s*@z20_label;}
         marker-file: url(../img/trail_start.svg);
-        marker-allow-overlap: true; 
-        
+        marker-allow-overlap: true;
+
         text-name: "'Départ Prom.'";
         text-allow-overlap: true;
-        text-dy: -12;
+        text-dy: -16;
         text-dx: -16;
         text-face-name:@sans;
         text-character-spacing: 1;
         text-halo-radius: 2;
-        text-fill: darken(@green, 60%);
+        text-fill: @black;
         text-halo-fill: #ffffff;
     }
 }
