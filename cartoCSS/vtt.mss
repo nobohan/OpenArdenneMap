@@ -118,7 +118,7 @@
     text-dx: 550;
 }
 
-#ravitos {
+#ravitos__ {
     marker-file: url(../img/star.png);
     text-name:"'Ravitaillement'";
     text-face-name:@sans;
@@ -272,6 +272,17 @@
 @mk: 20;
 
 #vtt15km {
+  line-color: @pink;
+  line-width: @lo;
+  line-offset: -@lo+1;
+  line-opacity: @lop;
+  marker-file: url(../img/arrow.png);
+  marker-height: @mk;
+  marker-placement: line;
+  marker-spacing: 400;
+  marker-offset: -@lo+1;
+}
+#vtt31km {
   line-color: @pink;
   line-width: @lo;
   line-offset: -@lo+1;
