@@ -40,8 +40,8 @@ def make_map(distance, scale, x_center = 621000, y_center = 6406900, pageFormat 
 
 
 make_map('Marche', 15000, 618000, 6398000, 'A3')
-make_map('27km', 20000, 621000, 6403500)
-make_map('35km', 20000, 621000, 6403500)
-make_map('45km', 25000)
-make_map('55km', 25000)
-make_map('78km', 25000, 624500, 6406900)
+make_map('15km', 20000, 621000, 6403500)
+make_map('25km', 20000, 621000, 6403500)
+make_map('31km', 25000)
+make_map('43km', 25000)
+make_map('53km', 25000, 624500, 6406900)

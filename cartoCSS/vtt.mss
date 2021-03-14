@@ -6,8 +6,8 @@
 @pink: #ff9703;
 @labelKm: 130;
 
-#label27km {
-    text-name:"'27 km'";
+#label15km {
+    text-name:"'15 km'";
     text-face-name:@sans;
     text-placement:point;
     text-fill:@black;
@@ -20,8 +20,8 @@
     text-dx: -50;
 }
 
-#label35km {
-    text-name:"'35 km'";
+#label25km {
+    text-name:"'25 km'";
     text-face-name:@sans;
     text-placement:point;
     text-fill:@black;
@@ -34,8 +34,8 @@
     text-dx: -50;
 }
 
-#label45km {
-    text-name:"'45 km'";
+#label31km {
+    text-name:"'31 km'";
     text-face-name:@sans;
     text-placement:point;
     text-fill:@black;
@@ -48,8 +48,22 @@
     text-dx: -50;
 }
 
-#label55km {
-    text-name:"'55 km'";
+#label43km {
+    text-name:"'43 km'";
+    text-face-name:@sans;
+    text-placement:point;
+    text-fill:@black;
+    text-size: @labelKm;
+    text-character-spacing: 2;
+    text-allow-overlap: true;
+    text-halo-fill: @pink;
+    text-halo-radius: 3;
+    text-dy: -60;
+    text-dx: -50;
+}
+
+#label53km {
+    text-name:"'53 km'";
     text-face-name:@sans;
     text-placement:point;
     text-fill:@black;
@@ -119,9 +133,9 @@
 
 @profile_size: 600;
 @profile_font_size: 52;
-#profil27km {
+#profil15km {
     [id = 1] {
-        marker-file: url(../img/profil27km.png);
+        marker-file: url(../img/profil15km.png);
         marker-allow-overlap: true;
         marker-height: @profile_size;
         text-name:"'(c) Contributeurs OpenStreetMap - style OpenArdenneMap - Julien Minet (2020)'";
@@ -139,9 +153,9 @@
         text-allow-overlap: true;
     }
 }
-#profil35km {
+#profil25km {
     [id = 1] {
-        marker-file: url(../img/profil35km.png);
+        marker-file: url(../img/profil25km.png);
         marker-allow-overlap: true;
         marker-height: @profile_size;
         text-name:"'(c) Contributeurs OpenStreetMap - style OpenArdenneMap - Julien Minet (2020)'";
@@ -159,9 +173,9 @@
         text-allow-overlap: true;
     }
 }
-#profil45km {
-    [id = 2] {
-        marker-file: url(../img/profil45km.png);
+#profil31km {
+    [id = 1] {
+        marker-file: url(../img/profil31km.png);
         marker-allow-overlap: true;
         marker-height: @profile_size;
         text-name:"'(c) Contributeurs OpenStreetMap - style OpenArdenneMap - Julien Minet (2020)'";
@@ -179,9 +193,29 @@
         text-allow-overlap: true;
     }
 }
-#profil55km {
+#profil43km {
     [id = 2] {
-        marker-file: url(../img/profil55km.png);
+        marker-file: url(../img/profil43km.png);
+        marker-allow-overlap: true;
+        marker-height: @profile_size;
+        text-name:"'(c) Contributeurs OpenStreetMap - style OpenArdenneMap - Julien Minet (2020)'";
+        text-face-name: @sans;
+        text-placement: point;
+        text-fill: @black;
+        text-character-spacing: 2;
+        text-line-spacing: 2;
+        text-wrap-width: 2000;
+        text-halo-fill: @other_halo;
+        text-halo-radius: 10;
+        text-size: @profile_font_size;
+        text-dy: -300;
+        text-dx: 760;
+        text-allow-overlap: true;
+    }
+}
+#profil53km {
+    [id = 2] {
+        marker-file: url(../img/profil53km.png);
         marker-allow-overlap: true;
         marker-height: @profile_size;
         text-name:"'(c) Contributeurs OpenStreetMap - style OpenArdenneMap - Julien Minet (2020)'";
@@ -225,11 +259,11 @@
 /* VTT
 /* ================================================================== */
 
-@vtt27km: #d95f02;
-@vtt35km: #7570b3;
-@vtt41km: #e7298a;
-@vtt45km: #FFBF00;
-@vtt55km: #2E2E2E;
+@vtt15km: #d95f02;
+@vtt25km: #7570b3;
+@vtt31km: #e7298a;
+@vtt43km: #FFBF00;
+@vtt53km: #2E2E2E;
 @vtt78km: #2E2E2E;
 
 @pink: #fc16e9;
@@ -237,7 +271,7 @@
 @lop: 0.8;
 @mk: 20;
 
-#vtt27km {
+#vtt15km {
   line-color: @pink;
   line-width: @lo;
   line-offset: -@lo+1;
@@ -248,7 +282,7 @@
   marker-spacing: 400;
   marker-offset: -@lo+1;
 }
-#vtt35km {
+#vtt25km {
   line-color: @pink;
   line-width: @lo;
   line-offset: -@lo+1;
@@ -259,7 +293,7 @@
   marker-spacing: 400;
   marker-offset: -@lo+1;
 }
-#vtt45km {
+#vtt43km {
   line-color: @pink;
   line-width: @lo;
   line-offset: -@lo+1;
@@ -270,7 +304,7 @@
   marker-spacing: 400;
   marker-offset: -@lo+1;
 }
-#vtt55km {
+#vtt53km {
   line-color: @pink;
   line-width: @lo;
   line-offset: -@lo+1;
