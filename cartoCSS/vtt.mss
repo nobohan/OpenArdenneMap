@@ -7,7 +7,7 @@
 @labelKm: 130;
 
 #label15km {
-    text-name:"'15 km'";
+    text-name:"'19 km'";
     text-face-name:@sans;
     text-placement:point;
     text-fill:@black;
