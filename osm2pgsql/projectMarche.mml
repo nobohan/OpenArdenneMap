@@ -561,12 +561,12 @@
       "id": "marche8km_planB",
       "name": "marche8km_planB",
       "srs": "+proj=longlat +datum=WGS84 +no_defs ",
-      "status": "on"
+      "status": "off"
     },
     {
       "Datasource": {
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
-        "file": "../geojson/marche12km_planB.geojson",
+        "file": "../geojson/marbehan_marche_11km.geojson",
         "id": "marche12km_planB",
         "srs": "+proj=longlat +datum=WGS84 +no_defs",
         "type": "geojson"
