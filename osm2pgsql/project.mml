@@ -24,14 +24,14 @@
     },
     {
       "Datasource": {
-        "file": "/mnt/tera/ChampsLibres/Projets/OSM/CyclOSM/hillshade/data/dem_be_10x10_hillshade_semi_transparent.tif",
+        "file": "/mnt/tera/ChampsLibres/Projets/OSM/CyclOSM/hillshade/data/dem_be_10x10_hillshade_semi_transparent_3857.tif",
         "type": "gdal"
       },
       "geometry": "raster",
       "id": "hillshade",
       "name": "hillshade",
-      "srs": "+proj=lcc +lat_1=51.16666723333333 +lat_2=49.8333339 +lat_0=90 +lon_0=4.367486666666666 +x_0=150000.013 +y_0=5400088.438 +ellps=intl +towgs84=-106.869,52.2978,-103.724,0.3366,-0.457,1.8422,-1.2747 +units=m +no_defs",
-      "status": "off"
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "status": "on"
     },
     {
       "Datasource": {
@@ -269,9 +269,9 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table":
             "(
-                SELECT 
-                    way, 
-                    highway, 
+                SELECT
+                    way,
+                    highway,
                     ST_Length(planet_osm_line.way) AS length,
                     CAST(90+degrees(ST_Azimuth(ST_StartPoint(planet_osm_line.way), ST_EndPoint(planet_osm_line.way))) AS VARCHAR(255)) AS orientation
                 FROM planet_osm_line WHERE bridge NOT IN ('', '0', 'no')
@@ -386,10 +386,10 @@
         "srs": null,
         "table":
             "(
-                SELECT 
-                    way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", \"generator:source\", bus, ford, name, 
+                SELECT
+                    way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", \"generator:source\", bus, ford, name,
                     replace(name, 'Château', 'Chau') as short_name,
-                    CASE  
+                    CASE
                         WHEN direction = 'N-E' THEN 45
                         WHEN direction = 'E' THEN 90
                         WHEN direction = 'S-E' THEN 135
@@ -404,9 +404,9 @@
                     END AS orientation
                 FROM planet_osm_point
                 UNION
-                SELECT 
-                    ST_Centroid(way) AS way, 
-                    power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", \"generator:source\", NULL AS bus, NULL AS ford, name, 
+                SELECT
+                    ST_Centroid(way) AS way,
+                    power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", \"generator:source\", NULL AS bus, NULL AS ford, name,
                     replace(name, 'Château', 'Chau') as short_name,
                     0 AS orientation
                 FROM planet_osm_polygon
@@ -578,7 +578,7 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table":
             "(
-                SELECT 
+                SELECT
                     way, name, network, signed_direction,
                     distance || ' km' AS distance_km,
                     SPLIT_PART(\"osmc:symbol\",':', 1) AS color,
@@ -595,10 +595,10 @@
                             'white'
                     END text_color,
                     CASE
-                        WHEN SPLIT_PART(\"osmc:symbol\",':', 3) <> '' THEN 
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 3) <> '' THEN
                             '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 3) || '.svg'
                         ELSE
-                            '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 1) || '_rectangle.svg'  
+                            '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 1) || '_rectangle.svg'
                     END shield_uri
                 FROM planet_osm_line
                 WHERE route in ('hiking', 'foot')
@@ -624,7 +624,7 @@
              SELECT ST_Centroid((ST_Dump(start_point.geom)).geom) AS way
              FROM (
                 SELECT ST_Union(ST_Buffer(ST_StartPoint(way), 100)) AS geom
-                FROM planet_osm_line 
+                FROM planet_osm_line
                 WHERE route in ('hiking', 'foot') AND network IN ('lwn')) AS start_point
             ) AS data",
         "type": "postgis"
