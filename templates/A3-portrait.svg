@@ -9032,9 +9032,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.8615497"
-     inkscape:cx="120.23529"
-     inkscape:cy="816.60804"
+     inkscape:zoom="0.60920764"
+     inkscape:cx="-225.26675"
+     inkscape:cy="977.99713"
      inkscape:document-units="mm"
      inkscape:current-layer="layer4"
      showgrid="true"
@@ -9102,7 +9102,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -9121,51 +9121,36 @@
        inkscape:groupmode="layer"
        id="layer5"
        inkscape:label="frame"
-       style="display:none">
+       style="display:inline">
       <rect
-         style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.48899999;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="rect16350"
-         width="81.510529"
-         height="296.33487"
-         x="0.24473573"
-         y="0.42039219" />
-      <rect
-         style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.61908644;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="rect16352-1"
-         width="328.04044"
-         height="21.380913"
-         x="79.375"
-         y="275.5686" />
-      <rect
-         style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.57937604;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.64275956;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="rect16352"
          width="297.65625"
-         height="20.637506"
+         height="25.399973"
          x="-2.4632148e-14"
-         y="-123.15833" />
+         y="-123.6875" />
       <rect
-         style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.25192505;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="rect16373"
-         width="17.748075"
-         height="296.2753"
-         x="403.16965"
-         y="0.69567496"
-         ry="6.1907588e-07" />
-      <flowRoot
-         xml:space="preserve"
-         id="flowRoot2666-4-6"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:13.33333397px;line-height:1.25;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none"
-         transform="matrix(0.26458333,0,0,0.26458333,149.97494,-275.6139)"><flowRegion
-           id="flowRegion2668-2-2"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:13.33333397px;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"><rect
-             id="rect2670-9-5"
-             width="208.02937"
-             height="48.828941"
-             x="30"
-             y="602.51971"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:13.33333397px;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
-           id="flowPara4533">XXX KM DE CHEMINS &amp; SENTIERS</flowPara><flowPara
-           id="flowPara4535">YYY KM D'ITINÉRAIRES BALISÉS</flowPara></flowRoot>    </g>
+         style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.24621916;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect16350-2"
+         width="20.372911"
+         height="300.58652"
+         x="277.28333"
+         y="-98.287498" />
+      <rect
+         style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.24621916;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect16350-2-5"
+         width="20.372913"
+         height="300.58652"
+         x="-0.52915961"
+         y="-98.287498" />
+      <rect
+         style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.52888751;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect16350"
+         width="297.4115"
+         height="95.005264"
+         x="0.24473819"
+         y="201.74977" />
+    </g>
     <g
        inkscape:groupmode="layer"
        id="layer3"
@@ -11241,7 +11226,7 @@
          xml:space="preserve"
          id="flowRoot2608"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none"
-         transform="matrix(0.26458333,0,0,0.26458333,-42.542861,-116.78805)"><flowRegion
+         transform="matrix(0.26458333,0,0,0.26458333,-32.488691,-116.78805)"><flowRegion
            id="flowRegion2610"><rect
              id="rect2612"
              width="110.00001"
@@ -11326,7 +11311,21 @@
              x="1260"
              y="2.519685"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:12px;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;writing-mode:lr-tb;text-anchor:end" /></flowRegion><flowPara
-           id="flowPara4653">Carte éditée le 24/02/2021</flowPara></flowRoot>    </g>
+           id="flowPara4653">Carte éditée le 24/02/2021</flowPara></flowRoot>      <flowRoot
+         xml:space="preserve"
+         id="flowRoot2666-4-6"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:13.33333397px;line-height:1.25;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none"
+         transform="matrix(0.26458333,0,0,0.26458333,68.854331,-274.40584)"><flowRegion
+           id="flowRegion2668-2-2"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:13.33333397px;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"><rect
+             id="rect2670-9-5"
+             width="208.02937"
+             height="48.828941"
+             x="30"
+             y="602.51971"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:13.33333397px;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
+           id="flowPara4533">XXX KM DE CHEMINS &amp; SENTIERS</flowPara><flowPara
+           id="flowPara4535">YYY KM D'ITINÉRAIRES BALISÉS</flowPara></flowRoot>    </g>
     <g
        inkscape:groupmode="layer"
        id="layer6"
