@@ -29,8 +29,3 @@ The svg files that are produced with the OAM map style have a huge resolution to
 To fit these svg files in the template, scale the map by 18.3 %.
 
 
-# TODO
-
-- upd grid cross template
-- portrait template
-- legend

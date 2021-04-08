@@ -8,8 +8,29 @@ import numpy as np
 
 import parameters
 
+import sys
+sys.path.insert(0, '../..')
+from makeMap import make_map
 
-xmin, ymin, xmax, ymax = parameters.BBOX
+PAGE_WIDTH = 5950 #in meters in EPSG 3857 for a A3
+PAGE_HEIGHT = 8400 #in meters in EPSG 3857 for a A3
+SMALL_MARGIN = 400 #in meters in EPSG 3857 for a A3
+LARGE_MARGIN = 500 #in meters in EPSG 3857 for a A3
+CONTENT_MARGIN = 1900 #in meters in EPSG 3857 for a A3
+
+x_center, y_center = parameters.CENTER
+
+if parameters.ORIENTATION == 'LANDSCAPE':
+    x_min = x_center - PAGE_HEIGHT / 2 + CONTENT_MARGIN
+    y_min = y_center - PAGE_WIDTH / 2 + SMALL_MARGIN
+    x_max = x_center + PAGE_HEIGHT / 2 - SMALL_MARGIN
+    y_max = y_center + PAGE_WIDTH / 2 - LARGE_MARGIN
+else: # Default to 'PORTRAIT'
+    x_min = x_center - PAGE_WIDTH / 2 + SMALL_MARGIN
+    y_min = y_center - PAGE_HEIGHT / 2 + CONTENT_MARGIN
+    x_max = x_center + PAGE_WIDTH / 2 - SMALL_MARGIN
+    y_max = y_center + PAGE_HEIGHT / 2 - LARGE_MARGIN
+
 
 Y2K = datetime(year=2000, month=1, day=1)
 
@@ -47,12 +68,12 @@ marked_trails_subquery = """
 marked_trails_contains_query = """
 {0}
 AND ST_Contains(ST_SetSRID(ST_MakeBox2D(ST_Point({1}, {2}), ST_Point({3}, {4})), 3857 ), way);
-""".format(marked_trails_subquery, xmin, ymin, xmax, ymax)
+""".format(marked_trails_subquery, x_min, y_min, x_max, y_max)
 
 marked_trails_intersects_query = """
 {0}
 AND ST_Intersects(ST_SetSRID(ST_MakeBox2D(ST_Point({1}, {2}), ST_Point({3}, {4})), 3857 ), way);
-""".format(marked_trails_subquery, xmin, ymin, xmax, ymax)
+""".format(marked_trails_subquery, x_min, y_min, x_max, y_max)
 
 
 track_timestamp_query = """
@@ -62,7 +83,7 @@ track_timestamp_query = """
         highway IN ('track', 'path', 'footway', 'cycleway', 'bridleway')
         AND ST_Contains(ST_SetSRID(ST_MakeBox2D(ST_Point({0}, {1}), ST_Point({2}, {3})), 3857 ), way)
     ;
-""".format(xmin, ymin, xmax, ymax)
+""".format(x_min, y_min, x_max, y_max)
 
 marked_trails_timestamp_query = """
     SELECT osm_timestamp
@@ -72,7 +93,7 @@ marked_trails_timestamp_query = """
         AND network IN ('lwn')
         AND ST_Contains(ST_SetSRID(ST_MakeBox2D(ST_Point({0}, {1}), ST_Point({2}, {3})), 3857 ), way)
     ;
-""".format(xmin, ymin, xmax, ymax)
+""".format(x_min, y_min, x_max, y_max)
 
 track_length_query = """
     SELECT ST_Length(ST_Transform(way, 31370))
@@ -81,7 +102,7 @@ track_length_query = """
         highway IN ('track', 'path', 'footway', 'cycleway', 'bridleway')
         AND ST_Contains(ST_SetSRID(ST_MakeBox2D(ST_Point({0}, {1}), ST_Point({2}, {3})), 3857 ), way)
     ;
-""".format(xmin, ymin, xmax, ymax)
+""".format(x_min, y_min, x_max, y_max)
 
 marked_trails_distance_query = """
     SELECT distance
@@ -90,7 +111,7 @@ marked_trails_distance_query = """
         route IN ('hiking', 'foot')
         AND network IN ('lwn')
         AND ST_Intersects(ST_SetSRID(ST_MakeBox2D(ST_Point({0}, {1}), ST_Point({2}, {3})), 3857 ), way)
-""".format(xmin, ymin, xmax, ymax)
+""".format(x_min, y_min, x_max, y_max)
 
 
 def generate_marked_trails_content():
@@ -298,7 +319,7 @@ if __name__ == '__main__':
         # user=parameters.db_user,
         # password=parameters.db_pwd
     )
-    print("--- BBOX is: {} ---".format(parameters.BBOX))
+    print("--- Center is: {} ---".format(parameters.CENTER))
 
     generate_marked_trails_content()
     tracks_timestamp_statistics()
@@ -307,6 +328,19 @@ if __name__ == '__main__':
     compute_marked_trails_length()
 
     conn.close()
+
+    print("--- print map ---")
+    oam_mapnik_file = os.path.abspath('../../osm2pgsql/OpenArdenneMap.xml')
+    make_map(
+        'OAM_20000_{}_{}.svg'.format(parameters.TITLE, parameters.ORIENTATION),
+         20000,
+         x_center,
+         y_center,
+         parameters.ORIENTATION,
+         oam_mapnik_file
+    )
+
+
 
 
 
