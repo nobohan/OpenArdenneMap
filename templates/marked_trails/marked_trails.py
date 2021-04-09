@@ -12,11 +12,11 @@ import sys
 sys.path.insert(0, '../..')
 from makeMap import make_map
 
-PAGE_WIDTH = 5950 #in meters in EPSG 3857 for a A3
-PAGE_HEIGHT = 8400 #in meters in EPSG 3857 for a A3
-SMALL_MARGIN = 400 #in meters in EPSG 3857 for a A3
-LARGE_MARGIN = 500 #in meters in EPSG 3857 for a A3
-CONTENT_MARGIN = 1900 #in meters in EPSG 3857 for a A3
+PAGE_WIDTH = 9250 #in meters in EPSG 3857 for a A3
+PAGE_HEIGHT = 13060 #in meters in EPSG 3857 for a A3
+SMALL_MARGIN = 622 #in meters in EPSG 3857 for a A3
+LARGE_MARGIN = 778 #in meters in EPSG 3857 for a A3
+CONTENT_MARGIN = 2955 #in meters in EPSG 3857 for a A3
 
 x_center, y_center = parameters.CENTER
 
@@ -29,7 +29,7 @@ else: # Default to 'PORTRAIT'
     x_min = x_center - PAGE_WIDTH / 2 + SMALL_MARGIN
     y_min = y_center - PAGE_HEIGHT / 2 + CONTENT_MARGIN
     x_max = x_center + PAGE_WIDTH / 2 - SMALL_MARGIN
-    y_max = y_center + PAGE_HEIGHT / 2 - LARGE_MARGIN
+    y_max = y_center + PAGE_HEIGHT / 2 - SMALL_MARGIN
 
 
 Y2K = datetime(year=2000, month=1, day=1)
@@ -117,6 +117,8 @@ marked_trails_distance_query = """
 def generate_marked_trails_content():
     """ Generate the marked trails list """
 
+    print(x_min, y_min, x_max, y_max)
+
     LEFT_MARGIN = 10
     LINE_HEIGHT = 12
     SMALL_LINE_HEIGHT_FACTOR = 0.4
@@ -124,7 +126,7 @@ def generate_marked_trails_content():
     SYMBOL_MARGIN = 18
     Y_SCALE = LINE_HEIGHT * 2 + PARAGRAPH_MARGIN
 
-    dwg = svgwrite.Drawing('marked-trails.svg', size=('8cm', '12cm'), profile='full', debug=True)
+    dwg = svgwrite.Drawing('marked-trails-{}.svg'.format(parameters.TITLE), size=('8cm', '12cm'), profile='full', debug=True)
     dwg.embed_font(name="Alfphabet", filename='../../fonts/Alfphabet-III.otf')
     dwg.embed_stylesheet("""
     .alfphabet6 {
@@ -331,14 +333,14 @@ if __name__ == '__main__':
 
     print("--- print map ---")
     oam_mapnik_file = os.path.abspath('../../osm2pgsql/OpenArdenneMap.xml')
-    make_map(
-        'OAM_20000_{}_{}.svg'.format(parameters.TITLE, parameters.ORIENTATION),
-         20000,
-         x_center,
-         y_center,
-         parameters.ORIENTATION,
-         oam_mapnik_file
-    )
+    # make_map(
+    #     'OAM_20000_{}_{}.svg'.format(parameters.TITLE, parameters.ORIENTATION),
+    #      20000,
+    #      x_center,
+    #      y_center,
+    #      parameters.ORIENTATION,
+    #      oam_mapnik_file
+    # )
 
 
 
