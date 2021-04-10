@@ -333,14 +333,14 @@ if __name__ == '__main__':
 
     print("--- print map ---")
     oam_mapnik_file = os.path.abspath('../../osm2pgsql/OpenArdenneMap.xml')
-    # make_map(
-    #     'OAM_20000_{}_{}.svg'.format(parameters.TITLE, parameters.ORIENTATION),
-    #      20000,
-    #      x_center,
-    #      y_center,
-    #      parameters.ORIENTATION,
-    #      oam_mapnik_file
-    # )
+    make_map(
+        'OAM_20000_{}_{}.svg'.format(parameters.TITLE, parameters.ORIENTATION),
+         20000,
+         x_center,
+         y_center,
+         parameters.ORIENTATION,
+         oam_mapnik_file
+    )
 
 
 
