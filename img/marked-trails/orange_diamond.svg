@@ -15,7 +15,7 @@
    version="1.1"
    id="svg836"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="blue_rectangle.svg">
+   sodipodi:docname="blue_diamond.svg">
   <defs
      id="defs830" />
   <sodipodi:namedview
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="7.919596"
-     inkscape:cx="25.728723"
-     inkscape:cy="-8.5075999"
+     inkscape:zoom="11.2"
+     inkscape:cx="51.722494"
+     inkscape:cy="-0.92957516"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -57,14 +57,26 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-48.747918,-214.72746)">
-    <rect
-       style="fill:#00629b;fill-opacity:1;stroke:#ffffff;stroke-width:0.40000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="svg_5"
-       height="7.9891987"
-       width="13.481773"
-       y="214.92746"
-       x="48.947918"
-       stroke-linecap="null"
-       stroke-linejoin="null" />
+    <g
+       transform="matrix(0.03886956,0,0,0.03886956,48.92078,215.12077)"
+       id="g1426"
+       style="stroke:none;stroke-opacity:1">
+      <title
+         id="title1422">Layer 1</title>
+      <rect
+         id="svg_2"
+         height="200"
+         width="350"
+         y="0"
+         x="0"
+         style="fill:none;stroke:none;stroke-width:2;stroke-opacity:1" />
+      <path
+         id="svg_4"
+         d="M 18.531891,100.00006 175.00034,22.5 331.46631,100.00006 175.00034,177.50003 Z"
+         stroke-linecap="null"
+         stroke-linejoin="null"
+         inkscape:connector-curvature="0"
+         style="fill:#ff6600;stroke:none;stroke-width:0;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
   </g>
 </svg>
