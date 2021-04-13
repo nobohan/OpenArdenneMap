@@ -256,20 +256,22 @@ def days_since_y2k_to_date(days):
 
 def print_timestamp_statistics(feature_timestamp):
     feature_timestamp_as_days = [timestamp_to_age_in_days_since_y2k(t[0]) for t in feature_timestamp]
-    avg_age_in_days = sum(feature_timestamp_as_days) / len(feature_timestamp_as_days)
-    min_age_in_days = min(feature_timestamp_as_days)
-    max_age_in_days = max(feature_timestamp_as_days)
-    median_age_in_days = np.median(feature_timestamp_as_days)
 
-    avg_date = days_since_y2k_to_date(avg_age_in_days)
-    min_date = days_since_y2k_to_date(min_age_in_days)
-    max_date = days_since_y2k_to_date(max_age_in_days)
-    median_date = days_since_y2k_to_date(median_age_in_days)
+    if len(feature_timestamp_as_days) > 0:
+        avg_age_in_days = sum(feature_timestamp_as_days) / len(feature_timestamp_as_days)
+        min_age_in_days = min(feature_timestamp_as_days)
+        max_age_in_days = max(feature_timestamp_as_days)
+        median_age_in_days = np.median(feature_timestamp_as_days)
 
-    print("average date: {}".format(avg_date.strftime('%d-%m-%Y')))
-    print("median date: {}".format(median_date.strftime('%d-%m-%Y')))
-    print("oldest date: {}".format(min_date.strftime('%d-%m-%Y')))
-    print("newest date: {}".format(max_date.strftime('%d-%m-%Y')))
+        avg_date = days_since_y2k_to_date(avg_age_in_days)
+        min_date = days_since_y2k_to_date(min_age_in_days)
+        max_date = days_since_y2k_to_date(max_age_in_days)
+        median_date = days_since_y2k_to_date(median_age_in_days)
+
+        print("average date: {}".format(avg_date.strftime('%d-%m-%Y')))
+        print("median date: {}".format(median_date.strftime('%d-%m-%Y')))
+        print("oldest date: {}".format(min_date.strftime('%d-%m-%Y')))
+        print("newest date: {}".format(max_date.strftime('%d-%m-%Y')))
 
 def tracks_timestamp_statistics():
     """ Compute timestamp statistics of the tracks within the map """
