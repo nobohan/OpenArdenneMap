@@ -61,8 +61,8 @@ marked_trails_subquery = """
         END shield_uri
     FROM planet_osm_line
     WHERE
-        route IN ('hiking', 'foot')
-        AND network IN ('lwn')
+        (route ~ 'hiking' OR route ~ 'foot')
+        AND network IN ('lwn', 'rwn')
 """
 
 marked_trails_contains_query = """
@@ -169,7 +169,7 @@ def generate_marked_trails_content():
 
         ascent = '{} m'.format(mt[3]) if mt[3] is not None else ''
         descent = '{} m'.format(mt[4]) if mt[4] is not None else ''
-        ascent_descent = ascent if ascent == descent else '{1},{2}'.format(ascent, descent)
+        ascent_descent = ascent if ascent == descent else '{},{}'.format(ascent, descent)
         distance = '{} km'.format(mt[5]) if mt[5] is not None else ''
         start_point = mt[7]
 

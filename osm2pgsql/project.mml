@@ -601,7 +601,7 @@
                             '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 1) || '_rectangle.svg'
                     END shield_uri
                 FROM planet_osm_line
-                WHERE route in ('hiking', 'foot')
+                WHERE route ~ 'hiking' OR route ~ 'foot'
             ) AS data",
         "type": "postgis"
       },
@@ -625,7 +625,7 @@
              FROM (
                 SELECT ST_Union(ST_Buffer(ST_StartPoint(way), 100)) AS geom
                 FROM planet_osm_line
-                WHERE route in ('hiking', 'foot') AND network IN ('lwn')) AS start_point
+                WHERE (route ~ 'hiking' OR route ~ 'foot') AND network IN ('lwn')) AS start_point
             ) AS data",
         "type": "postgis"
       },
