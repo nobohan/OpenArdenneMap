@@ -54,10 +54,15 @@ marked_trails_subquery = """
                 'white'
         END text_color,
         CASE
-            WHEN SPLIT_PART("osmc:symbol",':', 3) <> '' THEN
-                SPLIT_PART("osmc:symbol",':', 3) || '.svg'
+            WHEN SPLIT_PART(\"osmc:symbol\",':', 3) <> '' THEN
+                CASE
+                    WHEN SPLIT_PART(\"osmc:symbol\",':', 3) = 'white_stripe' THEN
+                       SPLIT_PART(\"osmc:symbol\",':', 1) || '_invstripe.svg'
+                    ELSE
+                        SPLIT_PART(\"osmc:symbol\",':', 3) || '.svg'
+                END
             ELSE
-                SPLIT_PART("osmc:symbol",':', 1) || '_rectangle.svg'
+               SPLIT_PART(\"osmc:symbol\",':', 1) || '_rectangle.svg'
         END shield_uri
     FROM planet_osm_line
     WHERE
@@ -159,6 +164,8 @@ def generate_marked_trails_content():
 
 
     def add_marked_trail_to_svg(mt, i):
+
+        print(mt)
         """ Add a single marked trail mt to the svg at the position index i """
 
         if mt[9] is not None:
@@ -343,6 +350,7 @@ if __name__ == '__main__':
          parameters.ORIENTATION,
          oam_mapnik_file
     )
+
 
 
 
