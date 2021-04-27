@@ -164,15 +164,16 @@ def generate_marked_trails_content():
 
 
     def add_marked_trail_to_svg(mt, i):
-
-        print(mt)
         """ Add a single marked trail mt to the svg at the position index i """
 
+        paragraph6 = dwg.add(dwg.g(class_="alfphabet6", ))
+        paragraph8 = dwg.add(dwg.g(class_="alfphabet8", ))
+        paragraph10 = dwg.add(dwg.g(class_="alfphabet10", ))
         if mt[9] is not None:
             marker_text_color = mt[10] if mt[10] is not None else 'black'
-            PARAGRAPH6.add(dwg.text(str(mt[9]), insert=(LEFT_MARGIN + 6, i*Y_SCALE + LINE_HEIGHT - 1.5), fill=marker_text_color))
+            paragraph6.add(dwg.text(str(mt[9]), insert=(LEFT_MARGIN + 6, i*Y_SCALE + LINE_HEIGHT - 1.5), fill=marker_text_color))
 
-        PARAGRAPH10.add(dwg.text(mt[0], insert=(LEFT_MARGIN + SYMBOL_MARGIN, i*Y_SCALE + LINE_HEIGHT), fill='black'))
+        paragraph10.add(dwg.text(mt[0], insert=(LEFT_MARGIN + SYMBOL_MARGIN, i*Y_SCALE + LINE_HEIGHT), fill='black'))
 
         ascent = '{} m'.format(mt[3]) if mt[3] is not None else ''
         descent = '{} m'.format(mt[4]) if mt[4] is not None else ''
@@ -188,7 +189,7 @@ def generate_marked_trails_content():
         else:
             text = start_point
 
-        PARAGRAPH8.add(dwg.text(text, insert=(LEFT_MARGIN, i*Y_SCALE + LINE_HEIGHT * 2), fill='black'))
+        paragraph8.add(dwg.text(text, insert=(LEFT_MARGIN, i*Y_SCALE + LINE_HEIGHT * 2), fill='black'))
 
         #dwg.add(dwg.line((0, i*Y_SCALE), (10, i*Y_SCALE), stroke=svgwrite.rgb(10, 10, 16, '%')))
 
@@ -222,12 +223,10 @@ def generate_marked_trails_content():
     # Add svg text
     i = 0
 
-    PARAGRAPH6 = dwg.add(dwg.g(class_="alfphabet6", ))
-    PARAGRAPH8 = dwg.add(dwg.g(class_="alfphabet8", ))
-    PARAGRAPH10 = dwg.add(dwg.g(class_="alfphabet10", ))
+    paragraph10_0 = dwg.add(dwg.g(class_="alfphabet10", ))
 
     MT_CONTAINS_TITLE = 'ITINÉRAIRES COMPLETS SUR LA CARTE:'
-    PARAGRAPH10.add(dwg.text(MT_CONTAINS_TITLE, insert=(LEFT_MARGIN, i*Y_SCALE + LINE_HEIGHT), fill='black'))
+    paragraph10_0.add(dwg.text(MT_CONTAINS_TITLE, insert=(LEFT_MARGIN, i*Y_SCALE + LINE_HEIGHT), fill='black'))
     i = i + SMALL_LINE_HEIGHT_FACTOR
 
     for mt in marked_trails_contains:
@@ -238,7 +237,7 @@ def generate_marked_trails_content():
             i = i + 1
 
     OTHERS_MT_TITLE = 'AUTRES ITINÉRAIRES SUR LA CARTE:'
-    PARAGRAPH10.add(dwg.text(OTHERS_MT_TITLE, insert=(LEFT_MARGIN, i*Y_SCALE + LINE_HEIGHT), fill='black'))
+    paragraph10_0.add(dwg.text(OTHERS_MT_TITLE, insert=(LEFT_MARGIN, i*Y_SCALE + LINE_HEIGHT), fill='black'))
     i = i + SMALL_LINE_HEIGHT_FACTOR
 
     for mt in marked_trails_intersects:
