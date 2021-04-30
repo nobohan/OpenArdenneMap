@@ -178,7 +178,7 @@ def generate_marked_trails_content():
         ascent = '{} m'.format(mt[3]) if mt[3] is not None else ''
         descent = '{} m'.format(mt[4]) if mt[4] is not None else ''
         ascent_descent = ascent if ascent == descent else '{},{}'.format(ascent, descent)
-        distance = '{} km'.format(mt[5]) if mt[5] is not None else ''
+        distance = '{} km'.format(mt[5]) if mt[5] is not None else '{0:.1f} km'.format(mt[6])
         start_point = mt[7]
 
         if distance:
