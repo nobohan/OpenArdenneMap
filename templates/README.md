@@ -17,6 +17,8 @@ source bin/activate
 
 Then you have to manually import the svg files (the map and the marked trails list) into a svg template.
 
+/!\ You need to import OSM data using `osm2pgsql` with the flag `--extra-attributes` to have required fields such as the osm_timestamp that is used to know the average date of the tracks!
+
 
 
 1) Select your place
