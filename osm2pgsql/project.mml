@@ -583,6 +583,15 @@
                     distance || ' km' AS distance_km,
                     SPLIT_PART(\"osmc:symbol\",':', 1) AS color,
                     CASE
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'blue' THEN '#00629b'
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'red' THEN '#d22730'
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'green' THEN '#009739'
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'orange' THEN '#ff6600'
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'yellow' THEN '#fedd00'
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'purple' THEN '#ad629b'
+                        ELSE '#ff6600'
+                    END html_color,
+                    CASE
                         WHEN LENGTH(SPLIT_PART(\"osmc:symbol\",':', 4)) < 4 THEN
                             SPLIT_PART(\"osmc:symbol\",':', 4)
                         ELSE

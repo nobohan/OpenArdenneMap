@@ -96,6 +96,7 @@
 
 /* Road width variables */
 @huge: 16;
+@big: 12;
 @large: 10;
 @medium: 8;
 @small: 5;
@@ -114,4 +115,4 @@
 @pitch_marker: 40;
 @windmill_marker: 32;
 @viewpoint_marker: 42;
-@trail_marker: 120;
+@trail_marker: 200;
