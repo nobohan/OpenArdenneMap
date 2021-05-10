@@ -742,7 +742,7 @@
         text-face-name: @sans;
         text-placement: line;
         text-dy: -8;
-        text-fill: darken(@green, 60%);
+        text-fill: '[html_color]';
         text-halo-fill: #ffffff;
         text-halo-radius:2;
     }
@@ -759,7 +759,7 @@
         marker-file: url(../img/trail_start.svg);
         marker-allow-overlap: true;
 
-        text-name: "'Départ Prom.'";
+        text-name: "'Départ Prom. '";
         text-allow-overlap: true;
         text-dy: -26;
         text-dx: -20;
@@ -767,7 +767,7 @@
         text-character-spacing: 1;
         text-halo-radius: 2;
         text-fill: @black;
-        text-halo-fill: darken(@green, 60%);
+        text-halo-fill: @white;
     }
 }
 
