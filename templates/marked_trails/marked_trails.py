@@ -304,6 +304,14 @@ def compute_tracks_length():
     print("--- Tracks length ---")
     print("Total track length: {} km".format(sum_track_length / 1000) )
 
+def isfloat(value):
+  try:
+    float(value)
+    return True
+  except ValueError:
+    return False
+
+
 def compute_marked_trails_length():
     cursor = conn.cursor()
     cursor.execute(marked_trails_contains_query)
@@ -311,7 +319,7 @@ def compute_marked_trails_length():
     sum_distance = 0
 
     for mt in marked_trails:
-        if mt[5] is not None: # official distance
+        if mt[5] is not None and isfloat(mt[5]): # official distance
             sum_distance = sum_distance + float(mt[5])
         else:
             if mt[6] is not None: # computed distance
