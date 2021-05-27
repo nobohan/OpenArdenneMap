@@ -224,7 +224,6 @@ def generate_marked_trails_content():
     i = 0
 
     paragraph10_0 = dwg.add(dwg.g(class_="alfphabet10", ))
-
     MT_CONTAINS_TITLE = 'ITINÉRAIRES COMPLETS SUR LA CARTE:'
     paragraph10_0.add(dwg.text(MT_CONTAINS_TITLE, insert=(LEFT_MARGIN, i*Y_SCALE + LINE_HEIGHT), fill='black'))
     i = i + SMALL_LINE_HEIGHT_FACTOR
@@ -236,8 +235,9 @@ def generate_marked_trails_content():
             add_marked_trail_to_svg(mt, i)
             i = i + 1
 
+    paragraph10_1 = dwg.add(dwg.g(class_="alfphabet10", ))
     OTHERS_MT_TITLE = 'AUTRES ITINÉRAIRES SUR LA CARTE:'
-    paragraph10_0.add(dwg.text(OTHERS_MT_TITLE, insert=(LEFT_MARGIN, i*Y_SCALE + LINE_HEIGHT), fill='black'))
+    paragraph10_1.add(dwg.text(OTHERS_MT_TITLE, insert=(LEFT_MARGIN, i*Y_SCALE + LINE_HEIGHT), fill='black'))
     i = i + SMALL_LINE_HEIGHT_FACTOR
 
     for mt in marked_trails_intersects:
@@ -274,7 +274,7 @@ def print_timestamp_statistics(feature_timestamp):
         max_date = days_since_y2k_to_date(max_age_in_days)
         median_date = days_since_y2k_to_date(median_age_in_days)
 
-        print("average date: {}".format(avg_date.strftime('%d-%m-%Y')))
+        print("average date: {}, {}".format(avg_date.strftime('%d-%m-%Y'), avg_date.strftime('%B-%Y')))
         print("median date: {}".format(median_date.strftime('%d-%m-%Y')))
         print("oldest date: {}".format(min_date.strftime('%d-%m-%Y')))
         print("newest date: {}".format(max_date.strftime('%d-%m-%Y')))
