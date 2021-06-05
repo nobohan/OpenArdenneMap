@@ -8716,9 +8716,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.4368305"
-     inkscape:cx="1236.9373"
-     inkscape:cy="998.31048"
+     inkscape:zoom="0.60920763"
+     inkscape:cx="611.28888"
+     inkscape:cy="662.89449"
      inkscape:document-units="mm"
      inkscape:current-layer="layer5"
      showgrid="true"
@@ -8736,6 +8736,16 @@
        position="7.9375,304.27083"
        orientation="1,0"
        id="guide4513"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="38.629167,283.10417"
+       orientation="0,1"
+       id="guide4674"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-136.26041,287.07292"
+       orientation="1,0"
+       id="guide4676"
        inkscape:locked="false" />
   </sodipodi:namedview>
   <metadata
@@ -10649,12 +10659,12 @@
          xml:space="preserve"
          id="flowRoot2563"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:3.17499995px;line-height:1.25;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         transform="translate(126.77031,-276.92707)"><flowRegion
+         transform="translate(113.73305,-275.49311)"><flowRegion
            id="flowRegion2565"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:3.17499995px;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;writing-mode:lr-tb;text-anchor:end;stroke-width:0.26458332"><rect
              id="rect2567"
-             width="74.306686"
-             height="11.445663"
+             width="88.865112"
+             height="12.343747"
              x="201.08333"
              y="282.44791"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:3.17499995px;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;writing-mode:lr-tb;text-anchor:end;stroke-width:0.07000434" /></flowRegion><flowPara
@@ -10664,7 +10674,7 @@
          xml:space="preserve"
          id="flowRoot16383"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:37.33333206px;line-height:1.25;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none"
-         transform="matrix(0.26458333,0,0,0.26458333,-114.05387,-38.643375)"><flowRegion
+         transform="matrix(0.26458333,0,0,0.26458333,-114.21674,-38.249929)"><flowRegion
            id="flowRegion16385"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:37.33333206px;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"><rect
              id="rect16387"
@@ -10677,7 +10687,7 @@
          xml:space="preserve"
          id="flowRoot2608"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none"
-         transform="matrix(0.26458333,0,0,0.26458333,56.094187,4.3836894)"><flowRegion
+         transform="matrix(0.26458333,0,0,0.26458333,56.017412,5.1514435)"><flowRegion
            id="flowRegion2610"><rect
              id="rect2612"
              width="110.00001"
@@ -10711,7 +10721,7 @@
              x="30"
              y="602.51971"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:13.33333397px;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
-           id="flowPara2738">ITINÉRAIRES PÉDESTRES BALISÉS:</flowPara><flowPara
+           id="flowPara2738">ITINÉRAIRES PÉDESTRES BALISÉS*:</flowPara><flowPara
            id="flowPara2740" /></flowRoot>      <flowRoot
          xml:space="preserve"
          id="flowRoot2742"
@@ -10719,12 +10729,12 @@
          transform="matrix(0.26458333,0,0,0.26458333,2.9293156,-2.1733631)"><flowRegion
            id="flowRegion2744"><rect
              id="rect2746"
-             width="190"
-             height="40"
+             width="253.92857"
+             height="118.21429"
              x="20"
              y="102.51968" /></flowRegion><flowPara
-           id="flowPara2748"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:10.66666698px;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">(distance, dénivellé, coordonnées du départ)</flowPara></flowRoot>      <flowRoot
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:10.66666698px;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="flowPara4583">(distance, dénivellé, coordonnées du départ   )</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
          id="flowRoot4537"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
@@ -10766,7 +10776,7 @@
          xml:space="preserve"
          id="flowRoot2666-4-6"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:13.33333397px;line-height:1.25;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none"
-         transform="matrix(0.26458333,0,0,0.26458333,73.84524,-154.28409)"><flowRegion
+         transform="matrix(0.26458333,0,0,0.26458333,74.930718,-153.26633)"><flowRegion
            id="flowRegion2668-2-2"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:13.33333397px;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"><rect
              id="rect2670-9-5"
@@ -10776,7 +10786,33 @@
              y="602.51971"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:13.33333397px;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
            id="flowPara4533">XXX KM DE CHEMINS &amp; SENTIERS</flowPara><flowPara
-           id="flowPara4535">YYY KM D'ITINÉRAIRES BALISÉS</flowPara></flowRoot>    </g>
+           id="flowPara4535">YYY KM D'ITINÉRAIRES BALISÉS</flowPara></flowRoot>      <flowRoot
+         xml:space="preserve"
+         id="flowRoot4585"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:0.69999999;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         transform="matrix(0.26458333,0,0,0.26458333,0.21715366,87.797504)"><flowRegion
+           id="flowRegion4587"
+           style="line-height:0.69999999"><rect
+             id="rect4589"
+             width="245"
+             height="95"
+             x="30"
+             y="177.51968"
+             style="line-height:0.69999999" /></flowRegion><flowPara
+           id="flowPara4591"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:9.33333302px;line-height:0.69999999;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">*Liste des itinéraires balisés connus sur l'emprise de la carte. Le marquage de certains itinéraires peut être absent, et a contrario, certains itinéraires balisés existants peuvent être non renseignés sur cette carte! </flowPara></flowRoot>      <path
+         style="fill:none;stroke:#000000;stroke-width:0.25936431;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 52.3875,28.7125 v -2.415357 l 1.058333,0.381373 -1.058333,0.381371"
+         id="path832"
+         inkscape:connector-curvature="0" />
+      <rect
+         style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:none;stroke-width:0.74095374;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect834"
+         width="4.7628655"
+         height="21.432894"
+         x="52.236259"
+         y="20.572578" />
+    </g>
     <g
        inkscape:groupmode="layer"
        id="layer6"
