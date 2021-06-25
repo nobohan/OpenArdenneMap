@@ -8716,16 +8716,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.60920763"
-     inkscape:cx="611.28888"
-     inkscape:cy="662.89449"
+     inkscape:zoom="3.4461988"
+     inkscape:cx="1346.4763"
+     inkscape:cy="312.35321"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer5"
+     inkscape:current-layer="layer4"
      showgrid="true"
-     inkscape:window-width="2505"
-     inkscape:window-height="1412"
+     inkscape:window-width="1865"
+     inkscape:window-height="1025"
      inkscape:window-x="55"
-     inkscape:window-y="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      showguides="true"
      inkscape:guide-bbox="true">
@@ -8773,7 +8773,8 @@
        inkscape:groupmode="layer"
        id="layer5"
        inkscape:label="frame"
-       style="display:inline">
+       style="display:inline"
+       sodipodi:insensitive="true">
       <rect
          style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.49461609;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="rect16350"
@@ -10772,7 +10773,7 @@
              x="1260"
              y="2.519685"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:12px;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;writing-mode:lr-tb;text-anchor:end" /></flowRegion><flowPara
-           id="flowPara4653">Carte éditée le 24/02/2021</flowPara></flowRoot>      <flowRoot
+           id="flowPara4653">Carte éditée le 24/06/2021</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
          id="flowRoot2666-4-6"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:13.33333397px;line-height:1.25;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none"
@@ -10812,7 +10813,21 @@
          height="21.432894"
          x="52.236259"
          y="20.572578" />
-    </g>
+      <flowRoot
+         xml:space="preserve"
+         id="flowRoot2620-0-1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:12px;line-height:1.25;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none"
+         transform="matrix(0,0.26458333,-0.26458333,0,411.02254,-159.09691)"><flowRegion
+           id="flowRegion2622-7-4"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:12px;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;writing-mode:lr-tb;text-anchor:end"><rect
+             id="rect2624-2-6"
+             width="260.00003"
+             height="34"
+             x="1260"
+             y="2.519685"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:12px;font-family:Alfphabet;-inkscape-font-specification:'Alfphabet, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;writing-mode:lr-tb;text-anchor:end" /></flowRegion><flowPara
+           id="flowPara2632-9-9" /><flowPara
+           id="flowPara17554-9-4">+ de cartes sur hiking.osm.be !</flowPara></flowRoot>    </g>
     <g
        inkscape:groupmode="layer"
        id="layer6"
