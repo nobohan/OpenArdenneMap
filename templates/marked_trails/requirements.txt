@@ -1,4 +1,4 @@
 numpy==1.19.5
-psycopg2==2.8.6
+psycopg2==2.8.4
 svgwrite==1.4.1
 Wand==0.6.5
