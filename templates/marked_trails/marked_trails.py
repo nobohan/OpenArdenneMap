@@ -152,11 +152,10 @@ def generate_marked_trails_content():
     def insert_svg_image(dwg, filename, x, y, width, height):
         """ Insert a SVG image into the drawing at position x and y """
         img = Image(filename=filename)
-        image_data = img.make_blob()
+        image_data = img.make_blob(format="png")
         encoded = base64.b64encode(image_data).decode()
-        svgdata = 'data:image/svg+xml;base64,{}'.format(encoded)
+        svgdata = 'data:image/png;base64,{}'.format(encoded)
         image = dwg.add(dwg.image(href=(svgdata), insert=(x,y), height=height, width=width))
-        #image = dwg.add(dwg.image(href=filename, insert=(x,y))) # also works
 
     def add_marked_trail_images(i, symbol_path):
         """ Add a single marked trail mt images to the svg at the position index i """
