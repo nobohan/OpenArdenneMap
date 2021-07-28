@@ -53,7 +53,7 @@ The map grid is made using the map composer of QGIS.
 
 The marked trail list is made by querying the OSM database and writing a list of marked trails in a svg file.
 
-See ./marked_trails/. There is a small script runnning in a virtual env.
+See ./marked_trails/. There is a small script running in a virtual env.
 
 ## Why this scale factor of 18%
 
