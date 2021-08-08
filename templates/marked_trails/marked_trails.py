@@ -346,10 +346,10 @@ if __name__ == '__main__':
 
     conn.close()
 
-    print("--- print map ---")
-    oam_mapnik_file = os.path.abspath('../../osm2pgsql/OpenArdenneMap.xml')
+    print("--- print label map ---")
+    oam_mapnik_file = os.path.abspath('../../osm2pgsql/OpenArdenneMap-labels.xml')
     make_map(
-        'OAM_20000_{}_{}.svg'.format(parameters.TITLE, parameters.ORIENTATION),
+        'OAM_20000_{}_{}_labels.svg'.format(parameters.TITLE, parameters.ORIENTATION),
          20000,
          x_center,
          y_center,
@@ -357,6 +357,16 @@ if __name__ == '__main__':
          oam_mapnik_file
     )
 
+    print("--- print background map ---")
+    oam_mapnik_file = os.path.abspath('../../osm2pgsql/OpenArdenneMap-background.xml')
+    make_map(
+        'OAM_20000_{}_{}_background.svg'.format(parameters.TITLE, parameters.ORIENTATION),
+         20000,
+         x_center,
+         y_center,
+         parameters.ORIENTATION,
+         oam_mapnik_file
+    )
 
 
 

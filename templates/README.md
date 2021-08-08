@@ -62,3 +62,9 @@ The svg files that are produced with the OAM map style have a huge resolution to
 To fit these svg files in the template, scale the map by **18 %**.
 
 
+## Différenciation labels <> background
+
+```
+carto osm2pgsql/project-labels.mml > osm2pgsql/OpenArdenneMap-labels.xml
+carto osm2pgsql/project-background.mml > osm2pgsql/OpenArdenneMap-background.xml
+```

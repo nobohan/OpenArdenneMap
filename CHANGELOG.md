@@ -1,3 +1,18 @@
+## v0.6.0 summer2021
+
+### Description
+
+
+### Changes
+- fix curved labels for water areas (lakes, ponds, ...);
+- better distinction between primary and secondary roads, including reviewing bridges
+- change 'Ruisseau' abbreviation to 'Rau'
+- distinct labels for hamlet from other small places
+- better area-dependent labels for forested areas
+- output a label and a background layers (for templates)
+
+
+
 ## v0.5.0 marked-trails
 
 ### Description
