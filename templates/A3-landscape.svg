@@ -10654,16 +10654,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.4368305"
-     inkscape:cx="241.99854"
-     inkscape:cy="165.88519"
+     inkscape:zoom="0.86154969"
+     inkscape:cx="1128.4781"
+     inkscape:cy="427.2374"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer9"
      showgrid="true"
-     inkscape:window-width="1866"
-     inkscape:window-height="983"
+     inkscape:window-width="2506"
+     inkscape:window-height="1403"
      inkscape:window-x="54"
-     inkscape:window-y="27"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      showguides="true"
      inkscape:guide-bbox="true">
@@ -10706,7 +10706,16 @@
   <g
      inkscape:groupmode="layer"
      id="layer7"
-     inkscape:label="map" />
+     inkscape:label="map">
+    <g
+       inkscape:groupmode="layer"
+       id="layer8"
+       inkscape:label="background" />
+    <g
+       inkscape:groupmode="layer"
+       id="layer9"
+       inkscape:label="labels" />
+  </g>
   <g
      inkscape:label="Layout"
      inkscape:groupmode="layer"
