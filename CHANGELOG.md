@@ -2,6 +2,7 @@
 
 ### Description
 
+Small fixes and adaptations of the style. Add the possibility of outputting a label-only and a background basemap for manual editing. Add a better area-dependent labelling size for forested areas.
 
 ### Changes
 - fix curved labels for water areas (lakes, ponds, ...);
@@ -10,7 +11,6 @@
 - distinct labels for hamlet from other small places
 - better area-dependent labels for forested areas
 - output a label and a background layers (for templates)
-
 
 
 ## v0.5.0 marked-trails
