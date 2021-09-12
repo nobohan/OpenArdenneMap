@@ -580,7 +580,10 @@
             "(
                 SELECT
                     way, name, network, signed_direction,
-                    distance || ' km' AS distance_km,
+                    CASE 
+                        WHEN distance LIKE '%km' THEN distance
+                        ELSE distance || ' km'
+                    END distance_km,
                     SPLIT_PART(\"osmc:symbol\",':', 1) AS color,
                     CASE
                         WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'blue' THEN '#00629b'
