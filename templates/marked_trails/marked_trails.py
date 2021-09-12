@@ -1,4 +1,3 @@
-from psycopg2 import connect
 import svgwrite
 import base64
 import os
@@ -8,10 +7,6 @@ import numpy as np
 import shutil
 
 import parameters
-
-import sys
-sys.path.insert(0, '../..')
-from makeMap import make_map
 
 PAGE_WIDTH = 9250 #in meters in EPSG 3857 for a A3
 PAGE_HEIGHT = 13060 #in meters in EPSG 3857 for a A3
@@ -122,7 +117,7 @@ marked_trails_distance_query = """
 """.format(x_min, y_min, x_max, y_max)
 
 
-def generate_marked_trails_content():
+def generate_marked_trails_content(conn):
     """ Generate the marked trails list """
 
     print(x_min, y_min, x_max, y_max)
@@ -281,7 +276,7 @@ def print_timestamp_statistics(feature_timestamp):
         print("oldest date: {}".format(min_date.strftime('%d-%m-%Y')))
         print("newest date: {}".format(max_date.strftime('%d-%m-%Y')))
 
-def tracks_timestamp_statistics():
+def tracks_timestamp_statistics(conn):
     """ Compute timestamp statistics of the tracks within the map """
     cursor = conn.cursor()
     cursor.execute(track_timestamp_query)
@@ -289,7 +284,7 @@ def tracks_timestamp_statistics():
     print("--- Timestamp statistics for tracks within the map ---")
     print_timestamp_statistics(track_timestamp)
 
-def marked_trails_timestamp_statistics():
+def marked_trails_timestamp_statistics(conn):
     """ Compute timestamp statistics of the marked trails within the map """
     cursor = conn.cursor()
     cursor.execute(marked_trails_timestamp_query)
@@ -297,7 +292,7 @@ def marked_trails_timestamp_statistics():
     print("--- Timestamp statistics for marked trails within the map ---")
     print_timestamp_statistics(marked_trails_timestamp)
 
-def compute_tracks_length():
+def compute_tracks_length(conn):
     cursor = conn.cursor()
     cursor.execute(track_length_query)
     track_length = cursor.fetchall()
@@ -314,7 +309,7 @@ def isfloat(value):
     return False
 
 
-def compute_marked_trails_length():
+def compute_marked_trails_length(conn):
     cursor = conn.cursor()
     cursor.execute(marked_trails_contains_query)
     marked_trails = cursor.fetchall()
@@ -381,6 +376,7 @@ if __name__ == '__main__':
          parameters.ORIENTATION,
          oam_mapnik_file
     )
+
 
     if not os.path.exists(f'A3-{parameters.ORIENTATION.lower()}-{parameters.TITLE}.svg'):
         shutil.copy2(f'../A3-{parameters.ORIENTATION.lower()}.svg', f'A3-{parameters.ORIENTATION.lower()}-{parameters.TITLE.upper()}.svg')
