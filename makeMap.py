@@ -50,8 +50,8 @@ def make_map(map_output, scale=20000, x_center=622000, y_center=6406000, orienta
     render_to_file(m, map_output)
 
 
-make_map('OAM_les_fosses_15000.pdf', 15000, 610900, 6407000, 'LANDSCAPE')
-make_map('OAM_les_fosses_20000bis.pdf', 20000, 609913, 6408005, 'LANDSCAPE')
+make_map('OAM_les_fosses_15000_portrait.jpg', 15000, 610900, 6407000, 'PORTRAIT')
+make_map('OAM_les_fosses_15000_portrait.pdf', 15000, 610900, 6407000, 'PORTRAIT')
 # make_map('OAM_les_fosses_20000-background.svg', 20000, 609913, 6408005, 'LANDSCAPE', 'osm2pgsql/OpenArdenneMap-background.xml')
 # make_map('OAM_les_fosses_20000-labels.svg', 20000, 609913, 6408005, 'LANDSCAPE', 'osm2pgsql/OpenArdenneMap-labels.xml')
 
