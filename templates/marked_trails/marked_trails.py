@@ -58,6 +58,8 @@ marked_trails_subquery = """
                 CASE
                     WHEN SPLIT_PART(\"osmc:symbol\",':', 3) = 'white_stripe' THEN
                        SPLIT_PART(\"osmc:symbol\",':', 1) || '_invstripe.svg'
+                    WHEN SPLIT_PART(\"osmc:symbol\",':', 3) = 'white_corner' THEN
+                       SPLIT_PART(\"osmc:symbol\",':', 1) || '_pointer.svg'
                     ELSE
                         SPLIT_PART(\"osmc:symbol\",':', 3) || '.svg'
                 END
@@ -346,6 +348,17 @@ if __name__ == '__main__':
 
     conn.close()
 
+    print("--- print all-in map ---")
+    oam_mapnik_file = os.path.abspath('../../osm2pgsql/OpenArdenneMap.xml')
+    make_map(
+        'OAM_20000_{}_{}.svg'.format(parameters.TITLE, parameters.ORIENTATION),
+         20000,
+         x_center,
+         y_center,
+         parameters.ORIENTATION,
+         oam_mapnik_file
+    )
+
     print("--- print label map ---")
     oam_mapnik_file = os.path.abspath('../../osm2pgsql/OpenArdenneMap-labels.xml')
     make_map(
@@ -367,6 +380,7 @@ if __name__ == '__main__':
          parameters.ORIENTATION,
          oam_mapnik_file
     )
+
 
 
 

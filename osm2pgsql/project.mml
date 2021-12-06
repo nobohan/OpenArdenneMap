@@ -611,6 +611,8 @@
                             CASE
                                 WHEN SPLIT_PART(\"osmc:symbol\",':', 3) = 'white_stripe' THEN
                                     '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 1) || '_invstripe.svg'
+                                WHEN SPLIT_PART(\"osmc:symbol\",':', 3) = 'white_corner' THEN
+                                    '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 1) || '_pointer.svg'
                                 ELSE
                                     '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 3) || '.svg'
                             END
