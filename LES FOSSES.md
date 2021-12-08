@@ -16,6 +16,8 @@ haies plus détaillées si échelle < 1:15000
 
 - map belgique: ajouter foret!
 - autres élements, logo osm
+- grille km: ok
+- age des données
 
 # Carte
 
@@ -31,8 +33,29 @@ haies plus détaillées si échelle < 1:15000
 
 GIMP
 
-1) Créer un fichier blanc au format AO (en rentrant les mm )
-2) Ajouter comme Layer l'image en jpg
+1) Créer un fichier blanc au format AO (en rentrant les mm ): 841 x 1 189 mm, 300 dpi (1.3Go!)
+2) Ajouter comme Layer l'image en jpg (File > Open as Layer)
 3) Aller dans Layer > Scale layer et scaler au format A0 (en rentrant les mm)
 4) Slices with guides
+
+
+
+
+
+
+Super qualité: faire le fond en jpeg puis y superposer une couche de labels en svg: mauvais import du svg: labels noir non visibles...
+
+
+Age des données
+
+BBOX = 601164.4436215056,6393231.844132286,620635.5563784944,6420768.155867714
+
+BBOX = 601164, 6393231, 620635, 6420768
+
+
+SELECT to_timestamp(avg(extract(epoch from osm_timestamp::timestamp)))
+    FROM planet_osm_line
+    WHERE
+        highway IN ('track', 'path', 'footway', 'cycleway', 'bridleway')
+        AND ST_Contains(ST_SetSRID(ST_MakeBox2D(ST_Point(601164, 6393231), ST_Point(620635, 6420768)), 3857 ), way)
 
