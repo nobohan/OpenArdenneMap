@@ -68,3 +68,30 @@ To fit these svg files in the template, scale the map by **18 %**.
 carto osm2pgsql/project-labels.mml > osm2pgsql/OpenArdenneMap-labels.xml
 carto osm2pgsql/project-background.mml > osm2pgsql/OpenArdenneMap-background.xml
 ```
+
+
+# Improvements
+
+## Write the complete procedure and automatise
+
+- choose map center in templates.qgs
+- copy coordinates in parameters.py + name
+- activate the venv
+- run marked_trails.py
+- copy and rename the svg template file (can do it in marked_trails.py)
+- in the svg file, update the date
+- in the svg file, write down the km and updateness
+- in the svg file, write down the name of the map
+- in the svg file, import the marked trails list in the right Layer and optionnaly adapt it
+- in the svg file, import the map in the right Layer, scale it, move it
+- export the svg as png
+- transform the png in pdf (edit and run the img2pdf.bash)
+- make the thumbnail (edit and run the img2pdf.bash)
+- copy the thumbnail into hiking.osm repo
+- transfer the pdf on nextcloud
+- make and copy the share link
+- set no expiry date on the share link
+- put the share link in the frame gpkg layer
+- remove holes in the gpkh layer
+- export the layer as valid geojson (using convert-gpkg-geojson sh)
+- push on the hiking repo
