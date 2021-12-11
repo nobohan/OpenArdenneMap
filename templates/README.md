@@ -95,3 +95,4 @@ carto osm2pgsql/project-background.mml > osm2pgsql/OpenArdenneMap-background.xml
 - remove holes in the gpkh layer
 - export the layer as valid geojson (using convert-gpkg-geojson sh)
 - push on the hiking repo
+- check after a while if everything's right on the website
