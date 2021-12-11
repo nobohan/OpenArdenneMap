@@ -45,6 +45,20 @@ GIMP
 
 Super qualité: faire le fond en jpeg puis y superposer une couche de labels en svg: mauvais import du svg: labels noir non visibles...
 
+Q1: utiliser un fond en pdf??? (car le svg ne veut pas se créer > A3...) ? pas possible d'en importer
+
+Q2: comment importer proprement les labels en svg (ils sont "tout blancs". ) ? 
+
+Autre solution: faire la compo finale dans inkscape: 
+
+- ajouter tous les elements QGIS de mise en page, en SVG
+- ajouter un fond raster, ~~ou pdf importé~~
+- ajouter les labels en svg
+- exporter le tout en pdf!
+
+
+
+
 
 Age des données
 
