@@ -78,7 +78,7 @@ carto osm2pgsql/project-background.mml > osm2pgsql/OpenArdenneMap-background.xml
 - copy coordinates in parameters.py + name
 - activate the venv
 - run marked_trails.py
-- copy and rename the svg template file (can do it in marked_trails.py)
+~~copy and rename the svg template file (can do it in marked_trails.py):~~ OK
 - in the svg file, update the date
 - in the svg file, write down the km and updateness
 - in the svg file, write down the name of the map

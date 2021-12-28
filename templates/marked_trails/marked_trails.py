@@ -5,6 +5,7 @@ import os
 from wand.image import Image
 from datetime import datetime, timedelta
 import numpy as np
+import shutil
 
 import parameters
 
@@ -381,8 +382,4 @@ if __name__ == '__main__':
          oam_mapnik_file
     )
 
-
-
-
-
-
+    shutil.copy2(f'../A3-{parameters.ORIENTATION.lower()}.svg', f'A3-{parameters.ORIENTATION.lower()}-{parameters.TITLE}.svg')
