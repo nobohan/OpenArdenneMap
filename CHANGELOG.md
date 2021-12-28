@@ -1,3 +1,14 @@
+## v0.7.0 winter-2021-2022
+
+### Description
+
+
+
+### Changes
+- fix power=generator rendering + increase size of the windmill symbol
+
+
+
 ## v0.6.0 summer2021
 
 ### Description

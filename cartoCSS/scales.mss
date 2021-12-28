@@ -113,6 +113,6 @@
 /* =============== */
 
 @pitch_marker: 40;
-@windmill_marker: 32;
+@windmill_marker: 36;
 @viewpoint_marker: 42;
 @trail_marker: 200;
