@@ -79,15 +79,12 @@
             "(
                 SELECT COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type, replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name, way_area AS area, ST_PointOnSurface(way) AS way
                 FROM planet_osm_polygon
-                WHERE name IS NOT NULL
-                    AND way && !bbox!
-                    AND ST_IsValid(way)
+                WHERE ST_IsValid(way)
                 UNION ALL
                 SELECT 'building' AS type, replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name, way_area AS area, ST_PointOnSurface(way) AS way
                 FROM planet_osm_polygon
                 WHERE name IS NOT NULL
                     AND building NOT IN ('', 'no', '0', 'false')
-                    AND way && !bbox!
                     AND ST_IsValid(way)
                 ORDER BY area DESC
             ) AS data",

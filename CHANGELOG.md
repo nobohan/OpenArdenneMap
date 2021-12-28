@@ -6,6 +6,7 @@
 
 ### Changes
 - fix power=generator rendering + increase size of the windmill symbol
+- better labelling of farm (based on landuse=farmyard)
 
 
 
