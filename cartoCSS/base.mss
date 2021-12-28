@@ -236,6 +236,9 @@ Map { background-color: @background; }
         [zoom = 19] { line-width: @building_line_width*@z19; }
         [zoom >= 20] { line-width: @building_line_width*@z20; }
         polygon-fill: @building;
+        [type = 'greenhouse'] {
+            polygon-fill: @white;
+        }
         line-color: darken(@building,10%);
     }
 }
