@@ -121,6 +121,22 @@
             [zoom >= 20] { marker-height: @huge*1.5*@z20_marker; }
             marker-file: url(../img/cross.svg);
             marker-allow-overlap: true;
+            [zoom >= 16] {
+                [zoom = 16] { text-size: @text_size_xs*@z16_label; text-dy: 16; }
+                [zoom = 17] { text-size: @text_size_xs*@z17_label; text-dy: 20;}
+                [zoom = 18] { text-size: @text_size_xs*@z18_label; text-dy: 24;}
+                [zoom = 19] { text-size: @text_size_xs*@z19_label; text-dy: 28;}
+                [zoom >= 20] { text-size: @text_size_xs*@z20_label; text-dy: 32;}
+                text-name: '[name]';
+                text-face-name: @sans;
+                text-placement: point;
+                text-fill: @black;
+                text-character-spacing: 2;
+                text-line-spacing: 2;
+                text-halo-fill: @other_halo;
+                text-halo-radius: 2;
+                text-allow-overlap: true;
+            }
         }
     }
     [leisure = 'picnic_table'], [tourism = 'picnic_site'] {
