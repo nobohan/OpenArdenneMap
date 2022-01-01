@@ -71,7 +71,7 @@
                 marker-file: url(../img/windmill.svg);
             }
         }
-    } 
+    }
     [amenity = 'fountain'] {
         [zoom >= 15] {
             [zoom = 15] { marker-height: @large*@z15_marker; text-size: @text_size_s*@z15_label; }
@@ -234,6 +234,36 @@
             [zoom >= 20] { marker-height: @viewpoint_marker*@z20_marker; }
             marker-file: url(../img/viewpoint.svg);
             marker-transform: rotate([orientation]);
+        }
+    }
+    [tourism = 'attraction'] {
+        [zoom >= 14] {
+            [zoom = 14] { marker-height: @windmill_marker*@z14_marker; }
+            [zoom = 15] { marker-height: @windmill_marker*@z15_marker; }
+            [zoom = 16] { marker-height: @windmill_marker*@z16_marker; }
+            [zoom = 17] { marker-height: @windmill_marker*@z17_marker; }
+            [zoom = 18] { marker-height: @windmill_marker*@z18_marker; }
+            [zoom = 19] { marker-height: @windmill_marker*@z19_marker; }
+            [zoom >= 20] { marker-height: @windmill_marker*@z20_marker; }
+            marker-file: url(../img/tourism.svg);
+            marker-allow-overlap: true;
+            marker-ignore-placement: true;
+            [zoom >= 16] {
+                [zoom = 16] { text-size: @text_size_s*@z16_label; text-dy: 16; }
+                [zoom = 17] { text-size: @text_size_s*@z17_label; text-dy: 20;}
+                [zoom = 18] { text-size: @text_size_s*@z18_label; text-dy: 24;}
+                [zoom = 19] { text-size: @text_size_s*@z19_label; text-dy: 28;}
+                [zoom >= 20] { text-size: @text_size_s*@z20_label; text-dy: 32;}
+                text-name: '[name]';
+                text-face-name: @sans;
+                text-placement: point;
+                text-fill: @black;
+                text-character-spacing: 2;
+                text-line-spacing: 2;
+                text-halo-fill: @other_halo;
+                text-halo-radius: 2;
+                text-allow-overlap: true;
+            }
         }
     }
 }

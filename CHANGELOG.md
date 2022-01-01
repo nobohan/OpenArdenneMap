@@ -9,6 +9,7 @@
 - better labelling of farm (based on landuse=farmyard)
 - special style for greenhouses
 - label names of wayside cross
+- new map feature: tourism=attraction, marker + name
 
 
 
