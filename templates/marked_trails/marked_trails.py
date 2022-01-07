@@ -383,4 +383,4 @@ if __name__ == '__main__':
     )
 
     if not os.path.exists(f'A3-{parameters.ORIENTATION.lower()}-{parameters.TITLE}.svg'):
-        shutil.copy2(f'../A3-{parameters.ORIENTATION.lower()}.svg', f'A3-{parameters.ORIENTATION.lower()}-{parameters.TITLE}.svg')
+        shutil.copy2(f'../A3-{parameters.ORIENTATION.lower()}.svg', f'A3-{parameters.ORIENTATION.lower()}-{parameters.TITLE.upper()}.svg')
