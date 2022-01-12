@@ -59,4 +59,4 @@ In the `project.mml`, we had to add the "user" and the "host" for the PostGIS co
 },
 ```
 
-This might be improved in the future (having just on project file).
+This might be improved in the future (having just one unique project file).

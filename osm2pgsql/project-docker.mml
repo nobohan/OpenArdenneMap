@@ -26,6 +26,17 @@
     },
     {
       "Datasource": {
+        "file": "/mnt/tera/ChampsLibres/Projets/OSM/CyclOSM/hillshade/data/dem_be_10x10_hillshade_semi_transparent_3857.tif",
+        "type": "gdal"
+      },
+      "geometry": "raster",
+      "id": "hillshade",
+      "name": "hillshade",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "status": "on"
+    },
+    {
+      "Datasource": {
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "file": "../contour/beautiful_contour_belgium.shp",
         "id": "contour",
@@ -164,7 +175,7 @@
         "srs": null,
         "table":
             "(
-                SELECT way, COALESCE(highway, railway) AS type, 0 AS bridge, access, render, layer, tracktype, 1 as tunnel,
+                SELECT way, COALESCE(highway, railway) AS type, 0 AS bridge, access, render, layer, tracktype, trail_visibility, name, 1 as tunnel,
                     CASE
                         WHEN highway IN ('motorway', 'trunk') THEN 'motorway'
                         WHEN highway IN ('primary', 'secondary') THEN 'mainroad'
@@ -202,7 +213,7 @@
         "geometry_field": "way",
         "table":
             "(
-                SELECT way, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, tracktype, access, 'fill' AS render,
+                SELECT way, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, tracktype, trail_visibility, access, name, 'fill' AS render,
                     CASE
                         WHEN highway IN ('motorway', 'trunk') THEN 'motorway'
                         WHEN highway IN ('primary', 'secondary') THEN 'mainroad'
@@ -237,7 +248,7 @@
         "srs": null,
         "table":
             "(
-                SELECT way, COALESCE(highway, railway) AS type, 1 AS bridge, access, render, layer, tracktype, 0 as tunnel,
+                SELECT way, COALESCE(highway, railway) AS type, 1 AS bridge, access, render, layer, tracktype, trail_visibility, name, 0 as tunnel,
                     CASE
                         WHEN highway IN ('motorway', 'trunk') THEN 'motorway'
                         WHEN highway IN ('primary', 'secondary') THEN 'mainroad'
@@ -278,9 +289,13 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table":
             "(
-                SELECT way, highway, CAST(90+degrees(ST_Azimuth(ST_StartPoint(planet_osm_line.way), ST_EndPoint(planet_osm_line.way))) AS VARCHAR(255)) AS orientation
+                SELECT
+                    way,
+                    highway,
+                    ST_Length(planet_osm_line.way) AS length,
+                    CAST(90+degrees(ST_Azimuth(ST_StartPoint(planet_osm_line.way), ST_EndPoint(planet_osm_line.way))) AS VARCHAR(255)) AS orientation
                 FROM planet_osm_line WHERE bridge NOT IN ('', '0', 'no')
-                AND highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway')
+                AND highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway', 'boardwalk')
             ) AS data",
         "type": "postgis"
       },
@@ -347,7 +362,14 @@
         "geometry_field": "way",
         "table":
             "(
-                SELECT way, building, name, CAST(degrees(ST_Azimuth(ST_Centroid(l.way),ST_Centroid(ST_SimplifyPreserveTopology(l.way,100)))) AS VARCHAR(255)) AS orientation, area
+                SELECT way, building, name, area,
+                    CAST(degrees(
+                        CASE
+                            WHEN ST_Distance(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 1), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2)) > ST_Distance(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 3))
+                                THEN ST_Azimuth(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 1), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2))
+                            ELSE ST_Azimuth(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 3))
+                        END
+                    ) AS VARCHAR(255)) AS orientation
                 FROM planet_osm_polygon AS l
                 WHERE \"building\" IN ('church','chapel')
             ) AS data",
@@ -394,10 +416,29 @@
         "srs": null,
         "table":
             "(
-                SELECT way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", bus, ford, name, replace(name, 'Château', 'Chau') as short_name
+                SELECT
+                    way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", \"generator:source\", bus, ford, name,
+                    replace(name, 'Château', 'Chau') as short_name,
+                    CASE
+                        WHEN direction = 'N-E' THEN 45
+                        WHEN direction = 'E' THEN 90
+                        WHEN direction = 'S-E' THEN 135
+                        WHEN direction = 'S' THEN 180
+                        WHEN direction = 'S-W' THEN 225
+                        WHEN direction = 'W' THEN 270
+                        WHEN direction = 'N-W' THEN 315
+                        WHEN direction ~ '-' THEN 0
+                        WHEN direction ~ '\\.' THEN 0
+                        WHEN direction ~ ';' THEN 0
+                        ELSE REGEXP_REPLACE(COALESCE(direction::character varying, '0'), '[^0-9]*' ,'0')::integer
+                    END AS orientation
                 FROM planet_osm_point
                 UNION
-                SELECT ST_Centroid(way) AS way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", NULL AS bus, NULL AS ford, name, replace(name, 'Château', 'Chau') as short_name
+                SELECT
+                    ST_Centroid(way) AS way,
+                    power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", \"generator:source\", NULL AS bus, NULL AS ford, name,
+                    replace(name, 'Château', 'Chau') as short_name,
+                    0 AS orientation
                 FROM planet_osm_polygon
                 WHERE historic IS NOT NULL
             ) AS data",
@@ -485,17 +526,14 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table":
             "(
-                SELECT COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type, name, way_area AS area, ST_PointOnSurface(way) AS way
+                SELECT COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type, replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name, way_area AS area, ST_PointOnSurface(way) AS way
                 FROM planet_osm_polygon
-                WHERE name IS NOT NULL
-                    AND way && !bbox!
-                    AND ST_IsValid(way)
+                WHERE ST_IsValid(way)
                 UNION ALL
-                SELECT 'building' AS type, name, way_area AS area, ST_PointOnSurface(way) AS way
+                SELECT 'building' AS type, replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name, way_area AS area, ST_PointOnSurface(way) AS way
                 FROM planet_osm_polygon
                 WHERE name IS NOT NULL
                     AND building NOT IN ('', 'no', '0', 'false')
-                    AND way && !bbox!
                     AND ST_IsValid(way)
                 ORDER BY area DESC
             ) AS data",
@@ -519,13 +557,20 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table":
             "(
-                SELECT way, waterway AS type, replace(name, 'Ruisseau', 'Rᵃᵘ') AS name
+                SELECT way, waterway AS type, replace(name, 'Ruisseau', 'Rau') AS name
                 FROM planet_osm_line
-                WHERE waterway IN ('canal', 'river', 'stream')
-                    AND name IS NOT NULL
+                WHERE waterway IN ('canal', 'river', 'stream') AND name IS NOT NULL
+                UNION ALL
+                SELECT
+                    ST_LineMerge(ST_ApproximateMedialAxis(ST_SimplifyPreserveTopology(ST_MakePolygon(ST_ExteriorRing(way)), 50))) AS way,
+                    water AS type,
+                    replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name
+                FROM planet_osm_polygon
+                WHERE water IN ('pond', 'lake', 'basin', 'reservoir') AND name IS NOT NULL AND way_area > 10000
             ) AS data",
         "type": "postgis"
       },
+      "properties": { "clear-label-cache": "on" },
       "geometry": "linestring",
       "id": "waterway_label",
       "name": "waterway_label",
@@ -560,7 +605,98 @@
       "name": "train_elements",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913"
-    }
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "host": "db",
+        "user": "osmpg",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "trails",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table":
+            "(
+                SELECT
+                    way, name, network, signed_direction,
+                    CASE 
+                        WHEN distance LIKE '%km' THEN distance
+                        ELSE distance || ' km'
+                    END distance_km,
+                    SPLIT_PART(\"osmc:symbol\",':', 1) AS color,
+                    CASE
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'blue' THEN '#00629b'
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'red' THEN '#d22730'
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'green' THEN '#009739'
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'orange' THEN '#ff6600'
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'yellow' THEN '#fedd00'
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'purple' THEN '#ad629b'
+                        ELSE '#ff6600'
+                    END html_color,
+                    CASE
+                        WHEN LENGTH(SPLIT_PART(\"osmc:symbol\",':', 4)) < 4 THEN
+                            SPLIT_PART(\"osmc:symbol\",':', 4)
+                        ELSE
+                            ''
+                    END marked_text,
+                    CASE
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 3) IN ('red_lower') THEN
+                            'black'
+                        ELSE
+                            'white'
+                    END text_color,
+                    CASE
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 3) <> '' THEN
+                            CASE
+                                WHEN SPLIT_PART(\"osmc:symbol\",':', 3) = 'white_stripe' THEN
+                                    '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 1) || '_invstripe.svg'
+                                WHEN SPLIT_PART(\"osmc:symbol\",':', 3) = 'white_corner' THEN
+                                    '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 1) || '_pointer.svg'
+                                ELSE
+                                    '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 3) || '.svg'
+                            END
+                        ELSE
+                            '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 1) || '_rectangle.svg'
+                    END shield_uri
+                FROM planet_osm_line
+                WHERE route ~ 'hiking' OR route ~ 'foot'
+            ) AS data",
+        "type": "postgis"
+      },
+      "geometry": "line",
+      "id": "trails",
+      "name": "trails",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "off"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "host": "db",
+        "user": "osmpg",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "trails_start",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table":
+            "(
+             SELECT ST_Centroid((ST_Dump(start_point.geom)).geom) AS way
+             FROM (
+                SELECT ST_Union(ST_Buffer(ST_StartPoint(way), 100)) AS geom
+                FROM planet_osm_line
+                WHERE (route ~ 'hiking' OR route ~ 'foot') AND network IN ('lwn')) AS start_point
+            ) AS data",
+        "type": "postgis"
+      },
+      "geometry": "point",
+      "id": "trails_start",
+      "name": "trails_start",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "properties": { "clear-label-cache": "on" },
+      "status": "off"
+    },
   ],
   "Stylesheet": [
     "../cartoCSS/scales.mss",
