@@ -10,6 +10,7 @@
 - special style for greenhouses
 - label names of wayside cross
 - new map feature: tourism=attraction, marker + name
+- update the Dockerfile and fix docker instructions
 
 
 
