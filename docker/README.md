@@ -34,7 +34,7 @@ Then, change directory to /var/OpenArdenneMap and you can run the following comm
 ## Importing
 
 ```bash
-root@51834f3f5bbd: osm2pgsql -c -G -H db -U osmpg -d osmpg_db -S osm2pgsql/OpenArdenneMap.style osm-files/extract.osm
+root@51834f3f5bbd: osm2pgsql -c -G -H db -U osmpg -d osmpg_db -S osm2pgsql/OpenArdenneMap.style  --extra-attributes osm-files/extract.osm
 ```
 
 where `extract.osm` is your osm (or pbf) file. 
