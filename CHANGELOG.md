@@ -2,7 +2,7 @@
 
 ### Description
 
-
+Small fixes to labels display, a new feature (tourism=attraction), more labels and a fix for the docker map generation
 
 ### Changes
 - fix power=generator rendering + increase size of the windmill symbol
