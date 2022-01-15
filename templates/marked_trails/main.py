@@ -52,7 +52,7 @@ if __name__ == '__main__':
     #      oam_mapnik_file
     # )
 
-    fill_template()
+    fill_template(parameters)
 
     if not os.path.exists(f'A3-{parameters.ORIENTATION.lower()}-{parameters.TITLE}.svg'):
        shutil.copy2(f'../A3-{parameters.ORIENTATION.lower()}.svg', f'A3-{parameters.ORIENTATION.lower()}-{parameters.TITLE.upper()}.svg')

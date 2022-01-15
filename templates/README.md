@@ -107,7 +107,13 @@ AUTOMATISATION of the edition of svg:
     - open the full template and output it: it works, see in template.py
     - can also add other layers (althouh there are not in inkscape layers): see https://pyx-project.org/manual/svgfile.html 
     - how to change other stuffs (date, kms, ?): include text???
-    
+
+    NB: pour diminuer la taille du svg, simplement réduire les dimensions dans la première ligne du fichier, ou jouer avec viewbox:
+
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="650pt" height="459pt" viewBox="0 0 6505 4599" version="1.1">
+
+
+  - problème : l'insertion de la carte prend un temps trop long  
 
 
 - or add one thing after the other. 
