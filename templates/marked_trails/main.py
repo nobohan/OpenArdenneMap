@@ -1,6 +1,7 @@
 from psycopg2 import connect
 import os
 import sys
+import shutil
 sys.path.insert(0, '../..')
 from makeMap import make_map
 
@@ -52,3 +53,6 @@ if __name__ == '__main__':
     # )
 
     fill_template()
+
+    if not os.path.exists(f'A3-{parameters.ORIENTATION.lower()}-{parameters.TITLE}.svg'):
+       shutil.copy2(f'../A3-{parameters.ORIENTATION.lower()}.svg', f'A3-{parameters.ORIENTATION.lower()}-{parameters.TITLE.upper()}.svg')

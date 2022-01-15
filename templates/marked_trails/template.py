@@ -11,6 +11,10 @@ def fill_template():
     #TODO start with a template
     c = canvas.canvas()
     c.insert(svgfile.svgfile(0, 0, "../A3-landscape.svg"))
+
+
+    c.insert(svgfile.svgfile(3, 2, "marked-trails-Beynert.svg"))
+
     c.writeSVGfile("output")
 
 

@@ -72,9 +72,11 @@ carto osm2pgsql/project-background.mml > osm2pgsql/OpenArdenneMap-background.xml
 
 # Improvements
 
+- put a list of map in the website
+- revoir template pour du pliage
 ## Write the complete procedure and automatise
 
-- choose map center in templates.qgs
+- choose map center in templates.qgs: CANNOT AUTOMATISE
 - copy coordinates in parameters.py + name
 - activate the venv
 - run marked_trails.py
@@ -84,7 +86,7 @@ carto osm2pgsql/project-background.mml > osm2pgsql/OpenArdenneMap-background.xml
 - in the svg file, write down the name of the map
 - in the svg file, import the marked trails list in the right Layer and optionnaly adapt it
 - in the svg file, import the map in the right Layer, scale it, move it
-- export the svg as png
+- export the svg as png : Easy? 
 - transform the png in pdf (edit and run the img2pdf.bash)
 - make the thumbnail (edit and run the img2pdf.bash)
 - copy the thumbnail into hiking.osm repo
@@ -92,7 +94,21 @@ carto osm2pgsql/project-background.mml > osm2pgsql/OpenArdenneMap-background.xml
 - make and copy the share link
 - set no expiry date on the share link
 - put the share link in the frame gpkg layer
-- remove holes in the gpkh layer
+- remove holes in the gpkh layer: put in convert-gpkg-geojson sh
 - export the layer as valid geojson (run convert-gpkg-geojson sh)
 - push on the hiking repo
 - check after a while if everything's right on the website
+
+
+AUTOMATISATION of the edition of svg:
+
+
+- open the full template and change some components
+    - open the full template and output it: it works, see in template.py
+    - can also add other layers (althouh there are not in inkscape layers): see https://pyx-project.org/manual/svgfile.html 
+    - how to change other stuffs (date, kms, ?): include text???
+    
+
+
+- or add one thing after the other. 
+
