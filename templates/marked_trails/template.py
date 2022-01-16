@@ -19,7 +19,7 @@ def fill_template(parameters):
     c.insert(svgfile.svgfile(3, 3, f"OAM_20000_{parameters.TITLE}_{parameters.ORIENTATION}_labels.svg"), [trafo.scale(0.18)])
     print(datetime.datetime.now())
     print('inserted labels') 
-    # TODO: remove the white rectangle of the label map, or make it transparent (background transparent dans le mapnik map file? )
+    # TODO: add svg layers for better handling of the label layer see https://pyx-project.org/manual/canvas.html?highlight=group
 
     ### insert template
     c.insert(svgfile.svgfile(0, 0, f"../A3-{parameters.ORIENTATION.lower()}.svg"))

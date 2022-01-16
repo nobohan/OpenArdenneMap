@@ -30,17 +30,17 @@ What you need are the coordinates of the center of the map, in EPSG:3857, and a 
 
 2) Produce the svg files for the map and the marked trail list
 
-Change the location (center in EPSG:3857 coordinates) in `parameters.py` and then run `python3 marked_trails.py` with the virtual env activated:
+Change the location (center in EPSG:3857 coordinates) in `parameters.py` and then run `python3 main.py` with the virtual env activated:
 
 ```bash
 templates/marked_trails$ source bin/activate
-(marked_trails) templates/marked_trails$ python3 marked_trails.py
+(marked_trails) templates/marked_trails$ python3 main.py
 ```
+This script will produce the raw map file and already compose the templated map file. 
+
+3) Fine-tune the map in Inkscape
 
 
-3) Compose your map in Inkscape
-
-Copy a template (`A3-portrait.svg` or `A3-landscape.svg`). Import the map and the marked trails list using the 'import' function. Scale the map by 18%. Use the Inkscape layers tab to import the map and the marked trails in the right z-order!
 
 
 ## Components
@@ -64,7 +64,7 @@ To fit these svg files in the template, scale the map by **18 %**.
 
 ## Différenciation labels <> background
 
-```
+```bash
 carto osm2pgsql/project-labels.mml > osm2pgsql/OpenArdenneMap-labels.xml
 carto osm2pgsql/project-background.mml > osm2pgsql/OpenArdenneMap-background.xml
 ```
@@ -84,11 +84,11 @@ carto osm2pgsql/project-background.mml > osm2pgsql/OpenArdenneMap-background.xml
 - in the svg file, update the date
 - in the svg file, write down the km and updateness
 - in the svg file, write down the name of the map
-- in the svg file, import the marked trails list in the right Layer and optionnaly adapt it
-- in the svg file, import the map in the right Layer, scale it, move it
-- export the svg as png : Easy? 
+- in the svg file, import the marked trails list in the right Layer and optionnaly adapt it: ok
+- in the svg file, import the map in the right Layer, scale it, move it: ok
+- export the svg as png : ok (edit and run the export-svg-as-png.bash)
 - transform the png in pdf (edit and run the img2pdf.bash)
-- make the thumbnail (edit and run the img2pdf.bash)
+- make the thumbnail (edit and run the make-thumbnaik.bash)
 - copy the thumbnail into hiking.osm repo
 - transfer the pdf on nextcloud
 - make and copy the share link
