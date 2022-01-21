@@ -212,7 +212,7 @@
     text-face-name:@sans;
     text-character-spacing: 1;
     text-halo-radius: 3;
-    text-wrap-width:30;
+    text-wrap-width: 60;
     text-fill: @black;
     text-halo-fill: #fff;
     // Specific style overrides for different types of areas:
@@ -237,9 +237,15 @@
             text-halo-fill: lighten(@hospital, 10%);
         }
         [type='farmyard'] {
+            text-halo-radius: 1;
             text-name: "'Fme'";
             text-dy: -20;
+            text-dx: -20;
             text-repeat-distance: 60;
+            [name != ''] {
+                text-name: '[name]';
+                text-allow-overlap: true;
+            }
         }
     }
     [zoom >= 16] {

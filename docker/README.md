@@ -26,7 +26,7 @@ In the `docker-compose.yml` file, there is the mapping of the volume between the
 To do so, open a bash terminal in the container with:
 
 ```bash
-$ docker-compose run mapnik bash
+$ docker-compose run --rm mapnik bash
 ```
 
 Then, change directory to /var/OpenArdenneMap and you can run the following command for importing the osm data and make the maps:
@@ -34,7 +34,7 @@ Then, change directory to /var/OpenArdenneMap and you can run the following comm
 ## Importing
 
 ```bash
-root@51834f3f5bbd: osm2pgsql -c -G -H db -U osmpg -d osmpg_db -S osm2pgsql/OpenArdenneMap.style osm-files/extract.osm
+root@51834f3f5bbd: osm2pgsql -c -G -H db -U osmpg -d osmpg_db -S osm2pgsql/OpenArdenneMap.style  --extra-attributes osm-files/extract.osm
 ```
 
 where `extract.osm` is your osm (or pbf) file. 
@@ -43,7 +43,7 @@ where `extract.osm` is your osm (or pbf) file.
 
 ## Make the maps
 ```bash
-root@51834f3f5bbd: carto osm2pgsql/project-docker.mml > osm2pgsql/OpenArdenneMap.xml && python makeMap.py
+root@51834f3f5bbd: carto osm2pgsql/project-docker.mml > osm2pgsql/OpenArdenneMap.xml && python3 makeMap.py
 ```
 
 # Some changes to the original repo
@@ -59,4 +59,4 @@ In the `project.mml`, we had to add the "user" and the "host" for the PostGIS co
 },
 ```
 
-This might be improved in the future (having just on project file).
+This might be improved in the future (having just one unique project file).

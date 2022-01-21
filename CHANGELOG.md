@@ -1,3 +1,19 @@
+## v0.7.0 winter-2021-2022
+
+### Description
+
+Small fixes to labels display, a new feature (tourism=attraction), more labels and a fix for the docker map generation
+
+### Changes
+- fix power=generator rendering + increase size of the windmill symbol
+- better labelling of farm (based on landuse=farmyard)
+- special style for greenhouses
+- label names of wayside cross
+- new map feature: tourism=attraction, marker + name
+- update the Dockerfile and fix docker instructions
+
+
+
 ## v0.6.0 summer2021
 
 ### Description

@@ -3,10 +3,14 @@ OpenArdenneMap
 
 *Une carte pour l'Ardenne*
 
+*Wander local, think global*
+
 ![map](openardennemap.png)
 
 
 Un exemple peut être téléchargé [ici](http://www.nobohan.be/docs/OpenArdenneMap_Rulles_1_20000e.pdf).
+
+Some blog posts about the OpenArdenneMap semestrial releases [here](https://www.nobohan.be/tag/openardennemap/). 
 
 &nbsp;
 
