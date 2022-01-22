@@ -1,4 +1,4 @@
-#import svgwrite
+import svgwrite
 import datetime
 from pyx import canvas, svgfile, trafo
 
@@ -9,6 +9,18 @@ def fill_template(parameters):
     print('fill svg template')
 
     c = canvas.canvas()
+
+    title_svg = svgwrite.Drawing('title.svg', size=('6cm', '2cm'), profile='full')
+    title_svg.embed_font(name="Alfphabet", filename='../../fonts/Alfphabet-III.otf')
+    title_svg.embed_stylesheet("""
+    .alfphabetTitle {
+        font-family: "Alfphabet";
+        font-size: 38;
+    }
+    """)
+    paragraph = title_svg.add(title_svg.g(class_="alfphabetTitle", ))
+    paragraph.add(title_svg.text(parameters.TITLE.upper(), insert=(1, 1), fill='black'))
+    title_svg.save()
 
     ### insert map background
     c.insert(svgfile.svgfile(3, 3, f"OAM_20000_{parameters.TITLE}_{parameters.ORIENTATION}_background.svg"), [trafo.scale(0.18)])
@@ -31,9 +43,10 @@ def fill_template(parameters):
     print(datetime.datetime.now())
     print('inserted marked trails')
 
+    ### insert title
+    c.insert(svgfile.svgfile(0.7, 26.5, "title.svg"))
+
     ### Output final file
     c.writeSVGfile(f"OAM_20000_{parameters.TITLE}_{parameters.ORIENTATION}.svg")
 
     print(datetime.datetime.now())
-    # add other svg files
-    # image = dwg.add(dwg.image(href=(svgdata), insert=(x,y), height=height, width=width))
