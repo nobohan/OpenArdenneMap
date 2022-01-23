@@ -269,12 +269,36 @@ def print_timestamp_statistics(feature_timestamp):
         avg_date = days_since_y2k_to_date(avg_age_in_days)
         min_date = days_since_y2k_to_date(min_age_in_days)
         max_date = days_since_y2k_to_date(max_age_in_days)
-        median_date = days_since_y2k_to_date(median_age_in_days)
+        median_date = days_since_y2k_to_date(median_age_in_days) #TODO factorise computation for printing and saving svg. Make stat in one dict
 
         print("average date: {}, {}".format(avg_date.strftime('%d-%m-%Y'), avg_date.strftime('%B-%Y')))
         print("median date: {}".format(median_date.strftime('%d-%m-%Y')))
         print("oldest date: {}".format(min_date.strftime('%d-%m-%Y')))
         print("newest date: {}".format(max_date.strftime('%d-%m-%Y')))
+
+
+def make_svg_timestamp(feature_timestamp, kind):
+
+    feature_timestamp_as_days = [timestamp_to_age_in_days_since_y2k(t[0]) for t in feature_timestamp]
+
+    if len(feature_timestamp_as_days) > 0:
+        median_age_in_days = np.median(feature_timestamp_as_days)
+        median_date = days_since_y2k_to_date(median_age_in_days)
+
+    label_kind = 'CHEMINS' if kind == 'track' else 'ITINÉRAIRES BALISÉS'
+    timestamp_str = f"DATE MOYENNNE DE MODIFICATION DES {label_kind}: {median_date.strftime('%B-%Y')}"
+
+    timestamp_svg = svgwrite.Drawing(f'timestamp_{kind}.svg', size=('6cm', '2cm'), profile='full')
+    timestamp_svg.embed_font(name="Alfphabet", filename='../../fonts/Alfphabet-III.otf')
+    timestamp_svg.embed_stylesheet("""
+    .alfphabetTitle {
+        font-family: "Alfphabet";
+        font-size: 12;
+    }
+    """)
+    paragraph = timestamp_svg.add(timestamp_svg.g(class_="alfphabetTitle", ))
+    paragraph.add(timestamp_svg.text(timestamp_str, insert=(1, 1), fill='black'))
+    timestamp_svg.save()
 
 def tracks_timestamp_statistics(conn):
     """ Compute timestamp statistics of the tracks within the map """
@@ -283,6 +307,7 @@ def tracks_timestamp_statistics(conn):
     track_timestamp = cursor.fetchall()
     print("--- Timestamp statistics for tracks within the map ---")
     print_timestamp_statistics(track_timestamp)
+    make_svg_timestamp(track_timestamp, 'track')
 
 def marked_trails_timestamp_statistics(conn):
     """ Compute timestamp statistics of the marked trails within the map """
@@ -291,6 +316,7 @@ def marked_trails_timestamp_statistics(conn):
     marked_trails_timestamp = cursor.fetchall()
     print("--- Timestamp statistics for marked trails within the map ---")
     print_timestamp_statistics(marked_trails_timestamp)
+    make_svg_timestamp(marked_trails_timestamp, 'marked')
 
 def compute_tracks_length(conn):
     cursor = conn.cursor()
