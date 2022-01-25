@@ -23,7 +23,7 @@ def make_date_svg():
     """Make a dummy svg file with the current date written in Alfphabet 18pt """
 
     today_str = f"carte éditée le {datetime.date.today().strftime('%d/%m/%Y')}"
-    date_svg = svgwrite.Drawing('date.svg', size=('6cm', '2cm'), profile='full')
+    date_svg = svgwrite.Drawing('date.svg', size=('2cm', '6cm'), profile='full')
     date_svg.embed_font(name="Alfphabet", filename='../../fonts/Alfphabet-III.otf')
     date_svg.embed_stylesheet("""
     .alfphabetTitle {
@@ -32,9 +32,8 @@ def make_date_svg():
     }
     """)
     paragraph = date_svg.add(date_svg.g(class_="alfphabetTitle", ))
-    paragraph.add(date_svg.text(today_str, insert=(1, 1), fill='black'))
+    paragraph.add(date_svg.text(today_str, insert=(1, 1), fill='black', transform='rotate(90, 1, 1)'))
     date_svg.save()
-
 
 def fill_template(parameters):
     """ Fill a svg template """
@@ -70,11 +69,11 @@ def fill_template(parameters):
 
     ### insert date annotation
     make_date_svg()
-    c.insert(svgfile.svgfile(25, 13, "date.svg"), [trafo.rotate(-90)])#TODO better rotate...
+    c.insert(svgfile.svgfile(40.3, 13, "date.svg"))
 
     ### insert timestamp annotations
-    c.insert(svgfile.svgfile(10, 26.5, "timestamp_track.svg"))
-    c.insert(svgfile.svgfile(10, 26, "timestamp_marked.svg"))
+    c.insert(svgfile.svgfile(8.2, 26.9, "timestamp_track.svg"))
+    c.insert(svgfile.svgfile(8.2, 26.5, "timestamp_marked.svg"))
 
     ### insert distance annotations
     #TODO
