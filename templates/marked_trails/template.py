@@ -42,8 +42,11 @@ def fill_template(parameters):
 
     c = canvas.canvas()
 
+    # TODO: factorise insertion dimensions numbers + manage Landscape/portrait
+    # TODO: add svg layers for better handling of the label layer see https://pyx-project.org/manual/canvas.html?highlight=group
+
     ### insert map background
-    #c.insert(svgfile.svgfile(3, 3, f"OAM_20000_{parameters.TITLE}_{parameters.ORIENTATION}_background.svg"), [trafo.scale(0.18)])
+    c.insert(svgfile.svgfile(3, 3, f"OAM_20000_{parameters.TITLE}_{parameters.ORIENTATION}_background.svg"), [trafo.scale(0.18)])
     print(datetime.datetime.now())
     print('inserted map')
 
@@ -51,7 +54,6 @@ def fill_template(parameters):
     c.insert(svgfile.svgfile(3, 3, f"OAM_20000_{parameters.TITLE}_{parameters.ORIENTATION}_labels.svg"), [trafo.scale(0.18)])
     print(datetime.datetime.now())
     print('inserted labels') 
-    # TODO: add svg layers for better handling of the label layer see https://pyx-project.org/manual/canvas.html?highlight=group
 
     ### insert template
     c.insert(svgfile.svgfile(0, 0, f"../src/A3-{parameters.ORIENTATION.lower()}.svg"))
@@ -65,19 +67,19 @@ def fill_template(parameters):
 
     ### insert title
     make_title_svg(parameters.TITLE.upper())
-    c.insert(svgfile.svgfile(0.7, 26.5, "title.svg"))
+    c.insert(svgfile.svgfile(0.7, 26.4, "title.svg"))
 
     ### insert date annotation
     make_date_svg()
     c.insert(svgfile.svgfile(40.3, 13, "date.svg"))
 
     ### insert timestamp annotations
-    c.insert(svgfile.svgfile(8.2, 26.9, "timestamp_track.svg"))
-    c.insert(svgfile.svgfile(8.2, 26.5, "timestamp_marked.svg"))
+    c.insert(svgfile.svgfile(8.2, 26.8, "timestamp_track.svg"))
+    c.insert(svgfile.svgfile(8.2, 26.4, "timestamp_marked.svg"))
 
     ### insert distance annotations
-    #TODO
-
+    c.insert(svgfile.svgfile(37.1, 26.8, "distance_track.svg"))
+    c.insert(svgfile.svgfile(37.3, 26.4, "distance_marked.svg"))
 
     ### Output final file
     c.writeSVGfile(f"OAM_20000_{parameters.TITLE}_{parameters.ORIENTATION}.svg")

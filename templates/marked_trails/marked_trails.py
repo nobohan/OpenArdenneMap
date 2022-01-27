@@ -286,7 +286,7 @@ def make_svg_timestamp(feature_timestamp, kind):
         median_date = days_since_y2k_to_date(median_age_in_days)
 
     label_kind = 'CHEMINS' if kind == 'track' else 'ITINÉRAIRES BALISÉS'
-    timestamp_str = f"DATE MOYENNNE DE MODIFICATION DES {label_kind}: {median_date.strftime('%B-%Y')}"
+    timestamp_str = f"DATE MOYENNNE DE MODIFICATION DES {label_kind}: {median_date.strftime('%B %Y')}" #TODO translate date in locale
 
     timestamp_svg = svgwrite.Drawing(f'timestamp_{kind}.svg', size=('6cm', '2cm'), profile='full')
     timestamp_svg.embed_font(name="Alfphabet", filename='../../fonts/Alfphabet-III.otf')
@@ -318,14 +318,22 @@ def marked_trails_timestamp_statistics(conn):
     print_timestamp_statistics(marked_trails_timestamp)
     make_svg_timestamp(marked_trails_timestamp, 'marked')
 
-def compute_tracks_length(conn):
-    cursor = conn.cursor()
-    cursor.execute(track_length_query)
-    track_length = cursor.fetchall()
-    sum_track_length = sum(tl[0] for tl in track_length)
+def make_svg_distance(distance, kind):
+    formated_distance = "{:.1f}".format(distance)
+    distance_str = f"{formated_distance} KM DE CHEMINS & SENTIERS" if kind == 'track' else f"{formated_distance} KM D'ITINÉRAIRES BALISÉS"
 
-    print("--- Tracks length ---")
-    print("Total track length: {} km".format(sum_track_length / 1000) )
+    distance_svg = svgwrite.Drawing(f'distance_{kind}.svg', size=('6cm', '2cm'), profile='full')
+    distance_svg.embed_font(name="Alfphabet", filename='../../fonts/Alfphabet-III.otf')
+    distance_svg.embed_stylesheet("""
+    .alfphabetTitle {
+        font-family: "Alfphabet";
+        font-size: 12;
+    }
+    """)
+    paragraph = distance_svg.add(distance_svg.g(class_="alfphabetTitle", ))
+    paragraph.add(distance_svg.text(distance_str, insert=(1, 1), fill='black'))
+    distance_svg.save()
+
 
 def isfloat(value):
   try:
@@ -334,6 +342,14 @@ def isfloat(value):
   except ValueError:
     return False
 
+def compute_tracks_length(conn):
+    cursor = conn.cursor()
+    cursor.execute(track_length_query)
+    track_length = cursor.fetchall()
+    sum_track_length = sum(tl[0] for tl in track_length)
+    make_svg_distance(sum_track_length / 1000, 'track')
+    print("--- Tracks length ---")
+    print("Total track length: {} km".format(sum_track_length / 1000) )
 
 def compute_marked_trails_length(conn):
     cursor = conn.cursor()
@@ -347,7 +363,7 @@ def compute_marked_trails_length(conn):
         else:
             if mt[6] is not None: # computed distance
                 sum_distance = sum_distance + float(mt[6])
-
+    make_svg_distance(sum_distance, 'marked')
     print("--- Marked trails length ---")
     print("Total marked trails length (using ST_contains): {} km".format(sum_distance))
 

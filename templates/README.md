@@ -81,9 +81,9 @@ carto osm2pgsql/project-background.mml > osm2pgsql/OpenArdenneMap-background.xml
 - activate the venv
 - run marked_trails.py
 ~~copy and rename the svg template file (can do it in marked_trails.py):~~ OK
-- in the svg file, update the date
+- in the svg file, update the date: ok
 - in the svg file, write down the km and updateness
-- in the svg file, write down the name of the map
+- in the svg file, write down the name of the map : ok
 - in the svg file, import the marked trails list in the right Layer and optionnaly adapt it: ok
 - in the svg file, import the map in the right Layer, scale it, move it: ok
 - export the svg as png : ok (edit and run the export-svg-as-png.bash)
@@ -94,7 +94,7 @@ carto osm2pgsql/project-background.mml > osm2pgsql/OpenArdenneMap-background.xml
 - make and copy the share link
 - set no expiry date on the share link
 - put the share link in the frame gpkg layer
-- remove holes in the gpkh layer: put in convert-gpkg-geojson sh
+- remove holes in the gpkh layer: put in convert-gpkg-geojson sh: todo
 - export the layer as valid geojson (run convert-gpkg-geojson sh)
 - push on the hiking repo
 - check after a while if everything's right on the website

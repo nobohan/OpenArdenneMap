@@ -31,28 +31,25 @@ if __name__ == '__main__':
     conn.close()
 
     print("--- print label map ---")
-    # oam_mapnik_file = os.path.abspath('../../osm2pgsql/OpenArdenneMap-labels.xml')
-    # make_map(
-    #     'OAM_20000_{}_{}_labels.svg'.format(parameters.TITLE, parameters.ORIENTATION),
-    #      20000,
-    #      x_center,
-    #      y_center,
-    #      parameters.ORIENTATION,
-    #      oam_mapnik_file
-    # )
+    oam_mapnik_file = os.path.abspath('../../osm2pgsql/OpenArdenneMap-labels.xml')
+    make_map(
+        'OAM_20000_{}_{}_labels.svg'.format(parameters.TITLE, parameters.ORIENTATION),
+         20000,
+         x_center,
+         y_center,
+         parameters.ORIENTATION,
+         oam_mapnik_file
+    )
 
-    # print("--- print background map ---")
-    # oam_mapnik_file = os.path.abspath('../../osm2pgsql/OpenArdenneMap-background.xml')
-    # make_map(
-    #     'OAM_20000_{}_{}_background.svg'.format(parameters.TITLE, parameters.ORIENTATION),
-    #      20000,
-    #      x_center,
-    #      y_center,
-    #      parameters.ORIENTATION,
-    #      oam_mapnik_file
-    # )
+    print("--- print background map ---")
+    oam_mapnik_file = os.path.abspath('../../osm2pgsql/OpenArdenneMap-background.xml')
+    make_map(
+        'OAM_20000_{}_{}_background.svg'.format(parameters.TITLE, parameters.ORIENTATION),
+         20000,
+         x_center,
+         y_center,
+         parameters.ORIENTATION,
+         oam_mapnik_file
+    )
 
     fill_template(parameters)
-
-    # if not os.path.exists(f'A3-{parameters.ORIENTATION.lower()}-{parameters.TITLE}.svg'):
-    #    shutil.copy2(f'../A3-{parameters.ORIENTATION.lower()}.svg', f'A3-{parameters.ORIENTATION.lower()}-{parameters.TITLE.upper()}.svg')
