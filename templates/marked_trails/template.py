@@ -38,6 +38,7 @@ def make_date_svg():
 def fill_template(parameters):
     """ Fill a svg template """
 
+    print(datetime.datetime.now())
     print('fill svg template')
 
     c = canvas.canvas()
@@ -47,22 +48,18 @@ def fill_template(parameters):
 
     ### insert map background
     c.insert(svgfile.svgfile(3, 3, f"OAM_20000_{parameters.TITLE}_{parameters.ORIENTATION}_background.svg"), [trafo.scale(0.18)])
-    print(datetime.datetime.now())
     print('inserted map')
 
     ### insert map labels
     c.insert(svgfile.svgfile(3, 3, f"OAM_20000_{parameters.TITLE}_{parameters.ORIENTATION}_labels.svg"), [trafo.scale(0.18)])
-    print(datetime.datetime.now())
     print('inserted labels') 
 
     ### insert template
     c.insert(svgfile.svgfile(0, 0, f"../src/A3-{parameters.ORIENTATION.lower()}.svg"))
-    print(datetime.datetime.now())
     print('inserted templates')
 
     ### insert marked trail list
     c.insert(svgfile.svgfile(0.55, 14, f"marked-trails-{parameters.TITLE}.svg"))
-    print(datetime.datetime.now())
     print('inserted marked trails')
 
     ### insert title
@@ -80,6 +77,8 @@ def fill_template(parameters):
     ### insert distance annotations
     c.insert(svgfile.svgfile(37.1, 26.8, "distance_track.svg"))
     c.insert(svgfile.svgfile(37.3, 26.4, "distance_marked.svg"))
+    print('inserted title, date, annotations')
+    print('start saving the SVG file, it does take a while...')
 
     ### Output final file
     c.writeSVGfile(f"OAM_20000_{parameters.TITLE}_{parameters.ORIENTATION}.svg")

@@ -10,7 +10,7 @@ OpenArdenneMap templates are svg files for composing a printed map.
 
 We assume you have a running OSM postgre database as well as carto, Mapnik and their usual friends installed (see the README at the root of this repo).
 
-There is a small script, `marked_trails.py`, that outputs a svg file with the marked trail list and a map using `makeMap.py`.
+There is a small script, `main.py`, that outputs a svg file with the marked trail list and a map using `makeMap.py`.
 
 It runs into a virtual environnment
 
@@ -38,9 +38,7 @@ templates/marked_trails$ source bin/activate
 ```
 This script will produce the raw map file and already compose the templated map file. 
 
-3) Fine-tune the map in Inkscape
-
-
+3) Fine-tune the map in Inkscape and export it as pdf or png
 
 
 ## Components
