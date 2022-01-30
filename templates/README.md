@@ -98,21 +98,27 @@ carto osm2pgsql/project-background.mml > osm2pgsql/OpenArdenneMap-background.xml
 - check after a while if everything's right on the website
 
 
-AUTOMATISATION of the edition of svg:
+AFTER AUTOMATISATION:
 
 
-- open the full template and change some components
-    - open the full template and output it: it works, see in template.py
-    - can also add other layers (althouh there are not in inkscape layers): see https://pyx-project.org/manual/svgfile.html 
-    - how to change other stuffs (date, kms, ?): include text???
+- choose map center in templates.qgs: CANNOT AUTOMATISE
+- copy coordinates in parameters.py + name
+- activate the venv
+- run "python3 main.py"
+- export the svg as png : ok (edit and run the export-svg-as-png.bash)
+- transform the png in pdf (edit and run the img2pdf.bash)
+- make the thumbnail (edit and run the make-thumbnaik.bash)
+- copy the thumbnail into hiking.osm repo
+- transfer the pdf on nextcloud
+- make and copy the share link
+- set no expiry date on the share link
+- put the share link in the frame gpkg layer
+- remove holes in the gpkh layer: put in convert-gpkg-geojson sh: todo
+- export the layer as valid geojson (run convert-gpkg-geojson sh)
+- push on the hiking repo
+- check after a while if everything's right on the website
 
-    NB: pour diminuer la taille du svg, simplement réduire les dimensions dans la première ligne du fichier, ou jouer avec viewbox:
 
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="650pt" height="459pt" viewBox="0 0 6505 4599" version="1.1">
+BUG AUTOMATISATION:
 
-
-  - problème : l'insertion de la carte prend un temps trop long  
-
-
-- or add one thing after the other. 
-
+- bug des 2 noms dans la légende. Essayez de réécrire ces noms, ou chosir d'autres noms
