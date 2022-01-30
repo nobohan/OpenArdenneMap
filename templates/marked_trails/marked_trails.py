@@ -55,7 +55,12 @@ marked_trails_subquery = """
                     WHEN SPLIT_PART(\"osmc:symbol\",':', 3) = 'white_stripe' THEN
                        SPLIT_PART(\"osmc:symbol\",':', 1) || '_invstripe.svg'
                     WHEN SPLIT_PART(\"osmc:symbol\",':', 3) = 'white_corner' THEN
-                       SPLIT_PART(\"osmc:symbol\",':', 1) || '_pointer.svg'
+                        CASE
+                            WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'purple' THEN
+                               SPLIT_PART(\"osmc:symbol\",':', 2) || '_pointer.svg'
+                            ELSE
+                               SPLIT_PART(\"osmc:symbol\",':', 1) || '_pointer.svg'
+                        END
                     ELSE
                         SPLIT_PART(\"osmc:symbol\",':', 3) || '.svg'
                 END
