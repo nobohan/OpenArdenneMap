@@ -5,8 +5,11 @@ from wand.image import Image
 from datetime import datetime, timedelta
 import numpy as np
 import shutil
+import locale
 
 import parameters
+
+locale.setlocale(locale.LC_ALL, 'fr_FR.utf8')
 
 PAGE_WIDTH = 9250 #in meters in EPSG 3857 for a A3
 PAGE_HEIGHT = 13060 #in meters in EPSG 3857 for a A3
@@ -123,7 +126,7 @@ marked_trails_distance_query = """
 
 
 def generate_marked_trails_content(conn):
-    """ Generate the marked trails list """
+    """ Generate the marked trails list as svg """
 
     print(x_min, y_min, x_max, y_max)
 
@@ -193,8 +196,6 @@ def generate_marked_trails_content(conn):
 
         paragraph8.add(dwg.text(text, insert=(LEFT_MARGIN, i*Y_SCALE + LINE_HEIGHT * 2), fill='black'))
 
-        #dwg.add(dwg.line((0, i*Y_SCALE), (10, i*Y_SCALE), stroke=svgwrite.rgb(10, 10, 16, '%')))
-
 
     cursor = conn.cursor()
     cursor.execute(marked_trails_intersects_query)
@@ -254,6 +255,7 @@ def generate_marked_trails_content(conn):
 
 
 def timestamp_to_age_in_days_since_y2k(timestamp):
+    """ Returns the number of days since Year 2000 from a timestamp """
     d = datetime.strptime(timestamp.split('T')[0],'%Y-%m-%d')
     age_in_days = d - Y2K
 
@@ -262,7 +264,7 @@ def timestamp_to_age_in_days_since_y2k(timestamp):
 def days_since_y2k_to_date(days):
     return Y2K + timedelta(days=days)
 
-def print_timestamp_statistics(feature_timestamp):
+def compute_updateness_statistics(feature_timestamp):
     feature_timestamp_as_days = [timestamp_to_age_in_days_since_y2k(t[0]) for t in feature_timestamp]
 
     if len(feature_timestamp_as_days) > 0:
@@ -274,36 +276,47 @@ def print_timestamp_statistics(feature_timestamp):
         avg_date = days_since_y2k_to_date(avg_age_in_days)
         min_date = days_since_y2k_to_date(min_age_in_days)
         max_date = days_since_y2k_to_date(max_age_in_days)
-        median_date = days_since_y2k_to_date(median_age_in_days) #TODO factorise computation for printing and saving svg. Make stat in one dict
+        median_date = days_since_y2k_to_date(median_age_in_days)
 
-        print("average date: {}, {}".format(avg_date.strftime('%d-%m-%Y'), avg_date.strftime('%B-%Y')))
-        print("median date: {}".format(median_date.strftime('%d-%m-%Y')))
-        print("oldest date: {}".format(min_date.strftime('%d-%m-%Y')))
-        print("newest date: {}".format(max_date.strftime('%d-%m-%Y')))
+        return {
+            'avg': avg_date,
+            'min': min_date,
+            'max': max_date,
+            'median': median_date
+        }
+    else:
+        return None
+
+def print_timestamp_statistics(feature_timestamp):
+
+    updateness = compute_updateness_statistics(feature_timestamp)
+
+    if updateness:
+        print("average date: {}, {}".format(updateness['avg'].strftime('%d-%m-%Y'), updateness['avg'].strftime('%B-%Y')))
+        print("median date: {}".format(updateness['median'].strftime('%d-%m-%Y')))
+        print("oldest date: {}".format(updateness['min'].strftime('%d-%m-%Y')))
+        print("newest date: {}".format(updateness['max'].strftime('%d-%m-%Y')))
 
 
 def make_svg_timestamp(feature_timestamp, kind):
+    """ Generate a svg with the text on the updateness of the tracks """
+    updateness = compute_updateness_statistics(feature_timestamp)
 
-    feature_timestamp_as_days = [timestamp_to_age_in_days_since_y2k(t[0]) for t in feature_timestamp]
+    if updateness:
+        label_kind = 'CHEMINS' if kind == 'track' else 'ITINÉRAIRES BALISÉS'
+        timestamp_str = f"DATE MOYENNNE DE MODIFICATION DES {label_kind}: {updateness['median'].strftime('%B %Y')}" #TODO translate date in locale
 
-    if len(feature_timestamp_as_days) > 0:
-        median_age_in_days = np.median(feature_timestamp_as_days)
-        median_date = days_since_y2k_to_date(median_age_in_days)
-
-    label_kind = 'CHEMINS' if kind == 'track' else 'ITINÉRAIRES BALISÉS'
-    timestamp_str = f"DATE MOYENNNE DE MODIFICATION DES {label_kind}: {median_date.strftime('%B %Y')}" #TODO translate date in locale
-
-    timestamp_svg = svgwrite.Drawing(f'timestamp_{kind}.svg', size=('6cm', '2cm'), profile='full')
-    timestamp_svg.embed_font(name="Alfphabet", filename='../../fonts/Alfphabet-III.otf')
-    timestamp_svg.embed_stylesheet("""
-    .alfphabetTitle {
-        font-family: "Alfphabet";
-        font-size: 12;
-    }
-    """)
-    paragraph = timestamp_svg.add(timestamp_svg.g(class_="alfphabetTitle", ))
-    paragraph.add(timestamp_svg.text(timestamp_str, insert=(1, 1), fill='black'))
-    timestamp_svg.save()
+        timestamp_svg = svgwrite.Drawing(f'timestamp_{kind}.svg', size=('6cm', '2cm'), profile='full')
+        timestamp_svg.embed_font(name="Alfphabet", filename='../../fonts/Alfphabet-III.otf')
+        timestamp_svg.embed_stylesheet("""
+        .alfphabetTitle {
+            font-family: "Alfphabet";
+            font-size: 12;
+        }
+        """)
+        paragraph = timestamp_svg.add(timestamp_svg.g(class_="alfphabetTitle", ))
+        paragraph.add(timestamp_svg.text(timestamp_str, insert=(1, 1), fill='black'))
+        timestamp_svg.save()
 
 def tracks_timestamp_statistics(conn):
     """ Compute timestamp statistics of the tracks within the map """
@@ -324,6 +337,8 @@ def marked_trails_timestamp_statistics(conn):
     make_svg_timestamp(marked_trails_timestamp, 'marked')
 
 def make_svg_distance(distance, kind):
+    """ Generate a svg with the text on the distance of the tracks """
+
     formated_distance = "{:.1f}".format(distance)
     distance_str = f"{formated_distance} KM DE CHEMINS & SENTIERS" if kind == 'track' else f"{formated_distance} KM D'ITINÉRAIRES BALISÉS"
 

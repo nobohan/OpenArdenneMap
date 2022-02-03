@@ -20,7 +20,7 @@ def make_title_svg(title):
 
 
 def make_date_svg():
-    """Make a dummy svg file with the current date written in Alfphabet 18pt """
+    """Make a dummy svg file with the current date written in Alfphabet 12pt """
 
     today_str = f"carte éditée le {datetime.date.today().strftime('%d/%m/%Y')}"
     date_svg = svgwrite.Drawing('date.svg', size=('2cm', '6cm'), profile='full')
@@ -81,6 +81,6 @@ def fill_template(parameters):
     print('start saving the SVG file, it does take a while...')
 
     ### Output final file
-    c.writeSVGfile(f"OAM_20000_{parameters.TITLE}_{parameters.ORIENTATION}.svg")
+    c.writeSVGfile(f"A3-{parameters.ORIENTATION.lower()}-{parameters.TITLE.upper()}.svg")
 
     print(datetime.datetime.now())
