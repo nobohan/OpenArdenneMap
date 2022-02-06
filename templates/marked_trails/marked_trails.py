@@ -354,6 +354,23 @@ def make_svg_distance(distance, kind):
     paragraph.add(distance_svg.text(distance_str, insert=(1, 1), fill='black'))
     distance_svg.save()
 
+def make_svg_count_trails(count):
+    """ Generate a svg with number of marked trails within the map """
+
+    count_str = f"{count} ITINÉRAIRES PÉDESTRES BALISÉS:*"
+
+    distance_svg = svgwrite.Drawing(f'count_trails.svg', size=('6cm', '1cm'), profile='full')
+    distance_svg.embed_font(name="Alfphabet", filename='../../fonts/Alfphabet-III.otf')
+    distance_svg.embed_stylesheet("""
+    .alfphabetTitle {
+        font-family: "Alfphabet";
+        font-size: 12;
+    }
+    """)
+    paragraph = distance_svg.add(distance_svg.g(class_="alfphabetTitle", ))
+    paragraph.add(distance_svg.text(count_str, insert=(1, 1), fill='black'))
+    distance_svg.save()
+
 
 def isfloat(value):
   try:
@@ -368,6 +385,7 @@ def compute_tracks_length(conn):
     track_length = cursor.fetchall()
     sum_track_length = sum(tl[0] for tl in track_length)
     make_svg_distance(sum_track_length / 1000, 'track')
+    make_svg_count_trails(len(track_length))
     print("--- Tracks length ---")
     print("Total track length: {} km".format(sum_track_length / 1000) )
 
