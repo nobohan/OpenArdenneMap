@@ -36,10 +36,12 @@ Change the location (center in EPSG:3857 coordinates) in `parameters.py` and the
 templates/marked_trails$ source bin/activate
 (marked_trails) templates/marked_trails$ python3 main.py
 ```
-This script will produce the raw map file and already compose the templated map file. 
+This script will produce the raw map file and already compose the templated map file.
 
 3) Fine-tune the map in Inkscape and export it as pdf or png
 
+
+Note: although the labels are in a single object in the final map, it is really hard to manipulate this object in Inkscape due to the size of the svg file. A workaround is to comment the adding of the labels layer and to add it manually. To do so, use the "import" function of inkscape, put the imported label in a layer (for convenience, eg it allows to freeze all others objects/layer while working on the labels), scale it to 18% and ungroup the layer using the "Extensions > Arrange > Deep ungroup" function.
 
 ## Components
 
@@ -105,6 +107,11 @@ AFTER AUTOMATISATION:
 - copy coordinates in parameters.py + name
 - activate the venv
 - run "python3 main.py"
+- optionnally, add labels manually rather than automatically and deep ungroup them:
+  - create a layer labels
+  - add label svg
+  - scale them 18%
+  - ungroup: using deep ungroup (take a few minutes)
 - export the svg as png : ok (edit and run the export-svg-as-png.bash)
 - transform the png in pdf (edit and run the img2pdf.bash)
 - make the thumbnail (edit and run the make-thumbnaik.bash)
@@ -119,6 +126,3 @@ AFTER AUTOMATISATION:
 - check after a while if everything's right on the website
 
 
-BUG AUTOMATISATION:
-
-- bug des 2 noms dans la légende. Essayez de réécrire ces noms, ou chosir d'autres noms
