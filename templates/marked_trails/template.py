@@ -22,7 +22,7 @@ def make_title_svg(title):
 def make_date_svg():
     """Make a dummy svg file with the current date written in Alfphabet 12pt """
 
-    today_str = f"Carte éditée le {datetime.date.today().strftime('%d/%m/%Y')}"
+    today_str = f"CARTE ÉDITÉE LE {datetime.date.today().strftime('%d/%m/%Y')}"
     date_svg = svgwrite.Drawing('date.svg', size=('6cm', '1cm'), profile='full')
     date_svg.embed_font(name="Alfphabet", filename='../../fonts/Alfphabet-III.otf')
     date_svg.embed_stylesheet("""
@@ -41,7 +41,7 @@ def fill_template(parameters):
     print(datetime.datetime.now())
     print('fill svg template')
 
-    c = canvas.canvas()
+    c = canvas.canvas()#TODO specify canvas dimensions?
 
     # TODO: factorise insertion dimensions numbers + manage Landscape/portrait
     # TODO: add svg layers for better handling of the label layer see https://pyx-project.org/manual/canvas.html?highlight=group
@@ -58,34 +58,43 @@ def fill_template(parameters):
     c.insert(svgfile.svgfile(0, 0, f"../src/A3-{parameters.ORIENTATION.lower()}.svg"))
     print('inserted templates')
 
-    ### insert marked trail list
-    c.insert(svgfile.svgfile(0.55, 14, f"marked-trails-{parameters.TITLE}.svg"))
-    print('inserted marked trails')
-
-    X_MARGIN = 0.75
-
-    ### insert title
+    ### make some stuffs
     make_title_svg(parameters.TITLE.upper())
-    c.insert(svgfile.svgfile(X_MARGIN, 27.4, "title.svg"))
-
-    ### insert date annotation
     make_date_svg()
-    c.insert(svgfile.svgfile(X_MARGIN, -0.25, "date.svg"))
 
-    ### insert timestamp annotations
-    c.insert(svgfile.svgfile(8.9, 26.8, "timestamp_track.svg"))
-    c.insert(svgfile.svgfile(8.9, 26.4, "timestamp_marked.svg"))
+    ### insert stuffs
+    if parameters.ORIENTATION == 'PORTRAIT':
+        X_MARGIN = 1.9
+        Y_TOP = 38
+        c.insert(svgfile.svgfile(X_MARGIN + 1, 0, f"marked-trails-{parameters.TITLE}.svg"))
 
-    ### insert distance annotations
-    c.insert(svgfile.svgfile(37.1, 26.8, "distance_track.svg"))
-    c.insert(svgfile.svgfile(37.3, 26.4, "distance_marked.svg"))
+        c.insert(svgfile.svgfile(X_MARGIN + 6, 2, "title.svg"), [trafo.rotate(90)])
+        c.insert(svgfile.svgfile(X_MARGIN, Y_TOP + 1, "title.svg"))
+        c.insert(svgfile.svgfile(X_MARGIN, -0.05, "date.svg"))
+
+        c.insert(svgfile.svgfile(15, Y_TOP + 0.4, "timestamp_track.svg"))
+        c.insert(svgfile.svgfile(15, Y_TOP, "timestamp_marked.svg"))
+
+        c.insert(svgfile.svgfile(24.5, Y_TOP, "distance_track.svg"))
+        c.insert(svgfile.svgfile(24.5, Y_TOP + 0.4, "distance_marked.svg"))
+
+        c.insert(svgfile.svgfile(X_MARGIN + 1.5, 6.2, "count_trails.svg"))
+    else:
+        X_MARGIN = 0.75
+        c.insert(svgfile.svgfile(X_MARGIN, 27.4, "title.svg"))
+        c.insert(svgfile.svgfile(X_MARGIN, -0.25, "date.svg"))
+
+        c.insert(svgfile.svgfile(8.9, 26.8, "timestamp_track.svg"))
+        c.insert(svgfile.svgfile(8.9, 26.4, "timestamp_marked.svg"))
+
+        c.insert(svgfile.svgfile(37.1, 26.8, "distance_track.svg"))
+        c.insert(svgfile.svgfile(37.3, 26.4, "distance_marked.svg"))
+
+        c.insert(svgfile.svgfile(X_MARGIN, 26, "count_trails.svg"))
+
     print('inserted title, date, annotations')
 
-    ### insert count trail annotations
-    c.insert(svgfile.svgfile(X_MARGIN, 26, "count_trails.svg"))
-    print('inserted count trails')
     print('start saving the SVG file, it does take a while...')
-
 
     ### Output final file
     c.writeSVGfile(f"A3-{parameters.ORIENTATION.lower()}-{parameters.TITLE.upper()}.svg")
