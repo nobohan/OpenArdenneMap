@@ -43,9 +43,6 @@ def fill_template(parameters):
 
     c = canvas.canvas()#TODO specify canvas dimensions?
 
-    # TODO: factorise insertion dimensions numbers + manage Landscape/portrait
-    # TODO: add svg layers for better handling of the label layer see https://pyx-project.org/manual/canvas.html?highlight=group
-
     ### insert map background
     c.insert(svgfile.svgfile(3, 3, f"OAM_20000_{parameters.TITLE}_{parameters.ORIENTATION}_background.svg"), [trafo.scale(0.18)])
     print('inserted map')
@@ -68,9 +65,9 @@ def fill_template(parameters):
         Y_TOP = 38
         c.insert(svgfile.svgfile(X_MARGIN + 1, 0, f"marked-trails-{parameters.TITLE}.svg"))
 
-        c.insert(svgfile.svgfile(X_MARGIN + 6, 2, "title.svg"), [trafo.rotate(90)])
+        c.insert(svgfile.svgfile(X_MARGIN + 6, 2, "title.svg"), [trafo.rotate(90)]) # TODO move
         c.insert(svgfile.svgfile(X_MARGIN, Y_TOP + 1, "title.svg"))
-        c.insert(svgfile.svgfile(X_MARGIN, -0.05, "date.svg"))
+        c.insert(svgfile.svgfile(X_MARGIN, -0.05, "date.svg")) #TODO move
 
         c.insert(svgfile.svgfile(15, Y_TOP + 0.4, "timestamp_track.svg"))
         c.insert(svgfile.svgfile(15, Y_TOP, "timestamp_marked.svg"))
@@ -78,7 +75,7 @@ def fill_template(parameters):
         c.insert(svgfile.svgfile(24.5, Y_TOP, "distance_track.svg"))
         c.insert(svgfile.svgfile(24.5, Y_TOP + 0.4, "distance_marked.svg"))
 
-        c.insert(svgfile.svgfile(X_MARGIN + 1.5, 6.2, "count_trails.svg"))
+        c.insert(svgfile.svgfile(X_MARGIN + 1.5, 6.2, "count_trails.svg")) # TODO move
     else:
         X_MARGIN = 0.75
         c.insert(svgfile.svgfile(X_MARGIN, 27.4, "title.svg"))
