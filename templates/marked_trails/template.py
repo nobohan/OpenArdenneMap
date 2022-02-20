@@ -63,11 +63,11 @@ def fill_template(parameters):
     if parameters.ORIENTATION == 'PORTRAIT':
         X_MARGIN = 1.9
         Y_TOP = 38
-        c.insert(svgfile.svgfile(X_MARGIN + 1, 0, f"marked-trails-{parameters.TITLE}.svg"))
+        c.insert(svgfile.svgfile(0, 0, f"marked-trails-{parameters.TITLE}.svg"), [trafo.rotate(90), trafo.translate(12, 0.7)])
 
-        c.insert(svgfile.svgfile(X_MARGIN + 6, 2, "title.svg"), [trafo.rotate(90)]) # TODO move
+        c.insert(svgfile.svgfile(0, 0, "title.svg"), [trafo.rotate(90), trafo.translate(X_MARGIN + 0.45, 0.9)])
         c.insert(svgfile.svgfile(X_MARGIN, Y_TOP + 1, "title.svg"))
-        c.insert(svgfile.svgfile(X_MARGIN, -0.05, "date.svg")) #TODO move
+        c.insert(svgfile.svgfile(0, 0, "date.svg"), [trafo.rotate(-90), trafo.translate(26.8, 33.8)])
 
         c.insert(svgfile.svgfile(15, Y_TOP + 0.4, "timestamp_track.svg"))
         c.insert(svgfile.svgfile(15, Y_TOP, "timestamp_marked.svg"))
@@ -75,7 +75,7 @@ def fill_template(parameters):
         c.insert(svgfile.svgfile(24.5, Y_TOP, "distance_track.svg"))
         c.insert(svgfile.svgfile(24.5, Y_TOP + 0.4, "distance_marked.svg"))
 
-        c.insert(svgfile.svgfile(X_MARGIN + 1.5, 6.2, "count_trails.svg")) # TODO move
+        c.insert(svgfile.svgfile(0, 0, "count_trails.svg"), [trafo.rotate(90), trafo.translate(X_MARGIN + 2, 0.9)])
     else:
         X_MARGIN = 0.75
         c.insert(svgfile.svgfile(X_MARGIN, 27.4, "title.svg"))
