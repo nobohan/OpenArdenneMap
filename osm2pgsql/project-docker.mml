@@ -619,7 +619,7 @@
             "(
                 SELECT
                     way, name, network, signed_direction,
-                    CASE 
+                    CASE
                         WHEN distance LIKE '%km' THEN distance
                         ELSE distance || ' km'
                     END distance_km,
@@ -630,8 +630,22 @@
                         WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'green' THEN '#009739'
                         WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'orange' THEN '#ff6600'
                         WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'yellow' THEN '#fedd00'
-                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'purple' THEN '#ad629b'
-                        ELSE '#ff6600'
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'purple' THEN
+                            CASE
+                                WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1) <> '' THEN
+                                    CASE
+                                        WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1) = 'blue' THEN '#00629b'
+                                        WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1)= 'red' THEN '#d22730'
+                                        WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1) = 'green' THEN '#009739'
+                                        WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1)= 'orange' THEN '#ff6600'
+                                        WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1) = 'yellow' THEN '#fedd00'
+                                        ELSE
+                                            '#ad629b'
+                                    END
+                                ELSE
+                                    '#ad629b'
+                            END
+                        ELSE '#ad629b'
                     END html_color,
                     CASE
                         WHEN LENGTH(SPLIT_PART(\"osmc:symbol\",':', 4)) < 4 THEN
