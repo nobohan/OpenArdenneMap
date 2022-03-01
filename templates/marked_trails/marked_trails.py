@@ -209,11 +209,13 @@ def generate_marked_trails_content(conn):
 
     # Add svg images first
     i = SMALL_LINE_HEIGHT_FACTOR
+    count = 0
     for mt in marked_trails_contains:
         symbol_path = '../../img/marked-trails/{}'.format(mt[11])
         if os.path.isfile(symbol_path) and mt[0] is not None:
             add_marked_trail_images(i, symbol_path)
             i = i + 1
+            count = count + 1
 
     i = i + SMALL_LINE_HEIGHT_FACTOR
     for mt in marked_trails_intersects:
@@ -222,6 +224,7 @@ def generate_marked_trails_content(conn):
             if os.path.isfile(symbol_path) and mt[0] is not None:
                 add_marked_trail_images(i, symbol_path)
                 i = i + 1
+                count = count + 1
 
     # Add svg text
     i = 0
@@ -252,6 +255,8 @@ def generate_marked_trails_content(conn):
                 i = i + 1
 
     dwg.save(pretty=True)
+
+    make_svg_count_trails(count)
 
 
 def timestamp_to_age_in_days_since_y2k(timestamp):
@@ -385,7 +390,6 @@ def compute_tracks_length(conn):
     track_length = cursor.fetchall()
     sum_track_length = sum(tl[0] for tl in track_length)
     make_svg_distance(sum_track_length / 1000, 'track')
-    make_svg_count_trails(len(track_length))
     print("--- Tracks length ---")
     print("Total track length: {} km".format(sum_track_length / 1000) )
 
