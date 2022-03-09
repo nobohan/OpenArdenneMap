@@ -6,9 +6,12 @@ services:
     volumes:
        - ..:/var/OpenArdenneMap
   db:
-    image: mdillon/postgis
+    image: postgis/postgis:13-3.2-alpine
     ports:
       - "5439:5432"
     environment:
       - POSTGRES_USER=osmpg
       - POSTGRES_DB=osmpg_db
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - "./.data/db/data:/var/lib/postgresql/data"

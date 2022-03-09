@@ -5,6 +5,7 @@
         "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
+        "password":"postgres",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "landuse",
@@ -33,7 +34,7 @@
       "id": "hillshade",
       "name": "hillshade",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "status": "on"
+      "status": "off"
     },
     {
       "Datasource": {
@@ -54,6 +55,7 @@
         "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
+        "password":"postgres",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "table":
@@ -76,6 +78,7 @@
         "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
+        "password":"postgres",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "table":
@@ -97,6 +100,7 @@
         "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
+        "password":"postgres",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "water",
@@ -121,6 +125,7 @@
         "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
+        "password":"postgres",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "landuse_overlays",
@@ -145,6 +150,7 @@
         "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
+        "password":"postgres",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "aeroway",
@@ -169,6 +175,7 @@
         "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
+        "password":"postgres",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "tunnel",
@@ -209,6 +216,7 @@
         "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
+        "password":"postgres",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "table":
@@ -242,6 +250,7 @@
         "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
+        "password":"postgres",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "bridge",
@@ -283,6 +292,7 @@
         "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
+        "password":"postgres",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "bridge_symbol",
@@ -311,6 +321,7 @@
         "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
+        "password":"postgres",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "cemetery",
@@ -336,6 +347,7 @@
         "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
+        "password":"postgres",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "table":
@@ -358,6 +370,7 @@
         "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
+        "password":"postgres",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "table":
@@ -387,6 +400,7 @@
         "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
+        "password":"postgres",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "linear_features",
@@ -410,6 +424,7 @@
         "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
+        "password":"postgres",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "point_features",
@@ -457,6 +472,7 @@
         "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
+        "password":"postgres",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "pitch",
@@ -495,6 +511,7 @@
         "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
+        "password":"postgres",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "place",
@@ -520,6 +537,7 @@
         "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
+        "password":"postgres",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "landuse_label",
@@ -551,6 +569,7 @@
         "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
+        "password":"postgres",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "waterway_label",
@@ -562,7 +581,7 @@
                 WHERE waterway IN ('canal', 'river', 'stream') AND name IS NOT NULL
                 UNION ALL
                 SELECT
-                    ST_LineMerge(ST_ApproximateMedialAxis(ST_SimplifyPreserveTopology(ST_MakePolygon(ST_ExteriorRing(way)), 50))) AS way,
+                    way,
                     water AS type,
                     replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name
                 FROM planet_osm_polygon
@@ -583,6 +602,7 @@
         "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
+        "password":"postgres",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "table":
@@ -611,6 +631,7 @@
         "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
+        "password":"postgres",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "trails",
@@ -694,6 +715,7 @@
         "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
+        "password":"postgres",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "trails_start",

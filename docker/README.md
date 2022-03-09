@@ -1,7 +1,7 @@
 Docker image for installing Mapnik and printing your map
 --------------------------------------------------------
 
-Thanks to Marc Ducobu, there is now a docker image for installing the **last** version of Mapnik to use with OpenArdenneMap. Running the very last version (the dev version) of Mapnik is not yet another developer caprice but rather useful since, in 2019, only the last version of Mapnik offers a sound support for SVG pattern rendering without rasterisation of the pattern. This is crucial for map printing.  
+Thanks to Marc Ducobu, there is now a docker image for installing the **last** version of Mapnik to use with OpenArdenneMap. Running the very last version (the dev version) of Mapnik is not yet another developer caprice but rather useful since, in 2019, only the last version of Mapnik offers a sound support for SVG pattern rendering without rasterisation of the pattern. This is crucial for map printing.
 
 # Installation
 
@@ -34,10 +34,10 @@ Then, change directory to /var/OpenArdenneMap and you can run the following comm
 ## Importing
 
 ```bash
-root@51834f3f5bbd: osm2pgsql -c -G -H db -U osmpg -d osmpg_db -S osm2pgsql/OpenArdenneMap.style  --extra-attributes osm-files/extract.osm
+root@51834f3f5bbd: osm2pgsql -c -G -H db -U osmpg -d osmpg_db -W -S osm2pgsql/OpenArdenneMap.style  --extra-attributes osm-files/extract.osm
 ```
 
-where `extract.osm` is your osm (or pbf) file. 
+where `extract.osm` is your osm (or pbf) file. Enter the db password, i.e. "postgres" when asked.
 
 (or simply use `import.sh`).
 
