@@ -78,6 +78,8 @@ def fill_template(parameters):
         c.insert(svgfile.svgfile(0, 0, "count_trails.svg"), [trafo.rotate(90), trafo.translate(X_MARGIN + 2, 0.9)])
     else:
         X_MARGIN = 0.75
+        c.insert(svgfile.svgfile(0.5, 12, f"marked-trails-{parameters.TITLE}.svg"))
+
         c.insert(svgfile.svgfile(X_MARGIN, 27.4, "title.svg"))
         c.insert(svgfile.svgfile(X_MARGIN, -0.25, "date.svg"))
 
