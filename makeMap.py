@@ -42,9 +42,9 @@ def make_map(distance, scale, x_center = 621000, y_center = 6406900, pageFormat 
     render_to_file(m, mapOutput)
 
 
-make_map('Marche', 15000, 616000, 6402200, 'A3')
+# make_map('Marche', 15000, 616000, 6402200, 'A3')
 # make_map('18km', 20000, 621000, 6403500)
 # make_map('26km', 20000, 621000, 6403500)
-make_map('32km', 25000, 621000, 6403500)
+# make_map('32km', 25000, 621000, 6403500)
 # make_map('46km', 25000)
-# make_map('55km', 25000, 624500, 6406900)
+make_map('55km', 25000, 624500, 6406900)

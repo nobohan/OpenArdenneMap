@@ -1,11 +1,7 @@
 *.pdf
 *.cache
 *.osm
-<<<<<<< HEAD
-*.xml
-=======
 /osm2pgsql/*.xml
->>>>>>> master
 /contour/
 /osm-files/
 /.ropeproject/
