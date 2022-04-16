@@ -92,7 +92,7 @@
 
 
 #label_marche1 {
-    text-name:"'Marche 11 & 7 km'";
+    text-name:"'Marche 11 km'";
     text-face-name:@sans;
     text-placement:point;
     text-fill:@black;
@@ -105,7 +105,7 @@
     text-dx: -50;
 }
 #label_marche2 {
-    text-name:"'Marche 6 km (pointillé)'";
+    text-name:"'7 km (raccourci)'";
     text-face-name:@sans;
     text-placement:point;
     text-fill:@black;
@@ -114,11 +114,11 @@
     text-allow-overlap: true;
     text-halo-fill: @pink;
     text-halo-radius: 3;
-    text-dy: 550;
-    text-dx: 550;
+    text-dy: -1100;
+    text-dx: -400;
 }
 
-#ravitos__ {
+#ravitos {
     marker-file: url(../img/star.png);
     text-name:"'Ravitaillement'";
     text-face-name:@sans;
