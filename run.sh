@@ -1,7 +1,7 @@
 carto osm2pgsql/projectMarche.mml > osm2pgsql/OpenArdenneMapMarche.xml &&
 carto osm2pgsql/project18km.mml > osm2pgsql/OpenArdenneMap18km.xml &&
-carto osm2pgsql/project26km.mml > osm2pgsql/OpenArdenneMap26km.xml &&
-carto osm2pgsql/project32km.mml > osm2pgsql/OpenArdenneMap32km.xml &&
-carto osm2pgsql/project46km.mml > osm2pgsql/OpenArdenneMap46km.xml &&
-carto osm2pgsql/project55km.mml > osm2pgsql/OpenArdenneMap55km.xml &&
+carto osm2pgsql/project28km.mml > osm2pgsql/OpenArdenneMap28km.xml &&
+carto osm2pgsql/project34km.mml > osm2pgsql/OpenArdenneMap34km.xml &&
+carto osm2pgsql/project48km.mml > osm2pgsql/OpenArdenneMap48km.xml &&
+carto osm2pgsql/project57km.mml > osm2pgsql/OpenArdenneMap57km.xml &&
 python3 makeMap.py
