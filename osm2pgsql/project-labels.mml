@@ -1,0 +1,290 @@
+{
+  "Layer": [
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "point_features",
+        "srs": null,
+        "table":
+            "(
+                SELECT
+                    way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", \"generator:source\", bus, ford, name,
+                    replace(name, 'Château', 'Chau') as short_name,
+                    CASE
+                        WHEN direction = 'N-E' THEN 45
+                        WHEN direction = 'E' THEN 90
+                        WHEN direction = 'S-E' THEN 135
+                        WHEN direction = 'S' THEN 180
+                        WHEN direction = 'S-W' THEN 225
+                        WHEN direction = 'W' THEN 270
+                        WHEN direction = 'N-W' THEN 315
+                        WHEN direction ~ '-' THEN 0
+                        WHEN direction ~ '\\.' THEN 0
+                        WHEN direction ~ ';' THEN 0
+                        ELSE REGEXP_REPLACE(COALESCE(direction::character varying, '0'), '[^0-9]*' ,'0')::integer
+                    END AS orientation
+                FROM planet_osm_point
+                UNION
+                SELECT
+                    ST_Centroid(way) AS way,
+                    power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", \"generator:source\", NULL AS bus, NULL AS ford, name,
+                    replace(name, 'Château', 'Chau') as short_name,
+                    0 AS orientation
+                FROM planet_osm_polygon
+                WHERE historic IS NOT NULL
+            ) AS data",
+        "type": "postgis"
+      },
+
+      "geometry": "point",
+      "id": "point_features",
+      "name": "point_features",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "place",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table":
+            "(
+                SELECT way, place AS type, name, z_order, population
+                FROM planet_osm_point
+                WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality', 'isolated_dwelling')
+                ORDER BY population DESC NULLS LAST
+            ) AS data",
+        "type": "postgis"
+      },
+      "geometry": "point",
+      "id": "place",
+      "name": "place",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "landuse_label",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table":
+            "(
+                SELECT COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type, replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name, way_area AS area, ST_PointOnSurface(way) AS way
+                FROM planet_osm_polygon
+                WHERE ST_IsValid(way)
+                UNION ALL
+                SELECT 'building' AS type, replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name, way_area AS area, ST_PointOnSurface(way) AS way
+                FROM planet_osm_polygon
+                WHERE name IS NOT NULL
+                    AND building NOT IN ('', 'no', '0', 'false')
+                    AND ST_IsValid(way)
+                ORDER BY area DESC
+            ) AS data",
+        "type": "postgis"
+      },
+      "geometry": "point",
+      "id": "area_label",
+      "name": "area_label",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "waterway_label",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table":
+            "(
+                SELECT way, waterway AS type, replace(name, 'Ruisseau', 'Rau') AS name
+                FROM planet_osm_line
+                WHERE waterway IN ('canal', 'river', 'stream') AND name IS NOT NULL
+                UNION ALL
+                SELECT
+                    ST_LineMerge(ST_ApproximateMedialAxis(ST_SimplifyPreserveTopology(ST_MakePolygon(ST_ExteriorRing(way)), 50))) AS way,
+                    water AS type,
+                    replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name
+                FROM planet_osm_polygon
+                WHERE water IN ('pond', 'lake', 'basin', 'reservoir') AND name IS NOT NULL AND way_area > 10000
+            ) AS data",
+        "type": "postgis"
+      },
+      "properties": { "clear-label-cache": "on" },
+      "geometry": "linestring",
+      "id": "waterway_label",
+      "name": "waterway_label",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "table":
+            "(
+                SELECT way, railway AS type, name, z_order
+                FROM planet_osm_point
+                WHERE railway IN ('station', 'level_crossing')
+                ORDER BY z_order NULLS LAST
+            ) AS DATA",
+        "type": "postgis"
+      },
+      "extent": [
+        -122.85990918289764,
+        47.38001179491598,
+        -121.86970418303555,
+        47.842970094896586
+      ],
+      "geometry": "point",
+      "id": "train_elements",
+      "name": "train_elements",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "trails",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table":
+            "(
+                SELECT
+                    way, name, network, signed_direction,
+                    CASE
+                        WHEN distance LIKE '%km' THEN distance
+                        ELSE distance || ' km'
+                    END distance_km,
+                    SPLIT_PART(\"osmc:symbol\",':', 1) AS color,
+                    CASE
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'blue' THEN '#00629b'
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'red' THEN '#d22730'
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'green' THEN '#009739'
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'orange' THEN '#ff6600'
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'yellow' THEN '#fedd00'
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'purple' THEN
+                            CASE
+                                WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1) <> '' THEN
+                                    CASE
+                                        WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1) = 'blue' THEN '#00629b'
+                                        WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1)= 'red' THEN '#d22730'
+                                        WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1) = 'green' THEN '#009739'
+                                        WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1)= 'orange' THEN '#ff6600'
+                                        WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1) = 'yellow' THEN '#fedd00'
+                                        ELSE
+                                            '#ad629b'
+                                    END
+                                ELSE
+                                    '#ad629b'
+                            END
+                        ELSE '#ad629b'
+                    END html_color,
+                    CASE
+                        WHEN LENGTH(SPLIT_PART(\"osmc:symbol\",':', 4)) < 4 THEN
+                            SPLIT_PART(\"osmc:symbol\",':', 4)
+                        ELSE
+                            ''
+                    END marked_text,
+                    CASE
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 3) IN ('red_lower') THEN
+                            'black'
+                        ELSE
+                            'white'
+                    END text_color,
+                    CASE
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 3) <> '' THEN
+                            CASE
+                                WHEN SPLIT_PART(\"osmc:symbol\",':', 3) = 'white_stripe' THEN
+                                    '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 1) || '_invstripe.svg'
+                                WHEN SPLIT_PART(\"osmc:symbol\",':', 3) = 'white_corner' THEN
+                                    CASE
+                                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'purple' THEN
+                                           '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 2) || '_pointer.svg'
+                                        ELSE
+                                          '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 1) || '_pointer.svg'
+                                    END
+                                ELSE
+                                    '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 3) || '.svg'
+                            END
+                        ELSE
+                            '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 1) || '_rectangle.svg'
+                    END shield_uri
+                FROM planet_osm_line
+                WHERE route ~ 'hiking' OR route ~ 'foot'
+            ) AS data",
+        "type": "postgis"
+      },
+      "geometry": "line",
+      "id": "trails",
+      "name": "trails",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "id": "trails_start",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table":
+            "(
+             SELECT ST_Centroid((ST_Dump(start_point.geom)).geom) AS way
+             FROM (
+                SELECT ST_Union(ST_Buffer(ST_StartPoint(way), 100)) AS geom
+                FROM planet_osm_line
+                WHERE (route ~ 'hiking' OR route ~ 'foot') AND network IN ('lwn')) AS start_point
+            ) AS data",
+        "type": "postgis"
+      },
+      "geometry": "point",
+      "id": "trails_start",
+      "name": "trails_start",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "properties": { "clear-label-cache": "on" },
+      "status": "on"
+    },
+  ],
+  "Stylesheet": [
+    "../cartoCSS/scales.mss",
+    "../cartoCSS/palette.mss",
+    "../cartoCSS/base.mss",
+    "../cartoCSS/lines.mss",
+    "../cartoCSS/labels.mss",
+    "../cartoCSS/points.mss"
+  ],
+  "attribution": "Data \u00a9 OpenStreetMap (and) contributors, ODbL",
+  "bounds": [
+    -180,
+    -85.0511,
+    180,
+    85.0511
+  ],
+  "center": [
+    0,
+    20,
+    4
+  ],
+  "description": "",
+  "format": "png",
+  "interactivity": false,
+  "maxzoom": 18,
+  "minzoom": 0,
+  "name": "OpenArdenneMap",
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+}

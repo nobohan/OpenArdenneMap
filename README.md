@@ -3,36 +3,47 @@ OpenArdenneMap
 
 *Une carte pour l'Ardenne*
 
+*Wander local, think global*
+
 ![map](openardennemap.png)
 
 
 Un exemple peut être téléchargé [ici](http://www.nobohan.be/docs/OpenArdenneMap_Rulles_1_20000e.pdf).
+
+Some blog posts about the OpenArdenneMap semestrial releases [here](https://www.nobohan.be/tag/openardennemap/).
 
 &nbsp;
 
 ::: ENGLISH BELOW :::
 
 # A propos
-OpenArdenneMap est un style de carte personnalisé basé sur OpenStreetMap. Il se fonde sur le style OSMBright et s'inspire, entre autres, de OpenTopoMap.
+OpenArdenneMap est un style de carte personnalisé basé sur OpenStreetMap. Il se fonde sur le style OSMBright et s'inspire, entre autres, de OpenTopoMap. Plus d'infos dans cet article [ici](https://blog.champs-libres.coop/carto/2018/12/18/openardennemap.html)
 
 # Installation
-## Logiciels
-Si vous ne pouvez pas utiliser l'ensemble des scripts de ce dépôt, contactez-moi (nobohan.be#contact).
+## Par image docker
+Il y a maintenant une image docker et un fichier docker-compose pour installer la pile logicielle permettant de démarrer le projet. Voir dans le dossier `./docker/`
 
-Il est conseillé d'utiliser un environnment virtuel Python. Les librairies suivantes sont installées:
+## En installant la pile logicielle
+
+### Pile logicielle
+Il est conseillé d'utiliser un environnement virtuel Python. Les librairies/logiciels suivants sont installés:
 * mapnik
 * python-mapnik
-* imposm
+* osm2pgsql ou imposm
 * carto
-  * (Pour ces 4 premiers points, cfr l'installation de OSMBright)
+* postgreSQL + PostGIS 2.5.4+
+
+Notez que certaines nouvelles fonctions de postgis sont utilisées (ST_OrientedEnvelope), donc il vaut mieux installer un postgis de version >2.5.4 pour profiter de toutes les fonctionnalités du style de la carte.
+
+Puis:
 * cloner ou télécharger les fichiers OpenArdenneMap
 * télécharger les données OSM en fichier .osm (avec JOSM) ou bien en .pbf (par ex. sur download.geofabrik.de)
 
-## Mise en place de la base de données postgresql
+### Mise en place de la base de données postgresql
 Lancer le script `create-db.sh`. Il faut l'éditer auparavant selon le chemin de votre environnement virtuel.
 
 # Usage
-OpenArdenneMap fonctionne avec les importateurs imposm et osm2pgsql. Les styles et le fichier de projet propres à chaque importateur se trouvent dans leurs dossiers respectifs. À noter que, grâce à sa meilleure façon de gérer les multipolygones, les développement futurs se feront avec osm2pgsql.
+OpenArdenneMap fonctionne avec les importateurs `imposm` et `osm2pgsql`. Les styles et le fichier de projet propres à chaque importateur se trouvent dans leurs dossiers respectifs. À noter que, grâce à sa meilleure façon de gérer les multipolygones, les développement les plus récents se font avec `osm2pgsql`, le fichier de projet avec `imposm` n'est plus mis à jour.
 
 ## Pour changer les données OSM (import dans une db)
 
@@ -66,7 +77,7 @@ carto imposm/project.mml > imposm/OpenArdenneMap.xml && python makeMap.py
 Voici la commande pour mettre à jour avec osm2pgsql. La table de sélection des tags OSM est dans le fichier `OpenArdenneMap.style`. Ce fichier est légèrement adapté du fichier style d'osm2pgsql par défaut.
 
 ```
-osm2pgsql -c -G -d osmpg_db -S osm2pgsql/OpenArdenneMap.style osm-files/extract.osm
+osm2pgsql -c -G -d osmpg_db -S osm2pgsql/OpenArdenneMap.style --extra-attributes osm-files/extract.osm
 ```
 
 
@@ -126,7 +137,7 @@ Pour le moment, ce dépôt n'est pas destiné à générer des tuiles à différ
 
 
 ### 2.2) En ajoutant une nouvelle table
-1) Vous pouvez créer une nouvelle table avec des étiquettes OSM et une sélection de champs dans `imposm-mapping.py`. Voir par exemple la table nommée "linearfeatures" avec les étiquettes "man_made=embankment" et "embankment=yes". Noter la virgule à la fin des valeurs des clés, même avant de fermer la paranthèse!
+1) Vous pouvez créer une nouvelle table avec des étiquettes OSM et une sélection de champs dans `imposm-mapping.py`. Voir par exemple la table nommée "linearfeatures" avec les étiquettes "man_made=embankment" et "embankment=yes". Noter la virgule à la fin des valeurs des clés, même avant de fermer la parenthèse!
 
 
 ```
@@ -192,6 +203,8 @@ Bien sûr, outre les additions, le style de la carte a été fortement modifié.
 
 # Courbes de niveaux
 
+NOTE: Les fichiers de courbes de niveaux ne sont pas présents sur ce dépôt pour une question de taille! Néanmoins, voici ci-dessous la recette pour leur génération. Voir aussi cet [article de blog](https://www.champs-libres.coop/blog/post/2019-11-21-beautiful-contour-belgium/) avec un lien pour télécharger des courbes de niveaux pour la Belgique.
+
 ## Préparation du MNT
 Avant la génération des courbes de niveaux, le modèle numérique de terrain (MNT) a été filtré et les cours d'eau connu y ont été enfoncés. La chaine de traitement suivante a été faite avec le logiciel libre Whitebox GAT (https://www.uoguelph.ca/~hydrogeo/Whitebox/):
 1) Filtre "denoise";
@@ -205,10 +218,10 @@ Les courbes de niveaux ont été générées depuis le MNT filtré en utilisant 
 
 La couche a ensuite été post-processée pour obtenir des géométries plus courbes. L'outil `v.generalize.smooth` a été utilisé, avec l'algorithme "snakes" (paramètres par défaut).
 
-Enfin, un champ a été ajouté dans le shp des courbes de niveaux pour définir certaines lignes comme lignes maitresses, afin d'augmenter la lisibilté des lignes de contour. Ici, toutes les lignes avec une altitude égale à un multiple de 20 m a été définie comme maitresse. Cela a été calculé dans la calculette de champ de QGIS avec la formule suivante:
+Certaines courbes sont désignées comme lignes maitresses, afin d'augmenter la lisibilité des courbes de niveaux. Ici, toutes les courbes avec une altitude égale à un multiple de 20 m a été définie comme maitresse. Cela est calculé directement dans le fichier de style `base.mss` en fonction du champ 'ELEV':
 
 ```
-if( "level" % 20 = 0, 'yes', NULL)
+[[ELEV] % 20 = 0]
 ```
 
 ## Représentation des courbes de niveaux
@@ -236,25 +249,32 @@ Quelques commandes utiles pour l'impression en pdf:
 ::: ENGLISH :::
 
 # About
-OpenArdenneMap is a customized map using OpenStreetMap data. It is based on OSMBright and inspired by OpenTopoMap.
+OpenArdenneMap is a customized map using OpenStreetMap data. It is based on OSMBright and inspired by OpenTopoMap. More infos in this article (in French) [here](https://blog.champs-libres.coop/carto/2018/12/18/openardennemap.html)
 
 
 # Installation
+## By docker
+There is a docker image in the folder `docker`.
 
-## Stack
+## By installing this stack
+### Stack
 * This was developed inside a python virtual environment
 * Install Mapnik & python-mapnik
 * Install impsom OR osm2pgsql
 * Install carto
   * (For these last three points, have a look at OSMBright)
+* postgreSQL + postgis 2.5.4+
+
 * Clone or download the OpenArdenneMap files
 * download the OSM data as a .osm file (using JOSM) or as a .pbf file (e.g. on download.geofabrik.de)
 
-## Set up the postgresql database
+Note that some brand new PostGIS functions are used (ST_OrientedEnvelope), so it is better to install a postgis >2.5.4 to benefit to all of the functionnalities of the map style.
+
+### Set up the postgresql database
 Run the script `create-db.sh`. Edit it before according to the path of your virtual environment.
 
 # Usage
-OpenArdenneMap works with imposm or osm2pgsql. Map styles and project file for each importer are within their own folder (osm2pgsql or imposm). Note that, due to is better handling of complex multipolygons, further map developments will be with osm2pgsql.
+OpenArdenneMap works with `imposm` or `osm2pgsql`. Map styles and project file for each importer are within their own folder (osm2pgsql or imposm). Note that, due to is better handling of complex multipolygons, recent map developments are done with `osm2pgsql` and the project file with `imposm` is not longer updated.
 
 ## To change the way the OSM data are imported
 
@@ -414,6 +434,8 @@ Of course, the style of the map was modified, with some inspiration taken from O
 
 # Contour lines
 
+NOTE: Contour lines files are not pushed to this repository because of their size. Here is the recipe for their generation. Have also see [this article](https://www.champs-libres.coop/blog/post/2019-11-21-beautiful-contour-belgium/) with a link for downloading beauticul contour lines for Belgium.
+
 ## DEM pre-processing
 Before the contour lines generation, the digital elevation model (DEM) was filtered and known water streams were burned into the DEM. The following treatment chain was followed using the free and open source software Whitebox GAT (https://www.uoguelph.ca/~hydrogeo/Whitebox/):
 1) Filter "denoise";
@@ -426,9 +448,9 @@ Contour lines were then generated from the filtered DEM using the GRASS tool `r.
 
 Contour lines should be post-processed in order to have smooth geometries. The GRASS tool `v.generalize.smooth` was used, with the "snakes" algorithm (with default parameters).
 
-A field was added in the contour line shp to define some of the contour as "main" lines, in order to increase the readability of the contour lines. Here, I put every lines with a altitude (the "level" field) equal to a multiple of 20 as a "main" line. This was computed using the following formula in the QGIS field calculator:
+In order to increase the readability of the contour lines, some lines are defined as "master". Here, I put every lines with a altitude (the "ELEV" field) equal to a multiple of 20 as a "master" line. This is directly computed in the `base.mss` file as follows:
 ```
-if( "level" % 20 = 0, 'yes', NULL)
+[[ELEV] % 20 = 0]
 ```
 
 ## Contour lines representation
@@ -453,7 +475,6 @@ or
 
 
 # vtt
-
 
 * change distances
 * improve ravito labels and attributions

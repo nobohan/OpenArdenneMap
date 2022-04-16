@@ -33,6 +33,9 @@ def make_map(distance, scale, x_center = 621000, y_center = 6406900, pageFormat 
 
     bbox = (Envelope(xmin, ymin, xmax, ymax))
     m.zoom_to_box(bbox)
+    print(delta_x)
+    print(delta_y)
+    print("BBOX = " + str(xmin) + ',' + str(ymin) + ',' +  str(xmax) + ',' +  str(ymax))
     print("Scale = " + str(m.scale()))
 
     # Export to mapOutput

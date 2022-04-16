@@ -83,6 +83,7 @@
 
 # OsmType  Tag          DataType     Flags
 node,way   access       text         linear
+way        ascent       text         linear
 node,way   addr:housename      text  linear
 node,way   addr:housenumber    text  linear
 node,way   addr:interpolation  text  linear
@@ -104,7 +105,10 @@ node,way   covered      text         linear
 node,way   culvert      text         linear
 node,way   cutting      text         linear
 node,way   denomination text         linear
+way        descent      text         linear
 node,way   disused      text         linear
+node,way   direction    text         linear
+node,way   distance     text         linear
 node       ele          text         linear
 node,way   embankment   text         linear
 node,way   foot         text         linear
@@ -127,7 +131,9 @@ node,way   military     text         polygon
 node,way   motorcar     text         linear
 node,way   name         text         linear
 node,way   natural      text         polygon  # natural=coastline tags are discarded by a hard coded rule in osm2pgsql
+node,way   network      text         linear
 node,way   office       text         polygon
+way        osmc:symbol  text         linear
 node,way   oneway       text         linear
 node,way   operator     text         linear
 node,way   place        text         polygon
@@ -151,6 +157,7 @@ way        tracktype    text         linear
 way        trail_visibility text     linear
 node,way   trees        text         polygon
 node,way   tunnel       text         linear
+way        signed_direction text     linear
 node,way   water        text         polygon
 node,way   waterway     text         polygon
 node,way   wetland      text         polygon
@@ -158,6 +165,7 @@ node,way   width        text         linear
 node,way   wood         text         linear
 node,way   z_order      int4         linear # This is calculated during import
 way        way_area     real         linear # This is calculated during import
+node,way   osm_timestamp    text     linear
 
 # Area tags
 # We don't make columns for these tags, but objects with them are areas.

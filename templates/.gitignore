@@ -1,0 +1,7 @@
+*.svg
+!A3-landscape.svg
+!A3-portrait.svg
+!A3-landscape-grid.svg
+!A3-portrait-grid.svg
+!A3-landscape-manual.svg
+!A3-portrait-manual.svg
