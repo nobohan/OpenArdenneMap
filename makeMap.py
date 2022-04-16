@@ -2,6 +2,9 @@
 import math
 from mapnik import Envelope, Map, load_map, render_to_file
 
+
+LATITUDE = 50 # in degrees
+
 def make_map(distance, scale, x_center = 621000, y_center = 6406900, pageFormat = 'A2', orientation = 'LANDSCAPE'):
     # The mapFile is generated using carto from cartoCSS files.
     # /!\ Choose the right importer here: osm2pgsql or imposm!
