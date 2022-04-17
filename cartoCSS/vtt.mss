@@ -119,7 +119,9 @@
 }
 
 #ravitos {
-    marker-file: url(../img/star.png);
+    marker-file: url(../img/tourism.svg);
+    marker-allow-overlap: true;
+    marker-height: 26;
     text-name:"'Ravitaillement'";
     text-face-name:@sans;
     text-placement:point;
