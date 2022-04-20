@@ -159,7 +159,7 @@
     [id = 1] {
         marker-file: url(../img/profil28km.png);
         marker-allow-overlap: true;
-        marker-height: @profile_size;
+        marker-height: @profile_size*0.8;
         text-name:"'(c) Contributeurs OpenStreetMap - style OpenArdenneMap - Julien Minet (2022)'";
         text-face-name: @sans;
         text-placement: point;
@@ -171,7 +171,7 @@
         text-halo-radius: 10;
         text-size: @profile_font_size;
         text-dy: -300;
-        text-dx: 760;
+        text-dx: 0;
         text-allow-overlap: true;
     }
 }
@@ -179,7 +179,7 @@
     [id = 1] {
         marker-file: url(../img/profil34km.png);
         marker-allow-overlap: true;
-        marker-height: @profile_size;
+        marker-height: @profile_size*0.8;
         text-name:"'(c) Contributeurs OpenStreetMap - style OpenArdenneMap - Julien Minet (2022)'";
         text-face-name: @sans;
         text-placement: point;
@@ -191,7 +191,7 @@
         text-halo-radius: 10;
         text-size: @profile_font_size;
         text-dy: -300;
-        text-dx: 760;
+        text-dx: 0;
         text-allow-overlap: true;
     }
 }
@@ -199,7 +199,7 @@
     [id = 2] {
         marker-file: url(../img/profil48km.png);
         marker-allow-overlap: true;
-        marker-height: @profile_size;
+        marker-height: @profile_size*0.8;
         text-name:"'(c) Contributeurs OpenStreetMap - style OpenArdenneMap - Julien Minet (2022)'";
         text-face-name: @sans;
         text-placement: point;
@@ -211,7 +211,7 @@
         text-halo-radius: 10;
         text-size: @profile_font_size;
         text-dy: -300;
-        text-dx: 760;
+        text-dx: 300;
         text-allow-overlap: true;
     }
 }
@@ -219,7 +219,7 @@
     [id = 2] {
         marker-file: url(../img/profil57km.png);
         marker-allow-overlap: true;
-        marker-height: @profile_size;
+        marker-height: @profile_size*0.8;
         text-name:"'(c) Contributeurs OpenStreetMap - style OpenArdenneMap - Julien Minet (2022)'";
         text-face-name: @sans;
         text-placement: point;
@@ -231,7 +231,7 @@
         text-halo-radius: 10;
         text-size: @profile_font_size;
         text-dy: -300;
-        text-dx: 760;
+        text-dx: 300;
         text-allow-overlap: true;
     }
 }
