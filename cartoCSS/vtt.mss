@@ -114,8 +114,8 @@
     text-allow-overlap: true;
     text-halo-fill: @pink;
     text-halo-radius: 3;
-    text-dy: -1100;
-    text-dx: -400;
+    text-dy: -1250;
+    text-dx: -600;
 }
 
 #ravitos {

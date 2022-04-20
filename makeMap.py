@@ -56,8 +56,14 @@ def make_map(distance, scale, x_center = 621000, y_center = 6406900, pageFormat 
 
 
 make_map('Marche', 15000, 615000, 6402200, 'A4', 'PORTRAIT')
-make_map('18km', 15000, 617000, 6403500, 'A4', 'PORTRAIT')
-make_map('28km', 20000, 621000, 6403500)
-make_map('34km', 20000, 621000, 6403500)
-make_map('48km', 25000)
-make_map('57km', 25000, 624500, 6406900)
+make_map('18km', 15000, 615500, 6402000, 'A4', 'PORTRAIT')
+make_map('28km', 25000, 619000, 6403200, 'A3')
+make_map('34km', 25000, 619000, 6403200, 'A3')
+make_map('48km', 35000, 621000, 6406900, 'A3')
+make_map('57km', 40000, 621000, 6406900, 'A3')
+
+
+# make_map('28km', 20000, 621000, 6403500)
+# make_map('34km', 20000, 621000, 6403500)
+# make_map('48km', 25000)
+# make_map('57km', 25000, 624500, 6406900)
