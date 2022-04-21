@@ -170,8 +170,8 @@
         text-halo-fill: @other_halo;
         text-halo-radius: 10;
         text-size: @profile_font_size;
-        text-dy: -300;
-        text-dx: 100;
+        text-dy: -280;
+        text-dx: 80;
         text-allow-overlap: true;
     }
 }
@@ -190,8 +190,8 @@
         text-halo-fill: @other_halo;
         text-halo-radius: 10;
         text-size: @profile_font_size;
-        text-dy: -300;
-        text-dx: 100;
+        text-dy: -280;
+        text-dx: 80;
         text-allow-overlap: true;
     }
 }
@@ -210,7 +210,7 @@
         text-halo-fill: @other_halo;
         text-halo-radius: 10;
         text-size: @profile_font_size;
-        text-dy: -300;
+        text-dy: -400;
         text-dx: 300;
         text-allow-overlap: true;
     }
@@ -230,7 +230,7 @@
         text-halo-fill: @other_halo;
         text-halo-radius: 10;
         text-size: @profile_font_size;
-        text-dy: -300;
+        text-dy: -400;
         text-dx: 300;
         text-allow-overlap: true;
     }
