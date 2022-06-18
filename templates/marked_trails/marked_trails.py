@@ -125,6 +125,14 @@ marked_trails_distance_query = """
 """.format(x_min, y_min, x_max, y_max)
 
 
+def check_symbol_path(symbol_path):
+    """ Check the existence of the symbol path, or skip the check according to parameters """
+    if parameters.ONLY_EXISTING_SYMBOL:
+       return os.path.isfile(symbol_path)
+    else:
+        return True
+
+
 def generate_marked_trails_content(conn):
     """ Generate the marked trails list as svg """
 
@@ -165,10 +173,10 @@ def generate_marked_trails_content(conn):
 
     def add_marked_trail_images(i, symbol_path):
         """ Add a single marked trail mt images to the svg at the position index i """
-        insert_svg_image(dwg, symbol_path, LEFT_MARGIN, i*Y_SCALE + 3, "15px", "10px")
+        if os.path.isfile(symbol_path):
+            insert_svg_image(dwg, symbol_path, LEFT_MARGIN, i*Y_SCALE + 3, "15px", "10px")
 
-
-    def add_marked_trail_to_svg(mt, i):
+    def add_marked_trail_to_svg(mt, i, symbol_path):
         """ Add a single marked trail mt to the svg at the position index i """
 
         paragraph6 = dwg.add(dwg.g(class_="alfphabet6", ))
@@ -178,7 +186,8 @@ def generate_marked_trails_content(conn):
             marker_text_color = mt[10] if mt[10] is not None else 'black'
             paragraph6.add(dwg.text(str(mt[9]), insert=(LEFT_MARGIN + 6, i*Y_SCALE + LINE_HEIGHT - 1.5), fill=marker_text_color))
 
-        paragraph10.add(dwg.text(mt[0], insert=(LEFT_MARGIN + SYMBOL_MARGIN, i*Y_SCALE + LINE_HEIGHT), fill='black'))
+        margin = LEFT_MARGIN + SYMBOL_MARGIN if os.path.exists(symbol_path) else LEFT_MARGIN
+        paragraph10.add(dwg.text(mt[0], insert=(margin, i*Y_SCALE + LINE_HEIGHT), fill='black'))
 
         ascent = '{} m'.format(mt[3]) if mt[3] is not None else ''
         descent = '{} m'.format(mt[4]) if mt[4] is not None else ''
@@ -193,6 +202,7 @@ def generate_marked_trails_content(conn):
                 text = '{}, {}'.format(distance, start_point)
         else:
             text = start_point
+
 
         paragraph8.add(dwg.text(text, insert=(LEFT_MARGIN, i*Y_SCALE + LINE_HEIGHT * 2), fill='black'))
 
@@ -212,7 +222,7 @@ def generate_marked_trails_content(conn):
     count = 0
     for mt in marked_trails_contains:
         symbol_path = '../../img/marked-trails/{}'.format(mt[11])
-        if os.path.isfile(symbol_path) and mt[0] is not None:
+        if check_symbol_path(symbol_path) and mt[0] is not None:
             add_marked_trail_images(i, symbol_path)
             i = i + 1
             count = count + 1
@@ -221,7 +231,7 @@ def generate_marked_trails_content(conn):
     for mt in marked_trails_intersects:
         if mt not in marked_trails_contains:
             symbol_path = '../../img/marked-trails/{}'.format(mt[11])
-            if os.path.isfile(symbol_path) and mt[0] is not None:
+            if check_symbol_path(symbol_path) and mt[0] is not None:
                 add_marked_trail_images(i, symbol_path)
                 i = i + 1
                 count = count + 1
@@ -237,8 +247,8 @@ def generate_marked_trails_content(conn):
     for mt in marked_trails_contains:
         print(mt)
         symbol_path = '../../img/marked-trails/{}'.format(mt[11])
-        if os.path.isfile(symbol_path) and mt[0] is not None:
-            add_marked_trail_to_svg(mt, i)
+        if check_symbol_path(symbol_path) and mt[0] is not None:
+            add_marked_trail_to_svg(mt, i, symbol_path)
             i = i + 1
 
     paragraph10_1 = dwg.add(dwg.g(class_="alfphabet10", ))
@@ -249,9 +259,9 @@ def generate_marked_trails_content(conn):
     for mt in marked_trails_intersects:
         if mt not in marked_trails_contains:
             symbol_path = '../../img/marked-trails/{}'.format(mt[11])
-            if os.path.isfile(symbol_path) and mt[0] is not None:
+            if check_symbol_path(symbol_path) and mt[0] is not None:
                 print(mt)
-                add_marked_trail_to_svg(mt, i)
+                add_marked_trail_to_svg(mt, i, symbol_path)
                 i = i + 1
 
     dwg.save(pretty=True)
