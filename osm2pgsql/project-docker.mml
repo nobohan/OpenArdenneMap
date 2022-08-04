@@ -432,8 +432,12 @@
         "table":
             "(
                 SELECT
-                    way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", \"generator:source\", bus, ford, name,
+                    way, power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", \"generator:source\", bus, ford, \"natural\", ele, name,
                     replace(name, 'Château', 'Chau') as short_name,
+                    CASE
+                        WHEN ele IS NOT NULL THEN CONCAT(name, ' \n (', ele, ' m)')
+                        ELSE name
+                    END as peak_name,
                     CASE
                         WHEN direction = 'N-E' THEN 45
                         WHEN direction = 'E' THEN 90
@@ -451,8 +455,9 @@
                 UNION
                 SELECT
                     ST_Centroid(way) AS way,
-                    power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", \"generator:source\", NULL AS bus, NULL AS ford, name,
+                    power, man_made, amenity, historic, leisure, tourism, public_transport, \"tower:type\", \"generator:source\", NULL AS bus, NULL AS ford, \"natural\", NULL as ele, name,
                     replace(name, 'Château', 'Chau') as short_name,
+                    NULL as peak_name,
                     0 AS orientation
                 FROM planet_osm_polygon
                 WHERE historic IS NOT NULL

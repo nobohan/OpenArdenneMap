@@ -266,6 +266,32 @@
             }
         }
     }
+    [natural = 'peak'] {
+        [zoom >= 14] {
+            [zoom = 14] { marker-height: @peak_marker*@z14_marker; text-size: @text_size_m*@z14_label; }
+            [zoom = 15] { marker-height: @peak_marker*@z15_marker; text-size: @text_size_m*@z15_label; }
+            [zoom = 16] { marker-height: @peak_marker*@z16_marker; text-size: @text_size_m*@z16_label; }
+            [zoom = 17] { marker-height: @peak_marker*@z17_marker; text-size: @text_size_m*@z17_label; }
+            [zoom = 18] { marker-height: @peak_marker*@z18_marker; text-size: @text_size_m*@z18_label; }
+            [zoom = 19] { marker-height: @peak_marker*@z19_marker; text-size: @text_size_m*@z19_label; }
+            [zoom >= 20] { marker-height: @peak_marker*@z20_marker; text-size: @text_size_m*@z20_label; }
+            text-name: '[peak_name]';
+            text-face-name: @sans;
+            text-placement: point;
+            text-fill: @black;
+            text-character-spacing: 2;
+            text-line-spacing: 2;
+            text-halo-fill: @other_halo;
+            text-halo-radius: 2;
+            text-allow-overlap: true;
+            text-dy: 26;
+            text-wrap-width: 30;
+            text-wrap-character: "\n";
+            marker-file: url(../img/peak.svg);
+            marker-allow-overlap: true;
+            marker-ignore-placement: true;
+        }
+    }
 }
 
 

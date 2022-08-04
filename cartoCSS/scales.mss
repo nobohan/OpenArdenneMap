@@ -116,3 +116,4 @@
 @windmill_marker: 36;
 @viewpoint_marker: 42;
 @trail_marker: 200;
+@peak_marker: 28;

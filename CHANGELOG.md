@@ -1,3 +1,12 @@
+## v0.8.0 summer-2022
+
+### Description
+
+
+### Changes
+- add peak symbol and label, with elevation when available (natural=peak)
+
+
 ## v0.7.0 winter-2021-2022
 
 ### Description
@@ -33,11 +42,11 @@ Small fixes and adaptations of the style. Add the possibility of outputting a la
 
 ### Description
 
-Add a new map feature: marked trails based on the type=route AND route=hiking relations. Similar to the hiking.waymarkedtrails.org overlay. At the moment, only hiking and foot route relations are supported. 
+Add a new map feature: marked trails based on the type=route AND route=hiking relations. Similar to the hiking.waymarkedtrails.org overlay. At the moment, only hiking and foot route relations are supported.
 
 ### Changes
 - Add a "trails" layer that shows the hiking marked trails with a thick, offset line; a shield representing the most common marked trails symbols encountered in Ardenne; the distance of the track (if this a short, local trail) and the direction of the way (if the marked symbols are available only in one direction).
-- Add a "trails_start" layer showing the starting point of marked trails. Starting point that are closes to each other (<100m) are first merged into one single point. 
+- Add a "trails_start" layer showing the starting point of marked trails. Starting point that are closes to each other (<100m) are first merged into one single point.
 
 
 ## v0.4.0 summer2020
@@ -49,7 +58,7 @@ Some new map features and some enhancement
 ### Changes
 - New map feature: modern windmill used for generating electricity ('power' = 'generator' and 'generator:source' = 'wind'] )
 - New map feature: touristic viewpoint ('tourism'='viewpoint') oriented according to the direction tag.
-- New line symboliser for highway=path and bridge=yes of a sufficient length, meaning to render grating path ("caillebotis"). 
+- New line symboliser for highway=path and bridge=yes of a sufficient length, meaning to render grating path ("caillebotis").
 - Add an optional layer for hillshading
 - Add name on tracks and paths
 
@@ -61,7 +70,7 @@ A huge modification: the style was extended from zoom 10 to 20. See the blog pos
 
 ### Changes
 - The style of all map features (polygones, lines, points, labels) was modified for the zoom levels from 10 to 20. A lot of features were hidden at low zoom levels.
-- Scale factors in `cartoCSS/scales.mss` were better defined and now follow regular and logical number sequences.  
+- Scale factors in `cartoCSS/scales.mss` were better defined and now follow regular and logical number sequences.
 
 
 
