@@ -5,6 +5,87 @@
         "dbname": "osmpg_db",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
+        "id": "trails",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table":
+            "(
+                SELECT
+                    way, name, network, signed_direction,
+                    CASE
+                        WHEN distance LIKE '%km' THEN distance
+                        ELSE distance || ' km'
+                    END distance_km,
+                    SPLIT_PART(\"osmc:symbol\",':', 1) AS color,
+                    CASE
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'blue' THEN '#00629b'
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'red' THEN '#d22730'
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'green' THEN '#009739'
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'orange' THEN '#ff6600'
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'yellow' THEN '#fedd00'
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'purple' THEN
+                            CASE
+                                WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1) <> '' THEN
+                                    CASE
+                                        WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1) = 'blue' THEN '#00629b'
+                                        WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1)= 'red' THEN '#d22730'
+                                        WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1) = 'green' THEN '#009739'
+                                        WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1)= 'orange' THEN '#ff6600'
+                                        WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1) = 'yellow' THEN '#fedd00'
+                                        ELSE
+                                            '#ad629b'
+                                    END
+                                ELSE
+                                    '#ad629b'
+                            END
+                        ELSE '#ad629b'
+                    END html_color,
+                    CASE
+                        WHEN LENGTH(SPLIT_PART(\"osmc:symbol\",':', 4)) < 4 THEN
+                            SPLIT_PART(\"osmc:symbol\",':', 4)
+                        ELSE
+                            ''
+                    END marked_text,
+                    CASE
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 3) IN ('red_lower') THEN
+                            'black'
+                        ELSE
+                            'white'
+                    END text_color,
+                    CASE
+                        WHEN SPLIT_PART(\"osmc:symbol\",':', 3) <> '' THEN
+                            CASE
+                                WHEN SPLIT_PART(\"osmc:symbol\",':', 3) = 'white_stripe' THEN
+                                    '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 1) || '_invstripe.svg'
+                                WHEN SPLIT_PART(\"osmc:symbol\",':', 3) = 'white_corner' THEN
+                                    CASE
+                                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'purple' THEN
+                                           '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 2) || '_pointer.svg'
+                                        ELSE
+                                          '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 1) || '_pointer.svg'
+                                    END
+                                ELSE
+                                    '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 3) || '.svg'
+                            END
+                        ELSE
+                            '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 1) || '_rectangle.svg'
+                    END shield_uri
+                FROM planet_osm_line
+                WHERE route ~ 'hiking' OR route ~ 'foot'
+            ) AS data",
+        "type": "postgis"
+      },
+      "geometry": "line",
+      "id": "trails",
+      "name": "trails",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
         "id": "point_features",
         "srs": null,
         "table":
@@ -157,87 +238,6 @@
       "name": "train_elements",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913"
-    },
-    {
-      "Datasource": {
-        "dbname": "osmpg_db",
-        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
-        "geometry_field": "way",
-        "id": "trails",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table":
-            "(
-                SELECT
-                    way, name, network, signed_direction,
-                    CASE
-                        WHEN distance LIKE '%km' THEN distance
-                        ELSE distance || ' km'
-                    END distance_km,
-                    SPLIT_PART(\"osmc:symbol\",':', 1) AS color,
-                    CASE
-                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'blue' THEN '#00629b'
-                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'red' THEN '#d22730'
-                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'green' THEN '#009739'
-                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'orange' THEN '#ff6600'
-                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'yellow' THEN '#fedd00'
-                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'purple' THEN
-                            CASE
-                                WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1) <> '' THEN
-                                    CASE
-                                        WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1) = 'blue' THEN '#00629b'
-                                        WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1)= 'red' THEN '#d22730'
-                                        WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1) = 'green' THEN '#009739'
-                                        WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1)= 'orange' THEN '#ff6600'
-                                        WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1) = 'yellow' THEN '#fedd00'
-                                        ELSE
-                                            '#ad629b'
-                                    END
-                                ELSE
-                                    '#ad629b'
-                            END
-                        ELSE '#ad629b'
-                    END html_color,
-                    CASE
-                        WHEN LENGTH(SPLIT_PART(\"osmc:symbol\",':', 4)) < 4 THEN
-                            SPLIT_PART(\"osmc:symbol\",':', 4)
-                        ELSE
-                            ''
-                    END marked_text,
-                    CASE
-                        WHEN SPLIT_PART(\"osmc:symbol\",':', 3) IN ('red_lower') THEN
-                            'black'
-                        ELSE
-                            'white'
-                    END text_color,
-                    CASE
-                        WHEN SPLIT_PART(\"osmc:symbol\",':', 3) <> '' THEN
-                            CASE
-                                WHEN SPLIT_PART(\"osmc:symbol\",':', 3) = 'white_stripe' THEN
-                                    '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 1) || '_invstripe.svg'
-                                WHEN SPLIT_PART(\"osmc:symbol\",':', 3) = 'white_corner' THEN
-                                    CASE
-                                        WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'purple' THEN
-                                           '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 2) || '_pointer.svg'
-                                        ELSE
-                                          '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 1) || '_pointer.svg'
-                                    END
-                                ELSE
-                                    '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 3) || '.svg'
-                            END
-                        ELSE
-                            '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 1) || '_rectangle.svg'
-                    END shield_uri
-                FROM planet_osm_line
-                WHERE route ~ 'hiking' OR route ~ 'foot'
-            ) AS data",
-        "type": "postgis"
-      },
-      "geometry": "line",
-      "id": "trails",
-      "name": "trails",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
-      "status": "on"
     },
     {
       "Datasource": {

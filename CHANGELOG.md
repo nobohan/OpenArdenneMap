@@ -2,10 +2,11 @@
 
 ### Description
 
+A new feature (natural=peak), reordering of a label layer.
 
 ### Changes
-- add peak symbol and label, with elevation when available (natural=peak)
-
+- add peak (natural=peak) symbol and label, with elevation when available
+- reorder marker trails layer
 
 ## v0.7.0 winter-2021-2022
 
