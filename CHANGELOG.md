@@ -2,9 +2,10 @@
 
 ### Description
 
-A new feature (natural=peak), reordering of a label layer.
+A CARTOGRAPHY manifest was written, aiming at specifiying what are the cartographic principles of the OpenArdenneMap map style. Also, adding of a new feature (natural=peak) and reordering of a label layer.
 
 ### Changes
+- write a CARTOGRAPHY manifest
 - add peak (natural=peak) symbol and label, with elevation when available
 - reorder marker trails layer
 
