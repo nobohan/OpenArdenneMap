@@ -77,7 +77,7 @@ carto imposm/project.mml > imposm/OpenArdenneMap.xml && python makeMap.py
 Voici la commande pour mettre à jour avec osm2pgsql. La table de sélection des tags OSM est dans le fichier `OpenArdenneMap.style`. Ce fichier est légèrement adapté du fichier style d'osm2pgsql par défaut.
 
 ```
-osm2pgsql -c -G -d osmpg_db -S osm2pgsql/OpenArdenneMap.style --extra-attributes osm-files/extract.osm
+osm2pgsql -c -G --slim -d osmpg_db -S osm2pgsql/OpenArdenneMap.style --extra-attributes osm-files/extract.osm
 ```
 
 
@@ -305,7 +305,7 @@ carto imposm/project.mml > imposm/OpenArdenneMap.xml && python makeMap.py
 Here is the command for updating with osm2pgsql. OSM tags selections is written in the `OpenArdenneMap.style` file. This file is slightly modified from the default osm2pgsql style file.
 
 ```
-osm2pgsql -c -G -d osmpg_db -S osm2pgsql/OpenArdenneMap.style osm-files/extract.osm
+osm2pgsql -c -G --slim -d osmpg_db -S osm2pgsql/OpenArdenneMap.style --extra-attributes osm-files/extract.osm
 ```
 
 
