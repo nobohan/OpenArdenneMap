@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 744.09448819 1052.3622047"
+   width="13.313396mm"
+   height="14.167728mm"
+   viewBox="0 0 47.173452 50.200613"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
    sodipodi:docname="christmas_trees.svg"
    inkscape:export-filename="/media/julien/data/Projets/Geomatique/OSM/Mapnik/artwork/meadow.png"
    inkscape:export-xdpi="90"
@@ -29,19 +29,25 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="9.1493763"
-     inkscape:cx="281.82104"
-     inkscape:cy="741.39694"
+     inkscape:cx="18.346989"
+     inkscape:cy="10.174006"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="1865"
-     inkscape:window-height="1025"
-     inkscape:window-x="55"
-     inkscape:window-y="27"
-     inkscape:window-maximized="1">
+     inkscape:window-width="3786"
+     inkscape:window-height="2123"
+     inkscape:window-x="54"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
     <inkscape:grid
        type="xygrid"
-       id="grid4138" />
+       id="grid4138"
+       originx="-228.51181"
+       originy="-685.11163" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -51,14 +57,15 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-228.51181,-317.04996)">
     <rect
        style="fill:none;fill-opacity:1;stroke:#1c1c1c;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4150"
@@ -68,7 +75,7 @@
        y="317.04996" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#1c1c1c;stroke-width:1.41756654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 241.04479,339.49338 0,-15.25983"
+       d="M 241.04479,339.49338 V 324.23355"
        id="path4141"
        inkscape:connector-curvature="0" />
     <path
@@ -97,7 +104,7 @@
        inkscape:transform-center-y="16.954736" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#1c1c1c;stroke-width:1.41756654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 263.59786,340.01132 0,-15.25983"
+       d="M 263.59786,340.01132 V 324.75149"
        id="path4141-35"
        inkscape:connector-curvature="0" />
     <path
@@ -126,7 +133,7 @@
        inkscape:transform-center-y="16.954738" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#1c1c1c;stroke-width:1.41756654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 241.11815,362.49468 0,-15.25983"
+       d="M 241.11815,362.49468 V 347.23485"
        id="path4141-9"
        inkscape:connector-curvature="0" />
     <path
@@ -155,7 +162,7 @@
        inkscape:transform-center-y="16.954731" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#1c1c1c;stroke-width:1.41756654;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 264.10877,362.88314 0,-15.25983"
+       d="M 264.10877,362.88314 V 347.62331"
        id="path4141-2"
        inkscape:connector-curvature="0" />
     <path

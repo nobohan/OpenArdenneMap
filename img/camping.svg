@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 744.09448819 1052.3622047"
+   width="9.1525497mm"
+   height="10.146848mm"
+   viewBox="0 0 32.430294 35.953397"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
    sodipodi:docname="camping.svg">
   <defs
      id="defs4" />
@@ -26,19 +26,25 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
-     inkscape:cx="399.18281"
-     inkscape:cy="602.69753"
+     inkscape:cx="-62.847871"
+     inkscape:cy="9.9823995"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="1313"
-     inkscape:window-height="744"
-     inkscape:window-x="53"
-     inkscape:window-y="24"
-     inkscape:window-maximized="1">
+     inkscape:window-width="3786"
+     inkscape:window-height="2123"
+     inkscape:window-x="54"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
     <inkscape:grid
        type="xygrid"
-       id="grid4136" />
+       id="grid4136"
+       originx="-372.71847"
+       originy="-554.33112" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -48,17 +54,18 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-372.7185,-462.07766)">
     <path
        style="fill:none;fill-rule:evenodd;stroke:#111111;stroke-width:1.36129773;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 373.40884,475.87081 11.64523,0"
+       d="m 373.40884,475.87081 h 11.64523"
        id="path4158-3-5"
        inkscape:connector-curvature="0" />
     <path
@@ -75,7 +82,7 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#111111;stroke-width:1.36129773;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 392.81322,497.35034 11.64523,0"
+       d="m 392.81322,497.35034 h 11.64523"
        id="path4158-3-5-6"
        inkscape:connector-curvature="0" />
     <path
