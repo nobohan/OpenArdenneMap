@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" saveDateTime="2023-01-07T12:47:03" version="3.16.11-Hannover" saveUser="julien" saveUserFull="julien">
+<qgis projectname="" saveDateTime="2023-01-07T13:58:34" version="3.16.11-Hannover" saveUser="julien" saveUserFull="julien">
   <homePath path=""/>
   <title></title>
   <autotransaction active="0"/>
@@ -25,6 +25,10 @@
         <property key="expandedLegendNodes">
           <value>{5ea9166f-1f46-4927-b60d-2c1575ed69ac}</value>
           <value>{2d715f49-05ea-4099-b70b-598505e28023}</value>
+          <value>{7f18af67-eeec-4ff3-8c3b-02cc27e9a098}</value>
+          <value>{f68c3ab8-d48a-4e51-b4aa-c502262477f3}</value>
+          <value>{063e1079-701f-4b69-914c-5470be91d921}</value>
+          <value>{2fe68465-1c5c-4f56-a4f9-863f95445b61}</value>
         </property>
       </customproperties>
     </layer-tree-layer>
@@ -79,10 +83,10 @@
   <mapcanvas name="theMapCanvas" annotationsVisible="1">
     <units>meters</units>
     <extent>
-      <xmin>231473.00518444742192514</xmin>
-      <ymin>51209.09711784571118187</ymin>
-      <xmax>237001.66954579084995203</xmax>
-      <ymax>55117.52212183231313247</ymax>
+      <xmin>230938.74959917101659812</xmin>
+      <ymin>51013.83461764653475257</ymin>
+      <xmax>237158.49700568235130049</xmax>
+      <ymax>55410.81274713142920518</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -672,30 +676,21 @@ def my_form_open(dialog, layer, feature):
       <renderer-v2 symbollevels="0" forceraster="0" enableorderby="0" type="RuleRenderer">
         <rules key="{37180f1d-e38a-485a-ad30-c5ebcf2ac71b}">
           <rule filter="&quot;stylegroup&quot; = 'railway'" key="{c6d904e2-5180-4250-bc59-a4402043c586}" symbol="0" label="railway"/>
-          <rule filter="&quot;stylegroup&quot; = 'motorway' " key="{7f18af67-eeec-4ff3-8c3b-02cc27e9a098}" label="motorway" checkstate="0">
-            <rule scalemindenom="1" key="{59642d05-371d-4048-959c-f71dcc51562a}" symbol="1" label="motorway 0 - 500" scalemaxdenom="500"/>
-            <rule scalemindenom="500" key="{94a8a028-0f82-4ca9-9907-574be97ad415}" symbol="2" label="motorway  500 - 1000" scalemaxdenom="1000"/>
-            <rule scalemindenom="1000" key="{cb6c5ca5-b7bc-462b-a9ef-62136d19556b}" symbol="3" label="motorway 1000 - 5000" scalemaxdenom="5000"/>
-            <rule scalemindenom="5000" key="{14cfbf1c-6b1e-4a8d-b29a-a1dee64f34bc}" symbol="4" label="motorway 5000 - 10000" scalemaxdenom="10000"/>
-            <rule scalemindenom="10000" key="{0b0dfc4a-bdb4-4010-a4e8-6ebd56514f24}" symbol="5" label="motorway 10000 - 50000" scalemaxdenom="50000"/>
-            <rule scalemindenom="100000" key="{26528208-5d4d-4d8d-80ef-1ca480effafc}" symbol="6" label="motorway 50000 - 100000" scalemaxdenom="100000"/>
-            <rule scalemindenom="500000" key="{392a121c-6b59-4ab1-b415-6fe81e12b6d3}" symbol="7" label="motorway 100000 - 500000" scalemaxdenom="500000"/>
-            <rule scalemindenom="1000000" key="{cfb11c04-e383-4912-9ebf-bb904c8a6334}" symbol="8" label="motorway  500000 - 1000000" scalemaxdenom="1000000"/>
-            <rule scalemindenom="5000000" key="{4450bbe0-7522-4dd2-b333-48a938f9cf4f}" symbol="9" label="motorway 1000000 - 5000000" scalemaxdenom="5000000"/>
-            <rule scalemindenom="8000000" key="{c6dcb0a1-2676-4c4e-add0-5ffd9737fbb0}" symbol="10" label="motorway 5000000 - 8000000" scalemaxdenom="8000000"/>
-            <rule key="{a86d82ec-0e2c-41e4-89d4-d41396a16e12}" symbol="11" label="motorway 8000000 - 10000000" scalemaxdenom="10000000"/>
+          <rule filter="&quot;type&quot;='motorway' OR &quot;type&quot;='motorway_link' OR &quot;type&quot;='trunk' OR &quot;type&quot;='trunk_link'" key="{063e1079-701f-4b69-914c-5470be91d921}" label="motorway">
+            <rule scalemindenom="1" key="{27bc494a-8d47-41bd-9214-90cc9f009ee9}" symbol="1" label="0 - 10000" scalemaxdenom="10000"/>
+            <rule scalemindenom="10000" key="{3db39ab0-0fd2-4d39-87f5-51f52de5601c}" symbol="2" label="10000 - 500000" scalemaxdenom="500000"/>
           </rule>
-          <rule filter="&quot;type&quot;='primary' OR &quot;type&quot;='primary_link'" key="{2fe68465-1c5c-4f56-a4f9-863f95445b61}" symbol="12" label="primary">
-            <rule scalemindenom="1" key="{0999edc8-7908-4bc7-b943-e6744ea34c74}" symbol="13" label="0 - 10000" scalemaxdenom="10000"/>
-            <rule scalemindenom="10000" key="{939bd9b0-7d2f-43a3-b802-c1e0533974b6}" symbol="14" label="10000 - 500000" scalemaxdenom="500000"/>
+          <rule filter="&quot;type&quot;='primary' OR &quot;type&quot;='primary_link'" key="{2fe68465-1c5c-4f56-a4f9-863f95445b61}" label="primary">
+            <rule scalemindenom="1" key="{0999edc8-7908-4bc7-b943-e6744ea34c74}" symbol="3" label="0 - 10000" scalemaxdenom="10000"/>
+            <rule scalemindenom="10000" key="{939bd9b0-7d2f-43a3-b802-c1e0533974b6}" symbol="4" label="10000 - 500000" scalemaxdenom="500000"/>
           </rule>
-          <rule filter="&quot;type&quot;='secondary' OR &quot;type&quot;='secondary_link'" key="{2d715f49-05ea-4099-b70b-598505e28023}" symbol="15" label="secondary">
-            <rule scalemindenom="1" key="{dbf239ec-fabb-4507-930d-c89252b33f12}" symbol="16" label="0 - 10000" scalemaxdenom="10000"/>
-            <rule scalemindenom="10000" key="{04c4fd7b-2086-4b3c-a204-2446ab4ce26f}" symbol="17" label="10000 - 500000" scalemaxdenom="500000"/>
+          <rule filter="&quot;type&quot;='secondary' OR &quot;type&quot;='secondary_link'" key="{2d715f49-05ea-4099-b70b-598505e28023}" label="secondary">
+            <rule scalemindenom="1" key="{dbf239ec-fabb-4507-930d-c89252b33f12}" symbol="5" label="0 - 10000" scalemaxdenom="10000"/>
+            <rule scalemindenom="10000" key="{04c4fd7b-2086-4b3c-a204-2446ab4ce26f}" symbol="6" label="10000 - 500000" scalemaxdenom="500000"/>
           </rule>
-          <rule filter="&quot;stylegroup&quot;='minorroad' OR &quot;stylegroup&quot;='service'" key="{f68c3ab8-d48a-4e51-b4aa-c502262477f3}" symbol="18" label="minorroad">
-            <rule scalemindenom="1" key="{9458d9d4-d623-4ab4-8b97-a2b2d47d584a}" symbol="19" label="0 - 10000" scalemaxdenom="10000"/>
-            <rule scalemindenom="10000" key="{41bfb258-9c2c-451a-9247-6bef6d2e458d}" symbol="20" label="10000 - 500000" scalemaxdenom="500000"/>
+          <rule filter="&quot;stylegroup&quot;='minorroad' OR &quot;stylegroup&quot;='service'" key="{f68c3ab8-d48a-4e51-b4aa-c502262477f3}" label="minorroad">
+            <rule scalemindenom="1" key="{9458d9d4-d623-4ab4-8b97-a2b2d47d584a}" symbol="7" label="0 - 10000" scalemaxdenom="10000"/>
+            <rule scalemindenom="10000" key="{41bfb258-9c2c-451a-9247-6bef6d2e458d}" symbol="8" label="10000 - 500000" scalemaxdenom="500000"/>
           </rule>
         </rules>
         <symbols>
@@ -792,192 +787,6 @@ def my_form_open(dialog, layer, feature):
             </layer>
           </symbol>
           <symbol alpha="1" name="1" type="line" clip_to_extent="1" force_rhr="0">
-            <layer locked="0" enabled="1" class="SimpleLine" pass="44">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="flat" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="51,51,51,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="15" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-            <layer locked="0" enabled="1" class="SimpleLine" pass="57">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="square" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="round" k="joinstyle"/>
-              <prop v="246,72,72,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="14" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-          </symbol>
-          <symbol alpha="1" name="10" type="line" clip_to_extent="1" force_rhr="0">
-            <layer locked="0" enabled="1" class="SimpleLine" pass="44">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="flat" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="0,0,0,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="0.5" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-            <layer locked="0" enabled="1" class="SimpleLine" pass="57">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="square" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="round" k="joinstyle"/>
-              <prop v="246,72,72,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="0.3" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-          </symbol>
-          <symbol alpha="1" name="11" type="line" clip_to_extent="1" force_rhr="0">
-            <layer locked="0" enabled="1" class="SimpleLine" pass="44">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="flat" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="51,51,51,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="0.5" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-            <layer locked="0" enabled="1" class="SimpleLine" pass="57">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="square" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="round" k="joinstyle"/>
-              <prop v="246,72,72,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="0.3" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-          </symbol>
-          <symbol alpha="1" name="12" type="line" clip_to_extent="1" force_rhr="0">
             <layer locked="0" enabled="1" class="SimpleLine" pass="0">
               <prop v="0" k="align_dash_pattern"/>
               <prop v="square" k="capstyle"/>
@@ -988,10 +797,10 @@ def my_form_open(dialog, layer, feature):
               <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
               <prop v="MM" k="dash_pattern_offset_unit"/>
               <prop v="0" k="draw_inside_polygon"/>
-              <prop v="bevel" k="joinstyle"/>
+              <prop v="round" k="joinstyle"/>
               <prop v="232,136,159,255" k="line_color"/>
               <prop v="solid" k="line_style"/>
-              <prop v="9.6" k="line_width"/>
+              <prop v="12" k="line_width"/>
               <prop v="RenderMetersInMapUnits" k="line_width_unit"/>
               <prop v="0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
@@ -1008,8 +817,100 @@ def my_form_open(dialog, layer, feature):
                 </Option>
               </data_defined_properties>
             </layer>
+            <layer locked="0" enabled="1" class="SimpleLine" pass="0">
+              <prop v="0" k="align_dash_pattern"/>
+              <prop v="flat" k="capstyle"/>
+              <prop v="5;2" k="customdash"/>
+              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
+              <prop v="MM" k="customdash_unit"/>
+              <prop v="0" k="dash_pattern_offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
+              <prop v="MM" k="dash_pattern_offset_unit"/>
+              <prop v="0" k="draw_inside_polygon"/>
+              <prop v="round" k="joinstyle"/>
+              <prop v="255,255,255,255" k="line_color"/>
+              <prop v="dot" k="line_style"/>
+              <prop v="1" k="line_width"/>
+              <prop v="RenderMetersInMapUnits" k="line_width_unit"/>
+              <prop v="0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="0" k="ring_filter"/>
+              <prop v="0" k="tweak_dash_pattern_on_corners"/>
+              <prop v="0" k="use_custom_dash"/>
+              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" type="QString" value=""/>
+                  <Option name="properties"/>
+                  <Option name="type" type="QString" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
           </symbol>
-          <symbol alpha="1" name="13" type="line" clip_to_extent="1" force_rhr="0">
+          <symbol alpha="1" name="2" type="line" clip_to_extent="1" force_rhr="0">
+            <layer locked="0" enabled="1" class="SimpleLine" pass="0">
+              <prop v="0" k="align_dash_pattern"/>
+              <prop v="square" k="capstyle"/>
+              <prop v="5;2" k="customdash"/>
+              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
+              <prop v="MM" k="customdash_unit"/>
+              <prop v="0" k="dash_pattern_offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
+              <prop v="MM" k="dash_pattern_offset_unit"/>
+              <prop v="0" k="draw_inside_polygon"/>
+              <prop v="round" k="joinstyle"/>
+              <prop v="232,136,159,255" k="line_color"/>
+              <prop v="solid" k="line_style"/>
+              <prop v="0.8" k="line_width"/>
+              <prop v="MM" k="line_width_unit"/>
+              <prop v="0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="0" k="ring_filter"/>
+              <prop v="0" k="tweak_dash_pattern_on_corners"/>
+              <prop v="0" k="use_custom_dash"/>
+              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" type="QString" value=""/>
+                  <Option name="properties"/>
+                  <Option name="type" type="QString" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+            <layer locked="0" enabled="1" class="SimpleLine" pass="0">
+              <prop v="0" k="align_dash_pattern"/>
+              <prop v="flat" k="capstyle"/>
+              <prop v="5;2" k="customdash"/>
+              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
+              <prop v="MM" k="customdash_unit"/>
+              <prop v="0" k="dash_pattern_offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
+              <prop v="MM" k="dash_pattern_offset_unit"/>
+              <prop v="0" k="draw_inside_polygon"/>
+              <prop v="round" k="joinstyle"/>
+              <prop v="255,255,255,255" k="line_color"/>
+              <prop v="dot" k="line_style"/>
+              <prop v="0.2" k="line_width"/>
+              <prop v="MM" k="line_width_unit"/>
+              <prop v="0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="0" k="ring_filter"/>
+              <prop v="0" k="tweak_dash_pattern_on_corners"/>
+              <prop v="0" k="use_custom_dash"/>
+              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" type="QString" value=""/>
+                  <Option name="properties"/>
+                  <Option name="type" type="QString" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol alpha="1" name="3" type="line" clip_to_extent="1" force_rhr="0">
             <layer locked="0" enabled="1" class="SimpleLine" pass="0">
               <prop v="0" k="align_dash_pattern"/>
               <prop v="flat" k="capstyle"/>
@@ -1071,7 +972,7 @@ def my_form_open(dialog, layer, feature):
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol alpha="1" name="14" type="line" clip_to_extent="1" force_rhr="0">
+          <symbol alpha="1" name="4" type="line" clip_to_extent="1" force_rhr="0">
             <layer locked="0" enabled="1" class="SimpleLine" pass="0">
               <prop v="0" k="align_dash_pattern"/>
               <prop v="flat" k="capstyle"/>
@@ -1133,39 +1034,7 @@ def my_form_open(dialog, layer, feature):
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol alpha="1" name="15" type="line" clip_to_extent="1" force_rhr="0">
-            <layer locked="0" enabled="1" class="SimpleLine" pass="0">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="square" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="RenderMetersInMapUnits" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="232,136,159,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="9.6" k="line_width"/>
-              <prop v="RenderMetersInMapUnits" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="RenderMetersInMapUnits" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-          </symbol>
-          <symbol alpha="1" name="16" type="line" clip_to_extent="1" force_rhr="0">
+          <symbol alpha="1" name="5" type="line" clip_to_extent="1" force_rhr="0">
             <layer locked="0" enabled="1" class="SimpleLine" pass="0">
               <prop v="0" k="align_dash_pattern"/>
               <prop v="flat" k="capstyle"/>
@@ -1227,7 +1096,7 @@ def my_form_open(dialog, layer, feature):
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol alpha="1" name="17" type="line" clip_to_extent="1" force_rhr="0">
+          <symbol alpha="1" name="6" type="line" clip_to_extent="1" force_rhr="0">
             <layer locked="0" enabled="1" class="SimpleLine" pass="0">
               <prop v="0" k="align_dash_pattern"/>
               <prop v="flat" k="capstyle"/>
@@ -1289,39 +1158,7 @@ def my_form_open(dialog, layer, feature):
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol alpha="1" name="18" type="line" clip_to_extent="1" force_rhr="0">
-            <layer locked="0" enabled="1" class="SimpleLine" pass="0">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="square" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="RenderMetersInMapUnits" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="232,136,159,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="9.6" k="line_width"/>
-              <prop v="RenderMetersInMapUnits" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="RenderMetersInMapUnits" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-          </symbol>
-          <symbol alpha="1" name="19" type="line" clip_to_extent="1" force_rhr="0">
+          <symbol alpha="1" name="7" type="line" clip_to_extent="1" force_rhr="0">
             <layer locked="0" enabled="1" class="SimpleLine" pass="0">
               <prop v="0" k="align_dash_pattern"/>
               <prop v="flat" k="capstyle"/>
@@ -1383,69 +1220,7 @@ def my_form_open(dialog, layer, feature):
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol alpha="1" name="2" type="line" clip_to_extent="1" force_rhr="0">
-            <layer locked="0" enabled="1" class="SimpleLine" pass="44">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="flat" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="51,51,51,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="10" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-            <layer locked="0" enabled="1" class="SimpleLine" pass="57">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="square" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="round" k="joinstyle"/>
-              <prop v="246,72,72,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="9" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-          </symbol>
-          <symbol alpha="1" name="20" type="line" clip_to_extent="1" force_rhr="0">
+          <symbol alpha="1" name="8" type="line" clip_to_extent="1" force_rhr="0">
             <layer locked="0" enabled="1" class="SimpleLine" pass="0">
               <prop v="0" k="align_dash_pattern"/>
               <prop v="flat" k="capstyle"/>
@@ -1490,440 +1265,6 @@ def my_form_open(dialog, layer, feature):
               <prop v="232,136,159,255" k="line_color"/>
               <prop v="solid" k="line_style"/>
               <prop v="0.4" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-          </symbol>
-          <symbol alpha="1" name="3" type="line" clip_to_extent="1" force_rhr="0">
-            <layer locked="0" enabled="1" class="SimpleLine" pass="44">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="flat" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="51,51,51,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="3.5" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-            <layer locked="0" enabled="1" class="SimpleLine" pass="57">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="square" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="round" k="joinstyle"/>
-              <prop v="246,72,72,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="3" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-          </symbol>
-          <symbol alpha="1" name="4" type="line" clip_to_extent="1" force_rhr="0">
-            <layer locked="0" enabled="1" class="SimpleLine" pass="44">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="flat" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="51,51,51,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="2.7" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-            <layer locked="0" enabled="1" class="SimpleLine" pass="57">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="square" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="round" k="joinstyle"/>
-              <prop v="246,72,72,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="2.2" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-          </symbol>
-          <symbol alpha="1" name="5" type="line" clip_to_extent="1" force_rhr="0">
-            <layer locked="0" enabled="1" class="SimpleLine" pass="44">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="flat" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="51,51,51,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="2" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-            <layer locked="0" enabled="1" class="SimpleLine" pass="57">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="square" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="round" k="joinstyle"/>
-              <prop v="246,72,72,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="1.6" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-          </symbol>
-          <symbol alpha="1" name="6" type="line" clip_to_extent="1" force_rhr="0">
-            <layer locked="0" enabled="1" class="SimpleLine" pass="44">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="flat" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="51,51,51,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="1" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-            <layer locked="0" enabled="1" class="SimpleLine" pass="57">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="square" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="round" k="joinstyle"/>
-              <prop v="246,72,72,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="0.8" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-          </symbol>
-          <symbol alpha="1" name="7" type="line" clip_to_extent="1" force_rhr="0">
-            <layer locked="0" enabled="1" class="SimpleLine" pass="44">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="flat" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="51,51,51,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="0.8" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-            <layer locked="0" enabled="1" class="SimpleLine" pass="57">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="square" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="round" k="joinstyle"/>
-              <prop v="246,72,72,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="0.6" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-          </symbol>
-          <symbol alpha="1" name="8" type="line" clip_to_extent="1" force_rhr="0">
-            <layer locked="0" enabled="1" class="SimpleLine" pass="44">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="flat" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="51,51,51,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="0.7" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-            <layer locked="0" enabled="1" class="SimpleLine" pass="57">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="square" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="round" k="joinstyle"/>
-              <prop v="246,72,72,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="0.5" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-          </symbol>
-          <symbol alpha="1" name="9" type="line" clip_to_extent="1" force_rhr="0">
-            <layer locked="0" enabled="1" class="SimpleLine" pass="44">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="flat" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="51,51,51,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="0.5" k="line_width"/>
-              <prop v="MM" k="line_width_unit"/>
-              <prop v="0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0" k="ring_filter"/>
-              <prop v="0" k="tweak_dash_pattern_on_corners"/>
-              <prop v="0" k="use_custom_dash"/>
-              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option name="name" type="QString" value=""/>
-                  <Option name="properties"/>
-                  <Option name="type" type="QString" value="collection"/>
-                </Option>
-              </data_defined_properties>
-            </layer>
-            <layer locked="0" enabled="1" class="SimpleLine" pass="57">
-              <prop v="0" k="align_dash_pattern"/>
-              <prop v="square" k="capstyle"/>
-              <prop v="5;2" k="customdash"/>
-              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-              <prop v="MM" k="customdash_unit"/>
-              <prop v="0" k="dash_pattern_offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-              <prop v="MM" k="dash_pattern_offset_unit"/>
-              <prop v="0" k="draw_inside_polygon"/>
-              <prop v="round" k="joinstyle"/>
-              <prop v="246,72,72,255" k="line_color"/>
-              <prop v="solid" k="line_style"/>
-              <prop v="0.3" k="line_width"/>
               <prop v="MM" k="line_width_unit"/>
               <prop v="0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
@@ -9407,7 +8748,7 @@ def my_form_open(dialog, layer, feature):
         </LayoutItem>
         <GuideCollection visible="1"/>
       </PageCollection>
-      <LayoutItem blendMode="0" frameJoinStyle="miter" minBarWidth="50" groupUuid="" labelBarSpace="3" unitType="meters" positionLock="false" type="65646" size="63.8528,12.9068,mm" boxContentSpace="1" segmentMillimeters="25.0003" opacity="1" mapUuid="{249bd6bb-fb45-432d-b2be-1e27bb1972db}" alignment="0" frame="false" position="235.224,165.961,mm" numSegmentsLeft="0" unitLabel="m" lineJoinStyle="miter" labelHorizontalPlacement="0" excludeFromExports="0" maxBarWidth="150" id="" numSegments="2" uuid="{d0f3b552-8161-40f5-8bc8-6fa5c5816a24}" style="Numeric" referencePoint="0" itemRotation="0" subdivisionsHeight="1.5" zValue="3" labelVerticalPlacement="0" positionOnPage="235.224,165.961,mm" numUnitsPerSegment="500" templateUuid="{d0f3b552-8161-40f5-8bc8-6fa5c5816a24}" segmentSizeMode="0" numMapUnitsPerScaleBarUnit="1" background="false" lineCapStyle="square" height="3" numSubdivisions="1" visibility="1" outlineWidthM="0.3,mm" outlineWidth="0.3">
+      <LayoutItem blendMode="0" frameJoinStyle="miter" minBarWidth="50" groupUuid="" labelBarSpace="3" unitType="meters" positionLock="false" type="65646" size="63.8528,12.9068,mm" boxContentSpace="1" segmentMillimeters="500.004" opacity="1" mapUuid="{249bd6bb-fb45-432d-b2be-1e27bb1972db}" alignment="0" frame="false" position="235.224,165.961,mm" numSegmentsLeft="0" unitLabel="m" lineJoinStyle="miter" labelHorizontalPlacement="0" excludeFromExports="0" maxBarWidth="150" id="" numSegments="2" uuid="{d0f3b552-8161-40f5-8bc8-6fa5c5816a24}" style="Numeric" referencePoint="0" itemRotation="0" subdivisionsHeight="1.5" zValue="3" labelVerticalPlacement="0" positionOnPage="235.224,165.961,mm" numUnitsPerSegment="500" templateUuid="{d0f3b552-8161-40f5-8bc8-6fa5c5816a24}" segmentSizeMode="0" numMapUnitsPerScaleBarUnit="1" background="false" lineCapStyle="square" height="3" numSubdivisions="1" visibility="1" outlineWidthM="0.3,mm" outlineWidth="0.3">
         <FrameColor alpha="255" green="0" red="0" blue="0"/>
         <BackgroundColor alpha="255" green="255" red="255" blue="255"/>
         <LayoutObject>
@@ -9598,7 +8939,7 @@ def my_form_open(dialog, layer, feature):
           </symbol>
         </fillSymbol2>
       </LayoutItem>
-      <LayoutItem blendMode="0" frameJoinStyle="miter" minBarWidth="50" groupUuid="" labelBarSpace="3" unitType="meters" positionLock="false" type="65646" size="63.8529,12.9068,mm" boxContentSpace="1" segmentMillimeters="25.0003" opacity="1" mapUuid="{249bd6bb-fb45-432d-b2be-1e27bb1972db}" alignment="0" frame="false" position="215.214,184.177,mm" numSegmentsLeft="0" unitLabel="m" lineJoinStyle="miter" labelHorizontalPlacement="0" excludeFromExports="0" maxBarWidth="150" id="" numSegments="2" uuid="{6e7fec1b-86ad-4a47-9502-4ac98f1781c5}" style="Single Box" referencePoint="0" itemRotation="0" subdivisionsHeight="1.5" zValue="2" labelVerticalPlacement="0" positionOnPage="215.214,184.177,mm" numUnitsPerSegment="500" templateUuid="{6e7fec1b-86ad-4a47-9502-4ac98f1781c5}" segmentSizeMode="0" numMapUnitsPerScaleBarUnit="1" background="false" lineCapStyle="square" height="3" numSubdivisions="1" visibility="1" outlineWidthM="0.3,mm" outlineWidth="0.3">
+      <LayoutItem blendMode="0" frameJoinStyle="miter" minBarWidth="50" groupUuid="" labelBarSpace="3" unitType="meters" positionLock="false" type="65646" size="1013.86,12.9068,mm" boxContentSpace="1" segmentMillimeters="500.004" opacity="1" mapUuid="{249bd6bb-fb45-432d-b2be-1e27bb1972db}" alignment="0" frame="false" position="215.214,184.177,mm" numSegmentsLeft="0" unitLabel="m" lineJoinStyle="miter" labelHorizontalPlacement="0" excludeFromExports="0" maxBarWidth="150" id="" numSegments="2" uuid="{6e7fec1b-86ad-4a47-9502-4ac98f1781c5}" style="Single Box" referencePoint="0" itemRotation="0" subdivisionsHeight="1.5" zValue="2" labelVerticalPlacement="0" positionOnPage="215.214,184.177,mm" numUnitsPerSegment="500" templateUuid="{6e7fec1b-86ad-4a47-9502-4ac98f1781c5}" segmentSizeMode="0" numMapUnitsPerScaleBarUnit="1" background="false" lineCapStyle="square" height="3" numSubdivisions="1" visibility="1" outlineWidthM="0.3,mm" outlineWidth="0.3">
         <FrameColor alpha="255" green="0" red="0" blue="0"/>
         <BackgroundColor alpha="255" green="255" red="255" blue="255"/>
         <LayoutObject>
@@ -9802,7 +9143,7 @@ def my_form_open(dialog, layer, feature):
           </dataDefinedProperties>
           <customproperties/>
         </LayoutObject>
-        <Extent xmin="230606.73060597639414482" ymin="52741.16018607374280691" ymax="56620.72099117514153477" xmax="236315.81061179967946373"/>
+        <Extent xmin="233318.54360874244594015" ymin="54583.95156849690829404" ymax="54777.92960875197604764" xmax="233603.9976090336276684"/>
         <LayerSet/>
         <AtlasMap atlasDriven="0" scalingMode="2" margin="0.10000000000000001"/>
         <labelBlockingItems/>
@@ -9832,7 +9173,7 @@ def my_form_open(dialog, layer, feature):
   <Bookmarks/>
   <ProjectViewSettings UseProjectScales="0">
     <Scales/>
-    <DefaultViewExtent xmin="230995.6623618126322981" ymin="51209.09711784571118187" ymax="55117.52212183231313247" xmax="237479.01236842563957907">
+    <DefaultViewExtent xmin="230401.73892370687099174" ymin="51013.83461764653475257" ymax="55410.81274713142920518" xmax="237695.50768114649690688">
       <spatialrefsys>
         <wkt>PROJCRS["Belge 1972 / Belgian Lambert 72",BASEGEOGCRS["Belge 1972",DATUM["Reseau National Belge 1972",ELLIPSOID["International 1924",6378388,297,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4313]],CONVERSION["Belgian Lambert 72",METHOD["Lambert Conic Conformal (2SP)",ID["EPSG",9802]],PARAMETER["Latitude of false origin",90,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8821]],PARAMETER["Longitude of false origin",4.36748666666667,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8822]],PARAMETER["Latitude of 1st standard parallel",51.1666672333333,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8823]],PARAMETER["Latitude of 2nd standard parallel",49.8333339,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8824]],PARAMETER["Easting at false origin",150000.013,LENGTHUNIT["metre",1],ID["EPSG",8826]],PARAMETER["Northing at false origin",5400088.438,LENGTHUNIT["metre",1],ID["EPSG",8827]]],CS[Cartesian,2],AXIS["easting (X)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["northing (Y)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["Engineering survey, topographic mapping."],AREA["Belgium - onshore."],BBOX[49.5,2.5,51.51,6.4]],ID["EPSG",31370]]</wkt>
         <proj4>+proj=lcc +lat_0=90 +lon_0=4.36748666666667 +lat_1=51.1666672333333 +lat_2=49.8333339 +x_0=150000.013 +y_0=5400088.438 +ellps=intl +units=m +no_defs</proj4>
