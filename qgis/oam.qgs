@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" saveDateTime="2023-01-10T07:14:39" saveUser="julien" saveUserFull="julien" version="3.16.11-Hannover">
+<qgis projectname="" saveDateTime="2023-01-10T07:47:08" saveUser="julien" saveUserFull="julien" version="3.16.11-Hannover">
   <homePath path=""/>
   <title></title>
   <autotransaction active="0"/>
@@ -29,16 +29,15 @@
           <value>{f68c3ab8-d48a-4e51-b4aa-c502262477f3}</value>
           <value>{063e1079-701f-4b69-914c-5470be91d921}</value>
           <value>{2fe68465-1c5c-4f56-a4f9-863f95445b61}</value>
-          <value>{9458d9d4-d623-4ab4-8b97-a2b2d47d584a}</value>
-          <value>{b2642508-53da-42bb-9871-a1d18956dde5}</value>
           <value>{fcf30af0-45d0-443f-9205-888d9bdd9977}</value>
+          <value>{9458d9d4-d623-4ab4-8b97-a2b2d47d584a}</value>
         </property>
       </customproperties>
     </layer-tree-layer>
     <layer-tree-layer providerKey="postgres" checked="Qt::Unchecked" source="dbname='osmpg_db' host=localhost port=5432 sslmode=disable key='_uid_' checkPrimaryKeyUnicity='1' table=&quot;(SELECT row_number() over () AS _uid_,* FROM (SELECT way, waterway AS type, replace(name, 'Ruisseau', 'Rau') AS name FROM planet_osm_line WHERE waterway IN ('canal', 'river', 'stream') AND name IS NOT NULL UNION ALL SELECT &#x9;ST_LineMerge(ST_ApproximateMedialAxis(ST_SimplifyPreserveTopology(ST_MakePolygon(ST_ExteriorRing(way)), 50))) AS way, &#x9;water AS type, &#x9;replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name FROM planet_osm_polygon WHERE water IN ('pond', 'lake', 'basin', 'reservoir') AND name IS NOT NULL AND way_area > 10000&#xa;) AS _subq_1_&#xa;)&quot; (way)" patch_size="-1,-1" name="waterway_label" id="QueryLayer_2_552a92d8_bc02_4fbf_9c43_2ad905195233" expanded="1" legend_split_behavior="0" legend_exp="">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer providerKey="postgres" checked="Qt::Checked" source="dbname='osmpg_db' host=localhost port=5432 sslmode=disable key='tid' srid=3857 type=MultiSurface checkPrimaryKeyUnicity='1' table=&quot;public&quot;.&quot;planet_osm_polygon&quot; (way) sql=&quot;leisure&quot; = 'nature_reserve' OR &quot;natural&quot; = 'wetland'" patch_size="-1,-1" name="landuse_overlays" id="planet_osm_polygon_c24c37e7_52d4_408c_881f_7a91aa6d392e" expanded="0" legend_split_behavior="0" legend_exp="">
+    <layer-tree-layer providerKey="postgres" checked="Qt::Checked" source="dbname='osmpg_db' host=localhost port=5432 sslmode=disable key='tid' srid=3857 type=MultiSurface checkPrimaryKeyUnicity='1' table=&quot;public&quot;.&quot;planet_osm_polygon&quot; (way) sql=&quot;leisure&quot; = 'nature_reserve' OR &quot;natural&quot; = 'wetland'" patch_size="-1,-1" name="landuse_overlays" id="planet_osm_polygon_c24c37e7_52d4_408c_881f_7a91aa6d392e" expanded="1" legend_split_behavior="0" legend_exp="">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer providerKey="postgres" checked="Qt::Checked" source="dbname='osmpg_db' host=localhost port=5432 sslmode=disable key='tid' srid=3857 type=MultiSurface checkPrimaryKeyUnicity='1' table=&quot;public&quot;.&quot;planet_osm_polygon&quot; (way) sql=&quot;natural&quot; IN ('water', 'pond') OR &quot;landuse&quot; IN ('reservoir') OR &quot;waterway&quot; IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream')" patch_size="-1,-1" name="water" id="planet_osm_polygon_f36638ca_1f8c_4b25_a2ec_5eb54bcf53cb" expanded="1" legend_split_behavior="0" legend_exp="">
@@ -53,7 +52,7 @@
     <layer-tree-layer providerKey="gdal" checked="Qt::Checked" source="../../../../../../ChampsLibres/Projets/OSM/CyclOSM/hillshade/data/dem_be_10x10_hillshade_semi_transparent_3857.tif" patch_size="-1,-1" name="hillshade" id="dem_be_10x10_hillshade_semi_transparent_3857_6cf483c2_7e57_4171_96a5_6d09a127f781" expanded="1" legend_split_behavior="0" legend_exp="">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer providerKey="postgres" checked="Qt::Checked" source="dbname='osmpg_db' host=localhost port=5432 sslmode=disable key='tid' srid=3857 type=MultiSurface checkPrimaryKeyUnicity='1' table=&quot;public&quot;.&quot;planet_osm_polygon&quot; (way) sql=&quot;landuse&quot; IS NOT NULL OR &quot;natural&quot; IS NOT NULL OR &quot;tourism&quot; IS NOT NULL" patch_size="-1,-1" name="landuse" id="planet_osm_polygon_1f5bdf6c_a350_40cc_bea9_a890f4aa0348" expanded="0" legend_split_behavior="0" legend_exp="">
+    <layer-tree-layer providerKey="postgres" checked="Qt::Checked" source="dbname='osmpg_db' host=localhost port=5432 sslmode=disable key='tid' srid=3857 type=MultiSurface checkPrimaryKeyUnicity='1' table=&quot;public&quot;.&quot;planet_osm_polygon&quot; (way) sql=&quot;landuse&quot; IS NOT NULL OR &quot;natural&quot; IS NOT NULL OR &quot;tourism&quot; IS NOT NULL" patch_size="-1,-1" name="landuse" id="planet_osm_polygon_1f5bdf6c_a350_40cc_bea9_a890f4aa0348" expanded="1" legend_split_behavior="0" legend_exp="">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer providerKey="wms" checked="Qt::Unchecked" source="crs=EPSG:3857&amp;dpiMode=7&amp;format=image/png&amp;layers=0&amp;styles&amp;url=https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2021/MapServer/WMSServer" patch_size="-1,-1" name="ORTHO_2021" id="ORTHO_2021_70affd96_091b_44c2_a51f_62b5c2efd935" expanded="1" legend_split_behavior="0" legend_exp="">
@@ -120,8 +119,8 @@
         <legendlayerfile isInOverview="0" visible="0" layerid="QueryLayer_2_552a92d8_bc02_4fbf_9c43_2ad905195233"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" checked="Qt::Checked" name="landuse_overlays" showFeatureCount="0" open="false">
-      <filegroup hidden="false" open="false">
+    <legendlayer drawingOrder="-1" checked="Qt::Checked" name="landuse_overlays" showFeatureCount="0" open="true">
+      <filegroup hidden="false" open="true">
         <legendlayerfile isInOverview="0" visible="1" layerid="planet_osm_polygon_c24c37e7_52d4_408c_881f_7a91aa6d392e"/>
       </filegroup>
     </legendlayer>
@@ -145,8 +144,8 @@
         <legendlayerfile isInOverview="0" visible="1" layerid="dem_be_10x10_hillshade_semi_transparent_3857_6cf483c2_7e57_4171_96a5_6d09a127f781"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" checked="Qt::Checked" name="landuse" showFeatureCount="0" open="false">
-      <filegroup hidden="false" open="false">
+    <legendlayer drawingOrder="-1" checked="Qt::Checked" name="landuse" showFeatureCount="0" open="true">
+      <filegroup hidden="false" open="true">
         <legendlayerfile isInOverview="0" visible="1" layerid="planet_osm_polygon_1f5bdf6c_a350_40cc_bea9_a890f4aa0348"/>
       </filegroup>
     </legendlayer>
@@ -1337,7 +1336,7 @@ def my_form_open(dialog, layer, feature):
             <layer class="SimpleLine" enabled="1" locked="0" pass="0">
               <prop v="0" k="align_dash_pattern"/>
               <prop v="square" k="capstyle"/>
-              <prop v="2;2" k="customdash"/>
+              <prop v="2;1" k="customdash"/>
               <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
               <prop v="MM" k="customdash_unit"/>
               <prop v="0" k="dash_pattern_offset"/>
@@ -1346,7 +1345,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="0" k="draw_inside_polygon"/>
               <prop v="bevel" k="joinstyle"/>
               <prop v="35,35,35,255" k="line_color"/>
-              <prop v="dash" k="line_style"/>
+              <prop v="solid" k="line_style"/>
               <prop v="1" k="line_width"/>
               <prop v="RenderMetersInMapUnits" k="line_width_unit"/>
               <prop v="-2" k="offset"/>
@@ -1399,7 +1398,7 @@ def my_form_open(dialog, layer, feature):
             <layer class="SimpleLine" enabled="1" locked="0" pass="0">
               <prop v="0" k="align_dash_pattern"/>
               <prop v="flat" k="capstyle"/>
-              <prop v="2;2" k="customdash"/>
+              <prop v="2;1" k="customdash"/>
               <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
               <prop v="MM" k="customdash_unit"/>
               <prop v="0" k="dash_pattern_offset"/>
@@ -1408,7 +1407,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="0" k="draw_inside_polygon"/>
               <prop v="round" k="joinstyle"/>
               <prop v="35,35,35,255" k="line_color"/>
-              <prop v="dash" k="line_style"/>
+              <prop v="solid" k="line_style"/>
               <prop v="0.1" k="line_width"/>
               <prop v="MM" k="line_width_unit"/>
               <prop v="-0.2" k="offset"/>
@@ -1460,7 +1459,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" force_rhr="0" clip_to_extent="1" type="line" name="17">
             <layer class="SimpleLine" enabled="1" locked="0" pass="0">
               <prop v="0" k="align_dash_pattern"/>
-              <prop v="square" k="capstyle"/>
+              <prop v="flat" k="capstyle"/>
               <prop v="5;2" k="customdash"/>
               <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
               <prop v="RenderMetersInMapUnits" k="customdash_unit"/>
@@ -1491,7 +1490,7 @@ def my_form_open(dialog, layer, feature):
             <layer class="SimpleLine" enabled="1" locked="0" pass="0">
               <prop v="0" k="align_dash_pattern"/>
               <prop v="flat" k="capstyle"/>
-              <prop v="2;2" k="customdash"/>
+              <prop v="2;1" k="customdash"/>
               <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
               <prop v="MM" k="customdash_unit"/>
               <prop v="0" k="dash_pattern_offset"/>
@@ -1500,7 +1499,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="0" k="draw_inside_polygon"/>
               <prop v="round" k="joinstyle"/>
               <prop v="35,35,35,255" k="line_color"/>
-              <prop v="dash" k="line_style"/>
+              <prop v="solid" k="line_style"/>
               <prop v="1" k="line_width"/>
               <prop v="RenderMetersInMapUnits" k="line_width_unit"/>
               <prop v="2" k="offset"/>
@@ -1520,8 +1519,8 @@ def my_form_open(dialog, layer, feature):
             </layer>
             <layer class="SimpleLine" enabled="1" locked="0" pass="0">
               <prop v="0" k="align_dash_pattern"/>
-              <prop v="square" k="capstyle"/>
-              <prop v="2;2" k="customdash"/>
+              <prop v="flat" k="capstyle"/>
+              <prop v="2;1" k="customdash"/>
               <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
               <prop v="MM" k="customdash_unit"/>
               <prop v="0" k="dash_pattern_offset"/>
@@ -1530,7 +1529,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="0" k="draw_inside_polygon"/>
               <prop v="bevel" k="joinstyle"/>
               <prop v="35,35,35,255" k="line_color"/>
-              <prop v="dash" k="line_style"/>
+              <prop v="solid" k="line_style"/>
               <prop v="1" k="line_width"/>
               <prop v="RenderMetersInMapUnits" k="line_width_unit"/>
               <prop v="-2" k="offset"/>
@@ -1552,8 +1551,8 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" force_rhr="0" clip_to_extent="1" type="line" name="18">
             <layer class="SimpleLine" enabled="1" locked="0" pass="0">
               <prop v="0" k="align_dash_pattern"/>
-              <prop v="square" k="capstyle"/>
-              <prop v="2;2" k="customdash"/>
+              <prop v="flat" k="capstyle"/>
+              <prop v="2;1" k="customdash"/>
               <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
               <prop v="MM" k="customdash_unit"/>
               <prop v="0" k="dash_pattern_offset"/>
@@ -1583,7 +1582,7 @@ def my_form_open(dialog, layer, feature):
             <layer class="SimpleLine" enabled="1" locked="0" pass="0">
               <prop v="0" k="align_dash_pattern"/>
               <prop v="flat" k="capstyle"/>
-              <prop v="2;2" k="customdash"/>
+              <prop v="2;1" k="customdash"/>
               <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
               <prop v="MM" k="customdash_unit"/>
               <prop v="0" k="dash_pattern_offset"/>
@@ -1612,8 +1611,8 @@ def my_form_open(dialog, layer, feature):
             </layer>
             <layer class="SimpleLine" enabled="1" locked="0" pass="0">
               <prop v="0" k="align_dash_pattern"/>
-              <prop v="square" k="capstyle"/>
-              <prop v="2;2" k="customdash"/>
+              <prop v="flat" k="capstyle"/>
+              <prop v="2;1" k="customdash"/>
               <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
               <prop v="MM" k="customdash_unit"/>
               <prop v="0" k="dash_pattern_offset"/>
@@ -1622,7 +1621,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="0" k="draw_inside_polygon"/>
               <prop v="bevel" k="joinstyle"/>
               <prop v="35,35,35,255" k="line_color"/>
-              <prop v="dash" k="line_style"/>
+              <prop v="solid" k="line_style"/>
               <prop v="0.1" k="line_width"/>
               <prop v="MM" k="line_width_unit"/>
               <prop v="0.2" k="offset"/>
@@ -4586,7 +4585,13 @@ def my_form_open(dialog, layer, feature):
               <data_defined_properties>
                 <Option type="Map">
                   <Option type="QString" name="name" value=""/>
-                  <Option name="properties"/>
+                  <Option type="Map" name="properties">
+                    <Option type="Map" name="outlineWidth">
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="@oam_landuse_line_width"/>
+                      <Option type="int" name="type" value="3"/>
+                    </Option>
+                  </Option>
                   <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
@@ -4608,7 +4613,13 @@ def my_form_open(dialog, layer, feature):
               <data_defined_properties>
                 <Option type="Map">
                   <Option type="QString" name="name" value=""/>
-                  <Option name="properties"/>
+                  <Option type="Map" name="properties">
+                    <Option type="Map" name="outlineWidth">
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="@oam_landuse_line_width"/>
+                      <Option type="int" name="type" value="3"/>
+                    </Option>
+                  </Option>
                   <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
@@ -4659,7 +4670,13 @@ def my_form_open(dialog, layer, feature):
                   <data_defined_properties>
                     <Option type="Map">
                       <Option type="QString" name="name" value=""/>
-                      <Option name="properties"/>
+                      <Option type="Map" name="properties">
+                        <Option type="Map" name="outlineWidth">
+                          <Option type="bool" name="active" value="true"/>
+                          <Option type="QString" name="expression" value="@oam_landuse_line_width"/>
+                          <Option type="int" name="type" value="3"/>
+                        </Option>
+                      </Option>
                       <Option type="QString" name="type" value="collection"/>
                     </Option>
                   </data_defined_properties>
@@ -4714,7 +4731,13 @@ def my_form_open(dialog, layer, feature):
                   <data_defined_properties>
                     <Option type="Map">
                       <Option type="QString" name="name" value=""/>
-                      <Option name="properties"/>
+                      <Option type="Map" name="properties">
+                        <Option type="Map" name="outlineWidth">
+                          <Option type="bool" name="active" value="true"/>
+                          <Option type="QString" name="expression" value="@oam_landuse_line_width"/>
+                          <Option type="int" name="type" value="3"/>
+                        </Option>
+                      </Option>
                       <Option type="QString" name="type" value="collection"/>
                     </Option>
                   </data_defined_properties>
@@ -4736,7 +4759,13 @@ def my_form_open(dialog, layer, feature):
               <data_defined_properties>
                 <Option type="Map">
                   <Option type="QString" name="name" value=""/>
-                  <Option name="properties"/>
+                  <Option type="Map" name="properties">
+                    <Option type="Map" name="outlineWidth">
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="@oam_landuse_line_width"/>
+                      <Option type="int" name="type" value="3"/>
+                    </Option>
+                  </Option>
                   <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
@@ -4789,7 +4818,13 @@ def my_form_open(dialog, layer, feature):
                   <data_defined_properties>
                     <Option type="Map">
                       <Option type="QString" name="name" value=""/>
-                      <Option name="properties"/>
+                      <Option type="Map" name="properties">
+                        <Option type="Map" name="outlineWidth">
+                          <Option type="bool" name="active" value="true"/>
+                          <Option type="QString" name="expression" value="@oam_landuse_line_width"/>
+                          <Option type="int" name="type" value="3"/>
+                        </Option>
+                      </Option>
                       <Option type="QString" name="type" value="collection"/>
                     </Option>
                   </data_defined_properties>
@@ -4811,7 +4846,13 @@ def my_form_open(dialog, layer, feature):
               <data_defined_properties>
                 <Option type="Map">
                   <Option type="QString" name="name" value=""/>
-                  <Option name="properties"/>
+                  <Option type="Map" name="properties">
+                    <Option type="Map" name="outlineWidth">
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="@oam_landuse_line_width"/>
+                      <Option type="int" name="type" value="3"/>
+                    </Option>
+                  </Option>
                   <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
@@ -4864,7 +4905,13 @@ def my_form_open(dialog, layer, feature):
                   <data_defined_properties>
                     <Option type="Map">
                       <Option type="QString" name="name" value=""/>
-                      <Option name="properties"/>
+                      <Option type="Map" name="properties">
+                        <Option type="Map" name="outlineWidth">
+                          <Option type="bool" name="active" value="true"/>
+                          <Option type="QString" name="expression" value="@oam_landuse_line_width"/>
+                          <Option type="int" name="type" value="3"/>
+                        </Option>
+                      </Option>
                       <Option type="QString" name="type" value="collection"/>
                     </Option>
                   </data_defined_properties>
@@ -4880,13 +4927,19 @@ def my_form_open(dialog, layer, feature):
               <prop v="MM" k="offset_unit"/>
               <prop v="35,35,35,255" k="outline_color"/>
               <prop v="solid" k="outline_style"/>
-              <prop v="0.06" k="outline_width"/>
+              <prop v="0" k="outline_width"/>
               <prop v="MM" k="outline_width_unit"/>
               <prop v="no" k="style"/>
               <data_defined_properties>
                 <Option type="Map">
                   <Option type="QString" name="name" value=""/>
-                  <Option name="properties"/>
+                  <Option type="Map" name="properties">
+                    <Option type="Map" name="outlineWidth">
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="@oam_landuse_line_width"/>
+                      <Option type="int" name="type" value="3"/>
+                    </Option>
+                  </Option>
                   <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
@@ -4901,7 +4954,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
               <prop v="35,35,35,255" k="outline_color"/>
-              <prop v="solid" k="outline_style"/>
+              <prop v="no" k="outline_style"/>
               <prop v="0.26" k="outline_width"/>
               <prop v="MM" k="outline_width_unit"/>
               <prop v="solid" k="style"/>
@@ -4959,7 +5012,13 @@ def my_form_open(dialog, layer, feature):
                   <data_defined_properties>
                     <Option type="Map">
                       <Option type="QString" name="name" value=""/>
-                      <Option name="properties"/>
+                      <Option type="Map" name="properties">
+                        <Option type="Map" name="outlineWidth">
+                          <Option type="bool" name="active" value="true"/>
+                          <Option type="QString" name="expression" value="@oam_landuse_line_width"/>
+                          <Option type="int" name="type" value="3"/>
+                        </Option>
+                      </Option>
                       <Option type="QString" name="type" value="collection"/>
                     </Option>
                   </data_defined_properties>
@@ -4976,7 +5035,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
               <prop v="35,35,35,255" k="outline_color"/>
-              <prop v="solid" k="outline_style"/>
+              <prop v="no" k="outline_style"/>
               <prop v="0.26" k="outline_width"/>
               <prop v="MM" k="outline_width_unit"/>
               <prop v="solid" k="style"/>
@@ -5034,7 +5093,13 @@ def my_form_open(dialog, layer, feature):
                   <data_defined_properties>
                     <Option type="Map">
                       <Option type="QString" name="name" value=""/>
-                      <Option name="properties"/>
+                      <Option type="Map" name="properties">
+                        <Option type="Map" name="outlineWidth">
+                          <Option type="bool" name="active" value="true"/>
+                          <Option type="QString" name="expression" value="@oam_landuse_line_width"/>
+                          <Option type="int" name="type" value="3"/>
+                        </Option>
+                      </Option>
                       <Option type="QString" name="type" value="collection"/>
                     </Option>
                   </data_defined_properties>
@@ -5051,7 +5116,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
               <prop v="35,35,35,255" k="outline_color"/>
-              <prop v="solid" k="outline_style"/>
+              <prop v="no" k="outline_style"/>
               <prop v="0.26" k="outline_width"/>
               <prop v="MM" k="outline_width_unit"/>
               <prop v="solid" k="style"/>
@@ -5109,7 +5174,13 @@ def my_form_open(dialog, layer, feature):
                   <data_defined_properties>
                     <Option type="Map">
                       <Option type="QString" name="name" value=""/>
-                      <Option name="properties"/>
+                      <Option type="Map" name="properties">
+                        <Option type="Map" name="outlineWidth">
+                          <Option type="bool" name="active" value="true"/>
+                          <Option type="QString" name="expression" value="@oam_landuse_line_width"/>
+                          <Option type="int" name="type" value="3"/>
+                        </Option>
+                      </Option>
                       <Option type="QString" name="type" value="collection"/>
                     </Option>
                   </data_defined_properties>
@@ -5126,7 +5197,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
               <prop v="35,35,35,255" k="outline_color"/>
-              <prop v="solid" k="outline_style"/>
+              <prop v="no" k="outline_style"/>
               <prop v="0.26" k="outline_width"/>
               <prop v="MM" k="outline_width_unit"/>
               <prop v="solid" k="style"/>
@@ -5172,7 +5243,7 @@ def my_form_open(dialog, layer, feature):
                   <prop v="bevel" k="joinstyle"/>
                   <prop v="35,35,35,255" k="line_color"/>
                   <prop v="solid" k="line_style"/>
-                  <prop v="0.26" k="line_width"/>
+                  <prop v="0" k="line_width"/>
                   <prop v="MM" k="line_width_unit"/>
                   <prop v="0" k="offset"/>
                   <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
@@ -5184,7 +5255,13 @@ def my_form_open(dialog, layer, feature):
                   <data_defined_properties>
                     <Option type="Map">
                       <Option type="QString" name="name" value=""/>
-                      <Option name="properties"/>
+                      <Option type="Map" name="properties">
+                        <Option type="Map" name="outlineWidth">
+                          <Option type="bool" name="active" value="true"/>
+                          <Option type="QString" name="expression" value="@oam_landuse_line_width"/>
+                          <Option type="int" name="type" value="3"/>
+                        </Option>
+                      </Option>
                       <Option type="QString" name="type" value="collection"/>
                     </Option>
                   </data_defined_properties>
@@ -5201,7 +5278,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
               <prop v="35,35,35,255" k="outline_color"/>
-              <prop v="solid" k="outline_style"/>
+              <prop v="no" k="outline_style"/>
               <prop v="0.26" k="outline_width"/>
               <prop v="MM" k="outline_width_unit"/>
               <prop v="solid" k="style"/>
@@ -5247,7 +5324,7 @@ def my_form_open(dialog, layer, feature):
                   <prop v="bevel" k="joinstyle"/>
                   <prop v="35,35,35,255" k="line_color"/>
                   <prop v="solid" k="line_style"/>
-                  <prop v="0.26" k="line_width"/>
+                  <prop v="0" k="line_width"/>
                   <prop v="MM" k="line_width_unit"/>
                   <prop v="0" k="offset"/>
                   <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
@@ -5259,7 +5336,13 @@ def my_form_open(dialog, layer, feature):
                   <data_defined_properties>
                     <Option type="Map">
                       <Option type="QString" name="name" value=""/>
-                      <Option name="properties"/>
+                      <Option type="Map" name="properties">
+                        <Option type="Map" name="outlineWidth">
+                          <Option type="bool" name="active" value="true"/>
+                          <Option type="QString" name="expression" value="@@landuse_line_width"/>
+                          <Option type="int" name="type" value="3"/>
+                        </Option>
+                      </Option>
                       <Option type="QString" name="type" value="collection"/>
                     </Option>
                   </data_defined_properties>
@@ -6668,7 +6751,13 @@ def my_form_open(dialog, layer, feature):
                   <data_defined_properties>
                     <Option type="Map">
                       <Option type="QString" name="name" value=""/>
-                      <Option name="properties"/>
+                      <Option type="Map" name="properties">
+                        <Option type="Map" name="outlineWidth">
+                          <Option type="bool" name="active" value="true"/>
+                          <Option type="QString" name="expression" value="@oam_landuse_line_width"/>
+                          <Option type="int" name="type" value="3"/>
+                        </Option>
+                      </Option>
                       <Option type="QString" name="type" value="collection"/>
                     </Option>
                   </data_defined_properties>
@@ -8037,7 +8126,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="MM" k="offset_unit"/>
               <prop v="125,125,237,255" k="outline_color"/>
               <prop v="solid" k="outline_style"/>
-              <prop v="0.5" k="outline_width"/>
+              <prop v="0.2" k="outline_width"/>
               <prop v="MM" k="outline_width_unit"/>
               <prop v="solid" k="style"/>
               <data_defined_properties>
@@ -9397,6 +9486,14 @@ def my_form_open(dialog, layer, feature):
     <SpatialRefSys>
       <ProjectionsEnabled type="int">1</ProjectionsEnabled>
     </SpatialRefSys>
+    <Variables>
+      <variableNames type="QStringList">
+        <value>oam_landuse_line_width</value>
+      </variableNames>
+      <variableValues type="QStringList">
+        <value>0.05</value>
+      </variableValues>
+    </Variables>
     <WCSLayers type="QStringList"/>
     <WCSUrl type="QString"></WCSUrl>
     <WFSLayers type="QStringList"/>
@@ -9633,7 +9730,7 @@ def my_form_open(dialog, layer, feature):
         </LayoutItem>
         <GuideCollection visible="1"/>
       </PageCollection>
-      <LayoutItem itemRotation="0" type="65646" lineCapStyle="square" segmentSizeMode="0" visibility="1" maxBarWidth="150" positionOnPage="235.224,165.961,mm" mapUuid="{249bd6bb-fb45-432d-b2be-1e27bb1972db}" uuid="{d0f3b552-8161-40f5-8bc8-6fa5c5816a24}" alignment="0" blendMode="0" referencePoint="0" size="63.8528,12.9068,mm" numUnitsPerSegment="500" segmentMillimeters="41.6671" frameJoinStyle="miter" lineJoinStyle="miter" unitType="meters" subdivisionsHeight="1.5" outlineWidthM="0.3,mm" zValue="3" unitLabel="m" numSubdivisions="1" position="235.224,165.961,mm" numSegments="2" templateUuid="{d0f3b552-8161-40f5-8bc8-6fa5c5816a24}" numSegmentsLeft="0" labelHorizontalPlacement="0" style="Numeric" opacity="1" labelBarSpace="3" frame="false" background="false" labelVerticalPlacement="0" excludeFromExports="0" boxContentSpace="1" numMapUnitsPerScaleBarUnit="1" outlineWidth="0.3" minBarWidth="50" height="3" id="" groupUuid="" positionLock="false">
+      <LayoutItem itemRotation="0" type="65646" lineCapStyle="square" segmentSizeMode="0" visibility="1" maxBarWidth="150" positionOnPage="235.224,165.961,mm" mapUuid="{249bd6bb-fb45-432d-b2be-1e27bb1972db}" uuid="{d0f3b552-8161-40f5-8bc8-6fa5c5816a24}" alignment="0" blendMode="0" referencePoint="0" size="63.8528,12.9068,mm" numUnitsPerSegment="500" segmentMillimeters="25.0003" frameJoinStyle="miter" lineJoinStyle="miter" unitType="meters" subdivisionsHeight="1.5" outlineWidthM="0.3,mm" zValue="3" unitLabel="m" numSubdivisions="1" position="235.224,165.961,mm" numSegments="2" templateUuid="{d0f3b552-8161-40f5-8bc8-6fa5c5816a24}" numSegmentsLeft="0" labelHorizontalPlacement="0" style="Numeric" opacity="1" labelBarSpace="3" frame="false" background="false" labelVerticalPlacement="0" excludeFromExports="0" boxContentSpace="1" numMapUnitsPerScaleBarUnit="1" outlineWidth="0.3" minBarWidth="50" height="3" id="" groupUuid="" positionLock="false">
         <FrameColor alpha="255" red="0" green="0" blue="0"/>
         <BackgroundColor alpha="255" red="255" green="255" blue="255"/>
         <LayoutObject>
@@ -9824,7 +9921,7 @@ def my_form_open(dialog, layer, feature):
           </symbol>
         </fillSymbol2>
       </LayoutItem>
-      <LayoutItem itemRotation="0" type="65646" lineCapStyle="square" segmentSizeMode="0" visibility="1" maxBarWidth="150" positionOnPage="215.214,184.177,mm" mapUuid="{249bd6bb-fb45-432d-b2be-1e27bb1972db}" uuid="{6e7fec1b-86ad-4a47-9502-4ac98f1781c5}" alignment="0" blendMode="0" referencePoint="0" size="97.1864,12.9068,mm" numUnitsPerSegment="500" segmentMillimeters="41.6671" frameJoinStyle="miter" lineJoinStyle="miter" unitType="meters" subdivisionsHeight="1.5" outlineWidthM="0.3,mm" zValue="2" unitLabel="m" numSubdivisions="1" position="215.214,184.177,mm" numSegments="2" templateUuid="{6e7fec1b-86ad-4a47-9502-4ac98f1781c5}" numSegmentsLeft="0" labelHorizontalPlacement="0" style="Single Box" opacity="1" labelBarSpace="3" frame="false" background="false" labelVerticalPlacement="0" excludeFromExports="0" boxContentSpace="1" numMapUnitsPerScaleBarUnit="1" outlineWidth="0.3" minBarWidth="50" height="3" id="" groupUuid="" positionLock="false">
+      <LayoutItem itemRotation="0" type="65646" lineCapStyle="square" segmentSizeMode="0" visibility="1" maxBarWidth="150" positionOnPage="215.214,184.177,mm" mapUuid="{249bd6bb-fb45-432d-b2be-1e27bb1972db}" uuid="{6e7fec1b-86ad-4a47-9502-4ac98f1781c5}" alignment="0" blendMode="0" referencePoint="0" size="63.853,12.9068,mm" numUnitsPerSegment="500" segmentMillimeters="25.0003" frameJoinStyle="miter" lineJoinStyle="miter" unitType="meters" subdivisionsHeight="1.5" outlineWidthM="0.3,mm" zValue="2" unitLabel="m" numSubdivisions="1" position="215.214,184.177,mm" numSegments="2" templateUuid="{6e7fec1b-86ad-4a47-9502-4ac98f1781c5}" numSegmentsLeft="0" labelHorizontalPlacement="0" style="Single Box" opacity="1" labelBarSpace="3" frame="false" background="false" labelVerticalPlacement="0" excludeFromExports="0" boxContentSpace="1" numMapUnitsPerScaleBarUnit="1" outlineWidth="0.3" minBarWidth="50" height="3" id="" groupUuid="" positionLock="false">
         <FrameColor alpha="255" red="0" green="0" blue="0"/>
         <BackgroundColor alpha="255" red="255" green="255" blue="255"/>
         <LayoutObject>
@@ -10028,7 +10125,7 @@ def my_form_open(dialog, layer, feature):
           </dataDefinedProperties>
           <customproperties/>
         </LayoutObject>
-        <Extent xmax="235173.99461063501075841" xmin="231748.54660714106285013" ymin="53517.07234709410840878" ymax="55844.8088301547759329"/>
+        <Extent xmax="235730.8189272029849235" xmin="230021.73892137969960459" ymin="51376.17958868160349084" ymax="55255.74039378272573231"/>
         <LayerSet/>
         <AtlasMap scalingMode="2" margin="0.10000000000000001" atlasDriven="0"/>
         <labelBlockingItems/>
