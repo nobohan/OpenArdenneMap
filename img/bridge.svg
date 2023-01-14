@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 744.09448819 1052.3622047"
+   width="11.819236mm"
+   height="6.5709801mm"
+   viewBox="0 0 41.879182 23.283"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
    sodipodi:docname="bridge.svg">
   <defs
      id="defs4" />
@@ -26,19 +26,25 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="7.9195959"
-     inkscape:cx="340.77037"
-     inkscape:cy="653.06894"
+     inkscape:cx="-21.940316"
+     inkscape:cy="-23.289897"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="1313"
-     inkscape:window-height="744"
-     inkscape:window-x="53"
-     inkscape:window-y="24"
-     inkscape:window-maximized="1">
+     inkscape:window-width="2506"
+     inkscape:window-height="1403"
+     inkscape:window-x="54"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
     <inkscape:grid
        type="xygrid"
-       id="grid4136" />
+       id="grid4136"
+       originx="-318.67418"
+       originy="-633.61292" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -48,21 +54,22 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-318.67417,-395.4663)">
     <path
        style="fill:none;fill-rule:evenodd;stroke:#111111;stroke-width:3.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 330,406.98339 20.08973,0"
+       d="m 330,406.98339 h 20.08973"
        id="path4137"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#111111;stroke-width:3.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:none;fill-rule:evenodd;stroke:#111111;stroke-width:3.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 320,397.3622 10,10 -10,10"
        id="path4139"
        inkscape:connector-curvature="0" />
