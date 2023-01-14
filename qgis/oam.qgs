@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis saveUser="julien" version="3.16.11-Hannover" saveUserFull="julien" projectname="" saveDateTime="2023-01-14T17:44:34">
+<qgis saveUser="julien" version="3.16.11-Hannover" saveUserFull="julien" projectname="" saveDateTime="2023-01-14T18:02:03">
   <homePath path=""/>
   <title></title>
   <autotransaction active="0"/>
@@ -21,6 +21,9 @@
   <layer-tree-group>
     <customproperties/>
     <layer-tree-layer expanded="1" providerKey="postgres" id="QueryLayer_4b5a9186_eff5_4303_b3d5_fabab799ab8f" name="rotated_buildings" source="dbname='osmpg_db' host=localhost port=5432 sslmode=disable key='_uid_' checkPrimaryKeyUnicity='1' table=&quot;(SELECT row_number() over () AS _uid_,* FROM (SELECT way, building, name, area, &#x9;CAST(degrees( &#x9;&#x9;CASE &#x9;&#x9;&#x9;WHEN ST_Distance(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 1), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2)) > ST_Distance(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 3)) &#x9;&#x9;&#x9;&#x9;THEN ST_Azimuth(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 1), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2)) &#x9;&#x9;&#x9;ELSE ST_Azimuth(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 3)) &#x9;&#x9;END &#x9;) AS VARCHAR(255)) AS orientation FROM planet_osm_polygon AS l WHERE building IN ('church','chapel')&#xa;) AS _subq_1_&#xa;)&quot; (way)" legend_split_behavior="0" checked="Qt::Checked" patch_size="-1,-1" legend_exp="">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer expanded="1" providerKey="postgres" id="planet_osm_polygon_5f9d5c2e_b1ed_4213_87ab_8404279b5a98" name="buildings" source="dbname='osmpg_db' host=localhost port=5432 sslmode=disable key='tid' srid=3857 type=MultiSurface checkPrimaryKeyUnicity='1' table=&quot;public&quot;.&quot;planet_osm_polygon&quot; (way) sql=&quot;building&quot; NOT IN ('', '0','false', 'no', 'church','chapel')" legend_split_behavior="0" checked="Qt::Checked" patch_size="-1,-1" legend_exp="">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" providerKey="postgres" id="QueryLayer_0c530ef4_5522_46bf_81a3_c05cd22fb7dc" name="cemetery" source="dbname='osmpg_db' host=localhost port=5432 sslmode=disable key='_uid_' checkPrimaryKeyUnicity='1' table=&quot;(SELECT row_number() over () AS _uid_,* FROM (SELECT way, way_area AS area, COALESCE(landuse, amenity) AS type FROM planet_osm_polygon WHERE landuse = 'cemetery' OR amenity= 'grave_yard'&#xa;) AS _subq_1_&#xa;)&quot; (way)" legend_split_behavior="0" checked="Qt::Checked" patch_size="-1,-1" legend_exp="">
@@ -106,6 +109,7 @@
       <item>QueryLayer_b70f1307_93c9_44e5_9a59_b435285443e6</item>
       <item>QueryLayer_0c530ef4_5522_46bf_81a3_c05cd22fb7dc</item>
       <item>QueryLayer_4b5a9186_eff5_4303_b3d5_fabab799ab8f</item>
+      <item>planet_osm_polygon_5f9d5c2e_b1ed_4213_87ab_8404279b5a98</item>
     </custom-order>
   </layer-tree-group>
   <snapping-settings self-snapping="0" intersection-snapping="0" unit="1" type="0" scaleDependencyMode="0" maxScale="0" tolerance="12" minScale="0" mode="2" enabled="0">
@@ -116,6 +120,7 @@
       <layer-setting id="QueryLayer_eeb5537b_50a9_43a9_b1e3_84553e68b395" type="1" maxScale="0" tolerance="12" minScale="0" units="1" enabled="0"/>
       <layer-setting id="beautiful_contour_belgium_2ba1eff6_0db8_4abb_adf4_60a971034b10" type="0" maxScale="0" tolerance="12" minScale="0" units="1" enabled="0"/>
       <layer-setting id="QueryLayer_b70f1307_93c9_44e5_9a59_b435285443e6" type="1" maxScale="0" tolerance="12" minScale="0" units="1" enabled="0"/>
+      <layer-setting id="planet_osm_polygon_5f9d5c2e_b1ed_4213_87ab_8404279b5a98" type="1" maxScale="0" tolerance="12" minScale="0" units="1" enabled="0"/>
       <layer-setting id="planet_osm_polygon_f36638ca_1f8c_4b25_a2ec_5eb54bcf53cb" type="1" maxScale="0" tolerance="12" minScale="0" units="1" enabled="0"/>
       <layer-setting id="planet_osm_polygon_c24c37e7_52d4_408c_881f_7a91aa6d392e" type="1" maxScale="0" tolerance="12" minScale="0" units="1" enabled="0"/>
       <layer-setting id="planet_osm_polygon_1f5bdf6c_a350_40cc_bea9_a890f4aa0348" type="0" maxScale="0" tolerance="12" minScale="0" units="1" enabled="0"/>
@@ -128,10 +133,10 @@
   <mapcanvas annotationsVisible="1" name="theMapCanvas">
     <units>meters</units>
     <extent>
-      <xmin>231791.60663372746785171</xmin>
-      <ymin>46148.51249376040505012</ymin>
-      <xmax>235938.10490473525715061</xmax>
-      <ymax>49537.84806587881030282</ymax>
+      <xmin>238722.39864746842067689</xmin>
+      <ymin>47214.0469100153495674</ymin>
+      <xmax>240795.64778297231532633</xmax>
+      <ymax>48908.71469607455219375</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -155,6 +160,11 @@
     <legendlayer open="true" name="rotated_buildings" showFeatureCount="0" drawingOrder="-1" checked="Qt::Checked">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="QueryLayer_4b5a9186_eff5_4303_b3d5_fabab799ab8f" visible="1"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer open="true" name="buildings" showFeatureCount="0" drawingOrder="-1" checked="Qt::Checked">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="planet_osm_polygon_5f9d5c2e_b1ed_4213_87ab_8404279b5a98" visible="1"/>
       </filegroup>
     </legendlayer>
     <legendlayer open="true" name="cemetery" showFeatureCount="0" drawingOrder="-1" checked="Qt::Checked">
@@ -11293,6 +11303,1404 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
     <maplayer simplifyLocal="1" wkbType="MultiSurface" readOnly="0" simplifyDrawingHints="1" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0" type="vector" autoRefreshTime="0" autoRefreshEnabled="0" simplifyAlgorithm="0" geometry="Polygon" maxScale="0" refreshOnNotifyMessage="" styleCategories="AllStyleCategories" simplifyMaxScale="1" labelsEnabled="0" minScale="100000000" simplifyDrawingTol="1">
       <extent>
+        <xmin>283066.90812817943515256</xmin>
+        <ymin>6360412.65753643959760666</ymin>
+        <xmax>713563.36837603431195021</xmax>
+        <ymax>6711293.67915498279035091</ymax>
+      </extent>
+      <id>planet_osm_polygon_5f9d5c2e_b1ed_4213_87ab_8404279b5a98</id>
+      <datasource>dbname='osmpg_db' host=localhost port=5432 sslmode=disable key='tid' srid=3857 type=MultiSurface checkPrimaryKeyUnicity='1' table="public"."planet_osm_polygon" (way) sql="building" NOT IN ('', '0','false', 'no', 'church','chapel')</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>buildings</layername>
+      <srs>
+        <spatialrefsys>
+          <wkt>PROJCRS["WGS 84 / Pseudo-Mercator",BASEGEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4326]],CONVERSION["Popular Visualisation Pseudo-Mercator",METHOD["Popular Visualisation Pseudo Mercator",ID["EPSG",1024]],PARAMETER["Latitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8801]],PARAMETER["Longitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8802]],PARAMETER["False easting",0,LENGTHUNIT["metre",1],ID["EPSG",8806]],PARAMETER["False northing",0,LENGTHUNIT["metre",1],ID["EPSG",8807]]],CS[Cartesian,2],AXIS["easting (X)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["northing (Y)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["Web mapping and visualisation."],AREA["World between 85.06°S and 85.06°N."],BBOX[-85.06,-180,85.06,180]],ID["EPSG",3857]]</wkt>
+          <proj4>+proj=merc +a=6378137 +b=6378137 +lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext +no_defs</proj4>
+          <srsid>3857</srsid>
+          <srid>3857</srid>
+          <authid>EPSG:3857</authid>
+          <description>WGS 84 / Pseudo-Mercator</description>
+          <projectionacronym>merc</projectionacronym>
+          <ellipsoidacronym>EPSG:7030</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type>dataset</type>
+        <title></title>
+        <abstract></abstract>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <wkt>PROJCRS["WGS 84 / Pseudo-Mercator",BASEGEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4326]],CONVERSION["Popular Visualisation Pseudo-Mercator",METHOD["Popular Visualisation Pseudo Mercator",ID["EPSG",1024]],PARAMETER["Latitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8801]],PARAMETER["Longitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8802]],PARAMETER["False easting",0,LENGTHUNIT["metre",1],ID["EPSG",8806]],PARAMETER["False northing",0,LENGTHUNIT["metre",1],ID["EPSG",8807]]],CS[Cartesian,2],AXIS["easting (X)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["northing (Y)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["Web mapping and visualisation."],AREA["World between 85.06°S and 85.06°N."],BBOX[-85.06,-180,85.06,180]],ID["EPSG",3857]]</wkt>
+            <proj4>+proj=merc +a=6378137 +b=6378137 +lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext +no_defs</proj4>
+            <srsid>3857</srsid>
+            <srid>3857</srid>
+            <authid>EPSG:3857</authid>
+            <description>WGS 84 / Pseudo-Mercator</description>
+            <projectionacronym>merc</projectionacronym>
+            <ellipsoidacronym>EPSG:7030</ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial maxy="0" minz="0" crs="EPSG:3857" miny="0" dimensions="2" maxx="0" maxz="0" minx="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+      </resourceMetadata>
+      <provider encoding="">postgres</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <temporal accumulate="0" endField="" endExpression="" startField="" mode="0" durationField="" startExpression="" enabled="0" durationUnit="min" fixedDuration="0">
+        <fixedRange>
+          <start></start>
+          <end></end>
+        </fixedRange>
+      </temporal>
+      <renderer-v2 forceraster="0" type="RuleRenderer" symbollevels="0" enableorderby="0">
+        <rules key="{8802c40a-0c94-4f33-8d77-62ac815e2a22}">
+          <rule key="{f0a4a4a7-6b7f-413a-95f9-a4bb24af2228}" label="greenhouse" symbol="0" filter="building='greenhouse'"/>
+          <rule key="{e1afa99c-33a8-4595-9c65-a834ce213a8c}" symbol="1" filter="ELSE"/>
+        </rules>
+        <symbols>
+          <symbol clip_to_extent="1" type="fill" name="0" alpha="1" force_rhr="0">
+            <layer pass="0" locked="0" class="SimpleFill" enabled="1">
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="255,255,255,255" k="color"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="35,35,35,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.2" k="outline_width"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="solid" k="style"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option value="" type="QString" name="name"/>
+                  <Option name="properties"/>
+                  <Option value="collection" type="QString" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol clip_to_extent="1" type="fill" name="1" alpha="1" force_rhr="0">
+            <layer pass="0" locked="0" class="SimpleFill" enabled="1">
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="68,68,68,255" k="color"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="35,35,35,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.2" k="outline_width"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="solid" k="style"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option value="" type="QString" name="name"/>
+                  <Option name="properties"/>
+                  <Option value="collection" type="QString" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+      </renderer-v2>
+      <customproperties>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
+        <DiagramCategory diagramOrientation="Up" backgroundColor="#ffffff" opacity="1" spacing="5" enabled="0" scaleDependency="Area" penAlpha="255" rotationOffset="270" width="15" direction="0" lineSizeScale="3x:0,0,0,0,0,0" height="15" backgroundAlpha="255" showAxis="1" spacingUnit="MM" maxScaleDenominator="1e+08" labelPlacementMethod="XHeight" penWidth="0" penColor="#000000" sizeScale="3x:0,0,0,0,0,0" spacingUnitScale="3x:0,0,0,0,0,0" lineSizeType="MM" barWidth="5" minimumSize="0" sizeType="MM" minScaleDenominator="0" scaleBasedVisibility="0">
+          <fontProperties description="Ubuntu,11,-1,5,50,0,0,0,0,0" style=""/>
+          <axisSymbol>
+            <symbol clip_to_extent="1" type="line" name="" alpha="1" force_rhr="0">
+              <layer pass="0" locked="0" class="SimpleLine" enabled="1">
+                <prop v="0" k="align_dash_pattern"/>
+                <prop v="square" k="capstyle"/>
+                <prop v="5;2" k="customdash"/>
+                <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
+                <prop v="MM" k="customdash_unit"/>
+                <prop v="0" k="dash_pattern_offset"/>
+                <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
+                <prop v="MM" k="dash_pattern_offset_unit"/>
+                <prop v="0" k="draw_inside_polygon"/>
+                <prop v="bevel" k="joinstyle"/>
+                <prop v="35,35,35,255" k="line_color"/>
+                <prop v="solid" k="line_style"/>
+                <prop v="0.26" k="line_width"/>
+                <prop v="MM" k="line_width_unit"/>
+                <prop v="0" k="offset"/>
+                <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+                <prop v="MM" k="offset_unit"/>
+                <prop v="0" k="ring_filter"/>
+                <prop v="0" k="tweak_dash_pattern_on_corners"/>
+                <prop v="0" k="use_custom_dash"/>
+                <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
+                <data_defined_properties>
+                  <Option type="Map">
+                    <Option value="" type="QString" name="name"/>
+                    <Option name="properties"/>
+                    <Option value="collection" type="QString" name="type"/>
+                  </Option>
+                </data_defined_properties>
+              </layer>
+            </symbol>
+          </axisSymbol>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings linePlacementFlags="18" zIndex="0" showAll="1" placement="1" priority="0" obstacle="0" dist="0">
+        <properties>
+          <Option type="Map">
+            <Option value="" type="QString" name="name"/>
+            <Option name="properties"/>
+            <Option value="collection" type="QString" name="type"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
+        <activeChecks/>
+        <checkConfiguration type="Map">
+          <Option type="Map" name="QgsGeometryGapCheck">
+            <Option value="0" type="double" name="allowedGapsBuffer"/>
+            <Option value="false" type="bool" name="allowedGapsEnabled"/>
+            <Option value="" type="QString" name="allowedGapsLayer"/>
+          </Option>
+        </checkConfiguration>
+      </geometryOptions>
+      <legend type="default-vector"/>
+      <referencedLayers/>
+      <fieldConfiguration>
+        <field name="osm_id" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="access" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="ascent" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="addr:housename" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="addr:housenumber" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="addr:interpolation" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="admin_level" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="aerialway" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="aeroway" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="amenity" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="area" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="barrier" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="bicycle" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="brand" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="bridge" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="boundary" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="building" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="construction" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="covered" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="culvert" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="cutting" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="denomination" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="descent" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="disused" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="direction" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="distance" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="embankment" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="foot" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="generator:source" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="harbour" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="highway" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="historic" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="horse" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="intermittent" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="junction" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="landuse" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="layer" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="leaf_type" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="leaf_cycle" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="leisure" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="lock" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="man_made" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="military" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="motorcar" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="name" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="natural" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="network" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="office" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="osmc:symbol" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="oneway" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="operator" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="place" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="population" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="power" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="power_source" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="produce" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="public_transport" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="railway" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="ref" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="religion" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="route" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="service" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="shop" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="sport" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="surface" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="toll" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="tourism" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="tower:type" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="tracktype" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="trail_visibility" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="trees" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="tunnel" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="signed_direction" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="water" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="waterway" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="wetland" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="width" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="wood" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="z_order" configurationFlags="None">
+          <editWidget type="Range">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="way_area" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="osm_timestamp" configurationFlags="None">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" field="osm_id" name=""/>
+        <alias index="1" field="access" name=""/>
+        <alias index="2" field="ascent" name=""/>
+        <alias index="3" field="addr:housename" name=""/>
+        <alias index="4" field="addr:housenumber" name=""/>
+        <alias index="5" field="addr:interpolation" name=""/>
+        <alias index="6" field="admin_level" name=""/>
+        <alias index="7" field="aerialway" name=""/>
+        <alias index="8" field="aeroway" name=""/>
+        <alias index="9" field="amenity" name=""/>
+        <alias index="10" field="area" name=""/>
+        <alias index="11" field="barrier" name=""/>
+        <alias index="12" field="bicycle" name=""/>
+        <alias index="13" field="brand" name=""/>
+        <alias index="14" field="bridge" name=""/>
+        <alias index="15" field="boundary" name=""/>
+        <alias index="16" field="building" name=""/>
+        <alias index="17" field="construction" name=""/>
+        <alias index="18" field="covered" name=""/>
+        <alias index="19" field="culvert" name=""/>
+        <alias index="20" field="cutting" name=""/>
+        <alias index="21" field="denomination" name=""/>
+        <alias index="22" field="descent" name=""/>
+        <alias index="23" field="disused" name=""/>
+        <alias index="24" field="direction" name=""/>
+        <alias index="25" field="distance" name=""/>
+        <alias index="26" field="embankment" name=""/>
+        <alias index="27" field="foot" name=""/>
+        <alias index="28" field="generator:source" name=""/>
+        <alias index="29" field="harbour" name=""/>
+        <alias index="30" field="highway" name=""/>
+        <alias index="31" field="historic" name=""/>
+        <alias index="32" field="horse" name=""/>
+        <alias index="33" field="intermittent" name=""/>
+        <alias index="34" field="junction" name=""/>
+        <alias index="35" field="landuse" name=""/>
+        <alias index="36" field="layer" name=""/>
+        <alias index="37" field="leaf_type" name=""/>
+        <alias index="38" field="leaf_cycle" name=""/>
+        <alias index="39" field="leisure" name=""/>
+        <alias index="40" field="lock" name=""/>
+        <alias index="41" field="man_made" name=""/>
+        <alias index="42" field="military" name=""/>
+        <alias index="43" field="motorcar" name=""/>
+        <alias index="44" field="name" name=""/>
+        <alias index="45" field="natural" name=""/>
+        <alias index="46" field="network" name=""/>
+        <alias index="47" field="office" name=""/>
+        <alias index="48" field="osmc:symbol" name=""/>
+        <alias index="49" field="oneway" name=""/>
+        <alias index="50" field="operator" name=""/>
+        <alias index="51" field="place" name=""/>
+        <alias index="52" field="population" name=""/>
+        <alias index="53" field="power" name=""/>
+        <alias index="54" field="power_source" name=""/>
+        <alias index="55" field="produce" name=""/>
+        <alias index="56" field="public_transport" name=""/>
+        <alias index="57" field="railway" name=""/>
+        <alias index="58" field="ref" name=""/>
+        <alias index="59" field="religion" name=""/>
+        <alias index="60" field="route" name=""/>
+        <alias index="61" field="service" name=""/>
+        <alias index="62" field="shop" name=""/>
+        <alias index="63" field="sport" name=""/>
+        <alias index="64" field="surface" name=""/>
+        <alias index="65" field="toll" name=""/>
+        <alias index="66" field="tourism" name=""/>
+        <alias index="67" field="tower:type" name=""/>
+        <alias index="68" field="tracktype" name=""/>
+        <alias index="69" field="trail_visibility" name=""/>
+        <alias index="70" field="trees" name=""/>
+        <alias index="71" field="tunnel" name=""/>
+        <alias index="72" field="signed_direction" name=""/>
+        <alias index="73" field="water" name=""/>
+        <alias index="74" field="waterway" name=""/>
+        <alias index="75" field="wetland" name=""/>
+        <alias index="76" field="width" name=""/>
+        <alias index="77" field="wood" name=""/>
+        <alias index="78" field="z_order" name=""/>
+        <alias index="79" field="way_area" name=""/>
+        <alias index="80" field="osm_timestamp" name=""/>
+      </aliases>
+      <defaults>
+        <default field="osm_id" applyOnUpdate="0" expression=""/>
+        <default field="access" applyOnUpdate="0" expression=""/>
+        <default field="ascent" applyOnUpdate="0" expression=""/>
+        <default field="addr:housename" applyOnUpdate="0" expression=""/>
+        <default field="addr:housenumber" applyOnUpdate="0" expression=""/>
+        <default field="addr:interpolation" applyOnUpdate="0" expression=""/>
+        <default field="admin_level" applyOnUpdate="0" expression=""/>
+        <default field="aerialway" applyOnUpdate="0" expression=""/>
+        <default field="aeroway" applyOnUpdate="0" expression=""/>
+        <default field="amenity" applyOnUpdate="0" expression=""/>
+        <default field="area" applyOnUpdate="0" expression=""/>
+        <default field="barrier" applyOnUpdate="0" expression=""/>
+        <default field="bicycle" applyOnUpdate="0" expression=""/>
+        <default field="brand" applyOnUpdate="0" expression=""/>
+        <default field="bridge" applyOnUpdate="0" expression=""/>
+        <default field="boundary" applyOnUpdate="0" expression=""/>
+        <default field="building" applyOnUpdate="0" expression=""/>
+        <default field="construction" applyOnUpdate="0" expression=""/>
+        <default field="covered" applyOnUpdate="0" expression=""/>
+        <default field="culvert" applyOnUpdate="0" expression=""/>
+        <default field="cutting" applyOnUpdate="0" expression=""/>
+        <default field="denomination" applyOnUpdate="0" expression=""/>
+        <default field="descent" applyOnUpdate="0" expression=""/>
+        <default field="disused" applyOnUpdate="0" expression=""/>
+        <default field="direction" applyOnUpdate="0" expression=""/>
+        <default field="distance" applyOnUpdate="0" expression=""/>
+        <default field="embankment" applyOnUpdate="0" expression=""/>
+        <default field="foot" applyOnUpdate="0" expression=""/>
+        <default field="generator:source" applyOnUpdate="0" expression=""/>
+        <default field="harbour" applyOnUpdate="0" expression=""/>
+        <default field="highway" applyOnUpdate="0" expression=""/>
+        <default field="historic" applyOnUpdate="0" expression=""/>
+        <default field="horse" applyOnUpdate="0" expression=""/>
+        <default field="intermittent" applyOnUpdate="0" expression=""/>
+        <default field="junction" applyOnUpdate="0" expression=""/>
+        <default field="landuse" applyOnUpdate="0" expression=""/>
+        <default field="layer" applyOnUpdate="0" expression=""/>
+        <default field="leaf_type" applyOnUpdate="0" expression=""/>
+        <default field="leaf_cycle" applyOnUpdate="0" expression=""/>
+        <default field="leisure" applyOnUpdate="0" expression=""/>
+        <default field="lock" applyOnUpdate="0" expression=""/>
+        <default field="man_made" applyOnUpdate="0" expression=""/>
+        <default field="military" applyOnUpdate="0" expression=""/>
+        <default field="motorcar" applyOnUpdate="0" expression=""/>
+        <default field="name" applyOnUpdate="0" expression=""/>
+        <default field="natural" applyOnUpdate="0" expression=""/>
+        <default field="network" applyOnUpdate="0" expression=""/>
+        <default field="office" applyOnUpdate="0" expression=""/>
+        <default field="osmc:symbol" applyOnUpdate="0" expression=""/>
+        <default field="oneway" applyOnUpdate="0" expression=""/>
+        <default field="operator" applyOnUpdate="0" expression=""/>
+        <default field="place" applyOnUpdate="0" expression=""/>
+        <default field="population" applyOnUpdate="0" expression=""/>
+        <default field="power" applyOnUpdate="0" expression=""/>
+        <default field="power_source" applyOnUpdate="0" expression=""/>
+        <default field="produce" applyOnUpdate="0" expression=""/>
+        <default field="public_transport" applyOnUpdate="0" expression=""/>
+        <default field="railway" applyOnUpdate="0" expression=""/>
+        <default field="ref" applyOnUpdate="0" expression=""/>
+        <default field="religion" applyOnUpdate="0" expression=""/>
+        <default field="route" applyOnUpdate="0" expression=""/>
+        <default field="service" applyOnUpdate="0" expression=""/>
+        <default field="shop" applyOnUpdate="0" expression=""/>
+        <default field="sport" applyOnUpdate="0" expression=""/>
+        <default field="surface" applyOnUpdate="0" expression=""/>
+        <default field="toll" applyOnUpdate="0" expression=""/>
+        <default field="tourism" applyOnUpdate="0" expression=""/>
+        <default field="tower:type" applyOnUpdate="0" expression=""/>
+        <default field="tracktype" applyOnUpdate="0" expression=""/>
+        <default field="trail_visibility" applyOnUpdate="0" expression=""/>
+        <default field="trees" applyOnUpdate="0" expression=""/>
+        <default field="tunnel" applyOnUpdate="0" expression=""/>
+        <default field="signed_direction" applyOnUpdate="0" expression=""/>
+        <default field="water" applyOnUpdate="0" expression=""/>
+        <default field="waterway" applyOnUpdate="0" expression=""/>
+        <default field="wetland" applyOnUpdate="0" expression=""/>
+        <default field="width" applyOnUpdate="0" expression=""/>
+        <default field="wood" applyOnUpdate="0" expression=""/>
+        <default field="z_order" applyOnUpdate="0" expression=""/>
+        <default field="way_area" applyOnUpdate="0" expression=""/>
+        <default field="osm_timestamp" applyOnUpdate="0" expression=""/>
+      </defaults>
+      <constraints>
+        <constraint field="osm_id" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="access" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="ascent" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="addr:housename" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="addr:housenumber" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="addr:interpolation" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="admin_level" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="aerialway" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="aeroway" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="amenity" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="area" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="barrier" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="bicycle" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="brand" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="bridge" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="boundary" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="building" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="construction" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="covered" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="culvert" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="cutting" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="denomination" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="descent" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="disused" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="direction" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="distance" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="embankment" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="foot" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="generator:source" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="harbour" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="highway" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="historic" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="horse" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="intermittent" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="junction" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="landuse" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="layer" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="leaf_type" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="leaf_cycle" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="leisure" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="lock" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="man_made" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="military" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="motorcar" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="name" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="natural" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="network" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="office" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="osmc:symbol" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="oneway" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="operator" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="place" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="population" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="power" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="power_source" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="produce" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="public_transport" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="railway" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="ref" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="religion" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="route" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="service" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="shop" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="sport" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="surface" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="toll" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="tourism" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="tower:type" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="tracktype" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="trail_visibility" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="trees" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="tunnel" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="signed_direction" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="water" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="waterway" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="wetland" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="width" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="wood" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="z_order" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="way_area" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="osm_timestamp" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint field="osm_id" exp="" desc=""/>
+        <constraint field="access" exp="" desc=""/>
+        <constraint field="ascent" exp="" desc=""/>
+        <constraint field="addr:housename" exp="" desc=""/>
+        <constraint field="addr:housenumber" exp="" desc=""/>
+        <constraint field="addr:interpolation" exp="" desc=""/>
+        <constraint field="admin_level" exp="" desc=""/>
+        <constraint field="aerialway" exp="" desc=""/>
+        <constraint field="aeroway" exp="" desc=""/>
+        <constraint field="amenity" exp="" desc=""/>
+        <constraint field="area" exp="" desc=""/>
+        <constraint field="barrier" exp="" desc=""/>
+        <constraint field="bicycle" exp="" desc=""/>
+        <constraint field="brand" exp="" desc=""/>
+        <constraint field="bridge" exp="" desc=""/>
+        <constraint field="boundary" exp="" desc=""/>
+        <constraint field="building" exp="" desc=""/>
+        <constraint field="construction" exp="" desc=""/>
+        <constraint field="covered" exp="" desc=""/>
+        <constraint field="culvert" exp="" desc=""/>
+        <constraint field="cutting" exp="" desc=""/>
+        <constraint field="denomination" exp="" desc=""/>
+        <constraint field="descent" exp="" desc=""/>
+        <constraint field="disused" exp="" desc=""/>
+        <constraint field="direction" exp="" desc=""/>
+        <constraint field="distance" exp="" desc=""/>
+        <constraint field="embankment" exp="" desc=""/>
+        <constraint field="foot" exp="" desc=""/>
+        <constraint field="generator:source" exp="" desc=""/>
+        <constraint field="harbour" exp="" desc=""/>
+        <constraint field="highway" exp="" desc=""/>
+        <constraint field="historic" exp="" desc=""/>
+        <constraint field="horse" exp="" desc=""/>
+        <constraint field="intermittent" exp="" desc=""/>
+        <constraint field="junction" exp="" desc=""/>
+        <constraint field="landuse" exp="" desc=""/>
+        <constraint field="layer" exp="" desc=""/>
+        <constraint field="leaf_type" exp="" desc=""/>
+        <constraint field="leaf_cycle" exp="" desc=""/>
+        <constraint field="leisure" exp="" desc=""/>
+        <constraint field="lock" exp="" desc=""/>
+        <constraint field="man_made" exp="" desc=""/>
+        <constraint field="military" exp="" desc=""/>
+        <constraint field="motorcar" exp="" desc=""/>
+        <constraint field="name" exp="" desc=""/>
+        <constraint field="natural" exp="" desc=""/>
+        <constraint field="network" exp="" desc=""/>
+        <constraint field="office" exp="" desc=""/>
+        <constraint field="osmc:symbol" exp="" desc=""/>
+        <constraint field="oneway" exp="" desc=""/>
+        <constraint field="operator" exp="" desc=""/>
+        <constraint field="place" exp="" desc=""/>
+        <constraint field="population" exp="" desc=""/>
+        <constraint field="power" exp="" desc=""/>
+        <constraint field="power_source" exp="" desc=""/>
+        <constraint field="produce" exp="" desc=""/>
+        <constraint field="public_transport" exp="" desc=""/>
+        <constraint field="railway" exp="" desc=""/>
+        <constraint field="ref" exp="" desc=""/>
+        <constraint field="religion" exp="" desc=""/>
+        <constraint field="route" exp="" desc=""/>
+        <constraint field="service" exp="" desc=""/>
+        <constraint field="shop" exp="" desc=""/>
+        <constraint field="sport" exp="" desc=""/>
+        <constraint field="surface" exp="" desc=""/>
+        <constraint field="toll" exp="" desc=""/>
+        <constraint field="tourism" exp="" desc=""/>
+        <constraint field="tower:type" exp="" desc=""/>
+        <constraint field="tracktype" exp="" desc=""/>
+        <constraint field="trail_visibility" exp="" desc=""/>
+        <constraint field="trees" exp="" desc=""/>
+        <constraint field="tunnel" exp="" desc=""/>
+        <constraint field="signed_direction" exp="" desc=""/>
+        <constraint field="water" exp="" desc=""/>
+        <constraint field="waterway" exp="" desc=""/>
+        <constraint field="wetland" exp="" desc=""/>
+        <constraint field="width" exp="" desc=""/>
+        <constraint field="wood" exp="" desc=""/>
+        <constraint field="z_order" exp="" desc=""/>
+        <constraint field="way_area" exp="" desc=""/>
+        <constraint field="osm_timestamp" exp="" desc=""/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions>
+        <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
+      </attributeactions>
+      <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
+        <columns>
+          <column width="-1" type="field" hidden="0" name="osm_id"/>
+          <column width="-1" type="field" hidden="0" name="access"/>
+          <column width="-1" type="field" hidden="0" name="ascent"/>
+          <column width="-1" type="field" hidden="0" name="addr:housename"/>
+          <column width="-1" type="field" hidden="0" name="addr:housenumber"/>
+          <column width="-1" type="field" hidden="0" name="addr:interpolation"/>
+          <column width="-1" type="field" hidden="0" name="admin_level"/>
+          <column width="-1" type="field" hidden="0" name="aerialway"/>
+          <column width="-1" type="field" hidden="0" name="aeroway"/>
+          <column width="-1" type="field" hidden="0" name="amenity"/>
+          <column width="-1" type="field" hidden="0" name="area"/>
+          <column width="-1" type="field" hidden="0" name="barrier"/>
+          <column width="-1" type="field" hidden="0" name="bicycle"/>
+          <column width="-1" type="field" hidden="0" name="brand"/>
+          <column width="-1" type="field" hidden="0" name="bridge"/>
+          <column width="-1" type="field" hidden="0" name="boundary"/>
+          <column width="-1" type="field" hidden="0" name="building"/>
+          <column width="-1" type="field" hidden="0" name="construction"/>
+          <column width="-1" type="field" hidden="0" name="covered"/>
+          <column width="-1" type="field" hidden="0" name="culvert"/>
+          <column width="-1" type="field" hidden="0" name="cutting"/>
+          <column width="-1" type="field" hidden="0" name="denomination"/>
+          <column width="-1" type="field" hidden="0" name="descent"/>
+          <column width="-1" type="field" hidden="0" name="disused"/>
+          <column width="-1" type="field" hidden="0" name="direction"/>
+          <column width="-1" type="field" hidden="0" name="distance"/>
+          <column width="-1" type="field" hidden="0" name="embankment"/>
+          <column width="-1" type="field" hidden="0" name="foot"/>
+          <column width="-1" type="field" hidden="0" name="generator:source"/>
+          <column width="-1" type="field" hidden="0" name="harbour"/>
+          <column width="-1" type="field" hidden="0" name="highway"/>
+          <column width="-1" type="field" hidden="0" name="historic"/>
+          <column width="-1" type="field" hidden="0" name="horse"/>
+          <column width="-1" type="field" hidden="0" name="intermittent"/>
+          <column width="-1" type="field" hidden="0" name="junction"/>
+          <column width="-1" type="field" hidden="0" name="landuse"/>
+          <column width="-1" type="field" hidden="0" name="layer"/>
+          <column width="-1" type="field" hidden="0" name="leaf_type"/>
+          <column width="-1" type="field" hidden="0" name="leaf_cycle"/>
+          <column width="-1" type="field" hidden="0" name="leisure"/>
+          <column width="-1" type="field" hidden="0" name="lock"/>
+          <column width="-1" type="field" hidden="0" name="man_made"/>
+          <column width="-1" type="field" hidden="0" name="military"/>
+          <column width="-1" type="field" hidden="0" name="motorcar"/>
+          <column width="-1" type="field" hidden="0" name="name"/>
+          <column width="-1" type="field" hidden="0" name="natural"/>
+          <column width="-1" type="field" hidden="0" name="network"/>
+          <column width="-1" type="field" hidden="0" name="office"/>
+          <column width="-1" type="field" hidden="0" name="osmc:symbol"/>
+          <column width="-1" type="field" hidden="0" name="oneway"/>
+          <column width="-1" type="field" hidden="0" name="operator"/>
+          <column width="-1" type="field" hidden="0" name="place"/>
+          <column width="-1" type="field" hidden="0" name="population"/>
+          <column width="-1" type="field" hidden="0" name="power"/>
+          <column width="-1" type="field" hidden="0" name="power_source"/>
+          <column width="-1" type="field" hidden="0" name="produce"/>
+          <column width="-1" type="field" hidden="0" name="public_transport"/>
+          <column width="-1" type="field" hidden="0" name="railway"/>
+          <column width="-1" type="field" hidden="0" name="ref"/>
+          <column width="-1" type="field" hidden="0" name="religion"/>
+          <column width="-1" type="field" hidden="0" name="route"/>
+          <column width="-1" type="field" hidden="0" name="service"/>
+          <column width="-1" type="field" hidden="0" name="shop"/>
+          <column width="-1" type="field" hidden="0" name="sport"/>
+          <column width="-1" type="field" hidden="0" name="surface"/>
+          <column width="-1" type="field" hidden="0" name="toll"/>
+          <column width="-1" type="field" hidden="0" name="tourism"/>
+          <column width="-1" type="field" hidden="0" name="tower:type"/>
+          <column width="-1" type="field" hidden="0" name="tracktype"/>
+          <column width="-1" type="field" hidden="0" name="trail_visibility"/>
+          <column width="-1" type="field" hidden="0" name="trees"/>
+          <column width="-1" type="field" hidden="0" name="tunnel"/>
+          <column width="-1" type="field" hidden="0" name="signed_direction"/>
+          <column width="-1" type="field" hidden="0" name="water"/>
+          <column width="-1" type="field" hidden="0" name="waterway"/>
+          <column width="-1" type="field" hidden="0" name="wetland"/>
+          <column width="-1" type="field" hidden="0" name="width"/>
+          <column width="-1" type="field" hidden="0" name="wood"/>
+          <column width="-1" type="field" hidden="0" name="z_order"/>
+          <column width="-1" type="field" hidden="0" name="way_area"/>
+          <column width="-1" type="field" hidden="0" name="osm_timestamp"/>
+          <column width="-1" type="actions" hidden="1"/>
+        </columns>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <storedexpressions/>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable>
+        <field editable="1" name="access"/>
+        <field editable="1" name="addr:housename"/>
+        <field editable="1" name="addr:housenumber"/>
+        <field editable="1" name="addr:interpolation"/>
+        <field editable="1" name="admin_level"/>
+        <field editable="1" name="aerialway"/>
+        <field editable="1" name="aeroway"/>
+        <field editable="1" name="amenity"/>
+        <field editable="1" name="area"/>
+        <field editable="1" name="ascent"/>
+        <field editable="1" name="barrier"/>
+        <field editable="1" name="bicycle"/>
+        <field editable="1" name="boundary"/>
+        <field editable="1" name="brand"/>
+        <field editable="1" name="bridge"/>
+        <field editable="1" name="building"/>
+        <field editable="1" name="construction"/>
+        <field editable="1" name="covered"/>
+        <field editable="1" name="culvert"/>
+        <field editable="1" name="cutting"/>
+        <field editable="1" name="denomination"/>
+        <field editable="1" name="descent"/>
+        <field editable="1" name="direction"/>
+        <field editable="1" name="distance"/>
+        <field editable="1" name="disused"/>
+        <field editable="1" name="embankment"/>
+        <field editable="1" name="foot"/>
+        <field editable="1" name="generator:source"/>
+        <field editable="1" name="harbour"/>
+        <field editable="1" name="highway"/>
+        <field editable="1" name="historic"/>
+        <field editable="1" name="horse"/>
+        <field editable="1" name="intermittent"/>
+        <field editable="1" name="junction"/>
+        <field editable="1" name="landuse"/>
+        <field editable="1" name="layer"/>
+        <field editable="1" name="leaf_cycle"/>
+        <field editable="1" name="leaf_type"/>
+        <field editable="1" name="leisure"/>
+        <field editable="1" name="lock"/>
+        <field editable="1" name="man_made"/>
+        <field editable="1" name="military"/>
+        <field editable="1" name="motorcar"/>
+        <field editable="1" name="name"/>
+        <field editable="1" name="natural"/>
+        <field editable="1" name="network"/>
+        <field editable="1" name="office"/>
+        <field editable="1" name="oneway"/>
+        <field editable="1" name="operator"/>
+        <field editable="1" name="osm_id"/>
+        <field editable="1" name="osm_timestamp"/>
+        <field editable="1" name="osmc:symbol"/>
+        <field editable="1" name="place"/>
+        <field editable="1" name="population"/>
+        <field editable="1" name="power"/>
+        <field editable="1" name="power_source"/>
+        <field editable="1" name="produce"/>
+        <field editable="1" name="public_transport"/>
+        <field editable="1" name="railway"/>
+        <field editable="1" name="ref"/>
+        <field editable="1" name="religion"/>
+        <field editable="1" name="route"/>
+        <field editable="1" name="service"/>
+        <field editable="1" name="shop"/>
+        <field editable="1" name="signed_direction"/>
+        <field editable="1" name="sport"/>
+        <field editable="1" name="surface"/>
+        <field editable="1" name="toll"/>
+        <field editable="1" name="tourism"/>
+        <field editable="1" name="tower:type"/>
+        <field editable="1" name="tracktype"/>
+        <field editable="1" name="trail_visibility"/>
+        <field editable="1" name="trees"/>
+        <field editable="1" name="tunnel"/>
+        <field editable="1" name="water"/>
+        <field editable="1" name="waterway"/>
+        <field editable="1" name="way_area"/>
+        <field editable="1" name="wetland"/>
+        <field editable="1" name="width"/>
+        <field editable="1" name="wood"/>
+        <field editable="1" name="z_order"/>
+      </editable>
+      <labelOnTop>
+        <field labelOnTop="0" name="access"/>
+        <field labelOnTop="0" name="addr:housename"/>
+        <field labelOnTop="0" name="addr:housenumber"/>
+        <field labelOnTop="0" name="addr:interpolation"/>
+        <field labelOnTop="0" name="admin_level"/>
+        <field labelOnTop="0" name="aerialway"/>
+        <field labelOnTop="0" name="aeroway"/>
+        <field labelOnTop="0" name="amenity"/>
+        <field labelOnTop="0" name="area"/>
+        <field labelOnTop="0" name="ascent"/>
+        <field labelOnTop="0" name="barrier"/>
+        <field labelOnTop="0" name="bicycle"/>
+        <field labelOnTop="0" name="boundary"/>
+        <field labelOnTop="0" name="brand"/>
+        <field labelOnTop="0" name="bridge"/>
+        <field labelOnTop="0" name="building"/>
+        <field labelOnTop="0" name="construction"/>
+        <field labelOnTop="0" name="covered"/>
+        <field labelOnTop="0" name="culvert"/>
+        <field labelOnTop="0" name="cutting"/>
+        <field labelOnTop="0" name="denomination"/>
+        <field labelOnTop="0" name="descent"/>
+        <field labelOnTop="0" name="direction"/>
+        <field labelOnTop="0" name="distance"/>
+        <field labelOnTop="0" name="disused"/>
+        <field labelOnTop="0" name="embankment"/>
+        <field labelOnTop="0" name="foot"/>
+        <field labelOnTop="0" name="generator:source"/>
+        <field labelOnTop="0" name="harbour"/>
+        <field labelOnTop="0" name="highway"/>
+        <field labelOnTop="0" name="historic"/>
+        <field labelOnTop="0" name="horse"/>
+        <field labelOnTop="0" name="intermittent"/>
+        <field labelOnTop="0" name="junction"/>
+        <field labelOnTop="0" name="landuse"/>
+        <field labelOnTop="0" name="layer"/>
+        <field labelOnTop="0" name="leaf_cycle"/>
+        <field labelOnTop="0" name="leaf_type"/>
+        <field labelOnTop="0" name="leisure"/>
+        <field labelOnTop="0" name="lock"/>
+        <field labelOnTop="0" name="man_made"/>
+        <field labelOnTop="0" name="military"/>
+        <field labelOnTop="0" name="motorcar"/>
+        <field labelOnTop="0" name="name"/>
+        <field labelOnTop="0" name="natural"/>
+        <field labelOnTop="0" name="network"/>
+        <field labelOnTop="0" name="office"/>
+        <field labelOnTop="0" name="oneway"/>
+        <field labelOnTop="0" name="operator"/>
+        <field labelOnTop="0" name="osm_id"/>
+        <field labelOnTop="0" name="osm_timestamp"/>
+        <field labelOnTop="0" name="osmc:symbol"/>
+        <field labelOnTop="0" name="place"/>
+        <field labelOnTop="0" name="population"/>
+        <field labelOnTop="0" name="power"/>
+        <field labelOnTop="0" name="power_source"/>
+        <field labelOnTop="0" name="produce"/>
+        <field labelOnTop="0" name="public_transport"/>
+        <field labelOnTop="0" name="railway"/>
+        <field labelOnTop="0" name="ref"/>
+        <field labelOnTop="0" name="religion"/>
+        <field labelOnTop="0" name="route"/>
+        <field labelOnTop="0" name="service"/>
+        <field labelOnTop="0" name="shop"/>
+        <field labelOnTop="0" name="signed_direction"/>
+        <field labelOnTop="0" name="sport"/>
+        <field labelOnTop="0" name="surface"/>
+        <field labelOnTop="0" name="toll"/>
+        <field labelOnTop="0" name="tourism"/>
+        <field labelOnTop="0" name="tower:type"/>
+        <field labelOnTop="0" name="tracktype"/>
+        <field labelOnTop="0" name="trail_visibility"/>
+        <field labelOnTop="0" name="trees"/>
+        <field labelOnTop="0" name="tunnel"/>
+        <field labelOnTop="0" name="water"/>
+        <field labelOnTop="0" name="waterway"/>
+        <field labelOnTop="0" name="way_area"/>
+        <field labelOnTop="0" name="wetland"/>
+        <field labelOnTop="0" name="width"/>
+        <field labelOnTop="0" name="wood"/>
+        <field labelOnTop="0" name="z_order"/>
+      </labelOnTop>
+      <dataDefinedFieldProperties/>
+      <widgets/>
+      <previewExpression>"addr:housename"</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer simplifyLocal="1" wkbType="MultiSurface" readOnly="0" simplifyDrawingHints="1" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0" type="vector" autoRefreshTime="0" autoRefreshEnabled="0" simplifyAlgorithm="0" geometry="Polygon" maxScale="0" refreshOnNotifyMessage="" styleCategories="AllStyleCategories" simplifyMaxScale="1" labelsEnabled="0" minScale="100000000" simplifyDrawingTol="1">
+      <extent>
         <xmin>255163.00796848355093971</xmin>
         <ymin>6361728.15975671634078026</ymin>
         <xmax>715729.91283364943228662</xmax>
@@ -14097,6 +15505,7 @@ def my_form_open(dialog, layer, feature):
     <layer id="QueryLayer_b70f1307_93c9_44e5_9a59_b435285443e6"/>
     <layer id="QueryLayer_0c530ef4_5522_46bf_81a3_c05cd22fb7dc"/>
     <layer id="QueryLayer_4b5a9186_eff5_4303_b3d5_fabab799ab8f"/>
+    <layer id="planet_osm_polygon_5f9d5c2e_b1ed_4213_87ab_8404279b5a98"/>
   </layerorder>
   <properties>
     <DefaultStyles>
@@ -14153,11 +15562,13 @@ def my_form_open(dialog, layer, feature):
         <value>232,136,159,255</value>
         <value>172,239,199,255</value>
         <value>255,255,255,255</value>
+        <value>68,68,68,255</value>
       </Colors>
       <Labels type="QStringList">
         <value>red</value>
         <value>green</value>
         <value>white</value>
+        <value>darkgray</value>
       </Labels>
     </Palette>
     <Paths>
@@ -14945,7 +16356,7 @@ def my_form_open(dialog, layer, feature):
   <Bookmarks/>
   <ProjectViewSettings UseProjectScales="0">
     <Scales/>
-    <DefaultViewExtent xmax="236675.99437128895078786" ymax="49537.84806587881030282" ymin="46148.51249376040505012" xmin="231053.71716717377421446">
+    <DefaultViewExtent xmax="241164.59251624916214496" ymax="48908.71469607455219375" ymin="47214.0469100153495674" xmin="238353.45391419157385826">
       <spatialrefsys>
         <wkt>PROJCRS["Belge 1972 / Belgian Lambert 72",BASEGEOGCRS["Belge 1972",DATUM["Reseau National Belge 1972",ELLIPSOID["International 1924",6378388,297,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4313]],CONVERSION["Belgian Lambert 72",METHOD["Lambert Conic Conformal (2SP)",ID["EPSG",9802]],PARAMETER["Latitude of false origin",90,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8821]],PARAMETER["Longitude of false origin",4.36748666666667,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8822]],PARAMETER["Latitude of 1st standard parallel",51.1666672333333,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8823]],PARAMETER["Latitude of 2nd standard parallel",49.8333339,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8824]],PARAMETER["Easting at false origin",150000.013,LENGTHUNIT["metre",1],ID["EPSG",8826]],PARAMETER["Northing at false origin",5400088.438,LENGTHUNIT["metre",1],ID["EPSG",8827]]],CS[Cartesian,2],AXIS["easting (X)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["northing (Y)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["Engineering survey, topographic mapping."],AREA["Belgium - onshore."],BBOX[49.5,2.5,51.51,6.4]],ID["EPSG",31370]]</wkt>
         <proj4>+proj=lcc +lat_0=90 +lon_0=4.36748666666667 +lat_1=51.1666672333333 +lat_2=49.8333339 +x_0=150000.013 +y_0=5400088.438 +ellps=intl +units=m +no_defs</proj4>
