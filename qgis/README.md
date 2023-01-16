@@ -3,13 +3,9 @@ QGIS
 
 
 
-## Road dimensions
+## Layers: use postgis table filtered or SQL layers with the DB manager
 
-- Primary:
-
-  - 0 - 1:10000:
-
-
+For some performances issues, it seems easier to filter from a PostGIS layer from the DB rather than defining a new SQL layer with the DB manager. So whenever possible, layers are PostGIS layer that are just filtered for the required elements.
 
 ## Much more simple rules for scaling
 
@@ -24,3 +20,8 @@ A key advantage of using Mapnik and cartoCSS is that we can define variables tha
 
 This is a core functionality of Mapnik, and a so common but also so hard issue in cartography: how do you prevent symbols that overlaps each other, either from the same layer or from different layers?
 
+
+
+TODO:
+
+- overlapping symbols for small bridges
