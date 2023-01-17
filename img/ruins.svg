@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 744.09448819 1052.3622047"
+   width="23.69915mm"
+   height="21.917366mm"
+   viewBox="0 0 83.973366 77.659958"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
    sodipodi:docname="ruins.svg">
   <defs
      id="defs4" />
@@ -26,19 +26,25 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="3.959798"
-     inkscape:cx="288.79688"
-     inkscape:cy="708.49332"
+     inkscape:cx="7.7159009"
+     inkscape:cy="-21.507863"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="1313"
-     inkscape:window-height="744"
-     inkscape:window-x="53"
-     inkscape:window-y="24"
-     inkscape:window-maximized="1">
+     inkscape:window-width="1866"
+     inkscape:window-height="983"
+     inkscape:window-x="54"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
     <inkscape:grid
        type="xygrid"
-       id="grid4176" />
+       id="grid4176"
+       originx="-220.77922"
+       originy="-683.4291" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -55,7 +61,8 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-220.77923,-291.27315)">
     <ellipse
        style="fill:#111111;fill-opacity:1;stroke:#111111;stroke-width:12;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99215686"
        id="path4153"
