@@ -24,4 +24,5 @@ This is a core functionality of Mapnik, and a so common but also so hard issue i
 
 TODO:
 
-- overlapping symbols for small bridges
+- overlapping symbols for small bridges, picnic tables, etc.
+- mapnik and qgis: cast direction as integer.

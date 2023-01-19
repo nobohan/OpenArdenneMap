@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 744.09448819 1052.3622047"
+   width="14.210041mm"
+   height="9.3669071mm"
+   viewBox="0 0 50.350539 33.189828"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
    sodipodi:docname="tennis.svg">
   <defs
      id="defs4" />
@@ -25,20 +25,26 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.2"
-     inkscape:cx="331.72819"
-     inkscape:cy="607.7274"
+     inkscape:zoom="3.959798"
+     inkscape:cx="-32.599704"
+     inkscape:cy="-31.075468"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="1871"
-     inkscape:window-height="1056"
-     inkscape:window-x="49"
-     inkscape:window-y="24"
-     inkscape:window-maximized="1">
+     inkscape:window-width="1866"
+     inkscape:window-height="983"
+     inkscape:window-x="54"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
     <inkscape:grid
        type="xygrid"
-       id="grid4136" />
+       id="grid4136"
+       originx="-319.70865"
+       originy="-591.1194" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -48,14 +54,15 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-319.70865,-428.05295)">
     <rect
        style="fill:none;fill-opacity:1;stroke:#11111f;stroke-width:2;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.94117647"
        id="rect4140"
@@ -65,22 +72,22 @@
        y="429.05295" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#11111f;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.94117647"
-       d="m 357.5,434.00506 0,21.60715"
+       d="m 357.5,434.00506 v 21.60715"
        id="path4142"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#11111f;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.94117647"
-       d="m 332.42857,433.79078 0,21.51786"
+       d="m 332.42857,433.79078 v 21.51786"
        id="path4142-3"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#11111f;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.94117647;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 321,434.3622 47,0"
+       style="fill:none;fill-rule:evenodd;stroke:#11111f;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.94117647"
+       d="m 321,434.3622 h 47"
        id="path4173"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#11111f;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.94117647"
-       d="m 321.28571,454.95149 47,0"
+       d="m 321.28571,454.95149 h 47"
        id="path4173-6"
        inkscape:connector-curvature="0" />
   </g>
