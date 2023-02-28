@@ -1,3 +1,9 @@
+## v0.9.0 winter-2022-2023
+
+### Description
+
+The OpenArdenneMap style was made available for QGIS, besides the Mapnik/cartoCSS implementation. A new "qgis" folder was created, with simply a qgis project that uses the same PostGIS layers than the Mapnik style.
+
 ## v0.8.0 summer-2022
 
 ### Description

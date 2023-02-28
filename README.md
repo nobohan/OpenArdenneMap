@@ -10,7 +10,7 @@ OpenArdenneMap
 
 Un exemple peut être téléchargé [ici](http://www.nobohan.be/docs/OpenArdenneMap_Rulles_1_20000e.pdf).
 
-Some blog posts about the OpenArdenneMap semestrial releases [here](https://www.nobohan.be/tag/openardennemap/). 
+Some blog posts about the OpenArdenneMap semestrial releases [here](https://www.nobohan.be/tag/openardennemap/).
 
 &nbsp;
 
@@ -44,6 +44,8 @@ Lancer le script `create-db.sh`. Il faut l'éditer auparavant selon le chemin de
 
 # Usage
 OpenArdenneMap fonctionne avec les importateurs `imposm` et `osm2pgsql`. Les styles et le fichier de projet propres à chaque importateur se trouvent dans leurs dossiers respectifs. À noter que, grâce à sa meilleure façon de gérer les multipolygones, les développement les plus récents se font avec `osm2pgsql`, le fichier de projet avec `imposm` n'est plus mis à jour.
+
+OpenArdenneMap a été originellement développé pour le logiciel de cartographie Mapnik. Depuis 2023, il est aussi disponible avec le logiciel QGIS. Avec QGIS, le style est simplement disponible au travers d'un fichier de projet QGIS (qgis/oam.qgs), fonctionnant avec la même base de données que Mapnik.
 
 ## Pour changer les données OSM (import dans une db)
 
@@ -275,6 +277,8 @@ Run the script `create-db.sh`. Edit it before according to the path of your virt
 
 # Usage
 OpenArdenneMap works with `imposm` or `osm2pgsql`. Map styles and project file for each importer are within their own folder (osm2pgsql or imposm). Note that, due to is better handling of complex multipolygons, recent map developments are done with `osm2pgsql` and the project file with `imposm` is not longer updated.
+
+OpenArdenneMap was originally developed for the Mapnik mapping software. Since 2023, it is also available with QGIS software. With QGIS, the style is simply available through a QGIS project file (qgis/oam.qgs), running on the same database as Mapnik.
 
 ## To change the way the OSM data are imported
 
