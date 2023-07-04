@@ -423,7 +423,7 @@
       "geometry": "line",
       "id": "trails",
       "name": "trails",
-      "minzoom": 16,
+      "properties": { "minzoom": 16 },
       "status": "on"
     },
     {
