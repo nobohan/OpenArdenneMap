@@ -423,7 +423,8 @@
       "geometry": "line",
       "id": "trails",
       "name": "trails",
-      "status": "off"
+      "minzoom: 16,
+      "status": "on"
     },
     {
       "Datasource": {
