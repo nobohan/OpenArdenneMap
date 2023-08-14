@@ -485,7 +485,7 @@
                         WHEN direction ~ '-' THEN 0
                         WHEN direction ~ '\\.' THEN 0
                         WHEN direction ~ ';' THEN 0
-                        ELSE REGEXP_REPLACE(COALESCE(direction::character varying, '0'), '[^0-9]*' ,'0')::integer
+                        ELSE ROUND(REGEXP_REPLACE(coalesce(direction::character varying, '0'), '[^0-9]*' ,'0')::float)::integer
                     END AS orientation
                 FROM planet_osm_point
                 UNION
