@@ -1,4 +1,4 @@
-DROP VIEW IF EXISTS waterway_label;
+DROP MATERIALIZED VIEW IF EXISTS waterway_label;
 CREATE MATERIALIZED VIEW waterway_label AS
 SELECT way, waterway AS type, replace(name, 'Ruisseau', 'Rau') AS name
 FROM planet_osm_line
@@ -13,7 +13,7 @@ WHERE water IN ('pond', 'lake', 'basin', 'reservoir') AND name IS NOT NULL AND w
 CREATE INDEX waterway_label_idx ON waterway_label USING GIST (way);
 
 
-DROP VIEW IF EXISTS landuse_label;
+DROP MATERIALIZED VIEW IF EXISTS landuse_label;
 CREATE MATERIALIZED VIEW landuse_label AS
 SELECT COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type, replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name, way_area AS area, ST_PointOnSurface(way) AS way
 FROM planet_osm_polygon
@@ -28,7 +28,7 @@ ORDER BY area DESC;
 CREATE INDEX landuse_label_idx ON landuse_label USING GIST (way);
 
 
-DROP VIEW IF EXISTS pitch;
+DROP MATERIALIZED VIEW IF EXISTS pitch;
 CREATE MATERIALIZED VIEW pitch AS
 SELECT way, sport,
 CASE
@@ -50,7 +50,7 @@ WHERE leisure = 'pitch' and sport IN ('soccer', 'tennis');
 CREATE INDEX pitch_idx ON pitch USING GIST (way);
 
 
-DROP VIEW IF EXISTS point_features;
+DROP MATERIALIZED VIEW IF EXISTS point_features;
 CREATE MATERIALIZED VIEW point_features AS
 SELECT
     way, power, man_made, amenity, historic, leisure, tourism, public_transport, "tower:type", "generator:source", bus, ford, "natural", ele, name,
@@ -85,7 +85,7 @@ WHERE historic IS NOT NULL;
 CREATE INDEX point_features_idx ON point_features USING GIST (way);
 
 
-DROP VIEW IF EXISTS trails;
+DROP MATERIALIZED VIEW IF EXISTS trails;
 CREATE MATERIALIZED VIEW trails AS
 SELECT
 way, name, network, signed_direction,
@@ -152,7 +152,7 @@ WHERE route ~ 'hiking' OR route ~ 'foot';
 CREATE INDEX trails_idx ON trails USING GIST (way);
 
 
-DROP VIEW IF EXISTS rotated_buildings;
+DROP MATERIALIZED VIEW IF EXISTS rotated_buildings;
 CREATE MATERIALIZED VIEW rotated_buildings AS
 SELECT way, building, name, area,
     CAST(degrees(
@@ -167,7 +167,7 @@ WHERE "building" IN ('church','chapel');
 CREATE INDEX rotated_buildings_idx ON rotated_buildings USING GIST (way);
 
 
-DROP VIEW IF EXISTS roads;
+DROP MATERIALIZED VIEW IF EXISTS roads;
 CREATE MATERIALIZED VIEW roads AS
 SELECT way, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, tracktype, trail_visibility, access, name, 'fill' AS render,
 CASE
@@ -186,7 +186,7 @@ ORDER BY z_order;
 CREATE INDEX roads_idx ON roads USING GIST (way);
 
 
-DROP VIEW IF EXISTS bridges;
+DROP MATERIALIZED VIEW IF EXISTS bridges;
 CREATE MATERIALIZED VIEW bridges AS
 SELECT way, COALESCE(highway, railway) AS type, 1 AS bridge, access, render, layer, tracktype, trail_visibility, name, 0 as tunnel,
     CASE
@@ -211,7 +211,7 @@ ORDER BY layer ASC, render ASC;
 CREATE INDEX bridges_idx ON bridges USING GIST (way);
 
 
-DROP VIEW IF EXISTS tunnels;
+DROP MATERIALIZED VIEW IF EXISTS tunnels;
 CREATE MATERIALIZED VIEW tunnels AS
 SELECT way, COALESCE(highway, railway) AS type, 0 AS bridge, access, render, layer, tracktype, trail_visibility, name, 1 as tunnel,
 CASE
@@ -236,7 +236,7 @@ ORDER BY layer ASC, render ASC;
 CREATE INDEX tunnels_idx ON tunnels USING GIST (way);
 
 
-DROP VIEW IF EXISTS landuse;
+DROP MATERIALIZED VIEW IF EXISTS landuse;
 CREATE MATERIALIZED VIEW landuse AS
 SELECT way, leaf_type, leaf_cycle, trees, produce, way_area AS area, COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type
 FROM planet_osm_polygon
@@ -244,7 +244,7 @@ ORDER BY way_area DESC;
 CREATE INDEX landuse_idx ON landuse USING GIST (way);
 
 
-DROP VIEW IF EXISTS boundaries;
+DROP MATERIALIZED VIEW IF EXISTS boundaries;
 CREATE MATERIALIZED VIEW boundaries AS
 SELECT way, admin_level
 FROM planet_osm_line
@@ -252,7 +252,7 @@ WHERE boundary IN ('administrative');
 CREATE INDEX boundaries_idx ON boundaries USING GIST (way);
 
 
-DROP VIEW IF EXISTS waterways;
+DROP MATERIALIZED VIEW IF EXISTS waterways;
 CREATE MATERIALIZED VIEW waterways AS
 SELECT way, waterway AS type
 FROM planet_osm_line
@@ -260,7 +260,7 @@ WHERE waterway IN ('river', 'canal', 'stream', 'ditch', 'drain');
 CREATE INDEX waterways_idx ON waterways USING GIST (way);
 
 
-DROP VIEW IF EXISTS waters;
+DROP MATERIALIZED VIEW IF EXISTS waters;
 CREATE MATERIALIZED VIEW waters AS
 SELECT way, way_area AS area
 FROM planet_osm_polygon
@@ -268,7 +268,7 @@ WHERE "natural" IN ('water', 'pond') OR landuse IN ('reservoir') OR waterway IN 
 CREATE INDEX waters_idx ON waters USING GIST (way);
 
 
-DROP VIEW IF EXISTS landuse_overlays;
+DROP MATERIALIZED VIEW IF EXISTS landuse_overlays;
 CREATE MATERIALIZED VIEW landuse_overlays AS
 SELECT way, way_area AS area, COALESCE(leisure, "natural") AS type
 FROM planet_osm_polygon
@@ -277,7 +277,7 @@ ORDER BY way_area DESC;
 CREATE INDEX landuse_overlays_idx ON landuse_overlays USING GIST (way);
 
 
-DROP VIEW IF EXISTS bridge_symbols;
+DROP MATERIALIZED VIEW IF EXISTS bridge_symbols;
 CREATE MATERIALIZED VIEW bridge_symbols AS
 SELECT
     way,
@@ -289,7 +289,7 @@ AND highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway
 CREATE INDEX bridge_symbols_idx ON bridge_symbols USING GIST (way);
 
 
-DROP VIEW IF EXISTS cemeteries;
+DROP MATERIALIZED VIEW IF EXISTS cemeteries;
 CREATE MATERIALIZED VIEW cemeteries AS
 SELECT way, way_area AS area, COALESCE(landuse, amenity) AS type
 FROM planet_osm_polygon
@@ -298,7 +298,7 @@ ORDER BY way_area DESC;
 CREATE INDEX cemeteries_idx ON cemeteries USING GIST (way);
 
 
-DROP VIEW IF EXISTS buildings;
+DROP MATERIALIZED VIEW IF EXISTS buildings;
 CREATE MATERIALIZED VIEW buildings AS
 SELECT way, "building" AS type
 FROM planet_osm_polygon
@@ -307,14 +307,14 @@ ORDER BY ST_YMin(ST_Envelope(way)) DESC;
 CREATE INDEX buildings_idx ON buildings USING GIST (way);
 
 
-DROP VIEW IF EXISTS linear_features;
+DROP MATERIALIZED VIEW IF EXISTS linear_features;
 CREATE MATERIALIZED VIEW linear_features AS
 SELECT way, COALESCE(man_made, barrier, power, "natural") AS type
 FROM planet_osm_line;
 CREATE INDEX linear_features_idx ON linear_features USING GIST (way);
 
 
-DROP VIEW IF EXISTS places;
+DROP MATERIALIZED VIEW IF EXISTS places;
 CREATE MATERIALIZED VIEW places AS
 SELECT way, place AS type, name, z_order, population
 FROM planet_osm_point
@@ -323,7 +323,7 @@ ORDER BY population DESC NULLS LAST;
 CREATE INDEX places_idx ON places USING GIST (way);
 
 
-DROP VIEW IF EXISTS train_elements;
+DROP MATERIALIZED VIEW IF EXISTS train_elements;
 CREATE MATERIALIZED VIEW train_elements AS
 SELECT way, railway AS type, name, z_order
 FROM planet_osm_point
