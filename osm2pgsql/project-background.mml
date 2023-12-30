@@ -18,8 +18,6 @@
       "geometry": "polygon",
       "id": "landuse",
       "name": "landuse",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
       "status": "on"
     },
     {
@@ -30,22 +28,18 @@
       "geometry": "raster",
       "id": "hillshade",
       "name": "hillshade",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "status": "on"
     },
     {
       "Datasource": {
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
-        "file": "../contour/beautiful_contour_belgium.shp",
+        "file": "../contour/contours_3857.shp",
         "id": "contour",
-        "srs": "+proj=lcc +lat_1=51.16666723333333 +lat_2=49.8333339 +lat_0=90 +lon_0=4.367486666666666 +x_0=150000.013 +y_0=5400088.438 +ellps=intl +towgs84=-106.869,52.2978,-103.724,0.3366,-0.457,1.8422,-1.2747 +units=m +no_defs",
         "type": "shape"
       },
       "geometry": "linestring",
       "id": "contour",
-      "name": "contour",
-      "srs": "+proj=lcc +lat_1=51.16666723333333 +lat_2=49.8333339 +lat_0=90 +lon_0=4.367486666666666 +x_0=150000.013 +y_0=5400088.438 +ellps=intl +towgs84=-106.869,52.2978,-103.724,0.3366,-0.457,1.8422,-1.2747 +units=m +no_defs",
-      "status": "on"
+      "name": "contour"
     },
     {
       "Datasource": {
@@ -63,8 +57,6 @@
       "geometry": "linestring",
       "id": "boundaries",
       "name": "boundaries",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
       "status": "on"
     },
     {
@@ -82,9 +74,7 @@
       },
       "geometry": "linestring",
       "id": "waterway",
-      "name": "waterway",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "name": "waterway"
     },
     {
       "Datasource": {
@@ -104,8 +94,6 @@
       "geometry": "polygon",
       "id": "water",
       "name": "water",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
       "status": "on"
     },
     {
@@ -126,9 +114,7 @@
       },
       "geometry": "polygon",
       "id": "landuse_overlays",
-      "name": "landuse_overlays",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "name": "landuse_overlays"
     },
     {
       "Datasource": {
@@ -148,8 +134,6 @@
       "geometry": "linestring",
       "id": "aeroway",
       "name": "aeroway",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
       "status": "on"
     },
     {
@@ -158,7 +142,6 @@
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "tunnel",
-        "srs": null,
         "table":
             "(
                 SELECT way, COALESCE(highway, railway) AS type, 0 AS bridge, access, render, layer, tracktype, trail_visibility, name, 1 as tunnel,
@@ -186,9 +169,7 @@
       },
       "geometry": "linestring",
       "id": "tunnel",
-      "name": "tunnel",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "name": "tunnel"
     },
     {
       "Datasource": {
@@ -217,8 +198,6 @@
       "geometry": "linestring",
       "id": "roads",
       "name": "roads",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
       "status": "on"
     },
     {
@@ -227,7 +206,6 @@
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "bridge",
-        "srs": null,
         "table":
             "(
                 SELECT way, COALESCE(highway, railway) AS type, 1 AS bridge, access, render, layer, tracktype, trail_visibility, name, 0 as tunnel,
@@ -256,8 +234,6 @@
       "geometry": "linestring",
       "id": "bridge",
       "name": "bridge",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
       "status": "on"
     },
     {
@@ -282,8 +258,6 @@
       "geometry": "linestring",
       "id": "bridge_symbol",
       "name": "bridge_symbol",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
       "status": "on"
     },
     {
@@ -305,8 +279,6 @@
       "geometry": "polygon",
       "id": "cemetery",
       "name": "cemetery",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
       "status": "on"
     },
     {
@@ -325,9 +297,7 @@
       },
       "geometry": "polygon",
       "id": "buildings",
-      "name": "buildings",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "name": "buildings"
     },
     {
       "Datasource": {
@@ -352,8 +322,6 @@
       "geometry": "polygon",
       "id": "rotated_buildings",
       "name": "rotated_buildings",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
       "status": "on"
     },
     {
@@ -362,7 +330,6 @@
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "id": "linear_features",
-        "srs": null,
         "table":
             "(
                 SELECT way, COALESCE(man_made, barrier, power, \"natural\") AS type
@@ -373,8 +340,6 @@
       "geometry": "linestring",
       "id": "linear_features",
       "name": "linear_features",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
       "status": "on"
     },
     {
@@ -409,8 +374,6 @@
       "geometry": "point",
       "id": "pitch",
       "name": "pitch",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
       "status": "on"
     },
   ],
