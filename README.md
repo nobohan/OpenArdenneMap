@@ -53,6 +53,15 @@ Avec osm2pgsql, éditer le fichier `osm2pgsql/OpenArdenneMap.style`.
 
 Avec imposm, éditer le fichier `imposm/imposm-mapping.py`.
 
+## Données externes
+
+Le fichier `project.mml` contient des références vers des fichiers externes qui ne sont pas rendus disponibles dans ce dépôt: un fichier d'ombrage du relief (hillshade.tif) et un fichier shapefile de courbes de niveaux (contour.shp). Ces données doivent être projetées en EPSG:3857.
+
+Pour la Belgique, on peut télécharger un "hillshade" et des courbes de niveaux respectivement sur http://opendata.champs-libres.be/hillshade_belgium.zip and http://opendata.champs-libres.be/beautiful-contour-belgium.zip. (Cfr cet article de blog pour le contexte: https://www.champs-libres.coop/blog/post/2020-06-24-beautiful-hillshade-belgium/)
+
+Pour d'autres parties du monde, voir par exemple [cette recette](https://github.com/der-stefan/OpenTopoMap/blob/master/mapnik/HOWTO_DEM.md) pour créer des hillshade et des courbes de niveaux.
+
+
 ## Échelle
 
 Originellement, le style a été développé pour des impressions papier à haute résolution (300 dpi) à une échelle correspondant au niveau de zoom 16. Actuellement, le style est compatible pour les niveaux de zoom de 10 à 20. En dehors de ces niveaux, utiliser ce style peut donner lieu à des fortes superpositions d'éléments.
@@ -63,6 +72,9 @@ Originellement, le style a été développé pour des impressions papier à haut
 
 Pour générer la carte, faire (avec Python 3):
 `python makeMap.py`
+
+Attention, comme dit plus haut, des données externes sont requises!
+
 
 Le tout:
 ```
@@ -286,12 +298,25 @@ For imposm, edit the `imposm/imposm-mapping.py` file.
 
 For osm2pgsql, edit the `osm2pgsql/OpenArdenneMap.style` file.
 
+## External files
+
+The file `project.mml` holds some reference to external files that are not available in this repository: a hillshade file (hillshade.tif) and a shpaefile (contour.shp). These data must be projected under EPSG:3857.
+
+For Belgium, you can download hillshade and contour lines from these addresses: http://opendata.champs-libres.be/hillshade_belgium.zip and http://opendata.champs-libres.be/beautiful-contour-belgium.zip. (See this blog post in French for some context: https://www.champs-libres.coop/blog/post/2020-06-24-beautiful-hillshade-belgium/)
+
+For other parts of the world, see for instance [this reference](https://github.com/der-stefan/OpenTopoMap/blob/master/mapnik/HOWTO_DEM.md) for creating hillshade and contour lines.
+
+
+
 ## To change the style of the map
 Edit the mss files using cartoCSS language and use `carto` to generate the `OpenArdenneMap.xml` mapnik file. Then:
 `carto osm2pgsql/project.mml > osm2pgsql/OpenArdenneMap.xml`
 
 To generate the map:
 `python makeMap.py`
+
+Remember that external files are required (see herebefore, "External files")!
+
 
 All together for osm2pgsql:
 ```
@@ -480,18 +505,13 @@ or
 
 # TODOs
 * new features:
-  * point of view
   * réservoir (man_made = water_works, water_well, pumping_station ...)
   * station d'epuration
-  * éolienne Eol. ok
   * Poste
   * police
   * départ de promenade, guide post
   * oeuvre d'art
   * piscine
-  * caillebotis: voir couche bridge_symbol if length > 100: ok
-  * fagnes spéciales...
-  * chemins nommés (ex Chemin des Princes): ok
 
 
 * rotated culvert symbols
