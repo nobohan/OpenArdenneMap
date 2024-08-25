@@ -8,7 +8,7 @@ Open the oam.qgs project file and use the map composer for producing some maps. 
 
 ## About QGIS for OpenArdenneMap
 
-OpenArdenneMap was originally developed as a cartographic style with the `imposm` importer and a `cartoCSS` style derived from OSMBright. Later the `osm2pgsql`importer was used instead of the `imposm`. From 2023, the OpenArdenneMap is also available in QGIS, using the same `osm2pgsql`importer for building the map layers.
+OpenArdenneMap was originally developed as a cartographic style with the `imposm` importer and a `cartoCSS` style derived from OSMBright. Later the `osm2pgsql`importer was used instead of the `imposm`. From 2023, the OpenArdenneMap is also available in QGIS, using the same `osm2pgsql` importer for building the map layers.
 
 The tools used for making maps have some influence on the cartographic style itself. The aim of this QGIS support is to reproduce the same feeling than the maps produced with the Mapnik/cartoCSS style, even though the 2 solutions are not 100% equivalent.
 
