@@ -7,8 +7,9 @@ OpenArdenneMap
 
 ![map](openardennemap.png)
 
+:world_map: [Demo tile server](https://www.nobohan.be/webmaps/oam-tile/) :world_map:
 
-Un exemple peut être téléchargé [ici](http://www.nobohan.be/docs/OpenArdenneMap_Rulles_1_20000e.pdf).
+:compass: [Some maps ready to print](https://hiking.osm.be/) :compass:
 
 Some blog posts about the OpenArdenneMap semestrial releases [here](https://www.nobohan.be/tag/openardennemap/).
 
