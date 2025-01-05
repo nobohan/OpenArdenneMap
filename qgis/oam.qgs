@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" saveUserFull="Julien" version="3.40.2-Bratislava" saveDateTime="2025-01-05T11:18:35" saveUser="julien">
+<qgis projectname="" saveUserFull="Julien" version="3.40.2-Bratislava" saveDateTime="2025-01-05T20:59:25" saveUser="julien">
   <homePath path=""/>
   <title></title>
   <transaction mode="Disabled"/>
@@ -15327,6 +15327,18 @@ def my_form_open(dialog, layer, feature):
       <blendMode>6</blendMode>
     </maplayer>
     <maplayer autoRefreshMode="Disabled" readOnly="0" symbologyReferenceScale="-1" geometry="Line" styleCategories="AllStyleCategories" simplifyDrawingTol="1" autoRefreshTime="0" legendPlaceholderImage="" maxScale="0" type="vector" simplifyMaxScale="1" refreshOnNotifyEnabled="0" simplifyDrawingHints="1" simplifyLocal="1" labelsEnabled="0" wkbType="LineString" minScale="25001" hasScaleBasedVisibilityFlag="1" refreshOnNotifyMessage="" simplifyAlgorithm="0">
+      <extent>
+        <xmin>282152.32945572008611634</xmin>
+        <ymin>6361207.2415268961340189</ymin>
+        <xmax>712365.60405094595625997</xmax>
+        <ymax>6711850.10553034022450447</ymax>
+      </extent>
+      <wgs84extent>
+        <xmin>2.53461749999999997</xmin>
+        <ymin>49.50627999956822833</ymin>
+        <xmax>6.39928910000000517</xmax>
+        <ymax>51.50911999917128981</ymax>
+      </wgs84extent>
       <id>marked_trails_e98c23d3_a5fe_4ec9_8d59_4ce288fd893a</id>
       <datasource>dbname='osmpg_db' host=localhost port=5432 key='_uid_' checkPrimaryKeyUnicity='1' table="(SELECT row_number() over () AS _uid_,* FROM (SELECT     way, name, network, signed_direction,     CASE         WHEN distance LIKE '%km' THEN distance         ELSE distance || ' km'     END distance_km,     SPLIT_PART(\"osmc:symbol\",':', 1) AS color,     CASE         WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'blue' THEN '#00629b'         WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'red' THEN '#d22730'         WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'green' THEN '#009739'         WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'orange' THEN '#ff6600'         WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'yellow' THEN '#fedd00'         WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'purple' THEN             CASE                 WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1) &lt;> '' THEN                     CASE                         WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1) = 'blue' THEN '#00629b'                         WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1)= 'red' THEN '#d22730'                         WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1) = 'green' THEN '#009739'                         WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1)= 'orange' THEN '#ff6600'                         WHEN SPLIT_PART(SPLIT_PART(\"osmc:symbol\",':', 3), '_', 1) = 'yellow' THEN '#fedd00'                         ELSE                             '#ad629b'                     END                 ELSE                     '#ad629b'             END         ELSE '#ad629b'     END html_color,     CASE         WHEN LENGTH(SPLIT_PART(\"osmc:symbol\",':', 4)) &lt; 4 THEN             SPLIT_PART(\"osmc:symbol\",':', 4)         ELSE             ''     END marked_text,     CASE         WHEN SPLIT_PART(\"osmc:symbol\",':', 3) IN ('red_lower') THEN             'black'         ELSE             'white'     END text_color,     CASE         WHEN SPLIT_PART(\"osmc:symbol\",':', 3) &lt;> '' THEN             CASE                 WHEN SPLIT_PART(\"osmc:symbol\",':', 3) = 'white_stripe' THEN                     '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 1) || '_invstripe.svg'                 WHEN SPLIT_PART(\"osmc:symbol\",':', 3) = 'white_corner' THEN                     CASE                         WHEN SPLIT_PART(\"osmc:symbol\",':', 1) = 'purple' THEN                             '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 2) || '_pointer.svg'                         ELSE                             '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 1) || '_pointer.svg'                     END                 ELSE                     '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 3) || '.svg'             END         ELSE             '../img/marked-trails/' || SPLIT_PART(\"osmc:symbol\",':', 1) || '_rectangle.svg'     END shield_uri FROM planet_osm_line WHERE route ~ 'hiking' OR route ~ 'foot'
 ) AS _subq_1_
@@ -15564,7 +15576,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" value="3x:0,0,0,0,0,0" name="interval_map_unit_scale"/>
                 <Option type="QString" value="MM" name="interval_unit"/>
                 <Option type="QString" value="0" name="offset"/>
-                <Option type="QString" value="0.8" name="offset_along_line"/>
+                <Option type="QString" value="0" name="offset_along_line"/>
                 <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_along_line_map_unit_scale"/>
                 <Option type="QString" value="MM" name="offset_along_line_unit"/>
                 <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
@@ -15665,18 +15677,18 @@ def my_form_open(dialog, layer, feature):
                     <Option type="QString" value="0" name="angle"/>
                     <Option type="QString" value="A" name="chr"/>
                     <Option type="QString" value="0,0,0,255,hsv:0,1,0,1" name="color"/>
-                    <Option type="QString" value="Alfphabet" name="font"/>
-                    <Option type="QString" value="III" name="font_style"/>
+                    <Option type="QString" value="Liberation Sans Narrow" name="font"/>
+                    <Option type="QString" value="Bold" name="font_style"/>
                     <Option type="QString" value="1" name="horizontal_anchor_point"/>
                     <Option type="QString" value="bevel" name="joinstyle"/>
-                    <Option type="QString" value="0,0.1142857142857143" name="offset"/>
+                    <Option type="QString" value="0,-0.29999999999999999" name="offset"/>
                     <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
                     <Option type="QString" value="MM" name="offset_unit"/>
                     <Option type="QString" value="35,35,35,255,rgb:0.13725490196078433,0.13725490196078433,0.13725490196078433,1" name="outline_color"/>
                     <Option type="QString" value="0" name="outline_width"/>
                     <Option type="QString" value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale"/>
                     <Option type="QString" value="MM" name="outline_width_unit"/>
-                    <Option type="QString" value="4" name="size"/>
+                    <Option type="QString" value="5" name="size"/>
                     <Option type="QString" value="3x:0,0,0,0,0,0" name="size_map_unit_scale"/>
                     <Option type="QString" value="Point" name="size_unit"/>
                     <Option type="QString" value="1" name="vertical_anchor_point"/>
@@ -38651,7 +38663,7 @@ def my_form_open(dialog, layer, feature):
       </spatialrefsys>
     </CoordinateCustomCrs>
   </ProjectDisplaySettings>
-  <ProjectGpsSettings autoCommitFeatures="0" destinationFollowsActiveLayer="1" destinationLayerName="point_features" destinationLayerSource="dbname='osmpg_db' host=localhost port=5432 sslmode=disable key='_uid_' checkPrimaryKeyUnicity='1' table=&quot;(SELECT row_number() over () AS _uid_,* FROM (SELECT way, power, man_made, amenity, historic, leisure, tourism, public_transport, \&quot;tower:type\&quot;, \&quot;generator:source\&quot;, bus, ford, \&quot;natural\&quot;, ele, name, replace(name, 'Château', 'Chau') as short_name, CASE &#x9;WHEN ele IS NOT NULL THEN CONCAT(name, ' \\n (', ele, ' m)') &#x9;ELSE name END as peak_name, CASE &#x9;WHEN direction = 'N-E' THEN 45 &#x9;WHEN direction = 'E' THEN 90 &#x9;WHEN direction = 'S-E' THEN 135 &#x9;WHEN direction = 'S' THEN 180 &#x9;WHEN direction = 'S-W' THEN 225 &#x9;WHEN direction = 'W' THEN 270 &#x9;WHEN direction = 'N-W' THEN 315 &#x9;WHEN direction ~ '-' THEN 0 &#x9;WHEN direction ~ '\\\\.' THEN 0 &#x9;WHEN direction ~ ';' THEN 0  WHEN direction ~ E'^\\d+$' THEN direction::integer ELSE 0 END AS orientation FROM planet_osm_point UNION SELECT ST_Centroid(way) AS way, power, man_made, amenity, historic, leisure, tourism, public_transport, \&quot;tower:type\&quot;, \&quot;generator:source\&quot;, NULL AS bus, NULL AS ford, \&quot;natural\&quot;, NULL as ele, name, replace(name, 'Château', 'Chau') as short_name, NULL as peak_name, 0 AS orientation FROM planet_osm_polygon WHERE historic IS NOT NULL&#xa;) AS _subq_1_&#xa;)&quot; (way)" destinationLayerProvider="postgres" autoAddTrackVertices="0" destinationLayer="QueryLayer_4a587d6b_de72_492d_80c7_349e29439a34">
+  <ProjectGpsSettings autoCommitFeatures="0" destinationFollowsActiveLayer="1" destinationLayerName="marked_trails shield" destinationLayerSource="dbname='osmpg_db' host=localhost port=5432 key='_uid_' checkPrimaryKeyUnicity='1' table=&quot;(SELECT row_number() over () AS _uid_,* FROM (SELECT     way, name, network, signed_direction,     CASE         WHEN distance LIKE '%km' THEN distance         ELSE distance || ' km'     END distance_km,     SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 1) AS color,     CASE         WHEN SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 1) = 'blue' THEN '#00629b'         WHEN SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 1) = 'red' THEN '#d22730'         WHEN SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 1) = 'green' THEN '#009739'         WHEN SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 1) = 'orange' THEN '#ff6600'         WHEN SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 1) = 'yellow' THEN '#fedd00'         WHEN SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 1) = 'purple' THEN             CASE                 WHEN SPLIT_PART(SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 3), '_', 1) &lt;> '' THEN                     CASE                         WHEN SPLIT_PART(SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 3), '_', 1) = 'blue' THEN '#00629b'                         WHEN SPLIT_PART(SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 3), '_', 1)= 'red' THEN '#d22730'                         WHEN SPLIT_PART(SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 3), '_', 1) = 'green' THEN '#009739'                         WHEN SPLIT_PART(SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 3), '_', 1)= 'orange' THEN '#ff6600'                         WHEN SPLIT_PART(SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 3), '_', 1) = 'yellow' THEN '#fedd00'                         ELSE                             '#ad629b'                     END                 ELSE                     '#ad629b'             END         ELSE '#ad629b'     END html_color,     CASE         WHEN LENGTH(SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 4)) &lt; 4 THEN             SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 4)         ELSE             ''     END marked_text,     CASE         WHEN SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 3) IN ('red_lower') THEN             'black'         ELSE             'white'     END text_color,     CASE         WHEN SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 3) &lt;> '' THEN             CASE                 WHEN SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 3) = 'white_stripe' THEN                     '../img/marked-trails/' || SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 1) || '_invstripe.svg'                 WHEN SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 3) = 'white_corner' THEN                     CASE                         WHEN SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 1) = 'purple' THEN                             '../img/marked-trails/' || SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 2) || '_pointer.svg'                         ELSE                             '../img/marked-trails/' || SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 1) || '_pointer.svg'                     END                 ELSE                     '../img/marked-trails/' || SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 3) || '.svg'             END         ELSE             '../img/marked-trails/' || SPLIT_PART(\&quot;osmc:symbol\&quot;,':', 1) || '_rectangle.svg'     END shield_uri FROM planet_osm_line WHERE route ~ 'hiking' OR route ~ 'foot'&#xa;) AS _subq_1_&#xa;)&quot; (way)" destinationLayerProvider="postgres" autoAddTrackVertices="0" destinationLayer="marked_trails_e98c23d3_a5fe_4ec9_8d59_4ce288fd893a">
     <timeStampFields/>
   </ProjectGpsSettings>
 </qgis>
