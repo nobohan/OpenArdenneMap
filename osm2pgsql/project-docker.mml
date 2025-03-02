@@ -671,10 +671,10 @@
                 UNION ALL
                 SELECT
                     way,
-                    water AS type,
+                    COALESCE(water, 'pond') AS type,
                     replace(replace(name, 'Etang', 'Étg'), 'Étang', 'Étg') AS name
                 FROM planet_osm_polygon
-                WHERE water IN ('pond', 'lake', 'basin', 'reservoir') AND name IS NOT NULL AND way_area > 10000
+                WHERE \"natural\"='water' AND name IS NOT NULL AND way_area > 10000
             ) AS data",
         "type": "postgis"
       },
