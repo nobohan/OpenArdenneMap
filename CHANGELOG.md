@@ -1,3 +1,15 @@
+## v0.10.0 winter-2024-2025
+
+### Description
+
+Some fixes were made, essentially on the QGIS map style. A basic map template with the legend was made available in the QGIS project file.
+
+### Changes
+- fix labelling of water area when water=* tagging is not present
+- improve/fine-tune map style for QGIS
+- add a layer with marked trails in QGIS
+- add a QGIS map layout in the QGIS project file
+
 ## v0.9.0 winter-2022-2023
 
 ### Description
