@@ -1,4 +1,4 @@
-FROM sparkgeo/python-mapnik
+FROM justb4/mapnik
 
 WORKDIR /var
 
