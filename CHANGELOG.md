@@ -1,3 +1,7 @@
+## unreleased
+
+- Support the tag "plant=christmas_trees" for christmas_trees nursery (landuse = plant_nursery)
+
 ## v0.10.0 winter-2024-2025
 
 ### Description
