@@ -516,11 +516,5 @@ or
 
 
 * rotated culvert symbols
-* sentier balisés... (en option)
 * sub/superscript writing
-* tile-server
 
-# post SQL queries
-```
-psql -d osm -c 'ALTER TABLE osm_pointfeatures RENAME COLUMN "tower:type" TO tower_type;'
-```

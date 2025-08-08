@@ -22,7 +22,7 @@
     },
     {
       "Datasource": {
-        "file": "/mnt/tera/ChampsLibres/Projets/OSM/CyclOSM/hillshade/data/dem_be_10x10_hillshade_semi_transparent_3857.tif",
+        "file": "../../../../Data/hillshade/data/dem_be_10x10_hillshade_semi_transparent_3857.tif",
         "type": "gdal"
       },
       "geometry": "raster",
@@ -33,13 +33,14 @@
     {
       "Datasource": {
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
-        "file": "../contour/contours_3857.shp",
+        "file": "../../../../Data/contour/beautiful_contour_belgium_3857.shp",
         "id": "contour",
         "type": "shape"
       },
       "geometry": "linestring",
       "id": "contour",
-      "name": "contour"
+      "name": "contour",
+      "status": "on"
     },
     {
       "Datasource": {
