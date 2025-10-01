@@ -567,17 +567,17 @@
             "(
                 SELECT way, sport,
                     CASE
-                        WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,100))) >= 5) THEN
-                            (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3)))
-                            THEN CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3))) AS VARCHAR(255))
-                            ELSE CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2))) AS VARCHAR(255))
+                        WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,10))) >= 5) THEN
+                            (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),3)))
+                            THEN CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),3))) AS VARCHAR(255))
+                            ELSE CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2))) AS VARCHAR(255))
                             END)
                         END AS orientation,
                     CASE
-                        WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,100))) >= 5) THEN
-                            (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3)))
-                            THEN CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),2)) AS INTEGER)
-                            ELSE CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,100))),3)) AS INTEGER)
+                        WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,10))) >= 5) THEN
+                            (CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),3)))
+                            THEN CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2)) AS INTEGER)
+                            ELSE CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),3)) AS INTEGER)
                             END)
                         END AS length
                 FROM planet_osm_polygon AS l
