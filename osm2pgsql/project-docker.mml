@@ -73,6 +73,42 @@
     {
       "Datasource": {
         "dbname": "osmpg_db",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "table":
+            "(
+                SELECT 
+                  ST_StartPoint(way) AS way, 
+                  ST_Azimuth(ST_StartPoint(way), ST_EndPoint(way)) * 360 / 2 / 3.1415 AS orientation 
+                FROM planet_osm_line WHERE waterway IN ('river', 'canal', 'stream', 'ditch', 'drain') AND tunnel IN ('culvert', 'yes', 'flooded', 'covered')
+            ) AS data",
+        "type": "postgis"
+      },
+      "geometry": "point",
+      "id": "culvert_start",
+      "name": "culvert_start"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "geometry_field": "way",
+        "table":
+            "(
+                SELECT 
+                  ST_EndPoint(way) AS way, 
+                  (st_azimuth(ST_StartPoint(way), ST_EndPoint(way)) * (360 / 2 / 3.1415) - 180) AS orientation 
+                FROM planet_osm_line WHERE waterway IN ('river', 'canal', 'stream', 'ditch', 'drain') AND tunnel IN ('culvert', 'yes', 'flooded', 'covered')
+            ) AS data",
+          "type": "postgis"
+      },
+      "geometry": "point",
+      "id": "culvert_end",
+      "name": "culvert_end"
+    },
+    {
+      "Datasource": {
+        "dbname": "osmpg_db",
         "host": "db",
         "user": "osmpg",
         "password":"postgres",
@@ -82,7 +118,7 @@
             "(
                 SELECT way, waterway AS type
                 FROM planet_osm_line
-                WHERE waterway IN ('river', 'canal', 'stream', 'ditch', 'drain')
+                WHERE waterway IN ('river', 'canal', 'stream', 'ditch', 'drain') AND (tunnel IS NULL OR tunnel = 'no')
             ) AS data",
         "type": "postgis"
       },

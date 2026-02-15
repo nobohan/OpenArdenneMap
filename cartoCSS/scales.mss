@@ -117,3 +117,4 @@
 @viewpoint_marker: 42;
 @trail_marker: 200;
 @peak_marker: 28;
+@culvert_marker: 10;

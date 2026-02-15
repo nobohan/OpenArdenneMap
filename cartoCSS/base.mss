@@ -358,3 +358,17 @@
         }
     }
 }
+
+#culvert_start, #culvert_end {
+    [zoom >= 16] {
+        [zoom = 16] { marker-height: @culvert_marker*@z16_marker; }
+        [zoom = 17] { marker-height: @culvert_marker*@z17_marker; }
+        [zoom = 18] { marker-height: @culvert_marker*@z18_marker; }
+        [zoom = 19] { marker-height: @culvert_marker*@z19_marker; }
+        [zoom >= 20] { marker-height: @culvert_marker*@z20_marker; }
+        marker-file: url(../img/culvert.svg);
+        marker-transform: rotate([orientation]);
+        marker-allow-overlap: true;
+    }
+}
+
