@@ -1,16 +1,17 @@
 WITH 
--- 1. On définit la zone en 3857 (le SRID de tes données planet_osm_line)
+/*-- 1. on définit la zone en 3857 (le SRID de tes données planet_osm_line)
 zone AS (
-  SELECT ST_Transform(ST_MakeEnvelope(5.72, 50.57, 5.80, 50.60, 4326), 3857) AS geom
-),
--- 2. Obstacles (Rivières et Rails) --> ici on recupere les obstacles pour les routes ATTENTION on ne prend en compte que les éléments "ligne"
+  SELECT ST_Transform(ST_MakeEnvelope(5.25, 49.74, 5.32, 49.79, 4326), 3857) AS geom
+),*/ -- pas obligatoire le ST_Transform et MakeEnvelope mais si travail sur une petite zone alors utile (ici zone de Herbeumont)
+
+-- 2. On recupere les obstacles pour les routes ATTENTION on ne prend en compte que les éléments "ligne" (ici chemins de fers et rivières)
 obstacles AS (
   SELECT way as geom 
   FROM planet_osm_line 
   WHERE (waterway IS NOT NULL OR railway = 'rail') -- garde uniquement rail et rivières de la table et dans la zone définie auparavant
     AND ST_Intersects(way, (SELECT geom FROM zone))
 ),
--- 3. Points des routes éclatés -- objectif transformer les lignes en une serie de points + chaque point sera pris individuellement pour voir s'il est ou non proche d'un obstacle
+-- 3. Objectif transformer les lignes en une serie de points + chaque point sera pris individuellement pour voir s'il est ou non proche d'un obstacle
 
 points_eclates AS (
   SELECT 
@@ -19,16 +20,16 @@ points_eclates AS (
     (ST_DumpPoints(r.way)).geom as pt_geom -- geom du point individuel (les coordonées du pts)
   FROM planet_osm_line r
   WHERE r.highway IS NOT NULL 
-    AND (r.bridge IS NULL OR r.bridge = 'no') -- exclusion des ponts (vu qu'ils passent au dessus il n'y a donc pas de conflit)
+    AND (r.bridge IS NULL OR r.bridge = 'no') -- exclusion des ponts (vu qu'ils passent au dessus normalement pas de conflit)
     AND ST_Intersects(r.way, (SELECT geom FROM zone))
 ),
--- 4. Recherche de l'obstacle et déplacement (en mètres car le 3857 utilise le mètre)
+-- 4. recherche de l'obstacle (rivière ou rails) et déplacement 
 calcul_deplacement AS (
   SELECT 
     p.osm_id,
     p.pt_path, -- position du point dans la ligne
     CASE 
-           WHEN ST_DWithin(p.pt_geom, obs.geom, 15) THEN -- ici on vérifie si le point se situe 15m d'un obstacle, si oui alors il y a conflit
+           WHEN ST_DWithin(p.pt_geom, obs.geom, 15) THEN -- ici on vérifie si le point se situe à 15m d'un obstacle, si oui alors il y a conflit
         ST_Translate( --si il y a conflit alors : déplacement du point
             p.pt_geom, -- ici on prend le point à déplacer
             sin(ST_Azimuth(ST_ClosestPoint(obs.geom, p.pt_geom), p.pt_geom)) * 12, -- On pousse de 12m le point le plus proche de l'obstacle en X

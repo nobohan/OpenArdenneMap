@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis saveUserFull="Noé MONJOIE" version="3.44.4-Solothurn" projectname="" saveUser="noemo" saveDateTime="2026-02-17T15:02:03">
+<qgis saveUserFull="Noé MONJOIE" version="3.44.4-Solothurn" projectname="" saveUser="noemo" saveDateTime="2026-02-17T15:57:46">
   <homePath path=""/>
   <title></title>
   <transaction mode="Disabled"/>
@@ -195,12 +195,12 @@
           </customproperties>
         </layer-tree-layer>
       </layer-tree-group>
-      <layer-tree-layer legend_exp="" id="view_railway_medial_axis_3857_84eab7b8_6fca_4de8_a94b_cfe9799396fb" name="Railways" legend_split_behavior="0" checked="Qt::Checked" source="dbname='osmpg_db' port=5432 key='id' srid=3857 type=MultiCurve checkPrimaryKeyUnicity='1' table=&quot;public&quot;.&quot;view_railway_medial_axis_3857&quot; (geom)" providerKey="postgres" expanded="1" patch_size="-1,-1">
+      <layer-tree-layer legend_exp="" id="view_railway_medial_axis_3857_84eab7b8_6fca_4de8_a94b_cfe9799396fb" name="railways" legend_split_behavior="0" checked="Qt::Checked" source="dbname='osmpg_db' port=5432 key='id' srid=3857 type=MultiCurve checkPrimaryKeyUnicity='1' table=&quot;public&quot;.&quot;view_railway_medial_axis_3857&quot; (geom)" providerKey="postgres" expanded="1" patch_size="-1,-1">
         <customproperties>
           <Option/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer legend_exp="" id="view_motorway_medial_axis_3857_bfe14940_5b34_47b7_8aa1_0992fcc50507" name="Motorways" legend_split_behavior="0" checked="Qt::Checked" source="dbname='osmpg_db' port=5432 key='id' srid=3857 type=MultiLineString checkPrimaryKeyUnicity='1' table=&quot;public&quot;.&quot;view_motorway_medial_axis_3857&quot; (geom)" providerKey="postgres" expanded="0" patch_size="-1,-1">
+      <layer-tree-layer legend_exp="" id="view_motorway_medial_axis_3857_bfe14940_5b34_47b7_8aa1_0992fcc50507" name="motorways" legend_split_behavior="0" checked="Qt::Checked" source="dbname='osmpg_db' port=5432 key='id' srid=3857 type=MultiLineString checkPrimaryKeyUnicity='1' table=&quot;public&quot;.&quot;view_motorway_medial_axis_3857&quot; (geom)" providerKey="postgres" expanded="0" patch_size="-1,-1">
         <customproperties>
           <Option/>
         </customproperties>
@@ -541,12 +541,12 @@
           </filegroup>
         </legendlayer>
       </legendgroup>
-      <legendlayer name="Railways" checked="Qt::Checked" showFeatureCount="0" drawingOrder="-1" open="true">
+      <legendlayer name="railways" checked="Qt::Checked" showFeatureCount="0" drawingOrder="-1" open="true">
         <filegroup hidden="false" open="true">
           <legendlayerfile visible="1" isInOverview="0" layerid="view_railway_medial_axis_3857_84eab7b8_6fca_4de8_a94b_cfe9799396fb"/>
         </filegroup>
       </legendlayer>
-      <legendlayer name="Motorways" checked="Qt::Checked" showFeatureCount="0" drawingOrder="-1" open="false">
+      <legendlayer name="motorways" checked="Qt::Checked" showFeatureCount="0" drawingOrder="-1" open="false">
         <filegroup hidden="false" open="false">
           <legendlayerfile visible="1" isInOverview="0" layerid="view_motorway_medial_axis_3857_bfe14940_5b34_47b7_8aa1_0992fcc50507"/>
         </filegroup>
@@ -38834,7 +38834,7 @@ def my_form_open(dialog, layer, feature):
                 <Option name="color" value="190,207,80,255,rgb:0.745098,0.8117647,0.3137255,1" type="QString"/>
                 <Option name="fixedAspectRatio" value="0" type="QString"/>
                 <Option name="horizontal_anchor_point" value="1" type="QString"/>
-                <Option name="name" value="../img/start_end_bridge_symbole.svg" type="QString"/>
+                <Option name="name" value="C:/Users/noemo/Documents/GitHub/OpenArdenneMap/img/start_end_bridge_symbole.svg" type="QString"/>
                 <Option name="offset" value="0,0" type="QString"/>
                 <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
                 <Option name="offset_unit" value="MM" type="QString"/>
@@ -39039,7 +39039,7 @@ def my_form_open(dialog, layer, feature):
       </wgs84extent>
       <id>view_motorway_medial_axis_3857_bfe14940_5b34_47b7_8aa1_0992fcc50507</id>
       <datasource>dbname='osmpg_db' port=5432 key='id' srid=3857 type=MultiLineString checkPrimaryKeyUnicity='1' table="public"."view_motorway_medial_axis_3857" (geom)</datasource>
-      <layername>Motorways</layername>
+      <layername>motorways</layername>
       <srs>
         <spatialrefsys nativeFormat="Wkt">
           <wkt>PROJCRS["WGS 84 / Pseudo-Mercator",BASEGEOGCRS["WGS 84",ENSEMBLE["World Geodetic System 1984 ensemble",MEMBER["World Geodetic System 1984 (Transit)"],MEMBER["World Geodetic System 1984 (G730)"],MEMBER["World Geodetic System 1984 (G873)"],MEMBER["World Geodetic System 1984 (G1150)"],MEMBER["World Geodetic System 1984 (G1674)"],MEMBER["World Geodetic System 1984 (G1762)"],MEMBER["World Geodetic System 1984 (G2139)"],MEMBER["World Geodetic System 1984 (G2296)"],ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]],ENSEMBLEACCURACY[2.0]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4326]],CONVERSION["Popular Visualisation Pseudo-Mercator",METHOD["Popular Visualisation Pseudo Mercator",ID["EPSG",1024]],PARAMETER["Latitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8801]],PARAMETER["Longitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8802]],PARAMETER["False easting",0,LENGTHUNIT["metre",1],ID["EPSG",8806]],PARAMETER["False northing",0,LENGTHUNIT["metre",1],ID["EPSG",8807]]],CS[Cartesian,2],AXIS["easting (X)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["northing (Y)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["Web mapping and visualisation."],AREA["World between 85.06°S and 85.06°N."],BBOX[-85.06,-180,85.06,180]],ID["EPSG",3857]]</wkt>
@@ -39606,7 +39606,7 @@ def my_form_open(dialog, layer, feature):
       </wgs84extent>
       <id>view_railway_medial_axis_3857_84eab7b8_6fca_4de8_a94b_cfe9799396fb</id>
       <datasource>dbname='osmpg_db' port=5432 key='id' srid=3857 type=MultiCurve checkPrimaryKeyUnicity='1' table="public"."view_railway_medial_axis_3857" (geom)</datasource>
-      <layername>Railways</layername>
+      <layername>railways</layername>
       <srs>
         <spatialrefsys nativeFormat="Wkt">
           <wkt>PROJCRS["WGS 84 / Pseudo-Mercator",BASEGEOGCRS["WGS 84",ENSEMBLE["World Geodetic System 1984 ensemble",MEMBER["World Geodetic System 1984 (Transit)"],MEMBER["World Geodetic System 1984 (G730)"],MEMBER["World Geodetic System 1984 (G873)"],MEMBER["World Geodetic System 1984 (G1150)"],MEMBER["World Geodetic System 1984 (G1674)"],MEMBER["World Geodetic System 1984 (G1762)"],MEMBER["World Geodetic System 1984 (G2139)"],MEMBER["World Geodetic System 1984 (G2296)"],ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]],ENSEMBLEACCURACY[2.0]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4326]],CONVERSION["Popular Visualisation Pseudo-Mercator",METHOD["Popular Visualisation Pseudo Mercator",ID["EPSG",1024]],PARAMETER["Latitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8801]],PARAMETER["Longitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8802]],PARAMETER["False easting",0,LENGTHUNIT["metre",1],ID["EPSG",8806]],PARAMETER["False northing",0,LENGTHUNIT["metre",1],ID["EPSG",8807]]],CS[Cartesian,2],AXIS["easting (X)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["northing (Y)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["Web mapping and visualisation."],AREA["World between 85.06°S and 85.06°N."],BBOX[-85.06,-180,85.06,180]],ID["EPSG",3857]]</wkt>
@@ -40253,7 +40253,7 @@ def my_form_open(dialog, layer, feature):
                 <Option name="color" value="213,180,60,255,rgb:0.8352941,0.7058824,0.2352941,1" type="QString"/>
                 <Option name="fixedAspectRatio" value="0" type="QString"/>
                 <Option name="horizontal_anchor_point" value="1" type="QString"/>
-                <Option name="name" value="../img/start_end_bridge_symbole.svg" type="QString"/>
+                <Option name="name" value="C:/Users/noemo/Documents/GitHub/OpenArdenneMap/img/start_end_bridge_symbole.svg" type="QString"/>
                 <Option name="offset" value="0,0" type="QString"/>
                 <Option name="offset_map_unit_scale" value="3x:0,0,0,0,0,0" type="QString"/>
                 <Option name="offset_unit" value="MM" type="QString"/>
@@ -47175,7 +47175,7 @@ FROM planet_osm_line WHERE \"tunnel\" IN ('culvert', 'yes', 'flooded', 'covered'
       </spatialrefsys>
     </CoordinateCustomCrs>
   </ProjectDisplaySettings>
-  <ProjectGpsSettings destinationLayerSource="dbname='osmpg_db' host=localhost port=5432 sslmode=disable key='_uid_' checkPrimaryKeyUnicity='1' table=&quot;(SELECT row_number() over () AS _uid_,* FROM (SELECT way, building, name, area, &#x9;CAST(degrees( &#x9;&#x9;CASE &#x9;&#x9;&#x9;WHEN ST_Distance(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 1), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2)) > ST_Distance(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 3)) &#x9;&#x9;&#x9;&#x9;THEN ST_Azimuth(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 1), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2)) &#x9;&#x9;&#x9;ELSE ST_Azimuth(ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 2), ST_PointN(ST_ExteriorRing(ST_OrientedEnvelope(l.way)), 3)) &#x9;&#x9;END &#x9;) AS VARCHAR(255)) AS orientation FROM planet_osm_polygon AS l WHERE building IN ('church','chapel')&#xa;) AS _subq_1_&#xa;)&quot; (way)" destinationFollowsActiveLayer="1" autoAddTrackVertices="0" destinationLayerName="rotated_buildings" destinationLayer="QueryLayer_4b5a9186_eff5_4303_b3d5_fabab799ab8f" autoCommitFeatures="0" destinationLayerProvider="postgres">
+  <ProjectGpsSettings destinationFollowsActiveLayer="1" autoAddTrackVertices="0" destinationLayer="" autoCommitFeatures="0">
     <timeStampFields/>
   </ProjectGpsSettings>
 </qgis>
