@@ -3,12 +3,12 @@ DROP MATERIALIZED VIEW IF EXISTS view_motorways_medial_axis_3857;
 CREATE MATERIALIZED VIEW view_motorways_medial_axis_3857 AS
 WITH base AS (
     SELECT
-        ST_Transform(way, 3857) AS geom, 
+        way AS geom, 
         name                               
     FROM planet_osm_line
-     WHERE highway = 'motorway'         
-      AND highway NOT LIKE '%_link'      
-      AND ref IS NOT NULL                
+    WHERE highway = 'motorway'         
+        AND highway NOT LIKE '%_link'      
+        AND ref IS NOT NULL                
 ),
   
 

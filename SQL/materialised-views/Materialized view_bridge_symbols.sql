@@ -1,10 +1,10 @@
-DROP MATERIALIZED VIEW IF EXISTS view_belgium_bridges_snapped_3857;
+DROP MATERIALIZED VIEW IF EXISTS view_bridge_symbols;
 
-CREATE MATERIALIZED VIEW view_belgium_bridges_snapped_3857 AS
+CREATE MATERIALIZED VIEW view_bridge_symbols AS
     WITH snapped AS (
         SELECT
             highway,  
-            ST_Snap(ST_Transform(way, 3857), ST_Collect(ST_Transform(way, 3857)), 1) AS snapped_way  
+            ST_Snap(way, ST_Collect(way), 1) AS snapped_way  
         FROM planet_osm_line
         WHERE bridge NOT IN ('0','no','')  
           AND highway IN ('path','cycleway','footway','pedestrian','steps','bridleway','boardwalk')
@@ -35,4 +35,4 @@ CREATE MATERIALIZED VIEW view_belgium_bridges_snapped_3857 AS
     FROM merged;
 
 -- Index spatial 
-CREATE INDEX idx_be_bridges_snapped_geom ON view_belgium_bridges_snapped_3857 USING GIST (geom);
+CREATE INDEX idx_be_bridges_snapped_geom ON view_bridge_symbols USING GIST (geom);

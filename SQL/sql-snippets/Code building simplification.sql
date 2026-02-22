@@ -5,10 +5,6 @@ WITH clustered AS (
 		-- et minpoint = un cluster peut etre formé même avec 1 seul élément.
     FROM planet_osm_polygon
     WHERE building IS NOT NULL  -- On conserve uniquement des polygones de bâtiments
-      /*AND way && ST_Transform(
-          ST_MakeEnvelope(5.63, 49.71, 5.68, 49.75, 4326), -- Limitation du traitement à la zone d'étude (ici à la commune de Habay)
-          3857
-      )*/
 )
 
 -- Fusion et généralisation des bâtiments par cluster
