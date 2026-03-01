@@ -167,7 +167,7 @@
         line-color: @gray;
     }
     [type='plant_nursery'] {
-        [trees='christmas_trees'], [produce='christmas_trees'] {
+        [trees='christmas_trees'], [produce='christmas_trees'], [plant='christmas_trees'] {
             [zoom <= 13] { line-width: 0; }
             [zoom = 14] { line-width: @landuse_line_width*@z16; }
             [zoom = 15] { line-width: @landuse_line_width*@z16; }

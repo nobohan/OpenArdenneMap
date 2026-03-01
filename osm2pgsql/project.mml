@@ -8,7 +8,7 @@
         "id": "landuse",
         "table":
             "(
-                SELECT way, leaf_type, leaf_cycle, trees, produce, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type
+                SELECT way, leaf_type, leaf_cycle, trees, plant, produce, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type
                 FROM planet_osm_polygon
                 ORDER BY way_area DESC
             ) AS data",

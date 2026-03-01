@@ -515,6 +515,7 @@ or
   * piscine
 
 
-* rotated culvert symbols
 * sub/superscript writing
+* good QGIS atlas for testing
+* better way of following diff with qgis
 
