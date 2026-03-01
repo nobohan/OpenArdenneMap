@@ -8,6 +8,8 @@ Open the oam.qgs project file and use the map composer for producing some maps. 
 
 For convenience, all the OpenArdenneMap layers are grouped into a group in the layer tree. Depending on your computer CPU, the QGIS project is very slow to operate (zoom in, move in the map): to go faster, you can navigate into the map using a external XYZ layer (like the osm-be that is loaded by default) with the OpenArdenneMap group unchecked.
 
+From February 2026, we use the plugin [Trackable QGIS Project](https://plugins.qgis.org/plugins/trackable_project_files/) for developing this map style in QGIS. This plugin allows to better use `git` with a QGIS project file. 
+
 ## FAQs
 
 ### The hillshade and the contour files are not loaded in the QGIS project
