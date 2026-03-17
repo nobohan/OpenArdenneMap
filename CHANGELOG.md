@@ -1,3 +1,16 @@
+## v0.11.0 winter-2025-2026
+
+### Description
+
+Some fixes, some improvements in the QGIS style and a new feature: rotated culverts. 
+
+### Changes
+- #17 support the tag plant=christmas_trees for rendering of landuse=plant_nursery + trees=christmas_trees
+- QGIS - avoid stream and river labels inside water areas
+- QGIS - rendering small bridge symbols as a function of the linestring
+- FEATURE: Add rotated symbols for inlet and outlet of culverts, in QGIS and Mapnik
+- QGIS - clustering of point features in QGIS using cluster symbology
+
 ## v0.10.0 winter-2024-2025
 
 ### Description
