@@ -1,4 +1,4 @@
-<qgis projectname="" saveDateTime="2026-09-07T21:20:00" saveUser="julien" saveUserFull="julien" version="3.44.7-Solothurn">
+<qgis projectname="" saveDateTime="2026-09-07T21:34:12" saveUser="julien" saveUserFull="julien" version="3.44.7-Solothurn">
   <homePath path=""></homePath>
   <title></title>
   <transaction mode="Disabled"></transaction>
@@ -63,7 +63,7 @@
           <Option></Option>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer checked="Qt::Checked" expanded="0" id="QueryLayer_842f76ae_9b20_4fec_a2f0_8a35916e583e" legend_exp="" legend_split_behavior="0" name="pitch" patch_size="-1,-1" providerKey="postgres" source="dbname='osmpg_db' host=localhost port=5432 sslmode=disable key='_uid_' checkPrimaryKeyUnicity='1' table=&quot;(SELECT row_number() over () AS _uid_,* FROM (SELECT way, sport, CASE &#x9;WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,10))) >= 5) THEN &#x9;&#x9;(CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),3))) &#x9;&#x9;THEN CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),3))) AS VARCHAR(255)) &#x9;&#x9;ELSE CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2))) AS VARCHAR(255)) &#x9;&#x9;END) &#x9;END AS orientation, CASE &#x9;WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,10))) >= 5) THEN &#x9;&#x9;(CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),3))) &#x9;&#x9;THEN CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2)) AS INTEGER) &#x9;&#x9;ELSE CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),3)) AS INTEGER) &#x9;&#x9;END) &#x9;END AS length FROM planet_osm_polygon AS l WHERE leisure = 'pitch' and sport IN ('soccer', 'tennis')&#xA;) AS _subq_1_&#xA;)&quot; (way)">
+      <layer-tree-layer checked="Qt::Checked" expanded="1" id="QueryLayer_842f76ae_9b20_4fec_a2f0_8a35916e583e" legend_exp="" legend_split_behavior="0" name="pitch" patch_size="-1,-1" providerKey="postgres" source="dbname='osmpg_db' host=localhost port=5432 sslmode=disable key='_uid_' checkPrimaryKeyUnicity='1' table=&quot;(SELECT row_number() over () AS _uid_,* FROM (SELECT way, sport, CASE &#x9;WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,10))) >= 5) THEN &#x9;&#x9;(CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),3))) &#x9;&#x9;THEN CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),3))) AS VARCHAR(255)) &#x9;&#x9;ELSE CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2))) AS VARCHAR(255)) &#x9;&#x9;END) &#x9;END AS orientation, CASE &#x9;WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,10))) >= 5) THEN &#x9;&#x9;(CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),3))) &#x9;&#x9;THEN CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2)) AS INTEGER) &#x9;&#x9;ELSE CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),3)) AS INTEGER) &#x9;&#x9;END) &#x9;END AS length FROM planet_osm_polygon AS l WHERE leisure = 'pitch' and sport IN ('soccer', 'tennis')&#xA;) AS _subq_1_&#xA;)&quot; (way)">
         <customproperties>
           <Option></Option>
         </customproperties>
@@ -349,10 +349,10 @@
   <mapcanvas annotationsVisible="1" name="theMapCanvas">
     <units>meters</units>
     <extent>
-      <xmin>241254.62716461159288883</xmin>
-      <ymin>45698.10658311660517938</ymin>
-      <xmax>244260.95528961159288883</xmax>
-      <ymax>47593.18470811654697172</ymax>
+      <xmin>252212.01509602484293282</xmin>
+      <ymin>41584.62223500726395287</ymin>
+      <xmax>253612.96120821259682998</xmax>
+      <ymax>42574.09676203690469265</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -399,8 +399,8 @@
           <legendlayerfile isInOverview="0" layerid="planet_osm_point_ab6b4b37_7838_4501_9f26_59319c8aeed2" visible="1"></legendlayerfile>
         </filegroup>
       </legendlayer>
-      <legendlayer checked="Qt::Checked" drawingOrder="-1" name="pitch" open="false" showFeatureCount="0">
-        <filegroup hidden="false" open="false">
+      <legendlayer checked="Qt::Checked" drawingOrder="-1" name="pitch" open="true" showFeatureCount="0">
+        <filegroup hidden="false" open="true">
           <legendlayerfile isInOverview="0" layerid="QueryLayer_842f76ae_9b20_4fec_a2f0_8a35916e583e" visible="1"></legendlayerfile>
         </filegroup>
       </legendlayer>
@@ -3023,8 +3023,8 @@ def my_form_open(dialog, layer, feature):
       </elevation>
       <renderer-v2 enableorderby="0" forceraster="0" referencescale="-1" symbollevels="0" type="RuleRenderer">
         <rules key="{a5b1a3bd-5dce-44a7-91e9-3d77436a1404}">
-          <rule filter="sport='soccer'" key="{df4596c3-b6fa-41d6-8e35-76ff7bb04bd0}" label="soccer" symbol="0"></rule>
-          <rule filter="sport='tennis'" key="{6b6842a9-d815-4593-9cbd-989f24b7be80}" label="tennis" symbol="1"></rule>
+          <rule filter="sport='soccer' AND length > 90" key="{df4596c3-b6fa-41d6-8e35-76ff7bb04bd0}" label="soccer" symbol="0"></rule>
+          <rule filter="sport='tennis' AND length > 25" key="{6b6842a9-d815-4593-9cbd-989f24b7be80}" label="tennis" symbol="1"></rule>
         </rules>
         <symbols>
           <symbol alpha="1" clip_to_extent="1" force_rhr="0" frame_rate="10" is_animated="0" name="0" type="fill">
@@ -3172,18 +3172,65 @@ def my_form_open(dialog, layer, feature):
       </renderer-v2>
       <selection mode="Default">
         <selectionColor invalid="1"></selectionColor>
+        <selectionSymbol>
+          <symbol alpha="1" clip_to_extent="1" force_rhr="0" frame_rate="10" is_animated="0" name="" type="fill">
+            <data_defined_properties>
+              <Option type="Map">
+                <Option name="name" type="QString" value=""></Option>
+                <Option name="properties"></Option>
+                <Option name="type" type="QString" value="collection"></Option>
+              </Option>
+            </data_defined_properties>
+            <layer class="SimpleFill" enabled="1" id="{82c19eb2-5523-4c0c-ae46-d907471bd8d3}" locked="0" pass="0">
+              <Option type="Map">
+                <Option name="border_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"></Option>
+                <Option name="color" type="QString" value="0,0,255,255,rgb:0,0,1,1"></Option>
+                <Option name="joinstyle" type="QString" value="bevel"></Option>
+                <Option name="offset" type="QString" value="0,0"></Option>
+                <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"></Option>
+                <Option name="offset_unit" type="QString" value="MM"></Option>
+                <Option name="outline_color" type="QString" value="35,35,35,255,rgb:0.1372549,0.1372549,0.1372549,1"></Option>
+                <Option name="outline_style" type="QString" value="solid"></Option>
+                <Option name="outline_width" type="QString" value="0.26"></Option>
+                <Option name="outline_width_unit" type="QString" value="MM"></Option>
+                <Option name="style" type="QString" value="solid"></Option>
+              </Option>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" type="QString" value=""></Option>
+                  <Option name="properties"></Option>
+                  <Option name="type" type="QString" value="collection"></Option>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </selectionSymbol>
       </selection>
       <customproperties>
         <Option type="Map">
+          <Option name="QFieldSync/action" type="QString" value="offline"></Option>
+          <Option name="QFieldSync/attachment_naming" type="QString" value="{}"></Option>
+          <Option name="QFieldSync/attribute_editing_locked_expression" type="QString" value=""></Option>
+          <Option name="QFieldSync/cloud_action" type="QString" value="offline"></Option>
+          <Option name="QFieldSync/feature_addition_locked_expression" type="QString" value=""></Option>
+          <Option name="QFieldSync/feature_deletion_locked_expression" type="QString" value=""></Option>
+          <Option name="QFieldSync/geometry_editing_locked_expression" type="QString" value=""></Option>
+          <Option name="QFieldSync/photo_naming" type="QString" value="{}"></Option>
+          <Option name="QFieldSync/relationship_maximum_visible" type="QString" value="{}"></Option>
+          <Option name="QFieldSync/tracking_distance_requirement_minimum_meters" type="int" value="30"></Option>
+          <Option name="QFieldSync/tracking_erroneous_distance_safeguard_maximum_meters" type="int" value="1"></Option>
+          <Option name="QFieldSync/tracking_measurement_type" type="int" value="0"></Option>
+          <Option name="QFieldSync/tracking_time_requirement_interval_seconds" type="int" value="30"></Option>
+          <Option name="QFieldSync/value_map_button_interface_threshold" type="int" value="0"></Option>
           <Option name="embeddedWidgets/count" type="QString" value="0"></Option>
-          <Option name="variableNames" type="invalid"></Option>
-          <Option name="variableValues" type="invalid"></Option>
+          <Option name="variableNames"></Option>
+          <Option name="variableValues"></Option>
         </Option>
       </customproperties>
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerOpacity>1</layerOpacity>
-      <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
+      <LinearlyInterpolatedDiagramRenderer attributeLegend="1" classificationAttributeExpression="" diagramType="Histogram" lowerHeight="0" lowerValue="0" lowerWidth="0" upperHeight="5" upperValue="0" upperWidth="5">
         <DiagramCategory backgroundAlpha="255" backgroundColor="#ffffff" barWidth="5" diagramOrientation="Up" direction="0" enabled="0" height="15" labelPlacementMethod="XHeight" lineSizeScale="3x:0,0,0,0,0,0" lineSizeType="MM" maxScaleDenominator="1e+08" minScaleDenominator="0" minimumSize="0" opacity="1" penAlpha="255" penColor="#000000" penWidth="0" rotationOffset="270" scaleBasedVisibility="0" scaleDependency="Area" showAxis="1" sizeScale="3x:0,0,0,0,0,0" sizeType="MM" spacing="5" spacingUnit="MM" spacingUnitScale="3x:0,0,0,0,0,0" stackedDiagramMode="Horizontal" stackedDiagramSpacing="0" stackedDiagramSpacingUnit="MM" stackedDiagramSpacingUnitScale="3x:0,0,0,0,0,0" width="15">
           <fontProperties bold="0" description="Ubuntu,11,-1,5,50,0,0,0,0,0" italic="0" strikethrough="0" style="" underline="0"></fontProperties>
           <attribute color="#000000" colorOpacity="1" field="" label=""></attribute>
@@ -3237,7 +3284,7 @@ def my_form_open(dialog, layer, feature):
             </symbol>
           </axisSymbol>
         </DiagramCategory>
-      </SingleCategoryDiagramRenderer>
+      </LinearlyInterpolatedDiagramRenderer>
       <DiagramLayerSettings dist="0" linePlacementFlags="18" obstacle="0" placement="1" priority="0" showAll="1" zIndex="0">
         <properties>
           <Option type="Map">
@@ -3253,7 +3300,7 @@ def my_form_open(dialog, layer, feature):
           <Option name="QgsGeometryGapCheck" type="Map">
             <Option name="allowedGapsBuffer" type="double" value="0"></Option>
             <Option name="allowedGapsEnabled" type="bool" value="false"></Option>
-            <Option name="allowedGapsLayer" type="invalid"></Option>
+            <Option name="allowedGapsLayer" type="QString" value=""></Option>
           </Option>
         </checkConfiguration>
       </geometryOptions>
@@ -3367,7 +3414,12 @@ def my_form_open(dialog, layer, feature):
         <field labelOnTop="0" name="orientation"></field>
         <field labelOnTop="0" name="sport"></field>
       </labelOnTop>
-      <reuseLastValue></reuseLastValue>
+      <reuseLastValue>
+        <field name="_uid_" reuseLastValue="0"></field>
+        <field name="length" reuseLastValue="0"></field>
+        <field name="orientation" reuseLastValue="0"></field>
+        <field name="sport" reuseLastValue="0"></field>
+      </reuseLastValue>
       <dataDefinedFieldProperties></dataDefinedFieldProperties>
       <widgets></widgets>
       <previewExpression>"_uid_"</previewExpression>
@@ -48108,7 +48160,7 @@ WHERE
   <Sensors></Sensors>
   <ProjectViewSettings UseProjectScales="0" rotation="0">
     <Scales></Scales>
-    <DefaultViewExtent xmax="244260.95528961159288883" xmin="241254.62716461159288883" ymax="47593.18470811657607555" ymin="45698.10658311657607555">
+    <DefaultViewExtent xmax="253697.33313036474282853" xmin="252127.64317387269693427" ymax="42574.09676203690469265" ymin="41584.62223500726395287">
       <spatialrefsys nativeFormat="Wkt">
         <wkt>PROJCRS["BD72 / Belgian Lambert 72",BASEGEOGCRS["BD72",DATUM["Reseau National Belge 1972",ELLIPSOID["International 1924",6378388,297,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4313]],CONVERSION["Belgian Lambert 72",METHOD["Lambert Conic Conformal (2SP)",ID["EPSG",9802]],PARAMETER["Latitude of false origin",90,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8821]],PARAMETER["Longitude of false origin",4.36748666666667,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8822]],PARAMETER["Latitude of 1st standard parallel",51.1666672333333,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8823]],PARAMETER["Latitude of 2nd standard parallel",49.8333339,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8824]],PARAMETER["Easting at false origin",150000.013,LENGTHUNIT["metre",1],ID["EPSG",8826]],PARAMETER["Northing at false origin",5400088.438,LENGTHUNIT["metre",1],ID["EPSG",8827]]],CS[Cartesian,2],AXIS["easting (X)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["northing (Y)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["Engineering survey, topographic mapping."],AREA["Belgium - onshore."],BBOX[49.5,2.5,51.51,6.4]],ID["EPSG",31370]]</wkt>
         <proj4>+proj=lcc +lat_0=90 +lon_0=4.36748666666667 +lat_1=51.1666672333333 +lat_2=49.8333339 +x_0=150000.013 +y_0=5400088.438 +ellps=intl +units=m +no_defs</proj4>
@@ -48173,7 +48225,7 @@ WHERE
       </spatialrefsys>
     </CoordinateCustomCrs>
   </ProjectDisplaySettings>
-  <ProjectGpsSettings autoAddTrackVertices="0" autoCommitFeatures="0" destinationFollowsActiveLayer="1" destinationLayer="bus_940ef8b9_6c8f_4025_a3ea_960f870b2ad3" destinationLayerName="bus" destinationLayerProvider="postgres" destinationLayerSource="dbname='osmpg_db' port=5432 key='_uid_' checkPrimaryKeyUnicity='1' table=&quot;(SELECT row_number() over () AS _uid_,* FROM (SELECT way, power, man_made, amenity, historic, leisure, tourism, public_transport,        \&quot;tower:type\&quot;, \&quot;generator:source\&quot;, bus, ford, \&quot;natural\&quot;, ele, name,        replace(name, 'Château', 'Chau') as short_name,        CASE           WHEN ele IS NOT NULL THEN CONCAT(name, ' \\n (', ele, ' m)')           ELSE name         END as peak_name,        CASE           WHEN direction = 'N-E' THEN 45          WHEN direction = 'E' THEN 90          WHEN direction = 'S-E' THEN 135          WHEN direction = 'S' THEN 180          WHEN direction = 'S-W' THEN 225          WHEN direction = 'W' THEN 270          WHEN direction = 'N-W' THEN 315          WHEN direction ~ '-' THEN 0          WHEN direction ~ '\\\\.' THEN 0          WHEN direction ~ ';' THEN 0          WHEN direction ~ E'^\\d+$' THEN direction::integer ELSE 0        END AS orientation FROM planet_osm_point WHERE public_transport IS NOT NULL AND bus = 'yes'&#xA;) AS _subq_1_&#xA;)&quot; (way)">
+  <ProjectGpsSettings autoAddTrackVertices="0" autoCommitFeatures="0" destinationFollowsActiveLayer="1" destinationLayer="QueryLayer_842f76ae_9b20_4fec_a2f0_8a35916e583e" destinationLayerName="pitch" destinationLayerProvider="postgres" destinationLayerSource="dbname='osmpg_db' host=localhost port=5432 sslmode=disable key='_uid_' checkPrimaryKeyUnicity='1' table=&quot;(SELECT row_number() over () AS _uid_,* FROM (SELECT way, sport, CASE &#x9;WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,10))) >= 5) THEN &#x9;&#x9;(CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),3))) &#x9;&#x9;THEN CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),3))) AS VARCHAR(255)) &#x9;&#x9;ELSE CAST(degrees(ST_Azimuth(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2))) AS VARCHAR(255)) &#x9;&#x9;END) &#x9;END AS orientation, CASE &#x9;WHEN (ST_NPoints((ST_SimplifyPreserveTopology(l.way,10))) >= 5) THEN &#x9;&#x9;(CASE WHEN (ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2)) > ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),3))) &#x9;&#x9;THEN CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),2)) AS INTEGER) &#x9;&#x9;ELSE CAST(ST_MaxDistance(ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),1), ST_PointN(ST_ExteriorRing((ST_SimplifyPreserveTopology(l.way,10))),3)) AS INTEGER) &#x9;&#x9;END) &#x9;END AS length FROM planet_osm_polygon AS l WHERE leisure = 'pitch' and sport IN ('soccer', 'tennis')&#xA;) AS _subq_1_&#xA;)&quot; (way)">
     <timeStampFields></timeStampFields>
   </ProjectGpsSettings>
 </qgis>
