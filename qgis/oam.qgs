@@ -1,4 +1,4 @@
-<qgis projectname="" saveDateTime="2026-09-07T20:25:18" saveUser="julien" saveUserFull="julien" version="3.44.7-Solothurn">
+<qgis projectname="" saveDateTime="2026-09-07T21:20:00" saveUser="julien" saveUserFull="julien" version="3.44.7-Solothurn">
   <homePath path=""></homePath>
   <title></title>
   <transaction mode="Disabled"></transaction>
@@ -68,7 +68,7 @@
           <Option></Option>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-group checked="Qt::Checked" expanded="0" groupLayer="" name="point_features">
+      <layer-tree-group checked="Qt::Checked" expanded="1" groupLayer="" name="point_features">
         <customproperties>
           <Option></Option>
         </customproperties>
@@ -181,7 +181,7 @@
           </Option>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer checked="Qt::Checked" expanded="1" id="QueryLayer_f7890824_98df_45cc_82d0_eeb0aa69f5f3" legend_exp="" legend_split_behavior="0" name="roads" patch_size="-1,-1" providerKey="postgres" source="dbname='osmpg_db' host=localhost port=5432 sslmode=disable key='_uid_' checkPrimaryKeyUnicity='1' table=&quot;(SELECT row_number() over () AS _uid_,* FROM (SELECT way, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, tracktype, trail_visibility, access, name, 'fill' AS render, CASE     WHEN highway IN ('motorway', 'trunk') THEN 'motorway'     WHEN highway IN ('primary', 'secondary') THEN 'mainroad'     WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'     WHEN highway IN ('service', 'track') THEN 'service'     WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'     WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'     ELSE 'other' END AS stylegroup FROM planet_osm_line WHERE (highway IS NOT NULL OR railway IS NOT NULL)     AND (tunnel IS NULL OR tunnel = 'no')     AND (bridge IS NULL OR bridge = 'no') ORDER BY z_order&#xA;) AS _subq_1_&#xA;)&quot; (way)">
+      <layer-tree-layer checked="Qt::Checked" expanded="0" id="QueryLayer_f7890824_98df_45cc_82d0_eeb0aa69f5f3" legend_exp="" legend_split_behavior="0" name="roads" patch_size="-1,-1" providerKey="postgres" source="dbname='osmpg_db' host=localhost port=5432 sslmode=disable key='_uid_' checkPrimaryKeyUnicity='1' table=&quot;(SELECT row_number() over () AS _uid_,* FROM (SELECT way, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, tracktype, trail_visibility, access, name, 'fill' AS render, CASE     WHEN highway IN ('motorway', 'trunk') THEN 'motorway'     WHEN highway IN ('primary', 'secondary') THEN 'mainroad'     WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'     WHEN highway IN ('service', 'track') THEN 'service'     WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'     WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'     ELSE 'other' END AS stylegroup FROM planet_osm_line WHERE (highway IS NOT NULL OR railway IS NOT NULL)     AND (tunnel IS NULL OR tunnel = 'no')     AND (bridge IS NULL OR bridge = 'no') ORDER BY z_order&#xA;) AS _subq_1_&#xA;)&quot; (way)">
         <customproperties>
           <Option type="Map">
             <Option name="expandedLegendNodes" type="StringList">
@@ -234,7 +234,7 @@
             <Option></Option>
           </customproperties>
         </layer-tree-layer>
-        <layer-tree-layer checked="Qt::Checked" expanded="0" id="planet_osm_line_7c053549_5ff1_43a6_b10b_f95a7f983fef" legend_exp="" legend_split_behavior="0" name="waterway" patch_size="-1,-1" providerKey="postgres" source="dbname='osmpg_db' host=localhost port=5432 sslmode=disable key='tid' srid=3857 type=LineString checkPrimaryKeyUnicity='1' table=&quot;public&quot;.&quot;planet_osm_line&quot; (way) sql=&quot;waterway&quot; IN ('river', 'canal', 'stream', 'ditch', 'drain') AND (tunnel IS NULL OR tunnel = 'no')">
+        <layer-tree-layer checked="Qt::Checked" expanded="1" id="planet_osm_line_7c053549_5ff1_43a6_b10b_f95a7f983fef" legend_exp="" legend_split_behavior="0" name="waterway" patch_size="-1,-1" providerKey="postgres" source="dbname='osmpg_db' host=localhost port=5432 sslmode=disable key='tid' srid=3857 type=LineString checkPrimaryKeyUnicity='1' table=&quot;public&quot;.&quot;planet_osm_line&quot; (way) sql=&quot;waterway&quot; IN ('river', 'canal', 'stream', 'ditch', 'drain') AND (tunnel IS NULL OR tunnel = 'no')">
           <customproperties>
             <Option></Option>
           </customproperties>
@@ -349,10 +349,10 @@
   <mapcanvas annotationsVisible="1" name="theMapCanvas">
     <units>meters</units>
     <extent>
-      <xmin>234489.89278961159288883</xmin>
-      <ymin>46219.9972081166197313</ymin>
-      <xmax>236494.11153961159288883</xmax>
-      <ymax>47483.38262478326214477</ymax>
+      <xmin>241254.62716461159288883</xmin>
+      <ymin>45698.10658311660517938</ymin>
+      <xmax>244260.95528961159288883</xmax>
+      <ymax>47593.18470811654697172</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -404,7 +404,7 @@
           <legendlayerfile isInOverview="0" layerid="QueryLayer_842f76ae_9b20_4fec_a2f0_8a35916e583e" visible="1"></legendlayerfile>
         </filegroup>
       </legendlayer>
-      <legendgroup checked="Qt::Checked" name="point_features" open="false">
+      <legendgroup checked="Qt::Checked" name="point_features" open="true">
         <legendlayer checked="Qt::Checked" drawingOrder="-1" name="tower" open="true" showFeatureCount="0">
           <filegroup hidden="false" open="true">
             <legendlayerfile isInOverview="0" layerid="tower_4d4984a5_de50_46ab_90ce_7d3e1d702692" visible="1"></legendlayerfile>
@@ -501,8 +501,8 @@
           <legendlayerfile isInOverview="0" layerid="QueryLayer_f926f377_faa5_4c2f_b326_384b2c5fc7af" visible="1"></legendlayerfile>
         </filegroup>
       </legendlayer>
-      <legendlayer checked="Qt::Checked" drawingOrder="-1" name="roads" open="true" showFeatureCount="0">
-        <filegroup hidden="false" open="true">
+      <legendlayer checked="Qt::Checked" drawingOrder="-1" name="roads" open="false" showFeatureCount="0">
+        <filegroup hidden="false" open="false">
           <legendlayerfile isInOverview="0" layerid="QueryLayer_f7890824_98df_45cc_82d0_eeb0aa69f5f3" visible="1"></legendlayerfile>
         </filegroup>
       </legendlayer>
@@ -532,8 +532,8 @@
             <legendlayerfile isInOverview="0" layerid="planet_osm_polygon_f36638ca_1f8c_4b25_a2ec_5eb54bcf53cb" visible="1"></legendlayerfile>
           </filegroup>
         </legendlayer>
-        <legendlayer checked="Qt::Checked" drawingOrder="-1" name="waterway" open="false" showFeatureCount="0">
-          <filegroup hidden="false" open="false">
+        <legendlayer checked="Qt::Checked" drawingOrder="-1" name="waterway" open="true" showFeatureCount="0">
+          <filegroup hidden="false" open="true">
             <legendlayerfile isInOverview="0" layerid="planet_osm_line_7c053549_5ff1_43a6_b10b_f95a7f983fef" visible="1"></legendlayerfile>
           </filegroup>
         </legendlayer>
@@ -13943,7 +13943,7 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>COALESCE( "_uid_", '&lt;NULL&gt;' )</previewExpression>
       <mapTip enabled="1"></mapTip>
     </maplayer>
-    <maplayer autoRefreshMode="Disabled" autoRefreshTime="0" geometry="Point" hasScaleBasedVisibilityFlag="0" labelsEnabled="0" legendPlaceholderImage="" maxScale="0" minScale="100000000" readOnly="0" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" simplifyAlgorithm="0" simplifyDrawingHints="0" simplifyDrawingTol="1" simplifyLocal="1" simplifyMaxScale="1" styleCategories="AllStyleCategories" symbologyReferenceScale="-1" type="vector" wkbType="Point">
+    <maplayer autoRefreshMode="Disabled" autoRefreshTime="0" geometry="Point" hasScaleBasedVisibilityFlag="0" labelsEnabled="1" legendPlaceholderImage="" maxScale="0" minScale="100000000" readOnly="0" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" simplifyAlgorithm="0" simplifyDrawingHints="0" simplifyDrawingTol="1" simplifyLocal="1" simplifyMaxScale="1" styleCategories="AllStyleCategories" symbologyReferenceScale="-1" type="vector" wkbType="Point">
       <extent>
         <xmin>283052.55904581618960947</xmin>
         <ymin>6361289.11608581431210041</ymin>
@@ -14316,9 +14316,9 @@ def my_form_open(dialog, layer, feature):
       </selection>
       <labeling type="simple">
         <settings calloutType="simple">
-          <text-style allowHtml="0" blendMode="0" capitalization="0" fieldName="'bus'" fontFamily="Alfphabet" fontItalic="0" fontKerning="1" fontLetterSpacing="0" fontSize="6" fontSizeMapUnitScale="3x:0,0,0,0,0,0" fontSizeUnit="Point" fontStrikeout="0" fontUnderline="0" fontWeight="50" fontWordSpacing="0" forcedBold="0" forcedItalic="0" isExpression="1" legendString="Aa" multilineHeight="1" multilineHeightUnit="Percentage" namedStyle="Condensed" previewBkgrdColor="255,255,255,255,rgb:1,1,1,1" tabStopDistance="80" tabStopDistanceMapUnitScale="3x:0,0,0,0,0,0" tabStopDistanceUnit="Point" textColor="50,50,50,255,rgb:0.1960784,0.1960784,0.1960784,1" textOpacity="1" textOrientation="horizontal" useSubstitutions="0">
+          <text-style allowHtml="0" blendMode="0" capitalization="0" fieldName="'Bus'" fontFamily="Alfphabet" fontItalic="0" fontKerning="1" fontLetterSpacing="0" fontSize="6" fontSizeMapUnitScale="3x:0,0,0,0,0,0" fontSizeUnit="Point" fontStrikeout="0" fontUnderline="0" fontWeight="50" fontWordSpacing="0" forcedBold="0" forcedItalic="0" isExpression="1" legendString="Aa" multilineHeight="1" multilineHeightUnit="Percentage" namedStyle="III" previewBkgrdColor="255,255,255,255,rgb:1,1,1,1" tabStopDistance="80" tabStopDistanceMapUnitScale="3x:0,0,0,0,0,0" tabStopDistanceUnit="Point" textColor="50,50,50,255,rgb:0.1960784,0.1960784,0.1960784,1" textOpacity="1" textOrientation="horizontal" useSubstitutions="0">
             <families></families>
-            <text-buffer bufferBlendMode="0" bufferColor="250,250,250,255,rgb:0.9803922,0.9803922,0.9803922,1" bufferDraw="1" bufferJoinStyle="128" bufferNoFill="1" bufferOpacity="1" bufferSize="1" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferSizeUnits="MM"></text-buffer>
+            <text-buffer bufferBlendMode="0" bufferColor="250,250,250,255,rgb:0.9803922,0.9803922,0.9803922,1" bufferDraw="1" bufferJoinStyle="128" bufferNoFill="1" bufferOpacity="1" bufferSize="1" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferSizeUnits="Point"></text-buffer>
             <text-mask maskEnabled="0" maskJoinStyle="128" maskOpacity="1" maskSize="1.5" maskSize2="1.5" maskSizeMapUnitScale="3x:0,0,0,0,0,0" maskSizeUnits="MM" maskType="0" maskedSymbolLayers=""></text-mask>
             <background shapeBlendMode="0" shapeBorderColor="128,128,128,255,rgb:0.5019608,0.5019608,0.5019608,1" shapeBorderWidth="0" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeBorderWidthUnit="Point" shapeDraw="0" shapeFillColor="255,255,255,255,rgb:1,1,1,1" shapeJoinStyle="64" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeOffsetUnit="Point" shapeOffsetX="0" shapeOffsetY="0" shapeOpacity="1" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeRadiiUnit="Point" shapeRadiiX="0" shapeRadiiY="0" shapeRotation="0" shapeRotationType="0" shapeSVGFile="" shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeSizeType="0" shapeSizeUnit="Point" shapeSizeX="0" shapeSizeY="0" shapeType="0">
               <symbol alpha="1" clip_to_extent="1" force_rhr="0" frame_rate="10" is_animated="0" name="markerSymbol" type="marker">
@@ -14403,7 +14403,7 @@ def my_form_open(dialog, layer, feature):
             <substitutions></substitutions>
           </text-style>
           <text-format addDirectionSymbol="0" autoWrapLength="0" decimals="3" formatNumbers="0" leftDirectionSymbol="&lt;" multilineAlign="3" placeDirectionSymbol="0" plussign="0" reverseDirectionSymbol="0" rightDirectionSymbol=">" useMaxLineLengthForAutoWrap="1" wrapChar=""></text-format>
-          <placement allowDegraded="0" centroidInside="0" centroidWhole="0" dist="0" distMapUnitScale="3x:0,0,0,0,0,0" distUnits="MM" fitInPolygonOnly="0" geometryGenerator="" geometryGeneratorEnabled="0" geometryGeneratorType="PointGeometry" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" layerType="PointGeometry" lineAnchorClipping="0" lineAnchorPercent="0.5" lineAnchorTextPoint="FollowPlacement" lineAnchorType="0" maxCurvedCharAngleIn="25" maxCurvedCharAngleOut="-25" maximumDistance="0" maximumDistanceMapUnitScale="3x:0,0,0,0,0,0" maximumDistanceUnit="MM" offsetType="1" offsetUnits="MM" overlapHandling="PreventOverlap" overrunDistance="0" overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" overrunDistanceUnit="MM" placement="0" placementFlags="10" polygonPlacementFlags="2" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" preserveRotation="1" prioritization="PreferCloser" priority="5" quadOffset="4" repeatDistance="0" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" repeatDistanceUnits="MM" rotationAngle="0" rotationUnit="AngleDegrees" xOffset="0" yOffset="0"></placement>
+          <placement allowDegraded="0" allowDuplicateRemoval="1" centroidInside="0" centroidWhole="0" dist="0" distMapUnitScale="3x:0,0,0,0,0,0" distUnits="MM" fitInPolygonOnly="0" geometryGenerator="" geometryGeneratorEnabled="0" geometryGeneratorType="PointGeometry" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" layerType="PointGeometry" lineAnchorClipping="0" lineAnchorPercent="0.5" lineAnchorTextPoint="FollowPlacement" lineAnchorType="0" maxCurvedCharAngleIn="25" maxCurvedCharAngleOut="-25" maximumDistance="0" maximumDistanceMapUnitScale="3x:0,0,0,0,0,0" maximumDistanceUnit="MM" minDistanceToDuplicates="40" offsetType="1" offsetUnits="Point" overlapHandling="PreventOverlap" overrunDistance="0" overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" overrunDistanceUnit="MM" placement="1" placementFlags="10" polygonPlacementFlags="2" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" preserveRotation="1" prioritization="PreferCloser" priority="5" quadOffset="7" repeatDistance="0" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" repeatDistanceUnits="MM" rotationAngle="0" rotationUnit="AngleDegrees" xOffset="0.40000000000000002" yOffset="0"></placement>
           <rendering drawLabels="1" fontLimitPixelSize="0" fontMaxPixelSize="10000" fontMinPixelSize="3" labelPerPart="0" limitNumLabels="0" maxNumLabels="2000" mergeLines="0" minFeatureSize="0" obstacle="1" obstacleFactor="1" obstacleType="1" scaleMax="0" scaleMin="0" scaleVisibility="0" unplacedVisibility="0" upsidedownLabels="0" zIndex="0"></rendering>
           <dd_properties>
             <Option type="Map">
@@ -14440,9 +14440,23 @@ def my_form_open(dialog, layer, feature):
       </labeling>
       <customproperties>
         <Option type="Map">
+          <Option name="QFieldSync/action" type="QString" value="offline"></Option>
+          <Option name="QFieldSync/attachment_naming" type="QString" value="{}"></Option>
+          <Option name="QFieldSync/attribute_editing_locked_expression" type="QString" value=""></Option>
+          <Option name="QFieldSync/cloud_action" type="QString" value="offline"></Option>
+          <Option name="QFieldSync/feature_addition_locked_expression" type="QString" value=""></Option>
+          <Option name="QFieldSync/feature_deletion_locked_expression" type="QString" value=""></Option>
+          <Option name="QFieldSync/geometry_editing_locked_expression" type="QString" value=""></Option>
+          <Option name="QFieldSync/photo_naming" type="QString" value="{}"></Option>
+          <Option name="QFieldSync/relationship_maximum_visible" type="QString" value="{}"></Option>
+          <Option name="QFieldSync/tracking_distance_requirement_minimum_meters" type="int" value="30"></Option>
+          <Option name="QFieldSync/tracking_erroneous_distance_safeguard_maximum_meters" type="int" value="1"></Option>
+          <Option name="QFieldSync/tracking_measurement_type" type="int" value="0"></Option>
+          <Option name="QFieldSync/tracking_time_requirement_interval_seconds" type="int" value="30"></Option>
+          <Option name="QFieldSync/value_map_button_interface_threshold" type="int" value="0"></Option>
           <Option name="embeddedWidgets/count" type="int" value="0"></Option>
-          <Option name="variableNames" type="invalid"></Option>
-          <Option name="variableValues" type="invalid"></Option>
+          <Option name="variableNames"></Option>
+          <Option name="variableValues"></Option>
         </Option>
       </customproperties>
       <blendMode>0</blendMode>
@@ -48094,7 +48108,7 @@ WHERE
   <Sensors></Sensors>
   <ProjectViewSettings UseProjectScales="0" rotation="0">
     <Scales></Scales>
-    <DefaultViewExtent xmax="236494.11153961159288883" xmin="234489.89278961159288883" ymax="47483.38262478327669669" ymin="46219.99720811660517938">
+    <DefaultViewExtent xmax="244260.95528961159288883" xmin="241254.62716461159288883" ymax="47593.18470811657607555" ymin="45698.10658311657607555">
       <spatialrefsys nativeFormat="Wkt">
         <wkt>PROJCRS["BD72 / Belgian Lambert 72",BASEGEOGCRS["BD72",DATUM["Reseau National Belge 1972",ELLIPSOID["International 1924",6378388,297,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4313]],CONVERSION["Belgian Lambert 72",METHOD["Lambert Conic Conformal (2SP)",ID["EPSG",9802]],PARAMETER["Latitude of false origin",90,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8821]],PARAMETER["Longitude of false origin",4.36748666666667,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8822]],PARAMETER["Latitude of 1st standard parallel",51.1666672333333,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8823]],PARAMETER["Latitude of 2nd standard parallel",49.8333339,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8824]],PARAMETER["Easting at false origin",150000.013,LENGTHUNIT["metre",1],ID["EPSG",8826]],PARAMETER["Northing at false origin",5400088.438,LENGTHUNIT["metre",1],ID["EPSG",8827]]],CS[Cartesian,2],AXIS["easting (X)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["northing (Y)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["Engineering survey, topographic mapping."],AREA["Belgium - onshore."],BBOX[49.5,2.5,51.51,6.4]],ID["EPSG",31370]]</wkt>
         <proj4>+proj=lcc +lat_0=90 +lon_0=4.36748666666667 +lat_1=51.1666672333333 +lat_2=49.8333339 +x_0=150000.013 +y_0=5400088.438 +ellps=intl +units=m +no_defs</proj4>
@@ -48159,7 +48173,7 @@ WHERE
       </spatialrefsys>
     </CoordinateCustomCrs>
   </ProjectDisplaySettings>
-  <ProjectGpsSettings autoAddTrackVertices="0" autoCommitFeatures="0" destinationFollowsActiveLayer="1" destinationLayer="QueryLayer_f7890824_98df_45cc_82d0_eeb0aa69f5f3" destinationLayerName="roads" destinationLayerProvider="postgres" destinationLayerSource="dbname='osmpg_db' host=localhost port=5432 sslmode=disable key='_uid_' checkPrimaryKeyUnicity='1' table=&quot;(SELECT row_number() over () AS _uid_,* FROM (SELECT way, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, tracktype, trail_visibility, access, name, 'fill' AS render, CASE     WHEN highway IN ('motorway', 'trunk') THEN 'motorway'     WHEN highway IN ('primary', 'secondary') THEN 'mainroad'     WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'road', 'living_street') THEN 'minorroad'     WHEN highway IN ('service', 'track') THEN 'service'     WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'     WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'     ELSE 'other' END AS stylegroup FROM planet_osm_line WHERE (highway IS NOT NULL OR railway IS NOT NULL)     AND (tunnel IS NULL OR tunnel = 'no')     AND (bridge IS NULL OR bridge = 'no') ORDER BY z_order&#xA;) AS _subq_1_&#xA;)&quot; (way)">
+  <ProjectGpsSettings autoAddTrackVertices="0" autoCommitFeatures="0" destinationFollowsActiveLayer="1" destinationLayer="bus_940ef8b9_6c8f_4025_a3ea_960f870b2ad3" destinationLayerName="bus" destinationLayerProvider="postgres" destinationLayerSource="dbname='osmpg_db' port=5432 key='_uid_' checkPrimaryKeyUnicity='1' table=&quot;(SELECT row_number() over () AS _uid_,* FROM (SELECT way, power, man_made, amenity, historic, leisure, tourism, public_transport,        \&quot;tower:type\&quot;, \&quot;generator:source\&quot;, bus, ford, \&quot;natural\&quot;, ele, name,        replace(name, 'Château', 'Chau') as short_name,        CASE           WHEN ele IS NOT NULL THEN CONCAT(name, ' \\n (', ele, ' m)')           ELSE name         END as peak_name,        CASE           WHEN direction = 'N-E' THEN 45          WHEN direction = 'E' THEN 90          WHEN direction = 'S-E' THEN 135          WHEN direction = 'S' THEN 180          WHEN direction = 'S-W' THEN 225          WHEN direction = 'W' THEN 270          WHEN direction = 'N-W' THEN 315          WHEN direction ~ '-' THEN 0          WHEN direction ~ '\\\\.' THEN 0          WHEN direction ~ ';' THEN 0          WHEN direction ~ E'^\\d+$' THEN direction::integer ELSE 0        END AS orientation FROM planet_osm_point WHERE public_transport IS NOT NULL AND bus = 'yes'&#xA;) AS _subq_1_&#xA;)&quot; (way)">
     <timeStampFields></timeStampFields>
   </ProjectGpsSettings>
 </qgis>
